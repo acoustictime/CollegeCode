@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/405/james/!svn/ver/11/app/war/WEB-INF/lib
+END
+datanucleus-api-jpa-3.1.0-m3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/405/james/!svn/ver/11/app/war/WEB-INF/lib/datanucleus-api-jpa-3.1.0-m3.jar
+END
+appengine-api-1.0-sdk-1.7.2.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/405/james/!svn/ver/11/app/war/WEB-INF/lib/appengine-api-1.0-sdk-1.7.2.1.jar
+END
+datanucleus-core-3.1.0-m5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/405/james/!svn/ver/11/app/war/WEB-INF/lib/datanucleus-core-3.1.0-m5.jar
+END
+datanucleus-api-jdo-3.1.0-m3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/405/james/!svn/ver/11/app/war/WEB-INF/lib/datanucleus-api-jdo-3.1.0-m3.jar
+END
+appengine-jsr107cache-1.7.2.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/405/james/!svn/ver/11/app/war/WEB-INF/lib/appengine-jsr107cache-1.7.2.1.jar
+END
+json-simple-1.1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/405/james/!svn/ver/15/app/war/WEB-INF/lib/json-simple-1.1.1.jar
+END
+datanucleus-appengine-2.1.0-final.jar
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/405/james/!svn/ver/11/app/war/WEB-INF/lib/datanucleus-appengine-2.1.0-final.jar
+END

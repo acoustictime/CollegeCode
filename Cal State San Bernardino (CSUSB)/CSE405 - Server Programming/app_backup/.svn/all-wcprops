@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 25
+/405/james/!svn/ver/9/app
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/405/james/!svn/ver/11/app/.project
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/405/james/!svn/ver/15/app/.classpath
+END

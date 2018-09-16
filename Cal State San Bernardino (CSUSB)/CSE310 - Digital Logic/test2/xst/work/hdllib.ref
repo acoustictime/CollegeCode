@@ -1,0 +1,7 @@
+MO half_adder NULL ../Lab5_FPGA/half_adder.v vlg5A/half__adder.bin 1361305786
+MO FPGA_hex_sseg NULL ../Lab5_FPGA/FPGA_hex_sseg.v vlg47/_f_p_g_a__hex__sseg.bin 1361305786
+MO FourBitAddrSub NULL ../Lab5_FPGA/FourBitAddrSub.v vlg08/_four_bit_addr_sub.bin 1361305786
+MO Lab5 NULL Lab5.v vlg34/_lab5.bin 1360705612
+MO full_adder NULL ../Lab5_FPGA/full_adder.v vlg5A/full__adder.bin 1361305786
+MO disp_mux NULL ../Lab5_FPGA/disp_mux.v vlg4D/disp__mux.bin 1361305786
+MO hex_to_sseg NULL ../Lab5_FPGA/hex_to_sseg.v vlg6C/hex__to__sseg.bin 1361305786

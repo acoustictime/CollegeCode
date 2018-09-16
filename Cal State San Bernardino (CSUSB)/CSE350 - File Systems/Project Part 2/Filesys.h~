@@ -1,0 +1,32 @@
+#ifndef _Filesys_h
+#define _Filesys_h
+
+#include "Sdisk.h"
+
+using namespace std;
+
+class Filesys : public Sdisk
+{
+Public :
+    Filesys(string filename);
+    int fsclose();
+    int fssynch();
+    int newfile(string file);
+    int rmfile(string file);
+    int getfirstblock(string file);
+    int addblock(string file, string buffer);
+    int delblock(string file, int blocknumber);
+    int getblock(string file, int blocknumber, string& buffer);
+    int putblock(string file, int blocknumber, string buffer);
+    int nextblock(string file, int blocknumber);
+    
+Private :
+    bool belongstofile(string file, int blocknumber);
+    vector<string> block(string s, int b);
+    int rootsize;           
+    int fatsize;            
+    vector<string> filename;  
+    vector<int> firstblock; 
+    vector<int> fat;   
+};
+#endif

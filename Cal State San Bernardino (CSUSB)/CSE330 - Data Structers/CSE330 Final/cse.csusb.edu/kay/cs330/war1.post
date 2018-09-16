@@ -1,0 +1,237 @@
+     1	/*********************************************************************
+     2	adapted from:   timothy budd
+     3	programmer:     kay zemoudeh
+     4	date:           8/17/98
+     5	file:           war1.cpp
+
+     6	description:    this program simulates the game of war. each player gets
+     7	                3 cards. each player displays one of her cards.
+     8	                the player with the highest ranking card wins 2 points.
+     9	                in case of a tie each player gets 1 point. after each
+    10	                round, each player draws a new card from the deck.
+
+    11	implementation: this program uses 4 classes: Card, Deck, Player, and
+    12	                RandomInteger . it is a good example of Object Oriented
+    13	                Programming (OOP). Note the simplicity of each class and
+    14	                the main() function.
+
+    15	modified by:    kay zemoudeh
+    16	date:           8/19/98
+    17	modification:   the original program was a simulation of computer vs
+    18	                computer. this modification changes the program to make
+    19	                it an interactive game between a human player and
+    20	                computer. this was done by introducing a new class
+    21	                HumanPlayer and specifically its new draw() method.
+
+    22	**********************************************************************/
+
+    23	#include <iostream>
+    24	#include <stdlib.h>       // for rand()
+    25	#include <algorithm>      // for random_shuffle()
+
+    26	using namespace std;
+
+    27	enum suits { diamond, club, heart, spade };
+
+    28	class Card {
+    29	    // private by default
+    30	    int      rank;        // rank of card
+    31	    suits    suit;        // suit of card
+    32	public:
+    33	    // constructors
+    34	    Card();               // initialize a card with default values
+    35	    Card(suits, int);     // initialize a card with given values
+    36	    // accessors
+    37	    int getRank() { return rank; } // an in-line function
+    38	    suits getSuit() { return suit; }
+    39	    // mutators
+    40	    void setRank(int rv) { rank = rv; }
+    41	    void setSuit(suits sv) { suit = sv; }
+    42	}; // Card
+
+    43	Card::Card()
+    44	{
+    45	    rank = 1;
+    46	    suit = spade;
+    47	} // constructor
+
+    48	Card::Card(suits sv, int rv)
+    49	{
+    50	    rank = rv;
+    51	    suit = sv;
+    52	} // constructor
+
+    53	// output a textual presentation of a Card
+    54	ostream &operator<<(ostream &out, Card aCard)
+    55	{
+    56	    switch (int rank = aCard.getRank()) {
+    57	        case 1:  out << "Ace"; break;
+    58	        case 11: out << "Jack"; break;
+    59	        case 12: out << "Queen"; break;
+    60	        case 13: out << "King"; break;
+    61	        default: out << rank;
+    62	    }
+
+    63	    switch (suits suit = aCard.getSuit()) {
+    64	        case diamond: out << " of Diamonds"; break;
+    65	        case spade:   out << " of spades"; break;
+    66	        case heart:   out << " of hearts"; break;
+    67	        case club:    out << " of clubs"; break;
+    68	    }
+    69	    return out;
+    70	} // operator<<
+
+    71	class RandomInteger {
+    72	    public:
+    73	        unsigned int operator()(unsigned int);
+    74	}; // RandomInteger
+
+    75	unsigned int RandomInteger::operator()(unsigned int max)
+    76	{
+    77	    unsigned int rval = rand();
+    78	    return rval % max;
+    79	} // operator()
+
+    80	RandomInteger randomizer; // global object, often not a good idea!
+
+    81	class Deck {
+    82	    Card cards[52];    // deck of 52 cards
+    83	    int topCard;       // size of deck
+    84	public:
+    85	    Deck();
+    86	    // shuffle uses the generic algorithm random_shuffle from STL
+    87	    void shuffle() { random_shuffle(cards, cards+52, randomizer); }
+    88	    bool isEmpty() { return topCard <= 0; } // return true if empty
+    89	    Card draw();    // return next card
+    90	}; // Deck
+
+    91	Deck::Deck()
+    92	{
+    93	    topCard = 0;
+    94	    for (int i = 1; i <= 13; i++) {
+    95	        Card c1(diamond, i), c2(spade, i), c3(heart, i), c4(club, i);
+    96	        cards[topCard++] = c1;
+    97	        cards[topCard++] = c2;
+    98	        cards[topCard++] = c3;
+    99	        cards[topCard++] = c4;
+   100	    }
+   101	} // constructor
+
+   102	Card Deck::draw()
+   103	{
+   104	    if (!isEmpty())
+   105	        return cards[--topCard];
+   106	    else { 
+   107	        Card spadeAce(spade, 1);
+   108	        return spadeAce;
+   109	    }
+   110	} // draw
+
+   111	class Player {
+   112	    Card myCards[3];
+   113	    int myScore;
+   114	    int removedCard;
+   115	public:
+   116	    Player(Deck &);
+   117	    Card draw(); // another draw()!
+   118	    void addPoints(int howMany) { myScore += howMany; }
+   119	    int score() { return myScore; }
+   120	    void replaceCard(Deck &aDeck) { myCards[removedCard] = aDeck.draw(); }
+   121	}; // Player
+
+   122	Player::Player(Deck & aDeck)
+   123	{
+   124	    myScore = 0;
+   125	    for (int i = 0; i < 3; i++)
+   126	        myCards[i] = aDeck.draw();
+   127	    removedCard = 0;
+   128	} // constructor
+
+   129	Card Player::draw()
+   130	{
+   131	    removedCard = randomizer(3);
+   132	    return myCards[removedCard];
+   133	} // draw
+
+
+   134	//************************************************************ kay 8/19/98
+   135	class HumanPlayer { // good candidate for inheritance
+   136	    Card myCards[3];
+   137	    int myScore;
+   138	    int removedCard;
+   139	public:
+   140	    HumanPlayer(Deck &);
+   141	    Card draw(); // another draw()!
+   142	    void addPoints(int howMany) { myScore += howMany; }
+   143	    int score() { return myScore; }
+   144	    void replaceCard(Deck &aDeck) { myCards[removedCard] = aDeck.draw(); }
+   145	}; // HumanPlayer
+
+   146	HumanPlayer::HumanPlayer(Deck & aDeck)
+   147	{
+   148	    myScore = 0;
+   149	    for (int i = 0; i < 3; i++)
+   150	        myCards[i] = aDeck.draw();
+   151	    removedCard = 0;
+   152	} // constructor
+
+   153	Card HumanPlayer::draw()
+   154	{
+   155	    cout << "You currently hold in your hand:" << endl;
+   156	    cout << "a) " << myCards[0] << endl;
+   157	    cout << "b) " << myCards[1] << endl;
+   158	    cout << "c) " << myCards[2] << endl;
+   159	    cout << "Which one do you want to play? ";
+
+   160	    char answer[80];
+   161	    removedCard = -1;
+   162	    while (removedCard == -1) {
+   163	        cin >> answer;
+   164	        if (answer[0] == 'a')
+   165	            removedCard = 0;
+   166	        else if (answer[0] == 'b')
+   167	            removedCard = 1;
+   168	        else if (answer[0] == 'c')
+   169	            removedCard = 2;
+   170	        if (removedCard != -1)
+   171	            return myCards[removedCard];
+   172	        cout << "Please specify a, b, or c\n";
+   173	    }
+   174	} // draw
+   175	//************************************************************ kay 8/19/98
+
+   176	main()
+   177	{
+   178	    Deck theDeck; // create a deck
+   179	    theDeck.shuffle();
+
+   180	    // create two players
+   181	    HumanPlayer player1(theDeck); // kay 8/19/98, was Player
+   182	    Player player2(theDeck);
+
+   183	    while (!theDeck.isEmpty()) {
+   184	        Card card1 = player1.draw();
+   185	        cout << "Player 1 plays: " << card1 << endl;
+   186	        Card card2 = player2.draw();
+   187	        cout << "Player 2 plays: " << card2 << endl;
+
+   188	        if (card1.getRank() == card2.getRank()) { // tie
+   189	            player1.addPoints(1);
+   190	            player2.addPoints(1);
+   191	            cout << "Players tie\n\n";
+   192	        } else if (card1.getRank() > card2.getRank()) {
+   193	            player1.addPoints(2);
+   194	            cout << "Player 1 wins this round\n\n";
+   195	        } else {
+   196	            player2.addPoints(2);
+   197	            cout << "Player 2 wins this round\n\n";
+   198	        }
+
+   199	        // replace the cards drawn
+   200	        player1.replaceCard(theDeck);
+   201	        player2.replaceCard(theDeck);
+   202	    }
+
+   203	    cout << "Player 1 score: " << player1.score() << endl;
+   204	    cout << "Player 2 score: " << player2.score() << endl;
+   205	} // main

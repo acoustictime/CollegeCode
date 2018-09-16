@@ -1,0 +1,17 @@
+Script started on Thu 19 Jan 2012 04:59:11 PM PST
+]0;jsmall@jb358-13:~/cse330/lab1[?1034h[jsmall@jb358-13 lab1]$/InfixPostfix 
+
+Enter expression one char at a time, press $ or Ctrl D when expression is done:
+4
++
+e
+*
+8
+-
+A
+
+Output: 4e8*+A-
+
+]0;jsmall@jb358-13:~/cse330/lab1[jsmall@jb358-13 lab1]$ exit
+
+Script done on Thu 19 Jan 2012 04:59:46 PM PST

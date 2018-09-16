@@ -1,0 +1,289 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/09.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:51:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+CSci 375/09 Packages
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="09.txt">Text Version</A>]
+ 09.html 
+Mon Feb  4 11:30:10 PST 2013
+<br>
+<h6>Opening the PDF files on this page may require you to download
+<a href="http://www.adobe.com/products/acrobat/readstep2.html">
+Adobe Reader</A> or an equivalent viewer (GhostScript).</h6>
+<h6><br>Opening Microsoft files (winzip, word, excel, powerpoint)
+on this page may require you to <a href="http://acm.csusb.edu/Services/webaccessibility/compliance/readers_and_viewers.htm">download a special viewer</a>.
+Or you can download and save the files and use your preferred office applications to view and edit them.</h6>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="09.html#CSci 375/09 Packages">CSci 375/09 Packages</A>
+<li><a href="09.html#Revision History">Revision History</A>
+<li><a href="09.html#Project -- First Domain Model Due">Project -- First Domain Model Due</A>
+<li><a href="09.html#13 Packages: How to organize a complex project">13 Packages: How to organize a complex project</A>
+<li><a href="09.html#14 Object Design">14 Object Design</A>
+<li><a href="09.html#Exercises">Exercises</A>
+<li><a href="09.html#Next Assigned Work: SSD+Packages">Next Assigned Work: SSD+Packages</A>
+<li><a href="09.html#Questions and Answers on Logical Architecture">Questions and Answers on Logical Architecture</A>
+<li><a href="09.html#Review Questions">Review Questions</A>
+<li><a href="09.html#Quiz on SSDs">Quiz on SSDs</A>
+<li><a href="09.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="CSci 375/09 Packages">CSci 375/09 Packages</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Date  #<th scope="col">Topic (Participation 2pt)<th scope="col">Study pages (2 pts)<th scope="col">Quiz(15 pts)<th scope="col">Project Work(10 pts)
+<tr><td>Previous  8<td>SSDs<td>173-196<td>-<td>W3(Domain Model 1)
+<tr><td>Today  9<td>Packages<td>197-219<td>Q4(173-219)<td>-
+<tr><td>Next  10<td>Interactions<td>221-247<td>-<td>W4(transition to design)
+</table><br>(Close Table)<br>
+<H1><a name="Revision History">Revision History</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Version#  Date<th scope="col">Description<th scope="col">Author
+<tr><td>0  2005-01-03<td>Used boiler plate to make template<td>RJB
+<tr><td>1  2005-01-31<td>Input section headings<td>RJB
+<tr><td>2  2006-02-02<td>Update to 2006<td>RJB
+<tr><td>3  2006-02-08<td>Added link to questions<td>RJB
+<tr><td>4  2006-02-13<td>Added link to Exercise answer<td>RJB
+<tr><td>5  2007-02-05<td>Added link to simple packages diagram<td>RJB
+<tr><td>6  2011-01-31<td>Added links to PPTs and PDFs<td>RJB
+<tr><td>7  2011-02-05<td>Added Dice Game exercise<td>RJB
+</table><br>(Close Table)<br>
+<H1><a name="Project -- First Domain Model Due">Project -- First Domain Model Due</A></H1>
+<H1><a name="13 Packages: How to organize a complex project">13 Packages: How to organize a complex project</A></H1><ol class=Section>
+<li>This is just a rapid introduction to
+<A name="Logical Architecture" class="Key"> Logical Architecture </A>
+which defines how a complex project is divided into understandable
+groupings.
+<p>
+<li>*** A good set of packages is stable.
+<p>
+<li>*** There are standard ways to do this.  For example in a simple
+project we keep the User Interface, Domain, and Technical Services separate:
+[<A href="09Packages.png"> 09Packages.png </A>]
+and so I expect you to know this diagram (at least) as an example Package
+Diagram.
+<p>
+<li>A package should contain a collection of related artifacts.
+Artifacts in different packages should be less related.
+<li>Arrows show dependencies.
+[<A href="http://www.csci.csusb.edu/dick/cs202/uml1.html#Dependency"> Dependency in uml1 </A>]
+<li>If A - - - - &gt; B then a change in the design of B may force
+you to change A as well.
+<li>No connection between packages mean: You can change one without
+the other breaking.
+<p>
+<li>* When there are dozens of classes you have to group them
+to stay sane!
+<li>* The idea is to get related classes into a package and separated from
+the independent ones.
+<li>If you are wise and your tools support it
+each package maps into a folder/directory in your source code directory.
+<p>
+<li>Notes and lectures
+<A name="slide shows" class="Key"> slide shows </A>
+--
+[<A href="http://www.rose-hulman.edu/class/csse/csse374-201020-02/SlidePDFs/session09.pdf"> session09.pdf </A>]
+(PDF on packages and OOAD),
+[<A href="http://iris.nyit.edu/~kkhoo/Summer1_2008/715-OOAD/Larman_ppt/LarmanChap13.ppt"> LarmanChap13.ppt </A>]
+(NJIT's slides for Larman's chapter),
+[<A href="http://www.cs.toronto.edu/~sme/CSC302/notes/04-package-diagrams.pdf"> 04-package-diagrams.pdf </A>]
+(academic approach),
+[<A href="http://c2.com/cgi/wiki?FourLayerArchitecture"> wiki?FourLayerArchitecture </A>]
+(View+Application+Domain+Infrastructure),
+etc.
+<p>
+<li>Fig 13.1 Artifact influences
+<li>* 13.1 Example packaging: UI + Domain + Technical Services
+<li>* Another useful one: UI + Application + Domain + Technical Services
+(including Persistance and Networking)
+<p>
+<img src="09typical.gif" alt="[Described above]">
+<p>
+<li>* 13.2 Definitions
+<li>13.3 Case studies focus on Domain/Core application layer
+<li>* 13.4 Definition of
+<A name="Software Architecture" class="Key"> Software Architecture </A>
+<p>
+<li>** 13.5 UML - Package diagrams: folders and dependencies.
+<li>+++ learn the notation.
+<img src="packages.gif" alt="Sample packages and a dependency">
+<p>
+<li>***   13.6 Guideline: Use the classic layers
+<li>***   Domain layer reflects the domain model.
+<li>***   13.7 Separate Model (data + logic + etc.) from View(what the user sees...)
+from Control (what the user can do...).
+[<A href="patterns.html#MVC"> patterns.html#MVC </A>]
+<li>13.8 SSD -&gt; System Operations-&gt;Layers
+<li>13.9 Example: Nextgen
+<li>13.10 Example: Monopoly
+</ol><p>. . . . . . . . . ( end of section <a href="09.html#Packages: How to organize a complex project">Packages: How to organize a complex project</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="14 Object Design">14 Object Design</A></H1><ol class=Section>
+<li>* Three ways of designing objects: code, draw+code, draw(magic code)
+<li>++ Cynthia Farquhar's research uncovered a 4th strategy: code and then
+document.
+<li>* 14.1 Agile modeling &amp; Lightweight UML
+<li>- 14.2 UML CASE
+<li>* 14.3 How much time drawing?  NOT MUCH.
+<li>*** 14.4 Static vs dynamic models.
+<li>* 14.5 Object design skill vs UML Notation Skill
+<li>14.6 Another technique
+<li><a name="CRC">CRC</A>::=
+<A name="Class Responsibility Collaboration" class="Key"> Class Responsibility Collaboration </A>
+Cards.
+I don't really believe in these!
+I don't require you to study these.  You can experiment with them
+if you like.  No points will be gained or lost on projects for
+just using or not using <a href="#CRC">CRC</A>. I'll be interested in gathering your
+experiences.
+</ol><p>. . . . . . . . . ( end of section <a href="09.html#Object Design">Object Design</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="Exercises">Exercises</A></H1>
+[<A href="09x.html"> 09x.html </A>]
+<H1><a name="Next Assigned Work: SSD+Packages">Next Assigned Work: SSD+Packages</A></H1>
+[<A href="w4.html"> w4.html </A>]
+Due next week.
+<H1><a name="Questions and Answers on Logical Architecture">Questions and Answers on Logical Architecture</A></H1>
+[<A href="09q.html"> 09q.html </A>]
+<H1><a name="Review Questions">Review Questions</A></H1>
+[<A href="09r.html"> 09r.html </A>]
+<p>
+<p>
+<H1><a name="Quiz on SSDs">Quiz on SSDs</A></H1>
+Goal:  prove that you can draw a good System Sequence Diagram for a given
+scenario.
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<p>
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+[<A href="02DiceGameClasses.gif"> 02DiceGameClasses.gif </A>]
+(example).
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<p>
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good set of objects and/or classes to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what has no value <span class="InlineFormula">now</span>, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<p>
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci and Engineering School, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10 and
+[<A href="02DiceGameSSD.gif"> 02DiceGameSSD.gif </A>]
+(example).
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need it <span class="InlineFormula">now</span>. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">( End of document )</a>  <a href="#Contents">&lt;&lt;Contents </A> | <a href="#Main Content">Top</A></H3>
+</body>

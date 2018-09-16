@@ -1,0 +1,29 @@
+Running: C:\Xilinx\13.2\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg_isim_beh.exe -prj C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg_beh.prj work.FPGA_hex_sseg work.glbl 
+ISim O.61xd (signature 0x6dd86d03)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Analyzing Verilog file \"C:/Documents and Settings/user/Desktop/test2/../Lab5_FPGA/half_adder.v\" into library work
+Analyzing Verilog file \"C:/Documents and Settings/user/Desktop/test2/../Lab5_FPGA/full_adder.v\" into library work
+Analyzing Verilog file \"C:/Documents and Settings/user/Desktop/test2/../Lab5_FPGA/hex_to_sseg.v\" into library work
+Analyzing Verilog file \"C:/Documents and Settings/user/Desktop/test2/../Lab5_FPGA/FourBitAddrSub.v\" into library work
+Analyzing Verilog file \"C:/Documents and Settings/user/Desktop/test2/../Lab5_FPGA/disp_mux.v\" into library work
+Analyzing Verilog file \"C:/Documents and Settings/user/Desktop/test2/../Lab5_FPGA/FPGA_hex_sseg.v\" into library work
+Analyzing Verilog file \"C:/Xilinx/13.2/ISE_DS/ISE//verilog/src/glbl.v\" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 58716 KB
+Fuse CPU Usage: 218 ms
+Compiling module half_adder
+Compiling module full_adder
+Compiling module FourBitAddrSub
+Compiling module hex_to_sseg
+Compiling module disp_mux
+Compiling module FPGA_hex_sseg
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 4 sub-compilation(s) to finish...
+Compiled 7 Verilog Units
+Built simulation executable C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg_isim_beh.exe
+Fuse Memory Usage: 64224 KB
+Fuse CPU Usage: 327 ms

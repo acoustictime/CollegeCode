@@ -1,0 +1,57 @@
+module Prob_5_48(output reg y_out, input x_in, clk, reset);
+ 
+	parameter a = 2'b00, b = 2'b01, c = 2'b10, d = 2'b11;
+
+	reg[1:0] state, next_state;
+ 
+	//state register
+	
+	always @(posedge clk, negedge reset)begin
+
+		 if(reset == 1'b0) state <= a;
+ 
+		else state <= next_state;
+
+	//next-state combinational logic 
+	 
+	always @(state, x_in)begin
+		//change made
+		next_state = state;
+
+		case(state)
+
+		 a: if (x_in) next_state = c; else next_state = b; 
+
+		 b: if (x_in)next_state = d;  else next_state = c; 
+
+		 c: if (x_in) next_state = d; else next_state = b;
+
+		 d: if (x_in) next_state = a; else next_state = c;
+ 
+		 endcase
+
+		 end
+	
+	//output logic
+	 
+	always @(state, x_in)begin
+		//default value of y_out
+		y_out = 0;
+
+		case(state)
+
+		 a: if (x_in) y_out = 0; else y_out = 1;
+
+		 b: if (x_in) y_out = 1; else y_out = 0;
+
+		 c: if (x_in) y_out = 1; else y_out = 0;
+
+		 d: if (x_in) y_out = 0; else y_out = 1;
+ 
+		 endcase
+
+		 end
+
+
+ 
+	endmodule

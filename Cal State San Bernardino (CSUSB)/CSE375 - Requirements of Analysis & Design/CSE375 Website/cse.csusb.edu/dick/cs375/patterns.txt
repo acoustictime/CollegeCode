@@ -1,0 +1,691 @@
+.Open Patterns and Principles
+. What is a Pattern
+A pattern can be a recurring structure in a domain or business model.  It can be a
+pretty useful way of solving a recurring problem in coding a program.  It can
+be a recurring way of dividing up the responsibilities (functionaliity) into a maintainable
+set of objects.  The key word is
+.Key recurring
+-- if it has not been used 3 times then it is not a pattern.
+
+. Domain and Business Model Patterns
+In a typical busines or doamin model there will be many simple patterns that appear.
+
+The first set of patterns come from the fact that Entity-Relationship modelling is also
+business modelling.  The following examples come from my CSE372 (Computers in Organisations) course.
+Here are some classic analysis patterns that I've noticed over the years.  Use this list to help
+discover ERD models:
+.Set
+.Key Sentences lead to Relations:
+Sentences often describe relationships between entities: Jo Doe is married to Jane Roe. Student
+Joe Coyote is enrolled in CSE372. Joe Coyote is working as a Librarian on the "FIS" project
+team in CS372. 
+.List
+ A simple relationship between only two entities can be shown as simple link. RJBOTTING
+teaches CSE372.
+
+.Image ERD1.gif Simple Relation between two Entities
+
+ But many-to-many and `n`-ary relationships are best treated as entities. For example: An
+Enrollment links a Section  to a Student....
+
+.Image ERD2.gif Relationship between 3 Entities
+
+ A sentence can relate entities of the same type.  For example a Marriage relates two People.  The
+different occurrences play different `roles`.  For example in a traditional a Marriage has one
+Person who is playing the roll of `husband` and a second person playing the role of `wife`.
+
+.Image ERD3.gif Relationship with two roles of one type
+
+ Some sentences describe an entity in terms of its attributes.  When an entity has a property that is
+a value of a simple data type: a number, Boolean, character, string, or one of a number of
+enumerated values, then it is best shown as an attribute. For example a Person may have
+attributes: gender, age, height, ...
+
+.Image ERD4.gif Entity with attributes
+
+ Notice: an entity can have attributes and be related to other entities. A
+Relationship can also have attributes, and be related to other Entities.  
+However be careful not to record the same fact in multiple
+ways.
+
+.Close.List
+
+.Key Master and Detail Pattern
+Example: A Sale has a number of Items.  An Order has
+a number of order items. 
+
+.Image ERD5.gif master (1)-(*) detail.
+
+.Key Pattern -- Actor plays a Role for a Time
+A Person can be a Student in a Quarter.  A Person can Work on
+campus in a Quarter. They can be a Teacher in another Quarter.  Combinations of roles are
+possible at one time.
+
+.Image ERD6.gif Actor--Role--Time
+
+.Key Events Time and Place Pattern
+Event of a particular Type takes place at a Time and a Place. Example:  CSE372 meets 4-6pm
+in JBH146 during winter quarter 2007.
+
+.Image ERD7.gif Event at Place in Time of Type...
+
+.Key Description and Instance Pattern
+Example: A product describes a sales Item.
+Also good for entities that are grouped by shared attribute values. Example:
+A Course has many Sections. 
+
+.Image ERD8.gif Description(1)-(*)Instance.
+
+.Key Part and Whole Pattern
+Building has many rooms.  A Week has many days. Dog has 4 legs. Project
+has team members.
+
+.Image ERD9.gif Whole(1)---Part
+
+.Key Access Point Pattern --
+An entity selects a collection of entities needed for a
+process.  Example: DeansList of Students with GPA>3.9. This example is an
+"Operational Master" and expresses a functional requirement as an object.
+Another version is when when the Access Point links to a list or set of
+objects: for example an Inventory of Items on the shelves in a Store,
+a list of people with accounts, a catalog of all the books in a library,
+or a Ledger describing resources owned by a enterprise.  
+.Image ERD10.gif Access(1)---Instance
+
+.Key General and Particular Pattern --
+A Student and a Teacher are special types of Person.  In an ERD the
+special types are shown with a 0..1 multiplicity in the General.  In general,
+you can have a whole hierarchy of special types. There are ways to document
+whether the special types overlap or not (UML Generalization).  Avoid this detail in
+simple ERDs.
+
+.Image ERD11.gif General(1)---(0..1)Particular
+
+.Key The Enumeration pattern
+It is very common to define an entity type not by its relationships and attributes,
+but by listing its possible values.  For example: Gender, Race, Boolean, ... Either document the
+values elsewhere or use the <<enumeration>> stereotype in the UML for the second of these. Do
+not confuse listing the attributes of an entity: Person has age, gender, eye color, ... with listing the
+possible values of an
+enumerated date type: Gender = {male, female, unknown}. 
+Another example: student status = (fresher, sophomore, junior, senior, graduate).
+
+.Image ERD13.gif Type={value1, value2, ...}
+
+By the way it is a common error to forget the "<<enumeration>>" and so turn the possible values of
+a simple entity into the attributes of a complex and erroneous one.
+
+.Close.Set
+
+. Software Design Patterns
+Reoccuring solutions to complex and subtle problems in software design -- for example
+allowing the software to work with an expanding number of interface frameworks without
+recompiling everything each time.
+See
+.See http://en.wikipedia.org/wiki/Software_design_pattern
+on the Wikipedia.
+. GRASP -- General Responsibility Assignment Software Patterns
+From Craig Larman
+.See ../cs375/text.html
+
+Expert::=`allocate a responsibility to a class that has the information`. Look
+in both the design classes and the domain model to find a type of object 
+that knows enough to handle the responsibility.  Knowledge includes
+having the data, and also knowing who has got the data!  Sketch
+
+.Image InformationExpertPattern.gif [Look for info in the domain]
+
+Creator::=`creating an object should be the responsibility of a class that is closely related to the created object`.  Notice that you always need at least
+one way of creating an object that doesn't depend on already having an object
+of that type already.  So which class or object is close to the 
+created object.  Sketch 
+
+.Image ./CreatorPattern.gif [owners and close friends make good creators]
+
+Or else you can use a GoF $Factory -- a
+$Pure_Fabrication.
+
+Low_coupling::=`Assign a responsibilities so that class depends less on other classes using a "need to know basis"`. Organize responsibilities so that classes do not depend on each other two much.
+
+High_cohesion::=`Design elements to have strongly related and focused responsibilities"`.
+
+Controller::=`Assign the responsibility for handling system event messages to a class representing either the whole system, device, or subsystem, or representing the use case /scenario within which the system event occurs`. 
+Controllers often translate $IDs_to_Objects where the objects are in
+the Domain Layer and are Information Experts.
+Note: Choose controllers carefully to avoid low cohesion.
+
+.Image ./ControllerPattern.gif [Possible controllers]
+
+Compare
+.See MVC
+(Model-View-Controller)
+and see $IDs_to_Objects below.
+
+Polymorphism::=`Give the same name to services in different objects when 
+the services are similar or related`. Classify objects, using 
+inheritance/generalization, to allow the right version of a service to be 
+executes for the object in question. 
+You can call
+all your Pets in the same way.... and the Dogs come to you, and the Cats
+think about it, for example.
+
+.Image ./PolymorphismPattern.gif [Class send message to object of right type]
+
+Example
+.See Strategy
+in the $GOF patterns below.
+
+Pure_Fabrication::=`assigning a highly cohesive set of responsibilities to an artificial convenience class that doesn't represent a problem domain concept`.
+
+.Image PureFabrication.png [Assign operation to an invented class of object]
+
+Indirection::=`Assign a responsibility to a class that knows where to find an object that can complete the task`, Avoid coupling by an intermediate (smart?) object.  
+
+.Image IndirectionPattern.gif [Put object in the middle]
+
+You can have indirect access to an abstraction without knowing
+the precise concrete implementation of the abstraction.
+$Polymorphism makes sure you get the right behavior.
+
+PV::=Protected_variation.
+Protected_Variation::=`Identify points of predicted variation or instability and assign responsibilities to create a stable interface around them`.
+.List
+ Parnas: Separate your design decisions into separate modules. See $Parnas.
+ SDM: Separate physical from logical structures in separate processes.
+ GoF: $Template_Method, $Facade, $Proxy, $Adapter,...
+.Close.List
+.Open GoF Patterns
+GoF::="The Gang of Four".... see $GoF_book and
+The_Gang_of_Four::abbreviation={Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides}, Four $OO thinkers who wrote an influential book of design patterns. 
+GoF_book::=following,
+.See [Gammaetal94]
+, note -- uses a pre-UML notation.
+
+.Key Links on the Gang of Four patterns.
+THe Wikipedia has articles of varying quality on the $GoF patterns. Here
+.See http://en.wikipedia.org/wiki/Design_Patterns_(book)
+is a link to a description of the book.
+Here
+.See http://pw.tech-arts.co.jp/download/design_pattern/
+are some quite good UML diagrams but I'm not sure of the descriptions.
+And the WikiWikiWeb
+.See http://c2.com/cgi/wiki?DesignPatterns
+discusses them all -- but is short of diagrams (if you like diagrams).
+More links:
+.Hole
+
+Many $GoF combine two or more $GRASP patterns.  For example $State
+is a $Pure_Fabrication that uses $Indirection to protect
+a class from state changes ($PV).
+
+Abstract_factory::$GoF=`To allow a client to create an object without knowing what type of object it is design a common interface for creating families of similarly or related objects`. 
+See $Factory.
+This is an example of a $Pure_Fabrication that uses $Polymorphism to $Protect_Variation.
+.See http://c2.com/cgi/wiki?AbstractFactoryPattern
+
+.Image http://upload.wikimedia.org/wikipedia/commons/a/a7/Abstract_factory.svg [Wikimedia diagram]
+
+.See http://en.wikipedia.org/wiki/Abstract_Factory
+(article).
+
+Adapter::$GoF=`Introduce a class to convert the interface of one component into another interface`.  Think plugs and sockets. `make one interface for one or more suppliers`.
+Unlike $Proxy and $Bridge, an adapter converts different interfaces into one common one.
+Uses pure fabrication to protect variation in an interface and ise 
+indirection and polymorphism to make easy to extend.
+
+.Image Adapter.png [Use a new interface that polymorphically selects the right object and message]
+
+(general form)
+and code
+.See ./fig25_25_1.cpp
+.See ./test.fig25_25_1.cpp
+(From Larman05)
+
+Bridge::$GoF=`A class of objects that acts as an interface between clients and an implementation`.
+Unlike an $Adapter the $Bridge connects to a family of objects with the same operations.
+.See http://c2.com/cgi/wiki?BridgePattern
+.See http://pw.tech-arts.co.jp/download/design_pattern/images/bridge_s.jpg
+.See http://en.wikipedia.org/wiki/Bridge_pattern
+
+Builder::$GoF=`How to constuct complex objects with varying parts? A director calls various builders as needed`, a variation on the $Factory patterns.
+.See http://en.wikipedia.org/wiki/Builder_pattern
+.See http://c2.com/cgi/wiki?BuilderPattern
+
+Chain_of_Responsibillity::$Gof=`Attach responsibillities to a linked list of abstract handlers each is a special concrete handler`.
+.Hole
+
+Command::$GoF=`Design objects that know how to do (and undo) a family of tasks and pass them to other objects to be used as needed`. 
+.See http://c2.com/cgi/wiki?CommandPattern
+
+Composite::$GoF=Make complex and simple kinds of an object share behavior. And often the complex objects keep a list of their parts: each of which is a similar kind of object.
+.See http://c2.com/cgi/wiki?CompositePattern
+.See http://www.dofactory.com/Patterns/PatternComposite.aspx
+
+Decorator::$GoF=`A class can take an object and wrap new functions around it`.
+
+.See ./decorator.gif
+(complex diagram)
+.See http://www/dick/cs375/TestDecorator.java
+.See http://c2.com/cgi/wiki?DecoratorPattern
+Wrapper::=$Decorator.
+
+Facade::$GoF=`A class or object provides a single point of entry for services of a subsystem`, Hide a complex system of objects behind a single object. Pay no attention to the man behind the curtain.
+.See http://c2.com/cgi/wiki?FacadePattern
+.See http://www.dofactory.com/Patterns/PatternFacade.aspx
+.See http://en.wikipedia.org/wiki/Facade_pattern
+
+Factory::=`an object/operation/class is designed solely to create other kinds of object`.
+A factory is an alternative to a constructor in a class.  Because it
+is a member of a different class (the factory) we can get objects without
+having to know precisely what class they are instances of.  Other
+patterns need the ability to create concrete implementations of
+an abstraction -- but without knowing which implementation has been
+chosen.
+This is not a GoF pattern,
+see $Abstract_factory, $FactoryMethod, and $Builder.
+
+FactoryMethod::=`an operation that creates an object`.  THis provides flexibillity
+that a constructor is not able to provide -- for example different names
+or run selection of the concrete type of object.
+Typically there is
+a hierarchy of classes all providing the same operation to create objects of
+different types.  Similarly the resulting object should be a specific
+object in a hierarchy of products.
+See
+.See http://en.wikipedia.org/wiki/Factory_method_pattern
+on the Wikipedia.
+
+Flyweight::$GoF=`when you have lots of small similar objects keep exemplas ina data structure and point to those for the details`.
+.See http://c2.com/cgi/wiki?FlyweightPattern
+.See http://en.wikipedia.org/wiki/Flyweight_pattern
+Classic example: characters in wordprocessing.  Used for $State and $Strategy.  Used with $Composite.
+
+Interpreter::$GoF=`Complex rules and formulas are encoded as expressions that can be evaluated. An abstract Expression can be a terminal or nonterminal expression and nonterminal expression have many abstract parts in them`.
+.See http://www.dofactory.com/Patterns/Diagrams/interpreter.gif
+.See http://www.dofactory.com/Patterns/PatternInterpreter.aspx
+.See http://www.vincehuston.org/ps/hanoi_article.html
+(Includes $Composite and Inpterpreter as an OO solution of the Classic
+Towers of Hanoi problem). Here
+.See http://stackoverflow.com/questions/1020622/is-interpreter-an-anti-pattern
+is a discussion of whether Interpreter is actually a bad idea (and 
+Anti-Pattern) and a smarter move is just to embed a ready made laguage and
+interpreter.
+
+Iterator::$GoF=`Provide access to each item in a container in turn`, A typical iterator
+has operations that return: first(), next(), isDone(), currentItem().  Alternative
+is $Visitor.
+.Hole Iterator
+
+Mediator::$GoF=`A collection of Colleagues work together without direct coupling because they use a Mediator object`.
+.Hole Mediator
+
+Memento::$Gof=`An object creates a memento of a particular event that is passed to a caretaker until the state has to be recalled`.
+.Hole Memento
+
+Observer::$GoF=`An object that implements the operations that let it subscribe to learn about other objects`.
+Objects that need to see what an object is doing can join a collection 
+maintained by the observed object.  These are subscribers. The observed 
+object `publishes` the changes to the subscribers using one or more special
+operations that a listed in an interface that the observers all implement.
+It is also possible for an object to subscribe other objects as observers.
+.See http://www/dick/cs375/Observer.gif
+(Class diagram)
+.See http://www/dick/cs375/observer.png
+(sequence diagram)
+.See http://c2.com/cgi/wiki?ObserverPattern
+.See http://www.dofactory.com/Patterns/PatternObserver.aspx
+
+Prototype::$GoF=`Create objects by asking an object to clone itself, all concrete prototypes share a common clone() interface`.
+.Hole
+
+Proxy::$GoF=`Design an object that can stand in for other objects and knows which object it is representing and how to simulate it.`  As a result we can change the real object with out breaking the client.
+
+.Image proxy.gif [A client is protected from variations by a common interface and multiple real and imitation objects]
+
+.See http://c2.com/cgi/wiki?ProxyPattern
+
+Singleton::$GoF=`To make sure that there is precisely one object in a class and provide access to it`.
+.Image Singleton.png [Implementing and using a Singleton class]
+
+.See ./Singleton.pdf
+.See ./singleton.cpp
+.See ./test.singleton.cpp
+.See http://c2.com/cgi/wiki?SingletonPattern
+.See http://www.dofactory.com/Patterns/PatternSingleton.aspx
+
+Strategy::$GoF=Place different ways to do something behind a common interface and use indirection via an object to pick the right one.
+.See http://c2.com/cgi/wiki?StrategyPattern
+.See http://www.dofactory.com/Patterns/PatternStrategy.aspx?
+
+.Image Strategy.gif [There are many ways to solve a problem and the client does not need to know which one is used]
+
+State::$GoF=`When an object changes behaviors (responsibilities) with time, place the state in a different State object and place the different behaviors in special kinds of State object`. 
+Note: in most programming language can not change its class!  Also
+note that an efficient State implementation can use $Singleton for
+the states.
+.See http://c2.com/cgi/wiki?StatePattern
+(on the WikiWikiWeb).  Examples:
+.See ./StatePatternExample.html
+.See ./test.State.cpp
+.See ./State.cpp
+(using lazy $Singleton and a "call back")
+OR
+.See ./State2.cpp
+(using eager $Singleton, breaking $CQS principle, and hiding the initial state)
+.See ./test.State2.cpp
+, Exercise: redraw the UML diagram to show the changed classes between
+State and State2.
+
+Template_Method::$GoF=`A method in a class can use abstract operations (hooks) that are defined in a subclass so that the subclass provides some functionality while using the overall method`.
+The classic example is a method that sorts a vector of data in a Sortable class
+but uses an undefined "less_than" operation.  Other classes extend the Sortable and define "less_than" and can then sort the data `Their way, right away`.
+.See http://c2.com/cgi/wiki?TemplateMethodPattern
+This result is also called a `Framework`.
+
+Visitor::$GoF=`A visitor object can be taken to many or all the items in a data structure visiting each one and gathering information`, 
+All visitors must implement the same interface which is called by the elements in an
+`accept` method.  Diferent types of element can use different operations in the interface
+if necesary.
+.Hole
+
+.Close GoF Patterns
+. XP Principles
+DRY::=`Don't repeat yourself`.
+YAGNI::=`You Aint' Gonna Need It`.  When in doubt leave it out! Keep It Simple Stupid!
+Only analyse, design, implement,
+and test a function that your client actually needs now.
+. Persistence Principles
+tables::=`All data can be expressed by a collection of simple tables`.
+
+Persistence_as_a_superclass::=`Put all the persistence code into a superclass
+and then any class can become persistent by inheriting from the persistence class`.
+Notice that this can get clumsy and in Java foul up more important extensions.
+
+ACID::principle="Atomic, Consistent, Isolated, and Durable". 
+Jim Gray's ACID principles of Data Base transactions. 
+.Set
+atomic::=`a transaction either completes or does nothing.` -- no interrupts.
+consistent::=`a transaction never leaves the data in a state that breaks the rules`. A marriage has two people: no more, no less.
+isolated::=`The effect of a transaction is hidden from other transactions until it is complete`.
+durable::=`A transaction, once completed, is never lost -- even if things break down or fail`.
+.Close.Set
+
+database_mapper::=`The class of the object determines what data needs to be stored so define objects for each class to handle the tables`.
+
+cache_management::=`Databases should manage their own caches`.
+
+hide_SQL::=`Put all the SQL in one object -- a $singleton -- and keep it separate from the rest of the code`. Treats SQL as an external entity with its own secrets.
+See $Parnas.
+
+. Exception Principles
+Convert_exceptions::=`If you can not handle an exception then convert it to a higher level exception`.
+Name_the_problem_not_the_thrower::=`name exceptions to indicate what is wrong not where it came from`.
+centralize_error_logging::pattern. Have a single object that is responsible for recording bad things.
+standard_error_dialog::pattern. Have a standard user interface for reporting and sorting out errors.
+. OO Principles
+IDs_to_Objects::="An object is more than its ID or Key and more useful", so
+when you are given an identifier or key you should replace it by the 
+correct object as soon as possible. So, for example a $Controller will 
+`find` the object that fits the ID.  The are several places the controller
+can look to `find(id)` including an internal data structure listing all the
+possible objects.   But using a data structure in the Controler means 
+that the controller becomes responsible
+for updating this list -- which means lower cohesion.  The Controler can not
+send the `find(ID)` to the object because the object has not been found yet!
+In Larman's text book in Chapter 17 the Controller `Register` sends the
+`Store` a request to find the customer with a particular ID.
+
+Of course, the Creator of an object has the information to store IDs and
+their objects.  So a simple solution is to use the metaclass (where the
+Constructor is).  
+The diagram below shows the $Controller using a static
+function to ask the Class that created the objects which one matches the 
+`id`.  The returned object is then sent on to other objects to get the work
+done:-
+
+.Image ID2ObjectPattern.gif [Controller asks creator to convert ID to Object]
+
+So, the creator `Class` in the above diagram will probably declare (in C++):
+.As_is 		private: string id;
+.As_is 		private: static map<string, *Object> objects;
+.As_is 		public:  static Object* find(string id){return objects[id];
+.As_is 		private: void addThis(string id){objects[id]=this;}
+.As_is 		private: void removeThis(){objects.delete(Pair(this->id, this);}
+.As_is 		public: Class(string id, ...) {... addThis(id); ...}
+Note the above code needs testing and adapting to the particular situation.
+
+If the exact class of the object is not known, the Controller cannot
+turn to that class to find the id. For example, when I login
+to MyCoyote it does not know whether I am a student or a faculty member, 
+until it looks up my ID.  In this case we might well have decided to
+use a $Factory object to construct the object we need.  The top level
+one can keep track of all the IDs and the specific objects that are needed.
+Then we use $Polymorphism:
+.As_is 	Abstract_Class * object = Factory.getInstance().find(id);
+The Factory::`find(id)` will return the address of an object in
+one of the special concrete classes.  For example, it can return a Faculty
+object or a Student object as a special kind of Person class, by $abstraction.
+
+OO::=`Object Oriented Principles`, including $abstraction, $extension, $polymorphism, etc.
+
+OID::=`Objects should know their own identity... and this can be expressed as a simple data item and stored in data tables, and hidden from the user`.
+
+abstraction::$OO=`Variables and parameters should be declared as reference or pointers to abstract data types whenever possible, and containers as holding pointers to abstractions`.
+Also known as 
+.Key Aim high
+-- allow your pointers to refer to abstractions
+and then they can point to many special kinds of object.
+For example(in C++):
+.List
+ Declare variable abstract and assign address of concrete:
+.As_is 		List * example = new SpecialKindOfList(....);
+.As_is 		Person * dick = new Faculty(....);
+
+ Declare parameters as refs to abstractions
+.As_is 		void zark(List &w){....}
+ Declare containers as containing pointers to abstractions:
+.As_is 		map<string, Person*> people;
+.As_is 		people.insert(string("Dick"), dick);
+.Close.List
+
+extension::$OO=`Extend classes rather than reinventing the wheel`.  
+$Polymorphism lets you add new functions to a class by putting them in a 
+subclass.  This can be separately compiled and linked into the running 
+system without having to compile the base class.
+
+polymorphism::$OO=`let objects sweat the details for you`. See
+GRASP $Polymorphism
+
+. Other Principles
+Parnas::=`place different decisions in different modules`, for example
+.Set
+ 1971: Put input, output, and logic in separate modules that communicate by function calls.
+ Separate the physical from the logical.  For example: physical=magnetic tape,
+logical=sequence of records.
+ Hide a data structure inside an Abstract Data Type --(ADT)
+ Hide an algorithm behind a $Strategy.
+ Hide external systems behind a $Facade.
+ Hide communications between parts inside a $Mediator.
+ Hide libraries behind a $Facade, an $Adapter, or a $Bridge.
+ Hide SQL inside a package or object ($hide_SQL).
+ Hide the User inside a User_interface (UI) Package.
+ Separate particular Applications from Business Logic and Domain classes.
+ Separate Model, View, and $Controller. See $MVC
+ Hide a RDBMS behind a simple $OO persistence layer.
+.Close.Set
+
+CQS::=Command_Query_Separation,
+Command_Query_Separation::principle=`Operations should either do something and return nothing or return something and do nothing, NOT both`,
+.List
+ void doSomething(data);// nothing returned
+ Type getSomething(data);//leaves everything the same.
+.Close.List
+This dates back to the the theory of abstract data types and was
+inherited by Meyer into objected oriented  coding style. 
+This principle leads to code that is slightly more verbose
+but very much clearer.  It also reduces bugs by the principle of
+$Least_Surprise.
+
+Least_Surprise::principle=`Whenever you design anything choose a design that
+minimizes the surprises that the user may experience`.
+Henry Ledgard proposed this for programming languages but it
+also applies to user interfaces, common appliances, and object-oriented
+classes.  Apple had a tendency to extend so that the user experiences
+occasional pleasant surprises:  the user does the wrong thing
+and the system does the right thing.  This is also called 
+DWIM::="Do What I Mean".
+This is a dangerous philosophy because it back fires.
+
+Model_View_controller::pattern=$MVC.
+.See http://www.pns.anl.gov/images/sciandproj/isaw/mvc.gif
+MVC::pattern="Model-View-Controller", 
+.Set
+This patterns suggests separating
+the logic of the data (Model) from the code that interfaces with the user
+(View+Controler).
+ Separate Model (data + ...) from View(what the user sees...) from Control (what the user can do...).
+.See ./MVCinUML.gif
+(UML diagram of View, Controller and Model packages)
+ In some methods yo split Boundary, Control and Entity objects.
+And use special icons for them:
+.See ./icons.gif
+(Graphic showing common icons and stereotypes).
+
+The code that describes user interfaces is independent of the code
+for the logic of an enterprise or application.  The appearance of
+the user interface for a pay-roll should be separated from the
+rules for calculating your with-holdings.
+Neither should the choice of the user interface framework change
+the calculations.  So the wise designer splits all the
+user interface code into specialized classes that communicate
+with the application specific classes.  This is splitting
+the users "View" from the logical "Model".  
+As a result the "Model" classes can reflect the Domain or Business
+model and so are easier to understand and get right... and keep right.
+
+As a result you can change the View (add a new one, rip out the AWT and
+put in Swing, ...) without worrying about the payroll logic.
+
+Here is a paper
+.See http://doi.acm.org/10.1145/1121341.1121453
+that has a set of Java programs that access a time server and show the
+user the time of day found on that server.  One program has a command line
+interface, one has a menu driven ASCII interface and one a GUI interface,
+but they share a common "model" of how to access the time server.  This
+class never changes... each interface is implemented as a new class that
+uses the model:
+
+.Image VMSeparation.gif View -> Model
+
+The diagrams in the paper are not correct UML, do not use them!
+
+In general, there are lots of classes defining the user interface and
+many classes in the Model.  In the UML use packages to contain them.
+
+More strictly the user interface code is split into two sets of classes.
+The View and the Controler.  Typically the user communicates with controlers
+that change the model.  The view classes get data from the model
+and are responsible for rendering it to the user.
+.As_is 		User ---> Controler ----> Model -----> View -----> User
+
+ Also see
+.See http://en.wikipedia.org/wiki/Model-view-controller
+for the history and a list of frameworks that use MVC.
+
+.Close.Set
+FURPS+ ::requirements={Functional, Usability, reliability, Performance, supportability, Implementation, Interface, Operations, Packaging, Legal},
+Grady92.
+
+KISS::=`Keep It Simple, Stupid`, see $XP.$YAGNI.  
+"Do the simplest thing that could possibly work."
+
+PQRST::requirements={Purposes, Qualities, Realities, Systems, Techie}, from $RJB.
+.Net
+ Purposes include functions and use cases and define why someone
+wants the software. `To help us sell items to customers`.
+  Qualities are the needed properties of the software
+like security and performance criteria.
+  Realities are domain models. We have the problem of integrating   different
+views of the the `real world`
+  Systems are the existing systems that we are replacing, using, modifying,
+and even competing with.
+  Techie include technologies, techniques, etc. and
+describe what and how we might construct the software -- the decisions
+we make: eg.-- use VB and MySQL.
+.Close.Net
+
+The_Hollywood_Principle::pattern="Don't call us, we will call you",  
+This is a common implementation
+pattern for interacting with a framwork or operating system.  Instead of the program calling
+the operating system when it needs to something, it waits to be called by the environment when events
+happen. Detail at
+.See http://en.wikipedia.org/wiki/Hollywood_Principle
+on the Wikipedia.
+The $GoF $Observer pattern uses the Hollywood Priciple.
+The classic $GoF $State pattern uses it to change the state.
+
+.Open AntiPatterns -- Patterns that occur but don't resolve the forces well
+. The Ball of Mud Pattern or God Object
+Defined in
+.See http://en.wikipedia.org/wiki/God_object
+on the Wikipedia.
+
+You should read and study this an excellent, short, and readable
+blog entry
+.See http://www.codinghorror.com/blog/archives/001003.html
+describing the ways in which system and software architecture goes astray
+and ultimately becomes unmanageable.
+.Close
+. Good Links on Patterns
+A good list, overview and, discussion of patterns
+can be found at
+.See http://c2.com/cgi/wiki?CategoryPattern
+on the WikiWikiWeb.
+
+Another source of pattern information is
+.See http://www.dofactory.com/Patterns/Patterns.aspx
+but this is biased towards C# and is an advert for $2,000 courses.
+
+Here is a nice resource
+.See http://home.earthlink.net/~huston2/dp/
+and visual
+.See http://home.earthlink.net/~huston2/dp/patterns.html
+provided by Vince Huston.  Here is a quiz
+.See http://home.earthlink.net/~huston2/dp/patterns_quiz.html
+
+The Wikipedia
+.See http://en.wikipedia.org/wiki/
+also documents many (if not all) patterns
+.See http://en.wikipedia.org/wiki/Category:Software_design_patterns
+here.
+
+Paul Wagner
+.See [Wagner05]
+Has listed a dozen commain model patterns:
+.See ./domainPatterns.png
+that are useful in domain or business modelling.
+
+Narasimha Bolloju
+.See [Bolloju04]
+.See [BollojuLeung06]
+claims that if you know about a dozen common domain model patters
+then you make better models, quicker.
+Here is a visual summary
+.See ./19Bolloju04.gif
+of the following list
+ Collaboration_patterns::#Pattern=following,
+.Set
+ E1: Role (1)-(0..*) Transaction
+ E6: Transaction (1)-(0..*) FollowupTransaction 
+ E5: Specification (1)-(0..*) Transaction
+ E3: CompositeTransaction (1)<*>-(0..*) LineItem
+ E2: Place (1)-(0..*) Transaction
+ R: Actor (1)-(0..*) Role
+ T1: Item (1)-(0..*) SpecificItem
+ T4: Group (1)<>-(0..*) Member
+ E4: SpecificItem (1)-(0..*) Transaction
+ T2: Assembly(1)<*>-(0..*) Part
+ P: OuterPlace (1)-(0..*) Place
+ T3: Container (1)<*>-(0..*) Content
+.Close.Set
+.Close Patterns and Principles

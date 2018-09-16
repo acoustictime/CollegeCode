@@ -1,0 +1,19 @@
+.Open Review Questions 2
+ List the four steps used to apply OOAD to a simple example.
+ What is a domain model?  How does it differ from a design class diagram?
+ Each arrow in an interaction diagram become something in a design class diagram -- what?
+and where?
+ Name the three ways to apply UML. 
+ Name the three perspectives to apply UML.
+ What does `time-boxed` mean? Where does it apply in this course?(page 23)
+ Name the 4 UP phases.  
+ Name the 3 disciplines covered in the text.
+ How do iterations and phrases fit together?
+ Draw a diagram showing the disciplines, phases, and iterations (page 36).
+ In the projects in this class each week is a partial iteration,  what
+vital step is omitted/optional in each iteration?
+. Open Book
+ On page 29 is a copy of the Agile Manifesto and the Agile Principles.
+In a group of 4 or 5 people form a consensus opinion about which principle
+you think is most controversial.
+.Close

@@ -1,0 +1,441 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/08.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:54:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+CSci 375/08 SSDs
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="08.txt">Text Version</A>]
+ 08.html 
+Wed Jan 11 07:25:38 PST 2012
+<br>
+<h6><br>Opening Microsoft files (winzip, word, excel, powerpoint)
+on this page may require you to <a href="http://acm.csusb.edu/Services/webaccessibility/compliance/readers_and_viewers.htm">download a special viewer</a>.
+Or you can download and save the files and use your preferred office applications to view and edit them.</h6>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="08.html#CSci 375/08 SSDs">CSci 375/08 SSDs</A>
+<li><a href="08.html#Revision History">Revision History</A>
+<li><a href="08.html#10 SSDs">10 SSDs</A>
+<li><a href="08.html#Introduction">: Introduction</A>
+<li><a href="08.html#Powerpoint on SSDs -- old Larman book">: Powerpoint on SSDs -- old Larman book</A>
+<li><a href="08.html#Common error -- SSDs showing how the system works">: Common error -- SSDs showing how the system works</A>
+<li><a href="08.html#Messages and data">: Messages and data</A>
+<li><a href="08.html#Common Error -- Not putting the data in messages">: Common Error -- Not putting the data in messages</A>
+<li><a href="08.html#Purpose of SSDs">: Purpose of SSDs</A>
+<li><a href="08.html#Text -- chapter 10">: Text -- chapter 10</A>
+<li><a href="08.html#SSDs and C++ Testing">: SSDs and C++ Testing</A>
+<li><a href="08.html#11 Operation Contracts">11 Operation Contracts</A>
+<li><a href="08.html#Requirements to Design">Requirements to Design</A>
+<li><a href="08.html#SSD on the web">SSD on the web</A>
+<li><a href="08.html#Another example SSD -- Use Case: Teacher posts grades">Another example SSD -- Use Case: Teacher posts grades</A>
+<li><a href="08.html#Questions and Answers on SSDs">Questions and Answers on SSDs</A>
+<li><a href="08.html#Review Questions">Review Questions</A>
+<li><a href="08.html#Exercises">Exercises</A>
+<li><a href="08.html#Next: Logical Packaging etc">Next: Logical Packaging etc</A>
+<li><a href="08.html#Next Project Iteration -- Domain Model 1">Next Project Iteration -- Domain Model 1</A>
+<li><a href="08.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="CSci 375/08 SSDs">CSci 375/08 SSDs</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Date  #<th scope="col">Topic (Participation 2pt)<th scope="col">Study pages (2 pts)<th scope="col">Quiz(15 pts)<th scope="col">Project Work(10 pts)
+<tr><td>Previous  7<td>Domain Model II<td>157-171<td>Q3(121-171)<td>-
+<tr><td>Today  8<td>SSDs<td>173-196<td>-<td>W3(Domain Model 1)
+<tr><td>Next  9<td>Packages<td>197-219<td>Q4(173-219)<td>-
+</table><br>(Close Table)<br>
+<H1><a name="Revision History">Revision History</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Version#  Date<th scope="col">Description<th scope="col">Author
+<tr><td>0  2005-01-03<td>Used boiler plate to make template<td>RJB
+<tr><td>1  2005-01-31<td>Input section headings<td>RJB
+<tr><td>2  2005-02-07<td>Adding Questions<td>RJB
+<tr><td>3  2006-01-12<td>Update to 2006<td>RJB
+<tr><td>4  2007-01-10<td>Add link to project<td>RJB
+<tr><td>5  2007-02-07<td>Added notes on format of messages<td>RJB
+<tr><td>6  2008-02-07<td>Added notes on SSDs and testing in C++<td>RJB
+<tr><td>7  2009-03-18<td>Added instructions on writing messages<td>RJB
+<tr><td>8  2011-01-26<td>Expanded syntax of messages and added PPT<td>RJB
+<tr><td>9  2011-02-02<td>Adding Exercise stubs<td>RJB
+</table><br>(Close Table)<br>
+<H1><a name="10 SSDs">10 SSDs</A></H1><ol class=Section>
+<H2><a name="Introduction">Introduction</A></H2>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagram&quot;, a way of using the <a href="#UML">UML</A> to model the sequences of events flowing between actors and the system under development.
+<p>
+SSD's clarify the steps in use cases and prepares you to design
+collections of objects that <span class="InlineFormula">realize</span> a use case.
+<p>
+Each SSD should show a scenario with one event/response for each interaction
+between an actor and the system.   These events should be thought of
+as coming from the user interface into the heart of the software.
+We will work out what happens inside this next week.
+<p>
+We will use sequence diagrams with similar form but more objects
+to design our software.
+The messages in the SSD will be the incoming &quot;found&quot; messages that we
+will use to work out how objects in our program will &quot;collaborate&quot; to
+give the response that the user/stakeholders require.
+<p>
+It shows a single box(object) for the whole system.  It does not show
+any internals of the system.  It is a <span class="InlineFormula">black box</span> model of the system.
+<p>
+<img src="08SSD.gif" alt="Example of a SSD">
+<p>
+<H2><a name="Powerpoint on SSDs -- old Larman book">Powerpoint on SSDs -- old Larman book</A></H2>
+[<A href="http://teacher.buet.ac.bd/shahin/INFORMATION%20SYSTEM%20ANALYSIS%20AND%20DESIGN/Larman%20Chapter%209.ppt"> Larman%20Chapter%209.ppt </A>]
+(429 kB).
+<p>
+<H2><a name="Common error -- SSDs showing how the system works">Common error -- SSDs showing how the system works</A></H2>
+I remove points if your SSD does not show the [:System] object and the actors.
+<p>
+I remove points if you draw an SSD and show objects that are inside the system.
+<p>
+A common error is to do design before you clarify the
+steps in an SSD.  This shows up by not having a single box called [:System]
+plus the actors from the use case.  The result -- I've seen dozens of these --
+especially on the web -- are designs that can not work.
+<p>
+The purpose is to define the detailed flow of messages and data between the actors and the
+system as a whole.
+<p>
+Once this is done it is much easier to design objects to realise each step.  Do this
+later!
+<p>
+<H2><a name="Messages and data">Messages and data</A></H2>
+Messages turn up a lot in OO programs: in <a href="#SSD">SSD</A>, interaction diagrams, and in design class diagrams.
+<p>
+You should use a strict syntax for messages in UML diagrams.
+<pre> 		login(id,password)</pre>
+<pre> 		logout()</pre>
+<pre> 		findClassesWith(name)</pre>
+<pre> 		registerIn(me, class)</pre>
+<pre> 		pick(itemNumber)</pre>
+<pre> 		createMailMessage(subject, replyTo, message, signature)</pre>
+You aim to be a precise as possible.  The idea is to uncover the details that can kill
+a project, not to slide them underneath a rug.
+<p>
+Here is the syntax of function calls:
+<li><a name="message">message</A>::= <a href="#name">name</A> &quot;(&quot; <a href="#data">data</A> &quot;)&quot;.
+The parentheses are important. Do not omit them.
+<pre> 	 login(userId, password)</pre>
+<p>
+<li><a name="message_with_response">message_with_response</A>::= identifier &quot;:=&quot; <a href="#message">message</A>,
+Useful when something valuable is returned by when a message is sent.
+<pre> 	 reply:=sendEmail(to,subject,body)</pre>
+<pre> 	 music:=playSelectionFromList(selection)</pre>
+You can also use a &quot;return&quot; arrows that are dashed and have an open arrowhead.
+Note -- omit responses that merely say that the message has been handled!
+<a href="#KISS">KISS</A>!
+<p>
+Response are just objects.  They are <a href="#data">data</A>.
+The data (objects) are sent back in response
+to a message:
+<pre> 		confirmRegistration</pre>
+<pre> 		listOfCourse</pre>
+<pre> 		OK</pre>
+<pre> 		MessageOfTheDay</pre>
+<pre> 		acknowledgement, rendered_page</pre>
+These are put on dashed arrows with an open &quot;stick&quot; arrowhead.
+<p>
+Note -- in an SSD you can return several objects inside a
+single response.  When designing the internals of a program
+you need to be aware that programming languages may require you to pack
+all the response to a message into a single object.
+But keep this out of domain models and SSDs! All practical
+languages support vectors, lists, sets, etc. in some form or other.
+You can add multiplicities like &quot;[*]&quot; and properties like &quot;{set}&quot; to data
+descriptions.
+<p>
+<li><a name="data">data</A>::= <a href="#empty">empty</A> | <a href="#datum">datum</A> | <a href="#datum">datum</A> &quot;,&quot; <a href="#datum">datum</A> &quot;,&quot; .... | ...
+The data is empty, or an identifier, or a list of identifiers.
+<p>
+You can also specify the class of the data like this
+<li><a name="datum">datum</A>::= <a href="#identifier">identifier</A> <a href="#O">O</A>(&quot;:&quot; className #(&quot;[&quot; multiplicity &quot;]&quot; | &quot;{&quot; property &quot;}&quot;)),
+add the type after a colon and then any number of multiplicities and properties as needed.
+<pre>	 	messageOfTheDay : Text</pre>
+<pre>	 	cost : Money</pre>
+<pre>	 	listOfCourses : Course[*]{list}</pre>
+<p>
+<li><a name="name">name</A>::= event | request_for_action_by_target.
+You should choose short names that either tell the reader the reason that
+the message was sent or it is an instruction to the target object
+to do something.
+<pre> 		timeOut</pre>
+<pre> 		create</pre>
+<pre> 		playSelectionFromList</pre>
+<p>
+<li><a name="empty">empty</A>::=&quot;&quot;, indicates that the message has no data -- typically one of a small number
+of events like clicking the logout button.
+<p>
+<li><a name="identifier">identifier</A>::=lowerCaseWord # UppercaseWord, the data in a message either is an element like a number,
+character, or string.  It can also identify an object.  You send an object in a message so that
+the receiving object can do things to it ... like send back a response or extract more data.
+<p>
+Put messages on an arrow with a filled in head. Put returned objects on
+lines that are dashed with an open arrowhead.
+<p>
+<H2><a name="Common Error -- Not putting the data in messages">Common Error -- Not putting the data in messages</A></H2>
+Whne the user supplies data -- you must name it and show it in messages.  When the
+system responds with data you must name it.  The names must be clear.
+<p>
+For example, a diagram that shows a <span class="InlineFormula">login</span> message but does not show the data used
+to identify and authenticate the user is wrong. It can not work.
+<p>
+Even if your diagram shows a messahe &quot;login()&quot; sent to an object &quot;[:User]&quot; it
+can not work -- (1) which user?  (2) How did you find it, (3) what! no password!
+<p>
+Again a common step is when the user elects an item in a list.  Do not
+show this as a message &quot;select()&quot; going to an object &quot;[:Item]&quot;, instead
+<pre> 		selectItemInList(selection)</pre>
+is sent to the [:System] in the SSD and it will (probably) route it to [:List]...
+<H2><a name="Purpose of SSDs">Purpose of SSDs</A></H2>
+<li>* Purpose: Given some use cases, refine some of their scenarios.
+<li>* Prepare to design objects to handle use cases.
+<H2><a name="Text -- chapter 10">Text -- chapter 10</A></H2>
+<li>* Fig 10.1 Artifact influences
+<li>* 10.1 Example: NextGen SSD
+<li>**  10.2 Definition of SSD
+<li>***   10.3 Motivation: why draw a SSD
+<li>***   10.4 Using the UML to draw a SSD: operation calls, operation data, returned values.
+<li>+++++ Get the arrowheads right!
+<li>* 10.5 Relation between Use cases and SSD: one scenario per SSD.
+<li>*** 10.6  Naming events: See <a href="#Messages">Messages</A> above.  Keep them &quot;essential&quot;
+-- express the intent not the actual physical action by the user.
+<li>**  10.7 Collaborations with other systems
+<li>10.8 SSD -&gt; Glossary?
+<li>10.9 Example: Monopoly SSD
+<li>++ Exercise: why do I give this SSD a B grade rather than an A?
+<li>* 10.10 Process: Iterative, Evolutionary.  Mainly during elaboration.
+<li>10.11 History.  I knew Derek Coleman and have the Fusion book in my office...
+you can forget this:-(
+<p>
+<H2><a name="SSDs and C++ Testing">SSDs and C++ Testing</A></H2>
+You can quickly create a main program that will test your design directly
+from the SSD becasue testing doesn't have a complex User Interface.
+<p>
+For example the SSD above would lead to a C++ main Program like this
+<pre> ...</pre>
+<pre> #include &lt;WhereTheClassesAreDeclared.h&gt;</pre>
+<pre> int main()</pre>
+<pre> {</pre>
+<pre> 	SomeClass * testObject = new SomeClass(someValues);</pre>
+<pre> 	testObject-&gt;event();</pre>
+<pre> 	someType response = testObject-&gt;event2(data);</pre>
+<pre> 	assert ( someProperty(response) );</pre>
+<pre> }</pre>
+However.... you don't know what &quot;SomeClass&quot; will be until you've
+designed the internal interactions.  See
+[<A href="10.html"> 10.html </A>]
+later.
+</ol><p>. . . . . . . . . ( end of section <a href="08.html#SSDs">SSDs</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="11 Operation Contracts">11 Operation Contracts</A></H1><ol class=Section>
+<li>* Work out how operations in the SSD effect the system as a whole.
+<li>** Complex systems only!
+<p>
+<li>Artifact influences
+<li>**  11.1 Contract: operation, cross ref, preconditions, postconditions
+<li>* Example: enterItem
+<li>* 11.2 Sections in an operation contract
+<hr><ol class="Box">
+<pre> .Open Contract name</pre>
+<pre> . Operation message(argument2)</pre>
+<pre> . Preconditions</pre>
+<pre> . Postconditions</pre>
+<pre> .Close</pre>
+</ol><hr>
+<li>* 11.3 What is a <span class="InlineFormula">System Operation</span>.
+<li>* 11.4 Post Conditions
+<li>** 11.5 Example
+<li>* 11.6 Update the Domain model?
+<li>** 11.7 Guideline: When to use: only complicated steps in complicated systems.
+<li>* 11.8 Guideline: How to do it
+<li>** 11.9 Examples from NextGen
+<li>11.10 Example from monopoly
+<li>11.11 UML contacts?  May use the Object Constraint Language(<a href="#OCL">OCL</A>)? Or
+formal <a href="#logic">logic</A>
+<li><a name="OCL">OCL</A>::=&quot;Object Constraint Language&quot;,
+[<A href="http://cse.csusb.edu/dick/samples/ocl.html"> ../samples/ocl.html </A>]
+for more details.
+<li>Example OCL FYI
+<hr><ol class="Box">
+<pre>   	context FamilyTree::birth(f:Person, m:Person, bday:Date)</pre>
+<pre>   		post: self.father=f and self.mother=m</pre>
+<pre>   			and self.birthday = bday.</pre>
+</ol><hr>
+<li>++ I cover many ways to express, check, and process
+<A name="logic" class="Key"> logic </A>
+in my Formal Methods elective courses.
+[<A href="http://cse.csusb.edu/dick/cs556/"> ../cs556/ </A>]
+<li>11.12 Process
+<li>11.13 History
+<li>11.14 Resources
+</ol><p>. . . . . . . . . ( end of section <a href="08.html#Operation Contracts">Operation Contracts</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="Requirements to Design">Requirements to Design</A></H1><ol class=Section>
+<li>* Introduction
+<li>** 12.1  Do the right thing, do the thing right
+<li>*** 12.2 Provoke changes early!
+<li>12.3 How long did that take?
+</ol><p>. . . . . . . . . ( end of section <a href="08.html#Requirements to Design">Requirements to Design</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="SSD on the web">SSD on the web</A></H1>
+[<A href="http://www.comptechdoc.org/independent/uml/begin/umlsyssequence.html"> umlsyssequence.html </A>]
+(arrow heads are wrong).
+<p>
+What examples can you find on the internet?
+<p>
+<H1><a name="Another example SSD -- Use Case: Teacher posts grades">Another example SSD -- Use Case: Teacher posts grades</A></H1>
+<br><ol class="List">
+<li>Teacher logs in.
+<li>Teacher selects a course.
+<li>Teacher posts the grades for that course.
+<li>Teacher checks the student IDs for that course.
+<li>(repeat above three steps for each course in turn).
+<li>Teacher logs out.
+</ol><br>
+UML1.4/Rational Rose 2003
+[<A href="08SSD2.gif"> 08SSD2.gif </A>]
+, Visio UML2.0
+[<A href="08SSD3.gif"> 08SSD3.gif </A>]
+, and Dia in CSci CSUSB Labs
+[<A href="08SSD4.png"> 08SSD4.png </A>]
+<p>
+<H1><a name="Questions and Answers on SSDs">Questions and Answers on SSDs</A></H1>
+[<A href="08q.html"> 08q.html </A>]
+<H1><a name="Review Questions">Review Questions</A></H1>
+[<A href="08r.html"> 08r.html </A>]
+<H1><a name="Exercises">Exercises</A></H1>
+[<A href="08x.html"> 08x.html </A>]
+<H1><a name="Next: Logical Packaging etc">Next: Logical Packaging etc</A></H1>
+[<A href="09.html"> 09.html </A>]
+<H1><a name="Next Project Iteration -- Domain Model 1">Next Project Iteration -- Domain Model 1</A></H1>
+[<A href="w3.html"> w3.html </A>]
+due start of class 09.
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci Dept, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10.
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

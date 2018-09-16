@@ -1,0 +1,14 @@
+.Open Review Questions 5
+ What do you find in a use-case diagram?
+ Draw a use case diagram that shows that actor A has two use cases called B and C as
+part of system S.
+ What are A, B, and C in this image?
+
+.Image abcUseCase.gif [Use case diagram with A B and C]
+
+ List names of 4 artifacts other than use cases used to describe requirements.
+ Give 4 sample headings in a supplementary specification.
+ Give 4 sample parts of a vision.
+ What is a data dictionary or glossary?
+ Give an example of a rule.
+.Close 

@@ -1,0 +1,67 @@
+. Assigned Work 5: First Interaction and Class diagrams
+.Table Version#	Date	Description	Author
+.Row 0	2005-02-07	Copied from W4 and editted	RJB
+.Row 1	2006-02-15	Added some more details 	RJB
+.Row 2	2009-03-04	Stated rules for SSD->Interactions 	RJB
+.Close.Table
+. Given
+.List
+ Requirements
+.Set
+	Vision
+	Business Case
+	Use Cases: a few fully dressed, most named, brief, or casual.
+	SSDs of interesting scenarios
+	Supplementary Specifications(if any)
+	Business Rules(if any)
+	Glossary
+.Close.Set
+ Domain model with classes, associations, and some attributes.
+ A first logical architecture
+.Close.List
+. Note
+In early iterations most of the above will need revision as the
+project proceeds.
+. Deliverables
+The deliverables form a packet and every element in the packet should
+be there in the listed order.
+.List
+	Use case with SSD of an interesting scenario
+	Interaction diagrams (sequence or communication) for events/messages in SSD
+with GRASP $annotations.
+Note:  Each interaction diagram should have precisely one found event/message taken from the SSD.
+It should show how a set of objects inside the software can carry out the step.
+	A class diagram that supports all the interaction diagrams.
+Notice:  many interactions generate a single design class diagram.
+	Do not do any login/logout messages yet.
+.Close.List
+(annotations):  These are informal, but vital.  The name of the $GRASP links one message
+to an object, as in the book.
+. Hint 1
+In real projects you should do the more complex SSDs but
+here ($Grading) you just need to show that you've got the ideas
+as shown on a simple one to get the credit.
+. Hint 2
+Use at least the first two $GRASP patterns -- Information Expert and
+Creator in your designs.  Perhaps Controller if necessary.  Initially take your
+classes from the domain model, then from the design class diagram.
+. Process
+.List
+	Review previous documentation.
+	Think...
+	Draw rough diagrams: interactions+class diagram.
+	Edit rough diagrams.
+	Prepare less rough ones(one interaction+class) to hand in
+with use case and SSD.
+	Plan a presentation where the team acts out one of the collaborations.
+Each person should play the part of an object.
+	Present SSD, interactions,  and class diagram showing how the classes
+support the interaction and the interaction realizes the use case(5 minutes).
+	Revise paper deliverables.
+	Submit copy for grading.
+.Close.List
+. Grading
+Points are for following the notation and hints in pages 221-270.
+Mistakes in using $GRASP will not loose points in this iteration
+but will in the next one.
+

@@ -1,0 +1,776 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/15q.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:53:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+Questions and Answers on OO Design
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="15q.txt">Text Version</A>]
+ 15q.html 
+Wed Jan 11 07:25:55 PST 2012
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="15q.html#Questions and Answers on OO Design">Questions and Answers on OO Design</A>
+<li><a href="15q.html#Adding new requirements">: Adding new requirements</A>
+<li><a href="15q.html#UML as Blueprint or programming language">: UML as Blueprint or programming language</A>
+<li><a href="15q.html#Chapter 9 pages 138 -- Associations with arrowheads at each end">: Chapter 9 pages 138 -- Associations with arrowheads at each end</A>
+<li><a href="15q.html#Chapter 21 pages 389-391 -- Refactoring -- when to do it">: Chapter 21 pages 389-391 -- Refactoring -- when to do it</A>
+<li><a href="15q.html#Chapter 22-25 pages 401-434 : UML in the world">: Chapter 22-25 pages 401-434 : UML in the world</A>
+<li><a href="15q.html#Chapter 23 &amp; 24 pages 401-413 -- From Iteration 1 to 2">: Chapter 23 &amp; 24 pages 401-413 -- From Iteration 1 to 2</A>
+<li><a href="15q.html#Chapter 23 pages 403 -- Iteration-2 Requirements and Emphasis: Object Design and Patterns">: Chapter 23 pages 403 -- Iteration-2 Requirements and Emphasis: Object Design and Patterns</A>
+<li><a href="15q.html#Chapter 23 pages 404 -- Iteration-2 -- how many new scenarios">: Chapter 23 pages 404 -- Iteration-2 -- how many new scenarios</A>
+<li><a href="15q.html#Chapter 24 pages 409 -- SSDs and use case realizations">: Chapter 24 pages 409 -- SSDs and use case realizations</A>
+<li><a href="15q.html#Chapter 24 pages 409 -- Databases in SSDs">: Chapter 24 pages 409 -- Databases in SSDs</A>
+<li><a href="15q.html#Chapter 24 pages 409 -- Analysis update">: Chapter 24 pages 409 -- Analysis update</A>
+<li><a href="15q.html#Chapter 24 pages 401-413 -- superclass subclasses generalization">: Chapter 24 pages 401-413 -- superclass subclasses generalization</A>
+<li><a href="15q.html#How do you organize a generalization-specialization hierarchy">: How do you organize a generalization-specialization hierarchy</A>
+<li><a href="15q.html#Chapter 26 pages 406, 413 -- Abstract Class">: Chapter 26 pages 406, 413 -- Abstract Class</A>
+<li><a href="15q.html#Chapter 24 pages 407-411 -- What is a superclass">: Chapter 24 pages 407-411 -- What is a superclass</A>
+<li><a href="15q.html#Chapter 24 pages 407-411 -- taxonomic classification">: Chapter 24 pages 407-411 -- taxonomic classification</A>
+<li><a href="15q.html#Chapter 24 pages 409 -- SSD and Scenarios">: Chapter 24 pages 409 -- SSD and Scenarios</A>
+<li><a href="15q.html#Chapter 24 pages 409 -- Why label interactions with GRASP">: Chapter 24 pages 409 -- Why label interactions with GRASP</A>
+<li><a href="15q.html#Chapter 24 pages 410 -- Generalization">: Chapter 24 pages 410 -- Generalization</A>
+<li><a href="15q.html#Chapter 24 pages 410-411 -- GRASP and the Monopoly case study">: Chapter 24 pages 410-411 -- GRASP and the Monopoly case study</A>
+<li><a href="15q.html#Chapter 24 pages 410 -- Superclasses-Subclasses">: Chapter 24 pages 410 -- Superclasses-Subclasses</A>
+<li><a href="15q.html#Chapter 24 pages 410 -- Class Hierarchy">: Chapter 24 pages 410 -- Class Hierarchy</A>
+<li><a href="15q.html#Chapter 24 pages 410 -- Domain Model">: Chapter 24 pages 410 -- Domain Model</A>
+<li><a href="15q.html#Chapter 24 pages 410 -- Domain model Generalization-specialization">: Chapter 24 pages 410 -- Domain model Generalization-specialization</A>
+<li><a href="15q.html#Chapter 24 page 411 -- Generalization and Specialization in Design">: Chapter 24 page 411 -- Generalization and Specialization in Design</A>
+<li><a href="15q.html#Chapter 24 pages 410 -- Is Generalization inheritance.">: Chapter 24 pages 410 -- Is Generalization inheritance.</A>
+<li><a href="15q.html#Chapter 24 page 411 -- Generalization and Specialization -- Figure 24.2">: Chapter 24 page 411 -- Generalization and Specialization -- Figure 24.2</A>
+<li><a href="15q.html#Chapter 24.2 pages 411 -- Monopoly Square">: Chapter 24.2 pages 411 -- Monopoly Square</A>
+<li><a href="15q.html#Chapter 24 pages 411 -- Monopoly modification">: Chapter 24 pages 411 -- Monopoly modification</A>
+<li><a href="15q.html#What is Information Hiding">: What is Information Hiding</A>
+<li><a href="15q.html#What is the difference between global and local visibility">: What is the difference between global and local visibility</A>
+<li><a href="15q.html#What is the best form of visibility">: What is the best form of visibility</A>
+<li><a href="15q.html#What is the benefit of restricting visibility to the local level">: What is the benefit of restricting visibility to the local level</A>
+<li><a href="15q.html#Are there any other kinds of visibility">: Are there any other kinds of visibility</A>
+<li><a href="15q.html#Having Parameter visibility is better than global but doesn't this introduce coupling between classes">: Having Parameter visibility is better than global but doesn't this introduce coupling between classes</A>
+<li><a href="15q.html#When dealing with parameter visibility can the actual value be seen">: When dealing with parameter visibility can the actual value be seen</A>
+<li><a href="15q.html#Explain lazy initialization vs normal initialization">: Explain lazy initialization vs normal initialization</A>
+<li><a href="15q.html#Is an interface in Java or the UML the same as a User Interface">: Is an interface in Java or the UML the same as a User Interface</A>
+<li><a href="15q.html#What are some tips for reducing coupling">: What are some tips for reducing coupling</A>
+<li><a href="15q.html#How common is test writing in the real world">: How common is test writing in the real world</A>
+<li><a href="15q.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="Questions and Answers on OO Design">Questions and Answers on OO Design</A></H1><ol class=Section>
+<H2><a name="Adding new requirements">Adding new requirements</A></H2>
+Will adding any new requirements at this point in the design process slow the project? For requirements added, do you need to start at the beginning and create all the diagrams for it?
+<p>
+Key point -- you are not in &quot;the design process&quot;.  You've just completed some design for some
+of the requirements.  You've even (in theory) coded and tested the partial design out.
+Now it is time
+to add new use cases and scenarios and expand your design to handle them.
+<p>
+You are careful to sequence the implementation of use cases and scenarios so that the
+ones done first  give a stable set of classes.  You also should use advanced <a href="#OO">OO</A>
+patterns to make the designs robust.
+<p>
+So in the agile methods one
+does return to studying the requirements in each iteration -- especially in the elaboration
+phase.
+<p>
+If we attempt to get all the requirements first and then do all the design, and then
+implement and test....
+Typically the requirements have changed before we get to testing, and worse we discover
+the errors
+made a long time ago.
+Going back and reworking all the requirements and design then does slow down the project.
+Indeed this often
+happens when the tests expose requirements we had not thought of, or had not been told about.
+<p>
+Hence it is better to start by selecting only a few requirements to start with, but
+pick ones that should teach
+us a lot about the project and our solutions. We take this partial system all the way to a tested
+set of code.  This way we tend to accumulate the design as the
+project proceeds.  We progress at a steady speed of the number of requirements met and tested per iteration.
+<p>
+Perhaps some images may help.  If I offered you a cake to eat...
+<p>
+<img src="cake2.png" alt="[3layered cake = requirements+design+code with tests on top]">
+<p>
+Would you plan to eat it one layer at a time: requirements, Design, Code and then all
+the tests:
+[<A href="cake2fragile.png"> cake2fragile.png </A>]
+or in slices:
+[<A href="cake2agile.png"> cake2agile.png </A>]
+with a little bit of each layer and a test on top?
+<p>
+<H2><a name="UML as Blueprint or programming language">UML as Blueprint or programming language</A></H2>
+What are the differences between applying UML as a blueprint versus applying UML as a programming language?
+<p>
+Automation.
+<p>
+A blueprint is a copy (white on blue) of a drawing made by an engineer for something.  It is made into
+something by a technician.... Programming languages are translated to executable
+software by a machine --
+the compiler/interpreter system.
+<p>
+<p>
+<H2><a name="Chapter 9 pages 138 -- Associations with arrowheads at each end">Chapter 9 pages 138 -- Associations with arrowheads at each end</A></H2>
+<pre>     A  |          |  B</pre>
+<pre>        |&lt;--------&gt;|</pre>
+<pre>        |          |</pre>
+<p>
+This says that objects in one class have access or know about objects in the other class.  It
+suggests that each class will contain either a pointer or a collection of pointers to
+the objects at the other end.
+<p>
+<pre> 	class A{ ...... list&lt;B*&gt; b; ... };</pre>
+<pre> 	class B{ ...... list&lt;A*&gt; a; ... };</pre>
+<p>
+Operations in the two classes that change the association must maintain the
+invariant that if an A is associated a B then
+that B is also associated with the first A.
+<p>
+More:  Attributes like &quot;a&quot; and &quot;b&quot; above should be private to stop other objects breaking
+the system.  As a result the classes may have to provide &quot;getter&quot; operations to allow
+other objects to navigate the association.  For example:
+<p>
+<pre> 	class A{ ...... private list&lt;B*&gt; b; ... public list&lt;B*&gt; getB(){...} };</pre>
+<pre> 	class B{ ...... private list&lt;A*&gt; a; ... public list&lt;A*&gt; getA(){...} };</pre>
+<p>
+This allows an object in a third class to have a loop like this
+<pre> 	for( list&lt;A*&gt; l = myB.getA(), ILA i = l.first(); i!=l.end(); i++) ...</pre>
+using the C++ notation and STL <span class="InlineFormula">list</span>.  Here ILA is short for &quot;list&lt;A*&gt;::iterator&quot;.
+<p>
+Of course, you can chose to not use &quot;list&quot; and replace it by &quot;vector&quot;, &quot;set&quot;, ... if
+these provide the operations needed in your design.
+<p>
+<H2><a name="Chapter 21 pages 389-391 -- Refactoring -- when to do it">Chapter 21 pages 389-391 -- Refactoring -- when to do it</A></H2>
+Is refactoring a step by step process, or is it considered when having found mistakes, or when you have created a large amount of your system?
+<p>
+Refactoring is a step by step process.  Baby steps. Steps that are guaranteed to
+not change the behavior of the program. Here are some typical steps
+<br><ol class="List">
+<li><span class=Formula>Add a new class.</span>
+<li><span class=Formula>Add a new operation to an interface.</span>
+<li><span class=Formula>Copy an operation from an old class into a new class.</span>
+<li><span class=Formula>...</span>
+</ol><br>
+After each step -- recompile and retest.
+<p>
+It is used when you have a working system.  It does not correct mistakes, it improves (cleans)
+the code up.  It uncovers the elegant and simple self documenting system that is hidden
+by the rapidly evolved system that survived testing.
+<p>
+When should you refactor?  How big a system before refactoring?  I like the XP adage:
+<li><span class=Formula>Never let the sun set on bad code.</span>
+<p>
+In other words.... when you have got the system -- however small to pass its tests, you then
+clean up your work before you go home.
+<p>
+<H2><a name="Chapter 22-25 pages 401-434 : UML in the world">Chapter 22-25 pages 401-434 : UML in the world</A></H2>
+Is the UML used in other parts of the world? If not, what are it's equivalent forms?
+<p>
+I expect the UML to be as international as ASCII -- the <span class="InlineFormula">American</span>
+Standard Code for Information Interchange.
+<p>
+In some cases it has absorbed notations from international (ISO) standards.
+<p>
+I wonder what it looks like in Chinese or Japanese?
+<p>
+<p>
+<H2><a name="Chapter 23 &amp; 24 pages 401-413 -- From Iteration 1 to 2">Chapter 23 &amp; 24 pages 401-413 -- From Iteration 1 to 2</A></H2>
+I'm confused when the book states that that it is common to work on varying scenarios over several iterations and then states that one scenario should not be split across iterations.  It seems that it really doesn't matter about the iterations but the complexity of the scenario. Is that correct or should you try to finish the scenario before the next iteration?
+<p>
+You should aim to complete a scenario in a single iteration -- a kind
+of soup to nuts implementation.  If necessary you may even split
+a complex scenario up into simpler ones so that you can show the
+user and test your ideas out in one iteration.
+<p>
+A worst case would be discovering a complexity towards the end of an
+iteration.... time to create a new scenario for that case and add
+it to the &quot;back log&quot; of tasks for a later scenario.  Of course,
+if you are following risk driven development this worst case should not
+happen.
+<p>
+However -- requirements change as a project continues.  So you
+may have to go back to a &quot;finished&quot; scenario to rework it.
+<p>
+<H2><a name="Chapter 23 pages 403 -- Iteration-2 Requirements and Emphasis: Object Design and Patterns">Chapter 23 pages 403 -- Iteration-2 Requirements and Emphasis: Object Design and Patterns</A></H2>
+So later iterations should focus on GRASP and GoF design patterns?
+<p>
+Only in this course.  In real projects you have GRASP and GoF
+as a guideline from the very first design -- start of elaboration
+if not the end of inception.
+<p>
+<H2><a name="Chapter 23 pages 404 -- Iteration-2 -- how many new scenarios">Chapter 23 pages 404 -- Iteration-2 -- how many new scenarios</A></H2>
+While in the requirement phase, should more than one scenario be developed and tested? Or, should we split scenarios across iterations?
+<p>
+There is no &quot;requirements phase&quot; in the UP.  But each iteration starts with analyzing some
+requirements.
+<p>
+If you have a dozen simple scenarios and you think you can do them all in one short iteration -- go
+for it.   But be prepared to discover that one or more of them is tougher than you thought
+and may need to be put on a &quot;backlog&quot;.
+<p>
+But each scenario should go all the way from requirement to tested code in one iteration.
+<p>
+If necessary split up a complex one (with lots of if-then, while, conditions, cases, ...)
+into a set of simpler paths and pick an interesting one to do
+first.   Scenarios can grow &quot;sideways&quot; by adding options in each iteration.
+<p>
+Example:
+<br>(<a name="scenario1">scenario1</A>): if the customer is type A then do B else do C unless D in which case do E.
+<p>
+You might spit <a href="#scenario1">scenario1</A> into:
+<br>(<a name="scenario1a">scenario1a</A>): The customer is type A,  do B.
+<br>(<a name="scenario1d">scenario1d</A>): if the customer is not type A but D, do E.
+<br>(<a name="scenario1c">scenario1c</A>): if the customer is type A and not D. Do C.
+<p>
+After you've designed for the three scenarios above, it should
+easily handle the original one.... just a tweak to the controller...
+<p>
+<li>end of inception.
+<p>
+<H2><a name="Chapter 24 pages 409 -- SSDs and use case realizations">Chapter 24 pages 409 -- SSDs and use case realizations</A></H2>
+I am getting SSD's like the one on pg 409 and Sequence diagrams like the one on pg 325 confused. Can you clarify them please.
+<p>
+They are the same kind of diagram used for different purposes.  The SSD shows
+a sequence of external events -- outside the system.  The normal
+sequence diagram shows a sequence of messages passed between objects, inside
+the system, that implement or realize the response to an external event.
+<p>
+The test is whether the diagram shows a single system plus external actors,
+or just internal objects.
+<p>
+<p>
+<H2><a name="Chapter 24 pages 409 -- Databases in SSDs">Chapter 24 pages 409 -- Databases in SSDs</A></H2>
+On page 409, the SSD includes external systems that the primary system can interact with.  Would a database be included as an external actor/system (as long as it actually is an external database, of course)?
+<p>
+Two answers.
+<p>
+Yes -  if you are not designing or programming it and it is independent
+of the system you are designing.
+<p>
+No -- if it is an object-oriented database that you are designing.
+Or if it doesn't play a large part in the design.
+<p>
+<p>
+<p>
+<H2><a name="Chapter 24 pages 409 -- Analysis update">Chapter 24 pages 409 -- Analysis update</A></H2>
+When including external systems in a design, should development platforms such as .net or java be specified as a requirement for the domain model?
+<p>
+External systems do not belong in the domain model.
+They belong in the supplementary specification.
+You may design some classes in the Technical Services layer to handle them.
+<p>
+They also indicate that project may be over-constrained.  It is better that requirements explain
+something of value to the customers and perhaps suggest a platform.
+<p>
+Notice that:  &quot;Because we only know one system&quot; may save the customer money for training but
+may also reduce the quality of the product.
+<p>
+As a rule -- a wider choice of technology/platform gives you more options.
+<p>
+<H2><a name="Chapter 24 pages 401-413 -- superclass subclasses generalization">Chapter 24 pages 401-413 -- superclass subclasses generalization</A></H2>
+How do you identify a superclass and a subclass?
+<p>
+<p>
+(1) Once you've noticed the idea they kind of leap out at you
+in domain models.   Often the emerge in design models when you
+refactor.
+<p>
+(2) The subclass is a specialized version of the superclass.
+<H2><a name="How do you organize a generalization-specialization hierarchy">How do you organize a generalization-specialization hierarchy</A></H2>
+<br><ol class="List">
+<li>Logically
+<li>Iteratively
+<li>Carefully.
+</ol><br>
+<p>
+This question is one of the oldest questions in philosophy.  It is
+now a part of skillful software design.  One person a couple of
+years ago got a PhD and a book on this topic!  For more Google
+the term &quot;ontology&quot;.
+<p>
+But here are two hints.
+<p>
+(A) Listen to your stakeholders.  How do they organize their
+ideas.  Ask questions like: &quot;Is this a special kind of that?&quot;.  Put
+this info in your glossary!  Also in your domain model.
+<p>
+(B) Listen to your code.  Do two classes have repeated code? Don't Repeat
+Yourself!  <a href="#DRY">DRY</A>.  Create a common abstract/generalized class and place the
+common code in that.  Refactor running code to discover the hidden
+structure.
+<p>
+<p>
+<H2><a name="Chapter 26 pages 406, 413 -- Abstract Class">Chapter 26 pages 406, 413 -- Abstract Class</A></H2>
+What is the main difference between an abstract class and an associated class?
+<p>
+Two very different ideas.
+<p>
+An abstract class has no objects, except object belonging to it's subclasses.
+For example: A Pet is always a Cat, Dog, Spider, Snake, ...
+<p>
+An associated class is one that has some connection to your class.
+For example: A CAt may have a mother, A dog may have a favorite toy, a pet may have an owner, ...
+<p>
+<p>
+<H2><a name="Chapter 24 pages 407-411 -- What is a superclass">Chapter 24 pages 407-411 -- What is a superclass</A></H2>
+A superclass is a class that is more general than another class.  Example:
+Pet is a superclass of Cat, and of Hamster.   On the other hand
+Automobile is not a superclass of Pet, Cat, or Hamster, but is a
+superclass of Ford, Chevy, ....
+<p>
+Test: If A is a superclass of B then every object in class B is automatically
+also an object of class A.  Every property of objects in A is
+automatically a property of B.
+<p>
+<H2><a name="Chapter 24 pages 407-411 -- taxonomic classification">Chapter 24 pages 407-411 -- taxonomic classification</A></H2>
+What does Craig Larman mean by taxonomic classification?
+What exactly is a taxonomic classifications?
+<p>
+<A name="Taxonomy" class="Key"> Taxonomy </A>
+is the art and science of placing animals and plants into related classes based on their
+similarities.  For example:
+<li><span class=Formula>Ruby Throated Humming Bird ---|&gt; Humming Bird --|&gt; Bird --|&gt; Animal</span>
+<p>
+It is creating a family of classes that describe the objects in a domain. It uses
+the special-general &quot;is a kind of&quot; relationship.
+<p>
+A taxonomic classification is the result of taxonomy... a tree of classes.
+<p>
+A taxonomic classification places objects into classes.  And some classes
+are more general than others.  There is a hierarchy of classes.  Typically
+we draw the most general classes at the top of a diagram and a tree of
+more specialized classes below them.  Every object belongs in a class,
+and is then also a member of the more general classes above it.
+<p>
+Blame this idea on Aristotle.  Also look up &quot;Ontology&quot;.
+<p>
+<H2><a name="Chapter 24 pages 409 -- SSD and Scenarios">Chapter 24 pages 409 -- SSD and Scenarios</A></H2>
+The Process Sale Pay by Credit Scenario scenario do not have new system operation and need collaboration with several external system, why don't we  separated the one complicated scenario into two simple ones, one called Process Sale and the other called Credit Payment?
+<p>
+Because a scenario is always a complete path
+through a use case from beginning to the end.
+<p>
+The SSD breaks down the scenario into steps so we can
+work on each step by itself.
+<p>
+Scenarios often share common steps.
+<p>
+In this case study
+the problem of Credit Payments is handled in this iteration.  The
+earlier iterations in this case sorted out most of the design needed
+to support the first 3 steps.  So we don't expect to to do much rework.
+<p>
+Note:  in practice you might opt to tackle a complicated scenario
+with lots of external actors first because this would resolve several
+risks rapidly and give us a more robust architecture.
+<p>
+<H2><a name="Chapter 24 pages 409 -- Why label interactions with GRASP">Chapter 24 pages 409 -- Why label interactions with GRASP</A></H2>
+<p>
+By labeling a message and an object with a GRASP pattern you give
+a short description of your thinking.  You answer the question -- why
+does this class handle this message?
+<p>
+When we get to the <a href="#GoF">GoF</A> patterns the label will apply to several classes
+and their interactions and relationships.  The name of the pattern indicates
+the reason for the chosen structure -- indeed it it summarizes several pages
+of complex thought!
+<p>
+It helps you do the job better, helps me estimate your skills, and
+helps your colleagues understand what you are planning or have coded.
+<p>
+<p>
+<H2><a name="Chapter 24 pages 410 -- Generalization">Chapter 24 pages 410 -- Generalization</A></H2>
+In the Guideline for Generalization, the third criteria says, &quot;The
+subclass concept is operated on, handled, reacted to, or manipulated
+differently than  the superclass or other subclasses, in noteworthy ways.&quot;
+What does he mean &quot;in noteworthy ways&quot;?
+<p>
+I think he means in ways that are worthy of note -- that might or will
+make a difference to the software and/or the enterprise.
+<p>
+<p>
+<H2><a name="Chapter 24 pages 410-411 -- GRASP and the Monopoly case study">Chapter 24 pages 410-411 -- GRASP and the Monopoly case study</A></H2>
+Which GRASP pattern would apply to the GoSquare, RegularSquare, IncomeTaxSquare, and GoToJailSquare subclasses under the general Square class?
+<p>
+GRASP is about Responsibility Assignment and so it is not until we
+are assigning responsibilities that we can apply GRASP.
+<p>
+So on page 411 we have a domain model -- and nothing to assign.
+<p>
+By page 416 we assign the responsibility for handling pieces landing on
+a square by using
+<A name="Polymorphism" class="Key"> Polymorphism </A>
+which continues on pages 417 and 419.  Typically we replace a complex
+piece of conditional logic by a set of different but trivial methods
+scattered in many classes.
+<p>
+The Polymorphism GRASP is often useful when the domain has a generalization
+in it.
+<p>
+But we also introduce polymorphism as a tool to get a better <a href="#OO">OO</A> design.
+<p>
+<p>
+<H2><a name="Chapter 24 pages 410 -- Superclasses-Subclasses">Chapter 24 pages 410 -- Superclasses-Subclasses</A></H2>
+This chapter says to show subclasses if they show a noteworthy distinct concept. How do you determine if the concept is noteworthy and distinct enough to show as a subclass?
+<p>
+A subclass is worthy of noting in the domain model if the stakeholders treat it as different
+and/or it has important different data.  Do the Wittgenstein test:
+<li><span class=Formula>A difference that makes no difference is not a difference.</span>
+<p>
+In a design you should look at different behaviors:  it needs different operations/functions.  Either
+ones that are not in the superclass, or ones that work differently in the subclass.  Also if the
+subclass has extra data.... then it will probably have different operations...
+<p>
+Noteworthy means &quot;of value to the stakeholders&quot;.
+<p>
+<H2><a name="Chapter 24 pages 410 -- Class Hierarchy">Chapter 24 pages 410 -- Class Hierarchy</A></H2>
+Just to see if I am able to make sense of this: you would only want to organize the subclasses of a superclass into a class hierarchy only if they are similar to one another?
+<p>
+yes -- to be precise:  only when the objects in the classes are similar.
+<p>
+<H2><a name="Chapter 24 pages 410 -- Domain Model">Chapter 24 pages 410 -- Domain Model</A></H2>
+Are hierarchies necessary in the domain model?
+<p>
+They make life a lot easier!
+<p>
+But clearly if your domain has a single class then you can't have any hierarchy.
+<p>
+Exercise: what are the two types of hierarchy found in UML models?
+<p>
+<H2><a name="Chapter 24 pages 410 -- Domain model Generalization-specialization">Chapter 24 pages 410 -- Domain model Generalization-specialization</A></H2>
+Can you explain more on generalization-specialization class.
+<p>
+Generalization-specialization is not a class.  It is a relationship between classes.
+<li><span class=Formula>Linux is a special kind of Unix.</span>
+<p>
+Class A is a specialization of B when
+<br><ol class="List">
+<li><span class=Formula>Each instance of A is an instance of B.</span>
+<li><span class=Formula>Creating an A creates a B as well.</span>
+<li><span class=Formula>Deleting an A deletes a B as well.</span>
+<li><span class=Formula>Any attributes of B are also attributes of A.</span>
+<li><span class=Formula>Any associations of B are also associations of A.</span>
+</ol><br>
+Then B is a generalization of A.
+<p>
+Note that A has its own attributes and associations that B may not have.
+<p>
+<H2><a name="Chapter 24 page 411 -- Generalization and Specialization in Design">Chapter 24 page 411 -- Generalization and Specialization in Design</A></H2>
+Can you explain superclass, subclass, generalization and specialization in
+more detail?
+<p>
+In the design it holds between class A and class B if and only if
+<br><ol class="List">
+<li><span class=Formula>Each instance of A is an instance of B.</span>
+<li><span class=Formula>Creating an A creates a B as well.</span>
+<li><span class=Formula>Deleting an A deletes a B as well.</span>
+<li><span class=Formula>Any attributes of B are also attributes of A.</span>
+<li><span class=Formula>Any associations of B are also associations of A.</span>
+<p>
+<li><span class=Formula>An operation of B can also be applied to an A</span>
+but instance of A can do different things to an instance of B.
+<li><span class=Formula>A pointer declared to point at a B can actually point at an A.</span>
+<li><span class=Formula>The code will use extension or inheritance to implement the link between A and B</span>
+<pre> 		class A: public B { special stuff }</pre>
+<pre> 		class A extends B { special stuff }</pre>
+</ol><br>
+<p>
+<H2><a name="Chapter 24 pages 410 -- Is Generalization inheritance.">Chapter 24 pages 410 -- Is Generalization inheritance.</A></H2>
+In the doamin -- no.  In design -- yes -- absolutely!
+<p>
+Inheritance is an efficient <a href="#OO">OO</A> technology to implement Generalization.
+<p>
+<p>
+<H2><a name="Chapter 24 page 411 -- Generalization and Specialization -- Figure 24.2">Chapter 24 page 411 -- Generalization and Specialization -- Figure 24.2</A></H2>
+Are these 4 distinct squares suppose do not have any attributes? Are these squares a subclass?
+<p>
+The diagram tells us
+<br><ol class="List">
+<li><span class=Formula>GoSquare, RegularSquare, IncomeTaxSquare, GoToJailSquare are all subclasses of Square.</span>
+<li><span class=Formula>They are subclasses of Square.</span>
+<li><span class=Formula>Square is a superclass of the four special squares.</span>
+<li><span class=Formula>Each Square is one of these.</span>
+(This comes from the {abstract} constraint.)
+<li><span class=Formula>All squares have a name.</span>
+<li><span class=Formula>All squares can have between 0 and 8 Pieces on it.</span>
+<li><span class=Formula>...</span>
+</ol><br>
+<p>
+<A name="Missing compartments in Classes" class="Key"> Missing compartments in Classes </A>
+There is no compartment in the for subclasses for attributes or for operations.  This avoids
+saying that they have special attributes, and avoids denying it.  If a compartment is empty
+then there is nothing in it.  If it is missing, then the author is avoiding cluttering up the diagram
+and our minds with the details.
+<p>
+<H2><a name="Chapter 24.2 pages 411 -- Monopoly Square">Chapter 24.2 pages 411 -- Monopoly Square</A></H2>
+In the figure 24.2 there is a RegularSquare, GoSquare, IncomeTaxSquare and GoToJailSquare. Shouldn't there be PropertySquare also?
+<p>
+I think that a RegularSquare is a PropertySquare!
+<p>
+I expect that figure 25.5 will be refined in the future to show the
+aquisition of property, rents, and so on.
+<p>
+<p>
+<H2><a name="Chapter 24 pages 411 -- Monopoly modification">Chapter 24 pages 411 -- Monopoly modification</A></H2>
+How would you modify the diagram for the Monopoly diagram if we were to incorporate the jail rule of rolling dice or pay to get out.
+There are some general misconceptions about going to Jail. First, a player sent to Jail may still collect rents on his or her property and may even do property improvements on his or her turn. The average sentence to Jail is 3 turns. The player rolls the dice every turn to see if he or she gets doubles. Doubles gets the player out early (without paying the $50 fine), and he or she must move the number rolled on the dice. The player may pay $50 BEFORE his or her dice roll to get out. At the end of three 
+turns the player MUST pay the fine and MUST leave Jail.
+<p>
+Well the first step is to expand the domain model to include the
+InJail square (not the &quot;passing through jail&quot; square I guess).  It
+would be a special kind of square. There would have to be a counter for each person in jail
+to handle the rule you describe.
+I'd like to tabulate, write up, or diagram the rules and run through them with some experts and the book of rules.  They are complex enough to
+merit the use of some &quot;Formal Methods&quot; (
+[<A href="http://cse.csusb.edu/dick/cs556/"> ../cs556/ </A>]
+).
+<p>
+In the design, some very careful work would be needed to handle the complex
+rules you describe.  Including some special user interactions to
+handle the user's decision.  Alternately some special randomized
+simulated decisions would have to become part of the design.
+<p>
+Thank you for a very nice example of &quot;Business Rules&quot;.
+<p>
+<H2><a name="What is Information Hiding">What is Information Hiding</A></H2>
+Information Hiding is one of the oldest and most useful patterns in
+software design.  It states that one should strive to separate
+different decisions and requirements into different pieces of the software
+and make sure that only one part of the software will be effected
+when the decision or requirement changes.
+<p>
+In practice it means hiding data inside classes and accessing it via
+functions.
+<p>
+It can also mean stopping people even reading the code inside a class or
+package.  But this idea has slowly been eroded by experience.
+<p>
+<H2><a name="What is the difference between global and local visibility">What is the difference between global and local visibility</A></H2>
+(1) Global is more likely to lead to bugs.
+<p>
+(2) Local means that a function has to declare the object.  This takes time.
+It also implies that the object is destroyed when the function is done ... this takes time.
+<p>
+(3) Global is harder to set up in a pure <a href="#OO">OO</A> language like Java.
+<p>
+(4) Global visibility may loose you points in a programming class:-(
+<p>
+<p>
+<H2><a name="What is the best form of visibility">What is the best form of visibility</A></H2>
+Aim to make things available in the smallest part of the software that
+you can.  Global is anywhere -- avoid it. Attribute is inside a single
+class and is better.  Parameters are limited to one function and are better.
+And a local variable is available for abuse in only a part of a function and
+so is the safest.
+<p>
+HOWEVER, the real question is: does this data need to be shared or
+communicated.  IT is fairly easy and intuitive to recognize a parameter
+in
+<pre> 		zipper = zark(para)</pre>
+and that means inside <span class="InlineFormula">zark</span> you have parameter visibility,
+but outside it could have any visibility.
+<p>
+<H2><a name="What is the benefit of restricting visibility to the local level">What is the benefit of restricting visibility to the local level</A></H2>
+Fewer bugs.
+<p>
+<H2><a name="Are there any other kinds of visibility">Are there any other kinds of visibility</A></H2>
+Not really.  See
+[<A href="14q.html"> 14q.html </A>]
+<p>
+<H2><a name="Having Parameter visibility is better than global but doesn't this introduce coupling between classes">Having Parameter visibility is better than global but doesn't this introduce coupling between classes</A></H2>
+No.  The coupling is there but hidden with global visibility.  A hidden coupling is a lot more
+dangerous than an obvious one.
+<p>
+<H2><a name="When dealing with parameter visibility can the actual value be seen">When dealing with parameter visibility can the actual value be seen</A></H2>
+Sometimes.
+<p>
+If you have a parameter of type Paranoid and everything in class Paranoid
+is private then you can not get at the internals at all.  But many people
+automatically add a slew of &quot;getter&quot; functions to let you get internal values but
+not change them:
+<pre> 	class Point3{</pre>
+<pre> 		private double x,y,z;</pre>
+<pre> 		public double getX(){return x;}</pre>
+<pre> 		public double getY(){return y;}</pre>
+<pre> 		public double getZ(){return z;}</pre>
+<pre> 		...</pre>
+<pre> 	}//end Point3</pre>
+<p>
+<H2><a name="Explain lazy initialization vs normal initialization">Explain lazy initialization vs normal initialization</A></H2>
+When should you create a complex object?  Do you do it once at the
+start of the program, or do you wait for when you actually need it.
+<p>
+The first option is called &quot;eager&quot;.
+The second approach is called &quot;lazy&quot;.
+<p>
+The classic lazy code looks like this
+<pre> 		if( zipper == NULL) zipper = factory.makeMeAZipper( data );</pre>
+<p>
+<H2><a name="Is an interface in Java or the UML the same as a User Interface">Is an interface in Java or the UML the same as a User Interface</A></H2>
+NO!
+<p>
+In Java, UML, etc:
+<li><a name="interface">interface</A>::=<span class="InlineFormula">a class with no attributes and only abstract functions/operations</span>.
+<p>
+A user interface is a way for people to use the software.
+<p>
+An Application Programmer Interface or API:
+<li><a name="API">API</A>::=<span class="InlineFormula">a set of function provided by a language or library</span>.
+<p>
+<H2><a name="What are some tips for reducing coupling">What are some tips for reducing coupling</A></H2>
+(1) When two classes have a lot of cross references between them
+you should look to see if you can reorganize their content.  Re-factor them.
+<p>
+(2) When there are lots of calls between classes -- try defining an interface
+to define, control, and limit the connection between them.
+<p>
+(3) Indirection.  Introduce an intermediate object.
+<p>
+(4) Sometimes introducing a higher generalized class for the highly coupled
+classes can help... but generalization is itself a form of coupling.
+<p>
+<p>
+<H2><a name="How common is test writing in the real world">How common is test writing in the real world</A></H2>
+Probably the commonest activity in software development.
+<p>
+Untested software does not work, PERIOD.
+<p>
+Some organizations have special teams or divisions that do nothing
+but test.  No programming -- just testing.  This is very boring.
+<p>
+Indeed one local company did nothing but testing for government
+projects!
+<p>
+</ol>
+<li><a name="DRY">DRY</A>::=&quot;Don't Repeat Yourself&quot;.
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci Dept, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10.
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

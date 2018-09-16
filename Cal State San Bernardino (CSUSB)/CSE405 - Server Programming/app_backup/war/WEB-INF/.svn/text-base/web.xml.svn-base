@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	<!--  Servlets  -->
+	
+	<servlet>
+		<servlet-name>AjaxServlet</servlet-name>
+		<servlet-class>cse405.AjaxServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>JqueryServlet</servlet-name>
+		<servlet-class>cse405.JqueryServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>JsonServlet</servlet-name>
+		<servlet-class>cse405.JsonServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>GetAdminMessageServlet</servlet-name>
+		<servlet-class>cse405.GetAdminMessageServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>SetAdminMessageServlet</servlet-name>
+		<servlet-class>cse405.SetAdminMessageServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>LogoutServlet</servlet-name>
+		<servlet-class>cse405.LogoutServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>SetUserNumberServlet</servlet-name>
+		<servlet-class>cse405.SetUserNumberServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>GetUserNumberServlet</servlet-name>
+		<servlet-class>cse405.GetUserNumberServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>GetHighestNumberServlet</servlet-name>
+		<servlet-class>cse405.GetHighestNumberServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+  		<servlet-name>SystemServiceServlet</servlet-name>
+  		<servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+  		<init-param>
+   		<param-name>services</param-name>
+   		<param-value/>
+  		</init-param>
+ 	</servlet>
+	
+	<!--  Servlets Mappings -->
+	
+	<servlet-mapping>
+		<servlet-name>AjaxServlet</servlet-name>
+		<url-pattern>/ajax</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>JqueryServlet</servlet-name>
+		<url-pattern>/jquery</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>JsonServlet</servlet-name>
+		<url-pattern>/json</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>GetAdminMessageServlet</servlet-name>
+		<url-pattern>/get-admin-message</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>GetAdminMessageServlet</servlet-name>
+		<url-pattern>/admin/get-admin-message</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>SetAdminMessageServlet</servlet-name>
+		<url-pattern>/set-admin-message</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>SetAdminMessageServlet</servlet-name>
+		<url-pattern>/admin/set-admin-message</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/check-admin</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/admin/check-admin</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>SetUserNumberServlet</servlet-name>
+		<url-pattern>/set-user-number</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>GetUserNumberServlet</servlet-name>
+		<url-pattern>/get-user-number</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>GetHighestNumberServlet</servlet-name>
+		<url-pattern>/get-high-number</url-pattern>
+	</servlet-mapping>
+	
+	 <servlet-mapping>
+  		<servlet-name>SystemServiceServlet</servlet-name>
+  		<url-pattern>/_ah/spi/*</url-pattern>
+ 	</servlet-mapping>
+	
+	<!--  Welcome File  -->
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<!--  Security Constraints  -->
+	
+	<security-constraint>
+        <web-resource-collection>
+            <url-pattern>/admin/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>*</role-name>
+        </auth-constraint>
+    </security-constraint>
+	
+ 
+</web-app>

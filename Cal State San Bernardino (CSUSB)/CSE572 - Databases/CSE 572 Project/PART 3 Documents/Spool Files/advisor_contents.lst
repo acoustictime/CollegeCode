@@ -1,0 +1,11 @@
+SQL> select *
+  2  from advisor;
+
+ADVISOR_ROOM_NUMBER  PHONE_NUMBER   DEPARTMENT           ADVISOR_NUMBER         
+-------------------- -------------- -------------------- --------------------   
+PH102                9095551234     Physical Education   1001                   
+UH401                9095556789     History              1003                   
+UH222                9095377598     CSE                  1005                   
+SB123                9094567845     Political Science    1000                   
+
+SQL> spool off

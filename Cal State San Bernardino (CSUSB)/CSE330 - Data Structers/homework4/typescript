@@ -1,0 +1,9 @@
+Script started on Tue 13 Mar 2012 04:28:53 PM PDT
+]0;jsmall@jb358-0:~/cse330/homework4[?1034h[jsmall@jb358-0 homework4]$ g++ -o Deque_test Deque_test.cpp
+]0;jsmall@jb358-0:~/cse330/homework4[jsmall@jb358-0 homework4]$ ./Deque_test
+3 2 1 0 
+0 1 2 3 
+SUCCESS
+]0;jsmall@jb358-0:~/cse330/homework4[jsmall@jb358-0 homework4]$ exit
+
+Script done on Tue 13 Mar 2012 04:29:17 PM PDT

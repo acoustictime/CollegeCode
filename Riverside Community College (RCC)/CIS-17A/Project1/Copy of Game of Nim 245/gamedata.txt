@@ -1,0 +1,14 @@
+Tim 5 2
+Tiffany 5 3
+Jennifer 4 3
+Keith 5 5
+James 4 5
+Beth 3 5
+Jose 2 6
+Curits 1 7
+Alice 1 12
+Bob 0 5
+
+
+
+

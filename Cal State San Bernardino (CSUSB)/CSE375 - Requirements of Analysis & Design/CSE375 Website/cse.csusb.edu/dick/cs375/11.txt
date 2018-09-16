@@ -1,0 +1,198 @@
+. CSci 375/11 Class Diagrams
+.Table Date	#	Topic (Participation 2pt)	Study pages (2 pts)	Quiz(15 pts)	Project Work(10 pts)
+.Row Previous	10	Interactions	221-247	-	W4(Transition to Design)
+.Row Today	11	Class Diagrams	248-270	Q5(221-270)	-
+.Row Next	12	$GRASP	271-319	-	W5(Interaction & Class Diagrams)
+.Close.Table
+. Revision History
+.Table Version#	Date	Description	Author
+.Row 0	2005-01-03	Used boiler plate to make template	RJB
+.Row 1	2005-02-07	Added section Headings	RJB
+.Row 2	2005-02-16	Adding questions	RJB
+.Row 3	2006-02-13	Updated	RJB
+.Row 4	2011-01-26	Added SlideFinder PPT	RJB
+.Close.Table
+. Project W4 -- SSD and Packages due
+.See ./w4.html
+. How do all these diagrams and documents work together?
+First look inside the front cover of the book:
+.See ./artifactrelationships.gif
+.Open 16 Class Diagrams
+. PowerPoint Presentation
+.See http://www.slidefinder.net/l/larmanchap16/25779248
+. Introduction
+  *** Class diagrams are used for many purposes: domain models, object oriented designs, models of code, defining component interfaces, ...
+
+DCD::acronym="Design Class Diagram", a class diagram that models the
+classes that will appear inside the code for the software.
+.See http://www.youtube.com/watch?v=Vy_gLkxuCnw&feature=related
+(YouTube with robotic voice and one error (no void in UML!)).
+
+  Static model: what is possible.  Also need models of dynamics:
+what happens.  Need to relate them.
+  Make sure that what should happen in the machine is possible!
+
+  Develop interactions and classes in parallel: Each object is in a 
+class so put the class in the class diagram. Each message points at an 
+object in a class.... add the message as an operation in the class.  Each 
+message links two objects and if they are in different classes then there 
+will be a path in the class diagram.  Data (in messages or returned)
+may become attributes in the class diagram. See session
+.See ./13.html
+onward. 
+
+  Your first attempts will be hesitant and messy.
+Later in this class the attempts will be just messy.
+
+  In a real project, let the problem drive the diagrams.
+
+  We will cover a set of Patterns for placing operations into classes.
+These are called the
+.Key GRASP
+patterns.  The first is simple enough that you can use it in your projects,
+right now:  
+(Information_Expert): An operation should be done by the class that has the information that is needed by the operation.
+
+  Process:  Each use case becomes many scenarios.
+Each scenario becomes one SSD.  Each SSD makes many Interaction diagrams.
+One interaction per message (max) in the SSD.  One DCD for all the interactions.
+See
+.See ./UC2Code.png
+for an informal sketch of the flow.
+
+. 16.1 - 16.6 Important notations and definitions for class Diagrams
+  *** 16.1 Notations ($Q5) Put a sticky note on this section
+  * 16.2 Definitions: Design vs domain
+  16.3 Definition: Classifier (UML Jargon)
+  **  16.4 Attributes and associations ($Q5)
+  **** The idea is to make the connections between classes OBVIOUS.
+  *** use role names in designs and association names in domain models.
+  * 16.5 Notes and comments ($Q)
+  ** explain, constrain, and code!
+  ***   16.6 Operations and methods ($Q5)
+. 16.7 - 16.9 Notations used later
+  * 16.7..9 Properties: keywords, stereotypes, profiles, and tags, ...
+(Used later in this class)
+. 16.10 Generalization, Dependency, and Abstraction
+  ***   16.10 Generalization and Abstraction ($Q)
+
+.Image ./11gen.gif Examples of Generalization
+(some sample generalizations)
+  * 16.11 Dependency ($Q)
+One class depends on another if changing one can effect the correct
+operation of the other.
+  * 16.12 Interfaces ($Q)
+An 
+.Key interface
+is a set of operations that gives access to objects that `realize` that interface.
+It is a socket into which other objects can plug-in.
+  ++ Think sockets and plugs --
+
+.Image ./11port.gif UML2.0 Standard Example interfaces and components
+. 16.13-16.16 Associations etc
+  ++ 
+.Key Navigating Associations.
+If class A has an association with class B and x is an object in class A
+then
+.As_is 		x.b
+is the assoicated elements in B to x (Note the shift to lower case).
+If the association is many-to-one  ( A *---1 B) then "x.b" is a single
+object in B and you can do what you like with it.
+If it is not many to one the "x.b" means a collection of elements.
+Further operations work on all the elements and generates another collection.
+It may be a vector, set, multiset, list, ... depending on the $DCD.
+Finally, you can write loop conditions to access each element if "x.b"
+in turn
+.As_is 		[for each y in x.b]
+Of course, the actual data may be private, but we can always code a
+"getter" function to navigate the association.  So if A (*)-(1) B
+then
+.As_is 		x.getB()
+is in the design or if A (*)-(*) B then
+.As_is 		[for each y in x.getB()]
+might be what you want.   In either case your $DCD ends up with
+.As_is 		+ getB():B[*]
+as an operation.
+
+The coding will depend on the language and the precise type of collection
+you choose.  For example in C++ you need to explicitly code objects as pointers.
+If we have chosen to implement the "*" as a vector you might even 
+(for example) code "*[for each b in x.b]b.zark()" like this:
+.As_is 		vector<B*> myBs = x->getB();
+.As_is 		for(int i=0; i< myBs.size(); i++)
+.As_is 			mBs[i]->zark();
+
+ +++ A many to many association is often best handled as an "association class"
+(below).
+
+  * 16.13 Composition ($Q)
+  "is a part of" -- like data in an object.
+  + Use in designs not domain models.
+  ++ Unless the real world container has life and death control over its parts.
+  *** avoid <>-- aggregation.  Use ----> instead!
+  ** 16.14 Constraints ($Q)
+  16.15 Qualified Associations
+  **  16.16 Association classes
+  +++ or make into a class that links the associated classes.
+
+.Image 11fig16p16.png Figure16.16 with linking class
+
+  ++ For example: SalesOrder and Stock are linked by a many-many relationship
+by SalesOrderItem:
+
+.Image 11qSalesOrder.gif SalesOrder(1)-(*)SalesOrderItem(*)-(1)Stock
+.As_is 		* [for so in customer.getSalesOrder()] list.add(so.getStatus())
+. 16.17 - 16.20 Advanced stuff: singletons, templates, ...
+ 16.17 Singleton Classes (Future)
+ 16.18 Template classes and Interfaces (Future)
+  **  16.19 User-Defined compartments
+  * 16.20 Active Classes (Future)
+. 16.21 Relating interaction and class diagrams
+  ***** A vital skill($Q5).
+Each part of an interaction diagram tells you something about the
+design class diagram (DCD).
+.Table Interaction Diagram	Class Diagram
+.Row Object life line	Class
+.Row Message to object	Operation in target class
+.Row Data	May be an attribute of sending class
+.Row Returned Data	May be an attribute of class that returned it
+.Close.Table
+ Example
+.See ./11getStatusses.gif
+(Interaction -- finding the statusses of a customer's orders)
+.See ./11StatussesDCD.gif
+(Changed DCD).
+ +++ One DCD for many interaction diagrams.
+ ++ Each interaction adds to the DCD.
+ + Associations and attributes may add "getter" operations to access private information.
+.Close 16 Class Diagrams
+. My notes on Class Diagram Notation
+.See ../samples/uml1.html
+(generic)
+.See ../samples/uml1b.html
+(C++ oriented)
+.See ../papers/20050502Body.html#Class and Object Diagrams
+(UML2.0 changes)
+. Be careful to use arrows correctly in the UML
+.Image arrows.gif [Meanings of arrows in the UML]
+. Demo if time
+Developing a communication diagram, a sequence diagram and a class
+diagram in parallel.
+. Exercises
+.See ./11x.html
+. Project Step 5 Interactions and Classes -- Next Week
+.See ./w5.html
+is due next week.
+. Quiz on Interaction Diagrams and Classes
+
+. Foot Notes
+(Q5): May be tested in Quiz 5 (will be tested sooner or later).
+Make a set of diagrams fit together. OPEN BOOK.
+
+(Q): Some topics will be tested later...
+. Questions and Answers
+.See ./11q.html
+. Next: How to make a good design
+.See ./12.html
+. Review Questions
+.See ./11r.html

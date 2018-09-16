@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/405/james/!svn/ver/11/app/src/META-INF
+END
+jdoconfig.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/405/james/!svn/ver/11/app/src/META-INF/jdoconfig.xml
+END
+persistence.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/405/james/!svn/ver/11/app/src/META-INF/persistence.xml
+END

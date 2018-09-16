@@ -1,0 +1,335 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/19.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:54:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+19 OO Design
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="19.txt">Text Version</A>]
+ 19.html 
+Wed Jan 11 07:26:05 PST 2012
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="19.html#19 OO Design">19 OO Design</A>
+<li><a href="19.html#Revision History">: Revision History</A>
+<li><a href="19.html#Reading -- Pages 221-270 -- Again">: Reading -- Pages 221-270 -- Again</A>
+<li><a href="19.html#Review Questions 19">: Review Questions 19</A>
+<li><a href="19.html#Project W8 -- Model 3 due in">: Project W8 -- Model 3 due in</A>
+<li><a href="19.html#Review the Unified Process">: Review the Unified Process</A>
+<li><a href="19.html#Review Domain Modelling and Use Case Models">: Review Domain Modelling and Use Case Models</A>
+<li><a href="19.html#Review Interaction Diagrams and Design Class Diagrams">: Review Interaction Diagrams and Design Class Diagrams</A>
+<li><a href="19.html#Questions and Answers">: Questions and Answers</A>
+<li><a href="19.html#Exercises on understanding OO Design">: Exercises on understanding OO Design</A>
+<li><a href="19.html#Next Assigned Project: The fourth iteration">: Next Assigned Project: The fourth iteration</A>
+<li><a href="19.html#Quiz 9 -- UML Notations">: Quiz 9 -- UML Notations</A>
+<li><a href="19.html#Next -- Final Course Review and Project work">Next -- Final Course Review and Project work</A>
+<li><a href="19.html#Previous to 2009 we also did this">Previous to 2009 we also did this</A>
+<li><a href="19.html#-- Chapter 33 Architectural Analysis">: -- Chapter 33 Architectural Analysis</A>
+<li><a href="19.html#-- Chapter 34 Logical Architectural Refinement">: -- Chapter 34 Logical Architectural Refinement</A>
+<li><a href="19.html#-- Chapter 35 Package Design">: -- Chapter 35 Package Design</A>
+<li><a href="19.html#-- Chapter 36 More Patterns">: -- Chapter 36 More Patterns</A>
+<li><a href="19.html#-- Chapter 37 Persistance Framework">: -- Chapter 37 Persistance Framework</A>
+<li><a href="19.html#-- Chapter 38 Artifacts, Nodes, and Deployment Diagrams">: -- Chapter 38 Artifacts, Nodes, and Deployment Diagrams</A>
+<li><a href="19.html#Exercises on Deployment and Packages">: Exercises on Deployment and Packages</A>
+<li><a href="19.html#Review Questions">Review Questions</A>
+<li><a href="19.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="19 OO Design">19 OO Design</A></H1><ol class=Section>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Date<th scope="col">#<th scope="col">Topic (Participation 2pt)<th scope="col">Study pages (2 pts)<th scope="col">Quiz(15 pts)<th scope="col">Project Work(10 pts)
+<tr><td>Previous<td>18<td>Domain Model III<td>501-539<td>-<td>W8(Model 3: model 2 improved)
+[<A href="w8.html"> w8.html </A>]
+<tr><td>Today<td>19
+<td>Revu Interactions and DCDs
+<td>221-270
+[<A href="19.html"> 19.html </A>]
+<td>Q9(1-535)
+<tr><td>Next<td>20<td>Review<td>all
+[<A href="20.html"> 20.html </A>]
+<td>-
+<td>W9(Model 4)
+[<A href="w9.html"> w9.html </A>]
+</table><br>(Close Table)<br>
+<H2><a name="Revision History">Revision History</A></H2>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Version# Date<th scope="col">Description<th scope="col">Author
+<tr><td>0<td>2005-01-03<td>Used boiler plate to make template<td>RJB
+<tr><td>1<td>2005-03-14<td>Added section headings and some notes and links<td>RJB
+<tr><td>2<td>2005-03-16<td>Added more notes<td>RJB
+<tr><td>3<td>2006-01-20<td>Updated notes pages<td>RJB
+<tr><td>4<td>2007-03-09<td>Removed chapters 33,34,36,37,39<td>RJB
+<tr><td>5<td>2008-02-05<td>Moved MVC details to patterns<td>RJB
+<tr><td>6<td>2008-03-05<td>Added emphasis on packages and deployments<td>RJB
+<tr><td>7<td>2008-12-23<td>Removed architecture and deployment<td>RJB
+<tr><td>8<td>2010-03-10<td>Updated reading and review qns<td>RJB
+</table><br>(Close Table)<br>
+<H2><a name="Reading -- Pages 221-270 -- Again">Reading -- Pages 221-270 -- Again</A></H2>
+<H2><a name="Review Questions 19">Review Questions 19</A></H2>
+Do as many of these as you can
+[<A href="19r.html"> 19r.html </A>]
+and hand in one for grading.
+<H2><a name="Project W8 -- Model 3 due in">Project W8 -- Model 3 due in</A></H2>
+<H2><a name="Review the Unified Process">Review the Unified Process</A></H2>
+Name the phases and disciplines.
+<p>
+How do they relate?
+<p>
+Describe a typical iteration in each of the phases.
+<p>
+<H2><a name="Review Domain Modelling and Use Case Models">Review Domain Modelling and Use Case Models</A></H2>
+You have been asked by &quot;Facilities Services&quot; to develop an inventory
+program for CSUSB.  It will allow the facilities management keep track of
+where thing are on campus.  Things can be furniture or equipment.  There are
+many special kinds of furniture and or equipment.   Each thing is in one
+place (a classroom, laboratory, storage, etc.). But a place can have
+many things in it.  Using the classroom as a source of concepts draw
+a domain model for this system.
+<p>
+Draw a UML diagram of half-a-dozen likely use cases for the inventory system.
+Write a brief description of one of them.
+<p>
+<H2><a name="Review Interaction Diagrams and Design Class Diagrams">Review Interaction Diagrams and Design Class Diagrams</A></H2><ol class=Section>
+Two types of interactions
+<H3><a name="Sequence">Sequence</A></H3>
+Objects, lifelines, found message, activations, messages.
+Metaclasses, create, delete.
+<H3><a name="Communication">Communication</A></H3>
+Objects, associations, messages, found message,...
+Metaclasses, create, delete.
+<H3><a name="Design Class Diagrams">Design Class Diagrams</A></H3>
+One DCD for a set of interaction diagrams -- indeed for the whole project
+(if small enough).
+<p>
+Classes, attributes, associations, generalization, interfaces, dependencies, ...
+<H3><a name="Fitting them into the Process">Fitting them into the Process</A></H3>
+</ol><p>. . . . . . . . . ( end of section <a href="19.html#Review Interaction Diagrams and Design Class Diagrams">Review Interaction Diagrams and Design Class Diagrams</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H2><a name="Questions and Answers">Questions and Answers</A></H2>
+[<A href="19q.html"> 19q.html </A>]
+<H2><a name="Exercises on understanding OO Design">Exercises on understanding OO Design</A></H2>
+[<A href="19x.html"> 19x.html </A>]
+<p>
+<H2><a name="Next Assigned Project: The fourth iteration">Next Assigned Project: The fourth iteration</A></H2>
+[<A href="w9.html"> w9.html </A>]
+<H2><a name="Quiz 9 -- UML Notations">Quiz 9 -- UML Notations</A></H2>
+</ol><p>. . . . . . . . . ( end of section <a href="19.html#19 OO Design">19 OO Design</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="Next -- Final Course Review and Project work">Next -- Final Course Review and Project work</A></H1>
+[<A href="20.html"> 20.html </A>]
+<H1><a name="Previous to 2009 we also did this">Previous to 2009 we also did this</A></H1><ol class=Section>
+<H2><a name="-- Chapter 33 Architectural Analysis">-- Chapter 33 Architectural Analysis</A></H2>
+<li><span class=Formula><a href="#YAGNI">YAGNI</A></span>
+<li><span class=Formula>Architecture is about making Technical decisions based on the</span>
+Purposes and Qualities that are required. -- Chapters 33 and 34.
+[<A href="architecture.html"> architecture.html </A>]
+(Not on final)
+<p>
+<H2><a name="-- Chapter 34 Logical Architectural Refinement">-- Chapter 34 Logical Architectural Refinement</A></H2>
+<li><span class=Formula>* 34.1 Example  NextGen</span>
+<li><span class=Formula>**** Pay attention to these examples.  The three layers</span>
+(figures 34.1,2,3) are usable in just about every project. Just the details
+change.
+<li><span class=Formula>**** Pay attention to the coupling between layers -- figures 34.2 and 34.3.</span>
+<li><span class=Formula>* 34.2 Collaboration vs Layers</span>
+<li><span class=Formula>** notice the use of GoF Facade to hide the complexities of a subsystem</span>
+from its clients.
+<li><span class=Formula>** Notice how you may have so many Controller facades that they should go</span>
+in their own package/layer (figure 34.7)
+<li><span class=Formula>* 34.3 Issues with Layers</span>
+<li><span class=Formula>** Classic Three-Tier Architecture: Client+Web server+DataBase</span>
+Notice how this may or may not be deployed accross several physical servers.
+<li><span class=Formula>** Classic Three Layer Architecture: Model-View-Control</span>
+[<A href="patterns.html#MVC"> patterns.html#MVC </A>]
+<li><span class=Formula>*** 34.4 MVC and Upward Communication</span>
+<p>
+<H2><a name="-- Chapter 35 Package Design">-- Chapter 35 Package Design</A></H2>
+<li><span class=Formula>** 35.1 Guidelines</span>
+<li><span class=Formula>++ Packages show how you organize your classes.</span>
+<li><span class=Formula>** Organize your classes into classic packages.</span>
+<p>
+<H2><a name="-- Chapter 36 More Patterns">-- Chapter 36 More Patterns</A></H2>
+<a href="#YAGNI">YAGNI</A> in this class... You may need them in practice.  I have put some of
+them into the
+[<A href="patterns.html"> patterns.html </A>]
+page for this class.  It is almost certain that in practice you will
+need to handle exceptions and errors and this chapter has some excellent
+advice, including the
+<A name="Proxy pattern" class="Key"> Proxy pattern </A>
+developed by the <a href="#GoF">GoF</A>.  Notice that you can understand figure 36.12
+in terms of <a href="#GRASP">GRASP</A> paterns....  In 36.7 Larman
+introduces the
+<A name="Abstract Factory" class="Key"> Abstract Factory </A>
+by the <a href="#GoF">GoF</A> which you will need when creating complex objects.
+Then there is the
+<A name="Do It Myself" class="Key"> Do It Myself </A>
+pattern in section 36.8 --  you might say this is the original
+<a href="#OO">OO</A> design paradigm &quot;A properly
+designed OO light bulb will screw itself into the socket&quot;
+<p>
+<H2><a name="-- Chapter 37 Persistance Framework">-- Chapter 37 Persistance Framework</A></H2>
+Nice Examples.  You'll need to do things like this is
+a real project but not in CS375 quizzes and finals -- <a href="#YAGNI">YAGNI</A>.
+<p>
+<H2><a name="-- Chapter 38 Artifacts, Nodes, and Deployment Diagrams">-- Chapter 38 Artifacts, Nodes, and Deployment Diagrams</A></H2>
+<li><span class=Formula>**** 38.1 A Deployment Diagram</span>
+Simple and useful.
+<li><span class=Formula>++++ In this course, no need to shade edges of nodes.</span>
+<li><span class=Formula>++ A deployment shows parts of the Physical system: hardware,</span>
+, operating systems, virtual machines, run-time environments, data bases, etc
+<p>
+<li><span class=Formula>These are called <span class="InlineFormula">nodes</span>.</span>
+<p>
+<li><a name="node">node</A>::=&quot;any hardware or software that is needed to execute other software&quot;.
+<p>
+<li>Nodes are connected by links labelled with protocols to indicate communication.
+<p>
+<li><span class=Formula>++ It can also show things the you produce that are <span class="InlineFormula">deployed</span> on the</span>
+<span class="InlineFormula">nodes</span>.  These are called <span class="InlineFormula">artifacts</span>.
+<p>
+<li><a name="artifact">artifact</A>::=&quot;anything you produce while developing software&quot;, including code,
+diagrams, tests, executables, DLLs, tarballs, JARs, scripts, ...
+<p>
+<li><span class=Formula>++ These artifacts can realize (contain, implement) components and classes</span>
+in your design, but they can include documentation as well.
+<li><span class=Formula>38.2 Components.</span>
+<li><span class=Formula><a href="#YAGNI">YAGNI</A></span>
+<li><span class=Formula>-- We will skip Component diagrams until their usage moves from theory</span>
+and hype into practice.
+<H2><a name="Exercises on Deployment and Packages">Exercises on Deployment and Packages</A></H2>
+<br><ol class="List">
+<li>What can you recall from this weeks readings?
+<li>Can you distinguish subtle UML differences?
+</ol><br>
+</ol><p>. . . . . . . . . ( end of section <a href="19.html#Previous to 2009">Previous to 2009</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="Review Questions">Review Questions</A></H1>
+[<A href="19r.html"> 19r.html </A>]
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci Dept, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10.
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

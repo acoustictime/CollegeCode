@@ -1,0 +1,3 @@
+verilog work "hex_to_sseg.v"
+verilog work "disp_mux.v"
+verilog work "FPGA_hex_sseg.v"

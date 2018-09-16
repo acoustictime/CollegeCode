@@ -1,0 +1,39 @@
+.Open Review Questions 11 -- UML Design Class Diagrams
+ What is the purpose and form of a DCD? How does it relate to a Domain Model?
+ Invent an example and use it to demonstrate three different ways of showing an attribute in a UML
+class diagram.
+ What information can you attach to an operation in a UML DCD?
+ How do you document the code for an operation in a UML DCD?
+  Explain "keyword", "constraint", and "stereotype" as used in the UML.
+  Draw a diagram that illustrates (using your own invented example) "generalization".
+  What is an "abstract" class?
+  How do you show that class `A` depends on class `B`.  Give an two examples
+of a dependency between `A` and `B`.
+  How do you show an "interface" in the UML?  (several answers needed).
+  Does aggregation <>----- mean anything -- discuss.
+  What does "composition" mean in the standard for the UML?  
+  What does an association class do?
+  On facebook you can specify that you are in a relationship and its status.
+How doe you use an assoication class "Relationship" to track the connections
+between Facebook "Users"?
+  What is a singleton class?
+  How do you show templatized classes in the UML?
+ Give an example from C++ STL or Java.
+  What is an "active class".
+
+ Explain the following diagams and their parts...
+
+.Image 11diagram.png [Use case to DCD]
+ A `Widget` has  method called `zark` with data `knobs:Number` 
+Draw a sequence diagram and a communication diagram showng 
+that when a `Widget` gets a `zark(knobs)` message it creates a `Wodget` 
+called `kid` with parameter `knobs` and then sends `kid` a `foobar` message.
+-- draw a partial DCD that supports this interaction. 
+ An object `a:A` gets a message `m1` and as a result sends message `m2` to
+`b:B`. Draw a sequence diagram
+that shows this.  What does this tell us about the
+classes `A` and `B` -- list all the facts you can deduce from this interaction.
+Sketch a partial DCD that supports this interaction and shows as many facts as
+you can.
+ How do DCDs and interaction diagrams relate?
+.Close Review Questions 11 -- UML Design Class Diagrams

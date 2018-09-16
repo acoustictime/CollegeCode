@@ -1,0 +1,13 @@
+#!/usr/bin/expect
+
+set timeout -1
+set host [lindex $argv 0]
+spawn ssh $host
+expect -eact "\]#"
+send -- "ssh $host \r"
+expect -exact "(yes/no)?"
+
+send --"yes\r"
+expect -exact "\]#"
+send -"^D"    // must use ctrl D to type this. typing the ^ won't work.First Ctrl V then Ctrl d
+expect eof

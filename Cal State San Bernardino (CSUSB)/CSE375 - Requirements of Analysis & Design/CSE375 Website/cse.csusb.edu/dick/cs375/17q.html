@@ -1,0 +1,818 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/17q.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:53:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+Questions and Answers on More Patterns
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="17q.txt">Text Version</A>]
+ 17q.html 
+Wed Jan 11 07:26:01 PST 2012
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="17q.html#Questions and Answers on More Patterns">Questions and Answers on More Patterns</A>
+<li><a href="17q.html#Representational vs Behaviorial Decomposition">: Representational vs Behaviorial Decomposition</A>
+<li><a href="17q.html#Chapter 26 pages 435-476 -- UML and Languages">: Chapter 26 pages 435-476 -- UML and Languages</A>
+<li><a href="17q.html#Chapter 26 pages 435 - 462 -- Which is Design patterns is used most">: Chapter 26 pages 435 - 462 -- Which is Design patterns is used most</A>
+<li><a href="17q.html#Chapter 26 pages 435-476 -- Applying GoF Design Patterns">: Chapter 26 pages 435-476 -- Applying GoF Design Patterns</A>
+<li><a href="17q.html#Chapter 26 pages 435-476 -- Too many GoF">: Chapter 26 pages 435-476 -- Too many GoF</A>
+<li><a href="17q.html#Chapter 26 pages 439 -- Pattern Overload">: Chapter 26 pages 439 -- Pattern Overload</A>
+<li><a href="17q.html#Chapter 26 pages 435-476 -- What is GoF and how does it apply to the design process">: Chapter 26 pages 435-476 -- What is GoF and how does it apply to the design process</A>
+<li><a href="17q.html#Chapter 26 pages 435-476 -- Are GoF patterns subcategories of all the GRASP principles">: Chapter 26 pages 435-476 -- Are GoF patterns subcategories of all the GRASP principles</A>
+<li><a href="17q.html#Chapter 26 pages ppp-ppp : Patterns &amp; Pitfalls">: Chapter 26 pages ppp-ppp : Patterns &amp; Pitfalls</A>
+<li><a href="17q.html#Chapter 26.1 pages 436-437 -- What is the GoF Adapter Pattern">: Chapter 26.1 pages 436-437 -- What is the GoF Adapter Pattern</A>
+<li><a href="17q.html#Chapter 26.1 pages 436-437 -- Adapter">: Chapter 26.1 pages 436-437 -- Adapter</A>
+<li><a href="17q.html#Chapter 26 pages 440-441 -- Factory vs Pure Fabrication">: Chapter 26 pages 440-441 -- Factory vs Pure Fabrication</A>
+<li><a href="17q.html#Chapter 26 pages 441-442 -- Pure Fabrication Factory access from the Singleton pattern">: Chapter 26 pages 441-442 -- Pure Fabrication Factory access from the Singleton pattern</A>
+<li><a href="17q.html#Chapter 26 pages 440 -- Factory">: Chapter 26 pages 440 -- Factory</A>
+<li><a href="17q.html#Chapter 29 pages 443 -- Temporal Event">: Chapter 29 pages 443 -- Temporal Event</A>
+<li><a href="17q.html#Chapter 26 pages 444 -- What is the role of the GoF Singleton Pattern">: Chapter 26 pages 444 -- What is the role of the GoF Singleton Pattern</A>
+<li><a href="17q.html#Chapter 26 pages 442 -- Singleton">: Chapter 26 pages 442 -- Singleton</A>
+<li><a href="17q.html#Chapter 26 pages 444 -- Singleton">: Chapter 26 pages 444 -- Singleton</A>
+<li><a href="17q.html#Chapter 36 pages 448 -- GOF Strategy pattern">: Chapter 36 pages 448 -- GOF Strategy pattern</A>
+<li><a href="17q.html#Chapter 26 pages 448 -- context object in the strategy pattern">: Chapter 26 pages 448 -- context object in the strategy pattern</A>
+<li><a href="17q.html#Chapter 26 pages 461-463 -- Explain Facade">: Chapter 26 pages 461-463 -- Explain Facade</A>
+<li><a href="17q.html#Chapter 26 pages 463 -- Facades without Singleton">: Chapter 26 pages 463 -- Facades without Singleton</A>
+<li><a href="17q.html#Chapter 26 pages 468--470 -- Observer is not only for connecting user interface to domain layer">: Chapter 26 pages 468--470 -- Observer is not only for connecting user interface to domain layer</A>
+<li><a href="17q.html#Can A Singleton access a Facade">: Can A Singleton access a Facade</A>
+<li><a href="17q.html#Chapter 26 pages 463&amp;436 -- Facade vs Adapter">: Chapter 26 pages 463&amp;436 -- Facade vs Adapter</A>
+<li><a href="17q.html#Chapter 26 pages 452-453 -- Composite(GOF) and Other Design Principles">: Chapter 26 pages 452-453 -- Composite(GOF) and Other Design Principles</A>
+<li><a href="17q.html#Chapter 26 pages 463-471 -- Observer pattern">: Chapter 26 pages 463-471 -- Observer pattern</A>
+<li><a href="17q.html#Chapter 28 pages 478 -- Diagram differences">: Chapter 28 pages 478 -- Diagram differences</A>
+<li><a href="17q.html#Do you throw out the documents when the project is finished">: Do you throw out the documents when the project is finished</A>
+<li><a href="17q.html#How important are State Diagrams">: How important are State Diagrams</A>
+<li><a href="17q.html#Chapter 31 pages 533 -- Monopoly">: Chapter 31 pages 533 -- Monopoly</A>
+<li><a href="17q.html#Chapter 33 pages 651-654 -- Architecture Analysis">: Chapter 33 pages 651-654 -- Architecture Analysis</A>
+<li><a href="17q.html#Chapter 29 pages 486 : State Machine Diagram">: Chapter 29 pages 486 : State Machine Diagram</A>
+<li><a href="17q.html#Chapter 29 pages 486 -- State Machine Diagram">: Chapter 29 pages 486 -- State Machine Diagram</A>
+<li><a href="17q.html#State machine symbols">: State machine symbols</A>
+<li><a href="17q.html#Chapter number pages ppp-ppp -- State vs. Activity Diagram">: Chapter number pages ppp-ppp -- State vs. Activity Diagram</A>
+<li><a href="17q.html#How do Use cases and activity diagrams get used together.">: How do Use cases and activity diagrams get used together.</A>
+<li><a href="17q.html#Generalization and extension of use cases">: Generalization and extension of use cases</A>
+<li><a href="17q.html#Chapter 31 -- Conceptual class partitions and hierarchies">: Chapter 31 -- Conceptual class partitions and hierarchies</A>
+<li><a href="17q.html#What are software class hierarchies">: What are software class hierarchies</A>
+<li><a href="17q.html#How can state determined object change their behavior">: How can state determined object change their behavior</A>
+<li><a href="17q.html#Give an example of the fork symbol and expanding activities">: Give an example of the fork symbol and expanding activities</A>
+<li><a href="17q.html#Chapter 28 pages 477-478 : DFD's">: Chapter 28 pages 477-478 : DFD's</A>
+<li><a href="17q.html#Chapter 28 pages 482 : Activity Modeling">: Chapter 28 pages 482 : Activity Modeling</A>
+<li><a href="17q.html#Chapter 30 pages 493-500 : Relating Use Cases">: Chapter 30 pages 493-500 : Relating Use Cases</A>
+<li><a href="17q.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="Questions and Answers on More Patterns">Questions and Answers on More Patterns</A></H1><ol class=Section>
+<H2><a name="Representational vs Behaviorial Decomposition">Representational vs Behaviorial Decomposition</A></H2>
+How do you determine whether to include the design of objects into those chosen by Representational Decomposition versus those chosen by Behavioral Composition?
+<p>
+I usually focus on representing the real world... and shift to behaviorial techniques to resolve evolving technical problems: high coupling, low cohesion, and protecting variations.
+<p>
+<H2><a name="Chapter 26 pages 435-476 -- UML and Languages">Chapter 26 pages 435-476 -- UML and Languages</A></H2>
+The book begins to talk about different languages, am I correct to assume that the diagrams will not change much or at all based on the languages that are being used? What about over different layers?(Object -&gt; assembly)
+<p>
+The UML is supposed to be language independent.  The diagrams don't change much.
+<p>
+There are gimmicks for coding in each language.
+<p>
+<H2><a name="Chapter 26 pages 435 - 462 -- Which is Design patterns is used most">Chapter 26 pages 435 - 462 -- Which is Design patterns is used most</A></H2>
+From the GRASP set -- Information Expert.   From <a href="#GoF">GoF</A> -- singleton.  Why?  Because most
+of the other GoF patterns need a singleton object to work:-(
+<p>
+I think there are 23 patterns in GoF design, but the book just list 7 of them which include: adapter, factory, singleton, strategy, composite, facade and observer. Is these 7 are more important than those rest of 23? Also which one is more important in 7?
+<p>
+Don't worry, there are more to come!  And I have a list
+[<A href="patterns.html"> patterns.html </A>]
+on this web site.  And the list also has links to other sources on Patterns.  These days
+you can look up, online, the details on any pattern you need.
+<p>
+The book covers the ones you need to do OK in this class.   I think Larman
+has chosen the most important ones for everyday OOD.
+Personally I find the Larman GRASP patterns a better language for designing OO programs -- even though
+this means I occasionally reinvent a GoF pattern.
+<p>
+Don't forget that the GoF patterns are all entangled with each other like a bowl of spaghetti -- you can't
+make a Factory unless it is a Singleton, and to make Strategy work you'll probably use a Factory
+to create the Factories....
+<p>
+<H2><a name="Chapter 26 pages 435-476 -- Applying GoF Design Patterns">Chapter 26 pages 435-476 -- Applying GoF Design Patterns</A></H2>
+What exactly is the real difference between the GRASP patterns and the GoF patterns?
+<p>
+GRASP = 9 simple guidelines vs GoF = two dozen specific class diagrams.  The <a href="#GoF">GoF</A>
+patterns are more complex and specific.
+<p>
+<H2><a name="Chapter 26 pages 435-476 -- Too many GoF">Chapter 26 pages 435-476 -- Too many GoF</A></H2>
+There are so many patterns in GoF, Do we need to apply all of them in our design? When should we choose GoF rather than GRASP?
+<p>
+As a rule, if you get good at the GRASP patterns and you can derive the GoF patterns when you need them.
+Unless you are asked to by a teacher don't try to force
+it.  Some problems need no <a href="#GoF">GoF</A> patterns.  And <a href="#GRASP">GRASP</A> are only needed
+on problems with objects.  So in practice it is fairly typical that you wrestle
+with a piece of a problem and them recognize it fits a particular
+<a href="#GoF">GoF</A>.
+<p>
+In this class I expecting people to find no more than one or two of the book's
+<a href="#GoF">GoF</A> patterns in their projects.  However I do expect you to recognize any
+on the <a href="#GoF">GoF</A> patterns in the text (or your project)
+and answer questions about it in Quizzes and the final.
+<p>
+<p>
+Make sure that you know the two parts of a good pattern:
+<br><ol class="List">
+<li>When it works well -- the problems and forces it resolves.
+<li>How it works -- the classes, objects, and interactions
+</ol><br>
+<p>
+If you do any <a href="#OO">OO</A> training or teaching you may have to fake an example
+with several paterns:-(.
+<p>
+<H2><a name="Chapter 26 pages 439 -- Pattern Overload">Chapter 26 pages 439 -- Pattern Overload</A></H2>
+A good designer knows 50+ of the most important design patterns.  I would like to be an experienced designer so could you recommend good UML design books?
+<p>
+I wish I knew 50+ patterns. I rely on using <a href="#GRASP">GRASP</A> and some of the %GoF
+to get by.
+<p>
+I find most UML books to be too expensive.  I choose Larman for this class because
+it is the best introduction I've seen.
+<p>
+You might try &quot;Head first Patterns&quot; -- it was more fun than most I've seen
+and didn't
+look gold plated.   I wonder whether we have a pocket book of patterns
+yet.  I have a Victorian &quot;Engineer's Sketch Book&quot; of about 1000
+designs...
+<p>
+Definitely check out the <a href="#GoF">GoF</A> book in the library when the class is over.
+<p>
+I've found web sites very good for learning patterns.
+See the links in my
+[<A href="patterns.html"> patterns.html </A>]
+page.  In fact I start by the patterns and principles on that page.
+<p>
+<H2><a name="Chapter 26 pages 435-476 -- What is GoF and how does it apply to the design process">Chapter 26 pages 435-476 -- What is GoF and how does it apply to the design process</A></H2>
+They are a couple of dozen OO techniques that have been discovered in several projects.
+They were developed at a conference on &quot;Pattern Languages&quot; some years ago.
+Sophisticated solutions to technical problems in OO design.  Carefully documented.
+They took the OO world over.  But hard to remember unless you use them every day.
+<p>
+<H2><a name="Chapter 26 pages 435-476 -- Are GoF patterns subcategories of all the GRASP principles">Chapter 26 pages 435-476 -- Are GoF patterns subcategories of all the GRASP principles</A></H2>
+No.
+<p>
+But just about every GoF pattern is the application of one or more GRASP principles.
+<p>
+I (and Larman) use GRASP to think up designs.... but this leads to rediscovering that we need a
+GoF Pattern and then we hit the web looking for the details.
+<p>
+<H2><a name="Chapter 26 pages ppp-ppp : Patterns &amp; Pitfalls">Chapter 26 pages ppp-ppp : Patterns &amp; Pitfalls</A></H2>
+Are there any 'gotchas' or pitfalls that we should be aware of when
+designing with patterns? For example: When should we construct a hierarchy of objects to achieve
+polymorphic behavior versus using a switch construct to solve the problem?
+<p>
+The main risk is over-complicating a program by using a pattern that
+is not needed.  This is mainly with some of the <a href="#Gof">Gof</A> patterns.
+<p>
+The thing about switch statements is that they are linked to
+some nasty bugs... (example shutting down part of
+New York's telephone network).  Afterall it is a table of g*t*'s!
+<p>
+<hr><ol class="Box">
+I've just got back from observing a CS1 class where all the students had
+been told to use a switch statement to code a simple C++
+program to input the number of the day of the week and output
+it's name.  I lay awake that night wondering why one would do that when
+we have:
+<pre> 	string weekDay[]={&quot;Sunday&quot;, &quot;Monday&quot;, ...., &quot;Saturday&quot;};</pre>
+<pre> 	...</pre>
+<pre> 	cout &lt;&lt; weekDay[numberOfDay] &lt;&lt;endl;</pre>
+This lead me to think about abandoning the switch in general because
+I can get the same effect by declaring an array of functions
+or even encapsulating the switched behaviors in different objects.
+<p>
+Then I recalled  that my favorite trick is to avoid the
+<a href="#GoF">GoF</A> State pattern (later) by using a switch to implement
+restartable code...
+</ol><hr>
+<p>
+<H2><a name="Chapter 26.1 pages 436-437 -- What is the GoF Adapter Pattern">Chapter 26.1 pages 436-437 -- What is the GoF Adapter Pattern</A></H2>
+A GoF Adapter is an object that converts one interface into another
+one.   You call the functions in the standard way
+and the adapter object converts them to a non-standard interface.
+<p>
+An adapter class is full of methods like this:
+<pre> 	void myOperation(mydata) { realObject.realMethod(realData) ; }</pre>
+<p>
+Clients have instructions like
+<pre> 		.... adapter-&gt;myOperation(...)  ...</pre>
+<p>
+<p>
+<H2><a name="Chapter 26.1 pages 436-437 -- Adapter">Chapter 26.1 pages 436-437 -- Adapter</A></H2>
+Can you show a adapter GoF in a common example that we have used in class? Is there one in the monopoly? Etc.
+<p>
+I can't think of a Monopoly example.
+<p>
+I coded up Larman's TaxAdapter
+[<A href="fig25_25_1.cpp"> fig25_25_1.cpp </A>]
+[<A href="test.fig25_25_1.cpp"> test.fig25_25_1.cpp </A>]
+, this is an example of using inheritance and polymorphism to adapt interfaces.
+<p>
+Here is another form of adapter -- the wrapper.
+It is an example from the C++ standard -- the STL stack is an adapter for a
+more complex <span class="InlineFormula">Container</span>:
+<pre>     class stack {</pre>
+<pre>     ...  // define some types</pre>
+<pre>     protected:</pre>
+<pre>       Container c;</pre>
+<pre>     public:</pre>
+<pre>       ... // constructors</pre>
+<pre>       bool      empty() const             { return c.empty(); }</pre>
+<pre>       size_type size()  const             { return c.size(); }</pre>
+<pre>       value_type&amp;       top()             { return c.back(); }</pre>
+<pre>       const value_type&amp; top() const       { return c.back(); }</pre>
+<pre>       void push(const value_type&amp; x)      { c.push_back(x); }</pre>
+<pre>       void pop()                          { c.pop_back(); }</pre>
+<pre>     };</pre>
+Notice -- this is the kind of Adapter that contains a copy of the object being adapted.
+Also known as a wrapper.
+<p>
+<p>
+<p>
+<H2><a name="Chapter 26 pages 440-441 -- Factory vs Pure Fabrication">Chapter 26 pages 440-441 -- Factory vs Pure Fabrication</A></H2>
+The author states that Factory Pattern is synonym of Pure Fabrication. That said, is Simple Factory considered an abstract or a method? Or, both?
+<p>
+I don't think it means the same thing (synonym).... a Factory object is an example of a Pure Fabrication -- it
+is invented for technical reasons inside the software.  It does not model an idea in the domain model.
+<p>
+Factories are objects and as such are not methods -- methods are the details of how operations work.
+<p>
+There are both concrete and abstract factories.
+<p>
+<H2><a name="Chapter 26 pages 441-442 -- Pure Fabrication Factory access from the Singleton pattern">Chapter 26 pages 441-442 -- Pure Fabrication Factory access from the Singleton pattern</A></H2>
+<p>
+You ask the Factory class to give you the instance(an object) of the Factory
+<pre> 		ExampleFactory::getInstance()</pre>
+(In C++).
+<p>
+So you might end up with code like this
+<pre> 		Example example = ExampleFactory::getInstance()-&gt;create(...);</pre>
+<p>
+<H2><a name="Chapter 26 pages 440 -- Factory">Chapter 26 pages 440 -- Factory</A></H2>
+What is the difference between a Simple Factory and a Concrete Factory? Is a factory like a class?
+<p>
+A Factories are objects that know one thing: how to create other objects
+in different classes.  Because a factory is an object it belongs to a class.
+<p>
+There is no difference between a Simple Factory and a Concrete Factory.  They
+are different names for the same pattern.  One indicates that the
+factory is good at constructing simple objects.  The other name is
+give to distinguish this Factory with the more complex
+Abstract Factory described later which is use to construct complex objects.
+<p>
+<p>
+<H2><a name="Chapter 29 pages 443 -- Temporal Event">Chapter 29 pages 443 -- Temporal Event</A></H2>
+Are web page time outs considered a temporal event?
+<p>
+Yes -- I guess so, but I can't place the reference on page 443.
+<p>
+<H2><a name="Chapter 26 pages 444 -- What is the role of the GoF Singleton Pattern">Chapter 26 pages 444 -- What is the role of the GoF Singleton Pattern</A></H2>
+This is a way to give access to a unique global resource
+without having a global variable and risking its corruption and abuse.
+<p>
+<H2><a name="Chapter 26 pages 442 -- Singleton">Chapter 26 pages 442 -- Singleton</A></H2>
+Can you go over the Singleton pattern?
+<p>
+[<A href="http://c2.com/cgi/wiki?SingletonPattern"> wiki?SingletonPattern </A>]
+[<A href="http://en.wikipedia.org/wiki/Singleton_pattern"> Singleton_pattern </A>]
+<p>
+<p>
+<H2><a name="Chapter 26 pages 444 -- Singleton">Chapter 26 pages 444 -- Singleton</A></H2>
+Is lazy initialization logic use often on complex projects?
+<p>
+Yes.
+Nearly always.
+<p>
+<H2><a name="Chapter 36 pages 448 -- GOF Strategy pattern">Chapter 36 pages 448 -- GOF Strategy pattern</A></H2>
+I am little confused about the GOF of strategy, can you explain in better detail of what it does?
+<p>
+When you have a problem and a dozen ways of solving it... and you can not choose
+the correct plan/strategy at design time you can use the Strategy pattern to
+delay the choice until the program runs.  Strategy
+avoids all writing explicit ifs and switches.
+Instead you defines a common interface and concrete objects that understand
+the alternatives.   Then one part of the program can select the right
+plan or strategy, encapsulated as an object, and pass it the the parts
+of the program that use it.
+<p>
+It all works by indirection and polymorphism.
+<p>
+<p>
+<H2><a name="Chapter 26 pages 448 -- context object in the strategy pattern">Chapter 26 pages 448 -- context object in the strategy pattern</A></H2>
+what does the book mean when it states &quot; the context object pass a reference to itself onto the strategy object&quot;?
+<p>
+There are times when I wish the GoF had come up with a better name than &quot;context object&quot;.  I wish
+they had called it a &quot;client object&quot; -- the object that needs to solve some problem.  To solve
+it, it uses a &quot;strategy&quot; -- any one of a number of different problem solvers.  Now, I tend to
+think in terms of the client sending some data to the strategy about the problem... and the
+strategy returns a solution.
+<p>
+So we have (in C++) a <span class="InlineFormula">foo</span> in <span class="InlineFormula">Client</span> that has a problem and has got hold of
+a <span class="InlineFormula">strategy</span> object that knows how to solve it:
+<pre> 	Client::foo(...)</pre>
+<pre> 	{ ...</pre>
+<pre> 		solution = strategy-&gt;problem(data);</pre>
+<pre> 	}</pre>
+(<span class="InlineFormula">strategy</span> is a Strategy* data member of Client....)
+<p>
+In this the client has to assemble the data that the strategies need to solve the problem.
+This couples the design of the strategies and the design of the Client.  By
+&quot;Low Coupling&quot; we get a better design by not passing the data directly.
+If we draw a drawing we would have Client- -  - -&gt;Strategy.
+Larman and the GoF avoid this by a neat trick.
+Instead of packaging up <span class="InlineFormula">data</span> we
+tell the client where it might get the data it needs -- from the Client object.
+<pre> 	Context::method(...)</pre>
+<pre> 	{ ...</pre>
+<pre> 		solution = strategy-&gt;problem(this);</pre>
+<pre> 	}</pre>
+(<span class="InlineFormula">this</span> is the C++ client object).
+The &quot;Context passes a reference to itself to the Strategy&quot;).
+<p>
+In other words they suggest passing the Context/Client object to the strategy because it should
+have the data needed to solve the problem.  Elegant and general.  The Client/Context class
+will then need operations to provide the strategy with the data it needs:
+<pre> 		...   context-&gt;getSomeData(...)  ...</pre>
+Now the we have a smaller dependency: the Client/Context must make SomeData available
+to Strategies.
+<p>
+<H2><a name="Chapter 26 pages 461-463 -- Explain Facade">Chapter 26 pages 461-463 -- Explain Facade</A></H2>
+Facade is a very simple patterns.  You are working with a large complex set of classes/objects that will be
+used by many classes in you software.  To reduce coupling you design a single class that understands the
+subsystem and provides access to all the different parts.   The Facade hides information about what goes
+on inside the subsystem.
+<p>
+If you draw a picture of the subsystem and its clients you find the Facade in the middle of the diagram connecting
+the clients to the subsystem.
+<p>
+[<A href="../../../best-practice-software-engineering.ifs.tuwien.ac.at/patterns/images/facade.jpg"> facade.jpg </A>]
+<p>
+Metaphor: I just bought a new computer that came with a printer.  It also has a scanner.  It acts as a photocopier.
+And it will accept chips from a camera....   All these functions are controled from 7 buttons (inluding on/off)
+and a color LCD screen.   More.... the computer talks to all the parts by ONE SINGLE USB port.  The port is a facade.
+<p>
+On the web we often find that we use a Portal to access many services.  Another facade.
+<p>
+Here is a Viennese example of the Facade pattern
+[<A href="http://best-practice-software-engineering.ifs.tuwien.ac.at/patterns/facade.html"> facade.html </A>]
+in Java.
+<p>
+Here are two sources for examples:
+[<A href="http://en.wikipedia.org/wiki/Facade_Pattern"> Facade_Pattern </A>]
+(Wikipedia Stub) and
+[<A href="http://images.google.com/images?hl=en&amp;q=Facade+Pattern&amp;gbv=2"> images?hl=en&amp;q=Facade+Pattern&amp;gbv=2 </A>]
+examples from Google.
+<p>
+<H2><a name="Chapter 26 pages 463 -- Facades without Singleton">Chapter 26 pages 463 -- Facades without Singleton</A></H2>
+Seeing as how facades are normally accessed with a singleton pattern, would
+you be able to have a facade without a singleton?
+<p>
+In some languages and platforms this is possible. In fact, you could
+argue that &quot;cout&quot;, &quot;cin&quot;, ... are facades hiding the internal complexities
+of the C++ &lt;iostream&gt;.
+<p>
+<H2><a name="Chapter 26 pages 468--470 -- Observer is not only for connecting user interface to domain layer">Chapter 26 pages 468--470 -- Observer is not only for connecting user interface to domain layer</A></H2>
+Because it has been used and can be used for other purposes.... just be creative.
+<p>
+See Figure 26.27 on page 470.
+<p>
+<p>
+<H2><a name="Can A Singleton access a Facade">Can A Singleton access a Facade</A></H2>
+Yes.
+<p>
+As a rule all the GoF patterns can be mixed and matched if needed.
+<p>
+<H2><a name="Chapter 26 pages 463&amp;436 -- Facade vs Adapter">Chapter 26 pages 463&amp;436 -- Facade vs Adapter</A></H2>
+Since the Facade pattern is considered a front-end object for a single point of entry for a subsystem. What is the difference between the Facade pattern and the Adapter pattern, if there is any?
+<p>
+An Adapter is a front end with a common interface defined for several different types of object with
+similar responsibilities.  Typically it is designed to switch easily between different implementations
+or components.  An example might be a SQLAdapter that hides the difference between MySQL, MS-SQL, and Oracle
+SQL-Plus.  It is typical that an adapter responds to the standardized mapping by recoding it and
+making a single call to a hidden object.  It is also typical that the Adapter uses polymorphism to hide the
+internal selection of the real object.  At different times an adapter can refer calls to
+different classes of object.
+<p>
+A Facade is a invented object (and so class) the allows access to many different classes/objects all of which are
+available at the same time.  It is a fixed point of access to a complex system.
+An SQLFacade for example might provide a common entrance to object/classes that
+create, insert, delete, find, objects in a SQL data base.    It is quite typical to find a single method
+in a Facade that sends messages to several parts of the subsystem to provide the advertised service to a
+client.
+<p>
+In other words an Adapter is responsible for knowing how to access one of a number of similar objects, but a Facade
+understands a whole package of objects/classes.
+<p>
+Can you have both -- I guess so.   Does it matter -- not much.
+<p>
+Notice that Adapters have a particular UML diagram, but Facades are more general.
+<p>
+<H2><a name="Chapter 26 pages 452-453 -- Composite(GOF) and Other Design Principles">Chapter 26 pages 452-453 -- Composite(GOF) and Other Design Principles</A></H2>
+How to treat a group or composition structure of objects the same way as a non composite object?
+<p>
+Yes... this is what the Composite pattern does.  I know of no better
+solution.  Do it this way and suddenly everything gets simpler...
+<p>
+<p>
+<H2><a name="Chapter 26 pages 463-471 -- Observer pattern">Chapter 26 pages 463-471 -- Observer pattern</A></H2>
+I'm not understanding how the observer pattern works.  Do you have any code using the observer pattern we can see running?
+<p>
+Here
+[<A href="http://ftp.csci.csusb.edu/public/faculty/dick/test.Luv5.html"> test.Luv5.html </A>]
+is a silly example I wrote in Java.  The old Java2 UI layer used a
+simple Observer pattern to associate the program's code with the
+user's actions.
+<p>
+Step one: make a class that has the ability to observe (listen)
+to actions:
+<pre> public class Luv5 extends Applet implements ActionListener{ ...</pre>
+<p>
+Step 2. The interface ActionListener means you must define a
+<span class="InlineFormula">actionPerformed(ActionEvent)</span>:
+<pre>  public void actionPerformed(ActionEvent event) {// ActionListener interface</pre>
+<p>
+Step 3.  Attach the actions to the buttons in the applet.
+<pre> 	private Button makeButtonListen(String s)</pre>
+<pre> 	{</pre>
+<pre> 		Button b = new Button(s);</pre>
+<pre> 		b.addActionListener(this);</pre>
+<pre> 		return b;</pre>
+<pre> 	}</pre>
+<p>
+<H2><a name="Chapter 28 pages 478 -- Diagram differences">Chapter 28 pages 478 -- Diagram differences</A></H2>
+Can you explain how the SSD and interaction diagrams differ from activity diagrams?
+<p>
+First they look quite different.
+<p>
+We do Activity diagrams in CS372.  They are modernized Flowcharts.   They have decision boxes interaction diagrams
+don't.
+Activity diagrams show the design of business procedures
+and software methods and algorithms in detail.  They do an adequate job of this.  Activity diagrams tend to
+express the logic of processes.
+<p>
+An SSD shows the system interaction with the external actors.  It's purpose is to specify the messages
+that flow in and out of the software.      An interaction diagram's purpose is map the pattern of interactions between
+a set of objects.  They do a pretty good job of this.
+<p>
+You can express most interaction diagrams in terms of activity diagrams but it would be a waste of effort.
+<p>
+In this class activity diagrams are optional.  I'd prefer for you to take CSCI372 or at least visit
+[<A href="http://cse.csusb.edu/dick/cs372/r2.html#Activity Diagrams"> ../cs372/r2.html#Activity Diagrams </A>]
+to find out about them.
+<p>
+<H2><a name="Do you throw out the documents when the project is finished">Do you throw out the documents when the project is finished</A></H2>
+Who said you ever finished?  I've been working on the same code for 20 years.
+<p>
+Do you think they throw out the designs for a Boeing 747?
+<p>
+What you should do as the software finishes &quot;Transition&quot; or is shut down
+is to hold a
+<A name="project post mortem" class="Key"> project post mortem </A>
+meeting
+and extract from the people and documents a set of lessons learned, patterns
+to reuse, mistakes to avoid, etc.  Then create some kind of permanent archive &quot;Just In Case&quot;.
+<p>
+<H2><a name="How important are State Diagrams">How important are State Diagrams</A></H2>
+Good Question.
+<p>
+Most applications have simple objects with few states.  So you may forget
+about state diagrams.... and then you hit an application
+with a protocol or complex life history and wonder what to do with it.
+<p>
+<H2><a name="Chapter 31 pages 533 -- Monopoly">Chapter 31 pages 533 -- Monopoly</A></H2>
+I was right! There is a property square missing. They listed it has a superclass and contained the railroad, utility and lot square. But why even have a Regular square... I don't think there is a regular square in monopoly.
+<p>
+I'm no expert....
+<p>
+<p>
+<H2><a name="Chapter 33 pages 651-654 -- Architecture Analysis">Chapter 33 pages 651-654 -- Architecture Analysis</A></H2>
+Some of the issues in the book identified and resolved at the architectural level seem like they should have been addressed at an earlier stage(such as 'how do the licensing costs of purchased sub-components affect profitability'). Why now and not sooner? They seem to effect the client as well, not just the architect of the software.
+<p>
+I agree.
+<p>
+I cover it (less formally) in CSCI372.  I'm not covering it this time
+in CS375.
+<p>
+Architecture always effects the client and the developers.
+<p>
+<li>Chapter 19 pages 0 -- State Machine Models
+In your diagram posted here: http://www.csci.csusb.edu/dick/cs375/17doorProtocol.gif
+<p>
+The very bottom is &quot;divorce&quot;.  This this represent a new iteration of the model, or is this retirement of the model?
+<p>
+I think that's a different model to the URL you give.
+The 'divorce' transition is a common change of state in most of
+the western world these days.
+<p>
+A state machine is a model of changes in the reality, not in the documentation.
+<p>
+<H2><a name="Chapter 29 pages 486 : State Machine Diagram">Chapter 29 pages 486 : State Machine Diagram</A></H2>
+How are State Machine Diagrams used, can you give some examples?
+<p>
+They are used to explore/document complex timing rules: business rules,
+life histories, techncal protocols, ... and in CSci theory courses.
+<p>
+Yes -- I'll try and give some example
+[<A href="../samples/uml.states.gif"> ../samples/uml.states.gif </A>]
+[<A href="17course.gif"> 17course.gif </A>]
+[<A href="17doorProtocol.gif"> 17doorProtocol.gif </A>]
+[<A href="17CoupleStateMachine.gif"> 17CoupleStateMachine.gif </A>]
+<p>
+<H2><a name="Chapter 29 pages 486 -- State Machine Diagram">Chapter 29 pages 486 -- State Machine Diagram</A></H2>
+Can you explain what the off hook and on hook means in the diagram on page 486?
+<p>
+This is the current terminology in the phone industry.
+It refers back to the first phones that had a hook and you had to hang
+the earphone on the hook at the end of a call, and lift it
+off the hook to make a call...  The same source as the phrase
+<li>Hang up the phone.
+<p>
+<H2><a name="State machine symbols">State machine symbols</A></H2>
+I expect you to be able to distinguish a State/Activity symbol from a Class/Object
+symbol.
+<p>
+In a state machine you have: start and stop. States and transitions.
+And some bars to show things happening in parallel.  This last you won't need
+in any quizzes or tests -- they are more the knid of complexity that
+appears in a real project.   So really there are states, start, stop,
+and the transition:
+<li>[condition] event / action
+<p>
+The more complicated symbols are for Activity diagrams.
+<p>
+Email me if a particular symbol needs explaining.
+<p>
+<p>
+<H2><a name="Chapter number pages ppp-ppp -- State vs. Activity Diagram">Chapter number pages ppp-ppp -- State vs. Activity Diagram</A></H2>
+How does a State Diagram differ from and Activity Diagram?
+<p>
+Not much difference visually -- but there are semantic differences.
+<p>
+An activity diagram shows a set of things that must be done and
+when they should be done.
+<p>
+A state diagram shows how something changes and how its behavior changes
+as a result.
+<p>
+<H2><a name="How do Use cases and activity diagrams get used together.">How do Use cases and activity diagrams get used together.</A></H2>
+(1) An activity diagram describing a besiness procedure may have use cases
+as some is activities.  The activity diagram organizes use cases into
+business functions.
+<p>
+(2) When a use case is very very complex you can draw an activity diagram to
+clarify the interactions of the steps in the scenarios.  For example: the
+activities assoicated with starting a quarter at CSUSB may involve a dozen
+use cases plus other things that must be done.
+<p>
+(3) Sometimes when you are designing the relaization of a use case you
+come to some message and you realize that you can't think how to code the
+operation -- then you can use an activity diagram to work out the algorithm.
+For example: When I worked for ICI I wrote a program that scanned a file
+(on tape) of chemical compounds and selected the compounds that matched
+the given experimental results: I had to output them with the best match first.
+In other words I had to sort the data in decreasing order of the &quot;match&quot;
+field (ranging from 0.000 to 0.999).  How to sort it?  I needed an algorithm!
+<p>
+Another example was handling the user input of the elements known to
+be present in the sample.  Example: the user could input &quot;C&quot; for Carbon, &quot;Cr&quot;
+for Cromium&quot; and &quot;Cl&quot; for Chlorine&quot;. I couldn't figure out my code without an
+activity diagram.
+<p>
+<H2><a name="Generalization and extension of use cases">Generalization and extension of use cases</A></H2>
+In this class we don't generalize use cases.  In fact very few people
+use this at all.  Forget it for now!
+<p>
+<H2><a name="Chapter 31 -- Conceptual class partitions and hierarchies">Chapter 31 -- Conceptual class partitions and hierarchies</A></H2>
+Recognizing the similarities between objects in different classes
+of real objects is a very powerful, and very old, technique for
+thinking about the real world.  If it was good enough for
+Aristotle 2000 years ago, we can often make use of it today.
+<p>
+<H2><a name="What are software class hierarchies">What are software class hierarchies</A></H2>
+These are classes related by inheritance.
+<p>
+In Java all class belong in one hierarchy.  For example
+[<A href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/CharConversionException.html"> CharConversionException.html </A>]
+is (click and look) at the bottom of a predefined hoerarchy of classes
+going down from Object, to Throwable, ... and so on.
+<p>
+<H2><a name="How can state determined object change their behavior">How can state determined object change their behavior</A></H2>
+We usually introduce a attribute/data memeber/ variable inside the
+object to keep track of the state.  We often call it &quot;state&quot;.  We often
+enumerate the states.  For example in C++
+<pre> 	typedef enum{q1,q2,q3} States;</pre>
+<pre> 	States state;</pre>
+<p>
+Then you have three or four techniques to handle it.
+<p>
+(1) use a switch block.
+<pre> 		switch(state)</pre>
+<pre> 		{</pre>
+<pre> 		  case q1: ......; state = q2; break;</pre>
+<pre> 		  case q2: ......; state = q3; break;</pre>
+<pre> 		  case q3: ......; state = q1; break;</pre>
+<pre> 		}</pre>
+<p>
+(2) Use an array that tabulates the state transitions.
+<p>
+(3) Use the <a href="#GoF">GoF</A> State pattern.
+<p>
+There is a fourth technique -- Jackson's Inverted Code.  This is not
+a well known trick.... but I've found it very helpful on occasions
+when I want to simulate a concurrent process with its own state.
+<p>
+<H2><a name="Give an example of the fork symbol and expanding activities">Give an example of the fork symbol and expanding activities</A></H2>
+<p>
+In class I used one from Horstmann: getting up in the morning
+with &quot;make Coffeee&quot; expanded into how he makes coffee.
+[<A href="../cs201/coffee.gif"> ../cs201/coffee.gif </A>]
+<p>
+<H2><a name="Chapter 28 pages 477-478 : DFD's">Chapter 28 pages 477-478 : DFD's</A></H2>
+Are UML activity diagrams an effective replacement for DFD's and do they (UML) hold to the same rules (ie. entity to entity, etc)?
+<p>
+In my humble opinion: activity diagrams are an awful replacement for DFDs
+because they:
+<br><ol class="List">
+<li><span class=Formula>Encourage you to show parallel processes as sequential procedures.</span>
+<li><span class=Formula>Force you to analyse external entities as collections of activities.</span>
+</ol><br>
+<p>
+Some people think they are OK becuase they don't understand DFDs and
+confuse them with flowcharts!
+<p>
+The nearest thing to a DFD in the UML2.0 are the component diagrams
+found in an appendix!
+<p>
+Here is are some figures I drew to demonstrate various UML attempts
+at modelling a DFD:
+[<A href="http://cse.csusb.edu/dick/papers/rjb04bDFDs/"> ../papers/rjb04bDFDs/ </A>]
+<p>
+<H2><a name="Chapter 28 pages 482 : Activity Modeling">Chapter 28 pages 482 : Activity Modeling</A></H2>
+Are there any other guidelines besides the three mentioned in section 28.4 that we should keep in mind when activity modeling?
+<p>
+I would add a few:
+<br><ol class="List">
+<li>Avoid subtle ambiguities by having only one arrow into an activity and
+one out: use decision diamonds and merge bars to clarify whether
+one or all is ment.
+<li>Exception to the above: unless input/output is from/to a datastore!
+<li>Don't use Activity diagrams as a replacement for DFDs.
+See above.
+</ol><br>
+<p>
+<H2><a name="Chapter 30 pages 493-500 : Relating Use Cases">Chapter 30 pages 493-500 : Relating Use Cases</A></H2>
+You had sorta told us that use cases shouldn't be connected with one
+another.  This section shows how you can have more use cases related to one
+another.  Wouldn't all these use cases be combined as a single use case,
+and these details specified in other diagrams?  Why specify these details
+in a use case diagram?
+<p>
+Some people over emphasize these relations -- largely because they
+have <span class="InlineFormula">never seen</span> a properly documented use case.  By forbidding connections
+at the start of the course I forced you to work on the text
+description -- where the value is.
+<p>
+It may help other people to understand a complex set of
+usecases with common &quot;includes&quot; and extensions if they have a diagram.
+And some enterprizes demand that you draw the diagrams.
+<p>
+Always ask: what will the value of (1) drawing this diagram,
+and (2) storing the finished diagram.
+<p>
+</ol><p>. . . . . . . . . ( end of section <a href="17q.html#Questions on More Patterns">Questions on More Patterns</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci Dept, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10.
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

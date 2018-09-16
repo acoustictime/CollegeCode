@@ -1,0 +1,363 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/ by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:51:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+Requirements Analysis and Design
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="index.txt">Text Version</A>]
+ index.html 
+Fri Mar  8 13:16:23 PST 2013
+<br>
+<h6>Opening the PDF files on this page may require you to download
+<a href="http://www.adobe.com/products/acrobat/readstep2.html">
+Adobe Reader</A> or an equivalent viewer (GhostScript).</h6>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="index-2.html#Requirements Analysis and Design">Requirements Analysis and Design</A>
+<li><a href="index-2.html#2013-03-08 Fri Mar 8 13:11 Grades Posted -- and news of job market">: 2013-03-08 Fri Mar 8 13:11 Grades Posted -- and news of job market</A>
+<li><a href="index-2.html#2013-02-28 Thu Feb 28 17:26 Grading done and posting">: 2013-02-28 Thu Feb 28 17:26 Grading done and posting</A>
+<li><a href="index-2.html#2013-02-22 Fri Feb 22 11:57 Grading done and posted for the week">: 2013-02-22 Fri Feb 22 11:57 Grading done and posted for the week</A>
+<li><a href="index-2.html#2013-02-08 Fri Feb 8 13:52 Grades posted and next week">: 2013-02-08 Fri Feb 8 13:52 Grades posted and next week</A>
+<li><a href="index-2.html#2013-02-15 Fri Feb 15 10:08 Grades posted and next week">: 2013-02-15 Fri Feb 15 10:08 Grades posted and next week</A>
+<li><a href="index-2.html#2013-02-08 Fri Feb 8 13:52 Grades posted and next week">: 2013-02-08 Fri Feb 8 13:52 Grades posted and next week</A>
+<li><a href="index-2.html#2013-02-04 Mon Feb 4 11:20 Grades posted -- including bonusses">: 2013-02-04 Mon Feb 4 11:20 Grades posted -- including bonusses</A>
+<li><a href="index-2.html#2013-01-25 Fri Jan 25 11:03 Grades posted early and Why design before you code">: 2013-01-25 Fri Jan 25 11:03 Grades posted early and Why design before you code</A>
+<li><a href="index-2.html#2013-01-23 Wed Jan 23 14:27 Why study agile methods">: 2013-01-23 Wed Jan 23 14:27 Why study agile methods</A>
+<li><a href="index-2.html#2013-01-18 Fri Jan 18 11:48 Grades posted">: 2013-01-18 Fri Jan 18 11:48 Grades posted</A>
+<li><a href="index-2.html#2013-01-14 Mon Jan 14 10:32 First Grades Posted">: 2013-01-14 Mon Jan 14 10:32 First Grades Posted</A>
+<li><a href="index-2.html#2012-12-10 Mon Dec 10 14:39 Draft syllabusses and schedules ready online">: 2012-12-10 Mon Dec 10 14:39 Draft syllabusses and schedules ready online</A>
+<li><a href="index-2.html#2012-11-29 Thu Nov 29 15:24 Starting to prep for Winter 2013">: 2012-11-29 Thu Nov 29 15:24 Starting to prep for Winter 2013</A>
+<li><a href="index-2.html#2012-12-10 Mon Dec 10 14:19 Removing old stuff">: 2012-12-10 Mon Dec 10 14:19 Removing old stuff</A>
+<li><a href="index-2.html#2011-03-10 Thu Mar 10 10:11 Uploaded template for final">: 2011-03-10 Thu Mar 10 10:11 Uploaded template for final</A>
+<li><a href="index-2.html#2011-03-03 Thu Mar 3 10:15 Iterative Engineering Illustrated">: 2011-03-03 Thu Mar 3 10:15 Iterative Engineering Illustrated</A>
+<li><a href="index-2.html#2010-03-30 Tue Mar 30 10:31 Winter 2010 Added last bonus points and posted to CMS">: 2010-03-30 Tue Mar 30 10:31 Winter 2010 Added last bonus points and posted to CMS</A>
+<li><a href="index-2.html#2010-03-15 Mon Mar 15 12:20 Information on the Final">: 2010-03-15 Mon Mar 15 12:20 Information on the Final</A>
+<li><a href="index-2.html#2009-02-28 Sat Feb 28 16:02 Highly relevant Blog entry on Technical debt">: 2009-02-28 Sat Feb 28 16:02 Highly relevant Blog entry on Technical debt</A>
+<li><a href="index-2.html#2009-02-05 Thu Feb 5 07:02 Resource discovered -- YouTube">: 2009-02-05 Thu Feb 5 07:02 Resource discovered -- YouTube</A>
+<li><a href="index-2.html#2009-01-28 Wed Jan 28 14:01 Resource when starting UML">: 2009-01-28 Wed Jan 28 14:01 Resource when starting UML</A>
+<li><a href="index-2.html#2008-12-23 Tue Dec 23 12:12 Updating from 2008 to 2009">: 2008-12-23 Tue Dec 23 12:12 Updating from 2008 to 2009</A>
+<li><a href="index-2.html#2008-03-20 Thu Mar 20 19:34 Grades for Finals etc">: 2008-03-20 Thu Mar 20 19:34 Grades for Finals etc</A>
+<li><a href="index-2.html#2008-02-15 Fri Feb 15 14:02 Philosophy of Iterative Program Development">: 2008-02-15 Fri Feb 15 14:02 Philosophy of Iterative Program Development</A>
+<li><a href="index-2.html#2007-12-10 Mon Dec 10 10:12 Upgrading site to Winter 2008">: 2007-12-10 Mon Dec 10 10:12 Upgrading site to Winter 2008</A>
+<li><a href="index-2.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="Requirements Analysis and Design">Requirements Analysis and Design</A></H1><ol class=Section>
+<H2><a name="2013-03-08 Fri Mar 8 13:11 Grades Posted -- and news of job market">2013-03-08 Fri Mar 8 13:11 Grades Posted -- and news of job market</A></H2>
+[<A href="http://m.networkworld.com/news/2013/030513-tech-degrees-267324.html"> 030513-tech-degrees-267324.html </A>]
+<H2><a name="2013-02-28 Thu Feb 28 17:26 Grading done and posting">2013-02-28 Thu Feb 28 17:26 Grading done and posting</A></H2>
+[<A href="grading/index.html"> grading/ </A>]
+<p>
+Next Tuesday
+[<A href="w7.html"> w7.html </A>]
+and GoF patterns
+[<A href="17.html"> 17.html </A>]
+<H2><a name="2013-02-22 Fri Feb 22 11:57 Grading done and posted for the week">2013-02-22 Fri Feb 22 11:57 Grading done and posted for the week</A></H2>
+[<A href="grading/index.html"> grading/ </A>]
+<p>
+[<A href="w6.html#Deliverables"> w6.html#Deliverables </A>]
+[<A href="15.html"> 15.html </A>]
+<p>
+[<A href="16.html"> 16.html </A>]
+<H2><a name="2013-02-08 Fri Feb 8 13:52 Grades posted and next week">2013-02-08 Fri Feb 8 13:52 Grades posted and next week</A></H2>
+[<A href="grading/index.html"> grading/ </A>]
+<p>
+<p>
+<H2><a name="2013-02-15 Fri Feb 15 10:08 Grades posted and next week">2013-02-15 Fri Feb 15 10:08 Grades posted and next week</A></H2>
+[<A href="grading/index.html"> grading/ </A>]
+<p>
+[<A href="w5.html#Deliverables"> w5.html#Deliverables </A>]
+[<A href="13.html"> 13.html </A>]
+<p>
+[<A href="14.html"> 14.html </A>]
+<H2><a name="2013-02-08 Fri Feb 8 13:52 Grades posted and next week">2013-02-08 Fri Feb 8 13:52 Grades posted and next week</A></H2>
+[<A href="grading/index.html"> grading/ </A>]
+<p>
+Tuesday: present your SSD and Packages.
+Design Class Diagrams (DCDs).
+Quiz on Interactions and DCDs
+<p>
+Thursday: GRASP -- Designing objects to meet requirements.
+Project: Design Iteration 1.
+<p>
+<H2><a name="2013-02-04 Mon Feb 4 11:20 Grades posted -- including bonusses">2013-02-04 Mon Feb 4 11:20 Grades posted -- including bonusses</A></H2>
+[<A href="grading/index.html"> grading/ </A>]
+<p>
+Next class
+[<A href="09.html"> 09.html </A>]
+will introduce a way to organize your software, and your projects
+so that different aspects (example the user interface and
+the data base management system) are kept separate and as independent
+as possible.  This makes it easier to change software.
+<p>
+You should present your project's first domain/business model.  Give
+me a copy to comment on and grade.
+<p>
+There will be a quiz to test to see if you can draw a plausible and corrct
+SSD for a given scenario.
+<p>
+<H2><a name="2013-01-25 Fri Jan 25 11:03 Grades posted early and Why design before you code">2013-01-25 Fri Jan 25 11:03 Grades posted early and Why design before you code</A></H2>
+[<A href="grading/index.html"> grading/ </A>]
+<p>
+Also see this article in Wired (<span class="InlineFormula">Wired</span>!)
+[<A href="http://www.wired.com/opinion/2013/01/code-bugs-programming-why-we-need-specs/"> http://www.wired.com/opinion/2013/01/code-bugs-programming-why-we-need-specs/ </A>]
+about why it pays to record our thinking before we write the code...  Experiences
+like this guy's (he is a good programmer by the way) make me believe in the
+recording of our thinking as we work out what is required and how we meet the
+requirements...
+<H2><a name="2013-01-23 Wed Jan 23 14:27 Why study agile methods">2013-01-23 Wed Jan 23 14:27 Why study agile methods</A></H2>
+Check out
+[<A href="http://www.eweek.com/developer/agile-developers-needed-demand-outpaces-supply-study/"> http://www.eweek.com/developer/agile-developers-needed-demand-outpaces-supply-study/ </A>]
+(regular site) or
+[<A href="http://mobile.eweek.com/developer/agile-developers-needed-demand-outpaces-supply-study/"> http://mobile.eweek.com/developer/agile-developers-needed-demand-outpaces-supply-study/ </A>]
+(mobile site).
+<H2><a name="2013-01-18 Fri Jan 18 11:48 Grades posted">2013-01-18 Fri Jan 18 11:48 Grades posted</A></H2>
+Just published in
+[<A href="grading/index.html"> grading/ </A>]
+the latest grades...  Questions and corrections to me by EMail.
+<p>
+Have a great long weekend.
+<p>
+See you Tuesday with the first iteration of your project
+[<A href="w1.html"> w1.html </A>]
+, and some input on
+requirements
+[<A href="05.html"> 05.html </A>]
+and a quiz...
+<H2><a name="2013-01-14 Mon Jan 14 10:32 First Grades Posted">2013-01-14 Mon Jan 14 10:32 First Grades Posted</A></H2>
+If you've given me the orange sheet back you can see your grades
+at
+[<A href="grading/index.html"> grading/ </A>]
+, please check for errors.
+<H2><a name="2012-12-10 Mon Dec 10 14:39 Draft syllabusses and schedules ready online">2012-12-10 Mon Dec 10 14:39 Draft syllabusses and schedules ready online</A></H2>
+Please check
+[<A href="syllabus.html"> syllabus.html </A>]
+[<A href="http://cse.csusb.edu/dick/syllabus.html"> ../syllabus.html </A>]
+[<A href="schedule.html"> schedule.html </A>]
+for errors.  Contact me if you se any before I
+get 30 copies made...
+<p>
+<H2><a name="2012-11-29 Thu Nov 29 15:24 Starting to prep for Winter 2013">2012-11-29 Thu Nov 29 15:24 Starting to prep for Winter 2013</A></H2>
+The book, schedule, and syllabus have been updated.... but if you or I
+spot an error they can change.
+<H2><a name="2012-12-10 Mon Dec 10 14:19 Removing old stuff">2012-12-10 Mon Dec 10 14:19 Removing old stuff</A></H2>
+This is called redaction... and I do it before the start of each class.
+<p>
+I record all future changes in the online materials and sylabusses and schedules
+in this blog.
+<p>
+<H2><a name="2011-03-10 Thu Mar 10 10:11 Uploaded template for final">2011-03-10 Thu Mar 10 10:11 Uploaded template for final</A></H2>
+[<A href="mock.html"> mock.html </A>]
+<p>
+Also see 2008's
+[<A href="mock.pdf"> mock.pdf </A>]
+for questions might have been asked then in the different categories.
+<p>
+<H2><a name="2011-03-03 Thu Mar 3 10:15 Iterative Engineering Illustrated">2011-03-03 Thu Mar 3 10:15 Iterative Engineering Illustrated</A></H2>
+You'll need flash for this
+[<A href="http://i.usatoday.net/tech/graphics/iss_timeline/flash.htm"> flash.htm </A>]
+and it shows a complex piece of hardware growing as it is in use.
+<p>
+Two questions:  How come all the pieces fit together?
+Did the engineers learn and improve their designs as each module was deployed?
+<p>
+<H2><a name="2010-03-30 Tue Mar 30 10:31 Winter 2010 Added last bonus points and posted to CMS">2010-03-30 Tue Mar 30 10:31 Winter 2010 Added last bonus points and posted to CMS</A></H2>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">A/A-<th scope="col">B+/B/B-<th scope="col">C+/C/C-<th scope="col">D+/D/D-<th scope="col">F
+<tr><td>8<td>16<td>3<td>0<td>1
+</table><br>(Close Table)<br>
+<H2><a name="2010-03-15 Mon Mar 15 12:20 Information on the Final">2010-03-15 Mon Mar 15 12:20 Information on the Final</A></H2>
+I've posted a mock final with blank questions
+[<A href="mock2010.htm"> mock2010.htm </A>]
+, notice that you will nedd to bring at least 10 blank sheets of paper
+to write the answers on.
+<p>
+<H2><a name="2009-02-28 Sat Feb 28 16:02 Highly relevant Blog entry on Technical debt">2009-02-28 Sat Feb 28 16:02 Highly relevant Blog entry on Technical debt</A></H2>
+Each time you take the quick and dirty way out of a technical problem you accumulate
+<A name="technical debt" class="Key"> technical debt </A>
+that ultimately will need to be paid for.
+<p>
+[<A href="http://www.codinghorror.com/blog/archives/001230.html"> 001230.html </A>]
+<p>
+<H2><a name="2009-02-05 Thu Feb 5 07:02 Resource discovered -- YouTube">2009-02-05 Thu Feb 5 07:02 Resource discovered -- YouTube</A></H2>
+I've just uncovered a rich vain of videos.... by looking for &quot;unified Process&quot;
+on YouTube.
+<p>
+<H2><a name="2009-01-28 Wed Jan 28 14:01 Resource when starting UML">2009-01-28 Wed Jan 28 14:01 Resource when starting UML</A></H2>
+This Google Group
+[<A href="http://groups.google.com/group/UMLforum?hl=en"> UMLforum?hl=en </A>]
+is starting to liven up with interesting questions and useful
+answers.  Try it out.
+in my office earlier....
+<H2><a name="2008-12-23 Tue Dec 23 12:12 Updating from 2008 to 2009">2008-12-23 Tue Dec 23 12:12 Updating from 2008 to 2009</A></H2>
+I'm planning a big change removing deployment and advanced packaging from the
+previous years schedule.  Instead we will review the <a href="#OO">OO</A> designs and <a href="#DCDs">DCDs</A>
+<H2><a name="2008-03-20 Thu Mar 20 19:34 Grades for Finals etc">2008-03-20 Thu Mar 20 19:34 Grades for Finals etc</A></H2>
+For your information here is the distribution
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Distribution<th scope="col">A/A-<th scope="col">B+/B/B-<th scope="col">C+/C/C-<th scope="col">D+/D/D-<th scope="col">F
+<tr><td>Frequency<td>6<td>13<td>5<td>1<td>0
+</table><br>(Close Table)<br>
+<p>
+<p>
+<H2><a name="2008-02-15 Fri Feb 15 14:02 Philosophy of Iterative Program Development">2008-02-15 Fri Feb 15 14:02 Philosophy of Iterative Program Development</A></H2>
+Here is a description of the philosophy behind iterative software Development as
+expressed by Piet Hein, and quoted by Dr. Yair Censor on Wednsday:
+<ul class="Set">
+<li><span class=Formula>The road to wisdom?</span>
+<li><span class=Formula>Well it's plain &amp; simple to express:</span>
+<li><span class=Formula>Err and err, and err again</span>
+<li><span class=Formula>but less, and less, and less.</span>
+</ul>
+Also quoted by Donald Knuth in his notes on &quot;Mathematical Writing&quot;.
+<p>
+Thanx to Dan Piedlow for reminding me of this...
+<p>
+<H2><a name="2007-12-10 Mon Dec 10 10:12 Upgrading site to Winter 2008">2007-12-10 Mon Dec 10 10:12 Upgrading site to Winter 2008</A></H2>
+The big change for the coming quarter is removing dynamic modeling (activity diagrams and State Charts) from the course -- and spending more time on
+the <a href="#GRASP">GRASP</A> and <a href="#GoF">GoF</A> patterns.
+<p>
+Here are the grade distributions from precious classes:
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Year<th scope="col">A/A-<th scope="col">B+/B/B-<th scope="col">C+/C/C-<th scope="col">D+/D/D-<th scope="col">F
+<tr><td>2007<td>3<td>14<td>6<td>0<td>2
+<tr><td>2006<td>3<td>2<td>1<td>1<td>0
+</table><br>(Close Table)<br>
+<p>
+</ol><p>. . . . . . . . . ( end of section <a href="index-2.html#Requirements Analysis and Design">Requirements Analysis and Design</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<p>
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+[<A href="02DiceGameClasses.gif"> 02DiceGameClasses.gif </A>]
+(example).
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<p>
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good set of objects and/or classes to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what has no value <span class="InlineFormula">now</span>, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<p>
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci and Engineering School, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10 and
+[<A href="02DiceGameSSD.gif"> 02DiceGameSSD.gif </A>]
+(example).
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need it <span class="InlineFormula">now</span>. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">( End of document )</a>  <a href="#Contents">&lt;&lt;Contents </A> | <a href="#Main Content">Top</A></H3>
+</body>

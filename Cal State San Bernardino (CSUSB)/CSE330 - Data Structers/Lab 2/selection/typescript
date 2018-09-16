@@ -1,0 +1,65 @@
+Script started on Thu 26 Jan 2012 09:38:50 AM PST
+time]0;jsmall@jb358-1:~/cse330/lab2/selection[?1034h[jsmall@jb358-1 selection]$ time ./selectionsort > output
+1000
+
+real	0m2.325s
+user	0m0.009s
+sys	0m0.003s
+]0;jsmall@jb358-1:~/cse330/lab2/selection[jsmall@jb358-1 selection]$ time ./selectionsort > output
+2000
+
+real	0m1.523s
+user	0m0.032s
+sys	0m0.001s
+]0;jsmall@jb358-1:~/cse330/lab2/selection[jsmall@jb358-1 selection]$ time ./selectionsort > output
+3000
+
+real	0m1.452s
+user	0m0.066s
+sys	0m0.003s
+]0;jsmall@jb358-1:~/cse330/lab2/selection[jsmall@jb358-1 selection]$ time ./selectionsort > output
+4000
+
+real	0m2.000s
+user	0m0.107s
+sys	0m0.002s
+]0;jsmall@jb358-1:~/cse330/lab2/selection[jsmall@jb358-1 selection]$ time ./selectionsort > output
+5000
+
+real	0m2.797s
+user	0m0.156s
+sys	0m0.005s
+]0;jsmall@jb358-1:~/cse330/lab2/selection[jsmall@jb358-1 selection]$ time ./selectionsort > output
+6000
+
+real	0m2.235s
+user	0m0.219s
+sys	0m0.005s
+]0;jsmall@jb358-1:~/cse330/lab2/selection[jsmall@jb358-1 selection]$ time ./selectionsort > output
+7000
+
+real	0m2.143s
+user	0m0.285s
+sys	0m0.006s
+]0;jsmall@jb358-1:~/cse330/lab2/selection[jsmall@jb358-1 selection]$ time ./selectionsort > output
+8000
+
+real	0m2.679s
+user	0m0.357s
+sys	0m0.007s
+]0;jsmall@jb358-1:~/cse330/lab2/selection[jsmall@jb358-1 selection]$ time ./selectionsort > output
+9000
+
+real	0m2.700s
+user	0m0.444s
+sys	0m0.006s
+]0;jsmall@jb358-1:~/cse330/lab2/selection[jsmall@jb358-1 selection]$ time ./selectionsort > output
+10000
+
+real	0m3.127s
+user	0m0.543s
+sys	0m0.007s
+]0;jsmall@jb358-1:~/cse330/lab2/selection[jsmall@jb358-1 selection]$ exit
+cd ..
+
+Script done on Thu 26 Jan 2012 09:39:33 AM PST

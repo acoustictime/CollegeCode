@@ -1,0 +1,19 @@
+Release 13.2 - netgen O.61xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis
+-ofmt verilog -sim FPGA_hex_sseg.ngc FPGA_hex_sseg_synthesis.v  
+
+Reading design 'FPGA_hex_sseg.ngc' ...
+Flattening design ...
+Processing design ... 
+  Preping design's networks ...
+  Preping design's macros ...
+Writing Verilog netlist file 'C:\Documents and
+Settings\user\Desktop\test2\netgen\synthesis\FPGA_hex_sseg_synthesis.v' ...
+INFO:NetListWriters:633 - The generated Verilog netlist contains Xilinx UNISIM
+   simulation primitives and has to be used with UNISIM simulation library for
+   correct compilation and simulation. 
+Number of warnings: 0
+Number of info messages: 1
+Total memory usage is 70732 kilobytes

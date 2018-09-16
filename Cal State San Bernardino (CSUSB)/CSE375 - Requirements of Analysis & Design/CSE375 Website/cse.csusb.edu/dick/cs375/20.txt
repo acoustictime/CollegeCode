@@ -1,0 +1,36 @@
+.Open 20 Review
+.Table Date	#	Topic (Participation 2pt)	Study pages (2 pts)	Quiz(15 pts)	Project Work(10 pts)
+.Row Previous	19
+.Item Revu Interactions and DCDs
+.Item 221-270
+.Item -
+.See ./19.html
+.Item Q9(1-535)
+.Row Today	20	Review	all	-	W9(Model 4 with architecture)
+.Row Tu Mar 24	Final 4-5:50pm	All	-	Final	Hand in final project
+.Close.Table
+. Revision History
+.Table Version#	Date	Description	Author
+.Row 0	2005-01-03	Used boiler plate to make template	RJB
+.Row 1	2005-03-10	Filled out the contents list	RJB
+.Row 2	2005-03-15	Added link to W9	RJB
+.Row 3	2005-03-21	Added Questions	RJB
+.Row 4	2006-01-20	Updated reading pages	RJB
+.Row 5	2007-03-15	Removed times from outline	RJB
+.Row 6	2008-03-12	Added mock final	RJB
+.Close.Table
+. Information on the Final Exam
+.See ./mock.html
+.See ./final.objectives.html
+. Course Review Questions and Answers 
+.See ./20q.html
+. Review Questions
+.See ./20r.html
+. Exercises
+New or incomplete from
+.See ./19x.html
+.See ./20x.html
+. Project -- Start the Fourth Iteration 
+.See ./w9.html
+deliverables due at the start of the final.
+.Close 20 Review

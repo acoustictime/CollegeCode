@@ -1,0 +1,4 @@
+ALTER TABLE Works_On
+ADD CONSTRAINT Works_On_pno_FK FOREIGN KEY(pno)
+    REFERENCES Project(pnumber)
+    ON DELETE CASCADE;

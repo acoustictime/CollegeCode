@@ -1,0 +1,519 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> 
+<!-- Mirrored from cse.csusb.edu/kay/cs330/ by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 27 Mar 2012 14:57:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+<title>CSE 330</title>
+</head>
+<body>
+
+<H1>
+Winter 2012, Zemoudeh
+<br>
+CSE 330: Data Structures
+<br>
+School of Computer Science and Engineering
+<br>
+California State University, San Bernardino
+</H1>
+<br>
+Last modified: Monday, Mar. 19.
+<HR>
+<br>
+<a href="roster330post.pdf">Grades</a>
+<HR>
+<br>
+<a href="hash_simple.cpp">hash_simple.cpp</a>
+<br>
+<a href="hash1.cpp">hash1.cpp</a>
+<HR>
+<br>
+Study problems for the Final: 
+<br>
+Chapter 2: Exercises 6, 7, 8, 9, 10, 11 Pages 42 and 43.
+<br>
+Chapter 3: Exercises 7, 8, 9 Pages 61 and 62.
+<br>
+Chapter 4: Exercises 11, 12, 13 Page 85.
+<br>
+Chapter 6: Exercises 1, 2 Page 120.
+<br>
+Chapter 7: Exercises 1, 2, 5, 7, 8, 9, 10, 11, 12, 14, 18 Pages 152 and 153.
+<br>
+Chapter 8: Exercises 2, 3, 4, 6, 9, 13, 14, 15 (must be in O(1)), 16 Pages 182 and 183.
+<br>
+Chapter 9: Exercises 3, 7, 8, 12, 13 Pages 215 and 216.
+<br>
+Chapter 10: Exercises 2, 5, 6, 7, 8, 9, 11 Pages 235 and 236.
+<br>
+Chapter 11: Exercises 1, 3, 4 (already done in the lab) Page 262.
+<br>
+Chapter 12: Exercises 2, 9, 10, 11, 13, 14 Pages 291 and 292.
+<br>
+Chapter 13: Exercises 2, 3, 4, 5, 6, 10, 11, 13, 15, 16 Pages 324 and 325.
+<br>
+Chapter 14: Exercises 1, 2, 3, 5, 9 Page357.
+<br>
+Chapter 15: Exercises 1, 2, 3, 5, 7, 11 Pages 384 and 385.
+<br>
+Chapter 16: Exercises 2, 3 Page 405.
+<br>
+Chapter 17: Exercises 1, 2, 3, 4, 5, 6, 8, 9 Page 427.
+<HR>
+<br>
+<strong>Final: Wed, Mar 21, 12:00-1:50 PM</strong>
+<HR>
+<br>
+<strong>Home work 4: Alternative Deque Implementation.</strong> Due Wednesday, Mar. 14.
+<br>
+An alternative implementation of the Deque compared to the lab's implementation is to use one ARRAY instead of two vectors. 
+In this implementation the Deque is maintained in the middle of the array AS MUCH AS POSSIBLE. In this way there is room for growth on both ends of the Deque without the costly allocate-copy operations.
+<br>
+Modify lab 7 Deque to implement this alternative. Do not change the interface (operation names and parameters) of the Deque, only the internal implementation should change. Start with the following declaration and add the definition of all the member functions from lab 7 such as push_back(), erase(), operator[](), etc. Also, center_it() must be completed:
+<pre>
+template &lt;class T>
+class Deque {
+public:
+        typedef DequeIterator&lt;T> iterator;
+
+        Deque(): my_capacity(10) { buffer = new T[10];  front_ptr = next_back = 10/2; }
+        Deque(const unsigned int size, const T & initial): my_capacity(size), front_ptr(0), next_back(size) {
+                buffer = new T[size];
+                for (int i = front_ptr; i < next_back; i++)
+                        buffer[i] = initial;
+        }
+// ... more code goes here ...
+        T & front() { assert(front_ptr < next_back); return buffer[front_ptr]; }
+        T & back() { assert(front_ptr < next_back); return buffer[next_back - 1]; }
+// ... more code goes here ...
+protected:
+        T * buffer;
+        int front_ptr, next_back;
+        int my_capacity;
+        void center_it();
+};
+</pre>
+Here buffer is the array, my_capacity is the capacity of the buffer, front_ptr points to the front element of the Deque, and next_back points to the element just to right of back element of the Deque. Note next_back - front_ptr is the size of Deque.
+For example, in the following configuration:
+
+<style type="text/css">
+table.sample1 {
+	border-width: 0px;
+	border-spacing: ;
+	border-style: outset;
+	border-color: gray;
+	border-collapse: collapse;
+	background-color: white;
+}
+table.sample1 th {
+	border-width: 1px;
+	padding: 1px;
+	border-style: inset;
+	border-color: gray;
+	background-color: white;
+	-moz-border-radius: ;
+}
+table.sample1 td {
+	border-width: 0px;
+	padding: 5px;
+	border-style: inset;
+	border-color: gray;
+	background-color: white;
+	-moz-border-radius: ;
+}
+</style>
+
+<table class="sample1">
+<tr>
+<td> &nbsp; 0  </td>
+<td> &nbsp; 1  </td>
+<td> &nbsp; 2  </td>
+<td> &nbsp; 3  </td>
+<td> &nbsp; 4  </td>
+<td> &nbsp; 5  </td>
+<td> &nbsp; 6  </td>
+<td> &nbsp; 7  </td>
+<td> &nbsp; 8  </td>
+<td> &nbsp; 9  </td>
+</tr>
+<tr>
+<th> &nbsp; </th>
+<th> &nbsp; </th>
+<th> &nbsp; </th>
+<th> &nbsp; </th>
+<th> &nbsp; </th>
+<th> &nbsp; </th>
+<th> &nbsp; 10 </th>
+<th> &nbsp; 25 </th>
+<th> &nbsp; 30 </th>
+<th> &nbsp; </th>
+</tr>
+<tr>
+<td>  </td>
+<td>     </td>
+<td>  </td>
+<td>  </td>
+<td>     </td>
+<td>  </td>
+<td> &nbsp; 0  </td>
+<td> &nbsp; 1  </td>
+<td> &nbsp; 2  </td>
+</tr>
+</table>
+
+my_capacity = 10, front_ptr = 6, next_back = 9, and Deque size is 3.
+The array index ranges from 0 to 9, and the Deque index ranges from 0 to 2.
+<br>
+Suppose two push_back() operations arrive:
+<br>
+push_back(10);
+<br>
+push_back(15);
+<br>
+On the second push_back(), center_it() is called and the following configuration results:
+<table class="sample1">
+<tr>
+<td> &nbsp; 0  </td>
+<td> &nbsp; 1  </td>
+<td> &nbsp; 2  </td>
+<td> &nbsp; 3  </td>
+<td> &nbsp; 4  </td>
+<td> &nbsp; 5  </td>
+<td> &nbsp; 6  </td>
+<td> &nbsp; 7  </td>
+<td> &nbsp; 8  </td>
+<td> &nbsp; 9  </td>
+</tr>
+<tr>
+<th> &nbsp; </th>
+<th> &nbsp; </th>
+<th> &nbsp; </th>
+<th> &nbsp; 10 </th>
+<th> &nbsp; 25 </th>
+<th> &nbsp; 30</th>
+<th> &nbsp; 10</th>
+<th> &nbsp; 15</th>
+<th> &nbsp; </th>
+<th> &nbsp; </th>
+</tr>
+<tr>
+<td>  </td>
+<td>  </td>
+<td>  </td>
+<td> &nbsp; 0  </td>
+<td> &nbsp; 1  </td>
+<td> &nbsp; 2  </td>
+<td> &nbsp; 3  </td>
+<td> &nbsp; 4  </td>
+<td>  </td>
+<td>  </td>
+</tr>
+</table>
+
+This buffer can handle two more push_back() operations, but on the third operation a larger buffer must be allocated.
+This is part of the "policy" used for this implementation. Let's implement the following policy: every time an insert operation (push_back(), insert(), or push_front()) is called and the Deque is trying to grow beyond one of the ends of the buffer, center_it() is called. center_it() first decides whether to enlarge the buffer.
+If Deque size is > my_capacity/2, then capacity is enlarged by a factor of two (my_capacity *= 2;). Otherwise capacity is not changed. In both cases, the Deque is centered in
+the middle of buffer.
+<br>
+Hand in a printout of your program (Deque.h). The test programs from lab 7 should compile and run with the new implementation without any errors. State the percentage completed and time complexity of all functions.
+<HR>
+<br>
+<strong>Home work 3: Course Registration System.</strong> Due Wednesday, Feb 29.
+<br>
+Complete the Course Registration System given in section 9.3.2 (pages 196-202).
+<br>
+You are to give your own <tt>main()</tt> and two input files together with all
+the code given in the section and other functionality not listed.
+<br>
+First and foremost, if you've already not done so, refer to the errata list to fix the errors in this section.
+<br>
+Second, read this section as many times as necessary to understand it! To be able to complete this program
+you must have a clear understanding of what the author has already done. Only then
+you can begin to complete the program.
+<br>
+Keep your code simple.
+Do not modify the code given in the text other than the errata list modifications.
+<br>
+Your course file should contain 5 courses. Choose a limit of 3 or 4 for each course.
+<br>
+Your student file should contain the requests of about 10 students. Note there would be 
+more than 10 records in this file as a student usually requests more than one course.
+<br>
+Hand in printouts of your program, the two input files, and the two reports.
+<HR>
+<br>
+<a href="mergeSort1.cpp">mergeSort1.cpp</a>
+<br>
+<a href="mergeSort2.cpp">mergeSort2.cpp</a>
+<br>
+<a href="mergeSort3.cpp">mergeSort3.cpp</a>
+<HR>
+<br>
+<a href="binarySearchSeq.cpp">binarySearchSeq.cpp</a>
+<br>
+<a href="binarySearchRec.cpp">binarySearchRec.cpp</a>
+<HR>
+<br>
+Study problems for the Midterm: 
+<br>
+Chapter 2: Exercises 6, 7, 8, 9, 10, 11 Pages 42 and 43.
+<br>
+Chapter 3: Exercises 7, 8, 9 Pages 61 and 62.
+<br>
+Chapter 4: Exercises 11, 12, 13 Page 85.
+<br>
+Chapter 6: Exercises 1, 2 Page 120.
+<br>
+Chapter 7: Exercises 1, 2, 5, 7, 8, 9, 10, 11, 12, 14, 18 Pages 152 and 153.
+<br>
+Chapter 8: Exercises 2, 3, 4, 6, 9, 13, 14, 15 (must be in O(1)), 16 Pages 182 and 183.
+<br>
+Chapter 9: Exercises 3, 4, 6, 7, 8, 12, 13 Pages 215 and 216.
+<HR>
+<br>
+<strong>Midterm: Wednesday, Feb 15.</strong>
+<HR>
+<br>
+<strong>Home work 2: Four-card Solitaire.</strong> Due Mon, Feb 13.
+<br>
+Write a C++ program to play four-card solitaire.
+The rules of the game are as follows:
+<menu>
+<li> In each round the player draws four cards.
+<li> Each card is placed face-up on top of one of four columns.
+<li> A card can be discarded when it is one of the four top cards, has a suit equal to one of the other three top cards, but has a lower rank.
+<li> The highest-ranked card is Ace, the next highest-ranked card is King, etc. Deuce (2) is the lowest-ranked card. 
+<li> An Ace on top of a column can move to an empty column or on top of another Ace.
+<li> The player wins when all 52 cards are drawn, 48 are discarded, and one Ace per column remains.
+</menu>
+You may play this game <a href="http://www.singaporemahjong.com/sol/sol.html">here</a>.
+<br>
+<br>
+Reuse as much code as possible from war.cpp and war2.cpp to write this program.
+<br>
+First, use war.cpp to develop and debug your program. Then refer to war2.cpp where <tt>srand()</tt> and <tt>time(0)</tt> calls are used
+to make successive runs different.
+<br>
+<br>
+Note in the War program Ace has the lowest rank; here Ace has the highest rank. The slightest modification
+accommodates this requirement!
+<br>
+<br>
+In each round of play, your program should prompt the player for the column number.
+If the top card in that column is smaller than one of the other three top cards,
+the card must be discarded.
+If the top card selected is an Ace, then the player must specify which column it has to move to.
+After each selection, the new
+configuration of the columns must be displayed similar (but not necessarily exactly) to the following:
+<pre>
+$ a.out
+   Col 1           Col 2           Col 3           Col 4 
+    2 Diamonds    Ace Diamonds   Jack Diamonds     10 Hearts  
+
+Enter a column number (0 to draw four new cards): 1
+   Col 1           Col 2           Col 3           Col 4 
+                  Ace Diamonds   Jack Diamonds     10 Hearts  
+
+Enter a column number (0 to draw four new cards): 3
+   Col 1           Col 2           Col 3           Col 4 
+                  Ace Diamonds                     10 Hearts  
+
+Enter a column number (0 to draw four new cards): 0
+   Col 1           Col 2           Col 3           Col 4 
+    6 Hearts      Ace Diamonds      2 Clubs        10 Hearts  
+                  Ace Clubs                      Jack Spades  
+
+Enter a column number (0 to draw four new cards): 3
+   Col 1           Col 2           Col 3           Col 4 
+    6 Hearts      Ace Diamonds                     10 Hearts  
+                  Ace Clubs                      Jack Spades  
+
+Enter a column number (0 to draw four new cards): 2
+Ace to where? 3
+   Col 1           Col 2           Col 3           Col 4 
+    6 Hearts      Ace Diamonds    Ace Clubs        10 Hearts  
+                                                 Jack Spades
+</pre>
+A high-level sketch of the algorithm follows. You must develop this algorithm further before starting on the code.
+<ol>
+<li>
+Draw four cards, place each card on a different column
+<li>
+Prompt the player for a column number
+<li>
+Compare the top card of the column selected with the other top cards, discard this card if it's smaller than any of the other three
+<li>
+If the top card is an Ace, then prompt for a column to move it onto
+<li>
+Repeat the above three steps until the player decides to draw four more cards
+<li>
+Stop if there are no more cards left, otherwise repeat from the top
+</ol>
+It might seem the best approach is to declare a vector of stacks to represent the columns. After all
+in this algorithm we only need access to the top card in a column. Although this is true and one could implement the
+program this way, printing the configuration of each column every time around the main loop becomes
+unnecessarily difficult. Implement your columns as a vector of vectors:
+<pre>
+vector&lt;vector&lt;Card> > column(4);
+</pre>
+Note the space between > and > is necessary.
+<br>
+Now to access the suit of the top card on column 2, you may use:
+<pre>
+column[2].back().getSuit()
+</pre>
+Or to access the 3rd card in column 0:
+<pre>
+column[0][3]
+</pre>
+Hand in a print-out of your program and a typescript of a sample run.
+<HR>
+<br>
+<a href="war.post">War program</a> from Ch. 2.
+<br>
+<a href="war1.post">War1 program</a>: War plus human player.
+<br>
+<a href="war2.post">War2 program</a>: War2 plus inheritance.
+<br>
+<a href="war/index.html">War3 program</a>: multiple file compilation and more.
+<br>
+A UML diagram for war2/war3 program:
+<br>
+<img src="war.gif" alt="War UML Diagram">
+<HR>
+<br>
+A simple program that illustrates operator overloading: <a href="mod.cpp">mod.cpp</a>
+<HR>
+<br>
+Variance using an array: <a href="variance1.cpp">variance1.cpp</a>
+<br>
+Variance using a vector: <a href="variance3.cpp">variance3.cpp</a>
+<br>
+<HR>
+<br>
+<strong>Homework 1: Exercise 8, page 21.</strong> Due Wednesday, Jan 18.
+<br>
+Your program should input the numbers from standard input until end-of-file.
+As you enter each number increment the number of numbers (<tt>n</tt>). You need <tt>n</tt> 
+to calculate both the average and variance.
+<br>
+Your program should consist of two functions: <tt>main()</tt> and <tt>variance()</tt>.
+In <tt>main()</tt> you input the numbers in an array, call and pass the array to <tt>variance()</tt>,
+and then output the result.
+<br>
+You must compile and run your program on one of the computers in JBH-358 (the lab).
+<br>
+Hand in a printout of your program and a typescript of your sample runs.
+<HR>
+<br>
+What are the access rules with private and protected inheritance?
+<br>
+Take these classes as examples: 
+
+
+<pre>
+ class B                    { /*...*/ };
+ class D_priv : private   B { /*...*/ };
+ class D_prot : protected B { /*...*/ };
+ class D_publ : public    B { /*...*/ };
+</pre>
+ 
+None of the derived classes can access anything that is private in B. 
+<br>
+In D_priv, the public and protected parts of B are private. 
+<br>
+In D_prot, the public and protected parts of B are protected. 
+<br>
+In D_publ, the public parts of B are public and the protected parts of B are protected (D_publ is-a-kind-of-a B). 
+
+<HR>
+<br>
+<strong>Please fix all errors in the book from the <a href="http://web.engr.oregonstate.edu/~budd/Books/stl/info/errata.html">Errata List</a>.</strong>
+<strong> Other errors not reported in the Errata List:</strong>
+<menu>
+<li> Page 260: modify operators <tt>++</tt> and <tt>--</tt> to
+<pre>
+		iterator & operator++() { ++index; return *this; } // prefix change
+		iterator operator++(int); // postfix change
+		iterator & operator--() { --index; return *this; } // prefix change
+		iterator operator-- (int); // postfix change
+</pre>
+<li> Page 261: change
+<pre>
+                vecTwo.erase(vecTwo.begin() + (n - index));
+</pre>
+to
+<pre>
+                vecTwo.erase(vecTwo.begin() + (index - n));
+</pre>
+<li> Page 284: remove last line
+<li> Page 285: remove first 2 lines
+<li> Page 285: in upper_bound() change < to <=
+<li> Page 285: in upper_bound() change last if-statement to just <tt>return setIterator(this);</tt>
+<li> Page 286: change
+<pre>
+                if (newElement < value)
+</pre>
+to
+<pre>
+                if (newNode->value <= value)
+</pre>
+<li> Page 288: change the second else to:
+<pre>
+                else {
+                        Node&lt;T> * result = current->merge(remove(current->leftChild, elem), current->rightChild);
+                        current->leftChild = current->rightChild = 0;
+                        delete current;
+                        if (result)
+                                result->parent = pa;
+                        return result;
+                }
+</pre>
+<li> Page 319: change first while-loop to:
+<pre>
+                while (current and current -> left_child)
+</pre>
+<li> Page 365:
+<pre>
+                while (position > 0 && start[position] > start[parent]) {
+</pre>
+</menu>
+<HR>
+<br>
+<a href="syllabus330.pdf">Syllabus</a>
+<HR>
+<br>
+Use the following <a href="format.html">Lab Report Format</a> for each lab.
+You have one week after attending a lab to hand in the report.
+For example, lab 1 report must be submitted prior to attending lab 2.
+<br>
+Submit the printout (including typescript or screen shot of the compilation and sample runs) to the lab assistant, Mr. Avinash Misra. You must also email your program to misraa@coyote.csusb.edu with the subject line "CSE 330 Lab #".
+<br>
+<br>
+LATE LAB REPORTS WILL NOT BE ACCEPTED.
+<br>
+<br>
+<a href="lab1.html">Lab 1: Infix-to-postfix Expression Conversion</a>
+<br>
+<a href="lab2.html">Lab 2: Time Complexity</a>
+<br>
+<a href="lab3.html">Lab 3: String</a>
+<br>
+<a href="lab4.html">Lab 4: Vector</a>
+<br>
+<a href="lab5.html">Lab 5: List</a>
+<br>
+<a href="lab6.html">Lab 6: Stack and Queue</a>
+<br>
+<a href="lab7.html">Lab 7: Deque</a>
+<br>
+<a href="lab8.html">Lab 8: Set</a>
+<br>
+<a href="lab9.html">Lab 9: Priority Queue</a>
+<br>
+<a href="lab10.html">Lab 10: Map</a>
+
+</body> 
+<!-- Mirrored from cse.csusb.edu/kay/cs330/ by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 27 Mar 2012 14:57:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>

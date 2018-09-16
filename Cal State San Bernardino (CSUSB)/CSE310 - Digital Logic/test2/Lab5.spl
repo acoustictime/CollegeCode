@@ -1,0 +1,11 @@
+[Inputs]
+btn
+=sw[7:0]=
+[Outputs]
+z
+x
+=an[3:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Lab5
+

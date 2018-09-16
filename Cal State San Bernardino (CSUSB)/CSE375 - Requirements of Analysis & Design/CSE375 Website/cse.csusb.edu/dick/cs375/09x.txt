@@ -1,0 +1,67 @@
+.Open Exercises for 09
+ What UML diagram do you use to plan the organization of a complex piece of software?
+Give a simple example.
+ What is a dependency in the UML? How do you show it and what does it mean?
+ What is the relationship between the Domain Model and the Domain Layer?
+ Explain the model-view separation principle.
+ Explain the relationships between a dynamic model and a static model of an interaction.
+ I have a dynamic model that shows a message `m` being passed 
+from class `A` to class `B`.  Where do I put `m` in the static model?
+ Draw an interaction diagram that shows that an object `a` in class `A`
+sends a message `m`(`d`) to an object `b` of class B.
+ Draw a plausible static Design class diagram that supports the interaction
+in the previous question. 
+.Close
+.Open draw an SSD for a given Use Case
+
+This is a use case taken from the 
+.Key Depot Stock Control System
+.See ./06x.html
+exercises.
+
+. Depot UC2 Refill Low Stock Levels
+Main Scenario
+.List
+ The stock control clerk asks the system for a list of stocks with low stock levels.
+ The system displays a list of stocks.
+ The stock clerk selects a stock and prepares a purchase order for it.
+ The stock clerk tells the system to record the order and the system prints a confirmation.
+ Repeat the above two steps.
+.Close.List
+
+Draw an SSD for this scenario.
+.Close draw an SSD for a given Use Case
+.Open Exercises on SSDs and Packages
+ Discussion -- The 
+.Key Dice Game
+(in
+.See ./DiceGame.html
+& start of course/book)
+could be implemented in many ways... I want a list of 3 possibilities
+to add to the test example using a Command Line Interface and C++.
+Where would we document these?  
+ What logical Architecture should we use to handle all 4 implementations
+of the DiceGame?
+ Draw SSDs based on given scenario
+.See ./09x.html
+from a use case.
+
+Answer:
+.See ./09SSD060208.jpg
+
+ Exercise:  Write a letter to your grandmother explaining what she should
+do with those little drawings of folders on her computers screen.
+
+ Exercise: What are the parts (A,B,C,x,y,z) of this diagram:
+
+.Image 09x2.png Three icons and 3 links
+
+and what do they mean?
+
+ Exercise:  Name three typical layers in a logical architecture and
+draw a diagram of them with packages and dependencies.
+
+Answer: 
+.See ./09x.png
+.Close
+.Close Exercises for 09

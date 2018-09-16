@@ -1,0 +1,517 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/17.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:51:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+17 Gang of Four Patterns
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="17.txt">Text Version</A>]
+ 17.html 
+Fri Mar 23 09:31:25 PDT 2012
+<br>
+<h6>Opening the PDF files on this page may require you to download
+<a href="http://www.adobe.com/products/acrobat/readstep2.html">
+Adobe Reader</A> or an equivalent viewer (GhostScript).</h6>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="17.html#17 Gang of Four Patterns">17 Gang of Four Patterns</A>
+<li><a href="17.html#Revision History">: Revision History</A>
+<li><a href="17.html#Project Iteration 2 use cases, domain, interactions, classes">: Project Iteration 2 use cases, domain, interactions, classes</A>
+<li><a href="17.html#Chapter 27: Requirements for Iteration 3">: Chapter 27: Requirements for Iteration 3</A>
+<li><a href="17.html#Dynamics -- Chapter 28 and 29">: Dynamics -- Chapter 28 and 29</A>
+<li><a href="17.html#Review UML Icons">: Review UML Icons</A>
+<li><a href="17.html#Review GRASP Patterns">: Review GRASP Patterns</A>
+<li><a href="17.html#*** Interfaces">: *** Interfaces</A>
+<li><a href="17.html#The GoF book in CSUSB Pfau Library">: The GoF book in CSUSB Pfau Library</A>
+<li><a href="17.html#Video Introducing the GoF Design Patterns">: Video Introducing the GoF Design Patterns</A>
+<li><a href="17.html#GoF Key points">: GoF Key points</A>
+<li><a href="17.html#GoF Patterns">: GoF Patterns</A>
+<li><a href="17.html#Exercises on GoF Patterns">: Exercises on GoF Patterns</A>
+<li><a href="17.html#Project Work: Iteration 3">: Project Work: Iteration 3</A>
+<li><a href="17.html#Questions and Answers">: Questions and Answers</A>
+<li><a href="17.html#How to learn all the GoF Patterns -- Painful Quiz">: How to learn all the GoF Patterns -- Painful Quiz</A>
+<li><a href="17.html#Chapter 30 Relating Use Cases -- YAGNI">: Chapter 30 Relating Use Cases -- YAGNI</A>
+<li><a href="17.html#Next -- Next iteration -- back to the domain model.">Next -- Next iteration -- back to the domain model.</A>
+<li><a href="17.html#Quiz 8 on interfaces and patterns">Quiz 8 on interfaces and patterns</A>
+<li><a href="17.html#Review UML Icons -- Answers">Review UML Icons -- Answers</A>
+<li><a href="17.html#Review Questions">Review Questions</A>
+<li><a href="17.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="17 Gang of Four Patterns">17 Gang of Four Patterns</A></H1><ol class=Section>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Date<th scope="col">#<th scope="col">Topic (Participation 2pt)<th scope="col">Study pages (2 pts)<th scope="col">Quiz(15 pts)<th scope="col">Project Work(10 pts)
+<tr><td>Previous<td>16<td>GRASP II<td>413-435<td>-<td>W7(Model 2: use cases, domain, objects, classes)
+<tr><td>Today<td>17<td>GoF<td>435-476<td>Q8(1-476)
+<tr><td>Next<td>18<td>Domain Model III<td>501-539<td>-<td>W8(Model 3: model 2 improved)
+</table><br>(Close Table)<br>
+<H2><a name="Revision History">Revision History</A></H2>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Version#<th scope="col">Date<th scope="col">Description<th scope="col">Author
+<tr><td>0<td>2005-01-03<td>Used boiler plate to make template<td>RJB
+<tr><td>1<td>2005-03-02<td>Added chapter headings and outlines<td>RJB
+<tr><td>2<td>2005-03-08<td>Added Notes and figures<td>RJB
+<tr><td>3<td>2005-03-09<td>Added questions and some figures<td>RJB
+<tr><td>4<td>2006-03-06<td>Update to new formats etc<td><td>RJB
+<tr><td>5<td>2006-03-07<td>Improved the notes<td>RJB
+<tr><td>6<td>2007-12-07<td>Removing Activity and State Diagrams<td>RJB
+<tr><td>7<td>2007-03-02<td>Added note on IDs to Objects<td>RJB
+<tr><td>8<td>2007-03-04<td>Added note on showing interfaces in lifelines<td>RJB
+<tr><td>9<td>2011-03-25<td>Added notes on GoF Patterns<td>RJB
+<tr><td>10<td>2012-03-02<td>Added code for IDs to Objects<td>RJB
+</table><br>(Close Table)<br>
+<H2><a name="Project Iteration 2 use cases, domain, interactions, classes">Project Iteration 2 use cases, domain, interactions, classes</A></H2>
+[<A href="w7.html"> w7.html </A>]
+<H2><a name="Chapter 27: Requirements for Iteration 3">Chapter 27: Requirements for Iteration 3</A></H2>
+<H2><a name="Dynamics -- Chapter 28 and 29">Dynamics -- Chapter 28 and 29</A></H2>
+We won't be covering Activity diagrams and State Machines in this class.
+Activity diagrams were covered in
+[<A href="http://cse.csusb.edu/dick/cs372/r2.html"> ../cs372/r2.html </A>]
+and my old notes for this class are in
+[<A href="17dynamics.html"> 17dynamics.html </A>]
+and
+[<A href="17CoupleStateMachine.gif"> 17CoupleStateMachine.gif </A>]
+(Photo of chalkboard drawn in class 2005. Thank you Walter!).
+if you are interested.
+<p>
+<li>**** Be sure you know the following fact:
+<hr><ol class="Box">
+<li>An activity and a state is shown as a box with rounded corners.  They
+are not boxes(classes or objects).  They are not ovals,
+these are use cases.  Actions do things and have rounded corners.
+<p>
+<img src="DynamicSymbols.png" alt="Symbols to avoid confusing">
+<p>
+</ol><hr>
+<H2><a name="Review UML Icons">Review UML Icons</A></H2>
+<img src="UMLIcons.png" alt="[Nine classic UML Icons]">
+<p>
+Exercise: Write down what does each symbol above probably means...
+Answers: click the letter: <a href="#A">A</A> <a href="#B">B</A> <a href="#C">C</A> <a href="#D">D</A> <a href="#E">E</A> <a href="#F">F</A> <a href="#G">G</A> <a href="#H">H</A> <a href="#I">I</A>
+or select
+[<A href="17exans.html"> 17exans.html </A>]
+for all the answers + the diagram.
+<p>
+<H2><a name="Review GRASP Patterns">Review GRASP Patterns</A></H2>
+Can you list all nine GRASP patterns without following the next
+link:
+[<A href="16answer.html"> 16answer.html </A>]
+<p>
+Here are the GRASP patterns
+[<A href="http://en.wikipedia.org/wiki/GRASP_(Object_Oriented_Design)"> GRASP_(Object_Oriented_Design) </A>]
+on the Wikipedia.
+<p>
+<H2><a name="*** Interfaces">*** Interfaces</A></H2>
+The GoF patterns use a lot of interfaces.  Here are some notes on them.
+<p>
+An interface is a class that has not data but declares some operation.
+It does not give any
+implementation for the operations.  If
+an object fits an interface then you know how to call its functions but
+the implementer can do different things with them.   The client who uses
+the interface is restricted to just using the listed functions. It is said
+to
+<A name="depend on the interface" class="Key"> depend on the interface </A>
+or equivalently to
+<A name="require the interface." class="Key"> require the interface. </A>
+The classes that
+<A name="implement the interface" class="Key"> implement the interface </A>
+are also said to require it.
+<p>
+In UML there are two or three notations, and
+Larman covers them on pages 263 and 264.
+<p>
+The
+<A name="lollipop notation" class="Key"> lollipop notation </A>
+is a very simple way to show that a class implements an interface.
+Here is an interface (Animate) and three classes that implement it.
+<p>
+<img src="interface.gif" alt="[UML interface o---[class] ]">
+<p>
+This shows three classes that all
+implement the same set of operations. Other classes can then use the operation.
+<p>
+You can use the standard dependency arrow ( - - - - &gt; ) to
+connect a class that requires the interface to the interface.
+This relation is shown with a dotted line
+or with a cup notation (new and rare).
+<p>
+<img src="client.gif" alt="[ Registrar - - - &gt;o----- Student ]">
+<p>
+<H2><a name="The GoF book in CSUSB Pfau Library">The GoF book in CSUSB Pfau Library</A></H2>
+[<A href="http://libcat.lib.csusb.edu/search~S19/?searchtype=t&amp;searcharg=design+patterns&amp;searchscope=19&amp;SORT=D&amp;extended=0&amp;SUBMIT=Search&amp;searchlimits=&amp;searchorigarg=tSoftware+design+patterns"> ?searchtype=t&amp;searcharg=design+patterns&amp;searchscope=19&amp;SORT=D&amp;extended=0&amp;SUBMIT=Search&amp;searchlimits=&amp;searchorigarg=tSoftware+design+patterns </A>]
+<p>
+<H2><a name="Video Introducing the GoF Design Patterns">Video Introducing the GoF Design Patterns</A></H2>
+[<A href="http://www.youtube.com/watch?v=M9zUjF65sho"> watch?v=M9zUjF65sho </A>]
+<p>
+<H2><a name="GoF Key points">GoF Key points</A></H2><ol class=Section>
+<li><a href="#GRASP">GRASP</A> helps you understand <a href="#GoF">GoF</A> Patterns
+<li>The <a href="#GoF">GoF</A> patterns improve your grasp of <a href="#GRASP">GRASP</A>.
+<li>Good developers use the <a href="#GoF">GoF</A> names, so <span class="InlineFormula">you</span> need to know them.
+</ol>
+<H2><a name="GoF Patterns">GoF Patterns</A></H2><ol class=Section>
+The Gang of Four Patterns are all clever ways to use <span class="InlineFormula">polymorphism</span>
+to make it <span class="InlineFormula">easier to change code</span>.  They are often modeled using
+the UML (class diagrams and interaction diagrams) plus English.
+<H3><a name="Make sure you know the patterns in this chapter">Make sure you know the patterns in this chapter</A></H3>
+They will appear in quizzes, finals, and your future career.
+<p>
+<H3><a name="26 Applying GoF -- Adapter Factory Singleton Strategy Composite Observer">26 Applying GoF -- Adapter Factory Singleton Strategy Composite Observer</A></H3>
+<li><span class=Formula>Introduction</span>
+<p>
+<li><span class=Formula>** 26.1</span>
+<A name="Adapter" class="Key"> Adapter </A>
+(<a href="#GoF">GoF</A>)
+adapts an existing interface to be used by a different one.
+[<A href="patterns.html#Adapter"> patterns.html#Adapter </A>]
+[<A href="fig25_25_1.cpp"> fig25_25_1.cpp </A>]
+[<A href="test.fig25_25_1.cpp"> test.fig25_25_1.cpp </A>]
+<li><span class=Formula>** 26.2 GRASP supports and explains <a href="#GoF">GoF</A></span>
+See figure 26.3
+<li><span class=Formula>26.3 Analysis in Design!?</span>
+Development is &quot;Research and Development&quot;.... embrace change.
+But is it worth redrawing a doamin diagram?
+<p>
+<li><span class=Formula>** 26.4</span>
+<A name="Factory" class="Key"> Factory </A>
+(<a href="#GoF">GoF</A>)
+[<A href="patterns.html#Factory"> patterns.html#Factory </A>]
+<p>
+<li><span class=Formula>* The <a href="#Adapter">Adapter</A> pattern in 26.1 needs a way to create the adaptor objects.</span>
+The GRASP creator will not help because nobody in the domain owns an adaptor!
+They are Pure Fabrications.
+We get Higher Cohesion by having a specialized object that creates adaptors.
+This is called a factory.
+<li><span class=Formula>+++ Notice the</span>
+<A name="separation of concerns" class="Key"> separation of concerns </A>
+principle -- first formulated By David L. Parnas in the 1970's and adopted
+by all good programmers.
+<li><span class=Formula>+++ On page 441 the code uses two Java techniques that do not easily map into C++.</span>
+<pre> 			System.getProperty(&quot;....&quot;);</pre>
+The first of these accesses a collection of named properties -- for example the
+&quot;java.version&quot; property.  There exists a &quot;System.setProperty(string key, value)&quot;
+that can add new properties.  These properties are available to any statement in a Java
+program.  C++ does not provide anything like this.
+<pre> 			Class.forName(...).newInstance();</pre>
+THe above uses the Java <span class="InlineFormula">reflection</span> technology which makes the names of clases, attributes,
+and functions available to a running program.  Again C++ has nothing like this.
+<li><span class=Formula>++ However you can still have a pointer that points at different classes depending</span>
+on data computed at run time.  Here
+[<A href="testDiceGame3.cpp"> testDiceGame3.cpp </A>]
+and
+[<A href="DiceGame3.cpp"> DiceGame3.cpp </A>]
+show you how the number of arguments in the command line controls the number
+of loaded dice in the game... It use if-elses...
+<li><span class=Formula>+ A common C/C++ technique is to place run time parameters in a simple text file with</span>
+one line per property.  Each line has the name of the property, some white space,
+and a value...
+<li><span class=Formula>+ Modern designers tend to use XML to encode run time parameters as data.</span>
+<p>
+<li><span class=Formula>** 26.5</span>
+<A name="Singleton" class="Key"> Singleton </A>
+(<a href="#GoF">GoF</A>)
+<li>* For example, we need to have a single Factory object....  A global variable
+tends to incease coupling and is even illegal in some languages.
+The GoF Singleton is a pretty good solution.
+<li>* For example we want a single Controller for a small application and
+choose to model it as the organization the software serves.
+&quot;One is one, and all alone, and ever more shall be.&quot;
+<li>* The GoF Singleton is a popular solution.
+<img src="Singleton.png" alt="[Implementing and using a Singleton class]">
+<p>
+<p>
+[<A href="patterns.html#Singleton"> patterns.html#Singleton </A>]
+Code:
+[<A href="singleton.cpp"> singleton.cpp </A>]
+[<A href="test.singleton.cpp"> test.singleton.cpp </A>]
+(C++),
+Diagrams:
+[<A href="Singleton.pdf"> Singleton.pdf </A>]
+(PDF with two small errors to find).
+Exercise: translate into another OO language like Java.
+<p>
+<li><span class=Formula>26.6 Conclusion: handling many external services thru one interface</span>
+<li>++++ Exercise.  In which layer would you place this ServiceFactory?  Why?
+<li><span class=Formula>** 26.7</span>
+<A name="Strategy" class="Key"> Strategy </A>
+(<a href="#GoF">GoF</A>)
+[<A href="patterns.html#Strategy"> patterns.html#Strategy </A>]
+Example: many ways of sorting...  Associate the algorithms to little objects.
+Use different objects as needed.
+<li>++ Another example -- describing getting up.  Some people drink tea and other drink coffee.
+We create an abstract &quot;Beverage&quot; class with specializations: &quot;Tea&quot; and &quot;Coffee&quot;.  These
+explain the different ways to &quot;make()&quot; a Beverage.  We have a strategy pointer that
+determines the Beverage in your breakfast...
+<li>++ Draw the UML for the Beverage model.
+<li>++ extend it to handle Orange Juice.
+<li><span class=Formula>** 26.8</span>
+<A name="Composite" class="Key"> Composite </A>
+(<a href="#GoF">GoF</A>) etc.
+[<A href="patterns.html#Composite"> patterns.html#Composite </A>]
+<br><ol class="List">
+<li>(The example on page 452 is just the kind of thing that happens when my
+wife (a senior 10% off) buys something with a Club Card (20% off!) on Tuesday
+nights (10% off) in a certain Department store in San Bernardino...
+<li>Figure 26.14 page 454: count the relations connecting
+CompositePricingStrategy and ISalePricingStrategy.
+<li>Figure 26.15 page 455 refers about a special way to indicate an object
+of an unknown class but that implements an interface.  I can not find this
+notation anywhere in the latest (2007) standards.   The standard lets
+you show a lifeline with the name of an interface or a class with
+no symbolic difference.  Ambler shows a message that hits a little
+interface lollipop -- but I think KISS.
+<li>Figure 26.16 page 456: missing italics!
+<li>++ Composite is a good way to handle complex and changing business rules.
+<li>++ Composite is a way of encoding formulae and expressions as a set of linked objects:
+[<A href="http://www.csci.csusb.edu/dick/cs320/05a.html#Question 5"> Question 5 in 05a </A>]
+<li>Figures 26.18 and 26.19, pages 458 and 459:  a <span class="InlineFormula">ref</span> refers to a
+<span class="InlineFormula">sd</span> -- sequence diagram.`
+</ol><br>
+<li><span class=Formula>* 26.9</span>
+<A name="Facade" class="Key"> Facade </A>
+(<a href="#GoF">GoF</A>)
+It often pays to hide complexity behind an intermediate object --  A Pure Fabrication
+that uses Indirection to protect clients from variations inside a package.
+<li>+++ A facade is a kind of curtain used for dramatic effect.
+&quot;The Wizard of Oz&quot; (
+[<A href="http://www.youtube.com/watch?v=YWyCCJ6B2WE"> watch?v=YWyCCJ6B2WE </A>]
+) Pay no attention to the system behind the curtain.
+[<A href="patterns.html#Facade"> patterns.html#Facade </A>]
+<li><span class=Formula>* 26.10</span>
+<A name="Observer" class="Key"> Observer </A>
+(<a href="#GoF">GoF</A>)
+means that an object keeps a list of clients that wish to observe it.  When a change
+occurs a message is sent to all theobservers.  Each observer can then request details
+from the observed object.  The observed object adds and deletes observers
+as requested.
+[<A href="patterns.html#Observer"> patterns.html#Observer </A>]
+[<A href="http://www.youtube.com/watch?v=Xxvpwmc-7io"> watch?v=Xxvpwmc-7io </A>]
+<li>++ Protected Variation -- Observer is not greatly effect if even 100 different
+observers subscribe.
+<li><span class=Formula>The observer pattern is often used in connecting to user interfaces. For example</span>
+a controller object can register its interest in a particular button being clicked
+or the mouse rolling over a part of a page...   To make sure that the
+<A name="observer/listener/subscriber" class="Key"> observer/listener/subscriber </A>
+is set up to receive the notifications, it
+must implement the right interface.  See
+[<A href="http://cse.csusb.edu/dick/Luv4.java"> ../Luv4.java </A>]
+for a simple example in Java.
+<li><span class=Formula>+++ Sometimes known as the</span>
+<A name="Hollywood Principle" class="Key"> Hollywood Principle </A>
+of &quot;Don't call us, we will call you.&quot;
+<li><span class=Formula>**** page 460</span>
+<p>
+<A name="IDs to Objects" class="Key"> IDs to Objects </A>
+I didn't pay much attention to this common practice until March 2008
+when I linked it to designing logins (handout).   I think
+(guess) that this should become a GRASP style pattern
+[<A href="patterns.html#IDS_to_Objects"> patterns.html#IDS_to_Objects </A>]
+<li>++
+<A name="Finding objects given an ID" class="Key"> Finding objects given an ID </A>
+<br><ol class="List">
+<li>Question: Who should find objects given their ID?
+<li>Expert: who knows about the objects?
+<li>Answer: The creator of the objects may know.
+<li>Consequence 1:  The creator will need to maintain a list of
+the objects it has created.
+<li>Consequenc 2: The creator will need to be involved in destroying an object as well.
+</ol><br>
+You could claim that this is putting <span class="InlineFormula">Information Expert</span> to work.
+<li><span class=Formula>++ Here</span>
+[<A href="ID2Object.cpp"> ID2Object.cpp </A>]
+is some samples of this kind of code... only the names
+have been changed to protect the innocent.
+<li>+
+<A name="Exercise -- fix ID2Object." class="Key"> Exercise -- fix ID2Object. </A>
+The above code is good enough for a classroom example but it is not robust enough
+to be used in a real app. For example -- if a user does &quot;input1(id)&quot; with an
+id-string that is not correct the code misbehaves.
+and there is a similar problem with <span class="InlineFormula">simpleInput</span>.
+Here is another bug --
+if the user does <span class="InlineFormula">input2</span> before <span class="InlineFormula">input1</span>...
+<li><span class=Formula>* 26.11 Conclusion:  <a href="#GRASP">GRASP</A> supports <a href="#GoF">GoF</A></span>
+<li><span class=Formula>26.12 Resources</span>
+[<A href="patterns.html"> patterns.html </A>]
+<p>
+<li>For a video introduction to a dozen design patterns see
+[<A href="http://www.youtube.com/watch?v=oSSGDYJZ-m8"> watch?v=oSSGDYJZ-m8 </A>]
+on YouTube.
+</ol>
+<H2><a name="Exercises on GoF Patterns">Exercises on GoF Patterns</A></H2>
+[<A href="17x.html"> 17x.html </A>]
+<p>
+<H2><a name="Project Work: Iteration 3">Project Work: Iteration 3</A></H2>
+Correct errors, add GRASP, improve,...
+[<A href="w8.html"> w8.html </A>]
+<p>
+<H2><a name="Questions and Answers">Questions and Answers</A></H2>
+[<A href="17q.html"> 17q.html </A>]
+<H2><a name="How to learn all the GoF Patterns -- Painful Quiz">How to learn all the GoF Patterns -- Painful Quiz</A></H2>
+[<A href="http://www.vincehuston.org/dp/patterns_quiz.html"> patterns_quiz.html </A>]
+<H2><a name="Chapter 30 Relating Use Cases -- YAGNI">Chapter 30 Relating Use Cases -- YAGNI</A></H2>
+<li>--- Don't spend time studying the relations between use cases.  You Ain't Gonna Need them
+in the tests/quizzes/final for this class.
+<li>Introduction: Don't waste time thinking about these! K.I.S.S.!
+If it is obvious do it. If it is not... don't.
+<li>30.1 Include: Shows shared logic
+<li>30.2 Terminology: concrete Abstract, base, addition
+<li>30.3 extend: Handy for extensions
+<li>30.4 generalize
+<li>+ You can also show that one actor <span class="InlineFormula">is a special kind</span> of another
+actor ... that it takes part in all the use cases that the general one
+but adds some others.   This is a feature that can be helpful in a
+complex situation with many types of users.
+<li>30.5 Diagrams of relations
+<p>
+</ol><p>. . . . . . . . . ( end of section <a href="17.html#17 Gang of Four Patterns">17 Gang of Four Patterns</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="Next -- Next iteration -- back to the domain model.">Next -- Next iteration -- back to the domain model.</A></H1>
+[<A href="18.html"> 18.html </A>]
+<H1><a name="Quiz 8 on interfaces and patterns">Quiz 8 on interfaces and patterns</A></H1>
+Make sure you know all the UML notations for interfaces
+and the names of the GRASP and GoF patterns ready for this quiz.
+<H1><a name="Review UML Icons -- Answers">Review UML Icons -- Answers</A></H1>
+<br>(<a name="A">A</A>): Class
+<br>(<a name="B">B</A>): Class
+<br>(<a name="C">C</A>): Class
+<br>(<a name="D">D</A>): Actor
+<br>(<a name="E">E</A>): Object
+<br>(<a name="F">F</A>): Action/Activity/State
+<br>(<a name="G">G</A>): Use Case
+<br>(<a name="H">H</A>): Package
+<br>(<a name="I">I</A>): Comment
+Return to diagram:
+[<A href="17.html#Review UML Icons"> Review UML Icons </A>]
+<H1><a name="Review Questions">Review Questions</A></H1>
+[<A href="17r.html"> 17r.html </A>]
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci and Engineering School, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10 and
+[<A href="02DiceGameSSD.gif"> 02DiceGameSSD.gif </A>]
+(example).
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

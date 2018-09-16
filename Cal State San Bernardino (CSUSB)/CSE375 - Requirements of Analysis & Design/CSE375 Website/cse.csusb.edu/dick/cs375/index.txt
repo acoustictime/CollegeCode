@@ -1,0 +1,180 @@
+.Open Requirements Analysis and Design
+. 2013-03-08 Fri Mar  8 13:11 Grades Posted -- and news of job market
+.See http://m.networkworld.com/news/2013/030513-tech-degrees-267324.html
+. 2013-02-28 Thu Feb 28 17:26 Grading done and posting
+.See ./grading/
+
+Next Tuesday
+.See ./w7.html
+and GoF patterns
+.See ./17.html
+. 2013-02-22 Fri Feb 22 11:57 Grading done and posted for the week
+.See ./grading/
+
+.See ./w6.html#Deliverables
+.See ./15.html
+
+.See ./16.html
+. 2013-02-08 Fri Feb  8 13:52 Grades posted and next week
+.See ./grading/
+
+
+. 2013-02-15 Fri Feb 15 10:08 Grades posted and next week
+.See ./grading/
+
+.See ./w5.html#Deliverables
+.See ./13.html
+
+.See ./14.html
+. 2013-02-08 Fri Feb  8 13:52 Grades posted and next week
+.See ./grading/
+
+Tuesday: present your SSD and Packages.
+Design Class Diagrams (DCDs).
+Quiz on Interactions and DCDs
+
+Thursday: GRASP -- Designing objects to meet requirements.
+Project: Design Iteration 1.
+
+. 2013-02-04 Mon Feb  4 11:20 Grades posted -- including bonusses
+.See ./grading/
+
+Next class
+.See ./09.html
+will introduce a way to organize your software, and your projects
+so that different aspects (example the user interface and
+the data base management system) are kept separate and as independent
+as possible.  This makes it easier to change software.
+
+You should present your project's first domain/business model.  Give
+me a copy to comment on and grade.
+
+There will be a quiz to test to see if you can draw a plausible and corrct
+SSD for a given scenario.
+
+. 2013-01-25 Fri Jan 25 11:03 Grades posted early and Why design before you code
+.See ./grading/
+
+Also see this article in Wired (`Wired`!) 
+.See http://www.wired.com/opinion/2013/01/code-bugs-programming-why-we-need-specs/
+about why it pays to record our thinking before we write the code...  Experiences
+like this guy's (he is a good programmer by the way) make me believe in the
+recording of our thinking as we work out what is required and how we meet the
+requirements...
+. 2013-01-23 Wed Jan 23 14:27 Why study agile methods
+Check out
+.See http://www.eweek.com/developer/agile-developers-needed-demand-outpaces-supply-study/
+(regular site) or
+.See http://mobile.eweek.com/developer/agile-developers-needed-demand-outpaces-supply-study/
+(mobile site).
+. 2013-01-18 Fri Jan 18 11:48 Grades posted
+Just published in
+.See ./grading/
+the latest grades...  Questions and corrections to me by EMail.
+
+Have a great long weekend.
+
+See you Tuesday with the first iteration of your project
+.See ./w1.html
+, and some input on
+requirements
+.See ./05.html
+and a quiz...
+. 2013-01-14 Mon Jan 14 10:32 First Grades Posted
+If you've given me the orange sheet back you can see your grades
+at
+.See ./grading/
+, please check for errors.
+. 2012-12-10 Mon Dec 10 14:39 Draft syllabusses and schedules ready online
+Please check
+.See ./syllabus.html
+.See ../syllabus.html
+.See ./schedule.html
+for errors.  Contact me if you se any before I
+get 30 copies made...
+
+. 2012-11-29 Thu Nov 29 15:24 Starting to prep for Winter 2013
+The book, schedule, and syllabus have been updated.... but if you or I 
+spot an error they can change.
+. 2012-12-10 Mon Dec 10 14:19 Removing old stuff
+This is called redaction... and I do it before the start of each class.
+
+I record all future changes in the online materials and sylabusses and schedules
+in this blog.
+
+. 2011-03-10 Thu Mar 10 10:11 Uploaded template for final
+.See ./mock.html
+
+Also see 2008's
+.See ./mock.pdf
+for questions might have been asked then in the different categories.
+
+. 2011-03-03 Thu Mar  3 10:15 Iterative Engineering Illustrated
+You'll need flash for this
+.See http://i.usatoday.net/tech/graphics/iss_timeline/flash.htm
+and it shows a complex piece of hardware growing as it is in use.
+
+Two questions:  How come all the pieces fit together?
+Did the engineers learn and improve their designs as each module was deployed?
+
+. 2010-03-30 Tue Mar 30 10:31 Winter 2010 Added last bonus points and posted to CMS
+.Table A/A-     B+/B/B-	C+/C/C-	D+/D/D-	F
+.Row 8	16	3	0	1
+.Close.Table
+. 2010-03-15 Mon Mar 15 12:20 Information on the Final
+I've posted a mock final with blank questions
+.See ./mock2010.htm
+, notice that you will nedd to bring at least 10 blank sheets of paper
+to write the answers on.
+
+. 2009-02-28 Sat Feb 28 16:02 Highly relevant Blog entry on Technical debt
+Each time you take the quick and dirty way out of a technical problem you accumulate
+.Key technical debt
+that ultimately will need to be paid for.
+
+.See http://www.codinghorror.com/blog/archives/001230.html
+
+. 2009-02-05 Thu Feb  5 07:02 Resource discovered -- YouTube
+I've just uncovered a rich vain of videos.... by looking for "unified Process"
+on YouTube.
+
+. 2009-01-28 Wed Jan 28 14:01 Resource when starting UML
+This Google Group
+.See http://groups.google.com/group/UMLforum?hl=en
+is starting to liven up with interesting questions and useful
+answers.  Try it out.
+in my office earlier....
+. 2008-12-23 Tue Dec 23 12:12 Updating from 2008 to 2009
+I'm planning a big change removing deployment and advanced packaging from the
+previous years schedule.  Instead we will review the $OO designs and $DCDs
+. 2008-03-20 Thu Mar 20 19:34 Grades for Finals etc
+For your information here is the distribution
+.Table Distribution	A/A-	B+/B/B-	C+/C/C-	D+/D/D-	F
+.Row Frequency	6	13	5	1	0
+.Close.Table
+
+
+. 2008-02-15 Fri Feb 15 14:02 Philosophy of Iterative Program Development
+Here is a description of the philosophy behind iterative software Development as
+expressed by Piet Hein, and quoted by Dr. Yair Censor on Wednsday:
+.Set
+	The road to wisdom?
+	Well it's plain & simple to express:
+	Err and err, and err again
+	but less, and less, and less.
+.Close.Set
+Also quoted by Donald Knuth in his notes on "Mathematical Writing".
+
+Thanx to Dan Piedlow for reminding me of this...
+
+. 2007-12-10 Mon Dec 10 10:12 Upgrading site to Winter 2008
+The big change for the coming quarter is removing dynamic modeling (activity diagrams and State Charts) from the course -- and spending more time on
+the $GRASP and $GoF patterns.
+
+Here are the grade distributions from precious classes:
+.Table Year	A/A-	B+/B/B-	C+/C/C-	D+/D/D-	F
+.Row 2007	3	14	6	0	2
+.Row 2006	3	2	1	1	0
+.Close.Table
+
+.Close Requirements Analysis and Design

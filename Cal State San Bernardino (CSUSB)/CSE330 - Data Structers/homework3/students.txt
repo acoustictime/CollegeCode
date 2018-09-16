@@ -1,0 +1,19 @@
+Johnson,Mark CSE330
+Smith,Amy CSE460
+Jones,Randy CSE350
+Small,James CSE350
+Johnson,Mark CSE350
+Oliver,Ryan CSE201
+Gomez,Jesse CSE202
+Inder,Curtis CSE460
+Smith,Amy CSE350
+Doherty,Ashley CSE350
+Nelson,Scott CSE201
+Vaughn,Carl CSE202
+Small,James CSE460
+Johnson,Mark CSE201
+Oliver,Ryan CSE202
+Gomez,Jesse CSE201
+Inder,Curtis CSE201
+Vaughn,Carl CSE201
+

@@ -1,0 +1,11 @@
+. Review Questions 16 -- GRASP II
+ List the names of the first 5 GRASP.
+ Explain the idea of polymorphism (one paragraph with an example).
+ Describe the Polymorphism Pattern.
+ What is an interface in object-oriented programming?
+ Describe the Pure Fabrication Pattern.
+ Describe the Indirection Pattern.
+ Describe the Protected Variation or PV Pattern.
+ What is the "Law of Demeter"?
+ What is "Information Hiding"?
+ List the names of all the GRASP Patterns.  

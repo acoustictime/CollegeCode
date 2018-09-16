@@ -1,0 +1,35 @@
+. Review Questions 19 -- UML Interaction Diagrams and DCDs
+ Name the two types of interaction diagrams and give very simple example of the
+same interaction using one type of diagram and the other.  Add a DCD that supports
+the interaction.
+ How do you show that one class is responsible for creating an object?  Show the creation UML
+notation for both
+types of interaction diagram.  How might you show this in a DCD?
+ How do you show that a class is responsible for executing an operation rather than an object?
+ How do you show an operation that will be `static` in C++ or Java?
+ How can you show an array and an element in an array in the UML?
+ What is a `found message`?   What does it mean?
+ How do you show a returned object in a sequence diagram?  
+ Explain these structures: alt, loop, and opt.
+ How do you show an action (x=x/2.0; for instance) in a sequence diagram?
+ Explain `ref` and `sd` and the relation between them.
+ In a communication diagram -- how many messages per link?  How are the sequenced?
+ I have messages numbered 1, 2, 3, 2.1, 1.1, 3.1, 1.2, 3.2.  In what sequence are they
+actually sent?
+ What does this mean in a communication diagram: [gender = male]? And what does
+*[i=1..20]?
+ What is the purpose and form of a DCD? How does it relate to a Domain Model?
+ Invent an example and use it to demonstrate three different ways of showing an attribute in a UML
+class diagram.
+ What information can you attach to an operation in a UML DCD?
+ How do you document the code for an operation in a UML DCD?
+  Explain "keyword", "constraint", and "stereotype" in the UML.
+  Draw a diagram that illustrates (using your own invented example) "generalization".
+  What is an "abstract" class?
+  How do you show that class "A" depends on class "B".
+  How do you show an "interface" in the UML? 
+  WHat does an association class do?
+  What is a singleton class?
+  How do you show templatized classes in the UML?
+ Give an example in the UML of a class in the C++ STL.
+

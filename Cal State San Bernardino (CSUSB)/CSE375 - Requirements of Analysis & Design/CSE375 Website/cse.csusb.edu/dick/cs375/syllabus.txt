@@ -1,0 +1,177 @@
+.Open CSE375 Requirements Analysis and Design Syllabus
+This is a 
+.Key required course in the generic BA in Computer Systems
+but is designed to be useful for anyone interested in producing 
+good object-oriented software.  The 
+.Key catalog entry
+reads
+.Set
+Requirements analysis, including organizational objectives, functional 
+characteristics, technology, use cases and conceptual models.  The use of 
+aspects, patterns, objects, and structure in architectural design 
+specifications. Includes analysis and design of a software system for an 
+organization, and fieldwork.
+.Close.Set
+
+The old CSE372 prerequisite is waived.  $CS372 is now the upper division elective
+$CSE557.  It taught how computers
+can used in an organization but did not discuss how computers are
+programmed.  It determined what software must be programmed to
+improve a system. CSE375 shows how to refine these 
+.Key requirements
+and design a robust and correct object-oriented solution.
+
+This is at least the ninth time the course has been taught.   
+
+. Instructor Information and Methods
+See my generic syllabus
+.See http://www/dick/syllabus.html
+; this defines who I am, how I teach, and
+how I grade.
+. Readings
+The web site is an important artifact that you should scan
+at least 3 times a week. It contains notes on each assigned
+reading and has answers to many questions students have asked in the past.
+
+We will be using Craig Larman's
+.See http://www.craiglarman.com/
+excellent book:
+Text::=following,
+.Set
+ Applying UML and Patterns: An Introduction to Object-Oriented Analysis and
+Design and the Unified Process, 3/E
+ Craig Larman
+ ISBN: 0-13-148906-2
+ Publisher: Prentice Hall PTR
+ Copyright: 2003
+.Close.Set
+There are significant improvements between the 2nd and 3rd editions
+so you should not buy older editions. The book store has copies.  You can
+buy or rent it there.
+
+We will not have time to cover chapters 21, 22, 28, 29, 30, and 33
+through to 40.
+There is a lot of wisdom in them 
+but there won't be any assessment
+made of the content. So you can do the minimum on the following topics:
+.Set
+ -- Tools and Management
+ -- Persistence -> data base classes
+ -- UML Components 
+ -- UML Activity Diagrams ($CS557)
+ -- UML State Machines -> Comp Sci Theory
+ -- Documenting architectural decisions
+ -- User Interfaces -- frameworks, design, etc.
+ -- Physical Architecture -- Artifacts and deployment ($CS557)
+ -- Deployment Diagrams ($CS557)
+ -- Some advanced Patterns ($TBA)
+.Close.Set
+There will be no tests of your knowledge of the history in the book -- but
+knowing the history will help you recall the best practices.
+
+I will be stressing 
+.Set
+ *** Use cases and scenarios
+ ** UML Relations between use cases.
+ *** Quality/Non-functional requirements
+ *** Class diagrams: domain and design models
+ **** Interaction diagrams
+ *** $GRASP
+ *** Logical Architecture -- especially layered architecture and Model-View-Controller -- (MVC)
+ ** $GoF -- Gang of Four Patterns
+.Close.Set
+(In this class I use the number of asterisks to indicate how important a topic
+is in the assessment.  )
+
+. Course Goal and Student Objectives
+The mission of the course is to give you skills and attitudes you can
+use to produce modern object oriented software using a light and agile
+process that gives programs to your stakeholders and clients that they
+value highly: now and in the future.  
+A detailed list of objectives can be found
+at
+.See http://www/dick/cs375/objectives.html
+on the course web site.
+
+. Work -- 300 points
+(N): Reading. ( 2 points >< 19)
+.List
+ Start with the web site.  It lists the assigned reading 
+for each class and
+tells you how important the different topics are.
+ Read the assigned pieces of text and take notes.
+ Follow the links to the review questions.  Answer as many as you have time for.
+ Write down your name, one(1) question and your answer on a piece of paper
+and hand it in at the start of class for grading.
+.Close.List
+
+(P): Turn up on time and be ready to work and participate in
+the classroom activities. In the first class I will give  a lecture.
+Normally I minimize the lecture in favor of activities.
+You will be working on projects,
+exercises, etc. (2 points).
+
+(W): In 9 classes a previously assigned piece of work
+.See ./projects.html
+will be presented
+and collected.  This will be a series of iterations
+in a software project.  Each starts at the end of the class before the
+due date.
+Each piece of work is worth 10 points maximum.  Bring
+whatever you have got at the time to class.
+Late work scores nothing. Bad or incomplete work can score 
+something.
+Make a presentation (4 points) in class. 
+I may even ask you to demonstrate how a set of objects carry out
+some task. Then submit
+documentation(6 points) to me.
+These artifacts can be hard copy or on the Web.
+You can do the deliverables by hand
+or using CASE tools as you wish.... but it should be readable
+and spelled correctly.  You can even submit photos of diagrams sketched on a
+board.
+
+(Q):  In 9 classes there will be a Quiz worth 15 points (maximum) on the 
+topics covered in the course up to that time -- but mainly on the most 
+recent topics.
+
+(Bonus): You can earn 5 points each time you attend a CSE seminar
+.See ../seminar/
+and within 24 hours email me a short message that reports on the seminar.
+
+. Final -- 200 points
+There will be a comprehensive final that will cover all the assigned readings,
+all the work done in class, all the review questions, and your team project. 
+Here
+.See ./mock.html
+is the format and topics in the previous final.
+
+. Grading
+I will be following my generic grading scheme
+.See ../syllabus.html#Grading
+with these rules: 
+.Set
+  No more than 300 points can be earned for course work
+(prior to the final) even counting bonus points.
+  Bonus points can not effect the score on the final.
+.Close.Set
+. Calendar/Schedule
+An up to date schedule is maintained at
+.See http://www/dick/cs375/schedule.html
+on the web site.  This tells you what assignments
+are due when.  This includes all the assigned reading/study
+listed by the date due.
+. Support
+Start at
+.See http://www/dick/cs375/
+the course web site. It has
+up-to-date and reference information. Try the [Search______ ]
+on all these pages.
+The pages also have a [Contact] button at the top to send me Email.
+My phone number, office, and calendar are here
+.See http://www/dick/
+and in my generic syllabus.  Come and see me!
+.Close CSE375 Requirements Analysis and Design Syllabus
+CS375::=http://cse.csusb.edu/dick/cs375/.
+CS372::=Replaced by $CS557.
+CS557::=http://cse.csusb.edu/dick/cs557/.

@@ -1,0 +1,119 @@
+. CSci 375/09 Packages
+.Table Date  #	Topic (Participation 2pt)	Study pages (2 pts)	Quiz(15 pts)	Project Work(10 pts)
+.Row Previous  8	SSDs	173-196	-	W3(Domain Model 1)
+.Row Today  9	Packages	197-219	Q4(173-219)	-
+.Row Next  10	Interactions	221-247	-	W4(transition to design)
+.Close.Table
+. Revision History
+.Table Version#  Date	Description	Author
+.Row 0  2005-01-03	Used boiler plate to make template	RJB
+.Row 1  2005-01-31	Input section headings	RJB
+.Row 2  2006-02-02	Update to 2006	RJB
+.Row 3  2006-02-08	Added link to questions	RJB
+.Row 4  2006-02-13	Added link to Exercise answer	RJB
+.Row 5  2007-02-05	Added link to simple packages diagram	RJB
+.Row 6  2011-01-31	Added links to PPTs and PDFs	RJB
+.Row 7  2011-02-05	Added Dice Game exercise	RJB
+.Close.Table
+. Project -- First Domain Model Due
+.Open 13 Packages: How to organize a complex project
+  This is just a rapid introduction to 
+.Key Logical Architecture
+which defines how a complex project is divided into understandable
+groupings.
+
+  *** A good set of packages is stable.
+
+  *** There are standard ways to do this.  For example in a simple
+project we keep the User Interface, Domain, and Technical Services separate:
+.See ./09Packages.png
+and so I expect you to know this diagram (at least) as an example Package 
+Diagram.
+
+  A package should contain a collection of related artifacts.
+Artifacts in different packages should be less related.
+  Arrows show dependencies.
+.See http://www.csci.csusb.edu/dick/cs202/uml1.html#Dependency
+  If A - - - - > B then a change in the design of B may force
+you to change A as well.
+  No connection between packages mean: You can change one without
+the other breaking.
+
+  * When there are dozens of classes you have to group them
+to stay sane!
+  * The idea is to get related classes into a package and separated from
+the independent ones.
+  If you are wise and your tools support it
+each package maps into a folder/directory in your source code directory.
+
+  Notes and lectures
+.Key slide shows
+--
+.See http://www.rose-hulman.edu/class/csse/csse374-201020-02/SlidePDFs/session09.pdf
+(PDF on packages and OOAD),
+.See http://iris.nyit.edu/~kkhoo/Summer1_2008/715-OOAD/Larman_ppt/LarmanChap13.ppt
+(NJIT's slides for Larman's chapter),
+.See http://www.cs.toronto.edu/~sme/CSC302/notes/04-package-diagrams.pdf
+(academic approach),
+.See http://c2.com/cgi/wiki?FourLayerArchitecture
+(View+Application+Domain+Infrastructure),
+etc.
+
+  Fig 13.1 Artifact influences
+  * 13.1 Example packaging: UI + Domain + Technical Services
+  * Another useful one: UI + Application + Domain + Technical Services
+(including Persistance and Networking)
+
+.Image 09typical.gif [Described above]
+
+  * 13.2 Definitions
+  13.3 Case studies focus on Domain/Core application layer
+  * 13.4 Definition of
+.Key Software Architecture
+
+  ** 13.5 UML - Package diagrams: folders and dependencies.
+  +++ learn the notation.
+.Image packages.gif Sample packages and a dependency
+
+  ***   13.6 Guideline: Use the classic layers
+  ***   Domain layer reflects the domain model.
+  ***   13.7 Separate Model (data + logic + etc.) from View(what the user sees...)
+from Control (what the user can do...).
+.See ./patterns.html#MVC
+  13.8 SSD -> System Operations->Layers
+  13.9 Example: Nextgen
+  13.10 Example: Monopoly
+.Close Packages: How to organize a complex project
+.Open 14 Object Design
+  * Three ways of designing objects: code, draw+code, draw(magic code)
+  ++ Cynthia Farquhar's research uncovered a 4th strategy: code and then
+document.
+  * 14.1 Agile modeling & Lightweight UML
+  - 14.2 UML CASE
+  * 14.3 How much time drawing?  NOT MUCH.
+  *** 14.4 Static vs dynamic models.
+  * 14.5 Object design skill vs UML Notation Skill
+  14.6 Another technique
+  CRC ::=
+.Key Class Responsibility Collaboration
+Cards.
+I don't really believe in these!
+I don't require you to study these.  You can experiment with them
+if you like.  No points will be gained or lost on projects for
+just using or not using $CRC. I'll be interested in gathering your
+experiences.
+.Close Object Design
+. Exercises
+.See ./09x.html
+. Next Assigned Work: SSD+Packages
+.See ./w4.html
+Due next week.
+. Questions and Answers on Logical Architecture
+.See ./09q.html
+. Review Questions
+.See ./09r.html
+
+
+. Quiz on SSDs
+Goal:  prove that you can draw a good System Sequence Diagram for a given
+scenario.

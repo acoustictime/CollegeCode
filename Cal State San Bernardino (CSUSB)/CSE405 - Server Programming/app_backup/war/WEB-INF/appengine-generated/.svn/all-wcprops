@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/405/james/!svn/ver/17/app/war/WEB-INF/appengine-generated
+END
+datastore-indexes-auto.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/405/james/!svn/ver/21/app/war/WEB-INF/appengine-generated/datastore-indexes-auto.xml
+END
+local_db.bin
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/405/james/!svn/ver/19/app/war/WEB-INF/appengine-generated/local_db.bin
+END

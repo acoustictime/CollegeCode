@@ -1,0 +1,7 @@
+verilog work "../Lab5_FPGA/half_adder.v"
+verilog work "../Lab5_FPGA/full_adder.v"
+verilog work "../Lab5_FPGA/hex_to_sseg.v"
+verilog work "../Lab5_FPGA/FourBitAddrSub.v"
+verilog work "../Lab5_FPGA/disp_mux.v"
+verilog work "../Lab5_FPGA/FPGA_hex_sseg.v"
+verilog work "C:/Xilinx/13.2/ISE_DS/ISE//verilog/src/glbl.v"

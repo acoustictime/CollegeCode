@@ -1,0 +1,8 @@
+.Open Exercises 03
+ What are the goals of the inception phase?
+ Define requirements.
+ What often happens when we use up a lot of time defining all the requirements for a large system before implementing any of them?
+ Describe half-a-dozen types of requirements,
+ What 5 artifacts in the UP may be used to express requirements? Give name and description of each.
+ How might you store requirements in your project this quarter -- give two possible technologies.
+.Close 

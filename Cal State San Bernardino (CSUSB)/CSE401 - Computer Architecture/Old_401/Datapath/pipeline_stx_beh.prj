@@ -1,0 +1,8 @@
+verilog isim_temp "pc.v"
+verilog isim_temp "mux.v"
+verilog isim_temp "mem.v"
+verilog isim_temp "incr.v"
+verilog isim_temp "buff.v"
+verilog isim_temp "i_fetch.v"
+verilog isim_temp "pipeline.v"
+verilog isim_temp "C:/Xilinx/13.2/ISE_DS/ISE//verilog/src/glbl.v"

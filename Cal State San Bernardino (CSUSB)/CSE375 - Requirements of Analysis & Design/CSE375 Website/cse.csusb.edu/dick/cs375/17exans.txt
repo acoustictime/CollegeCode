@@ -1,0 +1,15 @@
+. Review UML Icons -- Answers
+.Image UMLIcons.png [Nine classic UML Icons]
+
+Exercise: What does each Icon above probably mean....
+
+Answers:
+(A): Class
+(B): Class
+(C): Class
+(D): Actor
+(E): Object
+(F): Action/Activity/State
+(G): Use Case
+(H): Package
+(I): Comment

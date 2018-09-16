@@ -1,0 +1,134 @@
+. CSci 375/07 Domain Model II
+.Table Date #	Topic (Participation 2pt)	Study pages (2 pts)	Quiz(15 pts)	Project Work(10 pts)
+.Row Previous 6	Domain Model	121-157	-	W2(Use Case Model 1)
+.Row Today 7	Domain Model II	157-171	Q3(121-171)	-
+.Row Next 8	SSDs	173-196	-	W3(Domain Model 1)
+.Close.Table
+. Revision History
+.Table Version# Date	Description	Author
+.Row 0 2005-01-03	Used boiler plate to make template	RJB
+.Row 1 2005-01-25	Entered section headings from book	RJB
+.Row 2 2005-01-31	Moved domain model ex to this class	RJB
+.Row 3 2005-02-01	Added colored UML image	RJB
+.Row 5 2005-02-02	Added questions to be answered	RJB
+.Row 6 2006-12-06	Removed Questions and adjusted date
+.Row 7 2007-01-26	Add new exercise
+.Row 8 2000-01-29	Expanded note on derived attributes
+.Row 9 2009-01-30	Added links to some some domain patterns
+.Row 10 2011-01-26	Added a powerpoint PPT	RJB
+.Close.Table
+. Project work 2 due
+. Introduction PowerPoint
+.See http://iris.nyit.edu/~kkhoo/Summer1_2008/715-OOAD/Larman_ppt/LarmanChap9.ppt
+(Dr. Benjamin Kho0
+.See http://iris.nyit.edu/~kkhoo/
+of NYIT)
+. 9.16 Attributes in Domain Models
+ * When to do attributes
+ ** UML Notation: 
+.As_is  		visibility name: type multiplicity = default {properties}
+ ++ KISS: In a Domain Model Omit: visibility, type, default, properties.
+ +++ Don't get hung up on whether an attribute should be put in a diagram.
+Missing one does not cost much.  Adding one that is unneeded only
+costs a little time.  As a rule -- it is better to omit one.
+ + When you omit something from a diagram and you are worried about it --
+put it in another artifact: glossary, data dictionary, business rules, ...
+
+ *** Attributes should normally be data types: strings, numbers, characters.
+ ++ else use associations, perhaps with 
+.Key role names.
+
+ * A domain model can show requirements -- but also document them elsewhere -- JIC
+(Just In Case).
+
+ ++ Replace attributes  with multiplicities by associations.
+This is a first step to a normalized model.
+ Derived Attributes -- interesting values can be computed from other data.
+.As_is  		/ name....
+If there are complicated rules for deriving the attribute put it in another
+artifact as a business rule or a definition.  Note.  The UML
+does have a language for expressing complex rules. It is the
+Object Constraint Language.  We will not be covering it.
+
+ * Modeling data types: when, where, how.
+ **** Make connections (functional dependencies, foreign keys) highly visible
+ * Quantities and Units
+
+ * 9.17 Examples -- POS and Monopoly Domain Models
+ * 9.18 Conclusion -- Correct or useful?
+ * 9.19 Process: Iterative.
+ Start in Elaboration (or before inception) and revise throughout elaboration.
+. 9.20 Resources -> using color for common types of classes:
+ *** Here is how the "PostIt" colors can be used to help draw domain models:
+
+.Image colored.uml.gif Colored UML
+
+.See [CoadLefebvre99]
+
+. Example of a Domain Model
+.Image FISDom1.gif First FIS domain model
+
+.See ./FIS1.html
+
+. Exercise on Domain modeling with added attributes
+Domain modeled in last class
+.See ./06x.html#Exercise 2
+.See ./07x1.png
+without attributes can
+have attributes added like this
+.See ./07x1ans.gif
+
+. Domain Model Patterns
+.Image domainPatterns.png Aggregation + Intersection + Aspects + Subtype + Reflexive + Directed Graph
+.See [Wagner05]
+and the following
+.Open Bolloju04
+ Narasimha Bolloju
+ Improving  the quality of business object models using Collaboration patterns
+ Commun ACM V47n7(Jul 2004)pp81-86
+.See  http://doi.acm.org/10.1145/1005817.1005827
+ =EXPERIMENT MODEL REALITIES PATTERN UML COMPOSITION
+ Based on Coad and Fowler lists 12 simple patters that helped students improve their conceptual models in 13 different business application domains: spotting classes and connections, plus correcting errors.
+
+.Image 19Bolloju04.gif (Figure 1 is in ASCII below)
+ Collaboration_patterns::#Pattern=following,
+.Set
+ E1: Role (1)-(0..*) Transaction
+ E6: Transaction (1)-(0..*) FollowupTransaction 
+ E5: Specification (1)-(0..*) Transaction
+ E3: CompositeTransaction (1)<*>-(0..*) LineItem
+ E2: Place (1)-(0..*) Transaction
+ R: Actor (1)-(0..*) Role
+ T1: Item (1)-(0..*) SpecificItem
+ T4: Group (1)<>-(0..*) Member
+ E4: SpecificItem (1)-(0..*) Transaction
+ T2: Assembly(1)<*>-(0..*) Part
+ P: OuterPlace (1)-(0..*) Place
+ T3: Container (1)<*>-(0..*) Content
+.Close.Set
+ Next
+.See [BollojuLeung06]
+.Close
+
+.Open Questions and Answers on Domain Models II
+.See ./07q.html
+.Close Questions and Answers on Domain Models II
+. Exercises on Domain Modeling with Attributes.
+.See ./07x.html
+. Next Step in Project: A First Domain Model
+See
+.See ./w3.html
+for details is due this time next week.
+. Quiz on Domain Modeling
+Given a description  of a domain (text, rules, scenarios,...)
+draw a suitable domain model.
+$TBA
+. Next class
+.See ./08.html
+"System Sequence Diagrams", a way of using the UML to model the sequences 
+of events in one use case or scenario flowing between the actors and the 
+system under development.
+
+
+. Review Questions
+.See ./07r.html

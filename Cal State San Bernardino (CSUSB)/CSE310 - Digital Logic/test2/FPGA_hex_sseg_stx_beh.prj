@@ -1,0 +1,4 @@
+verilog isim_temp "../Lab5_FPGA/hex_to_sseg.v"
+verilog isim_temp "../Lab5_FPGA/disp_mux.v"
+verilog isim_temp "../Lab5_FPGA/FPGA_hex_sseg.v"
+verilog isim_temp "C:/Xilinx/13.2/ISE_DS/ISE//verilog/src/glbl.v"

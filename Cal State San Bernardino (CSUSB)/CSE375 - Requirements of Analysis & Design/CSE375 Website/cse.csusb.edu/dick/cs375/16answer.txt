@@ -1,0 +1,27 @@
+. A List of the all 9 GRASP Patterns
+	Information Expert
+	Creator
+	High Cohesion
+	Low Coupling
+	Controler
+
+	Polymorphism
+	Pure Fabrication
+	Indirection
+	Protected Variations
+
+Now can you write a short (1..3 sentences) description of what
+each of these are about?
+
+Can you match them up to these statements?
+.Set
+	Reduce coupling by connecting to an intermediate object.
+	Objects should be created by their friends.
+	When all else fails: try inventing an object: can you get good cohesion and low coupling?
+	Allocate a task to the object knows where the data is.
+	Minimize connections between pieces of code.
+	Handle behavior variations in subclasses and use pointers to general
+superclasses.
+	Make each piece of code do a set of closely related things.
+	Use a high level object to guide a use case.
+.Close.Set

@@ -1,0 +1,15 @@
+/*
+Project Option: Coyote Residence Office
+TEAM: King James & The Knights of the Data Table
+Comments on Attributes for Room
+CREATED BY: Mark Takahashi
+*/
+
+comment on column Room.Room_Number
+is 'Primary identifier of the Room -- Format: 3001';
+
+comment on column Room.Rent
+is 'Rental cost for the Room -- Format: 350';
+
+comment on column Room.Residence_Number
+is 'Primary key identifying the Room -- Format: 2001';

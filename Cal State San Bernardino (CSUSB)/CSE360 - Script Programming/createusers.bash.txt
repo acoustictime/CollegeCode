@@ -1,0 +1,30 @@
+#!/bin/bash
+
+if [ $# -ne 1 ];
+then
+        echo;
+        echo "Usage: $0 filename";
+        echo "format of file:";
+        echo;
+        echo "123456789,\"Han,Ken Isawsome\"";
+        echo "234567891,\"Doe,John Michael\"";
+        echo;
+        exit;
+fi
+
+usersfile=$1;
+while read line
+do
+        username=$(echo $line|cut -d, -f1)
+        fname=$(echo $line|cut -d\" -f2|cut -d, -f2)
+        lname=$(echo $line|cut -d\" -f2|cut -d, -f1)
+        group=$(echo $line|cut -d, -f4)
+        echo $username $fname $lname $group
+
+        useradd -G $group -c "$fname $lname" $username
+        ./setpass.exp $username password$username
+        chage -d 0 $username
+
+done < $usersfile;
+
+exit;

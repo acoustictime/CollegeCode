@@ -1,0 +1,2 @@
+vhdtdtfi -lib work {C:/Documents and Settings/user/Desktop/test2/Lab5.v} -lang verilog -prj test2 -o Lab5.spl -module Lab5 -template C:/Xilinx/13.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3 Lab5.spl {C:/Documents and Settings/user/Desktop/test2/Lab5.sym} 

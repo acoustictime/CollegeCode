@@ -1,0 +1,42 @@
+. Assigned Work 2: An initial Set of Requirements for your project
+Deliverables
+The deliverables form a packet and every element in the packet should
+be there in the listed order.
+.List
+	Use case diagram naming actors and use cases.
+	At least one fully dressed `critical` use case.
+	Two or three casual use cases
+	Brief descriptions of all the other use cases.
+	Any interesting supplementary specifications, business rules, or glossary items.
+.Close.List
+Process
+.List
+	Make a list of names for use cases.
+	Add primary actor to each
+	Add any secondary actors.
+	Brief descriptions for all of them($note)
+	Refine three or four into casual format.($note)
+	Refine one casual one into a fully dressed use case($note)
+	Draw the use case diagram.($note)
+	Refine the non-functional requirements and glossary.
+.Close.List
+(note): While doing this step take note of any other requirements: non-functional, business rules, odd terms....
+
+
+5 minute presentation per group.  Name and brief description
+Use case diagram on board/web/drive/handout?
+Give fully dressed format if asked.
+
+By the way.... if your vision or business case changes then note this, but
+I don't need to see the whole -- yet.
+. Advice
+Keep it
+.Set
+	Terse
+	Essential
+	User centered
+.Close.Set
+
+Present one interesting use case at start of next class.
+Hand in a copy for review.
+

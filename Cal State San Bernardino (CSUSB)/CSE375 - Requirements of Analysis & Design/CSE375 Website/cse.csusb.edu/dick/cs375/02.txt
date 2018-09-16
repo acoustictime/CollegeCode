@@ -1,0 +1,403 @@
+. CSci 375/02 Introduction to Process and Book
+.Table Date	#	Topic (Participation 2pt)	Study pages (2 pts)	Quiz(15 pts)	Project Work(10 pts)
+.Row Previous	1	Surviving CSci375	-	Mock Q0	-	
+.Row Today	2	Introduction	vii-40	-	W0
+.Row Next	3	Inception	41-59	Q1(1-59)	W0 due
+.Close.Table
+(Input): Introduction to the process and methods of the text.
+.Table Pages	Subject	Notes
+.Row vii	Contents at a glance	A good starting point.
+.Row ix	Contents by topic	Return here to review a topic
+.Row xi-xviii	Contents	Don't Panic(Chapters are small)
+.Row xix-xx	Forward	by Kruchten
+.Row xxi-xxv	Preface	Why, What, How, Who, Etc.
+.Row 3-16	**** Object-Oriented Analysis and Design $OOAD	Important ($dice)
+.Row 17-40	** Process: iterative, Evolutionary, and Agile	Important
+.Close.Table
+. 1.2 pp 6 -- OOA/D Skills
+In chapter one it discusses how a critical ability in OO development is to skillfully assign responsibilities to software objects because it influences robustness, maintainability, and re-usability.  This sounds a little subjective to me because one developer may think differently than another when it comes to assigning the object.  How do you know if the responsibility is properly assign to the object?
+
+The main purpose of the book is teach you this skill.  It is not easy. It
+is a bit subjective, at first.  But, it can be learned...  You should
+find that, at the end of the class, that it is quite rational and
+explainable:  we assigned the responsibility for zarking a widget to
+objects in the Widget class because Widgets are the `Experts`.
+
+. 1.2 pp 6 -- Nine fundamental principles
+In chapter 1.2 the author points out that there are "nine fundamentals principles in object design and responsibility assignment are presented and applied." What are those nine fundamentals principles?
+
+They are listed opposite the inside of the front cover of the book... and
+in my notes on the WWW.  Look for "GRASP".
+
+
+. 1 page 11 Forward and reverse engineering
+What does the author mean by "forward engineering?"
+
+It proceeds from analysis to design to implementation -- with no feed back.
+
+Opposite of looking at code to figure what is going on in the designer's and analysts'
+minds: reverse engineering.
+
+
+. Section 1.5 A Short Example pages 8-11 -- The Dice Game
+Notice the steps and diagrams used in this example.  Do not forget them.
+They will be part of your project, future classes, quizzes, and the final.
+Steps::=following,
+.List
+  Define some use cases
+  Define a domain model
+  Define some interaction diagrams
+  Define a design class diagram --(DCD)
+.Close.List
+
+An iteration is not complete until we have coded and tested our analysis 
+and design.  So I have taken the diagrams on page 10 and coded them in C++.
+Study:
+.See ./DiceGame.cpp
+and
+.See ./Die.cpp
+to see the C++ code that I developed.
+
+I also used a pair of unit tests
+.See ./testDiceGame.cpp
+and
+.See ./testDie.cpp
+in C++.  You should compare the code I produced with the diagrams and text
+in the book.  By the way, in the process of coding and testing this rough
+design I found a couple of methods that the book does not mention but are
+implicit in the use case description on page 8 -- the user needs a way
+to find out the score and also to see if they have won.  It helps to show
+all the data flows using a System Sequence Diagram like this
+
+.Image 02DiceGameSSD.gif Dice Game Systems Sequence Diagram
+
+which needs a more complex DiceGame class:
+
+.Image 02DiceGameClasses.gif Dice Game Classes
+
+. Java code for Section 1.5
+These are a direct translation of the above C++ into Java.
+.See ./Die.java
+.See ./DiceGame.java
+Notice that a simple unit test is included with each class. It makes
+debugging and developing much easier.
+
+Note:  At some time I want to show how to combine these to "Domain Layer"
+classes  with some "User Interface" code to create a web applet.
+
+. Warning about the example 1.5
+In practice we do not "define ALL the use cases" before we start
+the defining the domain model.  Instead we should focus on only
+a few use case, a partial domain model, some of the interactions, and so
+add to the design and code.  We eat the elephant, one bite at a time.
+
+. 2 page 13 3 perspectives
+Can you clarify the differences in the meaning of Class in the three perspectives listed in this chapter. 
+
+.List
+.Key Conceptual
+-- describes objects that are outside the computer + ideas in the stakeholders heads.
+Concepts not code.
+.Key Specification
+-- Describes the kinds of objects we expect to need to make the software work and the
+relationships between them.
+.Key Implementation
+-- Blueprint for code.  Or a reverse engineered diagram of the actual code.
+.Close.List
+. 1 pp 12-13 -- perspective
+There are 3 perspectives; Conceptual, Specification, Implementation. Do you need to use all of them or can you just use one of them when doing a project? 
+
+Expect and plan to use all 3.  You'll be using conceptual models most
+at the start (with a few specs and implementations).... and by the transition
+phase it'll be all Implementation.
+
+The good news is that many of the things you draw in a conceptual model
+can be copied into Specifications and Implementations.
+. 1 pp 13 -- Specification vs implementation perspective
+ There is one example in the book for both Specification and Implementation Perspective. What is the obvious difference between the two that would make specification perspective seldom used and most software-oriented UML diagramming assume an implementation perspective?
+
+Programmers really hate thinking about the real world and 
+hate writing (and reading) specifications.  They seem to love
+the code, the whole code, and nothing but the code??
+
+. 2 page 13 expressing the logic of the program
+In the software implementation for the dice example, how is the logic of the program depicted within the UML programming language? Or, it is just an abstraction of the software components?
+
+In this book and course interaction diagrams will be used to express the
+logic.  UML2 sequence diagrams have enough features to express most any
+logic you could want: iteration, selection, sequence, functions, arithmetic,
+etc....
+
+When one needs to express a complex algorithm in the UML we use
+Activity diagrams.   But these will not be required in this course.
+
+. 1 pp 3-16 -- OOD: Principles and Patterns
+Please explain the concept of patterns in more detail.
+
+A pattern is a way to solve a class of problems.  It resolves the conflicting
+forces well enough for it to be useful.  It should also work well
+with other patterns to form a "Pattern Language".  
+
+The history starts with a set of patterns for architecture: rooms,
+buildings, towns, ... by Christophe Alexander (circa 1979).  One of
+his patterns:
+.Box
+When adults enter a room they often need to put something down or pick it
+up.
+
+Children like to hid under things...
+
+Therefore,
+	Put a shelf around a room just above the height of a child and just below the hand of an adult.
+.Close.Box
+For more checkout my website.
+.See ./patterns.html
+
+
+. Domain Model vs Design Class Diagram
+ A common error that looses points in this class is to confuse the model of
+the world arround the software(Domain) with the model of the software itself (Design)
+ +++ The classes in a Domain model are sets of similar real objects
+ +++ The system is not not yet real and so is NOT in the domain model.
+(Don't panic -- it appears soon enough, some where else).
+ +++ Domain classes don't have operations/functions.  Real objects don't
+work like objects in software.
+ ++ Most design classes are inspired by doamin classes.
+ ++ Design class diagrams may have extra classes in them that are needed
+for technical reasons.  They aree not real objects, so they are not put in a
+domain model.
+ +++ A design class Diagram is derived from a set of interactions.
+
+. The Cake Image of Agile Development
+Perhaps some images may help.  If I offered you a cake to eat...
+
+.Image cake2.png [3layered cake = requirements+design+code with tests on top]
+
+Would you plan to eat it one layer at a time: (1) all the Requirements,
+(2)all the Design, (3) Code it all and then (4) do
+the tests:
+.See ./cake2fragile.png
+or in slices:
+.See ./cake2agile.png
+with a little bit of each layer and a test on top?
+
+In this class I will covering a particularly flexible process for taking one slice at a time.
+
+. Example of an iterative project -- the FRiendly EDitor(FRED) project.
+I implemented a Friendly Editor for my students in 10 weeks in the fall
+of 1982, while bootstrapping the CSci dept, using a language I was
+not familiar (BASIC) with, on a completely strange operating 
+system (RSTS).
+
+This was only possible
+because I started with a nearly empty program and grew it
+one feature at a time.
+. A Common Error -- iterations and phases
+Always remember that a phase can have several iterations in it. An iteration does not contain
+any phases!  
+
+Each iteration has a mix of disciplines (requirements, domain, design, code) and
+so a phase will have several repetitions of a little life cycle.  However the mix of
+disciplines tends to be different in each phase.
+. Images of RUP
+The PDFs of the text omit this image.
+.See http://commons.wikimedia.org/wiki/File:RUP_disciplines_greyscale_20060121.svg
+.See http://en.wikipedia.org/wiki/File:RUP_Workflows2.gif
+
+Also search Google for "RUP Image" for lots of similar processes.
+
+. 2 page 16 Early testing
+"Activities such as load testing will prove if the partial design and implementation are on the right path."  This seems to occur at a relatively early phase in the design process.  Is an early prototype of the program created for users to test the program this early, or is this merely  an invitation for users and stakeholders to witness the iterative development on paper (namely observation of the UML diagrams and Pseudocode)?
+
+It should be a real, high quality, incomplete implementation that tests out the feasibility
+of the approach.    
+
+Sadly in this class we won't get to this.
+
+
+. Unified Process phases and disciplines for this class
+.Table Discipline	Inception	Elaboration	Construction	Transition
+.Row Business Modeling	**	**	-	-
+.Row Requirements	*	**	*	*
+.Row Design	*	*	**	*
+.Close.Table
+The disciplines are like tools that are used in many phases.
+However in the early phases we normally
+do more business modeling and requirements
+than Design and Implementation.  In later phases this is
+reversed.
+. 1 page 17 Domain Models
+What is a domain model and how does it relate to the UML process?
+
+UML is not a process.  It is a family of 13 types of diagram. 
+The process we will be learning is the Unified Process or UP.
+UML is the "Unified Modeling Language". We use it to prepare
+artifacts (documents).  The UP will guide what diagram we will be drawing
+at any particular time.
+
+A Domain Model is also known as a Business Model. Creating and changing one
+is part of the Unified Process. It describes the
+real world that your software will interact with.  A full business model
+will include many kinds of diagrams and text documents describing how
+the business works, the data that it uses, the hardware and software
+platforms to be used.  It should also have a conceptual class diagram
+that summarizes the kinds of things and relationships between them that
+are important to the stakeholders.
+
+In this course we will often refer to the conceptual model (classes of
+real objects and their relationships) as "The Domain Model".  It will
+be an important source for the classes that we put into our designs.
+
+In other words, real world ideas (domain model) will inspire the structure
+(Design class diagrams) of our software.  As a result, the software should
+(1) fit the world better, (2) be easier to understand, and (3) be easier
+to change when the world makes a small change.
+
+The way these artifacts(documents) fit together is shown inside the front
+cover of the hardback edition of our text book.
+. 2 page 18 Length of an iteration
+How would you estimate what the proper time would be for the iteration period?
+
+Each project and `each iteration` may have a different deadline.
+There are no simple and accurate rules.   I like short deadlines -- in senior projects 
+I ask students to show me what they have got every week -- verbal report. What works? 
+What can you do next week.  This is the best length for college work.   Similar to
+the XP weekly cycle.   Most methodologists think 1 week is too short.
+
+The time for an iteration should be enough to analyze, design, implement, and test
+something.
+
+Key point: fix length and `then` choose what to do in it.
+
+The simplest rule I know is to use past performance to predict the future.
+Suppose you already have implemented a dozen similar
+features and they have each taken an average of one 40 hour week...  then 
+adding another similar feature should take another 40 hour week.  So with a two week
+iteration -- add two such features. 
+
+. 2 page 23 Waterfall process
+I understand the idea of the waterfall cycle (process) but i don't 
+understand how that name describes or even relates to my understanding of 
+the waterfall cycle.  Is it because you don't see it coming when you start?
+
+Interesting question.  It comes from a paper by 
+.Key Winston Royce 
+"Managing the development of large software systems" 
+(Proc IEEE WESCON (1970) pp328-339)
+which had a picture with data flowing down from analysis to Design etc.
+like water down a series of steps...
+.See http://www.holub.com/goodies/royce.waterfall.pdf
+(PDF).  Oddly the paper is arguing that the 
+.Key waterfall process can not work.
+Instead Royce proposed the ideas of iteration, prototyping, 
+and starting with code.  People ignored this part of his message.
+
+
+
+. 2 page 23 waterfall polluting agile process
+Why is it that iterative projects with a "waterfall" influence are likely doomed to failure as if they were strictly waterfall projects?
+
+They loose the feedback from implementing and testing.  A recent government project
+had to tams working in parallel. At the the end of 18 months the agile team had
+80% of the project running, the waterfall team had not finished the specification.
+
+. Alternatives to UML
+Are their any other systems besides UML that can model software development? If so what are their names?
+
+Yes -- but they have died.... HOOD, OPEN, ...  see
+.See ../samples/methods.html
+. 2 page 28 which requirements to do first
+How is it determined....which requirements are going to be done at a particular iteration?
+
+Look at the risks involved -- tackle the riskiest thing first.
+
+. Waterfall
+Do you know of any software development company that actually was successful using the waterfall method?
+
+None come to mind.... but dozens of simple projects are done in one iteration = waterfall.
+However, Alistair Cockburn, who has done a lot of consulting on large scale projects,
+has observed successful projects using `any` process!  He also seen `all` processes fail.
+He writes
+.Box
+ The people on the projects were not interested in learning our system.
+ They were successfully able to ignore us, and were still delivering software, anyway.
+ Almost any methodology can be made to work on some project.
+ Any methodology can manage to fail on some project.
+ Heavy processes can be successful.
+ Light processes are more often successful, and more importantly, the people on those projects credit the success to the
+lightness of the methodology.
+.Close.Box
+.See [Cockburn00]
+
+
+. 2 pp 18 -- unified process vs. rational unified process
+I'm having trouble understanding the difference between unified process and rational unified process can you explain the differences
+
+They have the same philosophy, phases, and come from similar experiences.
+
+The differences are:
+.List
+  RUP is more complex and complete -- more disciplines are involved.
+  You buy RUP from IBM.
+  I don't think Craig Larman is licensed to teach RUP.
+.Close.List
+
+
+. The Rational Unified Process phases and Disciplines
+
+There are more disciplines involved in the $RUP:
+.See http://commons.wikimedia.org/wiki/File:RUP_disciplines_greyscale_20060121.svg
+.See http://en.wikipedia.org/wiki/File:RUP_Workflows2.gif
+and
+.See http://www.ajboggs.com/images/rup_discipline.jpg
+(if this is Bad link - try Google Images and search for RUP)
+
+You can compare the UP  and RUP with Barry Boehm's
+iterative 
+.Key Spiral process
+.See http://www.cse.lehigh.edu/~glennb/oose/spiral.gif
+which, may still abandon work on requirements too early...
+
+. 2 Pages 18-19 Model or framework
+UP is described a method as well as XP and SCRUM. Can UP be considered then a model or a framework? Can these adjectives be used interchangeably to describe those interactive processes?
+
+The author does not clarify the terms. It is a bit confusing!
+Model, Method, Framework, Process?
+
+Model::=`description of something of interest in a project`.
+Example: A description of the things a user wants to do with the project, a
+class diagram of classes in code, etc.
+Method::=`steps to take to achieve a goal`.
+Example: SP, OOAD, ...
+Framework::=`loose structure with customizable bits` -- can be a method, Model or
+a process. Describes a family of possibilities.
+Process::=`how a team works together and schedules its time to complete a project`.
+Examples: XP, SCRUM, ...
+
+
+
+(Questions):  See
+.See ./02q.html
+
+
+. Review Questions
+.See ./02r.html
+. Exercises 02
+.See ./02x.html
+
+. Next
+See table at head of page.... Prepare by looking at
+.See ./03.html
+and then studying pages 41-59 on the
+inception phase combined with the projects completed in CSci372.
+. Project Work for Next time
+At the start of the next class hand in a first draft of:
+.List
+ Name of the project
+ List of team members
+ One paragraph vision
+ One Paragraph business case
+ Some users and what they will want to get out of the system
+.Close.List
+You will get feedback and be able to complete and resubmit
+the following week.

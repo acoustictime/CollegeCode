@@ -1,0 +1,159 @@
+.Open Surviving CS375
+(Previous):  None.
+. Work due
+Today all you have to do is arrive on time.  You get
+1 point for turning up on time. You get 1 point for working until dismissed.
+
+In the future you may have to hand in and/or present a document,
+and/or hand in a review question and an answer (or both).
+. Project Presentations
+None today. Normally, on Tuesday, 20 minutes will be given to presenting 
+project work started the previous Thursday.
+
+(CS372 projects):
+.List
+2003
+.List
+ FIS -- Free Information System for Students
+.See ./FIS1.html
+.Close.List
+2004
+.List
+ CoyoteBookSwap
+ CSUSB Campus Book Exchange
+ Lightweight Job Ticketing System
+.See http://b3n.org/372/index.html
+-- Completed and operational
+ Statistical Consolidation of SpreadSheet data on the web
+.Close.List
+2005
+.List
+ Backup4Dummies
+ WebMall
+ VEMail
+ CSWPortal
+.Close.List
+2006
+.List
+ KickStart
+ Web Based Book Exchange:
+.See ../cs372/ProjectCoyoteBookExchange.pdf
+ Information Running Coyote
+.See ../cs372/ProjectRunningCoyote.pdf
+ CSUSB Spam Filter Project
+ Auto Scheduler
+.See ../cs372/ProjectAutoScheduler.pdf
+.Close.List
+2007
+.List
+ HighDesertFireData
+ iFox
+ InteractiveMap
+ Ramrod
+ Uni-Reg
+ WorkStudyTracker -- Operational
+.Close.List
+2008
+.List
+ Event Music Coordination System
+ RegWiz
+ ACLS
+.See http://hobostuff.com/csci372/project5.zip
+ Mobile Tag
+ CSUSB Message Board
+.Close.List
+2009
+.List
+ Theremin -- Electronic music
+ Haven
+ MessageBoard
+ Pink Book -- Simulated gambling?
+.Close.List
+.Open Input
+Catalog::=http://www.csci.csusb.edu/dick/cs375/catelog.txt.
+
+Book::=http://www.csci.csusb.edu/dick/cs375/book.txt.
+
+See [Syllabus], [Schedule], [Projects], [Objectives]. and the search box above.
+
+Bullet Points
+.List
+ Web pages act as a guide to the reading.
+.Set
+   * Stars indicate the importance of a topic in the book to this class.
+   ++ Indicates a topic that I have added to the book.
+   -- Indicates something that is in the book that you can possibly ignore.
+   ---- Indicates something that is in the book that you should ignore.
+.Close.Set
+ Examples
+.Set
+   -- Not chapters 22, 28, or 40. 
+   *** Submit a Review Question before the deadline to earn credit! 
+   -- History is not tested.
+   ---- Nothing on persistence!  
+   -- Not too much on packages and components.
+   --- Nothing much on deployment.
+   ++ Some example code in C++.
+.Close.Set
+.Close.List
+
+ There are review questions to be answered after you have done the reading.
+ Hand in one review question and its answer for credit.
+
+.Close
+. Advertisement for the Rational Unified Process.
+. Advertisement for the the Unified Modeling Language.
+. UML on YouTube
+.See http://www.youtube.com/watch?v=j_0fKDSJr1U
+(too much on class diagrams....)
+. Should we take a break?
+.Open Exercises
+Normally there will be lots of exercises.... this time a mock quiz.
+.Close
+. Quiz
+On 9 days there will be a quiz on the topics
+in the class.  We start  with an extra mock quiz worth zero points.
+
+(mock quiz): see
+.See ./q0.html
+(zero points).
+. Project Kickoff -- Next class
+Normally project work will be assigned and started
+on Thursday and must be handed in (however incomplete) on the
+following Tuesday for 10 points max. Late work scores zero. Any
+work can score lots of points.  
+
+This time people from CS372 will  briefly present their
+projects to the class. People who are not from CS372 should choose a team to join
+or propose their own project.
+
+You also need to look at
+.See ./projects.html
+to get an idea of what is going to happen.  Also see
+.See ./w1.html
+the first assigned piece of project work.  Today we
+will get started on preparing for this. At the start of the next
+class hand in a first draft of:
+.List
+ Name of the project
+ List of team members
+ One paragraph vision
+ One Paragraph business case
+ Some users and what they will want to get out of the system
+.Close.List
+You will get feedback and be able to complete and resubmit
+the following week.
+. Assigned Work for next time
+(Assigned Reading): Study the syllabus and schedule
+plus pages vii..40 (Preface, Chapters 1,2, and 3) in the book.
+Do as many of the review questions
+.See ./02r.html
+as you have time for.  Copy one question and your answer on to a
+piece of paper with you name printed on it for grading.
+Hint: You should read the "history" sections of each chapter, but I
+won't be testing your knowledge of the history of the subject.
+(Next): class meeting 2.
+.See http://www/dick/cs375/02.html
+and kick off the project.
+.Close Surviving CS375
+CS375::=http://cse.csusb.edu/dick/cs375/.

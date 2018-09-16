@@ -1,0 +1,28 @@
+. Review Questions 13 -- Object Design
+ Briefly describes the text's method for designing objects including the names
+of the artifacts that are used, developed or changed.
+ What happens to a system operation in an SSD when you start to design objects
+to handle it.
+ Explain operation contracts.
+ What is the function of the domain model when you are designing objects?
+ When is it best to design most of the initialization code?
+
+ What are the relations between an interaction diagram and a DCD that supports it?
+
+ How do you show iterations in an communication diagram?
+
+ Explain the Command-Query Separation Principle
+
+ An object `a:A` sends message `m` to `b:B`. Draw a communication diagram
+that shows this.  What does this diagram tell us about the
+classes `A` and `B` -- list `all` the facts you can deduce.
+ Class `A` is a generalization of of Class `B` and class `B` is associated
+with class `C`.  Draw the DCD showing these facts.  Are objects in class 
+`A` also associated with objects of class `C`?
+
+ Write down what the following diagram means as a set of true facts about 
+the classes:
+
+.Image 12x.png [A,B,C,D]
+
+

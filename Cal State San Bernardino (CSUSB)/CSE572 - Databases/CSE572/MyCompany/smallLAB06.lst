@@ -1,0 +1,850 @@
+SQL> update employee
+  2  set superssn = '333445555',dno = 5
+  3  where ssn = '123456789';
+
+1 row updated.
+
+SQL> update employee
+  2  set superssn = '888665555',dno=5
+  3  where ssn = '333445555';
+
+1 row updated.
+
+SQL> update employee
+  2  set superssn = '987654321',dno=4
+  3  where ssn = '999887777';
+
+1 row updated.
+
+SQL> update employee
+  2  set superssn = '888665555',dno=4
+  3  where ssn = '987654321';
+
+1 row updated.
+
+SQL> update employee
+  2  set superssn = '333445555',dno=5
+  3  where ssn = '666884444';
+
+1 row updated.
+
+SQL> update employee
+  2  set superssn = '333445555',dno=5
+  3  where ssn = '453453453'
+  4  ;
+
+1 row updated.
+
+SQL> update employee
+  2  set superssn='987654321',dno=4
+  3  where ssn = '987987987';
+
+1 row updated.
+
+SQL> update employee
+  2  set dno=1
+  3  where ssn = '888665555';
+
+1 row updated.
+
+SQL> select Bdate,address
+  2  from employee
+  3  where fname='John' and minit='B' and lname='Smith';
+
+BDATE     ADDRESS                                                               
+--------- ------------------------------                                        
+09-JAN-65 731 Fondren, Houston, TX                                              
+
+SQL> select fname,lname,address
+  2  from employee, department
+  3  where dname='Research' and dnumber = dno;
+
+FNAME           LNAME           ADDRESS                                         
+--------------- --------------- ------------------------------                  
+John            Smith           731 Fondren, Houston, TX                        
+Franklin        Wong            638 Voss, Houston, TX                           
+Ramesh          Narayan         975 Fire Oak, Humble, TX                        
+Joyce           English         5631 Rice, Houston, TX                          
+
+SQL> select pnumber, dnum,lname,address,bdate
+  2  from project,department,employee
+  3  where dnu=dnumber and mgrssn=ssn and plocation='Stafford';
+where dnu=dnumber and mgrssn=ssn and plocation='Stafford'
+      *
+ERROR at line 3:
+ORA-00904: "DNU": invalid identifier 
+
+
+SQL> l
+  1  select pnumber, dnum,lname,address,bdate
+  2  from project,department,employee
+  3* where dnu=dnumber and mgrssn=ssn and plocation='Stafford'
+SQL> C/dnu/dnum
+  3* where dnum=dnumber and mgrssn=ssn and plocation='Stafford'
+SQL> /
+
+   PNUMBER       DNUM LNAME           ADDRESS                        BDATE      
+---------- ---------- --------------- ------------------------------ ---------  
+        10          4 Wallace         291 Berry, Bellaire, TX        20-JUN-41  
+        30          4 Wallace         291 Berry, Bellaire, TX        20-JUN-41  
+
+SQL> select fname, employee.name, address
+  2  from employee, department
+  3  f/
+  4  ;
+f/
+ *
+ERROR at line 3:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select e.fname, e.lname, s.fname, s.lname
+  2  from employee as e, employee as s
+  3  where e.superssn = s.ssn;
+from employee as e, employee as s
+              *
+ERROR at line 2:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select e.fname, e.lname, s.fname, s.lname
+  2  from employee e, employee s
+  3  where e.superssn = s.ssn;
+
+FNAME           LNAME           FNAME           LNAME                           
+--------------- --------------- --------------- ---------------                 
+Joyce           English         Franklin        Wong                            
+Ramesh          Narayan         Franklin        Wong                            
+John            Smith           Franklin        Wong                            
+Ahmad           Jabbar          Jennifer        Wallace                         
+Alicia          Zelaya          Jennifer        Wallace                         
+Jennifer        Wallace         James           Borg                            
+Franklin        Wong            James           Borg                            
+
+7 rows selected.
+
+SQL> select e.fname, e.lname, e.address
+  2  from employee e, department d
+  3  where d.dname = 'Research' and d.dnumber = e.dno;
+
+FNAME           LNAME           ADDRESS                                         
+--------------- --------------- ------------------------------                  
+John            Smith           731 Fondren, Houston, TX                        
+Franklin        Wong            638 Voss, Houston, TX                           
+Ramesh          Narayan         975 Fire Oak, Humble, TX                        
+Joyce           English         5631 Rice, Houston, TX                          
+
+SQL> select ssn
+  2  from employee;
+
+SSN                                                                             
+---------                                                                       
+123456789                                                                       
+333445555                                                                       
+453453453                                                                       
+666884444                                                                       
+888665555                                                                       
+987654321                                                                       
+987987987                                                                       
+999887777                                                                       
+
+8 rows selected.
+
+SQL> select ssn, dname
+  2  from employee, department;;
+from employee, department;
+                         *
+ERROR at line 2:
+ORA-00911: invalid character 
+
+
+SQL> select ssn, dname
+  2  from employee, department;
+
+SSN       DNAME                                                                 
+--------- ---------------                                                       
+123456789 Administration                                                        
+333445555 Administration                                                        
+453453453 Administration                                                        
+666884444 Administration                                                        
+888665555 Administration                                                        
+987654321 Administration                                                        
+987987987 Administration                                                        
+999887777 Administration                                                        
+123456789 Headquarters                                                          
+333445555 Headquarters                                                          
+453453453 Headquarters                                                          
+
+SSN       DNAME                                                                 
+--------- ---------------                                                       
+666884444 Headquarters                                                          
+888665555 Headquarters                                                          
+987654321 Headquarters                                                          
+987987987 Headquarters                                                          
+999887777 Headquarters                                                          
+123456789 Research                                                              
+333445555 Research                                                              
+453453453 Research                                                              
+666884444 Research                                                              
+888665555 Research                                                              
+987654321 Research                                                              
+
+SSN       DNAME                                                                 
+--------- ---------------                                                       
+987987987 Research                                                              
+999887777 Research                                                              
+
+24 rows selected.
+
+SQL> select *
+  2  from employee
+  3  where dno=5;
+
+FNAME           M LNAME           SSN       BDATE                               
+--------------- - --------------- --------- ---------                           
+ADDRESS                        G     SALARY SUPERSSN         DNO                
+------------------------------ - ---------- --------- ----------                
+John            B Smith           123456789 09-JAN-65                           
+731 Fondren, Houston, TX       M      30000 333445555          5                
+                                                                                
+Franklin        T Wong            333445555 08-DEC-55                           
+638 Voss, Houston, TX          M      40000 888665555          5                
+                                                                                
+Ramesh          K Narayan         666884444 15-SEP-62                           
+975 Fire Oak, Humble, TX       M      38000 333445555          5                
+                                                                                
+
+FNAME           M LNAME           SSN       BDATE                               
+--------------- - --------------- --------- ---------                           
+ADDRESS                        G     SALARY SUPERSSN         DNO                
+------------------------------ - ---------- --------- ----------                
+Joyce           A English         453453453 31-JUL-72                           
+5631 Rice, Houston, TX         F      25000 333445555          5                
+                                                                                
+
+SQL> select *
+  2  from employee, department
+  3  where dname =
+  4  'Research' and dno = dnumber;
+
+FNAME           M LNAME           SSN       BDATE                               
+--------------- - --------------- --------- ---------                           
+ADDRESS                        G     SALARY SUPERSSN         DNO DNAME          
+------------------------------ - ---------- --------- ---------- ---------------
+   DNUMBER MGRSSN    MGRSTARTD                                                  
+---------- --------- ---------                                                  
+John            B Smith           123456789 09-JAN-65                           
+731 Fondren, Houston, TX       M      30000 333445555          5 Research       
+         5 333445555 22-MAY-88                                                  
+                                                                                
+Franklin        T Wong            333445555 08-DEC-55                           
+638 Voss, Houston, TX          M      40000 888665555          5 Research       
+         5 333445555 22-MAY-88                                                  
+
+FNAME           M LNAME           SSN       BDATE                               
+--------------- - --------------- --------- ---------                           
+ADDRESS                        G     SALARY SUPERSSN         DNO DNAME          
+------------------------------ - ---------- --------- ---------- ---------------
+   DNUMBER MGRSSN    MGRSTARTD                                                  
+---------- --------- ---------                                                  
+                                                                                
+Ramesh          K Narayan         666884444 15-SEP-62                           
+975 Fire Oak, Humble, TX       M      38000 333445555          5 Research       
+         5 333445555 22-MAY-88                                                  
+                                                                                
+Joyce           A English         453453453 31-JUL-72                           
+5631 Rice, Houston, TX         F      25000 333445555          5 Research       
+
+FNAME           M LNAME           SSN       BDATE                               
+--------------- - --------------- --------- ---------                           
+ADDRESS                        G     SALARY SUPERSSN         DNO DNAME          
+------------------------------ - ---------- --------- ---------- ---------------
+   DNUMBER MGRSSN    MGRSTARTD                                                  
+---------- --------- ---------                                                  
+         5 333445555 22-MAY-88                                                  
+                                                                                
+
+SQL> select *
+  2  from employee, department;
+
+FNAME           M LNAME           SSN       BDATE                               
+--------------- - --------------- --------- ---------                           
+ADDRESS                        G     SALARY SUPERSSN         DNO DNAME          
+------------------------------ - ---------- --------- ---------- ---------------
+   DNUMBER MGRSSN    MGRSTARTD                                                  
+---------- --------- ---------                                                  
+John            B Smith           123456789 09-JAN-65                           
+731 Fondren, Houston, TX       M      30000 333445555          5 Research       
+         5 333445555 22-MAY-88                                                  
+                                                                                
+Franklin        T Wong            333445555 08-DEC-55                           
+638 Voss, Houston, TX          M      40000 888665555          5 Research       
+         5 333445555 22-MAY-88                                                  
+
+FNAME           M LNAME           SSN       BDATE                               
+--------------- - --------------- --------- ---------                           
+ADDRESS                        G     SALARY SUPERSSN         DNO DNAME          
+------------------------------ - ---------- --------- ---------- ---------------
+   DNUMBER MGRSSN    MGRSTARTD                                                  
+---------- --------- ---------                                                  
+                                                                                
+Alicia          J Zelaya          999887777 19-JAN-68                           
+3321 Castle, Spring, TX        F      25000 987654321          4 Research       
+         5 333445555 22-MAY-88                                                  
+                                                                                
+Jennifer        S Wallace         987654321 20-JUN-41                           
+291 Berry, Bellaire, TX        F      43000 888665555          4 Research       
+
+FNAME           M LNAME           SSN       BDATE                               
+--------------- - --------------- --------- ---------                           
+ADDRESS                        G     SALARY SUPERSSN         DNO DNAME          
+------------------------------ - ---------- --------- ---------- ---------------
+   DNUMBER MGRSSN    MGRSTARTD                                                  
+---------- --------- ---------                                                  
+         5 333445555 22-MAY-88                                                  
+                                                                                
+Ramesh          K Narayan         666884444 15-SEP-62                           
+975 Fire Oak, Humble, TX       M      38000 333445555          5 Research       
+         5 333445555 22-MAY-88                                                  
+                                                                                
+Joyce           A English         453453453 31-JUL-72                           
+
+FNAME           M LNAME           SSN       BDATE                               
+--------------- - --------------- --------- ---------                           
+ADDRESS                        G     SALARY SUPERSSN         DNO DNAME          
+------------------------------ - ---------- --------- ---------- ---------------
+   DNUMBER MGRSSN    MGRSTARTD                                                  
+---------- --------- ---------                                                  
+5631 Rice, Houston, TX         F      25000 333445555          5 Research       
+         5 333445555 22-MAY-88                                                  
+                                                                                
+Ahmad           V Jabbar          987987987 29-MAR-69                           
+980 Dallas, Houston, TX        M      25000 987654321          4 Research       
+         5 333445555 22-MAY-88                                                  
+                                                                                
+
+FNAME           M LNAME           SSN       BDATE                               
+--------------- - --------------- --------- ---------                           
+ADDRESS                        G     SALARY SUPERSSN         DNO DNAME          
+------------------------------ - ---------- --------- ---------- ---------------
+   DNUMBER MGRSSN    MGRSTARTD                                                  
+---------- --------- ---------                                                  
+James           E Borg            888665555 10-NOV-37                           
+450 Stone, Houston, TX         M      55000                    1 Research       
+         5 333445555 22-MAY-88                                                  
+                                                                                
+John            B Smith           123456789 09-JAN-65                           
+731 Fondren, Houston, TX       M      30000 333445555          5 Administration 
+         4 987654321 01-JAN-95                                                  
+
+FNAME           M LNAME           SSN       BDATE                               
+--------------- - --------------- --------- ---------                           
+ADDRESS                        G     SALARY SUPERSSN         DNO DNAME          
+------------------------------ - ---------- --------- ---------- ---------------
+   DNUMBER MGRSSN    MGRSTARTD                                                  
+---------- --------- ---------                                                  
+                                                                                
+Franklin        T Wong            333445555 08-DEC-55                           
+638 Voss, Houston, TX          M      40000 888665555          5 Administration 
+         4 987654321 01-JAN-95                                                  
+                                                                                
+Alicia          J Zelaya          999887777 19-JAN-68                           
+3321 Castle, Spring, TX        F      25000 987654321          4 Administration 
+
+FNAME           M LNAME           SSN       BDATE                               
+--------------- - --------------- --------- ---------                           
+ADDRESS                        G     SALARY SUPERSSN         DNO DNAME          
+------------------------------ - ---------- --------- ---------- ---------------
+   DNUMBER MGRSSN    MGRSTARTD                                                  
+---------- --------- ---------                                                  
+         4 987654321 01-JAN-95                                                  
+                                                                                
+Jennifer        S Wallace         987654321 20-JUN-41                           
+291 Berry, Bellaire, TX        F      43000 888665555          4 Administration 
+         4 987654321 01-JAN-95                                                  
+                                                                                
+Ramesh          K Narayan         666884444 15-SEP-62                           
+
+FNAME           M LNAME           SSN       BDATE                               
+--------------- - --------------- --------- ---------                           
+ADDRESS                        G     SALARY SUPERSSN         DNO DNAME          
+------------------------------ - ---------- --------- ---------- ---------------
+   DNUMBER MGRSSN    MGRSTARTD                                                  
+---------- --------- ---------                                                  
+975 Fire Oak, Humble, TX       M      38000 333445555          5 Administration 
+         4 987654321 01-JAN-95                                                  
+                                                                                
+Joyce           A English         453453453 31-JUL-72                           
+5631 Rice, Houston, TX         F      25000 333445555          5 Administration 
+         4 987654321 01-JAN-95                                                  
+                                                                                
+
+FNAME           M LNAME           SSN       BDATE                               
+--------------- - --------------- --------- ---------                           
+ADDRESS                        G     SALARY SUPERSSN         DNO DNAME          
+------------------------------ - ---------- --------- ---------- ---------------
+   DNUMBER MGRSSN    MGRSTARTD                                                  
+---------- --------- ---------                                                  
+Ahmad           V Jabbar          987987987 29-MAR-69                           
+980 Dallas, Houston, TX        M      25000 987654321          4 Administration 
+         4 987654321 01-JAN-95                                                  
+                                                                                
+James           E Borg            888665555 10-NOV-37                           
+450 Stone, Houston, TX         M      55000                    1 Administration 
+         4 987654321 01-JAN-95                                                  
+
+FNAME           M LNAME           SSN       BDATE                               
+--------------- - --------------- --------- ---------                           
+ADDRESS                        G     SALARY SUPERSSN         DNO DNAME          
+------------------------------ - ---------- --------- ---------- ---------------
+   DNUMBER MGRSSN    MGRSTARTD                                                  
+---------- --------- ---------                                                  
+                                                                                
+John            B Smith           123456789 09-JAN-65                           
+731 Fondren, Houston, TX       M      30000 333445555          5 Headquarters   
+         1 888665555 19-JUN-81                                                  
+                                                                                
+Franklin        T Wong            333445555 08-DEC-55                           
+638 Voss, Houston, TX          M      40000 888665555          5 Headquarters   
+
+FNAME           M LNAME           SSN       BDATE                               
+--------------- - --------------- --------- ---------                           
+ADDRESS                        G     SALARY SUPERSSN         DNO DNAME          
+------------------------------ - ---------- --------- ---------- ---------------
+   DNUMBER MGRSSN    MGRSTARTD                                                  
+---------- --------- ---------                                                  
+         1 888665555 19-JUN-81                                                  
+                                                                                
+Alicia          J Zelaya          999887777 19-JAN-68                           
+3321 Castle, Spring, TX        F      25000 987654321          4 Headquarters   
+         1 888665555 19-JUN-81                                                  
+                                                                                
+Jennifer        S Wallace         987654321 20-JUN-41                           
+
+FNAME           M LNAME           SSN       BDATE                               
+--------------- - --------------- --------- ---------                           
+ADDRESS                        G     SALARY SUPERSSN         DNO DNAME          
+------------------------------ - ---------- --------- ---------- ---------------
+   DNUMBER MGRSSN    MGRSTARTD                                                  
+---------- --------- ---------                                                  
+291 Berry, Bellaire, TX        F      43000 888665555          4 Headquarters   
+         1 888665555 19-JUN-81                                                  
+                                                                                
+Ramesh          K Narayan         666884444 15-SEP-62                           
+975 Fire Oak, Humble, TX       M      38000 333445555          5 Headquarters   
+         1 888665555 19-JUN-81                                                  
+                                                                                
+
+FNAME           M LNAME           SSN       BDATE                               
+--------------- - --------------- --------- ---------                           
+ADDRESS                        G     SALARY SUPERSSN         DNO DNAME          
+------------------------------ - ---------- --------- ---------- ---------------
+   DNUMBER MGRSSN    MGRSTARTD                                                  
+---------- --------- ---------                                                  
+Joyce           A English         453453453 31-JUL-72                           
+5631 Rice, Houston, TX         F      25000 333445555          5 Headquarters   
+         1 888665555 19-JUN-81                                                  
+                                                                                
+Ahmad           V Jabbar          987987987 29-MAR-69                           
+980 Dallas, Houston, TX        M      25000 987654321          4 Headquarters   
+         1 888665555 19-JUN-81                                                  
+
+FNAME           M LNAME           SSN       BDATE                               
+--------------- - --------------- --------- ---------                           
+ADDRESS                        G     SALARY SUPERSSN         DNO DNAME          
+------------------------------ - ---------- --------- ---------- ---------------
+   DNUMBER MGRSSN    MGRSTARTD                                                  
+---------- --------- ---------                                                  
+                                                                                
+James           E Borg            888665555 10-NOV-37                           
+450 Stone, Houston, TX         M      55000                    1 Headquarters   
+         1 888665555 19-JUN-81                                                  
+                                                                                
+
+24 rows selected.
+
+SQL> select all salary
+  2  from employee;
+
+    SALARY                                                                      
+----------                                                                      
+     30000                                                                      
+     40000                                                                      
+     25000                                                                      
+     43000                                                                      
+     38000                                                                      
+     25000                                                                      
+     25000                                                                      
+     55000                                                                      
+
+8 rows selected.
+
+SQL> select distinct slary
+  2  from employee;
+select distinct slary
+                *
+ERROR at line 1:
+ORA-00904: "SLARY": invalid identifier 
+
+
+SQL> l
+  1  select distinct slary
+  2* from employee
+SQL> 1
+  1* select distinct slary
+SQL> c/slary/salary
+  1* select distinct salary
+SQL> /
+
+    SALARY                                                                      
+----------                                                                      
+     38000                                                                      
+     43000                                                                      
+     55000                                                                      
+     30000                                                                      
+     40000                                                                      
+     25000                                                                      
+
+6 rows selected.
+
+SQL> (select distinct pnumber
+  2  from project, department,employee
+  3  where dnum=dnumber and mgrssn=ssn and lname='Smith')
+  4  union
+  5  (select distinct pnumber
+  6  from project, works_on,employee
+  7  where pnumber=pno and essn=ssn and lname='Smith');
+
+no rows selected
+
+SQL> select fname,lname
+  2  from employee
+  3  where address like '%Houston,TX%';
+
+no rows selected
+
+SQL> select fname, lname
+  2  from employee
+  3  where address like '%Houston, TX%';
+
+FNAME           LNAME                                                           
+--------------- ---------------                                                 
+John            Smith                                                           
+Franklin        Wong                                                            
+Joyce           English                                                         
+Ahmad           Jabbar                                                          
+James           Borg                                                            
+
+SQL> seelect fname, lname
+SP2-0734: unknown command beginning "seelect fn..." - rest of line ignored.
+SQL> select fname, lname
+  2  from employee
+  3  where bdate like '__5_______';
+
+no rows selected
+
+SQL> select e.fname, e.lname, 1.1 * e.salary Increased_sal
+  2  from employee e, works_on w, project p
+  3  where e.ssn=w.essn and w.pno=p.pnumber and p.pname='ProductX';
+
+no rows selected
+
+SQL> select *
+  2  from employee
+  3  where (salary between 30000 and 40000) and dno=5;
+
+FNAME           M LNAME           SSN       BDATE                               
+--------------- - --------------- --------- ---------                           
+ADDRESS                        G     SALARY SUPERSSN         DNO                
+------------------------------ - ---------- --------- ----------                
+John            B Smith           123456789 09-JAN-65                           
+731 Fondren, Houston, TX       M      30000 333445555          5                
+                                                                                
+Franklin        T Wong            333445555 08-DEC-55                           
+638 Voss, Houston, TX          M      40000 888665555          5                
+                                                                                
+Ramesh          K Narayan         666884444 15-SEP-62                           
+975 Fire Oak, Humble, TX       M      38000 333445555          5                
+                                                                                
+
+SQL> select d.dname, e.lname, e.fname, p.pname
+  2  from department d, employee e, works_on w, project p
+  3  where d.dnumber =e.dno and e.ssn=w.essn and w.pno=p.pnumber
+  4  order by d.dname,e.lname,e.fname;
+
+no rows selected
+
+SQL> select fname, lname
+  2  from employee
+  3  where super_ssn is null;
+where super_ssn is null
+      *
+ERROR at line 3:
+ORA-00904: "SUPER_SSN": invalid identifier 
+
+
+SQL> select fname, lname
+  2  from employee
+  3  where superssn is null;
+
+FNAME           LNAME                                                           
+--------------- ---------------                                                 
+James           Borg                                                            
+
+SQL> select distinct pnumber
+  2  from project
+  3  where pnumber in (select pnumber
+  4  from project,department,employee
+  5  where dnum=dnumber and mgrssn=ssn and lname ='Smith')
+  6  or
+  7  pnumber in
+  8  (select pno
+  9  from works_on, employee
+ 10  where essn=ssn and lname='Smith');
+
+no rows selected
+
+SQL> select distinct essn
+  2  from works_on
+  3  where (pno,hours) in (select pno,hours
+  4  from works_on
+  5  where essn='123456789');
+
+no rows selected
+
+SQL> select lname, fname
+  2  from employee
+  3  where salary > all (select salary
+  4  from employee
+  5  where dno=5);
+
+LNAME           FNAME                                                           
+--------------- ---------------                                                 
+Wallace         Jennifer                                                        
+Borg            James                                                           
+
+SQL> select e.fname, e.lname
+  2  from employee e
+  3  where e.ssn in (select essn
+  4  from dependent d
+  5  where e.fname = d.dependent_name and e.gender = d.gender);
+
+no rows selected
+
+SQL> select e.fname, e.lname
+  2  from employee e, dependent d
+  3  where e.ssn=d.essn and e.gender=d.gender and e.fname=d.dependent_name;
+
+no rows selected
+
+SQL> select e.fname, e.lname
+  2  from employee e
+  3  where exists (select *
+  4  from depdenent d
+  5  where e.ssn =d.essn and e.gender=d.gender and e.fname=d.dependent_name);
+from depdenent d
+     *
+ERROR at line 4:
+ORA-00942: table or view does not exist 
+
+
+SQL> select e.fname, e.lname
+  2  from employee e
+  3  where exists (select *
+  4  from dependent d
+  5  where e.ssn = d.essn and e.gender =d.gender and e.fname=d.dependent_name);
+
+no rows selected
+
+SQL> select fname, lname
+  2  from employee
+  3  where not exists (select *
+  4  from dependent d
+  5  where ssn=d.essn);
+
+FNAME           LNAME                                                           
+--------------- ---------------                                                 
+Ahmad           Jabbar                                                          
+Alicia          Zelaya                                                          
+James           Borg                                                            
+Joyce           English                                                         
+Ramesh          Narayan                                                         
+
+SQL> select fname, lname
+  2  from employee
+  3  where exists (select *
+  4  from dependent
+  5  where ssn=essn)
+  6  and
+  7  exists (select *
+  8  from department
+  9  where ssn=mgrssn);
+
+FNAME           LNAME                                                           
+--------------- ---------------                                                 
+Franklin        Wong                                                            
+Jennifer        Wallace                                                         
+
+SQL> select fname, lname
+  2  from employee
+  3  where not exists (( select pnumber
+  4  from project
+  5  where dnum=5)
+  6  except (select pno
+  7  from works_on
+  8  where ssn=essn));
+except (select pno
+*
+ERROR at line 6:
+ORA-00907: missing right parenthesis 
+
+
+SQL> select distinct essn
+  2  from works_on
+  3  where pno in (1,2,3);
+
+no rows selected
+
+SQL> select e.lname Employee_name, s.lname Supervisor_name
+  2  from employee e, employee s
+  3  where e.superssn = s.ssn;
+
+EMPLOYEE_NAME   SUPERVISOR_NAME                                                 
+--------------- ---------------                                                 
+English         Wong                                                            
+Narayan         Wong                                                            
+Smith           Wong                                                            
+Jabbar          Wallace                                                         
+Zelaya          Wallace                                                         
+Wallace         Borg                                                            
+Wong            Borg                                                            
+
+7 rows selected.
+
+SQL> select fname, lname, address
+  2  from (employee join department on dno=dnumber)
+  3  where dname='Research';
+
+FNAME           LNAME           ADDRESS                                         
+--------------- --------------- ------------------------------                  
+John            Smith           731 Fondren, Houston, TX                        
+Franklin        Wong            638 Voss, Houston, TX                           
+Ramesh          Narayan         975 Fire Oak, Humble, TX                        
+Joyce           English         5631 Rice, Houston, TX                          
+
+SQL> select fname, lname address
+  2  from (employee natural join (department as Dept(Dname,dno,mssn,msdate)))
+  3  where dname=
+  4  'Research';
+from (employee natural join (department as Dept(Dname,dno,mssn,msdate)))
+                                        *
+ERROR at line 2:
+ORA-00907: missing right parenthesis 
+
+
+SQL> select e.lname, s.lname
+  2  from employee e, employee s
+  3  where e.superssn += s.ssn;
+where e.superssn += s.ssn
+                  *
+ERROR at line 3:
+ORA-00936: missing expression 
+
+
+SQL> select sum(salary),max(salary),min(salary),avg(salary)
+  2  from employee;
+
+SUM(SALARY) MAX(SALARY) MIN(SALARY) AVG(SALARY)                                 
+----------- ----------- ----------- -----------                                 
+     281000       55000       25000       35125                                 
+
+SQL> select sum(salary), max(salary),min(salary),avg(salary)
+  2  from (employee join department on dno=dnumber)
+  3  where dname='Research';
+
+SUM(SALARY) MAX(SALARY) MIN(SALARY) AVG(SALARY)                                 
+----------- ----------- ----------- -----------                                 
+     133000       40000       25000       33250                                 
+
+SQL> select count(*)
+  2  from employee;
+
+  COUNT(*)                                                                      
+----------                                                                      
+         8                                                                      
+
+SQL> select count(*)
+  2  from employee, department
+  3  where dno=dnumber and dname='Research';
+
+  COUNT(*)                                                                      
+----------                                                                      
+         4                                                                      
+
+SQL> select count(distinct salary)
+  2  from employee;
+
+COUNT(DISTINCTSALARY)                                                           
+---------------------                                                           
+                    6                                                           
+
+SQL> select lname,fname
+  2  from employee
+  3  where (select count(*)
+  4  from dependent
+  5  where ssn=essn ) >= 2;
+
+LNAME           FNAME                                                           
+--------------- ---------------                                                 
+Smith           John                                                            
+Wong            Franklin                                                        
+
+SQL> select dno,count(*), avg(salary)
+  2  from employee
+  3  group by dno;
+
+       DNO   COUNT(*) AVG(SALARY)                                               
+---------- ---------- -----------                                               
+         1          1       55000                                               
+         5          4       33250                                               
+         4          3       31000                                               
+
+SQL> select pnumber, pname,count(*)
+  2  from project, works_on
+  3  where pnumber=pno
+  4  group by pnumber,pname;
+
+no rows selected
+
+SQL> seelct pnumber,pname, count(*)
+SP2-0734: unknown command beginning "seelct pnu..." - rest of line ignored.
+SQL> from project, works_on
+SP2-0734: unknown command beginning "from proje..." - rest of line ignored.
+SQL> select pnumber,pname,count(*)
+  2  from project,works_on
+  3  where pnumber=pno
+  4  group by pnumber,pname
+  5  having count(*)>2;
+
+no rows selected
+
+SQL> select pnumber,pname, count(*)
+  2  from project, works_on,employee
+  3  where pnumber=pno and ssn=essn and dno=5
+  4  group by pnumber, pname;
+
+no rows selected
+
+SQL> select dnumber, count(*)
+  2  from department,employee
+  3  where dnumber=dno and salary>40000 and (select dno
+  4  from employee
+  5  group by dno
+  6  having count(*)>5);
+having count(*)>5)
+                 *
+ERROR at line 6:
+ORA-00936: missing expression 
+
+
+SQL> spool off

@@ -1,0 +1,22 @@
+.Open Review Questions 7
+ What is the syntax for writing an attribute in an UML class?
+Show how you would say that a `Person` (class) has a public attribute `age`
+which is a number and starts at zero.
+Which parts do you omit in a typical rough domain model?
+ Explain the following Domain Model:
+
+.Image 07domain.gif [Boxes C and B connected by A ...]
+
+ Draw a diagram that shows that a class `Person` has a unique associated `Address`. Redraw
+this to show that a Person has an attribute `address` that has type `string`.
+ What is a derived attribute? How do you show a derived attribute?  Give an example. 
+ Give a guideline for choosing between an attribute and an association in a domain model.
+ In which UP phase do you start a domain model, and how often do you
+expect to update it?
+
+ Here are two types of diagram, use case and domain model. What is A, B, C, X, Y?
+What is the relation between X and Y?
+
+.Image 07diagram.gif [Box A connected to box B by line C plus Stickman X connected to oval Y] 
+ 
+.Close

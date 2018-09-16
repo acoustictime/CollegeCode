@@ -1,0 +1,804 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/18q.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:54:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+Questions and Answers on Domain Model III
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="18q.txt">Text Version</A>]
+ 18q.html 
+Wed Jan 11 07:26:03 PST 2012
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="18q.html#Questions and Answers on Domain Model III">Questions and Answers on Domain Model III</A>
+<li><a href="18q.html#Chapter 28 pages 479 -- DFD">: Chapter 28 pages 479 -- DFD</A>
+<li><a href="18q.html#How do Petri Nets work?">: How do Petri Nets work?</A>
+<li><a href="18q.html#Chapter 000 pages 475-500 -- state machine and designing web applications">: Chapter 000 pages 475-500 -- state machine and designing web applications</A>
+<li><a href="18q.html#Chapter 29 pages 485-488 -- State Machine diagram">: Chapter 29 pages 485-488 -- State Machine diagram</A>
+<li><a href="18q.html#Chapter 31 pages 501-539 -- Domain">: Chapter 31 pages 501-539 -- Domain</A>
+<li><a href="18q.html#Chapter 32 pages 32.3 -- Domain Models and Design Patterns">: Chapter 32 pages 32.3 -- Domain Models and Design Patterns</A>
+<li><a href="18q.html#Chapter 31 pages 501 - 533 -- Concept vs Element">: Chapter 31 pages 501 - 533 -- Concept vs Element</A>
+<li><a href="18q.html#Chapter 31 pages 501-539 : Domain Model">: Chapter 31 pages 501-539 : Domain Model</A>
+<li><a href="18q.html#Chapter 31 pages 501-535 -- Domain Model Refinement">: Chapter 31 pages 501-535 -- Domain Model Refinement</A>
+<li><a href="18q.html#Chapter 31 pages 501-533 -- Responsibilities">: Chapter 31 pages 501-533 -- Responsibilities</A>
+<li><a href="18q.html#Chapter 31 pages 501-520 -- Superclasses &amp; Generalization">: Chapter 31 pages 501-520 -- Superclasses &amp; Generalization</A>
+<li><a href="18q.html#Chapter 31 pages 508 -- Conceptual Subclass">: Chapter 31 pages 508 -- Conceptual Subclass</A>
+<li><a href="18q.html#Chapter 31 pages 508-510 -- When to Define a Conceptual Subclass">: Chapter 31 pages 508-510 -- When to Define a Conceptual Subclass</A>
+<li><a href="18q.html#Chapter 506 pages 508 -- Conceptual Superclasses and Subclasses">: Chapter 506 pages 508 -- Conceptual Superclasses and Subclasses</A>
+<li><a href="18q.html#Chapter 31 pages 508 -- subclass">: Chapter 31 pages 508 -- subclass</A>
+<li><a href="18q.html#Chapter 31 pages -- Subclasses">: Chapter 31 pages -- Subclasses</A>
+<li><a href="18q.html#Chapter 32 pages 501-539 -- Conceptual Subclass -- Conceptual Superclass -- partition">: Chapter 32 pages 501-539 -- Conceptual Subclass -- Conceptual Superclass -- partition</A>
+<li><a href="18q.html#Chapter 31 pages 501-539 -- Domain Model Refinement -- sub and superclasses">: Chapter 31 pages 501-539 -- Domain Model Refinement -- sub and superclasses</A>
+<li><a href="18q.html#Chapter pages 511 -- Class Hierarchy -- generalization">: Chapter pages 511 -- Class Hierarchy -- generalization</A>
+<li><a href="18q.html#Chapter 31 pages 513-515 -- Abstract class and multiple payments">: Chapter 31 pages 513-515 -- Abstract class and multiple payments</A>
+<li><a href="18q.html#Chapter 31 pages 513 -- Abstract Conceptual Classes">: Chapter 31 pages 513 -- Abstract Conceptual Classes</A>
+<li><a href="18q.html#Chapter 31 pages 513 -- Abstract Conceptual Classes">: Chapter 31 pages 513 -- Abstract Conceptual Classes</A>
+<li><a href="18q.html#Chapter 31 pages 514 -- Abstract Conceptual Class">: Chapter 31 pages 514 -- Abstract Conceptual Class</A>
+<li><a href="18q.html#Chapter 31 pages 514 -- Abstract Conceptual Class">: Chapter 31 pages 514 -- Abstract Conceptual Class</A>
+<li><a href="18q.html#Chapter 31 pages 515 -- State">: Chapter 31 pages 515 -- State</A>
+<li><a href="18q.html#Chapter 31 pages 518-519 -- Association Class Diagram Explanation">: Chapter 31 pages 518-519 -- Association Class Diagram Explanation</A>
+<li><a href="18q.html#Chapter 31.11 Pages 519 -- Aggregation">: Chapter 31.11 Pages 519 -- Aggregation</A>
+<li><a href="18q.html#Chapter 31 pages 520 -- Showing composition?">: Chapter 31 pages 520 -- Showing composition?</A>
+<li><a href="18q.html#Chapter 31 pages 521 -- Compositions">: Chapter 31 pages 521 -- Compositions</A>
+<li><a href="18q.html#Chapter 31 pages 521 -- Compositions">: Chapter 31 pages 521 -- Compositions</A>
+<li><a href="18q.html#Chapter 31 pages 521 -- Composition">: Chapter 31 pages 521 -- Composition</A>
+<li><a href="18q.html#Chapter 31 pages 519 -- Composition">: Chapter 31 pages 519 -- Composition</A>
+<li><a href="18q.html#Chapter 31 pages 519 -- composite aggregation">: Chapter 31 pages 519 -- composite aggregation</A>
+<li><a href="18q.html#Chapter 31 pages 521-522 -- Time Intervals">: Chapter 31 pages 521-522 -- Time Intervals</A>
+<li><a href="18q.html#Chapter 31 pages 524 -- Derived">: Chapter 31 pages 524 -- Derived</A>
+<li><a href="18q.html#Chapter 31 pages 524 -- Derived Elements">: Chapter 31 pages 524 -- Derived Elements</A>
+<li><a href="18q.html#Chapter 31.15 pages 524-525 Qualified Association.">: Chapter 31.15 pages 524-525 Qualified Association.</A>
+<li><a href="18q.html#Chapter 32 pages 501-539 -- Reflexive Associations">: Chapter 32 pages 501-539 -- Reflexive Associations</A>
+<li><a href="18q.html#Chapter 31.16 pages 525 -- qualified associations">: Chapter 31.16 pages 525 -- qualified associations</A>
+<li><a href="18q.html#Chapter 32 pages 529 -- Concepts vs Associations">: Chapter 32 pages 529 -- Concepts vs Associations</A>
+<li><a href="18q.html#Chapter 31 pages 521 -- Time Interval">: Chapter 31 pages 521 -- Time Interval</A>
+<li><a href="18q.html#Chapter 31 pages 522 -- What is a Moment Interval?">: Chapter 31 pages 522 -- What is a Moment Interval?</A>
+<li><a href="18q.html#Chapter 31 pages 524 -- Derived Elements">: Chapter 31 pages 524 -- Derived Elements</A>
+<li><a href="18q.html#Chapter 31 pages 524-526 : Derived Attributes &amp; Qualifiers">: Chapter 31 pages 524-526 : Derived Attributes &amp; Qualifiers</A>
+<li><a href="18q.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="Questions and Answers on Domain Model III">Questions and Answers on Domain Model III</A></H1><ol class=Section>
+<H2><a name="Chapter 28 pages 479 -- DFD">Chapter 28 pages 479 -- DFD</A></H2>
+Are data flow diagrams (activity diagrams in UML) a high level representation of the SUD?
+<p>
+well.... first activity diagrams and data flow diagrams are quite different in what they show and what they mean
+[<A href="http://cse.csusb.edu/dick/papers/rjb04bDFDs/"> http://cse.csusb.edu/dick/papers/rjb04bDFDs/ </A>]
+<p>
+I would recommend using DFDs for analyzing existing systems (CSCI372) rather than designing software.
+They are good for working out, at a high level, what goes on in an enterprise prior to working out what needs fixing.
+<p>
+Using an activity diagram to design software is returning to the early 1960s.  OK for small programs and
+detailed work on algorithms.
+<p>
+Neither are any help in soting out the classes and packages needed in modern OO Software.
+<p>
+<H2><a name="How do Petri Nets work?">How do Petri Nets work?</A></H2>
+If you really want to know try
+[<A href="http://csci.csusb.edu/dick/maths/math_76_Concurency.html#Petri Nets"> Petri Nets in math_76_Concurency </A>]
+in my notes on Mathematics.  Note:  not for the faint hearted or CS375.
+<p>
+<H2><a name="Chapter 000 pages 475-500 -- state machine and designing web applications">Chapter 000 pages 475-500 -- state machine and designing web applications</A></H2>
+my understanding of a state machine in a web project would be like what
+page the user is currently navigated to?
+<p>
+Good point.  One use of a state machine is to show the navigation through a
+web site.  Each state is associated with a web page and each user
+click/form fill/.... is an
+event.  Oddly, the people who invented UML don't mention this application.
+<p>
+However I think it very helpful to document complex user interactions with
+a state
+machine.  It is is easy to do, clarifies the design, and doesn't really
+break
+the semantics of the diagram.
+<p>
+<H2><a name="Chapter 29 pages 485-488 -- State Machine diagram">Chapter 29 pages 485-488 -- State Machine diagram</A></H2>
+Can you explain with more details State-Independent and State-Dependent
+Objects in State Machine Diagrams?
+<p>
+No time, sadly.... implementation is mention in several CSci classes and
+they are a strong part of all CSci theory.
+<p>
+In practice: keep it simple and do it in groups!
+<p>
+<p>
+<H2><a name="Chapter 31 pages 501-539 -- Domain">Chapter 31 pages 501-539 -- Domain</A></H2>
+For whatever reason when I read these chapters it almost feels like I am constantly going in circles to modify and re-apply I take it this is common in Modeling? And is this really what takes place when one is creating something to a stakeholders interest?
+<p>
+Yes.... each circle is called an iteration...   Note: you can try to get
+it right with out iterating but these projects either have to be
+small or lucky.
+<p>
+<H2><a name="Chapter 32 pages 32.3 -- Domain Models and Design Patterns">Chapter 32 pages 32.3 -- Domain Models and Design Patterns</A></H2>
+Can one develop domain models using design patterns such as Gof or GRASP?
+and If so, why can't we use them earlier?
+<p>
+GRASP and GoF are about <span class="InlineFormula">designing</span> solutions.  Domain models are about
+<span class="InlineFormula">problems</span> not solutions.  So GRASP and GoF are not the right tools.
+<p>
+Analogy:  GRASP and GoF are tools for sculpting software.  Domain model
+is like trying to find a good view for a landscape painting.
+<p>
+However the GoF inspired people to look for pattern languages for the
+domain
+model.  And they have been published and posted to the web.
+<p>
+Some of these are in Larman's book.  For example:  we often find that
+a set of objects share one of a number of descriptions.  So the model
+has each item having a particular description.
+<p>
+<H2><a name="Chapter 31 pages 501 - 533 -- Concept vs Element">Chapter 31 pages 501 - 533 -- Concept vs Element</A></H2>
+Message
+What are the differences between a Concept and an Element?
+<p>
+I never used the word <span class="InlineFormula">element</span> this course!   What have I missed?
+<p>
+<H2><a name="Chapter 31 pages 501-539 : Domain Model">Chapter 31 pages 501-539 : Domain Model</A></H2>
+In an earlier chapter when domain modeling was first introduced the author
+gave the example of how he used such a model to help him understand a
+business (p.137). Should this still be a primary motive for creating a
+domain model? Is so, can we make our domain model as simple as needed in
+order to understand and grasp the concepts we are modeling?
+<p>
+Yes the first reason for drawing a domain model is to improve
+your grasp of the business.  But the next reason is to act as
+a visual glossary of <span class="InlineFormula">business</span> terms.  Then it becomes the inspiration
+for classes in your design.  And it ends up as a tool for others
+to answer the question: &quot;what were they thinking of&quot;.
+<p>
+So you probably have to go on beyond understanding and grasping
+the concepts.   There is also a trap:  there is know way to
+know that you <span class="InlineFormula">understand the concepts</span>.  You may be tempted to
+stop to early (keeping it simple, rushing to design), or
+to go on too long (paralysis by analysis).  Your domain model
+is tested by peer and stakeholder review plus design and coding.
+<p>
+Expect your understanding of the client's domain to be
+badly shaken by the first tests carried out by users and stakeholders.
+<p>
+I'd like to give solid rules but I don't know any.
+<p>
+<H2><a name="Chapter 31 pages 501-535 -- Domain Model Refinement">Chapter 31 pages 501-535 -- Domain Model Refinement</A></H2>
+We have design some object that is software level, not conceptual any more,
+why do we still need to refine Domain Model?
+<p>
+Good question -- you've got a working tested set of classes in your
+software, is it worth rethinking the domain model and then seeing how that
+maps into changes in the design?
+<p>
+Several methodologists like to avoid all documentation -- the believe
+in the code and nothing but the code.  People like this will say you
+should never go back.
+<p>
+Others, at the other extreme will tell you that this is the organizational
+process, that the documentation is an essential part, that all kinds
+of bad things will happen to you, you team, the company, and/or the
+world if you don't redraw the domain model.
+<p>
+Their is, in each iteration of a particular project, in a particular
+enterprise, a
+<A name="sweet spot" class="Key"> sweet spot </A>
+between the two extremes: one that lets you move on quickly
+with out messing things up.
+<p>
+I don't know how to calculate this point.
+<p>
+For myself I enjoy domain modeling -- especially untidy and personal
+domain models so I do more than most people.
+<p>
+<p>
+<H2><a name="Chapter 31 pages 501-533 -- Responsibilities">Chapter 31 pages 501-533 -- Responsibilities</A></H2>
+Throughout chapter 31, Domain Model Refinement does not mention any implementation of GRASP principles or GoF patterns. Wouldn't  domain model be useless without the guidance of GRASP and GoF for the implementation of abstract super classes and subclasses?
+<p>
+GRASP is about design. Domain is about reality.  Two different ways of thought. Different diagrams. Different!
+<p>
+<H2><a name="Chapter 31 pages 501-520 -- Superclasses &amp; Generalization">Chapter 31 pages 501-520 -- Superclasses &amp; Generalization</A></H2>
+Can there be super classes put into other super classes or is this over
+complicating it...
+think of your example earlier black lab -&gt; Dog -&gt; Mammal -&gt; living thing
+<p>
+It is absolutely typical that you have a chain of superclasses.
+<p>
+In Java for example everything ends up at Object.
+<p>
+<H2><a name="Chapter 31 pages 508 -- Conceptual Subclass">Chapter 31 pages 508 -- Conceptual Subclass</A></H2>
+From the guidelines given in the book, which is the most influential in the
+decision of when to define a conceptual subclass?
+<p>
+All of them... any one can make it worthwhile to create a subclass.
+<p>
+They are really all parts of a single idea: objects in a subclass
+must be special kinds of objects in the superclass.
+<p>
+<H2><a name="Chapter 31 pages 508-510 -- When to Define a Conceptual Subclass">Chapter 31 pages 508-510 -- When to Define a Conceptual Subclass</A></H2>
+Can you please clarify that section. The book is a little vague on when not
+to use super/subclasses.
+<p>
+Don't waste your time making distinctions that make no difference to
+the current iteration of the software.
+<p>
+<li><span class=Formula>A difference that makes no difference, is not a difference.</span>
+(Mr Spock and Wittgenstein).
+<p>
+<H2><a name="Chapter 506 pages 508 -- Conceptual Superclasses and Subclasses">Chapter 506 pages 508 -- Conceptual Superclasses and Subclasses</A></H2>
+Can you explain a little bit better Conceptual Superclasses and Subclasses, and give a small example?
+<p>
+<H2><a name="Chapter 31 pages 508 -- subclass">Chapter 31 pages 508 -- subclass</A></H2>
+Can you show a example of a subclass? Drawing a diagram would be amazingly helpful.
+<p>
+Example:  A Student is a special kind of Person.
+<li><span class=Formula>Student &sube; Person</span>
+<p>
+Demo on board.
+<p>
+Exercise:  Draw this in the UML....
+<li><span class=Formula>Faculty are People too.</span>
+<li><span class=Formula>Faculty &sube; Person</span>
+<p>
+Exercise:   Think up any other example, in the real world of a
+subclass and a superclass pair.
+<p>
+<H2><a name="Chapter 31 pages -- Subclasses">Chapter 31 pages -- Subclasses</A></H2>
+Would the inclusion of subclasses in a domain model signify an effort to reduce coupling?
+<p>
+No.  In a domain there is no coupling!
+<p>
+Coupling is one of the guidelines we use in designing classes.  And subclasses
+are highly coupled to their superclasses.  So they may have the reverse effect.
+<p>
+<H2><a name="Chapter 32 pages 501-539 -- Conceptual Subclass -- Conceptual Superclass -- partition">Chapter 32 pages 501-539 -- Conceptual Subclass -- Conceptual Superclass -- partition</A></H2>
+<br><ol class="List">
+<li>When is a correct scenario to define a Conceptual Subclass?
+<li>When to define a conceptual superclass?
+<li>When do partition a class into subclasses?
+</ol><br>
+<p>
+When you <span class="InlineFormula">notice</span> one in the domain.
+<p>
+Example: stakeholders talk about debits, credits and transfers as three
+kinds of transaction.
+<p>
+Example: You've been working on understanding Widgets at Universal Widgets.
+You discover that they also sell &quot;Wodgets&quot;......  and then they say, but
+&quot;A wodget is just a special kind of widget&quot;.
+<p>
+Example: The users don't like the fact that your program treats undergraduate
+students the same as graduate students.  (Note -- but in this case you've
+probably got a hierarchy of student states, not of students. An
+undergraduate matures into a graduate....)
+<p>
+More below.
+<p>
+<H2><a name="Chapter 31 pages 501-539 -- Domain Model Refinement -- sub and superclasses">Chapter 31 pages 501-539 -- Domain Model Refinement -- sub and superclasses</A></H2>
+Do all refined domain models need to have superclasses and subclasses?
+<p>
+Nope.   Some are too simple.  Proof: a domain with one class can have no
+generalizations.
+<p>
+<H2><a name="Chapter pages 511 -- Class Hierarchy -- generalization">Chapter pages 511 -- Class Hierarchy -- generalization</A></H2>
+The transition into the hierarchy model confuses me. Can you give tips or
+hints to help map the classes to the proper levels?
+<p>
+It is not a question of looking for prescribed levels.  It is more a matter
+listening and talking to stakeholders and drawing out how they think.
+<p>
+In fact, you may already have got a generalization in one of your models
+already without noticing it:  they show up with two symptoms.  The
+association is optional to one ( 0..1------1 ) and there is an adjective
+in the name of the class at the optional end.  Then you can use Larman's
+tests.
+<p>
+It is one of those skills that get better when you do it.
+<p>
+<p>
+<H2><a name="Chapter 31 pages 513-515 -- Abstract class and multiple payments">Chapter 31 pages 513-515 -- Abstract class and multiple payments</A></H2>
+It is not uncommon for a payment to involve multiple payment methods.  For
+example, a customer might pay cash for part and the balance by credit card.
+How would you resolve this in UML?
+<p>
+Fairly simply.  The domain model would show several payments are
+possible for one sale.  In the Design, I strongly expect to use the <a href="#GoF">GoF</A>
+Composite pattern -- allowing for a composite payment to be made up
+of a series of simple ones.
+<p>
+<H2><a name="Chapter 31 pages 513 -- Abstract Conceptual Classes">Chapter 31 pages 513 -- Abstract Conceptual Classes</A></H2>
+In the definition it says that every member of a class C must also be a
+member of a subclass, then class C is called an abstract conceptual class.
+So then a abstract conceptual class is a class that must have a subclass?
+<p>
+Yes... and more.... all its subclasses must exhaust the possibilities.  No
+member of C is not in one of it's subclasses.
+<p>
+<H2><a name="Chapter 31 pages 513 -- Abstract Conceptual Classes">Chapter 31 pages 513 -- Abstract Conceptual Classes</A></H2>
+Can you give us a good example of what they mean by an abstract conceptual
+class?
+<p>
+In Euclid's geometry you have Scalene, isosceles, and equilateral triangles.
+They are all triangles. Every triangle has to be either scalene, isosceles,
+or equilateral.
+<p>
+Or conics:  every conic section is an ellipse, hyperbola, or a parabola.
+And
+each ellipse, hyperbola, or parabola is a conic section.
+<p>
+Contra-wise: a circle is an ellipse but some ellipses are not circular and so
+we would not call Ellipse an abstract class.  Some Ellipses are
+not circular.
+<p>
+Exercise: Think of an abstract superclass which has two subclasses.
+<p>
+<H2><a name="Chapter 31 pages 514 -- Abstract Conceptual Class">Chapter 31 pages 514 -- Abstract Conceptual Class</A></H2>
+When displaying abstract classes is it considered ideal to use Italics?
+<p>
+I dislike this.... especially with hand drawn diagrams.  I taught myself to use
+italic handwriting (Chancery!) when I was 15 in the hope of making it readable.....
+And so it does not work for me.  And I forget how often I have had to stare
+at the name of a class to see if it is abstract or not.... BUT -- it
+takes time and space to put
+<pre> 		{abstract}</pre>
+in the box.
+<p>
+Sorry -- no real solution here!
+<p>
+<p>
+<H2><a name="Chapter 31 pages 514 -- Abstract Conceptual Class">Chapter 31 pages 514 -- Abstract Conceptual Class</A></H2>
+Can you explain what is really going on in figure 31.11? I don't understand how that changes the meaning of diagram(a) to diagram(b).
+<p>
+<p>
+Figure 31.11 (a) shows three subsets of payment with space all round them.  It
+indicates that Payment objects can exist that are neither CashPayments,
+CreditPayments, or CheckPayments.
+<p>
+Figure 31.11 (b) cuts up Payment into three exclusive types.
+It shows that any Payment <span class="InlineFormula">must be one</span> of the three subclasses: Cash, Credit, Check.
+<p>
+This is the most important effect of labeling a class {abstract} in a domain
+model.
+<p>
+Mathematically (b) shows a cover and (a) some subsets.
+<p>
+By the way..., in theory the subsets may overlap unless you label the triangular
+arrowhead {disjoint} but in practice people assume that the subsets are disjoint.
+<p>
+<H2><a name="Chapter 31 pages 515 -- State">Chapter 31 pages 515 -- State</A></H2>
+Is the state diagram referred to on page 515, the same as the state machine diagram referred to on page 489?
+<p>
+Yes.
+<p>
+<H2><a name="Chapter 31 pages 518-519 -- Association Class Diagram Explanation">Chapter 31 pages 518-519 -- Association Class Diagram Explanation</A></H2>
+I am a bit thrown off by the diagram on 31.17 regarding the Incarceration
+diagram. I understand the association idea but why is the idea of Married to
+even involved in the diagram? Also why is the married portion under
+JailTerm and why is it related to itself?
+<p>
+Oddly I did not notice this until a few minutes ago.  And suffered a bit
+of a jolt.  I suspect a rather
+sad joke.   Marriage is certainly between two people... but I suspect
+calling
+it a JailTerm is in bad taste.   And technically I'm not to happy with one
+association class managing two very different relationships.
+<p>
+<H2><a name="Chapter 31.11 Pages 519 -- Aggregation">Chapter 31.11 Pages 519 -- Aggregation</A></H2>
+Also I don't really understand Aggregation, it seems as though theirs
+really no point to them. Can you explain their purpose?
+<p>
+Once upon a time we used it to show a pointer in a design diagram.
+No longer.... just an arrow will do.
+<p>
+You, me, and the Three Amigos all agree that the open diamond is a waste of time
+and money.
+<p>
+But you are going to meet people who think it means something.  Just don't
+waste time and energy discussing it!
+<H2><a name="Chapter 31 pages 520 -- Showing composition?">Chapter 31 pages 520 -- Showing composition?</A></H2>
+Since the author mentioned that plenty of time has been wasted by identifying and illustrating compositions, should we just refrain from using them altogether?
+<p>
+Yes, please!
+<p>
+The only purpose is as an alternative to writing &quot;Has&quot; on the association.
+<p>
+<H2><a name="Chapter 31 pages 521 -- Compositions">Chapter 31 pages 521 -- Compositions</A></H2>
+Can composition be navigable in both directions?
+<p>
+Yes.  Composition means &quot;part of&quot; and if you get hold of a part of something you have also got hold
+of the whole.  Like grabbing someones arm and pulling them towards you.
+<p>
+In a design composition means storing the object inside another one.
+<p>
+<p>
+<H2><a name="Chapter 31 pages 521 -- Compositions">Chapter 31 pages 521 -- Compositions</A></H2>
+Will composition be considered a synonym of aggregation?
+<p>
+No.  Quite different..... in a domain, aggregation is meaningless but composition implies
+whole-part.  In a design, people use aggregation to indicate a pointer.  It is old-fashioned
+but looks good.
+<p>
+<H2><a name="Chapter 31 pages 521 -- Composition">Chapter 31 pages 521 -- Composition</A></H2>
+what are some of the ways to identify a composition?
+<p>
+Firstly don't waste time and worry on whether an association between two
+classes
+is a composition, and aggregation, or just a plain association.   It is
+better to spend time getting the multiplicities and constraints right!
+<p>
+Second, compositions are rare -- try the demolition test next.
+<H2><a name="Chapter 31 pages 519 -- Composition">Chapter 31 pages 519 -- Composition</A></H2>
+Could you show an example of Composition?
+<p>
+Jack Brown Hall is composed of rooms... try extracting one undamaged.
+Demolish JBH and you also demolish the rooms.
+<p>
+It is not always that clear cut... My car is composed of many parts
+but some of them can be recycled....  but I'll probably use composition.
+<p>
+How about a restaurant and its clientele?
+<H2><a name="Chapter 31 pages 519 -- composite aggregation">Chapter 31 pages 519 -- composite aggregation</A></H2>
+I'm confused, composite aggregation can create and destroy objects?
+<p>
+Yes and no.   The full diamond indicates a class that is responsible
+for objects at the other end... So much so that it has life-and-death
+control over them.  They will die if their associated &quot;parent&quot; dies.
+<p>
+This meaning makes a lot more sense when you know that the diamond
+used to be used to mean an object that
+stored the data that were the other
+objects.  The open diagram indicated a pointer or reference to the data
+that was stored elsewhere.  Composition was physical containment so
+when you deleted the parent, the Children sere deleted with it.  The
+UML tried to avoid this physical memory model and the result is a little
+abstract.
+<p>
+<H2><a name="Chapter 31 pages 521-522 -- Time Intervals">Chapter 31 pages 521-522 -- Time Intervals</A></H2>
+I had trouble following the section on time intervals, can you clarify this section?
+<p>
+In my training in conceptual modeling I was taught to just ignore times and dates,
+because every object in your model is changing and so just about every one has
+a time+date associated with it!  WE told, very strongly not to have a box labelled
+&quot;TIME&quot; because it would be linked to everything.  Instead treat it as a data
+type (like Number and Money) and time dependent objects would have attributes
+<pre> 		birth: Time</pre>
+<pre> 		death: Time</pre>
+<pre> 		graduation: Time</pre>
+<pre> 		marriage: Time</pre>
+<pre> 		divorce:Time</pre>
+<p>
+Now this collides with another heuristic used in conceptual modelling --
+<li>(<a name="DRY">DRY</A>): <span class=Formula>No repeating groups</span>
+<p>
+So one common pattern is to split off the time dependent data from its
+parent and discovering a concept as an entity:
+<li><span class=Formula>Person (2)---(*) Marriage (*)----(1)TimeInterval</span>
+<p>
+(in a standard monogamous model).
+<p>
+So you can expect this.  Indeed this is a common domain pattern
+<img src="colored.uml.gif" alt="[Event, Moments, Entities, and Properties]">
+<p>
+<H2><a name="Chapter 31 pages 524 -- Derived">Chapter 31 pages 524 -- Derived</A></H2>
+Are derived attributes the same as attributes in other classes? (e.i. generalization, Teacher-&gt;Person).
+<p>
+No. This is not C++.
+<p>
+If we derive classes (C++ terminology) we inherit the attributes and
+they were they would not be shown.  Thus, if a Person has a name
+and Teachers are people then they automatically have a name.  If you show 'name'
+in both classes then you have said that Teachers have a special name in addition
+to their name as a person.  For example
+<pre>		Author is a special kind of Person</pre>
+<pre> 		Author has a nom-de-plume</pre>
+<p>
+<H2><a name="Chapter 31 pages 524 -- Derived Elements">Chapter 31 pages 524 -- Derived Elements</A></H2>
+I know when you have a derived element you are not suppose to put it in a diagram, so where do you put the information on a derived element,in the specifications?
+<p>
+The UML permits you to write the value as if it was an initial value
+<pre> 		attribute : Type = initial</pre>
+<pre> 		attribute : Type = value</pre>
+The problem is what happens when the derived value is a complex formula
+<li><span class=Formula>root1 = (-b + &radic; ( b**2 - 4*a* c))/(2*a).</span>
+<p>
+(This is typical of mathematical and scientific domains such as games).
+<p>
+Or worse, is the result of a complex calculation involving  half a dozen
+conditions and two dozen other attributes.   No kidding:  this is what you find in
+Business domains.
+<p>
+<H2><a name="Chapter 31.15 pages 524-525 Qualified Association.">Chapter 31.15 pages 524-525 Qualified Association.</A></H2>
+Can you explain more about qualified association and Reflexive Association? What is the difference between add a qualifier or skip it?
+<p>
+They are quite different.
+<p>
+I've never found a use for a qualified association -- perhaps I've just been lucky.
+In C++ you would use the STL <span class="InlineFormula">map</span> class to implement a qualified association.
+Not in any quizzes or finals for this class.
+<p>
+I have seen a lot of
+<A name="Reflexive associations" class="Key"> Reflexive associations </A>
+but there are few things to learn about them.  (1) they are legal, (2) they
+are common, (3) mathematicians study them under the heading of &quot;Graph theory&quot;,
+(4) sometimes you can clarify them by &quot;reifying&quot; them into an object -- just like
+many-many associations.
+<p>
+<H2><a name="Chapter 32 pages 501-539 -- Reflexive Associations">Chapter 32 pages 501-539 -- Reflexive Associations</A></H2>
+What is the purpose of a reflexive association? Can you provide a logical
+and useful example of one?
+<p>
+Reflexive associations happen all the time... once you allow your self to
+see them.
+<p>
+Example: I track publications -- papers and books about software
+development.
+Each publication has references to other publications.  So &quot;Refers To&quot;
+is an association between &quot;Publication&quot; and &quot;Publication&quot;.
+<p>
+Example: Artists produce CDs,  and then another CD.  So, you've got a
+reflexive association &quot;Next&quot; connecting CD to CD.
+<p>
+Exercise: Draw a conceptual model with class &quot;Person&quot; and association
+&quot;Parenthood&quot;.
+<p>
+Exercise: Draw a conceptual model with class &quot;Employee&quot; and relation
+&quot;Boss&quot;.
+<p>
+<H2><a name="Chapter 31.16 pages 525 -- qualified associations">Chapter 31.16 pages 525 -- qualified associations</A></H2>
+Is a qualifier and a qualified association the same thing?
+NO!
+<p>
+<H2><a name="Chapter 32 pages 529 -- Concepts vs Associations">Chapter 32 pages 529 -- Concepts vs Associations</A></H2>
+Could both roles in Concepts and Roles in Association be used in the same
+project or should only one be used through out the project?
+<p>
+Personally I never use Concepts when a Role will do.  Exception
+with time varying roles below.
+<p>
+<H2><a name="Chapter 31 pages 521 -- Time Interval">Chapter 31 pages 521 -- Time Interval</A></H2>
+Is a time interval only associated with price or are their other examples
+in which a time interval might be needed?
+<p>
+Time intervals and moments are part of a very common &quot;Analysis Pattern&quot;
+documented
+by Coad:
+[<A href="colored.uml.gif"> colored.uml.gif </A>]
+In words: real objects play different roles at different times:  a person
+can be a student at one time and a teacher at another time.
+<p>
+One hint -- avoid having a universal &quot;Time&quot; or &quot;Date&quot; class because
+it will rapidly become attached to every class you draw:-(   Just
+show time periods for interesting cases and other wise treat time as
+a data type like <span class="InlineFormula">int</span> or <span class="InlineFormula">string</span> or <span class="InlineFormula">money</span>.
+<H2><a name="Chapter 31 pages 522 -- What is a Moment Interval?">Chapter 31 pages 522 -- What is a Moment Interval?</A></H2>
+It is a time interval or a particular moment of time.  The term was created
+by Coad to cover both possibilities.  Some things happen at a particular
+time (registration for example) and most roles last for an interval (being
+registered in this section, for example.
+<p>
+Just a bit of jargon.
+<p>
+<p>
+<H2><a name="Chapter 31 pages 524 -- Derived Elements">Chapter 31 pages 524 -- Derived Elements</A></H2>
+Can you explain when its right to use a derived element?
+<p>
+Use them when they are derived!  If you know how to calculate
+an attribute using the other data in an object then it is
+derived.  Put the calculation in your glossary or business rules
+and put a slash(/) in front of it on the diagram.
+<p>
+Example -- number_of_children in a family can be found by counting them.
+<p>
+Example -- Score on the final is derived from the sum of the scores on the
+questions.
+<p>
+<H2><a name="Chapter 31 pages 524-526 : Derived Attributes &amp; Qualifiers">Chapter 31 pages 524-526 : Derived Attributes &amp; Qualifiers</A></H2>
+At what point could a derived element be considered a qualifier for an
+association?
+<p>
+I hope it never will!
+<p>
+They are two independent ideas.  In theory they might collide.
+<p>
+But I think this is because the notation for qualifiers is badly thought
+out.  The notation for qualifiers has an attribute purely
+to indicate the class if subscript or identified needed
+to get a single object at the other end.  The attribute
+is not really a real attribute.
+<p>
+Fowler (UML Distilled, 3rd edn, pp74-75) gets it right.
+He doesn't use an attribute in his qualified
+associations: he uses a class name -- which makes a lot more sense.
+In a domain model, he says, &quot;I use the qualifier construct only to
+show constraints along th lines of 'single OrderLine per ProductOnOrder'&quot;.
+<p>
+I won't be testing your knowledge of these two ideas.  You can now
+skip to the <a href="#next">next</A> question if you wish. Here is my rant
+on the topic of qualified associations in the UML:
+<hr><ol class="Box">
+Suppose we have a Roster of Students and the students are identified
+on a Roster by the line number.  Then we can write
+<pre> 	void print() // print complete roster.</pre>
+<pre> 	{	int lineNumber;</pre>
+<pre> 		for(lineNumber=1; lineNumber&lt;=numberOfLines;</pre>
+lineNumber++)//...
+<pre> 	}//print</pre>
+And the qualifier notation implies that the &quot;getStudent&quot; operation
+for a roster must include a line number:
+<pre> 	Student getStudent(int lineNumber)</pre>
+<p>
+If you use the official UML notation then <span class="InlineFormula">lineNumber</span> starts to look
+like an attribute of the class rather than a local variable
+in a method.  Like this:
+<pre> 	int lineNumber;</pre>
+<pre> 	void print()</pre>
+<pre> 	{</pre>
+<pre> 		for(lineNumber=1; lineNumber&lt;=numberOfLines;</pre>
+lineNumber++)//...
+<pre> 	}//print</pre>
+And then in a moment of madness(?) you might decide that the
+<span class="InlineFormula">lineNumber</span> attribute is derived and it can no longer change --
+its value is fixed.  Suddenly you've broken the loop in the <span class="InlineFormula">print</span>
+method.
+<p>
+In my humble opinion qualifiers are too clever and the notation
+is actually badly formulated:  It entangles an attribute in the mix.
+Qualifiers are attempting to express an array or map.  But to
+indicate the range of subscripts in the array (the domain of the map)
+we are forced to invent an attribute and show that.  It was the
+intuitive way to do it.  Let me make an analogy: in C++/Java we
+write
+<pre> 	char digit[10];</pre>
+to declare 10 digits.  If the UML notation was used we would write
+<pre> 	int i:0..9; //illegal C++ and Java</pre>
+<pre> 	char digits[i];</pre>
+<p>
+If we want a map to encode the relation between Rosters and Students
+(Each Student has a unique Student Id on a Roster)
+in C++ we write
+<pre> 	class Roster{</pre>
+<pre> 	//...</pre>
+<pre> 		map&lt;StudentId, Student&gt; student;</pre>
+<pre> 	//...</pre>
+<pre> 	}//end class Roster</pre>
+If C++ was UML we would write this:
+<pre> 	class Roster{</pre>
+<pre> 	//...</pre>
+<pre> 		StudentId sid;</pre>
+<pre> 		map&lt;sid, Student&gt; student;</pre>
+<pre> 	//...</pre>
+<pre> 	}//end class Roster</pre>
+And I don't like introducing the <span class="InlineFormula">sid</span> attribute OR using it
+as a class name.
+</ol><hr>
+<p>
+</ol>
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci Dept, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10.
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

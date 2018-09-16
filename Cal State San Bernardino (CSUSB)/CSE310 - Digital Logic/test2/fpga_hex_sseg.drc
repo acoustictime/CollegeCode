@@ -1,0 +1,8 @@
+Release 13.2 Drc O.61xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Tue Feb 19 12:31:25 2013
+
+drc -z FPGA_hex_sseg.ncd FPGA_hex_sseg.pcf
+
+DRC detected 0 errors and 0 warnings.

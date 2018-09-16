@@ -1,0 +1,119 @@
+SQL> start create_department.sql
+
+Table created.
+
+SQL> start create_dependent.sql
+
+Table created.
+
+SQL> start create_dept_locations.sql
+
+Table created.
+
+SQL> start create_employee.sql
+ 13  ;
+
+Table created.
+
+SQL> start create_project.sql
+
+Table created.
+
+SQL> start create_works_on.sql
+
+Table created.
+
+SQL> start alter_department_mgrssnFK.sql
+
+Table altered.
+
+SQL> start alter_dependent.sql
+
+Table altered.
+
+SQL> start alter_dept_locations.sql
+
+Table altered.
+
+SQL> start alter_employee_dnoFK.sql
+
+Table altered.
+
+SQL> start alter_employee_superssnFK.sql
+
+Table altered.
+
+SQL> start alter_project.sql
+
+Table altered.
+
+SQL> start alter_works_on_essnFK.sql
+
+Table altered.
+
+SQL> start alter_works_on_pnoFK.sql
+
+Table altered.
+
+SQL> !
+
+SQL> insert into dependent
+  2  values('333445555','Alice','F','05-APR-86','Daughter');
+
+1 row created.
+
+SQL> insert into dependent
+  2  values('333445555','Theodore','M','25-OCT-83','Son');
+
+1 row created.
+
+SQL> insert into dependent
+  2  values('333445555','Joy','F','03-MAY-58','Spouse');
+
+1 row created.
+
+SQL> start InsertDependentByPrompt.sql
+Enter value for essn: 987654321
+Enter value for dependent_name: Abner
+Enter value for gender: M
+Enter value for bdate: 28-FEB-42
+Enter value for relationship: Spouse
+old   2: VALUES ('&ESSN', '&Dependent_name','&gender','&bdate','&relationship')
+new   2: VALUES ('987654321', 'Abner','M','28-FEB-42','Spouse')
+
+1 row created.
+
+SQL> start InsertDependentByPrompt.sql
+Enter value for essn: 123456789
+Enter value for dependent_name: Michael
+Enter value for gender: M
+Enter value for bdate: 04-JAN-88
+Enter value for relationship: Son
+old   2: VALUES ('&ESSN', '&Dependent_name','&gender','&bdate','&relationship')
+new   2: VALUES ('123456789', 'Michael','M','04-JAN-88','Son')
+
+1 row created.
+
+SQL> start InsertDependentByPrompt.sql
+Enter value for essn: 123456789
+Enter value for dependent_name: Alice
+Enter value for gender: F
+Enter value for bdate: 30-DEC-88
+Enter value for relationship: Daughter
+old   2: VALUES ('&ESSN', '&Dependent_name','&gender','&bdate','&relationship')
+new   2: VALUES ('123456789', 'Alice','F','30-DEC-88','Daughter')
+
+1 row created.
+
+SQL> start InsertDependentByPrompt.sql
+Enter value for essn: 123456789
+Enter value for dependent_name: Elizabeth
+Enter value for gender: F
+Enter value for bdate: 05-MAY-67
+Enter value for relationship: Spouse
+old   2: VALUES ('&ESSN', '&Dependent_name','&gender','&bdate','&relationship')
+new   2: VALUES ('123456789', 'Elizabeth','F','05-MAY-67','Spouse')
+
+1 row created.
+
+SQL> spool off

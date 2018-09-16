@@ -1,0 +1,21 @@
+code
+
+12:52 to 1:27 10 break
+10:12 to 10:52
+
+compile
+
+12:47 to 12:53
+
+test
+
+12:53 to 2:15
+
+
+bugs
+
+code compile forgot to delcare fstream variable
+code compile forgot () in length on string
+code compile mistyped variable name
+code test needed to break out of the for loop hwen condition cound
+code test  forgot to test wheather class had been previously found causing infinte loop

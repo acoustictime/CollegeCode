@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+  <head>
+    <title>CSE405 Bootstrap Admin Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    
+    <!-- Bootstrap Stylesheets and Main Stylesheet -->
+    
+    <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="../css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet"> 
+    
+    <!-- Bootstrap, Jquery, and Main Javascript -->
+    
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/admin.js"></script> 
+  </head>
+  
+  <body>
+  
+    <!-- Page is in Two Sections, the First below is the Nav Bar on top of the screen -->
+ 
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          
+          <a href = "/" class="brand">CSE405 Bootstrap</a>
+          
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li id="homenav" class="active"><a href= "/">Home</a></li>
+              <li id="adminnav"><a href = "/admin/admin.html">Admin Page</a></li>
+              <li id="styleguide"><a href= "../styleguide.html">Styleguide</a></li>
+              <li id="ajaxhtml"><a href= "../ajax.html">Ajax Assignment</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>  
+    </div>
+    
+    <!-- Page is in Two Sections, the Second below is the main container for content -->
+    
+    <div class="container">  
+      <!-- Div for admin message while being edited, in TextArea -->
+      <div  id="admin">
+        <textarea id="textArea" class="span7 offset1"></textarea>
+		<br>
+		
+		<button class="btn btn-inverse" id="submit">Submit</button>
+    	<button class="btn btn-success" id="undo">Undo</button>
+    	<br>
+    	<br>
+    	
+    	<!-- Div to display upaded message from Servlet, shows if admin or not and provides logout -->
+    	<div id="update"></div>
+		
+		<!-- Div used to display alert showing if message was accepted or not -->
+		<div id="popup"></div>
+      </div>
+    </div>
+  </body>
+</html>

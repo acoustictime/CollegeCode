@@ -1,0 +1,279 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/16.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:51:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+CSci 375/16 GRASP Revisitted
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="16.txt">Text Version</A>]
+ 16.html 
+Wed Jan 11 07:25:57 PST 2012
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="16.html#CSci 375/16 GRASP Revisitted">CSci 375/16 GRASP Revisitted</A>
+<li><a href="16.html#Revision History">Revision History</A>
+<li><a href="16.html#Chapter 25 GRASP II: Objects and Responsibilities">Chapter 25 GRASP II: Objects and Responsibilities</A>
+<li><a href="16.html#Exercises on GRASP">Exercises on GRASP</A>
+<li><a href="16.html#Next Quiz">Next Quiz</A>
+<li><a href="16.html#Online Tutorial on patterns">Online Tutorial on patterns</A>
+<li><a href="16.html#Questions and Answers">Questions and Answers</A>
+<li><a href="16.html#Next -- Back to the next iterations">Next -- Back to the next iterations</A>
+<li><a href="16.html#Next Iteration of Project -- Model 2">Next Iteration of Project -- Model 2</A>
+<li><a href="16.html#Review Questions">Review Questions</A>
+<li><a href="16.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="CSci 375/16 GRASP Revisitted">CSci 375/16 GRASP Revisitted</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Date<th scope="col">#<th scope="col">Topic (Participation 2pt)<th scope="col">Study pages (2 pts)<th scope="col">Quiz(15 pts)<th scope="col">Project Work(10 pts)
+<tr><td>Previous<td>15<td>More Analysis<td>401-413<td>Q7(1-413)<td>-
+<tr><td>Today<td>16<td><a href="#GRASP">GRASP</A> II<td>413-435<td>-<td>W7(Model 2: use cases, domain, interactions, classes)
+<tr><td>Next<td>17<td><a href="#GoF">GoF</A><td>435-476<td>Q8(1-476)<td>-
+</table><br>(Close Table)<br>
+<H1><a name="Revision History">Revision History</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Version#<th scope="col">Date<th scope="col">Description<th scope="col">Author
+<tr><td>0<td>2005-01-03<td>Used boiler plate to make template<td>RJB
+<tr><td>1<td>2005-01-17<td>Added section headings<td>RJB
+<tr><td>2<td>2005-03-02<td>Added notes<td>RJB
+<tr><td>3<td>2005-03-07<td>Added notes and questions<td>RJB
+<tr><td>4<td>2006-02-16<td>Update<td>RJB
+<tr><td>5<td>2007-01-10<td>Added link to project <td>RJB
+<tr><td>6<td>2007-03-07<td>Added notes on interfaces <td>RJB
+<tr><td>7<td>2007-12-07<td>Removing topic from schedule <td>RJB
+<tr><td>8<td>2009-03-05<td>Added sample codemfrom question answers <td>RJB
+</table><br>(Close Table)<br>
+<H1><a name="Chapter 25 GRASP II: Objects and Responsibilities">Chapter 25 GRASP II: Objects and Responsibilities</A></H1>
+<li><span class=Formula>Introduction</span>
+<p>
+Can you list the first 5 GRASP patterns without looking?
+[<A href="15answer.html"> 15answer.html </A>]
+<p>
+<li><span class=Formula>*** 25.1 Polymorphism (<a href="#vital">vital</A>)</span>
+<li><a name="polymorphism">polymorphism</A>::idea=following,
+<br><ol class="List">
+<li><span class=Formula>A variable is declared as referring to a general type,</span>
+<pre> 		GeneralType * example;  //C++</pre>
+<li><span class=Formula>But is assigned to objects that are special types of that type</span>
+<pre> 		example = new SpecialType (data );</pre>
+<li><span class=Formula>Then the variable gets the behavior of the <span class="InlineFormula">special</span> type of object.</span>
+<pre> 		example -&gt; function( moreData);</pre>
+</ol><br>
+Also see
+[<A href="patterns.html#abstraction"> patterns.html#abstraction </A>]
+<p>
+<li><span class=Formula>+ Example: you call your Pet, and the Dog comes, but the Cat</span>
+thinks about it.
+<li><span class=Formula>+ Example: Snap Crackle Pop, Rice Crispies</span>
+[<A href="http://cse.csusb.edu/dick/cs202/polymorphism.html#A Good Example"> ../cs202/polymorphism.html#A Good Example </A>]
+<li><span class=Formula>* Example in NextGen: Tax calculation</span>
+C++ Code:
+[<A href="fig25_25_1.cpp"> fig25_25_1.cpp </A>]
+[<A href="test.fig25_25_1.cpp"> test.fig25_25_1.cpp </A>]
+[<A href="Sale.cpp"> Sale.cpp </A>]
+[<A href="TaxLineItems.cpp"> TaxLineItems.cpp </A>]
+<li><span class=Formula>* Example in monopoly: squares</span>
+<li><span class=Formula>+++ When you have a method with a switch or complex if-else-if-else...</span>
+you've probably missed a chance to use polymorphism.
+Typical C++ code for
+<pre> 			Player::Taketurn(...):</pre>
+<pre> 	class Player</pre>
+<pre> 	{</pre>
+<pre> 		Square * location;</pre>
+<pre> 		...</pre>
+<pre> 		virtual Something takeTurn(....) //Fig 25.3 Page 417</pre>
+<pre> 		{</pre>
+<pre> 			...</pre>
+<pre> 			location=board-&gt;getSquare(location, fvTot);</pre>
+<pre> 			location-&gt;landedOn();</pre>
+<pre> 		}</pre>
+<pre> 		...</pre>
+<pre> 	};</pre>
+<li><span class=Formula>Exercise</span>
+[<A href="test.poly.cpp"> test.poly.cpp </A>]
+<li><span class=Formula>+++ Notice!   You don't get polymorphism until you have a pointer that points at a generalization/abstraction/interface.  A pointer</span>
+alone is <a href="#Indirection">Indirection</A>.  An inheritance hierarchy is the way things
+are!
+<p>
+<li><span class=Formula>***25.2</span>
+<A name="Pure Fabrication" class="Key"> Pure Fabrication </A>
+(<a href="#vital">vital</A>)
+<li><a name="fabricate">fabricate</A>::= create | lie | make.
+<li><span class=Formula>Use it to gather similar responsibilities: persistence, dice cup,</span>
+the web, an LDAP, etc. into a invented object/class.
+<li><span class=Formula>***25.3</span>
+<A name="Indirection" class="Key"> Indirection </A>
+(<a href="#vital">vital</A>)
+<li><a name="indirection">indirection</A>::machine_code=<span class="InlineFormula">When an instruction uses the address to find the address of the operand</span>.
+<li><span class=Formula>Use to separate two objects that shouldn't be directly coupled.</span>
+<li><span class=Formula>Tax calculator adapter</span>
+<li><span class=Formula>Persistence</span>
+<li><span class=Formula>++ &quot;Most network problems can be solved by adding a level of indirection&quot;</span>
+<li><span class=Formula>++ Indirection fits with <a href="#Polymorphism">Polymorphism</A>.</span>
+<li><span class=Formula>++ Also known as using a pointer in C++.</span>
+<p>
+<li><span class=Formula>******25.4</span>
+<A name="Protected Variation" class="Key"> Protected Variation </A>
+or
+<A name="PV" class="Key"> PV </A>
+(<a href="#vital">vital</A>)
+<li>Hide <span class="InlineFormula">hot points</span>, design decisions, special concerns, etc. behind a common interface or object.  Design your software so that bends rather than breaks by
+including &quot;hinges&quot; or flexible components.
+<li>***** Protected Variation is an explanation for Pure Fabrication, Polymorphism and
+Indirection.
+<a href="#PV">PV</A> often is handled by combining indirection and polymorphism: point at
+the general, and define special kinds of variations.
+<li><span class=Formula>** interesting philosophy on pages 428-432 covers several variations on PV.</span>
+<li><span class=Formula>** Note the anecdote on page 432: the cost of future proofing.</span>
+<li><span class=Formula>** Notice -- you need to document likely variations in your requirements</span>
+</ol>
+[<A href="patterns.html"> patterns.html </A>]
+<H1><a name="Exercises on GRASP">Exercises on GRASP</A></H1>
+[<A href="16x.html"> 16x.html </A>]
+<H1><a name="Next Quiz">Next Quiz</A></H1>
+Make sure you know the UML notations for interfaces and something
+about all the patterns (GRASP+GoF) covered up to the start of the quiz.
+<H1><a name="Online Tutorial on patterns">Online Tutorial on patterns</A></H1>
+[<A href="http://en.wikipedia.org/wiki/Category:Software_design_patterns"> Category:Software_design_patterns </A>]
+(Vince Huston)
+<H1><a name="Questions and Answers">Questions and Answers</A></H1>
+[<A href="16q.html"> 16q.html </A>]
+<H1><a name="Next -- Back to the next iterations">Next -- Back to the next iterations</A></H1>
+[<A href="17.html"> 17.html </A>]
+including a quiz on UML interfaces and the GRASP+GoF.
+<H1><a name="Next Iteration of Project -- Model 2">Next Iteration of Project -- Model 2</A></H1>
+[<A href="w7.html"> w7.html </A>]
+due at start of class 17.
+<H1><a name="Review Questions">Review Questions</A></H1>
+[<A href="16r.html"> 16r.html </A>]
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci Dept, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10.
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

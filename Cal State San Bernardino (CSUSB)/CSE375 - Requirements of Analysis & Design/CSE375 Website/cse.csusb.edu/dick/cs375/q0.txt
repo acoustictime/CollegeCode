@@ -1,0 +1,47 @@
+. Define the following terms as they are used in this class
+Artifact
+
+
+DCD
+
+
+Deliverables
+
+
+Glossary
+
+
+GoF
+
+
+GRASP
+
+
+
+KISS
+
+
+OO
+
+
+OOAD
+
+
+Patterns
+
+
+SSD
+
+
+TBA
+
+
+UML
+
+
+UP
+
+
+. Answers below
+
+. Answers

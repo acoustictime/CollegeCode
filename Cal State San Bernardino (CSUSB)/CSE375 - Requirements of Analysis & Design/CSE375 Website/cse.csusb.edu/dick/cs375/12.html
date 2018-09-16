@@ -1,0 +1,367 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/12.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:53:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+CSci 375/12 GRASP I
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="12.txt">Text Version</A>]
+ 12.html 
+Mon Feb 13 15:55:20 PST 2012
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="12.html#CSci 375/12 GRASP I">CSci 375/12 GRASP I</A>
+<li><a href="12.html#Revision History">Revision History</A>
+<li><a href="12.html#The GRASP Patterns">The GRASP Patterns</A>
+<li><a href="12.html#What is a pattern">: What is a pattern</A>
+<li><a href="12.html#What is GRASP?">: What is GRASP?</A>
+<li><a href="12.html#17.1 UML vs Principles">: 17.1 UML vs Principles</A>
+<li><a href="12.html#17.2 Object Design">: 17.2 Object Design</A>
+<li><a href="12.html#Figure 17.1 How it all fits together">: Figure 17.1 How it all fits together</A>
+<li><a href="12.html#17.3 Responsibilities -- things that objects know how to do">: 17.3 Responsibilities -- things that objects know how to do</A>
+<li><a href="12.html#17.4 GRASP -- good ways to allocate responsibilities to objects">: 17.4 GRASP -- good ways to allocate responsibilities to objects</A>
+<li><a href="12.html#17.5 Connections">: 17.5 Connections</A>
+<li><a href="12.html#17.6 Patterns">: 17.6 Patterns</A>
+<li><a href="12.html#17.7 Summary: process, responsibility metaphor, patterns, UML">: 17.7 Summary: process, responsibility metaphor, patterns, UML</A>
+<li><a href="12.html#17.8 Short Example: Monopoly">: 17.8 Short Example: Monopoly</A>
+<li><a href="12.html#17.9 Applying GRASP">: 17.9 Applying GRASP</A>
+<li><a href="12.html#Beware the System Object">: Beware the System Object</A>
+<li><a href="12.html#17.10 Creator">: 17.10 Creator</A>
+<li><a href="12.html#17.11 Information Expert">: 17.11 Information Expert</A>
+<li><a href="12.html#17.12 Low Coupling">: 17.12 Low Coupling</A>
+<li><a href="12.html#17.13 Controller">: 17.13 Controller</A>
+<li><a href="12.html#17.14 High Cohesion">: 17.14 High Cohesion</A>
+<li><a href="12.html#17.15 Resources">: 17.15 Resources</A>
+<li><a href="12.html#Questions and Answers">Questions and Answers</A>
+<li><a href="12.html#Exercises ">Exercises </A>
+<li><a href="12.html#Next -- GRASP 1">Next -- GRASP 1</A>
+<li><a href="12.html#Project Step 5 Interactions and Classes">Project Step 5 Interactions and Classes</A>
+<li><a href="12.html#Review Questions">Review Questions</A>
+<li><a href="12.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="CSci 375/12 GRASP I">CSci 375/12 GRASP I</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Date<th scope="col">#<th scope="col">Topic (Participation 2pt)<th scope="col">Study pages (2 pts)<th scope="col">Quiz(15 pts)<th scope="col">Project Work(10 pts)
+<tr><td>Previous<td>11<td>Class Diagrams<td>248-270<td>Q5(221-270)<td>-
+<tr><td>Today<td>12<td><a href="#GRASP">GRASP</A><td>271-319<td>-<td>W5(Interaction &amp; Class Diagrams)
+<tr><td>Next<td>13<td>Object Design<td>320-362<td>Q6(271-362)<td>-
+</table><br>(Close Table)<br>
+<H1><a name="Revision History">Revision History</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Version#<th scope="col">Date<th scope="col">Description<th scope="col">Author
+<tr><td>0<td>2005-01-03<td>Used boiler plate to make template<td>RJB
+<tr><td>1<td>2005-01-14<td>Added Chapter headings and Notes<td>RJB
+<tr><td>2<td>2006-02-14<td>Updated to new look<td>RJB
+<tr><td>3<td>2007-01-10<td>Added project link <td>RJB
+<tr><td>4<td>2012-02-13<td>Added pictures  <td>RJB
+</table><br>(Close Table)<br>
+<H1><a name="The GRASP Patterns">The GRASP Patterns</A></H1><ol class=Section>
+<li>*** The GRASP patterns tell you what classes you may need, what operations
+they will need, and what messages they will send.  The give a reason for
+each arrow and object in your interaction diagrams.
+<li>**** When you read this chapter take note of how Larman documents the use of <a href="#GRASP">GRASP</A>.
+He links a message to its objects with a GRASP pattern name.  Do this in your
+projects in this class.
+<H2><a name="What is a pattern">What is a pattern</A></H2>
+An Example Pattern: The Pizza Inversion Pattern
+[<A href="http://www.cmcrossroads.com/bradapp/docs/pizza-inv.html"> pizza-inv.html </A>]
+(Ho Ho Only Serious).
+<p>
+<H2><a name="What is GRASP?">What is GRASP?</A></H2>
+(see <a href="#GRASP">GRASP</A> below).
+<H2><a name="17.1 UML vs Principles">17.1 UML vs Principles</A></H2>
+<li>* UML lets you communicate, recall, store ideas...
+<li>* Principles help you choose the right way to go, make decisions and choices.
+<H2><a name="17.2 Object Design">17.2 Object Design</A></H2>
+<li>** <a href="#OO">OO</A> design is about choosing who does what inside the computers.
+<H2><a name="Figure 17.1 How it all fits together">Figure 17.1 How it all fits together</A></H2>
+<A name="Artifacts and Relations in the UP" class="Key"> Artifacts and Relations in the UP </A>
+[<A href="artifactrelationships.gif"> artifactrelationships.gif </A>]
+<H2><a name="17.3 Responsibilities -- things that objects know how to do">17.3 Responsibilities -- things that objects know how to do</A></H2>
+<li>* The <span class="InlineFormula">R</span> in <span class="InlineFormula">gRasp</span>.
+<li>****    Objects are <span class="InlineFormula">little</span> capsules of intelligence.
+<li>****    They know how and know what: they have operations and attributes.
+<li>****    Responsibilities -- things an object can be trusted to do or recall.
+<H2><a name="17.4 GRASP -- good ways to allocate responsibilities to objects">17.4 GRASP -- good ways to allocate responsibilities to objects</A></H2>
+<li>Exercise: name as many GRASP as you can from memory.
+<p>
+Here
+[<A href="16answer.html"> 16answer.html </A>]
+are the 9 GRASP principles/patterns
+<H2><a name="17.5 Connections">17.5 Connections</A></H2>
+<H2><a name="17.6 Patterns">17.6 Patterns</A></H2>
+<li>*** a workable resolution to a set of conflicting forces.
+<li>* Patterns are the <span class="InlineFormula">P</span> in GRASP.
+<li>* A Pattern is a &quot;good enough&quot; way of solving a complex problem. It
+balances the competing forces in a sensible way.  It has been used on at
+least three similar situations.  Patterns are found and recorded not
+created.
+<p>
+<li>* Patterns resolve a set of forces in a repeatable and useful way.
+<p>
+<li>*** See inside cover of book.
+<li>See my notes
+[<A href="patterns.html"> patterns.html </A>]
+<li>See the famous
+[<A href="http://c2.com/cgi/wiki?CategoryPattern"> wiki?CategoryPattern </A>]
+<li>See Brad Appletons Documents
+[<A href="http://www.cmcrossroads.com/bradapp/docs/"> http://www.cmcrossroads.com/bradapp/docs/ </A>]
+<p>
+<li>For more Patterns and discussions of patterns see
+[<A href="http://c2.com/cgi/wiki"> wiki </A>]
+(The WikiWikiWeb).
+<li>Also checkout the Wikipedia entry
+[<A href="http://en.wikipedia.org/wiki/GRASP_(Object_Oriented_Design)"> GRASP_%28Object_Oriented_Design%29 </A>]
+<p>
+<H2><a name="17.7 Summary: process, responsibility metaphor, patterns, UML">17.7 Summary: process, responsibility metaphor, patterns, UML</A></H2>
+<H2><a name="17.8 Short Example: Monopoly">17.8 Short Example: Monopoly</A></H2>
+<li>Exercise: can you reconstruct this example without looking at the book?
+<li>By the way here is a first rough transcription of these figures into C++:
+[<A href="testPlayMonopoly.cpp"> testPlayMonopoly.cpp </A>]
+<H2><a name="17.9 Applying GRASP">17.9 Applying GRASP</A></H2>
+The GRASP patterns or principles give hints as to which class does what.  When
+you know that something must be done in your software..... GRASP guides you to
+the classes that will do it.
+<H2><a name="Beware the System Object">Beware the System Object</A></H2>
+We are designing the contents of the system and so it must not appear in any
+design diagrams.
+<H2><a name="17.10 Creator">17.10 Creator</A></H2>
+<li>* This only applies to the operation of constructing a new object.  Who does it?
+Who <span class="InlineFormula">calls</span> the constructor?
+<li>*** take note of the suitable creators for an object.  Make a list. Learn them!
+<li>** learn the sequence diagram notation
+<li>*** This pattern suggests where the <span class="InlineFormula">create</span> function is called.
+In other words it tells you where the arrow should come from, not where it goes to.
+Create messages always go to a class.
+<li>+++ The creator of a class of objects can also be made responsible for managing them:
+Deleting them, keeping lists of them, finding an object with a property, etc.
+But this may make it less cohesive and force others to be coupled to the creator.
+<li><a name="Creator">Creator</A>::pattern=<span class="InlineFormula">creating an object should be the responsibility of a class that is closely related to the created object</span>.
+<img src="CreatorPattern.gif" alt="[owners and close friends make good creators]">
+<li>++ you always need at least
+one way of creating an object that doesn't depend on already having an object
+of that type already.  So which class or object is close enough to the created object.
+<li>+ Or else you can use a GoF <a href="#Factory">Factory</A> -- a GRASP Pure Fabrication (later).  This is for creating complex polymorphic objects.
+<li>++ Danger: in the book the Creator pattern is limitted by the &quot;High Cohesion&quot;
+pattern (later).  The &quot;High Cohesion&quot; pattern is a lot more than the Creator pattern.
+<a href="#Pure_Fabrication">Pure_Fabrication</A>.
+<H2><a name="17.11 Information Expert">17.11 Information Expert</A></H2>
+<li>A very powerful idea.
+<li><a name="Expert">Expert</A>::pattern=<span class="InlineFormula">allocate a responsibility to a class that has the information</span>. Look
+in both the design classes and the domain model to find a type of object
+that knows enough to handle the responsibility.  Knowledge includes
+having the data, and also knowing who has got the data!
+<img src="InformationExpertPattern.gif" alt="[Look for info in the domain]">
+<p>
+<li>*** Tends to incorporate parts of the domain model into the software design.
+<H2><a name="17.12 Low Coupling">17.12 Low Coupling</A></H2>
+<li>***** Coupling has guided good software design for nearly 40 years.
+<li>+ Reduce dependencies between objects.
+<li><a name="Low_coupling">Low_coupling</A>::pattern=<span class="InlineFormula">Assign a responsibilities so that class depends less on other classes using a &quot;need to know basis&quot;</span>. Organize responsibilities so that classes do not depend on each other two much.
+<H2><a name="17.13 Controller">17.13 Controller</A></H2>
+<li><a name="Controller">Controller</A>::pattern=<span class="InlineFormula">Assign the responsibility for handling system event messages to a class representing either the whole system, device, or subsystem, or representing the use case /scenario within which the system event occurs</span>.
+<li>**** Don't fill up user interface classes with domain/business stuff.
+<li>** Don't clutter Doamin information with particular how a use
+case works.
+<li>*****  You can ONLY use the controller pattern when the incoming
+message is from the User Interface.
+<li>** Controlers are only occasionally  objects in Domain Model classes.
+Since these get messages because they know about real objects.
+<li>Take note of the suitable controlers.  Learn them.
+<p>
+<img src="ControllerPattern.gif" alt="[Possible controllers]">
+<p>
+<li>+++ A controler is often responsible for finding an object when the user
+supplies an identifier.
+See &quot;IDs to Objects&quot; on page 460 for the reasons for passing objects rather than
+ids.
+However the controler should not search for matching IDs.  It should get
+help from parts of the domain layer, for example a Creator or a metaclass
+to find the right object. The found object can then be returned to the
+controller and passed to other parts of the system.
+<p>
+<img src="ID2ObjectPattern.gif" alt="[Controller asks creator to convert ID to Object]">
+<p>
+[<A href="patterns.html#IDs_to_Objects"> patterns.html#IDs_to_Objects </A>]
+<p>
+<li>**** Separate the model and view by a controler.
+<p>
+<img src="MVCinUML.gif" alt="Model-View-Controller packages in the UML">
+<p>
+[<A href="patterns.html#MVC"> patterns.html#MVC </A>]
+<p>
+<li>+ Some people dislike use case/session controlers.
+<li>++ A scenario/use case controler is natural when the logic of the use case
+is complicated.
+<li>+ View is often technology dependent and Controllers determined
+by the user's needs of the moment.
+<li>+ The &quot;model&quot; or domain layer is independent of technology
+and inspired by the domain or business model.
+<H2><a name="17.14 High Cohesion">17.14 High Cohesion</A></H2>
+<li>This is a general purpose rule.
+<li>**** Cohesion has guided good software design for nearly 40 years.
+<li>+ Separate concerns into different classes.
+<li>+ place responsibilities to give focussed objects.
+<li><a name="High_cohesion">High_cohesion</A>::pattern=<span class="InlineFormula">Design elements to have strongly related and focused responsibilities&quot;</span>.
+<p>
+<li>+ Ballancing cohesion and coupling is an art form.
+<p>
+<li>+ The Controller Pattern often comes into conflict with High Cohesion in
+some designs.  When it does look for smaller Controllers that can be more
+Cohesive.
+<p>
+<li>+ The Creator Pattern comes into conflict with High Cohesion in some designs.
+When it does look for smaller Creators that can be more Cohesive.
+<p>
+<H2><a name="17.15 Resources">17.15 Resources</A></H2>
+</ol><p>. . . . . . . . . ( end of section <a href="12.html#The GRASP Patterns">The GRASP Patterns</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="Questions and Answers">Questions and Answers</A></H1>
+[<A href="12q.html"> 12q.html </A>]
+<H1><a name="Exercises">Exercises</A></H1>
+[<A href="12x.html"> 12x.html </A>]
+Possble handout....
+<H1><a name="Next -- GRASP 1">Next -- GRASP 1</A></H1>
+Start by reviewing the
+[<A href="13.html"> 13.html </A>]
+on Object Design with <a href="#GRASP">GRASP</A>.
+<H1><a name="Project Step 5 Interactions and Classes">Project Step 5 Interactions and Classes</A></H1>
+[<A href="w5.html"> w5.html </A>]
+is due next class.
+<p>
+</ol>
+<H1><a name="Review Questions">Review Questions</A></H1>
+[<A href="12r.html"> 12r.html </A>]
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci and Engineering School, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10 and
+[<A href="02DiceGameSSD.gif"> 02DiceGameSSD.gif </A>]
+(example).
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

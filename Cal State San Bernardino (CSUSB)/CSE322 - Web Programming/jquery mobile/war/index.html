@@ -1,0 +1,202 @@
+
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>CSUSB CSE322 James Small</title> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+
+
+
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="js/main.js"></script>
+</head> 
+
+	
+<body> 
+
+
+<div data-role="page" id="main" data-theme="a">
+
+	<div data-role="header">
+		<h2>CSUSB CSE322 James Small Mobile Site</h2>
+		
+	</div><!-- /header -->
+
+	<div data-role="content" >
+		<a>This is the mobile version of my site using jquery mobile. </a>
+		<p><a href="#me" data-role="button">About Me</a></p>	
+		<p><a href="#tvshows" data-role="button">Great TV Shows</a></p>
+		<p><a href="#tictactoe" data-role="button" data-rel="dialog" data-transition="pop">Tic Tac Toe</a></p>
+	</div><!-- /content -->
+	
+</div>
+
+
+<div data-role="page" id="me" data-theme="a">
+
+	<div data-role="header">
+		<h2>About Me</h2>
+
+	</div><!-- /header -->
+
+	<div data-role="content" >
+		<a>I'm currently finishing up my junior year at Cal State San Bernardino,
+			getting my Bachelors of Arts in Computer Systems: System Administration. Currently working as a sysadmin for 
+			a small construction company, but hoping to take my experience and eventual degree to get a good job in the IT  
+			field. I'm enjoying this class so far as I've never had any experience with HTML, CSS, or Javascript, but seem  
+			to be picking it up fairly quickly</a>	
+		
+
+		<p><a href="#main" data-direction="reverse" data-role="button" data-theme="b">Back to Main Page</a></p>	
+	</div><!-- /content -->
+	
+
+</div>
+
+<div data-role="page" id="tvshows" data-theme="a">
+
+	<div data-role="header">
+		
+
+
+	</div><!-- /header -->
+
+	<div data-role="content" >	
+		
+		<p><a href="#walkingdead" data-role="button">The Walking Dead</a></p>
+		<p><a href="#breakingbad" data-role="button">Breaking Bad</a></p>
+		<p><a href="#dexter" data-role="button">Dexter</a></p>
+		<p><a href="#madmen" data-role="button">Mad Men</a></p>
+		<p><a href="#main" data-direction="reverse" data-role="button" data-theme="b">Back to Main Page</a></p>
+	</div><!-- /content -->
+	
+
+</div>
+
+<div data-role="page" id="tictactoe" data-theme="a">
+
+	<div data-role="header">
+		
+		<h2>Tic Tac Toe</h2>
+
+	</div><!-- /header -->
+
+	<div data-role="content" >	
+		
+		<div id="result">Result =</div>
+   
+    		<table id="mainBox">
+			<tr>
+				<td class="empty" id="one" onclick="buttonClicked(one)"></td>
+				<td class="empty" id="two" onclick="buttonClicked(two)"></td>
+				<td class="empty" id="three" onclick="buttonClicked(three)"></td>
+			</tr>
+			<tr>
+				<td class="empty" id="four" onclick="buttonClicked(four)"></td>
+				<td class="empty" id="five" onclick="buttonClicked(five)"></td>
+				<td class="empty" id="six" onclick="buttonClicked(six)"></td>
+			</tr>
+			<tr>
+				<td class="empty" id="seven" onclick="buttonClicked(seven)"></td>
+				<td class="empty" id="eight" onclick="buttonClicked(eight)"></td>
+				<td class="empty" id="nine" onclick="buttonClicked(nine)"></td>
+			</tr>
+    		</table>
+      
+		<div id="summary">
+			<div id="resetButton"><button onclick="reset()">Reset</button></div>
+			<div id="wins">Wins = 0</div>
+			<div id="losses">Lose = 0</div>
+			<div id="draws">Draws = 0</div>	
+		</div>  
+	
+		<p><a href="#tvshows" data-direction="reverse" data-role="button" data-theme="b">Back to Main</a></p>
+
+	</div><!-- /content -->
+	
+
+</div>
+
+<div data-role="page" id="walkingdead" data-theme="a">
+
+	<div data-role="header">
+		
+		<h2>Walking Dead</h2>
+
+	</div><!-- /header -->
+
+	<div data-role="content" >	
+			<a>What's not to like about zombies!</a>
+		
+			<p id="images"><img src="http://images.sodahead.com/polls/001311475/walking20dead_answer_2_xlarge.jpeg" /></p>  
+	
+		<p><a href="#tvshows" data-direction="reverse" data-role="button" data-theme="b">Back to TV Shows</a></p>
+	</div><!-- /content -->
+	
+
+</div>
+
+<div data-role="page" id="breakingbad" data-theme="a">
+
+	<div data-role="header">
+		<h2>Breaking Bad</h2>
+
+
+	</div><!-- /header -->
+
+	<div data-role="content" >	
+			<a>Didn't know Meth could be so interesting.</a>
+			<p id="images"><img src="http://forum.geliyoo.com/attachments/yabanci-diziler/9333d1340777141-breaking-bad-tanitim-breaking-bad.jpg" /></p>
+	
+		<p><a href="#tvshows" data-direction="reverse" data-role="button" data-theme="b">Back to TV Shows</a></p>
+	</div><!-- /content -->
+	
+
+</div>
+
+<div data-role="page" id="dexter" data-theme="a">
+
+	<div data-role="header">
+		
+		<h2>Dexter</h2>
+
+	</div><!-- /header -->
+
+	<div data-role="content" >	
+		
+			<a>A serial killer with a moral code!?!?</a>
+			<p id="images"><img src="http://blogs.miaminewtimes.com/cultist/DEXTERS7.jpg" /></p>
+	
+		<p><a href="#tvshows" data-direction="reverse" data-role="button" data-theme="b">Back to TV Shows</a></p>
+	</div><!-- /content -->
+	
+
+</div>
+
+<div data-role="page" id="madmen" data-theme="a">
+
+	<div data-role="header">
+		
+		<h2>Mad Men</h2>
+
+	</div><!-- /header -->
+
+	<div data-role="content" >	
+			
+			<a>They seem to enjoy drinking at work.</a>
+			<p id="images"><img src="http://resize.over-blog.com/380x285-cz5t.jpg?~aHR0cDovL2ltZy53aWtpby1leHBlcnRzLmNvbS8wLzAwLzY0LzU0LzIwMTEtMDYvTWFkLU1lbi5qcGc=" /></p>
+	
+		<p><a href="#tvshows" data-direction="reverse" data-role="button" data-theme="b">Back to TV Shows</a></p>
+	</div><!-- /content -->
+	
+
+</div>
+
+</body>
+</html>

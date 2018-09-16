@@ -1,0 +1,128 @@
+<html>
+
+<!-- Mirrored from cse.csusb.edu/kay/cs330/complexity.html by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 27 Mar 2012 14:57:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+<title>David Turner</title>
+</head>
+<body>
+<div>
+
+
+<h1>Complexity of Algorithms</h1>
+
+<h2>Overview</h2>
+
+<p>
+Some algorithms are more efficient than others at solving a given problem.  There are two considerations when analyzing efficiency:
+</p>
+<ul>
+<li>How efficient the algorithm is in terms of the time it takes to terminate</li>
+<li>How efficient the algorithm is in terms of its data storage requirements</li>
+</ul>
+<p>
+Computer scientists use a mathematical property called <i>complexity</i> as a measure of how efficient algorithms are at solving problems.  However, complexity describes algorithmic efficiency as the problem size grows to infinity, and so complexity analysis becomes more relevant in practical applications when dealing with large problems.
+
+</p>
+<p>
+When analyzing complexity of an algorithm, we can usually measure the size of the problem that the algorithm solves using a whole number.  For instance, if the problem is to sort a sequence of values, then the size of the problem is the number of values to sort.  When the size of the problem increases, there is usually an increase in the amount of time and storage space required by the algorithm to solve the problem.
+</p>
+<p>
+In complexity theory, we characterize the efficiency of an algorithm by providing a simple mathematical function of the problem size that provides an asymptotic bound for the time or space requirements of the algorithm.  We say <i>asymptotic</i>, because the function provides a bound as the problem size goes to infinity.
+</p>
+<p>
+Suppose <code>f(n)</code> represents the average time a particular algorithm runs for problem instances of size n.  We say that the <i>average running time</i> of the algorithm is in the order of <code>g(n)</code> if for some positive constant <code>c</code> and positive integer <code>N</code> the following condition holds.
+
+</p>
+<pre>
+    f(n) &lt; c * g(n) when n > N
+</pre><p>
+We define <i>worst-case running time</i> and <i>best-case running time</i> similarly.
+</p>
+<p>
+We define a function <code>O(g(n))</code>, called <i>big-Oh of g(n)</i>, that maps a function <code>g(n)</code> to the set of all functions that are in the order of <code>g(n)</code>.
+
+</p>
+<pre>
+    f in O(g) means there exists integer N and positive real number c such that f(n) &lt; c * g(n) when n > N
+</pre><p>
+When the time complexity of an algorithm is in <code>O(n)</code>, we say that the algorithm runs in linear time.  When the time complexity of an algorithm is in <code>O(1)</code>, we say that the algorithm runs in constant time.
+</p>
+<h2>Example: Linear Search</h2>
+<p>
+As an example, suppose the problem is to determine if a given value appears within a sequence of <code>n</code> values.  When the values are unsorted, the standard approach to solve this problem is to compare each element, one after another, with the given value until you either find the element or you have examined all the elements (to conclude that the sequence does not contain it). This algorithm is called <i>linear search</i>.  In the worse case, the value doesn't appear in the sequence, so the worst-case running time of linear search will be approximately <code>n</code> times the amount of time needed to perform a single comparison.  Therefore, the worst-case running time of linear search in <code>O(n)</code>, where <code>n</code> is the number of items in the sequence.
+
+</p>
+<p>
+The storage requirements for the execution of the linear search algorithm is fixed, because it does not depend on the number of elements in the sequence.  For this reason, the storage complexity of linear search is <code>O(1)</code>.
+</p>
+<h2>Reduced Form</h2>
+<p>Note that <code>O(a*f(n) + b) = O(f(n))</code> for all constants <code>a</code> and <code>b</code>.  By convention, we always reduce the function in big-Oh notation to its simplest form, so for example we would not use the notation <code>O(2*n)</code>.  In this course, you are required to express complexity in fully reduced form; if you don't do this on graded activities, you will be marked down for it.  Non-linear functions should also be reduced.</p>
+
+<h2>Constant time</h2>
+<p>
+If an algorithm has no loop, or if the number of times a loop runs is bounded by some fixed value for all possible instances on which the algorithm runs, then the algorithm runs in constant time.  In other words, the time complexity is <code>O(1)</code>.
+</p>
+<h2>Simple loops</h2>
+<p>
+Suppose an algorithm takes instances of size <code>n</code>.  If the algorithm contains a single loop whose number of iterations equal a constant multiple of n, then it runs in linear time (<code>O(n)</code>).
+</p>
+<h2>Bubble Sort</h2>
+
+<p>
+Suppose we want to sort a sequence of <code>n</code> values using bubble sort.  In the outer loop, the counter <code>i</code> runs from <code>n - 1</code> to 0. For pass <code>i</code> of the outer loop, the inner loop runs <code>i</code> times.  Thus, the total number of repetitions is:
+
+</p>
+<pre>
+    (n - 1) + (n - 2) + ... + 1
+</pre><p>
+But this is less than <code>n + (n - 1) + ... + 1</code>, which equals <code>n * (n + 1) / 2</code>.  Thus, the running time of Bubble Sort is O(n^2).
+</p>
+<h2>Insertion Sort</h2>
+<p>
+Suppose we use the insertion sort to re-organize a sequence of items into ascending order.  Consider the case when the sequence starts in descending order.  In this case, the inner loop runs the maximum number of times for each iteration of the outer loop.  An analysis similar to the bubble sort demonstrates that the running time of insertion sort in this worst case is <code>O(n^2)</code>.
+
+</p>
+<p>
+Now, consider the case when the sequence of <code>n</code> items is already in ascending order.  In this case, execution never enters the inner loop, thus the running time will be bounded by some multiple of <code>n</code>.  Thus, the best case running time of insertion sort is <code>O(n)</code>.
+</p>
+<p>
+Note: if all instances of size <code>n</code> are equally likely, then the average running time of insertion sort is <code>O(n^2)</code>.
+
+</p>
+<h2>Binary Search</h2>
+<p>
+The worst case running time of binary search is <code>log(n)</code>.  The reason for this is that each time the binary search loop executes, it divides the number of items that it's concerned with by 2.  The number of times a number <code>n</code> can be divided by 2 is approximately <code>log(n)</code>.
+</p>
+<h2>Summing Algorithmic Execution Times</h2>
+<p>
+When an algorithm can be separated into a sequence of sub-algorithms, the running time of the overall algorithm will be the running time of the sub-algorithm with the greatest running time.
+
+</p>
+<p><a name="storage"><br />
+<h2>Determination of Storage Complexity</h2>
+<p></a></p>
+
+<p>
+For the purposes of this class, storage complexity is determined 
+by considering the maximum amount of memory needed by an algorithm 
+minus the maximum amount of memory needed to satisfy 
+its pre- and post-conditions.  
+For example, suppose you have a problem that requires 
+4(n-1) bytes of memory to store the data coming into the algorithm 
+and 4n bytes to store data needed after the algorithm completes.  
+If maximum amount of memory the algorithm uses at any point in time 
+is 4n + 100, then the storage complexity of the algorithm 
+should be based on 100, and thus is in O(1).
+</p>
+
+<!--ul style="list-style-type: none; display: inline">
+<li><a href="/turner/">home</a></li>
+</ul-->
+
+</div>
+</body>
+
+<!-- Mirrored from cse.csusb.edu/kay/cs330/complexity.html by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 27 Mar 2012 14:57:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>

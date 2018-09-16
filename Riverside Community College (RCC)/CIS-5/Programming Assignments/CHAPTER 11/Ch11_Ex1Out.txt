@@ -1,0 +1,23 @@
+Student Name           Test Score  Grade
+Goofy, Goof                  89      B
+Balto, Brave                 93      A
+White, Snow                  93      A
+Wonderful, Alice             89      B
+Beauty, Sleeping             85      B
+Lion, Simba                  95      A
+Elephant, Dumbo              90      A
+Deer, Brown                  86      B
+Jocky, Johny                 95      A
+Grumpy, Grump                75      C
+Happy, Hap                   80      B
+Dopey, Dop                   80      B
+Bashful, Bash                85      B
+Sleepy, Sleep                70      C
+Sneezey, Sneeze              83      B
+Malik, Shelly                95      A
+Tomek, Chelsea               95      A
+Clodfelter, Angela           95      A
+Nields, Allison              95      A
+
+Highest Test Score: 176
+Students having highest test score:

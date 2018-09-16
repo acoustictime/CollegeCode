@@ -1,0 +1,1024 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/09q.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:53:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+Questions on Packages, layers and preparing for design
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="09q.txt">Text Version</A>]
+ 09q.html 
+Wed Jan 11 07:25:41 PST 2012
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="09q.html#Questions on Packages, layers and preparing for design">Questions on Packages, layers and preparing for design</A>
+<li><a href="09q.html#Chapter 9 pages 197-219 -- Who does the software architecture">: Chapter 9 pages 197-219 -- Who does the software architecture</A>
+<li><a href="09q.html#Chapter 12 pages 195-212 -- Package Diagrams.">: Chapter 12 pages 195-212 -- Package Diagrams.</A>
+<li><a href="09q.html#Chapter 12 pages 197-219 -- Why Packages">: Chapter 12 pages 197-219 -- Why Packages</A>
+<li><a href="09q.html#Chapter 13 pages 199 -- What is a Package">: Chapter 13 pages 199 -- What is a Package</A>
+<li><a href="09q.html#Chapter 13 pages 199-200 how do you differentiate between using a strict layered architecture or a">: Chapter 13 pages 199-200 how do you differentiate between using a strict layered architecture or a</A>
+<li><a href="09q.html#Chapter 13 pages 197-212 Should the packages diagram be done before or after the domain models">: Chapter 13 pages 197-212 Should the packages diagram be done before or after the domain models</A>
+<li><a href="09q.html#Chapter 13 pages 197-212 How many UML Package Diagram types">: Chapter 13 pages 197-212 How many UML Package Diagram types</A>
+<li><a href="09q.html#Chapter 13 pages 197-219 -- Guideline: Design with Layers">: Chapter 13 pages 197-219 -- Guideline: Design with Layers</A>
+<li><a href="09q.html#Chapter 13 pages 197-219 -- Advantages of Layers">: Chapter 13 pages 197-219 -- Advantages of Layers</A>
+<li><a href="09q.html#Chapter 13 pages 197-213 : What are Packages">: Chapter 13 pages 197-213 : What are Packages</A>
+<li><a href="09q.html#Chapter 13 pages 197-212 -- Packages">: Chapter 13 pages 197-212 -- Packages</A>
+<li><a href="09q.html#Chapter 13 pages 199 -- What is coupling">: Chapter 13 pages 199 -- What is coupling</A>
+<li><a href="09q.html#Chapter 13 pages 199 -- When would you draw a dependency line">: Chapter 13 pages 199 -- When would you draw a dependency line</A>
+<li><a href="09q.html#Chapter 13 pages 197-202 -- Package Diagram vs SSD">: Chapter 13 pages 197-202 -- Package Diagram vs SSD</A>
+<li><a href="09q.html#Chapter 13 pages 197-219 -- Logical Architecture and UML Package Diagrams">: Chapter 13 pages 197-219 -- Logical Architecture and UML Package Diagrams</A>
+<li><a href="09q.html#Chapter 13 pages 198-201 -- Packages">: Chapter 13 pages 198-201 -- Packages</A>
+<li><a href="09q.html#Chapter 13 pages 197 -- Is there a limit to how much nesting we should do with packages">: Chapter 13 pages 197 -- Is there a limit to how much nesting we should do with packages</A>
+<li><a href="09q.html#Chapter 13 pages 197-219 -- package diagram">: Chapter 13 pages 197-219 -- package diagram</A>
+<li><a href="09q.html#Chapter 13 pages 199 -- Logical Architecture -- What is Application Logic">: Chapter 13 pages 199 -- Logical Architecture -- What is Application Logic</A>
+<li><a href="09q.html#Chapter 13 pages 198-199 -- UML packaging">: Chapter 13 pages 198-199 -- UML packaging</A>
+<li><a href="09q.html#Chapter 13 pages 198 -- logical architecture">: Chapter 13 pages 198 -- logical architecture</A>
+<li><a href="09q.html#Chapter 13 pages 199 -- How to choose the Layers in a Logical Architecture">: Chapter 13 pages 199 -- How to choose the Layers in a Logical Architecture</A>
+<li><a href="09q.html#Chapter 13 pages 199 -- Layers">: Chapter 13 pages 199 -- Layers</A>
+<li><a href="09q.html#Chapter 13 pages 199 -- Layer for Model-view-controller architecture">: Chapter 13 pages 199 -- Layer for Model-view-controller architecture</A>
+<li><a href="09q.html#Chapter 13 pages 199-200 -- strict and relaxed layer">: Chapter 13 pages 199-200 -- strict and relaxed layer</A>
+<li><a href="09q.html#Chapter 13 pages 199-200 -- Three or more Layers">: Chapter 13 pages 199-200 -- Three or more Layers</A>
+<li><a href="09q.html#Chapter 13 pages 200 -- Layers">: Chapter 13 pages 200 -- Layers</A>
+<li><a href="09q.html#Chapter 13 pages 202-203 -- Design with layers">: Chapter 13 pages 202-203 -- Design with layers</A>
+<li><a href="09q.html#Chapter 13 pages 204 -- Separation of concerns.">: Chapter 13 pages 204 -- Separation of concerns.</A>
+<li><a href="09q.html#Chapter 13 pages 197-204 -- Are Layers in the code">: Chapter 13 pages 197-204 -- Are Layers in the code</A>
+<li><a href="09q.html#Chapter 13 pages 204 -- Packages in C++ Java etc.">: Chapter 13 pages 204 -- Packages in C++ Java etc.</A>
+<li><a href="09q.html#Chapter 13 pages 208 -- External Resources">: Chapter 13 pages 208 -- External Resources</A>
+<li><a href="09q.html#Chapter 13 Pages 208 -- Are databases not part of UML">: Chapter 13 Pages 208 -- Are databases not part of UML</A>
+<li><a href="09q.html#Chapter 13 pages 208 -- Mixing view of the architecture">: Chapter 13 pages 208 -- Mixing view of the architecture</A>
+<li><a href="09q.html#Chapter 13 pages 208-209 -- Views of Architecture">: Chapter 13 pages 208-209 -- Views of Architecture</A>
+<li><a href="09q.html#Chapter 13 page 209 What is MVC">: Chapter 13 page 209 What is MVC</A>
+<li><a href="09q.html#Chapter 13 pages 206 -- Relationship between Domain Layer and Domain Model">: Chapter 13 pages 206 -- Relationship between Domain Layer and Domain Model</A>
+<li><a href="09q.html#Chapter 13 pages 210 -- Place of SSD in process">: Chapter 13 pages 210 -- Place of SSD in process</A>
+<li><a href="09q.html#Chapter 13 pages 210 -- SSD vs Package Diagram">: Chapter 13 pages 210 -- SSD vs Package Diagram</A>
+<li><a href="09q.html#Chapter 13 pages 199 -- Logical Architecture">: Chapter 13 pages 199 -- Logical Architecture</A>
+<li><a href="09q.html#Chapter 13 pages 199- 200 -- Logical Architecture">: Chapter 13 pages 199- 200 -- Logical Architecture</A>
+<li><a href="09q.html#Chapter 13 pages 200 -- Layer Architecture">: Chapter 13 pages 200 -- Layer Architecture</A>
+<li><a href="09q.html#Chapter 13 pages 201 -- Package Diagrams">: Chapter 13 pages 201 -- Package Diagrams</A>
+<li><a href="09q.html#Chapter 13 pages 204 -- Logical Architecture and UML Package diagram">: Chapter 13 pages 204 -- Logical Architecture and UML Package diagram</A>
+<li><a href="09q.html#Chapter 13 pages 201-202 -- Applying UML: package Diagram">: Chapter 13 pages 201-202 -- Applying UML: package Diagram</A>
+<li><a href="09q.html#Chapter 13 pages 206 -- Domain Layer">: Chapter 13 pages 206 -- Domain Layer</A>
+<li><a href="09q.html#Chapter 13 pages 201 - 205 : Layered Architecture and Java">: Chapter 13 pages 201 - 205 : Layered Architecture and Java</A>
+<li><a href="09q.html#Chapter 13 pages 204 Are there any problems that can be encountered when using layers">: Chapter 13 pages 204 Are there any problems that can be encountered when using layers</A>
+<li><a href="09q.html#Chapter 13 pages 204 : Why is it tough to replace lower level layers with new implementations?">: Chapter 13 pages 204 : Why is it tough to replace lower level layers with new implementations?</A>
+<li><a href="09q.html#Chapter 13 pages 206 : Domain Layer vs. Domain Model">: Chapter 13 pages 206 : Domain Layer vs. Domain Model</A>
+<li><a href="09q.html#Chapter 13 pages 207 -- tiers vs layers">: Chapter 13 pages 207 -- tiers vs layers</A>
+<li><a href="09q.html#Chapter 14 pages 214 -- Agile Modeling and Lightweight UML Drawing">: Chapter 14 pages 214 -- Agile Modeling and Lightweight UML Drawing</A>
+<li><a href="09q.html#Chapter 14 pages 215 -- Reverse engineering">: Chapter 14 pages 215 -- Reverse engineering</A>
+<li><a href="09q.html#Chapter 14 pages 216 -- Static &amp; Dynamic Model">: Chapter 14 pages 216 -- Static &amp; Dynamic Model</A>
+<li><a href="09q.html#Chapter 14 pages 197-219 -- Static and Dynamic Modeling">: Chapter 14 pages 197-219 -- Static and Dynamic Modeling</A>
+<li><a href="09q.html#Chapter 14.6 pages 218 -- CRC">: Chapter 14.6 pages 218 -- CRC</A>
+<li><a href="09q.html#Chapter 14.6 pages 218 -- are CRC Cards popular">: Chapter 14.6 pages 218 -- are CRC Cards popular</A>
+<li><a href="09q.html#Chapter 14 pages 218-219 -- Are CRC Cards necessary or a waste of time">: Chapter 14 pages 218-219 -- Are CRC Cards necessary or a waste of time</A>
+<li><a href="09q.html#Chapter 14 pages 218 -- CRC in this course">: Chapter 14 pages 218 -- CRC in this course</A>
+<li><a href="09q.html#Chapter 14 Pages 217 -- What are the GRASP Principles">: Chapter 14 Pages 217 -- What are the GRASP Principles</A>
+<li><a href="09q.html#Chapter 14 pages 217 : Object Design Skill">: Chapter 14 pages 217 : Object Design Skill</A>
+<li><a href="09q.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="Questions on Packages, layers and preparing for design">Questions on Packages, layers and preparing for design</A></H1><ol class=Section>
+<H2><a name="Chapter 9 pages 197-219 -- Who does the software architecture">Chapter 9 pages 197-219 -- Who does the software architecture</A></H2>
+is the team responsible for designing the architect of the software
+different from the team that develops the software? if so, wouldn't it make
+sense to make the architect team also the development team since they have
+a better understanding of the software?
+<p>
+I agree.
+<p>
+But some organizations do have an architecture team but I feel that they
+need to also be involved in the other activities of software development.
+<p>
+One structure that may work well -- there is evidence for this -- is
+to have a designated architect on (or leading) the development team.  This
+would be someone with much relevant experience of the type of
+application being developed.
+<p>
+<H2><a name="Chapter 12 pages 195-212 -- Package Diagrams.">Chapter 12 pages 195-212 -- Package Diagrams.</A></H2>
+So, is a package diagram just a way to a) group classes you discovered in
+the domain model, b) group UI objects that you can intuit from your
+requirements/diagrams, and c) start grouping/talking about non-abstract
+concepts involved in the system (such as databases and their interfaces)?
+<p>
+Well put!  One tiny correction.  Most of the UI classes will be determined
+by the UI framework you have adopted. And, yes, if know the framework
+they will be obvious/intuitive.
+<p>
+<H2><a name="Chapter 12 pages 197-219 -- Why Packages">Chapter 12 pages 197-219 -- Why Packages</A></H2>
+Why do we need to organize projects into packages if we create a domain
+model and a SSD?  What further does a package tell us?
+<p>
+Packages are a way of controlling complexity in a large project.
+A way of separating the causes of change from each other.
+<p>
+You can produce code that works without following the standard layers.
+This is OK with small projects -- a dozen simple use cases,
+one user interface, and less than
+6 classes in the domain, perhaps.
+On the other hand you have to follow the packages used
+in the platform you are using.
+<p>
+I've just reviewed a project with about a dozen use cases and a domain
+model with 3 classes.  The architecture follows the 'mudball' with
+everything
+inside the UI package... Every class in the code is derived from
+Yaday.Yada.UI.Web.Page.  In the code for each such page, each button is
+linked
+to a method in the corresponding class... and contains the SQL commands
+for
+accessing and updating the database.  Each one contains almost identical
+code!
+If the data base changes, every file will have to be changed.  If
+a new use case is added, any of the existing data base commands could be
+broken.
+<p>
+As the department methodologist I would like to see the code rewritten
+to fit the three layers.  Otherwise, I'm sure it will be an unmaintainable
+mess
+in a year or two.   But -- it works, so as the department pragmatist,
+I think I will suggest that it be refactored later rather than holding up
+the project now.
+<p>
+<H2><a name="Chapter 13 pages 199 -- What is a Package">Chapter 13 pages 199 -- What is a Package</A></H2>
+A package is a folder for filing your project files.  Just like a folder
+for organizing a term project.
+It contains files and lets you find the right one quickly.  Packages
+organize artifacts.  That's all.
+<p>
+We use a package diagram to plan the organization of our project artifacts.
+And in Java
+each source code file is put in a <span class="InlineFormula">package</span>.  In C++ you use <span class="InlineFormula">namespace</span>s in
+the same way.
+<H2><a name="Chapter 13 pages 199-200 how do you differentiate between using a strict layered architecture or a">Chapter 13 pages 199-200 how do you differentiate between using a strict layered architecture or a</A></H2>
+relaxed layered architecture?
+In the strict architecture the dependencies go between adjacent layers
+only.  In the 3 lay model
+this means that the user interface is not permitted to us classes in the
+technical services layer.
+<p>
+<p>
+<H2><a name="Chapter 13 pages 197-212 Should the packages diagram be done before or after the domain models">Chapter 13 pages 197-212 Should the packages diagram be done before or after the domain models</A></H2>
+Either.   They are independent.  One is about the world out side your
+software.
+The other is about how you are going to organize your project.  You need to
+think about it
+before you start to design classes inside the code, not outside in the real
+world.
+<p>
+Note: a complex domain model may itself by divided into packages but this
+is not
+a Layered Architecture.
+<p>
+<H2><a name="Chapter 13 pages 197-212 How many UML Package Diagram types">Chapter 13 pages 197-212 How many UML Package Diagram types</A></H2>
+How many type of package diagram does the UML have? as far as I know are
+two of them, such as: class package diagram and detail package diagram.
+<p>
+One.
+<p>
+All package diagrams look alike.  Think folders in windowed operating
+system.  They are a visual
+way of organizing a large model.   You can use packages to organize ANY UML
+model.  For example
+if you have 100 use cases you might be able to split them into 10 folders
+each with a related
+set of 10 use cases.   You can also package a large domain model into
+sub-domains.   and so on.
+<p>
+The commonest use is to organize the design classes into closely related
+(communicating, collaborating)
+classes.
+<p>
+The traditional way to do this is called a Layered Architecture (LA for
+short).
+<p>
+<H2><a name="Chapter 13 pages 197-219 -- Guideline: Design with Layers">Chapter 13 pages 197-219 -- Guideline: Design with Layers</A></H2>
+The text lists a section of benefits for Design with Layers, are there any
+notable drawbacks in Design with Layers?
+<p>
+It feels unnatural at first...  I guess it doesn't click until you've used
+it for a while.  This is
+the big drawback to Layers: motivating their use.   Until you've done it
+it doesn't seem to have value.
+<p>
+<H2><a name="Chapter 13 pages 197-219 -- Advantages of Layers">Chapter 13 pages 197-219 -- Advantages of Layers</A></H2>
+Sanity. Being able to change the design quickly and safely.
+<p>
+<H2><a name="Chapter 13 pages 197-213 : What are Packages">Chapter 13 pages 197-213 : What are Packages</A></H2>
+What should be included inside of packages?  Will it just be the
+related classes you would use in coding the system/project?
+<p>
+This is a pretty good description of what a package is: a collection of
+related classes.
+<p>
+However it is normal to group related packages into a package
+in a logical architecture.
+<p>
+The UML also lets you
+<ul class="Set">
+<li><span class=Formula>group related use cases into a (use case) package.</span>
+<li><span class=Formula>group related components into a package.</span>
+<li><span class=Formula>group related nodes (I guess) into a physical package.</span>
+</ul>
+<p>
+<p>
+<H2><a name="Chapter 13 pages 197-212 -- Packages">Chapter 13 pages 197-212 -- Packages</A></H2>
+Are there any other tools besides package diagrams to show the logical
+architecture of a system?
+<p>
+UML inherited the package notation from PS and Mac Graphic User
+Interfaces... and
+so it is essentially universal to show a collection of related classes as
+a package and to allow packages to be collected into larger packages etc.
+<p>
+The use of a dashed arrow is UML specific and many would say backwards!
+<p>
+<H2><a name="Chapter 13 pages 199 -- What is coupling">Chapter 13 pages 199 -- What is coupling</A></H2>
+When a piece of code uses another piece of code, they are coupled.
+<p>
+Example:  using a global variable.
+<p>
+Example: calling a function in a class.
+<p>
+The term was invented in the 1970's in reaction to horrible
+problems with FORTRAN programs.
+<p>
+Also know as a dependency -- see below.
+<p>
+<H2><a name="Chapter 13 pages 199 -- When would you draw a dependency line">Chapter 13 pages 199 -- When would you draw a dependency line</A></H2>
+If anything in package A makes use of something in package B then you need
+a
+dashed line from A to B.  But you only need one line.
+<p>
+Simple test: does A have something that has the name of something in B.
+<p>
+Example dependency:  In package A class C{ ...... B b; ...}.
+<p>
+For examples in C++ of dependencies between classes see
+[<A href="http://www.csci.csusb.edu/dick/cs202/uml1.html#Dependency"> Dependency in uml1 </A>]
+in my CS202 notes.
+<p>
+<H2><a name="Chapter 13 pages 197-202 -- Package Diagram vs SSD">Chapter 13 pages 197-202 -- Package Diagram vs SSD</A></H2>
+The connection or dependencies (- - - - &gt;) between two or more packages affect
+the SSD model when the packages are modified or changed.
+<p>
+In general, the way you package the design is about the inside of the
+software and the SSD is about the external behavior of the software.
+<p>
+Repackaging shouldn't change the SSD and the SSD shouldn't change
+the packaging of the design.
+<p>
+But if you use the standard pattern of splitting user interface
+classes from the rest then the arrows in the SSD flow along
+the dependencies between the user interface and the other packages.
+<p>
+Notice: good packaging is stable packaging.
+<p>
+<H2><a name="Chapter 13 pages 197-219 -- Logical Architecture and UML Package Diagrams">Chapter 13 pages 197-219 -- Logical Architecture and UML Package Diagrams</A></H2>
+How do you use System Operations, SSDs, and Layers together?
+<p>
+Each System operation is found in a SSD (or is an obvious step in a
+simple use case). You take this operation and look for classes
+that handle it.  Then it gets complex ... we will spend several weeks
+on it -- no time for a good summary now.  Briefly -- the content
+of each package develops as each SSD is handled but the packages
+shouldn't change too much if you follow the books advice.
+<p>
+<H2><a name="Chapter 13 pages 198-201 -- Packages">Chapter 13 pages 198-201 -- Packages</A></H2>
+How much data a package should contain?
+<p>
+At least one item I guess -- though you might have one or two empty
+packages at the start of a project.
+<p>
+On the other hand when there is so much in a package that you can't draw a
+diagram of the contents on a black board or a sheet of paper then you
+need to divide it into subpackages.
+<p>
+<H2><a name="Chapter 13 pages 197 -- Is there a limit to how much nesting we should do with packages">Chapter 13 pages 197 -- Is there a limit to how much nesting we should do with packages</A></H2>
+<p>
+Not in theory.
+<p>
+In practice -- Keep It Simple!
+<p>
+<p>
+<H2><a name="Chapter 13 pages 197-219 -- package diagram">Chapter 13 pages 197-219 -- package diagram</A></H2>
+in object oriented design it is good practice to separate for example your
+UI-Classes from your main-architecture and system-interface, so I'm i to
+understand that everything all interfaces must be prototyped before
+development starts?
+<p>
+A Package diagram tells you a lot about what can be prototyped separately.
+<p>
+Splitting the UI from Domain lets you prototype a stable user interface
+and link it to the Domain/services layer later.
+<p>
+Splitting off the technical services let you debug your understanding of
+the technology without worrying about the use cases and user interfaces.
+<p>
+But NO:  you can even work in parallel in all the packages, and you can
+have different teams working in parallel.  So you don't have to
+&quot;complete a package&quot; before tackling another one.  If something is
+missing from another package -- put in a stub class/method to fake it!
+<p>
+<H2><a name="Chapter 13 pages 199 -- Logical Architecture -- What is Application Logic">Chapter 13 pages 199 -- Logical Architecture -- What is Application Logic</A></H2>
+<p>
+Application Logic is how the program is supposed to work -- the sequence
+of events inside the software that are correct and desirable -- but
+without reference to any particular technology.
+<p>
+Many use cases have a complex mixture of scenarios.  Application logic
+is about navigating these.  IT is also about ensuring that the Business
+Rules (Domain Rules) are implemented.
+<p>
+Example <a href="#TBA">TBA</A>.
+<p>
+<H2><a name="Chapter 13 pages 198-199 -- UML packaging">Chapter 13 pages 198-199 -- UML packaging</A></H2>
+The Logical Architecture
+depicts technical services as a vertical implementation after UI and
+domains. Wouldn't be more beneficial for the sake of any implementation to
+include Tech services horizontally? The model will be more dynamic.
+<p>
+The arrows do not show sequence. They show dependencies -- what happens if you change something.
+<p>
+In the UP you would work on all layers at
+a time because adding
+a new feature/scenario/use case may involve new technical services, domain
+elements, and user interfaces.
+<p>
+More: the arrows show dependency, so if the technical services change then
+we may be forced to change
+the domain and user interface.  If the domain changes then the user
+interface may change..... however we can
+work on the user interface without disturbing the existing classes in the
+domain layer, and
+work on the domain without risk of breaking the technical services.
+<p>
+<H2><a name="Chapter 13 pages 198 -- logical architecture">Chapter 13 pages 198 -- logical architecture</A></H2>
+Can you show an example of how to break up the point of sale into packages,
+not the end result, but the process of figuring it out?
+<p>
+No.
+<p>
+Right now -- follow the masters and do the simplest layered architecture
+that could
+possible work.
+<p>
+We will come back to this later in the book.
+<p>
+<H2><a name="Chapter 13 pages 199 -- How to choose the Layers in a Logical Architecture">Chapter 13 pages 199 -- How to choose the Layers in a Logical Architecture</A></H2>
+Use a meeting.  Do it iteratively as you
+elaborate the design and learn about the problem.
+The number is not important.  What is
+important is avoiding &quot;mud balls&quot; of classes that do everything
+that you dare not be changed.
+<p>
+<H2><a name="Chapter 13 pages 199 -- Layers">Chapter 13 pages 199 -- Layers</A></H2>
+Is the concept of layers similar to the 7 networking layers of the OSI
+model (i.e. physical, data link, network, etc)?
+<p>
+Yes.
+<p>
+<H2><a name="Chapter 13 pages 199 -- Layer for Model-view-controller architecture">Chapter 13 pages 199 -- Layer for Model-view-controller architecture</A></H2>
+Is a layer like a controller in a MVC architecture?
+<p>
+Controllers connect the user interface to the domain layer.
+They know about scenarios and use case logic.  The use &quot;model&quot;
+(our domain layer).... See
+[<A href="patterns.html#MVC"> patterns.html#MVC </A>]
+for details on MVC.
+<p>
+You can put controllers in a special &quot;Application layer&quot; (on page 203)
+between UI and Domain.
+<p>
+Some pundits insist that control objects are a snare and delusion.
+<p>
+You can make the case that they might, in a simple system,
+live in a sub-package in the UI or Domain layer.
+<p>
+<H2><a name="Chapter 13 pages 199-200 -- strict and relaxed layer">Chapter 13 pages 199-200 -- strict and relaxed layer</A></H2>
+The diagram in Figure 13.2 shows layers that are connected directly to the
+layer below it and it also shows layers that skip layers, so would this be
+a relaxed layer architecture, and why does it matter?
+<p>
+Yes -- skipping a layer makes it relaxed.
+<p>
+I'm relaxed about using a relaxed hierarchy.  I figure only
+purists will worry about skipping a level.
+<p>
+But I have no evidence to back up my hunch.
+<p>
+<H2><a name="Chapter 13 pages 199-200 -- Three or more Layers">Chapter 13 pages 199-200 -- Three or more Layers</A></H2>
+The book lists three layers. Do the classes, packages, and subsystems
+generally fit into these three layers, or are there usually other layers
+added to these three?
+<p>
+The three layer model should be enough for projects in this class but their are more complex
+packaging schemes for more complex models and problems.  Turn to page 203,
+Figure 13.4 for the kind
+of organization you might use in a large complex project.   I would guess
+that every project
+has its own architecture....
+<p>
+By the way: the packages/folders in a layer only contain classes or
+sub-folders/sub-packages.
+<p>
+<H2><a name="Chapter 13 pages 200 -- Layers">Chapter 13 pages 200 -- Layers</A></H2>
+The author says that the introduction to OOA/D focuses on the core
+application logic layer, with some secondary discussion of the other
+layers. What are those other layers?
+<p>
+The problems of handling Java Swing on the web or a Web Services
+interface, and a command line administration package would all be
+in the User Interface layer.
+<p>
+Problems about data bases, external computers, networking, logging errors
+should be solved in the Technical Service layer.
+<p>
+Also see the layers on page 203!
+<p>
+<H2><a name="Chapter 13 pages 202-203 -- Design with layers">Chapter 13 pages 202-203 -- Design with layers</A></H2>
+The book mentions some of the common layers as UI, Application, Domain,
+Business Infrastructure, Technical Services, and Foundation.  What are some
+of the less common ones?
+<p>
+I think Larman is modest.... this architecture is pretty complete.
+<p>
+<p>
+<H2><a name="Chapter 13 pages 204 -- Separation of concerns.">Chapter 13 pages 204 -- Separation of concerns.</A></H2>
+On page 204, Larman talks about how object responsibilities in a layer
+should not mix responsibilities from other layers.  This sees like a
+mistake that can be easily made, and I was wondering if you could provide
+more examples of such how such a mistake can be made, and how can we can
+better avoid them?
+<p>
+It is a mistake made when you treat a large project as a small one. Or when
+you rush to code without thought
+of the future.
+<p>
+It takes discipline to stop and think about the future development of a
+project when you are
+struggling with the first use case scenario.... but if you do this you can
+make the project
+much easier to develop and easier to maintain.
+<p>
+We've been separating the logical structure from the physical structure
+since the 1970's.  It
+goes back the David Parnas and predates objects.  I use it whenever I can.
+Key point: separate
+your concerns.  Hide things that vary from other parts. ....  We will do
+more on this.
+<p>
+<H2><a name="Chapter 13 pages 197-204 -- Are Layers in the code">Chapter 13 pages 197-204 -- Are Layers in the code</A></H2>
+Most languages provide ways to collect classes into packages.
+See next question.
+<p>
+<H2><a name="Chapter 13 pages 204 -- Packages in C++ Java etc.">Chapter 13 pages 204 -- Packages in C++ Java etc.</A></H2>
+What are some examples of packages (namespaces)in c++, Java, c# etc?
+<p>
+In C++: &quot;std&quot; is a package!  As in
+<pre> 		using namespace std;</pre>
+So is a file that contains several classes....
+<p>
+Java: java.util.*, etc. are packages and declared as packages,
+[<A href="http://java.sun.com/j2se/1.4.2/docs/api/index.html"> index.html </A>]
+Any directory that contains some classes can act as a namespace or
+package.  The source code files must include a &quot;package&quot; declaration to
+join the namespace/package.  They must also &quot;import&quot; any other
+packages/classes they need to use.  There is a good explanation
+[<A href="http://javaworkshop.sourceforge.net/chapter3.html"> chapter3.html </A>]
+at Source Forge.  Also check out
+[<A href="http://java.sun.com/docs/books/tutorial/java/package/packages.html"> packages.html </A>]
+Sun's Java Tutorial.
+<p>
+C#:  System, System.IO, etc.
+<p>
+<H2><a name="Chapter 13 pages 208 -- External Resources">Chapter 13 pages 208 -- External Resources</A></H2>
+The book states not to show external resources as the bottom layer and
+references LDAP directory services or MySQL databases as examples of these.
+Does this include hardware dependencies, drivers or other OS dependencies?
+Meaning that we do not need to show such resources as the bottom layer as
+well?
+Is there a portion of UML that diagrams external resources since we don't
+put them here?
+<p>
+The hardware device might appear as an actor in a use case.  It would not
+be software and so not be in the logical architecture.
+<p>
+I would not show them in the architecture.   I would hide the hardware
+behind a classes that
+provide the rest of the software with the API they need and use the drivers
+to make the interface work.
+I'd put these classes is a special package inside the Technical Services
+Package and name it after
+the services it provides -- not the name of the device.
+<p>
+Why: devices change but the program must go on...
+<p>
+<H2><a name="Chapter 13 Pages 208 -- Are databases not part of UML">Chapter 13 Pages 208 -- Are databases not part of UML</A></H2>
+You can use UML to design data bases -- see CSCI372.  Class diagrams
+work quite well when
+modeling entity-relation diagrams.
+There is even a horribly detailed profile for using UML to model data bases.
+<p>
+However objected oriented software is easier
+to maintain and needs a different structure to the data base!
+Interfacing it with a data base we are wise to separate the data base
+commands
+from the objects we want to implement.  A system that uses Oracle today,
+may well be using MySQL
+tomorrow.  We don't want to be hacking our domain logic when this
+happens.
+<p>
+It is very painful to come across a clump of SQL statements embedded in
+several classes, and all doing
+similar things in the same way.  They should be placed in a set of classes that
+provide a
+logical interface to the rest of the software.
+<p>
+<H2><a name="Chapter 13 pages 208 -- Mixing view of the architecture">Chapter 13 pages 208 -- Mixing view of the architecture</A></H2>
+Could you please explain the diagram (Figure 13.7) on page 208 titled
+&quot;Mixing views of the architecture?
+<p>
+I found this confusing.  I think Larman is pointing out a mistake
+he has seen people make when consulting and/or training.  The
+mistake is showing the internal architecture of the software
+(classes)
+with the external systems architecture (hardware -&gt; deployment).
+He prefers (and I agree) that we are wise to hide the hardware
+by special classes that are easy to change without effecting the
+rest of the system.   This is one of many examples of Parnas's
+Principle of Information Hiding.   We try and put each requirement
+and design decision in a separate module.
+<p>
+<H2><a name="Chapter 13 pages 208-209 -- Views of Architecture">Chapter 13 pages 208-209 -- Views of Architecture</A></H2>
+Persistent data can be viewed as a sub-domain of the Domain layer. Can you
+elaborate further on this idea? By following the example it does not appear
+to be very clean. There is a lot of crossing lines going many different
+directions.
+<p>
+The domain layer stores data about the domain.  Some of this data stays
+after the program stops running.
+Or is shared between many programs.  This means it must be &quot;persistent&quot;.
+These days we usually
+put it in a data base.  As a program runs it changes the domain and nearly
+all of this is recorded in
+the data base.  Their will be many interactions -- unavoidable -- between the
+data structures in the
+program and the data in the data base.
+<p>
+<H2><a name="Chapter 13 page 209 What is MVC">Chapter 13 page 209 What is MVC</A></H2>
+MVC splits a program into three types of class.  The View classes
+understand how to present data
+to the users.  The Controller classes get commands from the View and pass
+them to the Model. They
+tend to be pretty trivial.  The Model keeps track of the state of the
+domain with the View
+being updated as needed.
+<p>
+<img src="MVCinUML.gif" alt="[View...&gt;Controller...&gt;Model]">
+<p>
+It is built into several popular GUI frameworks such as Struts.  We
+have used MVC in the department for student projects for the last 10 years.
+<p>
+Somewhere on the net there is a blues about MVC....
+[<A href="http://www.youtube.com/watch?v=YYvOGPMLVDo"> watch?v=YYvOGPMLVDo </A>]
+<p>
+<p>
+<H2><a name="Chapter 13 pages 206 -- Relationship between Domain Layer and Domain Model">Chapter 13 pages 206 -- Relationship between Domain Layer and Domain Model</A></H2>
+(1) Please expand on the relationship between the Domain Layer and the
+Domain Model.
+<p>
+(2) Could you explain a little more on the relationship between the domain
+layer and domain model.
+<p>
+The Domain model inspires the classes in the domain layer.  The domain
+layer reflects the domain model to an extent.  Some associations and
+most attributes in the domain model will reappear in the
+domain layer class diagrams.
+<p>
+The domain model has no operations but the design classes do.
+<p>
+<H2><a name="Chapter 13 pages 210 -- Place of SSD in process">Chapter 13 pages 210 -- Place of SSD in process</A></H2>
+An SSD is bridge between a use case scenario and the
+design of a set of objects that support the use case.
+<br><ol class="List">
+<li>Select use case to analyze
+<li>Select scenario in use case
+<li>Express scenario as SSD and so get a set of operations
+<ul class="Set">
+<li>Select an interesting operation and note any interesting pre/post
+conditions
+<li>Design an interaction that implements the operation
+<li>Place operations and data in interaction into the Design Class Diagram
+<li>Repeat with another operation from the SSD
+</ul>
+<li>Code (and correct previous mistakes)
+<li>Test (and correct previous mistakes)
+<li>Repeat
+</ol><br>
+<p>
+<H2><a name="Chapter 13 pages 210 -- SSD vs Package Diagram">Chapter 13 pages 210 -- SSD vs Package Diagram</A></H2>
+Connecting with SSD, I think the UML package diagram of the logical
+architecture illustrate the &quot;System&quot;, the inner organization of the system,
+is that right?
+<p>
+Close..... the 'System' in the SSD will mainly show the Domain
+Package classes.... plus some of the Technical Services layer.
+<p>
+<H2><a name="Chapter 13 pages 199 -- Logical Architecture">Chapter 13 pages 199 -- Logical Architecture</A></H2>
+Are there other layers, besides UI, Domain, and technical services, that we
+should be aware of?
+<p>
+Yes.... and they are all on page 203.  For this course, page 203
+has enough layers.  More than you will need in your projects!  I hope
+it will be enough for most &quot;real&quot; projects you work on.
+<p>
+<H2><a name="Chapter 13 pages 199- 200 -- Logical Architecture">Chapter 13 pages 199- 200 -- Logical Architecture</A></H2>
+Is a strict layered architecture better than a relaxed layered
+architecture?
+<p>
+<p>
+A relaxed hierarchy has the problem that the upper layers can know
+about the details of the lower levels. The programmers have to
+master ALL the levels below the one the are working in.  And a
+low level change can cause changes in the top level.  In turn,
+this means the lower levels have to be more stable.
+<p>
+<H2><a name="Chapter 13 pages 200 -- Layer Architecture">Chapter 13 pages 200 -- Layer Architecture</A></H2>
+Why isn't strict layer architecture not used in information systems design.
+<p>
+I find strict hierarchies too restricted.  Sometimes you
+need a User Interface class to call a method in a class that provides
+a service without changing any domain layer classes, for example.
+It gets worse when there are 6 or 7 layers as in the packages on
+page 203.
+<p>
+<H2><a name="Chapter 13 pages 201 -- Package Diagrams">Chapter 13 pages 201 -- Package Diagrams</A></H2>
+Is it recommended that a package diagram be constructed for every coding
+project?
+<p>
+Good question!
+<p>
+What is important is to stop and decide whether your project is complex
+enough to demand a package diagram.   If in doubt, do it!  Perhaps
+draw a BIG poster and put classes on sticky notes inside the packages?
+<p>
+I don't in most of my programming these days because I have the packaging
+in my head -- and I'm sorry to anybody who has to work with it.  It is
+a mess.  Exception -- programs for classes -- I duck the issue because
+I'm trying to teach coding.  It is only in this class that I do packages!
+<p>
+<H2><a name="Chapter 13 pages 204 -- Logical Architecture and UML Package diagram">Chapter 13 pages 204 -- Logical Architecture and UML Package diagram</A></H2>
+Is it better for packages to have high cohesion or low cohesion in a
+project?
+<p>
+The classes in a package should be more cohesive
+(sharing a common theme) than classes across packages.
+<p>
+<p>
+<H2><a name="Chapter 13 pages 201-202 -- Applying UML: package Diagram">Chapter 13 pages 201-202 -- Applying UML: package Diagram</A></H2>
+When it comes to grouping classes within a package, how much in common
+would they need to have to be put into the same package?
+<p>
+Typically a lot of associations should be inside the package rather than
+outside.
+<p>
+Oddly modern architecture stresses not the commonality in a package so much
+as what it contributes to the whole:  does it define how the user likes to
+work?
+does it understand the logic the user uses?  Does it know all about the
+data base
+and SQL?  We would split these up -- because this seems to work well and
+give
+sane maintenance programmers:-)
+<p>
+<H2><a name="Chapter 13 pages 206 -- Domain Layer">Chapter 13 pages 206 -- Domain Layer</A></H2>
+When using the Domain Model as inspiration for the Domain Layer, can the
+names be the same?
+<p>
+YES!  The names of classes in the domain model should be identical to
+some of the names of classes in the Domain Layer (design).
+<p>
+Sadly the two models are never identical...
+<p>
+<H2><a name="Chapter 13 pages 201 - 205 : Layered Architecture and Java">Chapter 13 pages 201 - 205 : Layered Architecture and Java</A></H2>
+As the chapter advances, the author uses more examples of how Java would
+implement the code. Is Java inherently easier to use with the Logical
+Architecture designs, and is the world moving to a point where Java is
+being embraced more then other languages for implementation of a system.
+<p>
+The book uses Java because it is pure object-oriented language.
+<p>
+You will get different answers from Sun(Java) and Microsoft(C#) and I don't
+have any unbiased evidence one way or the other.
+<p>
+Also:  raw C++ doesn't have a good GUI/WWW interface
+but it does have a speed advantage.  Hence tends to be used for systems
+programming rather than applications.
+<p>
+And what about: PERL, PHP, JSP, ASP, <span class="InlineFormula">ad inf</span>?
+<p>
+<H2><a name="Chapter 13 pages 204 Are there any problems that can be encountered when using layers">Chapter 13 pages 204 Are there any problems that can be encountered when using layers</A></H2>
+<p>
+Good question!  Class discussion!
+<ul class="Set">
+<li><span class=Formula>You have a class that doesn't fit in any package!</span>
+<br><ol class="List">
+<li><span class=Formula>See if the class should be split up.</span>
+<li><span class=Formula>Invent a new package for it... and quickly look to see if</span>
+classes in other packages could be moved to the new package.
+</ol><br>
+<li><span class=Formula>The team working on one package produce classes that don't play</span>
+well with classes done by other teams doing other packages.
+<br><ol class="List">
+<li><span class=Formula>Don't give a package to a separate team.</span>
+<li><span class=Formula>Each dependent package needs a representative working with</span>
+the other team.
+<li><span class=Formula>Get the code from different teams integrated into the whole</span>
+as soon as possible.  Integrate and TEST:
+<ul class="Set">
+<li><span class=Formula>EVERY NIGHT (Microsoft).</span>
+<li><span class=Formula>each week (XP)</span>
+<li><span class=Formula>Every two weeks...</span>
+</ul>
+</ol><br>
+<li><span class=Formula>Performance may take a hit when there are a lot of small classes.</span>
+<ul class="Set">
+<li><span class=Formula>But it won't be a big hit....</span>
+</ul>
+<li><span class=Formula>Badly chosen layers can lead to hard to diagnose bugs.</span>
+<li><span class=Formula>You may spend too much time reorganizing the packages.</span>
+</ul>
+<p>
+<H2><a name="Chapter 13 pages 204 : Why is it tough to replace lower level layers with new implementations?">Chapter 13 pages 204 : Why is it tough to replace lower level layers with new implementations?</A></H2>
+<p>
+These tend to contain
+classes that the project team is not developing -- they already
+exist in a library or &quot;off the shelf&quot; package.  All you can do
+is hide them behind an interface.
+<p>
+<H2><a name="Chapter 13 pages 206 : Domain Layer vs. Domain Model">Chapter 13 pages 206 : Domain Layer vs. Domain Model</A></H2>
+Looking to the domain model is supposed to help with naming classes and
+developing the application logic layer. Couldn't you just pull out any
+nouns that are in the model and make those your classes; and even further,
+take the verbs and make those the attributes?
+<p>
+This was the great idea of the early 1980's.
+<p>
+This will (normally) give you a bloated domain layer with the wrong
+attributes
+and useless associations.
+<p>
+<H2><a name="Chapter 13 pages 207 -- tiers vs layers">Chapter 13 pages 207 -- tiers vs layers</A></H2>
+What is the difference between a tier and a layer? Can the terms be used
+interchangeably.
+<p>
+Use &quot;tier&quot; to describe how software is running on different machines:
+client
+vs server for example.  Use &quot;layer&quot; when talking about which class
+knows about which other classes.
+<p>
+<p>
+<H2><a name="Chapter 14 pages 214 -- Agile Modeling and Lightweight UML Drawing">Chapter 14 pages 214 -- Agile Modeling and Lightweight UML Drawing</A></H2>
+What is your technique when doing agile modeling?
+<p>
+I mostly work alone so I don't need to communicate my analysis and
+design to others.  So I use UML diagrams to explore the problems
+and solutions -- using a pencil+paper+eraser mainly.  Sometimes
+pen and paper.  No white board:-(   I have yet to find a light
+enough computer tool to be worth me using it.
+<p>
+I use computerized tools for presenting ideas in class and
+other presentations -- for example presenting research at seminars
+and conferences.   Also in magazines and journals.
+<p>
+<H2><a name="Chapter 14 pages 215 -- Reverse engineering">Chapter 14 pages 215 -- Reverse engineering</A></H2>
+The author suggests using an UML tool capable of generating diagrams from
+code. Any suggestions? I am not aware of such tools.
+<p>
+IBM Rational Rose does this.  So does Umbrello on our Linux machines.
+But usually reverse engineering can not
+supply explanations of why the code
+is the way it is.  I've not read about anybody using it.
+<p>
+From the Google Group &quot;UML Forum&quot;
+David Hickerson Feb 12th 2009
+<hr><ol class="Box">
+IBM Rational UML products have a reverse engineering tool that works pretty well. Also IBM Telelogic Rhapsody has one, but I haven't tried it yet, though I use the product. I would give either of those a go.
+<p>
+Also, reversing the code into a UML model doesn't create the diagrams. You will have to manually drag out the pieces onto the drawing, however the tools should draw all of the relationship lines for you. At least in the class diagrams they will. The forward and reversing tools I used in the past, only look at the outer shell of the code and not the method algorithms, so collaboration and sequence diagrams were not generated. That was about 4 years ago those products may do better now.
+<p>
+Good luck with project. I suggest that you spend some time and really learn UML, it is the industry standard and the way Software Engineers communicate designs.
+</ol><hr>
+<p>
+<H2><a name="Chapter 14 pages 216 -- Static &amp; Dynamic Model">Chapter 14 pages 216 -- Static &amp; Dynamic Model</A></H2>
+What is the difference between the static and dynamic model. The book says
+that the dynamic view is more important. Why? The static seems to have more
+info and it seems as if all of these models seem to duplicate the same
+information.
+<p>
+Yes: the static model is a summary of the dynamic model and as a result
+is a lot more useful for finding out what attributes and operations
+are where.
+The dynamic model shows you sequences of events inside the system.
+The static model gives a clear summary of the possible messages.
+<p>
+<H2><a name="Chapter 14 pages 197-219 -- Static and Dynamic Modeling">Chapter 14 pages 197-219 -- Static and Dynamic Modeling</A></H2>
+It seems like the only reasonable time to do Dynamic Modeling is in
+parallel with Static Modeling.  Why would one try to split the concepts
+apart?
+<p>
+Yes you will be doing both types of diagram at once.
+<p>
+Why have two diagrams -- largely because it works better than
+either alone.  The static view summarizes <span class="InlineFormula">all the interactions</span>
+you have analyzed -- so you can, for example, see in the
+static model that a particular
+operation is already part of the growing design.  But only the
+dynamic diagrams let you answer the questions -- why did you
+think we needed this operation? and why in this
+class?
+<p>
+<H2><a name="Chapter 14.6 pages 218 -- CRC">Chapter 14.6 pages 218 -- CRC</A></H2>
+Would you suggest we use Class Responsibility Collaboration cards for our
+project?
+<p>
+Only as an experiment.  I like cards but I've never got comfortable
+with the CRC format.
+<p>
+There is more about CRC later in these notes -- with links and such to
+more info if you want to experiment.
+<p>
+<H2><a name="Chapter 14.6 pages 218 -- are CRC Cards popular">Chapter 14.6 pages 218 -- are CRC Cards popular</A></H2>
+Yes -- to be more precise -- I know a lot people have written
+good things about them:
+[<A href="http://c2.com/cgi/wiki?CrcCard"> wiki?CrcCard </A>]
+[<A href="http://en.wikipedia.org/wiki/CRC_cards"> CRC_cards </A>]
+but I have not seen any surveys showing lots of &quot;real&quot; projects
+using them.  Neither has there much recent activity in UseNet/GoogleGroups.
+<p>
+I haven't seen any surveys on the different
+techniques in use &quot;out there&quot;.
+<p>
+<H2><a name="Chapter 14 pages 218-219 -- Are CRC Cards necessary or a waste of time">Chapter 14 pages 218-219 -- Are CRC Cards necessary or a waste of time</A></H2>
+<p>
+Good question -- one that struck me when I saw a demo of
+how they are used at OOPSLA2000.   I didn't think they helped much.
+So use them if you want or your organization likes them.  They are not
+required in this class.
+<p>
+<p>
+<H2><a name="Chapter 14 pages 218 -- CRC in this course">Chapter 14 pages 218 -- CRC in this course</A></H2>
+CRC could we go over some other examples to get a better idea?
+<p>
+I don't want to spend class time seeing that
+<br><ol class="List">
+<li>They are not on the final, quizzes, or project deliverables.
+<li>Google and other Image search engines find many examples.
+<li>If you want advice try
+[<A href="http://coweb.cc.gatech.edu/cs2340/5123"> 5123 </A>]
+</ol><br>
+<p>
+<H2><a name="Chapter 14 Pages 217 -- What are the GRASP Principles">Chapter 14 Pages 217 -- What are the GRASP Principles</A></H2>
+<p>
+They are listed inside the front cover of your text and in
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+on this web site.
+<p>
+<p>
+<H2><a name="Chapter 14 pages 217 : Object Design Skill">Chapter 14 pages 217 : Object Design Skill</A></H2>
+How do you become skilled in 'thinking and designing in objects' vs just
+knowing the notation?
+<p>
+Practice -- this course starts the learning...
+</ol>
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci Dept, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10.
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

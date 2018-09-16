@@ -1,0 +1,121 @@
+.Open 375 Objectives Tested in Final
+. Vision and Business Case
+	What is a vision and what is it for?
+	What is a business case and what is it for?
+. Domain Models
+	Describe a glossary and explain its purpose in a project.
+	Define a data dictionary and explain its purpose in a project.
+     Draw domain models using UML class diagrams with classes, associations, roles, and multiplicities.  Some classes may have attributes.
+	May incude generalization.
+     Use multiplicities and role names correctly.
+	Give the purpose of a domain model in a project.
+	Avoid using aggregation and composition in a domain model.
+	No operations in domain models!
+	Use the UML derived attribute notation only when needed.
+	Explain the purpose and use of a domain model.
+	Give examples of the use of the `Glossary`.
+. Requirements
+	Describe what a stakeholder is and why they must be identified.
+	List half-a-dozen types of stakeholders in a project.
+	Distinguish functional from non-functional requirements.
+	Give examples that typify functional and non-functional requirements.
+	Give a list of half-a-dozen types of requirements. (you can use the books FURPS+ or my $PQRST or any other mnemonic).
+	Explain why we separate functional from non-functional requirements.
+	Give examples of nonfunctional requirements/`ilities`/Qualities.
+	What is a "Supplementary Specification" used for?
+	Give an example of a businesss rule.
+	Give an example of a non-functional requirement and its impact on your team's project.
+. Use Case Model
+.See http://www/dick/cs375/usecases.html
+     Define a use case and give examples using the brief format.
+     Use either the brief or casual format to describe a use case.
+     List half-a-dozen of the headings in Larman's `Fully Dressed Use case`.
+     Define a scenario and write simple examples of scenarios.
+     Distinguish actors from use cases and give examples of actors.
+
+     Use simple UML use case diagrams + scenarios to state requirements.
+Note: use case diagrams do not have to show the system boundary.
+     Correctly use extensions in a written use case.
+	Keep use case diagrams simple by avoiding details and complicated relations.
+     Reproduce parts of your team's project's use cases.
+. Interaction Diagrams
+	Describe the relations between and purposes of: interaction, sequence, and communication diagrams.
+	In interaction diagrams: distinguish class for instance, and from named instance.
+	In interaction diagrams: draw creation and destruction correctly.
+     Use UML a Systems Sequence Diagram(SSD) to describe a scenario as a 
+series of messages passed between actors and the system.
+     Use UML message sequence diagrams to describe interactions between objects.
+     Use UML communication diagrams to describe interactions between objects.
+     Use UML communication diagram sequence numbers correctly.
+     Use iteration and conditions correctly in communication and sequence diagrams.
+     Translate between given sequence and communication diagrams.
+	Note:
+.set
+ Sequence diagrams will normally omit return arrows unless data is being 
+returned.
+ Normally they will show `synchronous` arrows not `asynchronous`
+ones.
+	In designs, you may have ONE(1) "found message": an arrow coming from nowhere.
+     Reproduce parts of your team's project's interaction diagrams.
+.Close.Set
+. Design Class Diagrams
+     Draw, read, and critique a UML class diagram with attributes and operations.
+	Use arrows etc correctly in class diagrams.
+.See http://www.csci.csusb.edu/dick/cs375/arrows.gif
+     Use multiplicities and role names correctly in a design class diagram
+     Allocate responsibilities to classes and test result vs scenarios.
+     Use the General Responsibility Assignment Patterns to place operations in a design model.
+     Use visibility(-#+) and derivation (/) symbols correctly in a class diagram.
+     Make sure a set of communication/message sequence diagrams is supported by a class diagram.
+     Extend simple class diagrams to include generalization, aggregation, and composition.
+     Use dependency, association, generalization, composition, etc correctly.
+     Avoid using aggregation in a design class diagram.
+     Explain why aggregation is avoided in a design class diagram.
+     Use the two notations for interface correctly.
+	Use the idea of interface to make a design more flexible.
+     Use the following stereotypes correctly: <<enumeration>>, <<interface>>, <<singleton>> (1), <<constructor>>, ...
+     Use the following constraints correctly: {abstract}, {create}, {active}, {complete}, {disjoint}, {ordered}, ...
+     Reproduce parts of your team's project's class diagrams.
+. Patterns and Principles
+.See http://www/dick/cs375/patterns.html
+	List the $GRASP patterns.
+	Illustrate the use of the $GRASP patterns in moving from a domain modeland use case to a design.
+	Given a $GRASP pattern show how it might be applied in an example.
+	Explain and apply MVC.
+     Use some simple "$GoF" design patterns correctly: Singleton, Decorator, Factory, Adapter, Facade, State, Command, ...
+	Explain: $DRY and $YAGNI.
+	Explain what a pattern is and how they are used.
+     Describe how your team used some patterns in your project.
+. Architecture and Packages
+     Draw, explain and critique package diagrams with packages, classes, and dependencies.
+	List a the typical set of layered packes in the book and describe one of them in more detail.
+     Describe your team's project's logical architecture.
+. Planning and Process
+	Describe the sequence of phases in a Unified Process (UP).
+	How does Inception differ from Elaboration and Elaboration from Construction and Transition.
+	Give three simple rules for whether an artifact (diagram, memo, text,... program) should be prepared.
+     Compare iterative development planning differ with traditional Systems Development Life Cycle?
+     Write down a list of five(5) Unified Process Best Practices. Describe what one of these means in detail. 
+     What does agility and adaptiveness mean in software development? 
+     Compare how models are used in a traditional life cycle and in the Unified Process. 
+	How do the UP disciplines relate to UP iterations?
+	List upto half-a-dozen of the 9 UP disciplines.
+
+. Project
+	All students should be able to recall the work done in their project
+well enough to describe a given part of it from memory.
+
+
+.Close 375 Objectives Tested in Final
+. Glossary
+PQRST::$RJB=`Purposes, Qualities, Realities, Systems, Techs`, a mnemonic for various types of requirement.
+Purposes include funtions and use cases and define why someone
+wants the software.  Qualities are the needed properties of the software
+like security and performance.  Realities are domain models
+ including static classes and dynamic start charts.
+Systems are the existing systems that we are designing,
+replacing, using, modifying,
+and competing with.  Techs include technologies, techniqes, etc. and
+describe what and how we might construct the software -- the decisions
+we make: eg-- use VB and MySQL.
+DRY::="Don't Repeat Yourself".

@@ -1,0 +1,39 @@
+.Open Fully Dressed Use Case Template
+.Table
+.Row Name
+.Item Start with a verb, numbering optional
+.Row Scope
+.Item The System under Design
+.Row Level
+.Item User-goal or subfunction
+.Row Primary Actor
+.Item Asks the $SuD to deliver service to meet goals
+.Row Stakeholders and Interests
+.Item (stakeholder1): what they want.
+.Row Preconditions
+.Item State what special and interesting things must be true for this particular  case to work.
+.Row Postconditions
+.Item List the interesting things that are true after a scenario is completed
+.Row Main Success Scenario
+.Item actor does something or system responds
+.List
+ steps
+.Close.List
+.Row Extensions
+.Item 
+.Set
+ (steps letter): condition 
+.List
+ steps
+.Close.List
+.Close.Set
+.Row Special Requirements
+.Item desired qualities or technological limitations
+.Row Variations in Technology and Data
+.Item step number: possible change in technology or data format
+.Row Frequency of Occurrence
+.Item How often
+.Row Miscellaneous
+.Item Open issues to research
+.Close.Table
+.Close Fully Dressed Use Case Template

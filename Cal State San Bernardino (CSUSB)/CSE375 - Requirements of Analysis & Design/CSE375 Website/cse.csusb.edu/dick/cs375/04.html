@@ -1,0 +1,587 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/04.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:53:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+CSci 375/04 Use Cases
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="04.txt">Text Version</A>]
+ 04.html 
+Wed Jan 25 12:56:07 PST 2012
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="04.html#CSci 375/04 Use Cases">CSci 375/04 Use Cases</A>
+<li><a href="04.html#Input -- Use Cases pages 61-89">Input -- Use Cases pages 61-89</A>
+<li><a href="04.html#An Example Use Case 2010">An Example Use Case 2010</A>
+<li><a href="04.html#Common error -- use cases with no main scenario">Common error -- use cases with no main scenario</A>
+<li><a href="04.html#Why don't you like the two column format">Why don't you like the two column format</A>
+<li><a href="04.html#Chapter 6 Page 70 Types of actors">Chapter 6 Page 70 Types of actors</A>
+<li><a href="04.html#Chapter 6 pp 63 -- Use Case diagram or text">Chapter 6 pp 63 -- Use Case diagram or text</A>
+<li><a href="04.html#Chapter 6 pp 64 -- Use-Case Model a diagram or text">Chapter 6 pp 64 -- Use-Case Model a diagram or text</A>
+<li><a href="04.html#Chapter 6 pp 6.1 -- Use case text or diagram">Chapter 6 pp 6.1 -- Use case text or diagram</A>
+<li><a href="04.html#Chapter 6 pp 64 -- use case">Chapter 6 pp 64 -- use case</A>
+<li><a href="04.html#Chapter 6 pp 66 -- Preferred Use Care Formats">Chapter 6 pp 66 -- Preferred Use Care Formats</A>
+<li><a href="04.html#Chapter 6.7 pp 66 -- Preferred Use Case Format in our work">Chapter 6.7 pp 66 -- Preferred Use Case Format in our work</A>
+<li><a href="04.html#Chapter 6 pp 73-74 -- Stakeholders and Interests">Chapter 6 pp 73-74 -- Stakeholders and Interests</A>
+<li><a href="04.html#Chapter 6 page 75 Happy Path">Chapter 6 page 75 Happy Path</A>
+<li><a href="04.html#Chapter 6 pp -- What is an extension">Chapter 6 pp -- What is an extension</A>
+<li><a href="04.html#Chapter 6 pp 74-76 -- Basic &amp; Alternate Flow">Chapter 6 pp 74-76 -- Basic &amp; Alternate Flow</A>
+<li><a href="04.html#Chapter 6 pp 75-76 -- Extensions -- how many and how deep">Chapter 6 pp 75-76 -- Extensions -- how many and how deep</A>
+<li><a href="04.html#Chapter 6 pp 84-86 -- One or Many use cases">Chapter 6 pp 84-86 -- One or Many use cases</A>
+<li><a href="04.html#Chapter 6 pp 87-88 -- Stakeholders and Interests List">Chapter 6 pp 87-88 -- Stakeholders and Interests List</A>
+<li><a href="04.html#Links on Use Cases">Links on Use Cases</A>
+<li><a href="04.html#Example of a Simple system">Example of a Simple system</A>
+<li><a href="04.html#System is called the &quot;Shopping Aid&quot;">: System is called the &quot;Shopping Aid&quot;</A>
+<li><a href="04.html#Vision">: Vision</A>
+<li><a href="04.html#Use Case -- Go Shopping">: Use Case -- Go Shopping</A>
+<li><a href="04.html#Use Case -- Start Up">: Use Case -- Start Up</A>
+<li><a href="04.html#Use Case -- Administer User Accounts">: Use Case -- Administer User Accounts</A>
+<li><a href="04.html#Use Case -- Backup data">: Use Case -- Backup data</A>
+<li><a href="04.html#Etc.">: Etc.</A>
+<li><a href="04.html#More Questions on Use Cases">More Questions on Use Cases</A>
+<li><a href="04.html#Review Questions on Use Cases 1">Review Questions on Use Cases 1</A>
+<li><a href="04.html#Example from 2010">Example from 2010</A>
+<li><a href="04.html#Next -- More Requirements">Next -- More Requirements</A>
+<li><a href="04.html#Start Work Project Inception">Start Work Project Inception</A>
+<li><a href="04.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="CSci 375/04 Use Cases">CSci 375/04 Use Cases</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Date<th scope="col">#<th scope="col">Topic (Participation 2pt)<th scope="col">Study pages (2 pts)<th scope="col">Quiz(15 pts)<th scope="col">Project Work(10 pts)
+<tr><td>Previous<td>3<td>Inception<td>41-59<td>Q1(1-59)<td>-
+<tr><td>Today<td>4<td>Use Cases<td>61-89<td>-<td>W1 (section 4.3)
+<tr><td>Next<td>5<td>More Requirements<td>89-120<td>Q2(61-120)<td>-
+</table><br>(Close Table)<br>
+<H1><a name="Input -- Use Cases pages 61-89">Input -- Use Cases pages 61-89</A></H1>
+<H1><a name="An Example Use Case 2010">An Example Use Case 2010</A></H1><ol class=Section>
+<br>(<a name="Name">Name</A>): organize <a href="#FAQs">FAQs</A>
+<br>(<a name="Primary actor">Primary actor</A>): me -- faculty, harrassed, confused.
+<br>(<a name="Main scenario">Main scenario</A>): 
+<br><ol class="List">
+<li>user gives file name and system finds it.
+<li>system sorts the file by page number
+<li>user reviews result
+<li>system publishes result
+</ol><br>
+Notice that the steps are too small to make a <span class="InlineFormula">use case</span>.  All use
+cases are made up of steps.
+<p>
+Further developments in this example are in
+[<A href="example2010.html"> example2010.html </A>]
+<p>
+<p>
+<li><a name="FAQs">FAQs</A>::=&quot;Frequently Asked Questions&quot;,
+</ol><p>. . . . . . . . . ( end of section <a href="04.html#An Example Use Case 2010">An Example Use Case 2010</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<p>
+<br><ol class="List">
+<li>++ My advice
+[<A href="usecases.html#Advice"> Advice in usecases </A>]
+<li>+ My page on use cases
+[<A href="usecases.html"> usecases.html </A>]
+<li>+ A
+<A name="use case" class="Key"> use case </A>
+is a collection <span class="InlineFormula">scenarios</span> of an <span class="InlineFormula">actor</span> using the system
+(and other actors perhaps) to achieve a <span class="InlineFormula">goal</span>.
+<li>+ Definitions
+<li><a name="actor">actor</A>::=&quot;Something with behavior, goals, ...&quot;.
+<li><a name="scenario">scenario</A>::text=&quot;an instance of a use case...&quot;, a list of steps
+that an actor takes with the system responses.
+<li><a name="use_case">use_case</A>::set(text)=&quot;a collection of related scenarios...&quot;, a use case always has
+a main scenario where the user gets what they want in a simple way.
+<li><a name="main_scenario">main_scenario</A>::=&quot;How the user is supposed to get what they want from the system&quot;, alternative
+scenarios spell out what can go wrong and how the system handles it.
+<p>
+<li>* A use case diagram gives a nice summary of names and relationships
+of the actors and the use cases in a system.
+<li>* Motivation: why
+<li>* Functional requirements?
+<li>* Three Kinds of Actor: primary, secondary/supporting, off-stage.
+Notice: an actor can be the primary actor in one use case but supporting in
+a second use case, and off-stage for other use cases.
+<li>+++ Stakeholders are people with an interest (stake) in the new system.
+They can be primary, supporting, or off stage in any particular use case.
+<li>***   Four Use case Formats/Levels:
+<br><ol class="List">
+<li>+++ A name
+[<A href="usecases.html#Level 1 -- Give it a name"> usecases.html#Level 1 -- Give it a name </A>]
+<p>
+<img src="Brief50.jpg" alt="[briefs]">
+[<A href="usecases.html#Level 2 -- Brief Format"> Level 2 -- Brief Format in usecases </A>]
+<p>
+<img src="Casual50.jpg" alt="[Hawian shirt]">
+[<A href="usecases.html#Level 3 -- Casual"> Level 3 -- Casual in usecases </A>]
+<p>
+<img src="FullyDressed50.jpg" alt="[Tuxedo]">
+[<A href="usecases.html#Level 4 -- Fully Dressed"> Level 4 -- Fully Dressed in usecases </A>]
+<p>
+</ol><br>
+<li>* Example
+<li>Meaning of sections
+<li>Two column format?
+<li>**  Guidelines
+<br><ol class="List">
+<li>* no user-interface details.
+<li>* A use case name starts with a strong verb: make, delete, manage,
+construct, find, discover, buy, sell.
+<li>* TERSE.  Delete words.
+<li>**  Black box: no internal/invisible steps.
+Each step involves an external actor.  Primary, secondary, or off stage.
+<li>Actors and their goals.
+<li>* How to find.
+<li>*** Tests for use cases: are they valuable, atomic, and not too large or small.
+<li>++ A common mistake when beginning is to write a list of steps and call each step
+a <span class="InlineFormula">use case</span>.  If there is a sequence in your <span class="InlineFormula">use cases</span> then they are probably
+part of a real use case.
+<li>+++ I find that a combination of casual and Fully dressed is often best.  It
+identifies the primary actor and has numbered steps in the main and alternate
+scenarios... but doesn't go into the other details.
+</ol><br>
+</ol><br>
+<H1><a name="Common error -- use cases with no main scenario">Common error -- use cases with no main scenario</A></H1>
+You must clearly identify the main scenario and distinguish it from the
+alternatives.
+<p>
+Otherwise the scenarios get very muddled and you loose tack of the user's goal.
+<p>
+We are not trying to write a program full of selections and loops (yet).  We
+just need to separate out the various steps the user takes and link them
+to the systems visible response.
+<H1><a name="Why don't you like the two column format">Why don't you like the two column format</A></H1>
+I don't think it is worth the effort fighting the word processor to
+keep the two columns synchronized etc.   It may look nice,
+but I (and Larman) have come to feel it costs more time
+to do than you get back from it.
+<p>
+When we analyze a use case as part of design we use
+a UML sequence diagram that has &quot;columns&quot;.  One for the <span class="InlineFormula">System</span> and one
+for each actor taking part.  We have tools to draw these diagrams.
+They are called SSDs.  If your process includes SSDs you don't need
+a two column use case format.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;Systems Sequence Diagram&quot;, Shows the sequence of messages betweeen external actors
+and the system to achieve a scenario in a use case.
+<p>
+In this class I require you to use SSDs for use cases.
+<p>
+<H1><a name="Chapter 6 Page 70 Types of actors">Chapter 6 Page 70 Types of actors</A></H1>
+Can you clarify the differences between primary, supporting and offstage actors in relation to the system under design?
+<p>
+I tend to call supporting actors secondary actors.
+<p>
+All these actors are stakeholders in the system.
+<p>
+<A name="Primary actors" class="Key"> Primary actors </A>
+start the use case, secondary actors are accessed by the
+use case.
+<A name="Secondary actors" class="Key"> Secondary actors </A>
+play a more passive roll.  The primary actor
+plays the active roll getting the ball rolling.  The secondary or
+supporting actors get sucked into the use case.
+Classic examples are a Data Base Management System or a LDAP server.
+<p>
+To large extent the name of the use case mentions the primary actors goal.
+All use cases must have a primary actor and their goal --- or else they
+are not use cases.
+<p>
+An
+<A name="off-stage actor" class="Key"> off-stage actor </A>
+is a stake-holder who has an interest in the use case but doesn't
+take part in it.  Some body who does not take part but is effected by the out come.
+<p>
+Example:  the dept chair is not taking part in this class, but
+he has an interest in it being taught on time, in the right place, and with
+some level of competence.  He/she is off-stage but a stake holder.
+<p>
+In ham and eggs, the primary actor is eating breakfast, the pig is a secondary actor,
+and the hen is an off-stage actor.
+<p>
+<H1><a name="Chapter 6 pp 63 -- Use Case diagram or text">Chapter 6 pp 63 -- Use Case diagram or text</A></H1>
+I have known use case as diagram and text, but the book wrote in bold &quot;use
+cases are not diagrams, they are text&quot; can you elaborate more on what the
+book has?
+<p>
+The diagram shows a collection of use cases and so is not a use case.  This
+is like the fact that a bottle of water is not the same as a vending machine
+full of bottles of water.
+<p>
+A use case defines a sequences of actions by a user and the system that
+gives the user some tangible outcome.  A use case diagram
+does not show the sequences. It omits important information.  But it
+summarizes  the relation between many use cases and actors instead.
+<p>
+A use case diagram is like a bag of hard candy -- you can't
+get the benefit without extracting a candy and unwrapping it.
+<p>
+Put it another way:  don't waste time on an elaborate diagram because
+you can get more value out of describing an interesting use case in detail.
+<p>
+<p>
+<H1><a name="Chapter 6 pp 64 -- Use-Case Model a diagram or text">Chapter 6 pp 64 -- Use-Case Model a diagram or text</A></H1>
+Why use-case modeling is primarily an act of writing text, not drawing
+diagrams? I think I prefer reading diagrams than long text.
+<p>
+My sympathies.  I agree.... but use cases are meant to be read
+(indeed written) by non-computer
+people and so diagrams get in the way.
+<p>
+<H1><a name="Chapter 6 pp 6.1 -- Use case text or diagram">Chapter 6 pp 6.1 -- Use case text or diagram</A></H1>
+When using use-cases, when do we know to use diagrams or/and text to
+describe the scenario?
+<p>
+Scenarios should always be text -- and inside a use case.
+The use cases fit inside a diagram.
+<p>
+During Systems Analysis  or Business Modeling
+you can use diagrams (DFDs, Activity diagrams)
+to discover use cases.  But not in Requirements.
+<p>
+Analyzing a very complex use case might need an activity diagram, but if
+it does then I'll bet that the a human will get lost trying to use it,  So
+it is a bad idea already.   Exception -- mapping out the interaction between a
+computer primary actor and the system under design.  Protocols....
+<p>
+<H1><a name="Chapter 6 pp 64 -- use case">Chapter 6 pp 64 -- use case</A></H1>
+I have a question about the clarity of use-cases.  In a software company
+are they meant to be presented and thoroughly explained to the developers,
+lets say in a meeting room, or is the use-case printed and handed to each
+development team to read over and ask questions later?
+<p>
+This is an important process question.  In many organizations the
+requirements are &quot;thrown over the wall&quot; to the developers.  Many
+people think that this is a mistake.  Either the developers should work
+with
+stakeholders to develop use cases in special &quot;Requirements Workshops&quot;
+(best practice)
+or the developers draft them and get the stakeholders to
+review them (not as good)
+<p>
+<H1><a name="Chapter 6 pp 66 -- Preferred Use Care Formats">Chapter 6 pp 66 -- Preferred Use Care Formats</A></H1>
+Out of the 3 common use case formats (brief, casual, fully dressed) What is
+the most popular format to use and why?
+<p>
+Every body likes the short ones.  In practice use cases should grow as the
+project moves forward.  Each starts as just a name, then becomes brief,
+then casual, and finally fully dressed... just before working
+out how to realize it.
+<p>
+<H1><a name="Chapter 6.7 pp 66 -- Preferred Use Case Format in our work">Chapter 6.7 pp 66 -- Preferred Use Case Format in our work</A></H1>
+What type of common use case format do you want us to use, Brief, Casual or
+Fully Dressed?
+<p>
+All of them.  You need practice at all styles.  Also in a real project,
+you should, most of the time,  have use cases with all levels of detail.
+Not until the end will most of them be fully dressed.  Initially just
+1 out of 10 might be fully dressed. See
+[<A href="w2.html"> w2.html </A>]
+for work that involves all formats.
+<p>
+By the way -- using the fully dressed one with a good template
+is not as hard as you might think.   It is the thinking
+that takes time not the format.  And the thinking is what improves your
+software.  The format lets you share your thoughts.
+<p>
+<p>
+<H1><a name="Chapter 6 pp 73-74 -- Stakeholders and Interests">Chapter 6 pp 73-74 -- Stakeholders and Interests</A></H1>
+What is the importance of Stakeholders holder's interest in the use cases?
+<p>
+They are paying for it!!!
+<p>
+More -- much software fails because it fails to meet the stakeholder's
+needs.
+<p>
+When the book says &quot;Stakeholder's Interests&quot; it does not mean things
+like &quot;Going to movies&quot;.  It means things like:
+&quot;Needs UC17 to complete within 3 seconds&quot; and
+&quot;Will loose job if unable to access data base.&quot;
+<p>
+<H1><a name="Chapter 6 page 75 Happy Path">Chapter 6 page 75 Happy Path</A></H1>
+Is the &quot;Happy Path&quot; the most likely case of a use case senario or just an example
+<li>of a use case? Can you put into perspective the &quot;Happy Path&quot;?
+<p>
+It is not the frequency that makes a path &quot;happy&quot; but the happiness of
+the primary actor getting what they want in the simplest way possible.
+<p>
+Joke: Murphy's law makes sure that the Happy Path happens alternative
+Thursdays.
+<p>
+<H1><a name="Chapter 6 pp -- What is an extension">Chapter 6 pp -- What is an extension</A></H1>
+An extension is an alternative flow.
+An extension
+<A name="extends" class="Key"> extends </A>
+another scenario by adding conditions and options to steps.
+<p>
+If complicated an extension may be
+described as a separate use case.  This notation and technique will be covered
+later in this class.
+<p>
+<H1><a name="Chapter 6 pp 74-76 -- Basic &amp; Alternate Flow">Chapter 6 pp 74-76 -- Basic &amp; Alternate Flow</A></H1>
+How come the basic flow does not include any conditions or branching? If it did
+have conditions and branching, would it be called a Alternate flow?
+<p>
+This is to keep the main flow clean and uncluttered.  And even alternate flows should be
+kept as simple sequences if at all possible.
+<p>
+This discipline helps!
+<p>
+We hide the
+<A name="conditions at the start of the alternate flows." class="Key"> conditions at the start of the alternate flows. </A>
+That way we
+can design programs that handle the main flow nicely with out getting
+distracted.  Then the extensions/alternatives can be added to the clean,
+simple (but fragile) prototype.
+<p>
+I think of the alternate flows as exception handlers.  The main
+flow 'throws' the exception automatically to the alternate flow.  But
+we don't have to write that.
+<p>
+This is very nice when the alternate flow is triggered in many different
+steps.   The use case is much shorter and simpler when the main flow
+has few conditions.
+<p>
+However -- we often have simple loops and could have a simple pair of
+branches in the main flow -- as long as you can write the step as a single
+sentence:
+<ul class="Set">
+<li>Repeat steps 2 through 5 until exhausted.
+<p>
+<li>If user likes tea then the user selects tea else user chooses coffee.
+</ul>
+<p>
+<p>
+<H1><a name="Chapter 6 pp 75-76 -- Extensions -- how many and how deep">Chapter 6 pp 75-76 -- Extensions -- how many and how deep</A></H1>
+In regards to the number of extensions is there a rule of thumb? How deep
+into an extension do you go? How many extensions do you do?
+<p>
+There is no ideal number of extensions.  You add to them throughout the
+first three phases (and maybe even in transition).  Start with none.
+End with many.
+<p>
+You should stop when adding an extension gives no value to the
+stakeholders.
+<p>
+<H1><a name="Chapter 6 pp 84-86 -- One or Many use cases">Chapter 6 pp 84-86 -- One or Many use cases</A></H1>
+When a actor faces two or more cases to complete a transaction; for example
+to purchase a car the dealer has to verify his credit record, driven
+record, being a citizen or resident and must have a current job.
+So, my question is:
+We should develop a single class diagram to show the entire process with
+their respective Use case or is better to do it separate using single Use
+cases diagram?
+<p>
+One use case diagram per medium sized project.  One for a simple project.  Many diagrams
+only in big projects -- and put them in packages...
+<p>
+NO CLASSES in a use case diagram.
+<p>
+You should treat this as one use case that has several steps in its scenarios.
+So ONE BUBBLE on the use case diagram.  Expand the details like this:
+<ul class="Set">
+<li>UC1: Purchase car
+<li>Prime Actor: Customer
+<li>Other Actors: Dealer, Credit agency, DMV, DHS,...
+<li>Main Scenario:
+<br><ol class="List">
+<li>Purchaser expresses interest in car.
+<li>Dealer verifies credit record.
+<li>Dealer checks residence and driving record.
+<li>...
+</ol><br>
+</ul>
+<p>
+If, AND ONLY IF, I discover the same steps appearing in other use case
+scenarios
+would I separate out these steps as a separate (secondary) use case.  We may look at
+the notation
+later in the course.
+<p>
+<H1><a name="Chapter 6 pp 87-88 -- Stakeholders and Interests List">Chapter 6 pp 87-88 -- Stakeholders and Interests List</A></H1>
+What is a boss test? Is it just finding out if your boss is happy?
+<p>
+I think it means: would the boss be happy to see you doing it all day.
+Example:
+<ul class="Set">
+<li><span class=Formula>Salesman makes a sale.</span>
+(YES) -- useful use case
+<li><span class=Formula>Salesman twiddles fingers</span>
+(NO) -- not a useful use case
+<li><span class=Formula>Salesman downloads porn.</span>
+(NO) -- abuse case -- not useful.
+</ul>
+<p>
+<H1><a name="Links on Use Cases">Links on Use Cases</A></H1>
+[<A href="http://en.wikipedia.org/wiki/Use_Case"> Use_Case </A>]
+(Wikipedia),
+[<A href="http://alistair.cockburn.us/index.php/Basic_use_case_template"> Basic_use_case_template </A>]
+(Alistair Cockburn's templates),
+[<A href="http://web.mit.edu/ssit/cis/UseCaseTemplate.html"> UseCaseTemplate.html </A>]
+(Complex fully dressed template in HTML from MIT), and
+[<A href="fullydressed.html"> fullydressed.html </A>]
+(from here).
+<H1><a name="Example of a Simple system">Example of a Simple system</A></H1><ol class=Section>
+<H2><a name="System is called the &quot;Shopping Aid&quot;">System is called the &quot;Shopping Aid&quot;</A></H2>
+<H2><a name="Vision">Vision</A></H2>
+A handheld, wireless device that helps shoppers buy the items that they want. A shopper has a list of items that they want. They are sold at different stores. The device keeps an up-to-date list of wanted items as the user shops.
+<H2><a name="Use Case -- Go Shopping">Use Case -- Go Shopping</A></H2>
+The shopper inputs a list of wanted items and the system displays stores where they can be found. The shopper goes from store to store looking for the products that match their list.  They buy a product at the first store where they find it, mark it as bought and the system updates their list or items and stores.
+<H2><a name="Use Case -- Start Up">Use Case -- Start Up</A></H2>
+<H2><a name="Use Case -- Administer User Accounts">Use Case -- Administer User Accounts</A></H2>
+<H2><a name="Use Case -- Backup data">Use Case -- Backup data</A></H2>
+<H2><a name="Etc.">Etc.</A></H2>
+</ol><p>. . . . . . . . . ( end of section <a href="04.html#Example of a Simple system">Example of a Simple system</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="More Questions on Use Cases">More Questions on Use Cases</A></H1>
+[<A href="04q.html"> 04q.html </A>]
+<H1><a name="Review Questions on Use Cases 1">Review Questions on Use Cases 1</A></H1>
+[<A href="04r.html"> 04r.html </A>]
+<H1><a name="Example from 2010">Example from 2010</A></H1>
+[<A href="example2010.html"> example2010.html </A>]
+<br>(<a name="Exercises">Exercises</A>): Write a Use Case for...
+[<A href="04x.html"> 04x.html </A>]
+<H1><a name="Next -- More Requirements">Next -- More Requirements</A></H1>
+Prepare by reading
+[<A href="05.html"> 05.html </A>]
+and the assigned readings on that page.  Do as many review questions
+[<A href="05r.html"> 05r.html </A>]
+as you have time for.
+Submit one review question+answer
+for credit.
+<p>
+<H1><a name="Start Work Project Inception">Start Work Project Inception</A></H1>
+The deliverable artifacts and presentation are in
+[<A href="w1.html"> w1.html </A>]
+and they are due at start of class 05.
+<p>
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci and Engineering School, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10 and
+[<A href="02DiceGameSSD.gif"> 02DiceGameSSD.gif </A>]
+(example).
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

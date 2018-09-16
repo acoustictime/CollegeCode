@@ -1,0 +1,784 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/12q.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:54:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+Questions and Answers on GRASP
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="12q.txt">Text Version</A>]
+ 12q.html 
+Wed Jan 11 07:25:48 PST 2012
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="12q.html#Questions and Answers on GRASP">Questions and Answers on GRASP</A>
+<li><a href="12q.html#MVC Architecture">: MVC Architecture</A>
+<li><a href="12q.html#Chapter 17 pages 273 -- What is the Gang-of-Four">: Chapter 17 pages 273 -- What is the Gang-of-Four</A>
+<li><a href="12q.html#What does GRASP do?">: What does GRASP do?</A>
+<li><a href="12q.html#Applying GRASP to Object Design.">: Applying GRASP to Object Design.</A>
+<li><a href="12q.html#Chapter 17 pages 271-319 -- New Patterns">: Chapter 17 pages 271-319 -- New Patterns</A>
+<li><a href="12q.html#Chapter 17 pages 271-379 -- GRASP -- object sizes">: Chapter 17 pages 271-379 -- GRASP -- object sizes</A>
+<li><a href="12q.html#Chapter 17 How big does object get before you break it up?">: Chapter 17 How big does object get before you break it up?</A>
+<li><a href="12q.html#Which GRASP is most popular">: Which GRASP is most popular</A>
+<li><a href="12q.html#Chapter 17 pages 277 -- Is GRASP a template to master OOD?">: Chapter 17 pages 277 -- Is GRASP a template to master OOD?</A>
+<li><a href="12q.html#Chapter 17 pages 277-319 -- GRASP as a cycle">: Chapter 17 pages 277-319 -- GRASP as a cycle</A>
+<li><a href="12q.html#Chapter 17 pages 291 -- Popular GRASP Patterns">: Chapter 17 pages 291 -- Popular GRASP Patterns</A>
+<li><a href="12q.html#Chapter 17 pages 277-319 -- GRASP as a learning Aid">: Chapter 17 pages 277-319 -- GRASP as a learning Aid</A>
+<li><a href="12q.html#Chapter 17 -- GRASP">: Chapter 17 -- GRASP</A>
+<li><a href="12q.html#Chapter 17 pages 1-300 -- General Project Question">: Chapter 17 pages 1-300 -- General Project Question</A>
+<li><a href="12q.html#Chapter 17 pages ppp-ppp -- Expert GRASP Pattern">: Chapter 17 pages ppp-ppp -- Expert GRASP Pattern</A>
+<li><a href="12q.html#Chapter 18 pages 302-303 -- Controllers">: Chapter 18 pages 302-303 -- Controllers</A>
+<li><a href="12q.html#Chapter 18 pages 320-362 -- High Coupling">: Chapter 18 pages 320-362 -- High Coupling</A>
+<li><a href="12q.html#When to start coding">: When to start coding</A>
+<li><a href="12q.html#Chapter 17 pages 271-319 -- GRASP">: Chapter 17 pages 271-319 -- GRASP</A>
+<li><a href="12q.html#Chapter 12 pages 271-319 -- LRG">: Chapter 12 pages 271-319 -- LRG</A>
+<li><a href="12q.html#Chapter 17.4 pages 277 -- GRASP">: Chapter 17.4 pages 277 -- GRASP</A>
+<li><a href="12q.html#Chapter 17 pages 277 -- The Name Grasp">: Chapter 17 pages 277 -- The Name Grasp</A>
+<li><a href="12q.html#Chapter 17 pages 278-279 -- GRASP Patterns">: Chapter 17 pages 278-279 -- GRASP Patterns</A>
+<li><a href="12q.html#Chapter 17 pages ppp-ppp -- GRASP Pattern Association?">: Chapter 17 pages ppp-ppp -- GRASP Pattern Association?</A>
+<li><a href="12q.html#Chapter 17 pages 280 -- GRASP patterns">: Chapter 17 pages 280 -- GRASP patterns</A>
+<li><a href="12q.html#Chapter 17 pages 282-315 -- GRASP patterns">: Chapter 17 pages 282-315 -- GRASP patterns</A>
+<li><a href="12q.html#Chapter 17 pages 281-282 -- Creator -- Who creates on object">: Chapter 17 pages 281-282 -- Creator -- Who creates on object</A>
+<li><a href="12q.html#Chapter 17.10 pages 292 -- Creator">: Chapter 17.10 pages 292 -- Creator</A>
+<li><a href="12q.html#Is a Controller in GRASP part of the system or an actor">: Is a Controller in GRASP part of the system or an actor</A>
+<li><a href="12q.html#Chapter 17 pages ppp-ppp -- grasp controller">: Chapter 17 pages ppp-ppp -- grasp controller</A>
+<li><a href="12q.html#Chapter 17 pages 307 -- controller objects">: Chapter 17 pages 307 -- controller objects</A>
+<li><a href="12q.html#Why are bloated controllers bad -- why shouldn't they do all the work?">: Why are bloated controllers bad -- why shouldn't they do all the work?</A>
+<li><a href="12q.html#Chapter pages 271-319 -- Coupling">: Chapter pages 271-319 -- Coupling</A>
+<li><a href="12q.html#Chapter 17 pages 299 -- Low Coupling">: Chapter 17 pages 299 -- Low Coupling</A>
+<li><a href="12q.html#Chapter 17 pages 290 -- Low cohesion.">: Chapter 17 pages 290 -- Low cohesion.</A>
+<li><a href="12q.html#Chapter 17 pages 299 - Coupling between or inside layers">: Chapter 17 pages 299 - Coupling between or inside layers</A>
+<li><a href="12q.html#Chapter 17 pages 271-319 -- GRASP Is it ever a good idea to use low-cohesion classes?">: Chapter 17 pages 271-319 -- GRASP Is it ever a good idea to use low-cohesion classes?</A>
+<li><a href="12q.html#Cohesion on Wikipedia">: Cohesion on Wikipedia</A>
+<li><a href="12q.html#Chapter 17 pages 314-318 -- Cohesion">: Chapter 17 pages 314-318 -- Cohesion</A>
+<li><a href="12q.html#Chapter 17 pages 314-317 -- High or Low Cohesion">: Chapter 17 pages 314-317 -- High or Low Cohesion</A>
+<li><a href="12q.html#Chapter 17 pages 271-319 -- GRASP cohesion">: Chapter 17 pages 271-319 -- GRASP cohesion</A>
+<li><a href="12q.html#Do I think that high cohesion is advantageous">: Do I think that high cohesion is advantageous</A>
+<li><a href="12q.html#Can you explain more detail about the levels of cohesion?">: Can you explain more detail about the levels of cohesion?</A>
+<li><a href="12q.html#Chapter 17 pages 314-318 -- Cohesion and Coupling">: Chapter 17 pages 314-318 -- Cohesion and Coupling</A>
+<li><a href="12q.html#Explain the difference between coupling and cohesion">: Explain the difference between coupling and cohesion</A>
+<li><a href="12q.html#Chapter 17 pages 317 -- High cohesion vs Low coupling">: Chapter 17 pages 317 -- High cohesion vs Low coupling</A>
+<li><a href="12q.html#Chapter 17 pages 299-319 -- coupling and cohesion">: Chapter 17 pages 299-319 -- coupling and cohesion</A>
+<li><a href="12q.html#Chapter 17 pages 284-293 -- Low Coupling &amp; High Cohesion">: Chapter 17 pages 284-293 -- Low Coupling &amp; High Cohesion</A>
+<li><a href="12q.html#how does high cohesion support low coupling">: how does high cohesion support low coupling</A>
+<li><a href="12q.html#Can a class with high cohesion have a large number of methods?">: Can a class with high cohesion have a large number of methods?</A>
+<li><a href="12q.html#Is Cohesion a subjective measure">: Is Cohesion a subjective measure</A>
+<li><a href="12q.html#Which type of cohesion is best?">: Which type of cohesion is best?</A>
+<li><a href="12q.html#Can you give an example of high cohesion.">: Can you give an example of high cohesion.</A>
+<li><a href="12q.html#Can you give and example of high and low cohesion in the Monopoly game program?">: Can you give and example of high and low cohesion in the Monopoly game program?</A>
+<li><a href="12q.html#Chapter 20 pages 303 -- Reverse Engineering">: Chapter 20 pages 303 -- Reverse Engineering</A>
+<li><a href="12q.html#Chapter 17 pages ppp-ppp -- Grasp vs GoF">: Chapter 17 pages ppp-ppp -- Grasp vs GoF</A>
+<li><a href="12q.html#Chapter 17 pages 280 -- Gang of Four patterns">: Chapter 17 pages 280 -- Gang of Four patterns</A>
+<li><a href="12q.html#Chapter 17 pages 288-289 What do Figures 17.9 and 17.10 mean">: Chapter 17 pages 288-289 What do Figures 17.9 and 17.10 mean</A>
+<li><a href="12q.html#Chapter 17 pages 313 -- What is a Facade">: Chapter 17 pages 313 -- What is a Facade</A>
+<li><a href="12q.html#Chapter 17 pages 475-500 -- Modeling Dynamics -- include in use case diagrams">: Chapter 17 pages 475-500 -- Modeling Dynamics -- include in use case diagrams</A>
+<li><a href="12q.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="Questions and Answers on GRASP">Questions and Answers on GRASP</A></H1><ol class=Section>
+<H2><a name="MVC Architecture">MVC Architecture</A></H2>
+In the MVC architecture, which one of the 3 is compatible or could be carried over to the other functions in your system? Does view only apply to what the user sees?
+<p>
+THe idea of MVC is that each function as seen be the user is spread out over all three
+types of classes.  Any function has a View, a designated controller, and one or more
+domain classes.
+<p>
+Internally I think that real systems need a Technical Services layer underneath the Model
+of MVC.  There are some things a software system must do (highly technical things) that are
+not what the user wishes to see(V), control(C), or understand(M).
+<p>
+<H2><a name="Chapter 17 pages 273 -- What is the Gang-of-Four">Chapter 17 pages 273 -- What is the Gang-of-Four</A></H2>
+Four guys who wrote this classic book
+[<A href="http://www.amazon.com/exec/obidos/ASIN/0201633612"> 0201633612 </A>]
+[<A href="http://libcat.lib.csusb.edu/record=b1526724"> record=b1526724 </A>]
+describing some clever
+object-oriented ways of tackling some well known problems.
+See
+[<A href="patterns.html#The_Gang_of_Four"> patterns.html#The_Gang_of_Four </A>]
+for their names....  We will look at several their patterns later
+in this class.
+<p>
+<H2><a name="What does GRASP do?">What does GRASP do?</A></H2>
+It guides you to better designs.
+<p>
+<H2><a name="Applying GRASP to Object Design.">Applying GRASP to Object Design.</A></H2>
+There are nine GRASP patterns, which one is most important patterns? which
+one is the most difficult to understand?
+<p>
+The list in the front cover puts the ones used most often first.  They are all important
+for some problems.
+<p>
+I think that Polymorphism is the one that people who don't <span class="InlineFormula">get</span> objects have the most problem
+with.  But Coupling and Cohesion are a little too abstract to understand -- you have to have
+worked for a month or two inside a humongous design to really get a feel for these ideas.
+<p>
+<p>
+<H2><a name="Chapter 17 pages 271-319 -- New Patterns">Chapter 17 pages 271-319 -- New Patterns</A></H2>
+How can you not have a new pattern?  If you have a pattern that evolves into a different pattern, the different pattern is a new pattern.
+<p>
+Because a pattern is deduced from pre-existing examples.  If there
+are no examples then it is not a pattern.  And Patterns tend not to evolve.
+When documented and published they tend to distort reality to fit.  SO they
+don't change once promulgated.
+<p>
+<H2><a name="Chapter 17 pages 271-379 -- GRASP -- object sizes">Chapter 17 pages 271-379 -- GRASP -- object sizes</A></H2>
+What is the ideal size of an object, I think i have a tendency to make them
+too large but when they are too small it seems like a waste of time and code.
+<p>
+This is a common mistake made people who a new to object-oriented design.
+We have some names for these large low cohesion classes: &quot;The God Class&quot;,
+&quot;A Mudball class&quot;.
+<p>
+Do this and your code will be unmaintainable very quickly.
+<p>
+Make your self some templates so you can make the code for a class quickly.
+<p>
+<H2><a name="Chapter 17 How big does object get before you break it up?">Chapter 17 How big does object get before you break it up?</A></H2>
+It depends on the cohesion. In theory you might have hundreds of
+operations that an object can do!  Similarly it can encapsulate a lot of
+data.
+<p>
+It is not a matter of size but whether things belong together, in some
+sense or other:  do all the methods need the same data?  Is all the
+data needed by several methods/operations?
+<p>
+<H2><a name="Which GRASP is most popular">Which GRASP is most popular</A></H2>
+Information Expert.  First noticed, most often needed, and few will
+argue against it.
+<p>
+<H2><a name="Chapter 17 pages 277 -- Is GRASP a template to master OOD?">Chapter 17 pages 277 -- Is GRASP a template to master OOD?</A></H2>
+Not a template.  More a set of guidelines.
+Yes.... a set of guidelines that you can use to do better designs.
+<p>
+<p>
+<H2><a name="Chapter 17 pages 277-319 -- GRASP as a cycle">Chapter 17 pages 277-319 -- GRASP as a cycle</A></H2>
+Do you cycle
+through all of these patterns, and see which best fits with what you're
+trying to do/design?
+<p>
+You shouldn't have to cycle through either the <a href="#GRASP">GRASP</A> or the <a href="#GoF">GoF</A> patterns.
+You need to describe the current problem in terms of responsibilities
+and let that remind you of a suitable pattern:
+<ul class="Set">
+<li><span class=Formula>So what happens when the user clicks that button?</span>
+<li><span class=Formula>A building is made of parts, where do the parts come from?</span>
+<li><span class=Formula>Which object should calculate the Value Added Tax?</span>
+<li><span class=Formula>I'm not sure which design is best....</span>
+</ul>
+<p>
+By the way -- it is quite OK to come with the designs intuitively
+and then label them &quot;Controller&quot;, &quot;Creator&quot;, &quot;Expert&quot;, ...
+<p>
+<p>
+<H2><a name="Chapter 17 pages 291 -- Popular GRASP Patterns">Chapter 17 pages 291 -- Popular GRASP Patterns</A></H2>
+What seems to be the most popular GRASP pattern that everybody seems to use?
+<p>
+Larman has listed them in decreasing frequency of use and popularity.
+But they are in the list because they are in use in many projects already.
+<p>
+<A name="Information Expert" class="Key"> Information Expert </A>
+is probably used more often than any other -- even by poeple who
+don't know it by name.   The close runner up is
+<A name="Creator" class="Key"> Creator </A>
+because most scenarios will lead to creating new objects and we
+have to choose where this creating/construction is invoked.
+<p>
+Low
+<A name="coupling" class="Key"> coupling </A>
+and high
+<A name="cohesion" class="Key"> cohesion </A>
+are the two of the oldest patterns.  But they
+are less useful because they are tools for evaluating a design rather than
+coming up with one.
+<p>
+<A name="Controller" class="Key"> Controller </A>
+is very common but a bit controversial.
+<p>
+<H2><a name="Chapter 17 pages 277-319 -- GRASP as a learning Aid">Chapter 17 pages 277-319 -- GRASP as a learning Aid</A></H2>
+The book talks about GRASP as a learning aid.  Is this just to get us
+thinking about the ways we can design systems, or should we try to design
+our systems after these patterns?
+<p>
+I hope it can be more than a learning aid.  I think they will
+guide you to good solutions -- even if used silently.
+<p>
+To be useful to a team,
+however, the <a href="#GRASP">GRASP</A> patterns have to be a shared language.  At this
+time I don't know what the odds are of this happening.  For example
+I can see a tom of ASP and .js files on the WWW so I know that
+a lot of teams use these languages/technologies.  However <a href="#GRASP">GRASP</A>
+doesn't leave such obvious traces to a user.
+<p>
+I did find over 1,000 pages referring to &quot;Larman GRASP&quot; but not much recent
+activity on usenet/google groups.   I figure that quite a few
+current grads are likely to &quot;talk GRASP&quot;.
+<p>
+Hmmmm this would be an interesting bit of research for a senior or
+graduate student: what patterns are actually used in practice.
+<p>
+<p>
+<H2><a name="Chapter 17 -- GRASP">Chapter 17 -- GRASP</A></H2>
+When was GRASP invented? and have you seen it in use on projects created on CSUSB's campus?
+<p>
+GRASP dates back to the first edition of the text book -- late 1990s I guess.
+<p>
+What tends to happen is that people use it without making any fuss when they
+are doing OO design.  The 9 patterns do no more than name the way most
+good designers thought.  This means I can use them to teach good OO design.
+However you don't see students and staff taking the time and trouble to note
+that the allocated a responsibility using Information Expert, or
+choose a session controller.... it is just obvious....
+<p>
+On camus there is a lot of non-OO work being done.  A lot of simple scripting
+at the high level.   But even here some of the priciples still apply.  Low
+coupling is still good, and high cohesion is still good.
+<p>
+I do see student work that is not well designed.
+One thing I have seen too much of in student projects is having SQL scattered all over
+the code rather than hidden in a Technical Services class....  These are students
+who don't do CS375, I'm glad to say.
+<H2><a name="Chapter 17 pages 1-300 -- General Project Question">Chapter 17 pages 1-300 -- General Project Question</A></H2>
+If an application returns messages/events back to the user, but not necessarily through the application itself, how is that referenced?
+<p>
+It will depend on the platform you are using.  Once upon a time we tweeaked the
+loudspeaker to generate tomes.... nowadays you send a message to an object in the GUI
+interface, I guess.
+<p>
+Time to research the particular platform:  hit the books and google.
+<H2><a name="Chapter 17 pages ppp-ppp -- Expert GRASP Pattern">Chapter 17 pages ppp-ppp -- Expert GRASP Pattern</A></H2>
+Can you explain the Expert GRASP pattern?
+<p>
+<A name="Information Expert" class="Key"> Information Expert </A>
+Your system has to do something -- which part should be responsible? Answer the
+part that has the data (or can find the data) that is needed to carry out the task.
+<p>
+The alternative: mudball designs and the kind of code that your colleagues will
+make fun of and hate you for.
+<p>
+Problem:  when there are several possible experts...  (which may, perhaps, hint
+at lack of cohesion?).
+<p>
+<H2><a name="Chapter 18 pages 302-303 -- Controllers">Chapter 18 pages 302-303 -- Controllers</A></H2>
+System operations are the major input events upon a system and controllers are objects responsible for handling systems operations. Since the system operations and controller are in different layers, how do we assign proper responsibilities?
+<p>
+Controllers are classes and so are inside packages/layers. System operations are
+messages and flow between classes and so can cross layer boundaries.
+<H2><a name="Chapter 18 pages 320-362 -- High Coupling">Chapter 18 pages 320-362 -- High Coupling</A></H2>
+How might it be observed that a project is suffering from High Coupling and
+if the level of coupling is tolerable?
+<p>
+When the team is scared to change some parts of the software because it might break the system
+then you probably have too much coupling.
+<p>
+When any change you make involves a dozen classes being modified then you have too much coupling.
+However -- some changes -- called &quot;cross-cutting concerns&quot; do effect almost every part of
+a piece of software even if the coupling is low enough.  It take some special design techniques
+to handle these aspects that effect everything (like security, persistence, language, ...).
+<p>
+<H2><a name="When to start coding">When to start coding</A></H2>
+As soon as possible.  The first iteration in elaboration should test code
+that exercises critical parts of the design, and exorcises some risks.
+<p>
+Note: in this class project is running very slowly, like a slowed down
+movie.  I haven't got lab time for you to implement the designs:-(
+However -- I'd love to see a project group demo some code....
+<p>
+<H2><a name="Chapter 17 pages 271-319 -- GRASP">Chapter 17 pages 271-319 -- GRASP</A></H2>
+All of these diagrams are nice, but when do we get to code?!
+<p>
+I coded up the Dice game in week 1.  Diagrams on page 10 and code
+[<A href="DiceGame.cpp"> DiceGame.cpp </A>]
+[<A href="Die.cpp"> Die.cpp </A>]
+[<A href="testDiceGame.cpp"> testDiceGame.cpp </A>]
+[<A href="testDie.cpp"> testDie.cpp </A>]
+<p>
+Here is the code for last class's quiz:
+[<A href="SalesItem.java"> SalesItem.java </A>]
+[<A href="SalesOrder.java"> SalesOrder.java </A>]
+[<A href="Stock.java"> Stock.java </A>]
+Enjoy!
+<p>
+There is some code coming the book.  Several pages of it.
+<p>
+You can start coding your project
+any time you've got an interaction design.   I invite all project teams to
+write code to
+test their design classes and interaction diagrams by coding and demoing them.
+I've laid down this challenge each year... and nobody wants to do it:-(
+<p>
+If we get time... and people pick an interaction I'll do some test driven
+C++ coding in class.  Should be fun.  Do the design right, and if you know
+the languages -- coding is easy.  It also helps if you have some
+blank &quot;template&quot; files like
+[<A href="testName.cpp"> testName.cpp </A>]
+[<A href="class.cpp"> class.cpp </A>]
+[<A href="function.cpp"> function.cpp </A>]
+[<A href="attribute.cpp"> attribute.cpp </A>]
+ready to go.
+<p>
+If we had a unit of lab added to thhis class (2 hours) then I'd be
+expecting you to code something from about week 3 onward.  It is
+however the easy part of the unified process -- given that you made sure
+you were competent in the Inception phase.
+<p>
+<H2><a name="Chapter 12 pages 271-319 -- LRG">Chapter 12 pages 271-319 -- LRG</A></H2>
+What is LRG(low representation gap)?
+<p>
+This is when the internal structure of the software closely reflects
+the structure of the doamin that the software is designed to fit.
+<H2><a name="Chapter 17.4 pages 277 -- GRASP">Chapter 17.4 pages 277 -- GRASP</A></H2>
+Would you say mastering GRASP is needed before a company would even consider your resume?
+<p>
+No.  <a href="#GRASP">GRASP</A> has been out for about 5 years so management and hirers
+haven't heard of it yet.
+<p>
+But they will have heard of <span class="InlineFormula">patterns</span> and the more complex and
+technical &quot;Gang of Four&quot; patterns (<a href="#GoF">GoF</A>).
+<p>
+<H2><a name="Chapter 17 pages 277 -- The Name Grasp">Chapter 17 pages 277 -- The Name Grasp</A></H2>
+For the most part the chapter was understandable, but I keep coming back to one question, Is GRASP an acronym for something?
+<p>
+Yes.  Click here: <a href="#GRASP">GRASP</A>
+<p>
+<H2><a name="Chapter 17 pages 278-279 -- GRASP Patterns">Chapter 17 pages 278-279 -- GRASP Patterns</A></H2>
+Is the Pattern Name a single problem in which there needs to have a function to fulfill the void?
+<p>
+Not often.  It tends to be a generic and popular name for a way to resolve a number
+of conflicting forces -- a family of simialr problems.
+<p>
+<H2><a name="Chapter 17 pages ppp-ppp -- GRASP Pattern Association?">Chapter 17 pages ppp-ppp -- GRASP Pattern Association?</A></H2>
+Are different GRASP patterns more prevalent in different phases of the UP, or are all patterns considered throughout the entire process?
+<p>
+GRASP is used to guide design.  Design starts in the very first iteration and may occur
+in the last.... See the pictures linked at end of
+,See ./02.html
+<p>
+<H2><a name="Chapter 17 pages 280 -- GRASP patterns">Chapter 17 pages 280 -- GRASP patterns</A></H2>
+Since UMl is a visual language for specifying and constructing objects related to software.
+Are GRASP patterns or principles considered a subset of UML?
+<p>
+No.  The supplement it.  UML can be used in many ways.  GRASP provides
+guidance on OOAD, not the UML.
+<p>
+<H2><a name="Chapter 17 pages 282-315 -- GRASP patterns">Chapter 17 pages 282-315 -- GRASP patterns</A></H2>
+Are the 9 GRASP patterns, namely, Information Expert, Creator, Controller, Low Coupling, High Cohesion, Polymorphism, Pure Fabrication, Indirection, and Protected Variations mandatory while designing objects with responsibilities in a project? And, should they be used in a particular order?
+<p>
+Use them in the order listed.  Try each in turn until one fits....
+<p>
+However, sometimes
+you end up with a tradeoff between alternative good things to do.  Two
+competing patterns.... and that is when this approach becomes interesting.
+<p>
+In other words this is not a rigid program or procedure that does the
+thinking for you.  GRASP is a set of guidelines about what you need to
+think about when doing design.
+<p>
+<H2><a name="Chapter 17 pages 281-282 -- Creator -- Who creates on object">Chapter 17 pages 281-282 -- Creator -- Who creates on object</A></H2>
+On page 281, Larman asks about who should create objects.  He quickly mentions how a container should create thing that are contained.  Could you explain this a little more in detail, please?
+<p>
+As a program runs, objects are constructed.  They are constructed by the pieces of the software.
+These can be the main program in a simple CS201/202/330 type program.  But in a complex
+or realistic piece of software objects construct other objects -- a lot!  So the
+question is: which object constructs this one?  Who calls the constructor?  Where
+to put this code:
+<pre> 		General * handle = new Constructor(data);</pre>
+<p>
+Larman suggests that we look in (1) the existing design, and (2) in the domain model
+to find a class that is already tied to the type of object we want to make.  And one tie
+is that of containing it.... the black diamond of the UML: &lt;*&gt;------ that
+indicates who has life and death control over objects of a class.
+<p>
+Thus:  perhaps, in my Depot, and Stocks, .... situation, Creator would lead you to
+make the Depot object construct the Stocks held in the depot.  A Sales Order
+might construct the Sales Items on it, etc.
+<p>
+Note:  Larman is not refering to &quot;containers&quot; in the CSCI330 sense.  These are vital
+tools that are given to us to use, in practice, and so don't get modelled.  Larman
+is looking for real obects, or at worst, already invented software objects.
+<p>
+<H2><a name="Chapter 17.10 pages 292 -- Creator">Chapter 17.10 pages 292 -- Creator</A></H2>
+Are there any tips or tricks you have learned to determine the best creator?
+<p>
+I don't have any personal tricks or tips.  Just follow the examples
+and thoughts in the book.
+<p>
+<p>
+<H2><a name="Is a Controller in GRASP part of the system or an actor">Is a Controller in GRASP part of the system or an actor</A></H2>
+A controller is part of the system. It is not an external actor.  The
+external actors may have special user interface classes and then a
+controller and so the controller is a kind of mask for the real user.
+Controllers are how the user appears to the domain layer classes.
+<p>
+<p>
+<H2><a name="Chapter 17 pages ppp-ppp -- grasp controller">Chapter 17 pages ppp-ppp -- grasp controller</A></H2>
+can you explain the  controller from the grasp principles?
+<p>
+A controller object  is sent events by the user interface (it asks to be notified, typically)
+and then passes them on to other controllers (sometimes) or one or more effected domain
+objects.
+<p>
+<H2><a name="Chapter 17 pages 307 -- controller objects">Chapter 17 pages 307 -- controller objects</A></H2>
+can you explain more about how control objects are use case handlers
+<p>
+To be precise, some Controllers are associated with particular use cases.  They
+understand the sequence of events in the scenario and what to do at each step.
+As the events occur, the User Interface passes the messages to the use case controller
+(if the use case is recognisable).  If the type of event does not determine the
+use case (and there are several possible one running....) perhaps you need
+a facade controller that figures out which handler to call.
+<p>
+<p>
+<H2><a name="Why are bloated controllers bad -- why shouldn't they do all the work?">Why are bloated controllers bad -- why shouldn't they do all the work?</A></H2>
+Because the details of the work will change while the control sequence
+is likely to stay the same... so separating the details makes it easier to
+change the software. The effects of new requirements are localized.
+<p>
+In any case -- it is easier to work with a 100 line class than a 1000
+line class.
+<H2><a name="Chapter pages 271-319 -- Coupling">Chapter pages 271-319 -- Coupling</A></H2>
+Can you give an example of when high coupling is actually desirable/tolerable?
+<p>
+not without a lot of thought inventing a deliberately bad design.  I'll  see what I can
+do...
+<p>
+<H2><a name="Chapter 17 pages 299 -- Low Coupling">Chapter 17 pages 299 -- Low Coupling</A></H2>
+What does he mean when he says &quot;Assign a responsibility so that coupling remains low.&quot;
+<p>
+So that different parts of the software do not depend on each other.  So that
+changes in one part do not force other parts to change as well.
+<p>
+To put it another way there is a certain amount of wiggle room between the
+different pieces of the solution.
+<p>
+Here is an example of high coupling.  In my Microsoft 2K Pro lap top
+at home, sometimes when it comes out of hibernate mode it has the size of the
+desktop wrong -- twice as big as the screen or half as big.  Not the wallpaper,
+oddly, but where the icons are put and the size of the pixels used to draw them.
+Further this seems to happen if I enter hibernate mode when the model is active.
+<p>
+I don't understand how they can produce code where the modem and the desktop
+size are coupled together.
+<p>
+And do not get me talking about the way &quot;standby&quot; mode fails on this machine.
+<p>
+<H2><a name="Chapter 17 pages 290 -- Low cohesion.">Chapter 17 pages 290 -- Low cohesion.</A></H2>
+On page 290, Larman says that giving MonopolyGame too much to do--as opposed to delegating responsibilities--is, well, bad.  Is there technical reasoning behind this, or is it more for readability?
+<p>
+It is more than reasoning and readability.
+It is bad experiences with trying to modify &quot;mudball&quot; and &quot;God&quot; classes.  When
+you've got a large loose class you can't find out where things are done
+and so it takes time to fix it.  And often fixing one thing
+breaks something else.
+<p>
+<H2><a name="Chapter 17 pages 299 - Coupling between or inside layers">Chapter 17 pages 299 - Coupling between or inside layers</A></H2>
+In good practice , you should have low coupling but division between all
+different layers of your code for example, ui,domain,system?
+<p>
+Yes -- the coupling within a package should be higher than the
+coupling between packages.  In other words each package tends
+to be a coherent collection of classes.
+<p>
+However, certain couplings are needed to make the system work -- for
+example UI calling controllers in the domain, and the domain model calling
+the data base technical classes.
+<p>
+<H2><a name="Chapter 17 pages 271-319 -- GRASP Is it ever a good idea to use low-cohesion classes?">Chapter 17 pages 271-319 -- GRASP Is it ever a good idea to use low-cohesion classes?</A></H2>
+<p>
+Only if there is a really good other reason.   I can't think of one.... In this
+class don't do it without a written excuse from me:-)
+<p>
+<H2><a name="Cohesion on Wikipedia">Cohesion on Wikipedia</A></H2>
+[<A href="http://en.wikipedia.org/wiki/Cohesion_(computer_science)"> Cohesion_(computer_science) </A>]
+<p>
+<H2><a name="Chapter 17 pages 314-318 -- Cohesion">Chapter 17 pages 314-318 -- Cohesion</A></H2>
+I had some trouble with cohesion, can you clarify it some more?
+See below.
+<p>
+<H2><a name="Chapter 17 pages 314-317 -- High or Low Cohesion">Chapter 17 pages 314-317 -- High or Low Cohesion</A></H2>
+Should a design goal be low cohesion or high cohesion?
+<p>
+High.
+<p>
+<H2><a name="Chapter 17 pages 271-319 -- GRASP cohesion">Chapter 17 pages 271-319 -- GRASP cohesion</A></H2>
+Is it always best to create a model with high cohesion?
+<p>
+Yes.  It's been a good idea since it was first suggested back in the
+70's.
+<p>
+<H2><a name="Do I think that high cohesion is advantageous">Do I think that high cohesion is advantageous</A></H2>
+YES.  Difficult but worthwhile.
+<p>
+<H2><a name="Can you explain more detail about the levels of cohesion?">Can you explain more detail about the levels of cohesion?</A></H2>
+I learned about these back in the 1970s and so I could probably remember them, but
+the fact is that these old levels are not important in this class.
+Since then people researching software engineering have developed formulae and tools that
+measure cohesion to the second decimal place.....  but again this is more precision than we need.
+I am skeptical about trying to put a scale on cohesion (and coupling).
+I see cohesion as the kind of thing that a team should discuss on the way to a better design.
+<p>
+I just hope you start to develop a feel for when a class ahould really be split up because it
+does not &quot;stick together&quot;... Each function/operation refers to a different set of attributes.
+There is no sharing of responsibillities within the class, for example.
+<p>
+Notice:  It is hard for me to remove points for something I can't give you an algorithm to do.
+<p>
+<H2><a name="Chapter 17 pages 314-318 -- Cohesion and Coupling">Chapter 17 pages 314-318 -- Cohesion and Coupling</A></H2>
+Cohesion and Coupling affect one another in opposite ways (High Cohesion = Low Coupling).  How do you find balance between these two and optimize your application?
+<p>
+See below.
+<p>
+<H2><a name="Explain the difference between coupling and cohesion">Explain the difference between coupling and cohesion</A></H2>
+Coupling occurs between classes and measures the dependency between
+them.
+<p>
+Cohesion is a property of a single class and measures how well
+the class has a single purpose, common data, and intertwingled
+operations.
+<p>
+<H2><a name="Chapter 17 pages 317 -- High cohesion vs Low coupling">Chapter 17 pages 317 -- High cohesion vs Low coupling</A></H2>
+I think high cohesion could cause high coupling because &quot;the class has moderate responsibilities and need to collaborate with other classes to fulfill tasks.&quot;
+<p>
+I thought this when I first studied them.  But in practice you can organize
+the communication  between classes and packages
+to be through a small well defined interface which
+lowers the coupling, while allowing a lot of communication within
+a class or package.
+<p>
+<H2><a name="Chapter 17 pages 299-319 -- coupling and cohesion">Chapter 17 pages 299-319 -- coupling and cohesion</A></H2>
+Should we strive for low coupling and high cohesion in most cases?
+<p>
+YES.  The ideal (impossible) is to have the software divided into
+islands of responsibility. Much shared purpose and data inside each
+island and no communication between the islands.
+<p>
+<H2><a name="Chapter 17 pages 284-293 -- Low Coupling &amp; High Cohesion">Chapter 17 pages 284-293 -- Low Coupling &amp; High Cohesion</A></H2>
+Can you give a brief example how Low Coupling and High Cohesion can go hand to hand or support each other?
+<p>
+<H2><a name="how does high cohesion support low coupling">how does high cohesion support low coupling</A></H2>
+If every class has high cohesion then most of the connection are inside the class and
+so the references to other closes are lower.
+<p>
+<H2><a name="Can a class with high cohesion have a large number of methods?">Can a class with high cohesion have a large number of methods?</A></H2>
+In theory - yes!  Cohesion is more a matter of sharing all the
+attributes between the methods.
+<p>
+<H2><a name="Is Cohesion a subjective measure">Is Cohesion a subjective measure</A></H2>
+Yes.   There are <span class="InlineFormula">metrics</span> that attempt to estimate it.  I don't
+trust them.
+<p>
+<H2><a name="Which type of cohesion is best?">Which type of cohesion is best?</A></H2>
+The highest you can get.
+<p>
+<H2><a name="Can you give an example of high cohesion.">Can you give an example of high cohesion.</A></H2>
+A class Triangle with three vertexes that calculates area and perimeter, and
+other properties of the triangle.
+<p>
+This would still be cohesive if it allowed you to move the triangle.
+<p>
+However, if we added an operation that records sales of pets it would
+loose cohesion.
+<p>
+If we design a class figure that tried to handle Triangles and Circles in one
+class ... we would create low cohesion.
+<p>
+Hope this helps.
+<p>
+<H2><a name="Can you give and example of high and low cohesion in the Monopoly game program?">Can you give and example of high and low cohesion in the Monopoly game program?</A></H2>
+I think that by page 360 MGame has lost some cohesion -- and is a temptation
+to a novice programmer. As a rule Larman's designs are good enough
+to have highly cohesive classes.
+<p>
+<H2><a name="Chapter 20 pages 303 -- Reverse Engineering">Chapter 20 pages 303 -- Reverse Engineering</A></H2>
+Are CASE tools accurate enough to give correct diagrams by reverse engineering the code?
+<p>
+Yes... but ugly and incomplete.
+<p>
+In other words: they are often badly layed out.  Some tools
+populate a data base and you have to extract the classes etc into diagrams -- the tool
+also retirevies the connections between the pieces.   You get an explorer window
+of packages, clases, interactions, etc... and drag and drop into diagrams.
+<p>
+I am not aware  of any tool that can reconstract the requirements (use cases) from
+the code.  I believe their is a fundamental disconnect between what we want
+and what we have, between the <span class="InlineFormula">ought</span> and the <span class="InlineFormula">is</span>.
+<p>
+<p>
+<H2><a name="Chapter 17 pages ppp-ppp -- Grasp vs GoF">Chapter 17 pages ppp-ppp -- Grasp vs GoF</A></H2>
+How does GRASP compare with the Gang of Four design patterns?
+<p>
+<a href="#GRASP">GRASP</A> is simpler and more general.  <a href="#GoF">GoF</A> are more code oriented
+and tend to be rather sophisticated.  They came first and tend to be
+better known.
+<p>
+<H2><a name="Chapter 17 pages 280 -- Gang of Four patterns">Chapter 17 pages 280 -- Gang of Four patterns</A></H2>
+How do the Gang of Four patterns fit into the <a href="#GRASP">GRASP</A> Model?
+<p>
+It turns out (later chapter) that most of the <a href="#GoF">GoF</A> patterns
+are applications of Larman's <a href="#GRASP">GRASP</A> principles/patterns.
+Even tho' the <a href="#GoF">GoF</A> published their patterns first.
+<p>
+On of my reasons for selecting this book is that <a href="#GRASP">GRASP</A>
+summarizes a lot of best practices from many sources.
+<p>
+<H2><a name="Chapter 17 pages 288-289 What do Figures 17.9 and 17.10 mean">Chapter 17 pages 288-289 What do Figures 17.9 and 17.10 mean</A></H2>
+These are informal sequence diagrams showing objects
+sending messages.  See
+[<A href="10.html"> 10.html </A>]
+and chapter 15.
+<p>
+However, Craig is including an Actor icon
+to show the user, which is illegal.  He also attempts to show
+the layers in a hypothetical architecture.  The squiggly
+line separates two layers: one the left is the user interface
+(technology) layer, and on the right, is the domain layer.
+<p>
+He also has added an informal notes all over the place!
+In theory these should be in comment boxes.
+<p>
+As a rule I'd like you to be a little more formal in your
+diagrams.  But,  you can document the use of a GRASP pattern
+the same way that Craig does.
+<p>
+<p>
+<H2><a name="Chapter 17 pages 313 -- What is a Facade">Chapter 17 pages 313 -- What is a Facade</A></H2>
+A curtain.  A single class that covers up a lot of detail.
+<p>
+<H2><a name="Chapter 17 pages 475-500 -- Modeling Dynamics -- include in use case diagrams">Chapter 17 pages 475-500 -- Modeling Dynamics -- include in use case diagrams</A></H2>
+What is the significance of the &lt;&lt;include&gt;&gt; tag in a use-case diagram?
+<p>
+It means that two or more use cases contain a common pattern of interaction.
+This is abstracted into an included use case.
+<p>
+</ol><p>. . . . . . . . . ( end of section <a href="12q.html#Questions and Answers on GRASP">Questions and Answers on GRASP</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci Dept, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10.
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

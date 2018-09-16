@@ -1,0 +1,53 @@
+.Open Modeling Dynamics -- Activity Diagrams and State Machines
+. -- Chapter 28: UML Activity Diagrams
+	This is covered in CSci372 and skipped in CSci375.
+	++ Flowcharts reborn.
+	-- Introduction
+	-- 28.1 Example
+	-- 8.2 Uses: BPM DFD Algorithms ...
+	++ Beware using an activity diagram to show a DFD.  UML activity
+diagrams imply a strict sequence rather than a set of loosely
+coupled parallel processes.  Even Fig 28.3 implies a strict sequence.
+To show many components cooperating (as in a typical business) you
+can use component diagrams. See
+.See ../papers/rjb04bDFDs/
+for examples.
+	-- 28.3 More Notation: Subprograms, decision/merge, signals...
+See
+.See ./17Signals.gif
+(notation for activities and signals)
+	--28.4 Guidelines
+	-- Martin Fowler's "UML Distilled" points out that UML2.0
+activity diagrams have different semantics to UML1.* activity diagrams.
+To avoid confusion an activity should never have more than two control
+flows out and no more than one control flow in.  Use diamonds and bars
+to make the precise meaning clear.
+	-- 28.5 Example: NextGen
+	-- * 28.6 Process: Activity Diagrams in the UP
+. -- Chapter 29 State Machine Models
+	++ Based on Computer Science Theory from the 1940's!
+	++ A very useful and simple way to think about complex behavior
+patterns.  We have tools and theories that help analyze these charts.
+Most people `understand` them with little training.
+	-- Not covered in CSci375 -- lack of time.
+	-- Introduction
+	-- 29.1 Example
+	-- ** 29.2 Definitions
+	-- ** 29.3 How and when to use
+	-- ** 29.4 More State Machine Notation
+	-- ++++ There is a big ambiguity in UML2.0: state diagrams look like
+activity diagrams and have different semantics.  To be clear put
+an event or condition  on all transitions in a state diagram.
+	-- **** 29.5 Example: model UI Navigation via a state machine
+	-- 29.6 Example: NextGen
+	-- ++ Dynamics in the Domain Model.  You can also draw a
+.Key Life History
+state chart of conceptual objects in the domain.  This will often
+teach a lot about the way things happen in the `real world` outside
+the computer.... and give you a lead on how objects evolve
+`inside the computer. 
+	-- +++ Examples of State Machine Notation
+.See ../samples/uml.states.gif
+.See ./17course.gif
+.See ./17doorProtocol.gif
+.Close Modeling Dynamics -- Activity Diagrams and State Machines

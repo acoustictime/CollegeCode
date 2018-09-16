@@ -1,0 +1,42 @@
+.Open Questions on the Inception Phase
+. Chapter 1 Page 11 -- Forward engineering
+What does the author mean by "forward engineering?"
+
+See 
+.See ./02q.html
+on foarward and reverse engineering.
+
+.Open Previous Quarters
+
+
+. If we continue our 372 project is this a re-inception
+Yes -- I guess it is.  The Traditional Systems Analysis tends to
+provide a lot of useful input into Inception that will need
+re-evaluation.
+
+. What are the difference between artifacts in the inception phase and 
+later phases
+First: as the project proceeds the artifacts are refined: edited, improved,
+etc..
+
+Second they are initially incomplete and get more complete in each phase.
+
+. How does skill interact with methodology
+Older methodologies attempted to `deskill` software development.
+This means replacing personal abilities by given (`no brain`)
+procedures.
+
+Modern `agile` processes stress people and their skills
+more than the procedures.  They stress the skill of picking
+procedures (and artifacts) that work at the particular time and
+project.
+
+.  Why do people still use the waterfall.
+Tradition. Comfort.  Ignorance. Egotism.
+
+Also the text books are lagging behind the research and practice.
+
+Also some projects (very few) have no risks and so
+the waterfall works for them and is likely to be most efficient.
+.Close Previous Quarters
+.Close Questions and answers for Session 3

@@ -1,0 +1,183 @@
+     1	/*********************************************************************
+     2	adapted from:   timothy budd
+     3	programmer:     kay zemoudeh
+     4	date:           8/17/98
+     5	file:           war.cpp
+
+     6	description:    this program simulates the game of war. each player gets
+     7	                3 cards. each player displays one of her cards.
+     8	                the player with the highest ranking card wins 2 points.
+     9	                in case of a tie each player gets 1 point. after each
+    10	                round, each player draws a new card from the deck.
+
+    11	implementation: this program uses 4 classes: Card, Deck, Player, and
+    12	                RandomInteger . it is a good example of Object Oriented
+    13	                Programming (OOP). Note the simplicity of each class and
+    14	                the main() function.
+
+    15	**********************************************************************/
+
+    16	#include <iostream>
+    17	#include <stdlib.h>       // for rand()
+    18	#include <algorithm>      // for random_shuffle()
+
+    19	using namespace std;
+
+    20	enum suits { diamond, club, heart, spade };
+
+    21	class Card {
+    22	    // private by default
+    23	    int      rank;        // rank of card
+    24	    suits    suit;        // suit of card
+    25	public:
+    26	    // constructors
+    27	    Card();               // initialize a card with default values
+    28	    Card(suits, int);     // initialize a card with given values
+    29	    // accessors
+    30	    int getRank() { return rank; } // an in-line function
+    31	    suits getSuit() { return suit; }
+    32	    // mutators
+    33	    void setRank(int rv) { rank = rv; }
+    34	    void setSuit(suits sv) { suit = sv; }
+    35	}; // Card
+
+    36	Card::Card()
+    37	{
+    38	    rank = 1;
+    39	    suit = spade;
+    40	} // constructor
+
+    41	Card::Card(suits sv, int rv)
+    42	{
+    43	    rank = rv;
+    44	    suit = sv;
+    45	} // constructor
+
+    46	// output a textual presentation of a Card
+    47	ostream & operator<<(ostream & out, Card aCard)
+    48	{
+    49	    switch (int rank = aCard.getRank()) {
+    50	        case 1:  out << "Ace"; break;
+    51	        case 11: out << "Jack"; break;
+    52	        case 12: out << "Queen"; break;
+    53	        case 13: out << "King"; break;
+    54	        default: out << rank;
+    55	    }
+
+    56	    switch (suits suit = aCard.getSuit()) {
+    57	        case diamond: out << " of Diamonds"; break;
+    58	        case spade:   out << " of spades"; break;
+    59	        case heart:   out << " of hearts"; break;
+    60	        case club:    out << " of clubs"; break;
+    61	    }
+    62	    return out;
+    63	} // operator<<
+
+    64	class RandomInteger {
+    65	    public:
+    66	        unsigned int operator()(unsigned int);
+    67	}; // RandomInteger
+
+    68	unsigned int RandomInteger::operator()(unsigned int max)
+    69	{
+    70	    unsigned int rval = rand();
+    71	    return rval % max;
+    72	} // operator()
+
+    73	RandomInteger randomizer; // global object, often not a good idea!
+
+    74	class Deck {
+    75	    Card cards[52];    // deck of 52 cards
+    76	    int topCard;       // size of deck
+    77	public:
+    78	    Deck();
+    79	    // shuffle uses the generic algorithm random_shuffle from STL
+    80	    void shuffle() { random_shuffle(cards, cards+52, randomizer); }
+    81	    bool isEmpty() { return topCard <= 0; } // return true if empty
+    82	    Card draw();    // return next card
+    83	}; // Deck
+
+    84	Deck::Deck()
+    85	{
+    86	    topCard = 0;
+    87	    for (int i = 1; i <= 13; i++) {
+    88	        Card c1(diamond, i), c2(spade, i), c3(heart, i), c4(club, i);
+    89	        cards[topCard++] = c1;
+    90	        cards[topCard++] = c2;
+    91	        cards[topCard++] = c3;
+    92	        cards[topCard++] = c4;
+    93	    }
+    94	} // constructor
+
+    95	Card Deck::draw()
+    96	{
+    97	    if (!isEmpty())
+    98	        return cards[--topCard];
+    99	    else { 
+   100	        Card spadeAce(spade, 1);
+   101	        return spadeAce;
+   102	    }
+   103	} // draw
+
+   104	class Player {
+   105	    Card myCards[3];
+   106	    int myScore;
+   107	    int removedCard;
+   108	public:
+   109	    Player(Deck &);
+   110	    Card draw(); // another draw()!
+   111	    void addPoints(int howMany) { myScore += howMany; }
+   112	    int score() { return myScore; }
+   113	    void replaceCard(Deck &aDeck) { myCards[removedCard] = aDeck.draw(); }
+   114	}; // Player
+
+   115	Player::Player(Deck & aDeck)
+   116	{
+   117	    myScore = 0;
+   118	    for (int i = 0; i < 3; i++)
+   119	        myCards[i] = aDeck.draw();
+   120	    removedCard = 0;
+   121	} // constructor
+
+   122	Card Player::draw()
+   123	{
+   124	    removedCard = randomizer(3);
+   125	    return myCards[removedCard];
+   126	} // draw
+
+
+   127	main()
+   128	{
+   129	    Deck theDeck; // create a deck
+   130	    theDeck.shuffle();
+
+   131	    // create two players
+   132	    Player player1(theDeck);
+   133	    Player player2(theDeck);
+
+   134	    while (!theDeck.isEmpty()) {
+   135	        Card card1 = player1.draw();
+   136	        cout << "Player 1 plays: " << card1 << endl;
+   137	        Card card2 = player2.draw();
+   138	        cout << "Player 2 plays: " << card2 << endl;
+
+   139	        if (card1.getRank() == card2.getRank()) { // tie
+   140	            player1.addPoints(1);
+   141	            player2.addPoints(1);
+   142	            cout << "Players tie\n\n";
+   143	        } else if (card1.getRank() > card2.getRank()) {
+   144	            player1.addPoints(2);
+   145	            cout << "Player 1 wins this round\n\n";
+   146	        } else {
+   147	            player2.addPoints(2);
+   148	            cout << "Player 2 wins this round\n\n";
+   149	        }
+
+   150	        // replace the cards drawn
+   151	        player1.replaceCard(theDeck);
+   152	        player2.replaceCard(theDeck);
+   153	    }
+
+   154	    cout << "Player 1 score: " << player1.score() << endl;
+   155	    cout << "Player 2 score: " << player2.score() << endl;
+   156	} // main

@@ -1,0 +1,37 @@
+. Review Questions 10 UML Interaction diagrams
+ Name the two types of interaction diagrams and give very simple example of the
+same interaction using one type of diagram and the other.
+ Copy the following diagram and label an object and a message.  What does it tell you about
+the operations in the classes.
+
+.Image communication.png [Example communication diagram]
+
+ Redraw the above diagram as a sequence diagram.
+ How do you show that one class is responsible for creating an object?  Show notation for both
+types of interaction diagram.
+ How do you show that a class is responsible for executing an operation rather than an object?
+ How do you show an operation that will be `static` in C++ or Java?
+ How can you show an array and an element in an array?
+ What is a `found message`?   What does it mean?
+ How do you show a returned object in a sequence diagram?  
+ Explain these structures: alt, loop, and opt.
+ How do you show an action (x=x/2.0; for instance) in a sequence diagram?
+ Explain `ref` and `sd` and the relation between them.
+ In a communication diagram -- how many messages per link?  How are the sequenced?
+ I have messages numbered 1, 2, 3, 2.1, 1.1, 3.1, 1.2, 3.2.  In what sequence are they
+actually sent?
+ What does this mean in a communication diagram: [gender = male]? And what does
+*[i=1..20]?
+
+ Explain these diagrams....
+
+.Image 10diagram.gif [Use case to interaction]
+
+ The interaction diagram above tells you that the program will have a class
+called C that has a particular operation in it.  What can you deduce about 
+this operation?
+
+ What do the interaction diagrams below tell you about the operations in class Die?
+
+.Image 10rDie.gif [Two interaction diagrams]
+

@@ -1,0 +1,198 @@
+.Open CSci 375/05 More Requirements
+.Table Date	#	Topic (Participation 2pt)	Study pages (2 pts)	Quiz(15 pts)	Project Work(10 pts)
+.Row Previous	4	Use Cases	61-89	-	W1 (section 4.3)
+.Row Today	5	More Requirements	89-120	Q2(61-120)	-
+.Row Next	6	Domain Model	121-157	-	W2(Use Case Model 1)
+.Close.Table
+. Project 1 Due at start of class.
+
+.Open Input on Requirements
+. Two kinds of Requirements -- Functional vs NonFunctional
+This is an important distinction.  Functional requirements
+tell us what the software should do and map naturally into
+code via use cases.  
+
+The non-functional requirements don't map so
+easily -- they are often expressed in terms of
+How much of some resource can be used.
+
+For example: time to respond, memory needed, cost of CPU,
+hours of training, user mistakes per hour, 
+time to train a new user, time to deliver the software, and so on.
+
+Other non-functional requirements tend to come from above: the HIPA and ADA
+requirements for example, or the choice of technology -- "must be Windows".
+
+Security and reliability are high level non-functional requirements.  Security
+is about things that will `not` be done rather than what can be done.
+Reliability is about how often a system can fail vs be unavailable.
+
+. Modern Requirements Engineering Terminology -- Functional vs Quality
+
+. Requirements Infrastructure
+You can spend a lot of money on tools that store requirements.  You can also
+use pencil and paper.  The problem with paper is that 
+.Key requiremnts change
+and it is inefficient to change paper.  This is especially true if
+you use pen and paper.
+
+So, you need a system that allows these use cases
+.List
+ Analyst rapidly inputs new requirements.
+ Analyst shows impressive requirements to the client.
+ Analyst shares requirements with other members of the team.
+ Analyst edits requirements.
+ Analyst recovers earlier versions.  (version control)
+ Analyst compares many different artifacts.
+ Create new project.
+ Backup data.
+ Recover data after disaster. 
+ Etc.
+.Close.List
+
+Suggestions: a team web site, Google docs, Drop Box, ...
+
+.Open Example of a Simple system
+. System -- Shopping Aid
+. Vision
+A hand-held, wireless device that helps shoppers buy the items that they want. A shopper has a list of items that they want. They are sold at different stores. The device keeps an up-to-date list of wanted items as the user shops.
+. Use Case -- Go Shopping
+(Main Go Shopping Scenario):  
+The shopper inputs a list of wanted items and the system displays stores 
+where they can be found. The shopper goes from store to store looking for 
+the products that match their list.  They buy a product at the first store
+where they find it, mark it as bought and the system updates their list or
+items and stores.
+
+. Use Case -- Start Up
+. Use Case -- Administer User Accounts
+. Use Case -- Backup data
+.Open Glossary
+Shopper::=`a person who wishes to by a number of itwms that might be found in several different stores`.
+Shopper::data={id, name, password, ... }.
+.Close Glossary
+.Open Supplementary Specification
+ System will not allow shopper's data to be shared with shops, 
+other shoppers, or unauthorized employees.
+ ...
+.Close Supplementary Specification
+.Open Domain Rules
+	R1. Each item is suitable for one product.
+	R2. Each wanted item matches various items in different stores. 
+	R3. Stores have different quantities of each item for sale. 
+	R4. A product can have a different price at each store.
+ ...
+.Close Domain Rules
+. Etc.
+.Close Example of a Simple system
+
+
+. UML Use Case Diagrams
+Important fact.  A Use Case diagram shows many use cases.  
+It connects actors to use cases -- period!
+A use case is primarily described by text not diagrams.
+
+.List
+  *** Learn the notation -- it is unambiguous and simple:
+.Set
+ Bubbles are Use Cases.  Name inside or underneath.
+
+.Image 05uc.png [Bubble with Name inside or outside]
+
+ Stick figures are Actors (probably human).  Name underneath. 
+ Boxes with "<<actor>>" are also actors (probably computerized).
+ Boxes with no "<<actor>>" are probably mistakes.
+
+.Image 05actors.png [Two actors and an error described in text above]
+
+ Lines connect Actors to their Use Cases.  Lines do `not` connect use cases to use case
+or actors to actor.
+
+.Image 05lines.png [Good and bad lines]
+
+ The Big Box shows the system boundary and can have the name of the project
+or product on it.
+.Close.Set
+. Common error in use case diagrams
+Omitting the system boundary or context.  The big box that contains all
+the use case bubbles and none of the actors.   It is nice if it has the name
+of the system at the top.
+
+ Exercise: what are A, B, and C in this image?
+
+.Image abcUseCase.gif [Use case diagram with A B and C]
+
+  *** Applying the UML: use case diagrams
+.Set
+  * Actors(sticks for people, <<actor>> boxes for systems)
+  * Use Case Bubbles (name inside or underneath)
+  * Boundary(Scope at top)
+  * Actors communicate with Bubbles (no arrows)
+  * Layout: primary actors on left, supporting actors on right
+An older notation was to give the primary actor an arrowhead at
+the use case end.
+.Close.Set
+  Exercise -- Draw a use case diagram for Shopping Aid.
+
+  Applying the UML: Activity diagrams(modernized flowcharts see CSci372)
+
+  Motivation: benefits
+  Example: monopoly game
+  * Process: iterating
+  History
+  Resources
+  ++ A 
+.Key Business Use Case
+describes how an business actor gets something
+that they want but does not describe the systems that are involved.
+  + Danger: a "Business case" is the reason the business needs to
+develop the software.
+
+.Close.List
+. Other Requirements are put in other artifacts
+.Set
+  ** Glossary (and Data Dictionary?)
+  ** Vision
+  *** 
+.Key Supplementary Specification
+.See ./supplement.html
+(template)
+  ** Business Rules
+.Close.Set
+.List
+  How complete?
+  How Thoroughly in inception?
+  On the project's website
+  Example NextGen
+.List
+  Supplementary Specification
+  Vision
+  Glossary
+  Business Rules
+.Close.List
+  **** Process: Evolve Requirements by iteration
+  Resources
+.Close.List
+.Close Input on Requirements
+.Open Questions and Answers
+.See ./05q.html
+.Close
+. Review Questions on Requirements
+.See ./05r.html
+. Example from 2010
+.See ./example2010.html
+. Exercise for class 05
+.See ./05x.html
+. Assigned Work Next Week: A FIRST set of Requirements for your project
+.See ./w2.html
+is due next week (Class 07).
+
+For the next class study
+.See ./06.html
+and the reading
+(and give me a review question
+.See ./06r.html
++ answer).
+. Quiz 2 on Use Cases and other Requirements
+$TBA
+.Close CSci 375/05 More Requirements

@@ -1,0 +1,21 @@
+.Open Supplementary Specification
+. Source -- From Craig Larman Page 104-106
+. Revision History
+.Table Version	Date	Description	Author
+.Row template	Jan26 2010	Initial Template for a project Supplementary Spec	RJBotting
+.Row ...
+.Close.Table
+
+. Functionality
+functions used in more than one use case
+. Usability
+. Reliability
+. Performance
+. Suportability
+. Implementation Constraints
+. Purchased Components
+. Free/Open Source Components
+. Interfaces
+. Domain Rules
+. Legal Issues
+.Close

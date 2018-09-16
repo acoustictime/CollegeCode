@@ -1,0 +1,198 @@
+. CSci 375/14 Design and Code
+.Table Date	#	Topic (Participation 2pt)	Study pages (2 pts)	Quiz(15 pts)	Project Work(10 pts)
+.Row Previous	13	Object Design	320-362	Q6(271-362)	-
+.Row Today	14	Design..Code	363-398	-	W6($GRASP)
+.Row Next	15	More Analysis	401-434	Q7(1-434)	-
+.Close.Table
+. Revision History
+.Table Version#	Date	Description	Author
+.Row 0	2005-01-03	Used boiler plate to make template	RJB
+.Row 1	2005-01-17	Added section headings one or two notes	RJB
+.Row 2	2006-02-16	Updated to 2006 format 	RJB
+.Row 3	2006-02-23	Added some notes 	RJB
+.Row 4	2006-12-05	Added tools 	RJB
+.Row 5	2007-01-10	Added link to project 	RJB
+.Close.Table
+. Message of the day
+The wise way of doing something is seldom the quick and dirty way that we
+would like when learning a discipline.
+
+
+.Open From Design into code
+. 19 Design for Visibility
+  Introduction: How does this object know about the other objects?
+  ++ Common error: declaring parameters as attributes.
+  19.1 Visibility between Objects - Example
+  ** 19.2 What is visibility -- definitions and types
+.Table Visibility	Life	Scope	Note
+.Row Attribute	=object
+.Item 
+.Table Name	Scope
+.Row private	one object
+.Row public	All objects (bad)
+.Row protected	One object and objects derived from it
+.Close.Table
+.Item Very common. Keep private.
+.Row Static Attribute	=program	One class	Shared by all objects in a class.
+.Row Parameter	one operation call	method	communication between caller and called
+.Row Local	one operation call	one block(C++)/method(Java)	Needs initialization.
+.Row Global	For ever	Any object	Just say NO to global variables.
+Use either
+.See ./patterns.html#Singleton
+or a class with a public static getter operation.
+.Close.Table
+. Chapter 19 pages 363-368 -- popularity of different types of visibility
+Out of the types of visibility (attribute, static attribute, parameter, local, and global) which one is the most commonly used in object-oriented programming?
+
+It is not a matter of popularity!   You must not think that you can guess the most popular
+visibility for a particular item of data.  You must discover the `right` one.  
+
+Worse -- a particular piece of data will have different visibilities to different classes, and
+at different times.  For example:  the Widget class may keep a local "knobs" attributes,
+but pass it to another class as a parameter.  The receiving class could then store it in a 
+variable that is local to the method...
+
+But -- as a rule --
+the smaller the scope of a variable the less trouble you will have with accidental usage. So,
+most experienced programmers will prefer local to parameter, parameter to attribute, 
+attribute to global.  In deed most will reject globally visible data, out of hand.
+
+So:
+.List
+ Local -- safest
+ Parameter
+ Attribute
+ Static Attribute
+ Global -- worst
+.Close.List
+
+  ++ Visibility implies a coupling.
+
+  +++ You can also apply an operation to a visible object to get to other objects.
+
+. Chapter 19 pages 366 -- visibility
+Can you explain more detail about types of visibility? 
+Also what is the
+difference between the diagram on the book page 366 figure 19.2,3,4,5 / 
+attribute visibility and local visibility, Parameter visibility and 
+Parameter to attribute visibility?
+
+Walkthrough in class.
+
+.  Error in Figure 19.4
+There are two messages numbered "2". This one
+.As_is 			desc = getProductDescription(id)
+should be number 1.
+. 20 Mapping Design to Code
+     Introduction
+     20.1 Programming as iterative and evolutionary
+     20.2 Design to code
+     ** 20.3 DCD to Class Definitions
+     ** 20.4 Interactions to Methods
+     ** 20.5 Collection Objects.
+       +++ Aim high:
+.List
+ Declare object variables as pointers.
+ Declare type of object variables as general as possible.
+ Declare pointers(C++, objects in Java) at the most abstract class and then they
+can actually point at lots of different types of low level objects.
+.Close.List
+     ** 20.6 Exceptions and Errors
+     20.7 Example: Sale.makeLineItem method
+     ** 20.8 Order of Implementation
+     20.9 Test First Development 
+     =~= Test Driven Development -- (TDD)
+.Box
+My experience with TDD:
+ It is a lot more fun than Test-Last development.
+(And fun = motivation = productivity).
+ It guides you to simple and elegant solutions that
+"Do the simplest thing that could possible work".
+ The tests are excellent live (tested) documentation
+of the software.
+ +++ As a rule, when coding a class -- start by coding a unit test of the class, then
+make the class pass the test.
+.Close.Box
+    Simple example:  develop a function that tests for primality --
+.See ./tprime.cpp
+(first version), 
+.See ./tp1.cpp
+(2nd), 
+.See ./tp2.cpp
+(3rd), etc..
+     * 20.10 Summary
+
+     20.11 NextGen Code  (not on any quiz/final)
+     20.12 Monopoly code (ditto)
+. 21 Test-Driven Code and Refactoring
+    Introduction
+    *** 21.1 Test Driven Code: USE IT (no quiz/final question)
+    +++++ In C++ master using the assert function to test classes/objects.
+    +++ Get into the habit of writing unit tests before you write the class.
+    *** 21.2 Refactoring: USE IT (no quiz/final question)
+    ++ These two disciplines fit together.
+.Box
+  You can't refactor easily without tests.
+  Test driven code needs to be refactored to maintain a clean
+design.
+  A clean design is easier to change -- and things will change.
+.Close.Box
+     21.3 Resources
+    ++ Only wear one hat at a time!
+.Set
+ Either refactor or extend, not both.
+  Either work on interfaces or implementations, not both.
+.Close.Set
+    ++ A key idea: 
+.Key DRY
+Don't repeat yourself!
+   A very good study of refactoring is Uncle Bob Martin's "Clean Code" book.
+.Close
+. 22 UML Tools and UML as Blueprint
+   22.1 Forward, Reverse, and Roundtrip
+   -- 22.2 Tools can get in the way
+   22.3 What to look for in a tool
+   22.4 Updating sketches
+   22.5 Recommended Resources
+. Example -- Implementing the Account class
+UML diagram of the Account class from Deitel and Deitel's ATM example.
+Found in the CSUSB's Library->EBooks->Safari->Deitel->... page306.  This
+is part of an ATM program running at a bank.  Typical scenario involves the
+customer providing a PIN and inputting money and getting money.  These effect the
+customer's account.
+
+.Image Account.png [UML class Account]
+
+Note 1: credits from the ATM are not immediately available but are added to the total balance
+until confirmed by a separate application run inside the bank...
+
+Note 2: The Account does not verify that the Customer
+has available funds. This responsibility is allocated to the
+"Withdrawal" class which acts as a session Controller for Customer withdrawals.
+
+Note 3: The Account will need a constructor... and for testing something
+like this
+.As_is 	Account ( int acctN, int PIN, double aBal, double tBal);
+will fit the class diagram well.  The resulting file looks like:
+.See ./Account.cpp
+
+Here is the TDD test:
+.See ./test.Account.cpp
+which fails to even compile.
+
+We will now "Do The Simplest Thing That Could Possibly Work" and so
+develop the code for the class.
+
+
+. Exercises on Mapping Diagrams to Code
+.See ./14x.html
+. Questions and Answers
+.See ./14q.html
+. Next -- Back to Analysis again
+.See ./15.html
+for reading etc.
+. Next Iteration of project -- Find examples of GRASP in your project
+.See ./w6.html
+due at start of class 15.
+. Review Questions
+.See ./14r.html

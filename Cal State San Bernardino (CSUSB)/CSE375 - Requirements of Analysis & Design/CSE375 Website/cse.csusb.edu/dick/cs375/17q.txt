@@ -1,0 +1,624 @@
+.Open Questions and Answers on More Patterns
+. Representational vs Behaviorial Decomposition
+How do you determine whether to include the design of objects into those chosen by Representational Decomposition versus those chosen by Behavioral Composition?
+
+I usually focus on representing the real world... and shift to behaviorial techniques to resolve evolving technical problems: high coupling, low cohesion, and protecting variations.
+
+. Chapter 26 pages 435-476 -- UML and Languages
+The book begins to talk about different languages, am I correct to assume that the diagrams will not change much or at all based on the languages that are being used? What about over different layers?(Object -> assembly)
+
+The UML is supposed to be language independent.  The diagrams don't change much.
+
+There are gimmicks for coding in each language.
+
+. Chapter 26 pages 435 - 462 -- Which is Design patterns is used most
+From the GRASP set -- Information Expert.   From $GoF -- singleton.  Why?  Because most
+of the other GoF patterns need a singleton object to work:-(
+
+I think there are 23 patterns in GoF design, but the book just list 7 of them which include: adapter, factory, singleton, strategy, composite, facade and observer. Is these 7 are more important than those rest of 23? Also which one is more important in 7?
+
+Don't worry, there are more to come!  And I have a list 
+.See ./patterns.html
+on this web site.  And the list also has links to other sources on Patterns.  These days
+you can look up, online, the details on any pattern you need.
+
+The book covers the ones you need to do OK in this class.   I think Larman
+has chosen the most important ones for everyday OOD. 
+Personally I find the Larman GRASP patterns a better language for designing OO programs -- even though
+this means I occasionally reinvent a GoF pattern.
+
+Don't forget that the GoF patterns are all entangled with each other like a bowl of spaghetti -- you can't
+make a Factory unless it is a Singleton, and to make Strategy work you'll probably use a Factory
+to create the Factories....
+
+. Chapter 26 pages 435-476 -- Applying GoF Design Patterns
+What exactly is the real difference between the GRASP patterns and the GoF patterns?
+
+GRASP = 9 simple guidelines vs GoF = two dozen specific class diagrams.  The $GoF
+patterns are more complex and specific.
+
+. Chapter 26 pages 435-476 -- Too many GoF
+There are so many patterns in GoF, Do we need to apply all of them in our design? When should we choose GoF rather than GRASP?
+
+As a rule, if you get good at the GRASP patterns and you can derive the GoF patterns when you need them.
+Unless you are asked to by a teacher don't try to force
+it.  Some problems need no $GoF patterns.  And $GRASP are only needed
+on problems with objects.  So in practice it is fairly typical that you wrestle
+with a piece of a problem and them recognize it fits a particular
+$GoF.
+
+In this class I expecting people to find no more than one or two of the book's
+$GoF patterns in their projects.  However I do expect you to recognize any
+on the $GoF patterns in the text (or your project)
+and answer questions about it in Quizzes and the final.
+
+
+Make sure that you know the two parts of a good pattern:
+.List
+ When it works well -- the problems and forces it resolves.
+ How it works -- the classes, objects, and interactions
+.Close.List
+
+If you do any $OO training or teaching you may have to fake an example
+with several paterns:-(.
+
+. Chapter 26 pages 439 -- Pattern Overload
+A good designer knows 50+ of the most important design patterns.  I would like to be an experienced designer so could you recommend good UML design books?
+
+I wish I knew 50+ patterns. I rely on using $GRASP and some of the %GoF
+to get by.   
+
+I find most UML books to be too expensive.  I choose Larman for this class because
+it is the best introduction I've seen.
+
+You might try "Head first Patterns" -- it was more fun than most I've seen
+and didn't
+look gold plated.   I wonder whether we have a pocket book of patterns
+yet.  I have a Victorian "Engineer's Sketch Book" of about 1000
+designs...
+
+Definitely check out the $GoF book in the library when the class is over.
+
+I've found web sites very good for learning patterns. 
+See the links in my 
+.See ./patterns.html
+page.  In fact I start by the patterns and principles on that page.
+
+. Chapter 26 pages 435-476 -- What is GoF and how does it apply to the design process
+They are a couple of dozen OO techniques that have been discovered in several projects.
+They were developed at a conference on "Pattern Languages" some years ago.
+Sophisticated solutions to technical problems in OO design.  Carefully documented.
+They took the OO world over.  But hard to remember unless you use them every day.
+
+. Chapter 26 pages 435-476 -- Are GoF patterns subcategories of all the GRASP principles
+No.   
+
+But just about every GoF pattern is the application of one or more GRASP principles.
+
+I (and Larman) use GRASP to think up designs.... but this leads to rediscovering that we need a
+GoF Pattern and then we hit the web looking for the details.
+
+. Chapter 26 pages ppp-ppp : Patterns & Pitfalls
+Are there any 'gotchas' or pitfalls that we should be aware of when 
+designing with patterns? For example: When should we construct a hierarchy of objects to achieve 
+polymorphic behavior versus using a switch construct to solve the problem?
+
+The main risk is over-complicating a program by using a pattern that
+is not needed.  This is mainly with some of the $Gof patterns.
+
+The thing about switch statements is that they are linked to
+some nasty bugs... (example shutting down part of
+New York's telephone network).  Afterall it is a table of g*t*'s!
+
+.Box
+I've just got back from observing a CS1 class where all the students had
+been told to use a switch statement to code a simple C++
+program to input the number of the day of the week and output
+it's name.  I lay awake that night wondering why one would do that when
+we have:
+.As_is 	string weekDay[]={"Sunday", "Monday", ...., "Saturday"};
+.As_is 	...
+.As_is 	cout << weekDay[numberOfDay] <<endl;
+This lead me to think about abandoning the switch in general because
+I can get the same effect by declaring an array of functions
+or even encapsulating the switched behaviors in different objects.
+
+Then I recalled  that my favorite trick is to avoid the
+$GoF State pattern (later) by using a switch to implement
+restartable code...
+.Close.Box
+
+. Chapter 26.1 pages 436-437 -- What is the GoF Adapter Pattern
+A GoF Adapter is an object that converts one interface into another
+one.   You call the functions in the standard way
+and the adapter object converts them to a non-standard interface.
+
+An adapter class is full of methods like this:
+.As_is 	void myOperation(mydata) { realObject.realMethod(realData) ; }
+
+Clients have instructions like
+.As_is 		.... adapter->myOperation(...)  ...
+
+
+. Chapter 26.1 pages 436-437 -- Adapter
+Can you show a adapter GoF in a common example that we have used in class? Is there one in the monopoly? Etc.
+
+I can't think of a Monopoly example.
+
+I coded up Larman's TaxAdapter
+.See ./fig25_25_1.cpp
+.See ./test.fig25_25_1.cpp
+, this is an example of using inheritance and polymorphism to adapt interfaces.
+
+Here is another form of adapter -- the wrapper.
+It is an example from the C++ standard -- the STL stack is an adapter for a 
+more complex `Container`:
+.As_is     class stack {
+.As_is     ...  // define some types
+.As_is     protected:
+.As_is       Container c;
+.As_is     public:
+.As_is       ... // constructors
+.As_is       bool      empty() const             { return c.empty(); }
+.As_is       size_type size()  const             { return c.size(); }
+.As_is       value_type&       top()             { return c.back(); }
+.As_is       const value_type& top() const       { return c.back(); }
+.As_is       void push(const value_type& x)      { c.push_back(x); }
+.As_is       void pop()                          { c.pop_back(); }
+.As_is     };
+Notice -- this is the kind of Adapter that contains a copy of the object being adapted.
+Also known as a wrapper.
+
+
+
+. Chapter 26 pages 440-441 -- Factory vs Pure Fabrication
+The author states that Factory Pattern is synonym of Pure Fabrication. That said, is Simple Factory considered an abstract or a method? Or, both?
+
+I don't think it means the same thing (synonym).... a Factory object is an example of a Pure Fabrication -- it
+is invented for technical reasons inside the software.  It does not model an idea in the domain model.
+
+Factories are objects and as such are not methods -- methods are the details of how operations work.
+
+There are both concrete and abstract factories.
+
+. Chapter 26 pages 441-442 -- Pure Fabrication Factory access from the Singleton pattern
+
+You ask the Factory class to give you the instance(an object) of the Factory
+.As_is 		ExampleFactory::getInstance()
+(In C++).
+
+So you might end up with code like this
+.As_is 		Example example = ExampleFactory::getInstance()->create(...);
+
+. Chapter 26 pages 440 -- Factory
+What is the difference between a Simple Factory and a Concrete Factory? Is a factory like a class?
+
+A Factories are objects that know one thing: how to create other objects
+in different classes.  Because a factory is an object it belongs to a class.
+
+There is no difference between a Simple Factory and a Concrete Factory.  They
+are different names for the same pattern.  One indicates that the
+factory is good at constructing simple objects.  The other name is
+give to distinguish this Factory with the more complex 
+Abstract Factory described later which is use to construct complex objects.
+
+
+. Chapter 29 pages 443 -- Temporal Event
+Are web page time outs considered a temporal event?
+
+Yes -- I guess so, but I can't place the reference on page 443.
+
+. Chapter 26 pages 444 -- What is the role of the GoF Singleton Pattern
+This is a way to give access to a unique global resource
+without having a global variable and risking its corruption and abuse.
+
+. Chapter 26 pages 442 -- Singleton
+Can you go over the Singleton pattern?
+
+.See http://c2.com/cgi/wiki?SingletonPattern
+.See http://en.wikipedia.org/wiki/Singleton_pattern
+
+
+. Chapter 26 pages 444 -- Singleton
+Is lazy initialization logic use often on complex projects?
+
+Yes.
+Nearly always.
+
+. Chapter 36 pages 448 -- GOF  Strategy pattern
+I am little confused about the GOF of strategy, can you explain in better detail of what it does?
+
+When you have a problem and a dozen ways of solving it... and you can not choose
+the correct plan/strategy at design time you can use the Strategy pattern to
+delay the choice until the program runs.  Strategy 
+avoids all writing explicit ifs and switches.
+Instead you defines a common interface and concrete objects that understand
+the alternatives.   Then one part of the program can select the right
+plan or strategy, encapsulated as an object, and pass it the the parts
+of the program that use it.
+
+It all works by indirection and polymorphism.
+
+
+. Chapter 26 pages 448 -- context object in the strategy pattern
+what does the book mean when it states " the context object pass a reference to itself onto the strategy object"?
+
+There are times when I wish the GoF had come up with a better name than "context object".  I wish
+they had called it a "client object" -- the object that needs to solve some problem.  To solve
+it, it uses a "strategy" -- any one of a number of different problem solvers.  Now, I tend to
+think in terms of the client sending some data to the strategy about the problem... and the
+strategy returns a solution.  
+
+So we have (in C++) a `foo` in `Client` that has a problem and has got hold of
+a `strategy` object that knows how to solve it:
+.As_is 	Client::foo(...)
+.As_is 	{ ...
+.As_is 		solution = strategy->problem(data);
+.As_is 	}
+(`strategy` is a Strategy* data member of Client....)
+
+In this the client has to assemble the data that the strategies need to solve the problem.
+This couples the design of the strategies and the design of the Client.  By
+"Low Coupling" we get a better design by not passing the data directly. 
+If we draw a drawing we would have Client- -  - ->Strategy.
+Larman and the GoF avoid this by a neat trick. 
+Instead of packaging up `data` we
+tell the client where it might get the data it needs -- from the Client object.
+.As_is 	Context::method(...)
+.As_is 	{ ...
+.As_is 		solution = strategy->problem(this);
+.As_is 	}
+(`this` is the C++ client object).
+The "Context passes a reference to itself to the Strategy").
+
+In other words they suggest passing the Context/Client object to the strategy because it should
+have the data needed to solve the problem.  Elegant and general.  The Client/Context class
+will then need operations to provide the strategy with the data it needs:
+.As_is 		...   context->getSomeData(...)  ...
+Now the we have a smaller dependency: the Client/Context must make SomeData available
+to Strategies.
+
+. Chapter 26 pages 461-463 -- Explain Facade
+Facade is a very simple patterns.  You are working with a large complex set of classes/objects that will be
+used by many classes in you software.  To reduce coupling you design a single class that understands the
+subsystem and provides access to all the different parts.   The Facade hides information about what goes
+on inside the subsystem.
+
+If you draw a picture of the subsystem and its clients you find the Facade in the middle of the diagram connecting
+the clients to the subsystem. 
+
+.See http://best-practice-software-engineering.ifs.tuwien.ac.at/patterns/images/facade.jpg
+
+Metaphor: I just bought a new computer that came with a printer.  It also has a scanner.  It acts as a photocopier.
+And it will accept chips from a camera....   All these functions are controled from 7 buttons (inluding on/off)
+and a color LCD screen.   More.... the computer talks to all the parts by ONE SINGLE USB port.  The port is a facade.
+
+On the web we often find that we use a Portal to access many services.  Another facade.
+
+Here is a Viennese example of the Facade pattern
+.See http://best-practice-software-engineering.ifs.tuwien.ac.at/patterns/facade.html
+in Java.
+
+Here are two sources for examples:
+.See http://en.wikipedia.org/wiki/Facade_Pattern
+(Wikipedia Stub) and
+.See http://images.google.com/images?hl=en&q=Facade+Pattern&gbv=2
+examples from Google.
+
+. Chapter 26 pages 463 -- Facades without Singleton
+Seeing as how facades are normally accessed with a singleton pattern, would
+you be able to have a facade without a singleton?
+
+In some languages and platforms this is possible. In fact, you could
+argue that "cout", "cin", ... are facades hiding the internal complexities
+of the C++ <iostream>.
+
+. Chapter 26 pages 468--470 -- Observer is not only for connecting user interface to domain layer
+Because it has been used and can be used for other purposes.... just be creative.
+
+See Figure 26.27 on page 470.
+
+
+. Can A Singleton access a Facade
+Yes.
+
+As a rule all the GoF patterns can be mixed and matched if needed.
+
+. Chapter 26 pages 463&436 -- Facade vs Adapter
+Since the Facade pattern is considered a front-end object for a single point of entry for a subsystem. What is the difference between the Facade pattern and the Adapter pattern, if there is any?
+
+An Adapter is a front end with a common interface defined for several different types of object with
+similar responsibilities.  Typically it is designed to switch easily between different implementations
+or components.  An example might be a SQLAdapter that hides the difference between MySQL, MS-SQL, and Oracle
+SQL-Plus.  It is typical that an adapter responds to the standardized mapping by recoding it and
+making a single call to a hidden object.  It is also typical that the Adapter uses polymorphism to hide the
+internal selection of the real object.  At different times an adapter can refer calls to
+different classes of object.
+
+A Facade is a invented object (and so class) the allows access to many different classes/objects all of which are
+available at the same time.  It is a fixed point of access to a complex system.
+An SQLFacade for example might provide a common entrance to object/classes that
+create, insert, delete, find, objects in a SQL data base.    It is quite typical to find a single method
+in a Facade that sends messages to several parts of the subsystem to provide the advertised service to a
+client.
+
+In other words an Adapter is responsible for knowing how to access one of a number of similar objects, but a Facade
+understands a whole package of objects/classes.
+
+Can you have both -- I guess so.   Does it matter -- not much.  
+
+Notice that Adapters have a particular UML diagram, but Facades are more general.
+
+. Chapter 26 pages 452-453 -- Composite(GOF) and Other Design Principles
+How to treat a group or composition structure of objects the same way as a non composite object?
+
+Yes... this is what the Composite pattern does.  I know of no better
+solution.  Do it this way and suddenly everything gets simpler...
+
+
+. Chapter 26 pages 463-471 -- Observer pattern
+I'm not understanding how the observer pattern works.  Do you have any code using the observer pattern we can see running?
+
+Here
+.See http://ftp.csci.csusb.edu/public/faculty/dick/test.Luv5.html
+is a silly example I wrote in Java.  The old Java2 UI layer used a
+simple Observer pattern to associate the program's code with the
+user's actions.
+
+Step one: make a class that has the ability to observe (listen)
+to actions:
+.As_is public class Luv5 extends Applet implements ActionListener{ ...
+
+Step 2. The interface ActionListener means you must define a
+`actionPerformed(ActionEvent)`:
+.As_is  public void actionPerformed(ActionEvent event) {// ActionListener interface
+
+Step 3.  Attach the actions to the buttons in the applet.
+.As_is 	private Button makeButtonListen(String s)
+.As_is 	{
+.As_is 		Button b = new Button(s);
+.As_is 		b.addActionListener(this);
+.As_is 		return b;
+.As_is 	}
+
+. Chapter 28 pages 478 -- Diagram differences
+Can you explain how the SSD and interaction diagrams differ from activity diagrams?
+
+First they look quite different.
+
+We do Activity diagrams in CS372.  They are modernized Flowcharts.   They have decision boxes interaction diagrams
+don't.
+Activity diagrams show the design of business procedures
+and software methods and algorithms in detail.  They do an adequate job of this.  Activity diagrams tend to
+express the logic of processes.
+
+An SSD shows the system interaction with the external actors.  It's purpose is to specify the messages
+that flow in and out of the software.      An interaction diagram's purpose is map the pattern of interactions between
+a set of objects.  They do a pretty good job of this.  
+
+You can express most interaction diagrams in terms of activity diagrams but it would be a waste of effort.
+
+In this class activity diagrams are optional.  I'd prefer for you to take CSCI372 or at least visit
+.See ../cs372/r2.html#Activity Diagrams
+to find out about them.
+
+. Do you throw out the documents when the project is finished
+Who said you ever finished?  I've been working on the same code for 20 years.
+
+Do you think they throw out the designs for a Boeing 747?
+
+What you should do as the software finishes "Transition" or is shut down
+is to hold a 
+.Key project post mortem
+meeting
+and extract from the people and documents a set of lessons learned, patterns
+to reuse, mistakes to avoid, etc.  Then create some kind of permanent archive "Just In Case".
+
+. How important are State Diagrams
+Good Question.
+
+Most applications have simple objects with few states.  So you may forget
+about state diagrams.... and then you hit an application
+with a protocol or complex life history and wonder what to do with it.
+
+. Chapter 31 pages 533 -- Monopoly
+I was right! There is a property square missing. They listed it has a superclass and contained the railroad, utility and lot square. But why even have a Regular square... I don't think there is a regular square in monopoly.
+
+I'm no expert....
+
+
+. Chapter 33 pages 651-654 -- Architecture Analysis
+Some of the issues in the book identified and resolved at the architectural level seem like they should have been addressed at an earlier stage(such as 'how do the licensing costs of purchased sub-components affect profitability'). Why now and not sooner? They seem to effect the client as well, not just the architect of the software.
+
+I agree.
+
+I cover it (less formally) in CSCI372.  I'm not covering it this time
+in CS375.
+
+Architecture always effects the client and the developers.
+
+ Chapter 19 pages 0 -- State Machine Models
+In your diagram posted here: http://www.csci.csusb.edu/dick/cs375/17doorProtocol.gif
+
+The very bottom is "divorce".  This this represent a new iteration of the model, or is this retirement of the model?
+
+I think that's a different model to the URL you give.
+The 'divorce' transition is a common change of state in most of
+the western world these days.
+
+A state machine is a model of changes in the reality, not in the documentation.
+
+. Chapter 29 pages 486 : State Machine Diagram
+How are State Machine Diagrams used, can you give some examples?
+
+They are used to explore/document complex timing rules: business rules,
+life histories, techncal protocols, ... and in CSci theory courses.
+
+Yes -- I'll try and give some example
+.See ../samples/uml.states.gif
+.See ./17course.gif
+.See ./17doorProtocol.gif
+.See ./17CoupleStateMachine.gif
+
+. Chapter 29 pages 486 -- State Machine Diagram
+Can you explain what the off hook and on hook means in the diagram on page 486?
+
+This is the current terminology in the phone industry. 
+It refers back to the first phones that had a hook and you had to hang
+the earphone on the hook at the end of a call, and lift it
+off the hook to make a call...  The same source as the phrase
+ Hang up the phone.
+
+. State machine symbols
+I expect you to be able to distinguish a State/Activity symbol from a Class/Object
+symbol.
+
+In a state machine you have: start and stop. States and transitions.
+And some bars to show things happening in parallel.  This last you won't need
+in any quizzes or tests -- they are more the knid of complexity that
+appears in a real project.   So really there are states, start, stop,
+and the transition:
+ [condition] event / action
+
+The more complicated symbols are for Activity diagrams.
+
+Email me if a particular symbol needs explaining.
+
+
+. Chapter number pages ppp-ppp -- State vs. Activity Diagram
+How does a State Diagram differ from and Activity Diagram?
+
+Not much difference visually -- but there are semantic differences.
+
+An activity diagram shows a set of things that must be done and
+when they should be done.
+
+A state diagram shows how something changes and how its behavior changes
+as a result.
+
+. How do Use cases and activity diagrams get used together.
+(1) An activity diagram describing a besiness procedure may have use cases
+as some is activities.  The activity diagram organizes use cases into
+business functions.
+
+(2) When a use case is very very complex you can draw an activity diagram to
+clarify the interactions of the steps in the scenarios.  For example: the
+activities assoicated with starting a quarter at CSUSB may involve a dozen
+use cases plus other things that must be done.
+
+(3) Sometimes when you are designing the relaization of a use case you
+come to some message and you realize that you can't think how to code the
+operation -- then you can use an activity diagram to work out the algorithm.
+For example: When I worked for ICI I wrote a program that scanned a file
+(on tape) of chemical compounds and selected the compounds that matched
+the given experimental results: I had to output them with the best match first.
+In other words I had to sort the data in decreasing order of the "match"
+field (ranging from 0.000 to 0.999).  How to sort it?  I needed an algorithm!
+
+Another example was handling the user input of the elements known to
+be present in the sample.  Example: the user could input "C" for Carbon, "Cr"
+for Cromium" and "Cl" for Chlorine". I couldn't figure out my code without an 
+activity diagram.
+
+. Generalization and extension of use cases
+In this class we don't generalize use cases.  In fact very few people
+use this at all.  Forget it for now!
+
+. Chapter 31 -- Conceptual class partitions and hierarchies
+Recognizing the similarities between objects in different classes
+of real objects is a very powerful, and very old, technique for
+thinking about the real world.  If it was good enough for
+Aristotle 2000 years ago, we can often make use of it today.
+
+. What are software class hierarchies
+These are classes related by inheritance.
+
+In Java all class belong in one hierarchy.  For example
+.See http://java.sun.com/j2se/1.4.2/docs/api/java/io/CharConversionException.html
+is (click and look) at the bottom of a predefined hoerarchy of classes
+going down from Object, to Throwable, ... and so on.
+
+. How can state determined object change their behavior
+We usually introduce a attribute/data memeber/ variable inside the
+object to keep track of the state.  We often call it "state".  We often
+enumerate the states.  For example in C++
+.As_is 	typedef enum{q1,q2,q3} States;
+.As_is 	States state;
+
+Then you have three or four techniques to handle it.
+
+(1) use a switch block.
+.As_is 		switch(state)
+.As_is 		{
+.As_is 		  case q1: ......; state = q2; break;
+.As_is 		  case q2: ......; state = q3; break;
+.As_is 		  case q3: ......; state = q1; break;
+.As_is 		}
+
+(2) Use an array that tabulates the state transitions.
+
+(3) Use the $GoF State pattern.
+
+There is a fourth technique -- Jackson's Inverted Code.  This is not
+a well known trick.... but I've found it very helpful on occasions
+when I want to simulate a concurrent process with its own state.
+
+. Give an example of the fork symbol and expanding activities
+
+In class I used one from Horstmann: getting up in the morning
+with "make Coffeee" expanded into how he makes coffee. 
+.See ../cs201/coffee.gif
+
+. Chapter 28 pages 477-478 : DFD's
+Are UML activity diagrams an effective replacement for DFD's and do they (UML) hold to the same rules (ie. entity to entity, etc)?
+
+In my humble opinion: activity diagrams are an awful replacement for DFDs
+because they: 
+.List
+	Encourage you to show parallel processes as sequential procedures.
+	Force you to analyse external entities as collections of activities.
+.Close.List
+
+Some people think they are OK becuase they don't understand DFDs and
+confuse them with flowcharts!
+
+The nearest thing to a DFD in the UML2.0 are the component diagrams
+found in an appendix!
+
+Here is are some figures I drew to demonstrate various UML attempts
+at modelling a DFD:
+.See ../papers/rjb04bDFDs/
+
+. Chapter 28 pages 482 : Activity Modeling
+Are there any other guidelines besides the three mentioned in section 28.4 that we should keep in mind when activity modeling?
+
+I would add a few:
+.List
+ Avoid subtle ambiguities by having only one arrow into an activity and
+one out: use decision diamonds and merge bars to clarify whether
+one or all is ment.
+ Exception to the above: unless input/output is from/to a datastore!
+ Don't use Activity diagrams as a replacement for DFDs.
+See above.
+.Close.List
+
+. Chapter 30 pages 493-500 : Relating Use Cases
+You had sorta told us that use cases shouldn't be connected with one 
+another.  This section shows how you can have more use cases related to one
+another.  Wouldn't all these use cases be combined as a single use case, 
+and these details specified in other diagrams?  Why specify these details 
+in a use case diagram?
+
+Some people over emphasize these relations -- largely because they
+have `never seen` a properly documented use case.  By forbidding connections
+at the start of the course I forced you to work on the text
+description -- where the value is.
+
+It may help other people to understand a complex set of
+usecases with common "includes" and extensions if they have a diagram.
+And some enterprizes demand that you draw the diagrams.
+
+Always ask: what will the value of (1) drawing this diagram,
+and (2) storing the finished diagram.
+
+.Close Questions on More Patterns

@@ -1,0 +1,25 @@
+.Open Exercises Class 04
+ Define: actor, scenario, use case.
+ What are the four kinds of artifact you may find in a use-case model?
+ Usecases: Diagram or text?
+ Name 3 kinds of actors.
+ Name 3 common use case formats.
+ What is the main success scenario vs the extensions. Which is written first?
+ List 3 guidelines for writing use-cases.
+ Give 3 tests for useful use cases
+ What is a stakeholder?
+
+.Open Use Case Add class
+. Brief Format Add class
+A student logs in, selects and adds classes, and logs out.
+
+. Casual Format Add class
+$TBA
+
+.Open Fully Dressed Use Case Add Class
+$TBA
+.Close Fully Dressed Use Case Add Class
+. One Answer
+.See ./04xans.html
+.Close Use Case Add Class
+.Close

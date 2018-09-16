@@ -1,0 +1,270 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/13.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:51:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+13 Object Design + GRASP
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="13.txt">Text Version</A>]
+ 13.html 
+Mon Dec 10 14:17:54 PST 2012
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="13.html#13 Object Design + GRASP">13 Object Design + GRASP</A>
+<li><a href="13.html#Revision History">: Revision History</A>
+<li><a href="13.html#Project W5 -- Interactions and class diagram">: Project W5 -- Interactions and class diagram</A>
+<li><a href="13.html#Designing Objects with GRASP">: Designing Objects with GRASP</A>
+<li><a href="13.html#Exercises">: Exercises</A>
+<li><a href="13.html#Assigned Project work: GRASP">: Assigned Project work: GRASP</A>
+<li><a href="13.html#I will show how to do logins">: I will show how to do logins</A>
+<li><a href="13.html#Quiz on UML Class Diagrams">: Quiz on UML Class Diagrams</A>
+<li><a href="13.html#Questions and Answers">: Questions and Answers</A>
+<li><a href="13.html#Next -- More Design and some Coding">: Next -- More Design and some Coding</A>
+<li><a href="13.html#Review Questions">Review Questions</A>
+<li><a href="13.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="13 Object Design + GRASP">13 Object Design + GRASP</A></H1><ol class=Section>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Date<th scope="col">#<th scope="col">Topic (Participation 2pt)<th scope="col">Study pages (2 pts)<th scope="col">Quiz(15 pts)<th scope="col">Project Work(10 pts)
+<tr><td>Previous<td>12<td>GRASP<td>271-319<td>-<td>W5(Class Diagrams)
+<tr><td>Today<td>13<td>Object Design<td>320-362<td>Q6(271-362)<td>-
+<tr><td>Next<td>14<td>Design..Code<td>363-394<td>-<td>W6(GRASP)
+</table><br>(Close Table)<br>
+<H2><a name="Revision History">Revision History</A></H2>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Version#<th scope="col">Date<th scope="col">Description<th scope="col">Author
+<tr><td>0<td>2005-01-03<td>Used boiler plate to make template<td>RJB
+<tr><td>1<td>2005-02-14<td>Input chapter headlines<td>RJB
+<tr><td>3<td>2005-02-21<td>Improved instructions and notes<td>RJB
+<tr><td>4<td>2005-02-27<td>Added questions and some answers<td>RJB
+<tr><td>5<td>2006-02-14<td>2006 upgrade<td><td>RJB
+<tr><td>6<td>2012-12-10<td>Added C++ code for logins
+<p>
+</table><br>(Close Table)<br>
+<H2><a name="Project W5 -- Interactions and class diagram">Project W5 -- Interactions and class diagram</A></H2>
+<H2><a name="Designing Objects with GRASP">Designing Objects with GRASP</A></H2><ol class=Section>
+<H3><a name="Introduction -- the No-Magic Zone">Introduction -- the No-Magic Zone</A></H3>
+<li><span class=Formula>* Design becomes more logical and less magic.</span>
+<H3><a name="18.1 Realizing a Use Case">18.1 Realizing a Use Case</A></H3>
+<li><span class=Formula>* Creating a set of objects that share the responsibilities</span>
+implied by what a user needs to do.
+<H3><a name="Figure 18.1 The big picture">Figure 18.1 The big picture</A></H3>
+<H3><a name="18.2 More on the artifacts">18.2 More on the artifacts</A></H3>
+Process= iterate the following
+<br><ol class="List">
+<li><span class=Formula>SSD -&gt;</span>
+<li><span class=Formula>System Operations/events -&gt;</span>
+<li><span class=Formula>Contracts ( + tests ) -&gt;</span>
+<li><span class=Formula>Interactions &amp; Classes -&gt;</span>
+<li><span class=Formula>Code</span>
+</ol><br>
+<p>
+Communications (Larman+MVC)
+<br><ol class="List">
+<li><span class=Formula>UserInterface generates SystemEvents.</span>
+<li><span class=Formula>SystemEvents feed the Controlers</span>
+<li><span class=Formula>Controlers talk to each other and domain layer objects.</span>
+<li><span class=Formula>Controlers return results to the UserInterface.</span>
+<li><span class=Formula>Domain layer objects use lower layers as needed</span>
+<li><span class=Formula>Domain layer objects notify the controlers if anything important happens.</span>
+</ol><br>
+[<A href="patterns.html#MVC"> patterns.html#MVC </A>]
+<p>
+Examples
+Stock taking at a depot (bring the handed out answers
+to the last quiz to class.
+<p>
+<H3><a name="Many Interactions lead to one DCD">Many Interactions lead to one DCD</A></H3>
+We use the
+<A name="Design Class Diagram or DCD" class="Key"> Design Class Diagram or DCD </A>
+to gather the functions/operations discovered in all the interactions
+we study into a single collection of classes.
+<p>
+Interactions show objects.  DCDs show classes.
+<p>
+An interaction that shows [a:A] sending a message f(x) to object [b:B]
+will require the function/operation f(x) to be in class [B].  A message
+from [c:C] to [d:B] will also go into class [B].  The objects
+b and d are different objects in the same class.
+<p>
+All the messages in your interaction diagrams must appear in the targetted
+classes in your DCD.
+<p>
+All the classes in your DCD should be the same as messages some interactions.
+<p>
+Check the spelling, naming, and parameters of each interaction message
+with its matching DCD operation.
+<p>
+<H3><a name="18.3 Next -- Examples">18.3 Next -- Examples</A></H3>
+<H3><a name="18.4 Example: NextGen Point of Sale">18.4 Example: NextGen Point of Sale</A></H3>
+<H3><a name="How to connect UI to Domain?">How to connect UI to Domain?</A></H3>
+<H3><a name="Initialization p347-349">Initialization p347-349</A></H3>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Question<th scope="col">Answer
+<tr><td>When to design it?<td>LAST
+<tr><td>How to design it?<td>Start another use case.
+<tr><td>What objects are created first?<td>THINK
+</table><br>(Close Table)<br>
+<H3><a name="18.5 Example: Monopoly">18.5 Example: Monopoly</A></H3>
+<li><span class=Formula>Command-Query separation</span>
+<H3><a name="18.6 The Design Process">18.6 The Design Process</A></H3><ol class=Section>
+<li><span class=Formula>Iterative</span>
+<li><span class=Formula>Evolutionary</span>
+<li><span class=Formula>Team</span>
+<li><span class=Formula>Starts in inception and continues thru elaboration and construction.</span>
+<li><span class=Formula>+ Validate designs by peer review as you draw them.</span>
+<li><span class=Formula>+ Check designs by coding, compiling, and testing.</span>
+<li><span class=Formula>+ Improve designs and code by refactoring.</span>
+</ol>
+<H3><a name="Table 18.1 Review artifacts and disciplines.">Table 18.1 Review artifacts and disciplines.</A></H3>
+</ol><p>. . . . . . . . . ( end of section <a href="13.html#Designing Objects with GRASP">Designing Objects with GRASP</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H2><a name="Exercises">Exercises</A></H2>
+[<A href="13x.html"> 13x.html </A>]
+<H2><a name="Assigned Project work: GRASP">Assigned Project work: GRASP</A></H2>
+[<A href="w6.html"> w6.html </A>]
+will be due next week.
+<H2><a name="I will show how to do logins">I will show how to do logins</A></H2>
+[<A href="logins.cpp"> logins.cpp </A>]
+<H2><a name="Quiz on UML Class Diagrams">Quiz on UML Class Diagrams</A></H2>
+Like the exercise in the last class
+[<A href="12.html#Exercises"> 12.html#Exercises </A>]
+<H2><a name="Questions and Answers">Questions and Answers</A></H2>
+[<A href="13q.html"> 13q.html </A>]
+<H2><a name="Next -- More Design and some Coding">Next -- More Design and some Coding</A></H2>
+[<A href="14.html"> 14.html </A>]
+</ol><p>. . . . . . . . . ( end of section <a href="13.html#13 Object Design + GRASP">13 Object Design + GRASP</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="Review Questions">Review Questions</A></H1>
+[<A href="13r.html"> 13r.html </A>]
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci and Engineering School, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10 and
+[<A href="02DiceGameSSD.gif"> 02DiceGameSSD.gif </A>]
+(example).
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need it <span class="InlineFormula">now</span>. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">( End of document )</a>  <a href="#Contents">&lt;&lt;Contents </A> | <a href="#Main Content">Top</A></H3>
+</body>

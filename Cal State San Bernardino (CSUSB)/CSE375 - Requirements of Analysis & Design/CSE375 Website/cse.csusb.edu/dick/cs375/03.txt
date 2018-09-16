@@ -1,0 +1,566 @@
+. CSci 375/03 Inception
+.Table Date	#	Topic (Participation 2pt)	Study pages (2 pts)	Quiz(15 pts)	Project Work(10 pts)
+.Row Previous	2	Introduction	vii-40	-	W0
+.Row Today	3	Inception	41-59	$Q1(1-59)	W0 due
+.Row Next	4	Use Cases	61-89	-	$W1 (section 4.3)
+.Close.Table
+. Project Kickoff
+Hand in a brief description of your project: what, who, what,....
+and be ready to tell the class about who the team is.
+. Input: The Inception Phase
+.List
+ Case Studies: 
+.List
+ General
+ NextGen Point Of Sale -- in many chapters.
+ The Monopoly Game System -- in many chapters.
+.Close.List
+ Inception is Not Requirements
+.List
+ ++ The jungle mission analogy
+ ** Key questions for inception: 
+.Set
+ WHY are we doing this project? 
+ WHAT might it involve?
+ Can we make it work and how much effort will it take?
+ Should we proceed or stop?
+ ++ FEASIBILITY!
+ WHAT should we do first?
+.Close.Set
+ Length of inception
+ ** Artifacts that might be required(used in $W1) 
+ Misapredelusions
+ * UML?
+.Close.List
+ ** Requirements Evolve
+.List
+ Definition
+ Evolution vs "waterfall"
+ BDUF::="Big Design Up Front".
+ Skill
+ Types of Requirements: FURPS+
+ ++ My acronym: PQRST: Purposes, Qualities, Realities, Systems, Technologies.
+ ++ Or: Why? How? What? Where? Using?
+ ++ Key point: not just use cases.
+ Organization
+ Examples
+ Resources
+.Close.List
+.Close.List
+.Open Example of a Simple system
+. Name -- Shopping Aid
+. Team -- Me
+. Vision
+A handheld, wireless device that helps shoppers buy the items that they want. A shopper has a list of items that they want. They are sold at different stores. The device keeps an up-to-date list of wanted items as the user shops.
+
+More $TBA.
+.Close Example of a Simple system
+.Open Questions and Answers
+. Chapter 2 Page 27 -- what is risk -- how to identify risks
+The author repeatedly refers to "risk." Exactly what is meant by risk in the software development process? Does this mean high cost? Difficult projects?
+
+Each project has its own risks.  It may be the cost being arger than the 
+budget.  It may be some technical that we don't know.   It could be an area
+of doubt about a particular requirement.  
+It could be the team itself.  
+
+Anything novel
+is automatically risky and needs special attention.  
+
+. analysis of 10% of Use Cases
+what is the best way to discover the most important of use cases without go into depth(within 10%)? 
+Are these cases obviously to find out? 
+
+You need to pick use cases that will tackle risks.   They must be 
+interesting.  Something that has a real
+critical problem (or two) to solve.   It takes a little experience to spot
+them.   Just follow your fear.  
+And look for novelty.
+
+And if is all old stuff with little risk, pick something
+that returns value to the clients and exercises a major part
+of the logic (as far as you can see).
+
+
+
+. Chapter 2 pp 41-59 -- SEI Quality Standards
+Of the mentioned quality standards in the reading(ISO 9126, IEEE Std 830, 
+and IEEE Std 1061, and CMM/CMMI), which one is more popular and which is 
+more accepted?
+
+I don't know.  The most popular standard is probably -- none.  In our
+department we stick with the IEEE standards and cover CMM/CMMI style
+quality improvement models in the graduate software engineering
+class.   ISO is most popular in Europe.
+
+. Business Cases
+What difference between Use Cases and Business Cases? Do we have to 
+distinguish use case and business case? Is business case also have to 
+analysis within 10%?
+
+The Business case is why the enterprise should spend time and money to develop the software. 
+It answers the question "Why" for the organization.   Use cases are about "Why" for particular people
+in the organization.
+
+A business case explains, in business terms, why this project is worth doing.
+It is about the whole project.  It should give reasons like
+"save money", "increase profits", etc..  A business case is
+about many use cases -- and probably doesn;t name any of them.
+
+A use case describes how one user gets something tangible out of the
+system.   Many use cases are needed in a system.... 
+. Chapter 3 pp 048-051 -- Inception
+After inception, would requirement analysis follow this step, or is there
+any other process that can take place in between?
+
+Requirements analysis is not a step or phase in UP, it is a discipline.
+Requirements analysis starts in `inception`.
+It `continues` throughout the
+project.... The ratio of `requirements work` to `designing` or `coding` etc.
+changes as you change phases.
+
+At anytime you may discover a new requirement:
+.Set
+ A new law is passed by congress.
+ A new boss.
+ A stakeholder notices something obvious that you have not heard
+of before.
+ A prototype makes the user think again.
+ Etc.
+.Close.Set
+
+As the project proceeds you expect to do less requirements analysis
+and more design.  Ultimately it is all about coding with very little design
+and analysis.
+
+. Chapter 3 pp 42-42 -- core application logic layer
+Can you please explain the difference between the application logic layer 
+and the other layers?
+
+Consider web registration at CSUSB.  HTML is presentation or 
+Human-Computer-Interface
+code.
+The color of the user's screen is not part of the application logic area,
+but the process for registering is.  The rosters for the classes are part
+of the persistence layer but inserting a student in a roster is part
+of the application layer.
+
+There will be more on this later.
+
+. Chapter 4 Page 48 -- range of cost estimation in inception
+How close to a reliable range of cost for a project should you aim for during inception?
+
+You are limited by the time and information available to make good 
+estimate.  You need what physicists call an "Order of Magnitude"
+estimate of the costs -- is it 10s,100s,1000s, ... of dollars.
+So rather than saying
+"plus or minus 10%" or some such figure, it is more like doing your
+best to check that the enterprise can
+afford to develop the software.  Indeed the number is less important than thinking of a way to
+develop the software that fits the budget.  For example by delaying an expensive but low value feature
+can reduce the initial cost and move the cost to later and perhaps you may even wait for when people
+really want the feature.
+
+. Chapter 4 page 48 -- When to stop a project
+Projects that don't fit the enterprises needs and constraints should be
+stopped.  Check out the term "feasibility" in cs372.
+
+. What stops a project most
+I don't have any data but, I expect (1) time, (2) politics, and (3) costs are the
+commonest project killers.
+
+In any case --- it is more important to look at each project and detect
+where it is weakest rather than having a prejudged rule.
+
+. Chapter 4 Page 50 -- Glossary
+What is an example of the type of thing you might find in the glossary artifact?
+
+A glossary is a set of definitions for terms, words, symbols.  A place to turn when people
+ask "What do you mean by ______".
+
+In my glossaries you find a lot of XBNF definitions:
+definition::= term ":" ":" "=" description.
+SSN::=digit^10.
+
+. Chapter 4 Page 50 -- when to stop inception
+At what point do you say this is good enough and begin to document that iteration before moving on?
+
+In practice you set up a time frame for inception and stop when it runs out.
+
+You document as you go.... use documents to generate ideas and aim to get
+something that runs before inception is done.
+
+The moment you know that the project is worthwhile, and you know where to start.  Notice
+you may have already written and tested some software to prove the concept.
+
+But -- you may have to draw a line and say "Enough preparation -- lets start".
+
+. Chapter 4 - Pages 58 - Topic: Inception
+It is understood that the Inception Phase is a collective gathering of enough information to establish a common vision on the seriousness and feasibility to move forward on a project.  How big role should the financial aspect [funding, expenses, capital, etc] play while conducting the Inception Phase?
+
+Money acts as a constraint on what you can achieve.   You have to figure what you can achieve, given the money
+available.   Check out some of the ideas and techniques in
+.See ./cs372
+"Computers in Organizations".
+
+. Should money be considered an artifact?
+
+That is called forgery!  
+.Key Artifacts
+are things you make.
+Money is a constraint on quality.  
+
+. Quality attributes and architecture
+What is the role of quality attributes when exploring architectural analysis?
+
+Quality attributes tell how good an architecture is.  They can also guide the design process.
+Just spotting the most critical quality attribute can focus you on the right way to tackle a complex
+piece of software, in my experience.
+
+. Chapter 4 pp 47 -- Analysis of 10% of Use Cases
+In the inception phase, you are supposed to come up with an in-depth 
+analysis of the most important 10% of your use cases.  Without going into 
+depth on all of the use cases, what is the best way to discover the most 
+important use cases?  Are they usually fairly obvious?  Is there a modeling
+tool to help you discover them?
+
+I don't think tools help, but experience does.   The tools help
+you analyze the uses cases you choose as most important.
+
+. Chapter 4 pp *  : Length of Inception Phase
+According to the book it is stated that inception should not be more than a
+week for most projects. Isn't there a danger of underestimating the
+feasibility of a project?
+
+The feasibility of the whole project (including the hardware and people) should have
+been examined before you start developing software.  So inception
+just focuses on the cost and problems in developing the software.
+
+Even so there is a risk of starting a project that will later fail.
+But this is true of all software development.
+We minimize this risk in the $UP by focusing on the riskiest parts
+first.  In inception you pay attention to show stopper
+requirements: use cases that are critical to the whole project and
+are likely to expose the difficulties. We also look at quality
+requirements (security? reliability? ...) that will need special
+work.  We attempt to develop a proof of concept architecture that supports
+these critical requirements.
+
+A key output of the inception phase is a plan for the next iteration.
+In later phases we also attack the problems before the sneak up on us.
+
+. Chapter 4 How do you spot the critical requirements
+Experience, examples, and practice.  This class will give you an opportunity
+to gain some experience and practice.  A symptom of a critical requirement is
+that it is valuable but has a number of unknowns that will effect design choices.
+
+. Chapter 4 pp 50 : inception artifacts
+Besides those listed in table 4.1, are there other artifacts that can be 
+used in the inception phase?
+
+Yes!   You can include any artifact (something the team constructs, 
+gathers,...)
+that helps you understand the problems and opportunities better.
+
+. Chapter 4 What are the most important artifacts on pages 50 and 58
+The most important depends on the project: what shines the most light
+on the dark areas of the project.
+
+
+. Chapter 4 pp 48 -- Inception -- Which requirements first
+We do not need to define all the requirements in the inception phase, but 
+which one should I choose as the first and how to choose?
+
+The book goes into more detail later.  But here are some simple thoughts:
+.List
+ The least useful use case is the one that is easy and straightforward
+to do and doesn't teach you anything as a result.
+Example: user logs in.
+ It must be `interesting`.
+Example: User uses a credit card from a remote ATM that needs access to
+another banks records.
+ Attack risks before the attack you.
+So -- go for the scary requirements first.
+Example: We need to use a completely new point of sale terminal
+and it hasn't even been built yet...  we need to test the prototype.
+ Look for "show stopper requirements" that just have to be met or
+else the project is dead.
+Example: we have to show the user that we can get money out of the user!
+ Look for things you don't know or understand.  Example -- new technology.
+Examples: how do web services work?  What is Struts? We are going to be
+using Ruby!
+ Look for a use case that will involve many parts of the software.
+ What is the most problematic requirement?
+.Close.List
+
+. Chapter number pp 41-59 -- Inception
+The book makes passing mention that you can use UML during Inception. But 
+isn't this just elaboration? How can UML be used in the inception with out 
+being an elaboration?
+
+The tools do not determine the phase.  Inception differs from Elaboration
+in terms of attitude.   In inception you know that you may
+kill the project and are trying to prove that it is worth doing.
+In elaboration -- you expect for the project to run to completion
+and have cracked the most difficult problems.
+
+After inception you should have a better idea of how much work is
+going to be needed -- in the next phase.  During the remaining phases you 
+plan one iteration ahead and refine the overall plan.
+
+. Chapter 4.1 pp 48 -- Inception
+So inception is the key to determining if a project should be started or 
+not, if no one is sure if they should start it or not?
+
+Even if you know that project has to be done -- inception is about
+validating that it is worth doing.   A kind of cynical review of
+the previous systems analysis.
+
+. Chapter 2/4 pp 49 -- Inception
+Can you please provide some more analogy example like the one on section 
+4.1 about the oil business?
+
+I usually use the Jungle Mission analogy -- you and your team
+have been parachuted into jungle -- half the team is lost,
+the objective is on your map, but you don't know where you
+are.  What do you do first?
+
+In fact this is not quite right:  Inception should start before
+the team gets dropped in the jungle....  it is about making sure that
+the mission is worth doing.
+
+. Chapter 4 pp 49 -- How long is inception
+In the book it states what should be completed during inception but it 
+doesn't state how much time should actually be spent or what a reasonable 
+amount of time is. How long should be spent during inception?
+
+There is no general rule.  It depends on the unknowns in the
+particular project.  But you should time box it -- ideally the
+team should discuss how long it will take to kick off the
+project and verify the feasibility and cost of 10% riskiest requirements.
+
+. Chapter 4 pp 49 -- Inception
+What is the longest amount of time a it takes for inception?
+
+I would get very worried if it took longer than a month.
+
+. Chapter 4 pp 47-51 -- inception
+Is there anytime we should not use inception?
+
+If you have a working development environment, knowledge of
+where you are, where you are going, you know what tools you will be using, etc.  
+then inception
+boils down to having a meeting to kickoff the process.  All it has to do
+is pick a few use cases to analyse in detail.
+
+I would say that it may be a very short "inception" phase -- 60 minutes --
+but it still exists.
+
+
+. Chapter 4 pp 48-49 -- Feasibility
+Is there an easy way to calculate feasibility during the inception phase of
+a rather large project of which no one has any prior experience doing? I've
+ran into numerous problems where a group thinks they can tackle a project 
+only to find out halfway through that it's just not possible :(
+
+No.  Instead each novel part of the project should be entered into the
+Risk List for the project.... and tackled early in the elaboration phase.
+This means you have time to adjust your plans rather than hitting the 
+problems
+"halfway through".
+
+. Chapter 4 pp 50 -- artifacts
+The list of artifacts to be started in the inception phase shows 9 
+different documents.  This is more than what we are submitting.  Why?  Is 
+there a time when you wont have some of these documents?  How will you 
+know?
+
+In a real project -- As a rule you should only prepare an artifact if it 
+teaches you something.
+
+I don't want to kill you in the first iteration.  In previous
+classes I asked people to choose what artifacts they would do
+in the inception phase... but they all had CS372 projects to
+start from.  Now I've reduced the number.
+
+However I will demand certain artifacts throughout
+the course so that you are forced to practice the particular skills
+involved.
+
+. Chapter 4 pp 047-051 -- CS320
+Is it a good idea to include group creativity activities in the inception 
+stage?  (Take this wrench and use it to make that ball roll over this 
+object...)
+
+Use creativity exercises when stuck.  This can happen in inception
+but more typically (I guess) in later stages.
+
+I would suggest that team building exercises -- like sharing pizza --
+would very helpful in the inception phase.   Indeed, if the team is
+distance challenged then the first risk that must be attacked is trust
+and communication and it pays to start by doing something (as a distributed
+team) that produces some tangible result -- like a really dumb prototype.
+This can also exercise the infrastructure....
+
+. Chapter 4 pp 48 -- inception
+What is the best method used to estimate the range of cost during 
+inception?
+
+Notice that in some situations you are more interested in the effort
+(people><time) than with money.
+
+(1) You can often get a "ball park" minimum and maximum figures for a small
+project  by talking about it with your team.
+
+(2) You may already have a cost-benefit analysis
+.See ../cs372/09.html#Financial%20and%20Cost-Benefit%20Analysis
+with some figures you can use.
+
+(3) Here is an algorithm for a more defensible figure.
+.List
+ Break down into tasks, tools, equipment...
+ Cost each as a range.
+.Case
+ People -> wages * time with min...max.
+.Else
+ Buy & maintain as min..max
+.Else
+ Rent/lease -> monthly min..max
+.Close.Case
+ Add up the mins and maxes to give total min..max
+.Close.List
+
+You can include the expected and most likely values and use the PERT
+formula
+	expected = (min +4*likely+max)/6.
+
+There exist programs that can draw you a nice picture of the chances
+of getting different times...
+
+You could (only to impress a naive stakeholder) run a few simulations
+picking random numbers in the individual pieces min-max range...
+
+
+. 4 pp 48, 51 -- Length of Inception
+This book says that inception should be only one or a few weeks long, in 
+what case might inception be longer, what types or sizes of projects might
+increase the length of the inception phase?
+If the inception takes too long does that mean the project is not possible?
+and how would you solve this...
+
+If it takes more than "a few" weeks to decide whether the project is worth
+doing and what (in outline) what is required.... the project is not ready
+to start the UP development process.
+It needs more analysis.  There are probably some political and
+resource problems to resolve.  To continue is very risky.
+See CSCI372!
+
+It is best to have a fixed deadline and fill the time with as much analysis
+and design than to have specified a set of requirements to be achieved and
+have these take up a lot of time.
+
+. Chapter 2/4 pp 54 -- Evolutionary vs Waterfall
+What are some of the Evolutionary requirements and some of the waterfalls 
+and what are key differences between them?
+
+Evolution vs Waterfall is not a quality of a particular requirement.
+
+It is a property of how you plan to do the work.
+
+. Chapter 5 pp 54-55 -- Waterfall
+How do you decide if your project is starting the waterfall process? The 
+way it is described in the book seems too vague for me.  Some people could
+think that there are too many requirements at first while other people 
+think that the requirements are in a healthy range.
+
+You know it is waterfall when people think they have (or will have)
+a complete unchanging software requirements specification
+before they start designing the software.
+
+OK there is a slippery slope.... and this book suggests that you
+shouldn't expect more than 10% of the requirements to be fixed
+before you start designing, coding, testing, and elaborating
+the software.
+
+. Chapter 5 pp 54 -- Waterfall Requirements
+The author obviously likes the evolutionary method, but is there ever a
+time that the Waterfall method would be useful?
+
+Waterfall is excellent in classrooms:-)
+
+See next question.
+
+. Chapter 5 pp 56 -- Evolutionary requirements
+Throughout the earlier chapter and including this chapter (ch.5) there is
+mention of waterfall approach and a constant reminder not to superimpose
+the waterfall approach to UP. when is waterfall approach useful ? and if
+45% of waterfall specified features are never used,(figure 5.1) is it a
+useful and successful approach?
+
+You need to be absolutely certain of the situation and requirements, and
+be sure that they will not change until after when you complete the 
+project.
+These tend to be small, closed problems like
+`calculate the square root of a number`.
+
+. Chapter 5 pp 57 -- Categories of requirements
+The book mentions that some feel that the requirement categories functional
+and non-functional are too broad.  What do they mean?  How can they be 
+broken down further?
+
+The book uses the FURPS+
+.See ./patterns.html#FURPS+
+and I've used
+.See ./patterns.html#PQRST
+in my projects.  Also
+.See Chapter 5.4 pp 56-57 -- FURPS+
+below
+
+
+. Chapter 5.4 pp 56-57 -- FURPS+
+When should the F.U.R.P.S model be applied to a project?
+
+From the beginning until transition (at least) you need some kind of
+framework  or checklist to make sure you have covered all the requirements.
+This is something that the whole team knows.  It has to be a short
+mnemonic.   Larman uses FURPS+.  I use PQRST.
+
+You use it initially to ask questions: How fast? How frequently?
+How friendly? How secure? What does it do? How much disk space? Which
+platform? ...
+
+In your project I don't require you to use FURPS+.  BUT you
+must not miss any requirements.
+
+. Chapter 6 Page 45 -- Alternatives to use cases
+Are there alternatives to the Use-Case Model?
+
+Yes -- but they are out of favor.   
+
+Note:  you should add business/domain models and a glossary to your use cases.
+
+. Other FAQs
+.See ./03q.html
+. Review Questions
+.See ./03r.html
+.Close
+. Exercises While we have time
+The
+.Key Unified Process.
+List the 4 phases, list 3 disciplines, and draw a diagram showing
+how they are related.
+
+.Key Object-Oriented Analysis and Design.
+List the four steps described in the previous chapter leading from 
+what the user wants to a design for the software.
+
+(Class exercises): 
+.See ./03x.html
+. Assigned Work for next time -- use cases I
+(Preparation):  Use Cases. Start with
+.See ./04.html
+and take it from there.  Submit one review question+answer before the deadline.
+. Quiz 1 The Unified Process
+(Q1): Fill in blanks in a diagram that I handed out....
+
+

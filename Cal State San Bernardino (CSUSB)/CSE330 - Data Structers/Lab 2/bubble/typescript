@@ -1,0 +1,64 @@
+Script started on Thu 26 Jan 2012 09:37:00 AM PST
+]0;jsmall@jb358-1:~/cse330/lab2/bubble[?1034h[jsmall@jb358-1 bubble]$ time ./bubl[Kblesort > output
+1000
+
+real	0m2.311s
+user	0m0.015s
+sys	0m0.001s
+]0;jsmall@jb358-1:~/cse330/lab2/bubble[jsmall@jb358-1 bubble]$ time ./bubblesort > output
+2000
+
+real	0m2.126s
+user	0m0.035s
+sys	0m0.001s
+]0;jsmall@jb358-1:~/cse330/lab2/bubble[jsmall@jb358-1 bubble]$ time ./bubblesort > output
+3000
+
+real	0m2.036s
+user	0m0.073s
+sys	0m0.003s
+]0;jsmall@jb358-1:~/cse330/lab2/bubble[jsmall@jb358-1 bubble]$ time ./bubblesort > output
+4000
+
+real	0m2.454s
+user	0m0.121s
+sys	0m0.005s
+]0;jsmall@jb358-1:~/cse330/lab2/bubble[jsmall@jb358-1 bubble]$ time ./bubblesort > output
+5000
+^[[A
+real	0m3.045s
+user	0m0.187s
+sys	0m0.005s
+]0;jsmall@jb358-1:~/cse330/lab2/bubble[jsmall@jb358-1 bubble]$ time ./bubblesort > output
+6000
+
+real	0m2.427s
+user	0m0.273s
+sys	0m0.003s
+]0;jsmall@jb358-1:~/cse330/lab2/bubble[jsmall@jb358-1 bubble]$ time ./bubblesort > output
+7000
+
+real	0m2.632s
+user	0m0.362s
+sys	0m0.005s
+]0;jsmall@jb358-1:~/cse330/lab2/bubble[jsmall@jb358-1 bubble]$ time ./bubblesort > output
+8000
+
+real	0m2.711s
+user	0m0.476s
+sys	0m0.004s
+]0;jsmall@jb358-1:~/cse330/lab2/bubble[jsmall@jb358-1 bubble]$ time ./bubblesort > output
+\ 9000
+
+real	0m4.528s
+user	0m0.607s
+sys	0m0.006s
+]0;jsmall@jb358-1:~/cse330/lab2/bubble[jsmall@jb358-1 bubble]$ time ./bubblesort > output
+10000
+
+real	0m5.607s
+user	0m0.744s
+sys	0m0.009s
+]0;jsmall@jb358-1:~/cse330/lab2/bubble[jsmall@jb358-1 bubble]$ exit
+
+Script done on Thu 26 Jan 2012 09:38:07 AM PST

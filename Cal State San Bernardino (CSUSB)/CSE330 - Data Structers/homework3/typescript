@@ -1,0 +1,70 @@
+Script started on Tue 28 Feb 2012 10:24:22 PM PST
+]0;jsmall@jb359-0:~/cse330/homework3[?1034h[jsmall@jb359-0 homework3]$ g++ -o homework3 homework3.cpp
+]0;jsmall@jb359-0:~/cse330/homework3[jsmall@jb359-0 homework3]$ ./homework3
+
+
+Course Reports
+
+Class list for CSE330
+Johnson,Mark
+
+Class list for CSE201
+Gomez,Jesse
+Johnson,Mark
+Oliver,Ryan
+
+Class list for CSE202
+Gomez,Jesse
+Oliver,Ryan
+Vaughn,Carl
+
+Class list for CSE460
+Inder,Curtis
+Small,James
+Smith,Amy
+
+Class list for CSE350
+Johnson,Mark
+Jones,Randy
+Smith,Amy
+
+
+
+Student Reports
+
+Class list for Johnson,Mark
+CSE330
+CSE350
+CSE201
+
+Class list for Smith,Amy
+CSE460
+CSE350
+
+Class list for Jones,Randy
+CSE350
+
+Class list for Small,James
+CSE460
+
+Class list for Oliver,Ryan
+CSE201
+CSE202
+
+Class list for Gomez,Jesse
+CSE202
+CSE201
+
+Class list for Inder,Curtis
+CSE460
+
+Class list for Doherty,Ashley
+
+Class list for Nelson,Scott
+
+Class list for Vaughn,Carl
+CSE202
+
+]0;jsmall@jb359-0:~/cse330/homework3[jsmall@jb359-0 homework3]$ exit
+
+Script done on Tue 28 Feb 2012 10:24:39 PM PST

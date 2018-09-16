@@ -1,0 +1,8 @@
+verilog work "pc.v"
+verilog work "mux.v"
+verilog work "mem.v"
+verilog work "incr.v"
+verilog work "buff.v"
+verilog work "i_fetch.v"
+verilog work "pipeline.v"
+verilog work "C:/Xilinx/13.2/ISE_DS/ISE//verilog/src/glbl.v"

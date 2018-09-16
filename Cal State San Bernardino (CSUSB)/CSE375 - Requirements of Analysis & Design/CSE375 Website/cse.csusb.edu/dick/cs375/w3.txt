@@ -1,0 +1,51 @@
+. Assigned Work 3: An initial domain model for your project
+.Table Version#	Date	Description	Author
+.Row 0	2005-01-25	Drafted	RJB
+.Row 2	2005-01-31	Improved	RJB
+.Row 3	2007-01-10	Corrected typos	RJB
+.Row 4	2010-01-26	Added link to supp spec template	RJB
+.Close.Table
+. Given
+Requirements
+.List
+	Vision
+	Business Case
+	Use Cases
+	Supplementary Specifications(if any)
+.See ./supplement.html
+(template)
+	Business Rules(if any)
+	Glossary
+.Close.List
+. Deliverables
+The deliverables form a packet and every element in the packet should
+be there in the listed order.
+.List
+	Domain model with classes, associations, and some attributes.
+.Close.List
+. Process
+.List
+	Review Chapter 9 and previous documentation.
+	Think...
+	Draw rough diagrams by hand.
+	Get others to review them.
+	Improve rough diagrams
+	Prepare a less rough one to hand in
+	Bring to class and present a visual version(5 minutes).
+Submit deliverables.
+.Close.List
+
+. Hint: KISS
+Keep It Simple!
+
+Choose diagraming tools that you like and that
+produce sharable images -- gif or png for example.
+
+. Embrace Change
+By the way.... drawing a domain model often improves your
+understanding of the requirements so you should note
+the change in your use cases etc., but
+I don't need to see them -- yet.
+
+. Example from Winter 2004
+.See ./FIS1.html

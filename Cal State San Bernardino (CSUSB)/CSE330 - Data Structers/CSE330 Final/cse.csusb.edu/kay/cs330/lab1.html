@@ -1,0 +1,81 @@
+<html>
+
+<!-- Mirrored from cse.csusb.edu/kay/cs330/lab1.html by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 27 Mar 2012 14:57:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+<title>CSE 330 Lab 1</title>
+</head>
+<body>
+
+<h1>CSE 330 Lab 1: Infix-to-Postfix Expression Conversion</h1>
+
+<p>
+Implement the following infix-to-postfix algorithm in C++.
+Make sure you understand the algorithm by going through a few examples with pencil and paper,
+only then start implementing it.
+Note the indentation implies the beginning and end of a block of code.
+</p>
+
+<p>
+Determine the time complexity of the algorithm.
+</p>
+
+<p>
+This algorithm can be modified by adding one more stack to evaluate expressions.
+Think about how you would do that.
+</p>
+
+<p>
+Hand in a printout of your program and a typescript of sample runs.
+</p>
+
+<hr>
+
+<pre>
+// An algorithm for infix to postfix expression conversion.
+// For example,   a + b - c     translates to   a b + c -
+//                a + b * c     translates to   a b c * +
+//                (a + 2) / (5 + d)   goes to   a 2 + 5 d + /
+// Valid operands are single digits and characters: 0-9, a-z, A-Z
+// Valid operators are: +, -, *, /, (, )
+// Highest precedence:   * /
+// Lowest precedence:    + -
+// ) never goes on stack.
+// ( has lowest precedence on the stack and highest precedence outside of stack.
+// Bottom of the stack has the lowest precedence than any operator.
+// Use a prec() function to compare the precedence of the operators based on the above rules.
+// Note there is little error checking in the algorithm!
+
+while there is more input
+	if input is an operand
+		print input
+	else
+		if input is '('  // '(' has lowest precedence in the stack, highest outside
+			push input on stack
+		else if input is ')'
+			while stack is not empty and top of stack is not '('
+				print top of stack
+				pop stack
+			if stack is not empty
+				pop stack
+			else error  // no matching '('
+		else if stack is empty or prec(top of stack) < prec(input) // bottom of stack has lower precedence than everything
+			push input on stack
+		else if prec(top of stack) >= prec(input)
+			while stack is not empty and prec(top of stack) >= prec(input)
+				print top of stack
+				pop stack
+			push input on stack
+		else check for errors
+while stack is not empty
+	print top of stack
+	pop stack
+</pre>
+
+<hr>
+
+</body>
+
+<!-- Mirrored from cse.csusb.edu/kay/cs330/lab1.html by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 27 Mar 2012 14:57:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>

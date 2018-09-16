@@ -1,0 +1,5 @@
+set -tmpdir "C:/Documents and Settings/user/Desktop/FourBitAdder/xst/projnav.tmp"
+set -xsthdpdir "C:/Documents and Settings/user/Desktop/FourBitAdder/xst"
+elaborate
+-ifn FPGA_hex_sseg.prj
+-ifmt mixed

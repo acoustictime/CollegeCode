@@ -1,0 +1,589 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/02.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:53:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+CSci 375/02 Introduction to Process and Book
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="02.txt">Text Version</A>]
+ 02.html 
+Wed Jan 18 05:25:05 PST 2012
+<br>
+<h6>Opening the PDF files on this page may require you to download
+<a href="http://www.adobe.com/products/acrobat/readstep2.html">
+Adobe Reader</A> or an equivalent viewer (GhostScript).</h6>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="02.html#CSci 375/02 Introduction to Process and Book">CSci 375/02 Introduction to Process and Book</A>
+<li><a href="02.html#1.2 pp 6 -- OOA/D Skills">1.2 pp 6 -- OOA/D Skills</A>
+<li><a href="02.html#1.2 pp 6 -- Nine fundamental principles">1.2 pp 6 -- Nine fundamental principles</A>
+<li><a href="02.html#1 page 11 Forward and reverse engineering">1 page 11 Forward and reverse engineering</A>
+<li><a href="02.html#Section 1.5 A Short Example pages 8-11 -- The Dice Game">Section 1.5 A Short Example pages 8-11 -- The Dice Game</A>
+<li><a href="02.html#Java code for Section 1.5">Java code for Section 1.5</A>
+<li><a href="02.html#Warning about the example 1.5">Warning about the example 1.5</A>
+<li><a href="02.html#2 page 13 3 perspectives">2 page 13 3 perspectives</A>
+<li><a href="02.html#1 pp 12-13 -- perspective">1 pp 12-13 -- perspective</A>
+<li><a href="02.html#1 pp 13 -- Specification vs implementation perspective">1 pp 13 -- Specification vs implementation perspective</A>
+<li><a href="02.html#2 page 13 expressing the logic of the program">2 page 13 expressing the logic of the program</A>
+<li><a href="02.html#1 pp 3-16 -- OOD: Principles and Patterns">1 pp 3-16 -- OOD: Principles and Patterns</A>
+<li><a href="02.html#Domain Model vs Design Class Diagram">Domain Model vs Design Class Diagram</A>
+<li><a href="02.html#The Cake Image of Agile Development">The Cake Image of Agile Development</A>
+<li><a href="02.html#Example of an iterative project -- the FRiendly EDitor(FRED) project.">Example of an iterative project -- the FRiendly EDitor(FRED) project.</A>
+<li><a href="02.html#A Common Error -- iterations and phases">A Common Error -- iterations and phases</A>
+<li><a href="02.html#Images of RUP">Images of RUP</A>
+<li><a href="02.html#2 page 16 Early testing">2 page 16 Early testing</A>
+<li><a href="02.html#Unified Process phases and disciplines for this class">Unified Process phases and disciplines for this class</A>
+<li><a href="02.html#1 page 17 Domain Models">1 page 17 Domain Models</A>
+<li><a href="02.html#2 page 18 Length of an iteration">2 page 18 Length of an iteration</A>
+<li><a href="02.html#2 page 23 Waterfall process">2 page 23 Waterfall process</A>
+<li><a href="02.html#2 page 23 waterfall polluting agile process">2 page 23 waterfall polluting agile process</A>
+<li><a href="02.html#Alternatives to UML">Alternatives to UML</A>
+<li><a href="02.html#2 page 28 which requirements to do first">2 page 28 which requirements to do first</A>
+<li><a href="02.html#Waterfall">Waterfall</A>
+<li><a href="02.html#2 pp 18 -- unified process vs. rational unified process">2 pp 18 -- unified process vs. rational unified process</A>
+<li><a href="02.html#The Rational Unified Process phases and Disciplines">The Rational Unified Process phases and Disciplines</A>
+<li><a href="02.html#2 Pages 18-19 Model or framework">2 Pages 18-19 Model or framework</A>
+<li><a href="02.html#Review Questions">Review Questions</A>
+<li><a href="02.html#Exercises 02">Exercises 02</A>
+<li><a href="02.html#Next">Next</A>
+<li><a href="02.html#Project Work for Next time">Project Work for Next time</A>
+<li><a href="02.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="CSci 375/02 Introduction to Process and Book">CSci 375/02 Introduction to Process and Book</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Date<th scope="col">#<th scope="col">Topic (Participation 2pt)<th scope="col">Study pages (2 pts)<th scope="col">Quiz(15 pts)<th scope="col">Project Work(10 pts)
+<tr><td>Previous<td>1<td>Surviving CSci375<td>-<td>Mock Q0<td>-
+<tr><td>Today<td>2<td>Introduction<td>vii-40<td>-<td>W0
+<tr><td>Next<td>3<td>Inception<td>41-59<td>Q1(1-59)<td>W0 due
+</table><br>(Close Table)<br>
+<br>(<a name="Input">Input</A>): Introduction to the process and methods of the text.
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Pages<th scope="col">Subject<th scope="col">Notes
+<tr><td>vii<td>Contents at a glance<td>A good starting point.
+<tr><td>ix<td>Contents by topic<td>Return here to review a topic
+<tr><td>xi-xviii<td>Contents<td>Don't Panic(Chapters are small)
+<tr><td>xix-xx<td>Forward<td>by Kruchten
+<tr><td>xxi-xxv<td>Preface<td>Why, What, How, Who, Etc.
+<tr><td>3-16<td>**** Object-Oriented Analysis and Design <a href="#OOAD">OOAD</A><td>Important (<a href="#dice">dice</A>)
+<tr><td>17-40<td>** Process: iterative, Evolutionary, and Agile<td>Important
+</table><br>(Close Table)<br>
+<H1><a name="1.2 pp 6 -- OOA/D Skills">1.2 pp 6 -- OOA/D Skills</A></H1>
+In chapter one it discusses how a critical ability in OO development is to skillfully assign responsibilities to software objects because it influences robustness, maintainability, and re-usability.  This sounds a little subjective to me because one developer may think differently than another when it comes to assigning the object.  How do you know if the responsibility is properly assign to the object?
+<p>
+The main purpose of the book is teach you this skill.  It is not easy. It
+is a bit subjective, at first.  But, it can be learned...  You should
+find that, at the end of the class, that it is quite rational and
+explainable:  we assigned the responsibility for zarking a widget to
+objects in the Widget class because Widgets are the <span class="InlineFormula">Experts</span>.
+<p>
+<H1><a name="1.2 pp 6 -- Nine fundamental principles">1.2 pp 6 -- Nine fundamental principles</A></H1>
+In chapter 1.2 the author points out that there are &quot;nine fundamentals principles in object design and responsibility assignment are presented and applied.&quot; What are those nine fundamentals principles?
+<p>
+They are listed opposite the inside of the front cover of the book... and
+in my notes on the WWW.  Look for &quot;GRASP&quot;.
+<p>
+<p>
+<H1><a name="1 page 11 Forward and reverse engineering">1 page 11 Forward and reverse engineering</A></H1>
+What does the author mean by &quot;forward engineering?&quot;
+<p>
+It proceeds from analysis to design to implementation -- with no feed back.
+<p>
+Opposite of looking at code to figure what is going on in the designer's and analysts'
+minds: reverse engineering.
+<p>
+<p>
+<H1><a name="Section 1.5 A Short Example pages 8-11 -- The Dice Game">Section 1.5 A Short Example pages 8-11 -- The Dice Game</A></H1>
+Notice the steps and diagrams used in this example.  Do not forget them.
+They will be part of your project, future classes, quizzes, and the final.
+<li><a name="Steps">Steps</A>::=following,
+<br><ol class="List">
+<li>Define some use cases
+<li>Define a domain model
+<li>Define some interaction diagrams
+<li>Define a design class diagram -- -- --(<a name="DCD">DCD</A>)<br>
+</ol><br>
+<p>
+An iteration is not complete until we have coded and tested our analysis
+and design.  So I have taken the diagrams on page 10 and coded them in C++.
+Study:
+[<A href="DiceGame.cpp"> DiceGame.cpp </A>]
+and
+[<A href="Die.cpp"> Die.cpp </A>]
+to see the C++ code that I developed.
+<p>
+I also used a pair of unit tests
+[<A href="testDiceGame.cpp"> testDiceGame.cpp </A>]
+and
+[<A href="testDie.cpp"> testDie.cpp </A>]
+in C++.  You should compare the code I produced with the diagrams and text
+in the book.  By the way, in the process of coding and testing this rough
+design I found a couple of methods that the book does not mention but are
+implicit in the use case description on page 8 -- the user needs a way
+to find out the score and also to see if they have won.  It helps to show
+all the data flows using a System Sequence Diagram like this
+<p>
+<img src="02DiceGameSSD.gif" alt="Dice Game Systems Sequence Diagram">
+<p>
+which needs a more complex DiceGame class:
+<p>
+<img src="02DiceGameClasses.gif" alt="Dice Game Classes">
+<p>
+<H1><a name="Java code for Section 1.5">Java code for Section 1.5</A></H1>
+These are a direct translation of the above C++ into Java.
+[<A href="Die.java"> Die.java </A>]
+[<A href="DiceGame.java"> DiceGame.java </A>]
+Notice that a simple unit test is included with each class. It makes
+debugging and developing much easier.
+<p>
+Note:  At some time I want to show how to combine these to &quot;Domain Layer&quot;
+classes  with some &quot;User Interface&quot; code to create a web applet.
+<p>
+<H1><a name="Warning about the example 1.5">Warning about the example 1.5</A></H1>
+In practice we do not &quot;define ALL the use cases&quot; before we start
+the defining the domain model.  Instead we should focus on only
+a few use case, a partial domain model, some of the interactions, and so
+add to the design and code.  We eat the elephant, one bite at a time.
+<p>
+<H1><a name="2 page 13 3 perspectives">2 page 13 3 perspectives</A></H1>
+Can you clarify the differences in the meaning of Class in the three perspectives listed in this chapter.
+<p>
+<br><ol class="List">
+<A name="Conceptual" class="Key"> Conceptual </A>
+-- describes objects that are outside the computer + ideas in the stakeholders heads.
+Concepts not code.
+<A name="Specification" class="Key"> Specification </A>
+-- Describes the kinds of objects we expect to need to make the software work and the
+relationships between them.
+<A name="Implementation" class="Key"> Implementation </A>
+-- Blueprint for code.  Or a reverse engineered diagram of the actual code.
+</ol><br>
+<H1><a name="1 pp 12-13 -- perspective">1 pp 12-13 -- perspective</A></H1>
+There are 3 perspectives; Conceptual, Specification, Implementation. Do you need to use all of them or can you just use one of them when doing a project?
+<p>
+Expect and plan to use all 3.  You'll be using conceptual models most
+at the start (with a few specs and implementations).... and by the transition
+phase it'll be all Implementation.
+<p>
+The good news is that many of the things you draw in a conceptual model
+can be copied into Specifications and Implementations.
+<H1><a name="1 pp 13 -- Specification vs implementation perspective">1 pp 13 -- Specification vs implementation perspective</A></H1>
+<li>There is one example in the book for both Specification and Implementation Perspective. What is the obvious difference between the two that would make specification perspective seldom used and most software-oriented UML diagramming assume an implementation perspective?
+<p>
+Programmers really hate thinking about the real world and
+hate writing (and reading) specifications.  They seem to love
+the code, the whole code, and nothing but the code??
+<p>
+<H1><a name="2 page 13 expressing the logic of the program">2 page 13 expressing the logic of the program</A></H1>
+In the software implementation for the dice example, how is the logic of the program depicted within the UML programming language? Or, it is just an abstraction of the software components?
+<p>
+In this book and course interaction diagrams will be used to express the
+logic.  UML2 sequence diagrams have enough features to express most any
+logic you could want: iteration, selection, sequence, functions, arithmetic,
+etc....
+<p>
+When one needs to express a complex algorithm in the UML we use
+Activity diagrams.   But these will not be required in this course.
+<p>
+<H1><a name="1 pp 3-16 -- OOD: Principles and Patterns">1 pp 3-16 -- OOD: Principles and Patterns</A></H1>
+Please explain the concept of patterns in more detail.
+<p>
+A pattern is a way to solve a class of problems.  It resolves the conflicting
+forces well enough for it to be useful.  It should also work well
+with other patterns to form a &quot;Pattern Language&quot;.
+<p>
+The history starts with a set of patterns for architecture: rooms,
+buildings, towns, ... by Christophe Alexander (circa 1979).  One of
+his patterns:
+<hr><ol class="Box">
+When adults enter a room they often need to put something down or pick it
+up.
+<p>
+Children like to hid under things...
+<p>
+Therefore,
+<li><span class=Formula>Put a shelf around a room just above the height of a child and just below the hand of an adult.</span>
+</ol><hr>
+For more checkout my website.
+[<A href="patterns.html"> patterns.html </A>]
+<p>
+<p>
+<H1><a name="Domain Model vs Design Class Diagram">Domain Model vs Design Class Diagram</A></H1>
+<li>A common error that looses points in this class is to confuse the model of
+the world arround the software(Domain) with the model of the software itself (Design)
+<li>+++ The classes in a Domain model are sets of similar real objects
+<li>+++ The system is not not yet real and so is NOT in the domain model.
+(Don't panic -- it appears soon enough, some where else).
+<li>+++ Domain classes don't have operations/functions.  Real objects don't
+work like objects in software.
+<li>++ Most design classes are inspired by doamin classes.
+<li>++ Design class diagrams may have extra classes in them that are needed
+for technical reasons.  They aree not real objects, so they are not put in a
+domain model.
+<li>+++ A design class Diagram is derived from a set of interactions.
+<p>
+<H1><a name="The Cake Image of Agile Development">The Cake Image of Agile Development</A></H1>
+Perhaps some images may help.  If I offered you a cake to eat...
+<p>
+<img src="cake2.png" alt="[3layered cake = requirements+design+code with tests on top]">
+<p>
+Would you plan to eat it one layer at a time: (1) all the Requirements,
+(2)all the Design, (3) Code it all and then (4) do
+the tests:
+[<A href="cake2fragile.png"> cake2fragile.png </A>]
+or in slices:
+[<A href="cake2agile.png"> cake2agile.png </A>]
+with a little bit of each layer and a test on top?
+<p>
+In this class I will covering a particularly flexible process for taking one slice at a time.
+<p>
+<H1><a name="Example of an iterative project -- the FRiendly EDitor(FRED) project.">Example of an iterative project -- the FRiendly EDitor(FRED) project.</A></H1>
+I implemented a Friendly Editor for my students in 10 weeks in the fall
+of 1982, while bootstrapping the CSci dept, using a language I was
+not familiar (BASIC) with, on a completely strange operating
+system (RSTS).
+<p>
+This was only possible
+because I started with a nearly empty program and grew it
+one feature at a time.
+<H1><a name="A Common Error -- iterations and phases">A Common Error -- iterations and phases</A></H1>
+Always remember that a phase can have several iterations in it. An iteration does not contain
+any phases!
+<p>
+Each iteration has a mix of disciplines (requirements, domain, design, code) and
+so a phase will have several repetitions of a little life cycle.  However the mix of
+disciplines tends to be different in each phase.
+<H1><a name="Images of RUP">Images of RUP</A></H1>
+The PDFs of the text omit this image.
+[<A href="http://commons.wikimedia.org/wiki/File:RUP_disciplines_greyscale_20060121.svg"> File:RUP_disciplines_greyscale_20060121.svg </A>]
+[<A href="../../../en.wikipedia.org/wiki/File_RUP_Workflows2.html"> File:RUP_Workflows2.gif </A>]
+<p>
+Also search Google for &quot;RUP Image&quot; for lots of similar processes.
+<p>
+<H1><a name="2 page 16 Early testing">2 page 16 Early testing</A></H1>
+&quot;Activities such as load testing will prove if the partial design and implementation are on the right path.&quot;  This seems to occur at a relatively early phase in the design process.  Is an early prototype of the program created for users to test the program this early, or is this merely  an invitation for users and stakeholders to witness the iterative development on paper (namely observation of the UML diagrams and Pseudocode)?
+<p>
+It should be a real, high quality, incomplete implementation that tests out the feasibility
+of the approach.
+<p>
+Sadly in this class we won't get to this.
+<p>
+<p>
+<H1><a name="Unified Process phases and disciplines for this class">Unified Process phases and disciplines for this class</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Discipline<th scope="col">Inception<th scope="col">Elaboration<th scope="col">Construction<th scope="col">Transition
+<tr><td>Business Modeling<td>**<td>**<td>-<td>-
+<tr><td>Requirements<td>*<td>**<td>*<td>*
+<tr><td>Design<td>*<td>*<td>**<td>*
+</table><br>(Close Table)<br>
+The disciplines are like tools that are used in many phases.
+However in the early phases we normally
+do more business modeling and requirements
+than Design and Implementation.  In later phases this is
+reversed.
+<H1><a name="1 page 17 Domain Models">1 page 17 Domain Models</A></H1>
+What is a domain model and how does it relate to the UML process?
+<p>
+UML is not a process.  It is a family of 13 types of diagram.
+The process we will be learning is the Unified Process or UP.
+UML is the &quot;Unified Modeling Language&quot;. We use it to prepare
+artifacts (documents).  The UP will guide what diagram we will be drawing
+at any particular time.
+<p>
+A Domain Model is also known as a Business Model. Creating and changing one
+is part of the Unified Process. It describes the
+real world that your software will interact with.  A full business model
+will include many kinds of diagrams and text documents describing how
+the business works, the data that it uses, the hardware and software
+platforms to be used.  It should also have a conceptual class diagram
+that summarizes the kinds of things and relationships between them that
+are important to the stakeholders.
+<p>
+In this course we will often refer to the conceptual model (classes of
+real objects and their relationships) as &quot;The Domain Model&quot;.  It will
+be an important source for the classes that we put into our designs.
+<p>
+In other words, real world ideas (domain model) will inspire the structure
+(Design class diagrams) of our software.  As a result, the software should
+(1) fit the world better, (2) be easier to understand, and (3) be easier
+to change when the world makes a small change.
+<p>
+The way these artifacts(documents) fit together is shown inside the front
+cover of the hardback edition of our text book.
+<H1><a name="2 page 18 Length of an iteration">2 page 18 Length of an iteration</A></H1>
+How would you estimate what the proper time would be for the iteration period?
+<p>
+Each project and <span class="InlineFormula">each iteration</span> may have a different deadline.
+There are no simple and accurate rules.   I like short deadlines -- in senior projects
+I ask students to show me what they have got every week -- verbal report. What works?
+What can you do next week.  This is the best length for college work.   Similar to
+the XP weekly cycle.   Most methodologists think 1 week is too short.
+<p>
+The time for an iteration should be enough to analyze, design, implement, and test
+something.
+<p>
+Key point: fix length and <span class="InlineFormula">then</span> choose what to do in it.
+<p>
+The simplest rule I know is to use past performance to predict the future.
+Suppose you already have implemented a dozen similar
+features and they have each taken an average of one 40 hour week...  then
+adding another similar feature should take another 40 hour week.  So with a two week
+iteration -- add two such features.
+<p>
+<H1><a name="2 page 23 Waterfall process">2 page 23 Waterfall process</A></H1>
+I understand the idea of the waterfall cycle (process) but i don't
+understand how that name describes or even relates to my understanding of
+the waterfall cycle.  Is it because you don't see it coming when you start?
+<p>
+Interesting question.  It comes from a paper by
+<A name="Winston Royce" class="Key"> Winston Royce </A>
+&quot;Managing the development of large software systems&quot;
+(Proc IEEE WESCON (1970) pp328-339)
+which had a picture with data flowing down from analysis to Design etc.
+like water down a series of steps...
+[<A href="http://www.holub.com/goodies/royce.waterfall.pdf"> royce.waterfall.pdf </A>]
+(PDF).  Oddly the paper is arguing that the
+<A name="waterfall process can not work." class="Key"> waterfall process can not work. </A>
+Instead Royce proposed the ideas of iteration, prototyping,
+and starting with code.  People ignored this part of his message.
+<p>
+<p>
+<p>
+<H1><a name="2 page 23 waterfall polluting agile process">2 page 23 waterfall polluting agile process</A></H1>
+Why is it that iterative projects with a &quot;waterfall&quot; influence are likely doomed to failure as if they were strictly waterfall projects?
+<p>
+They loose the feedback from implementing and testing.  A recent government project
+had to tams working in parallel. At the the end of 18 months the agile team had
+80% of the project running, the waterfall team had not finished the specification.
+<p>
+<H1><a name="Alternatives to UML">Alternatives to UML</A></H1>
+Are their any other systems besides UML that can model software development? If so what are their names?
+<p>
+Yes -- but they have died.... HOOD, OPEN, ...  see
+[<A href="http://cse.csusb.edu/dick/samples/methods.html"> ../samples/methods.html </A>]
+<H1><a name="2 page 28 which requirements to do first">2 page 28 which requirements to do first</A></H1>
+How is it determined....which requirements are going to be done at a particular iteration?
+<p>
+Look at the risks involved -- tackle the riskiest thing first.
+<p>
+<H1><a name="Waterfall">Waterfall</A></H1>
+Do you know of any software development company that actually was successful using the waterfall method?
+<p>
+None come to mind.... but dozens of simple projects are done in one iteration = waterfall.
+However, Alistair Cockburn, who has done a lot of consulting on large scale projects,
+has observed successful projects using <span class="InlineFormula">any</span> process!  He also seen <span class="InlineFormula">all</span> processes fail.
+He writes
+<hr><ol class="Box">
+<li>The people on the projects were not interested in learning our system.
+<li>They were successfully able to ignore us, and were still delivering software, anyway.
+<li>Almost any methodology can be made to work on some project.
+<li>Any methodology can manage to fail on some project.
+<li>Heavy processes can be successful.
+<li>Light processes are more often successful, and more importantly, the people on those projects credit the success to the
+lightness of the methodology.
+</ol><hr>
+[<A href="http://csci.csusb.edu/dick/biba.php?from=02&amp;search=Cockburn00"><cite>Cockburn00</cite></A>]
+<p>
+<p>
+<H1><a name="2 pp 18 -- unified process vs. rational unified process">2 pp 18 -- unified process vs. rational unified process</A></H1>
+I'm having trouble understanding the difference between unified process and rational unified process can you explain the differences
+<p>
+They have the same philosophy, phases, and come from similar experiences.
+<p>
+The differences are:
+<br><ol class="List">
+<li>RUP is more complex and complete -- more disciplines are involved.
+<li>You buy RUP from IBM.
+<li>I don't think Craig Larman is licensed to teach RUP.
+</ol><br>
+<p>
+<p>
+<H1><a name="The Rational Unified Process phases and Disciplines">The Rational Unified Process phases and Disciplines</A></H1>
+<p>
+There are more disciplines involved in the <a href="#RUP">RUP</A>:
+[<A href="http://commons.wikimedia.org/wiki/File:RUP_disciplines_greyscale_20060121.svg"> File:RUP_disciplines_greyscale_20060121.svg </A>]
+[<A href="../../../en.wikipedia.org/wiki/File_RUP_Workflows2.html"> File:RUP_Workflows2.gif </A>]
+and
+[<A href="../../../www.ajboggs.com/images/rup_discipline.jpg"> rup_discipline.jpg </A>]
+(if this is Bad link - try Google Images and search for RUP)
+<p>
+You can compare the UP  and RUP with Barry Boehm's
+iterative
+<A name="Spiral process" class="Key"> Spiral process </A>
+[<A href="../../../www.cse.lehigh.edu/_glennb/oose/spiral.gif"> spiral.gif </A>]
+which, may still abandon work on requirements too early...
+<p>
+<H1><a name="2 Pages 18-19 Model or framework">2 Pages 18-19 Model or framework</A></H1>
+UP is described a method as well as XP and SCRUM. Can UP be considered then a model or a framework? Can these adjectives be used interchangeably to describe those interactive processes?
+<p>
+The author does not clarify the terms. It is a bit confusing!
+Model, Method, Framework, Process?
+<p>
+<li><a name="Model">Model</A>::=<span class="InlineFormula">description of something of interest in a project</span>.
+Example: A description of the things a user wants to do with the project, a
+class diagram of classes in code, etc.
+<li><a name="Method">Method</A>::=<span class="InlineFormula">steps to take to achieve a goal</span>.
+Example: SP, OOAD, ...
+<li><a name="Framework">Framework</A>::=<span class="InlineFormula">loose structure with customizable bits</span> -- can be a method, Model or
+a process. Describes a family of possibilities.
+<li><a name="Process">Process</A>::=<span class="InlineFormula">how a team works together and schedules its time to complete a project</span>.
+Examples: XP, SCRUM, ...
+<p>
+<p>
+<p>
+<br>(<a name="Questions">Questions</A>): See
+[<A href="02q.html"> 02q.html </A>]
+<p>
+<p>
+<H1><a name="Review Questions">Review Questions</A></H1>
+[<A href="02r.html"> 02r.html </A>]
+<H1><a name="Exercises 02">Exercises 02</A></H1>
+[<A href="02x.html"> 02x.html </A>]
+<p>
+<H1><a name="Next">Next</A></H1>
+See table at head of page.... Prepare by looking at
+[<A href="03.html"> 03.html </A>]
+and then studying pages 41-59 on the
+inception phase combined with the projects completed in CSci372.
+<H1><a name="Project Work for Next time">Project Work for Next time</A></H1>
+At the start of the next class hand in a first draft of:
+<br><ol class="List">
+<li>Name of the project
+<li>List of team members
+<li>One paragraph vision
+<li>One Paragraph business case
+<li>Some users and what they will want to get out of the system
+</ol><br>
+You will get feedback and be able to complete and resubmit
+the following week.
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci and Engineering School, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10 and
+[<A href="02DiceGameSSD.gif"> 02DiceGameSSD.gif </A>]
+(example).
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

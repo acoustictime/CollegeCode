@@ -1,0 +1,10 @@
+SQL> select *
+  2  from Dept04_Vu;
+
+EMPNO     EMPLOYEE                             DEPTNO                           
+--------- -------------------------------- ----------                           
+999887777 Zelaya, Alicia                            4                           
+987654321 Wallace, Jennifer                         4                           
+987987987 Jabbar, Ahmad                             4                           
+
+SQL> spool off

@@ -1,0 +1,171 @@
+. CSci 375/18 Domain Model III
+.Table Date	#	Topic (Participation 2pt)	Study pages (2 pts)	Quiz(15 pts)	Project Work(10 pts)
+.Row Previous	17	GoF	435-476	Q8(1-476)
+.Row Today	18	Domain Model III	501-539	-	W8(Model 3: model 2 improved)
+.Row Next	19
+.Item Revu Interactions and DCDs
+.Item 221-270
+.Item -
+.See ./19.html
+.Item Q9(1-535)
+.Close.Table
+. Revision History
+.Table Version#	Date	Description	Author
+.Row 0	2005-01-03	Used boiler plate to make template	RJB
+.Row 1	2006-01-20	Updated reading page numbers	RJB
+.Row 2	2006-03-08	Added some notes	RJB
+.Row 3	2007-01-10	Added link to project 	RJB
+.Close.Table
+. Projects: Start iteration 3 at end of class
+.See ./w8.html
+. Chapter 31 Refining the Domain Model
+A long chapter with lots of notation which you need to master.
+   31.1 New concepts for NextGen
+   *** 31.2 example of Generalization in a domain Model($important)
+   *** 31.2 Super and sub classes($important).  Aristotle was here!
+.Box
+   The is-a rule
+   The 100% Rule
+.Close.Box
+   * 31.4 When is it worth adding a subclass
+   * 31.5 When is it worth adding a superclass
+   31.6 NextGen Example
+   ++ These hierarchies define what are called
+.Key ontologies
+that define a way of thought and the semantics of the client's language!
+   ++ A domain can have 
+.Key multiple hierarchies  
+, for example, in a Hospital
+a Person is either Male or Female.  But some people are Patients, as well.
+And -- also -- You find special People who are Doctors and Nurses... And
+so Person is simultaneously in these different hierarchies:  a Male Nurse,
+a Female Doctor, a Female Patient who is also a Nurse, and a Male Patient
+that is neither a Docotr or a Nurse....  It really helps to draw a picture
+of these possibilities and UML2.0 provides a way to label generalisations
+to get this effect.
+
+.Image MultipleHierarchies.png [See description above ]
+
+   * 31.7 Abstract classes: must have concrete subclasses, ultimately.
+   ++ By the way, the {complete} constraint has the same effect on a single
+generalization when there are many hierarchies.  See above.
+   * An interface is a special kind of abstract class that has no attributes and
+no concrete functions/operations.
+
+   * 31.8 But what if objects need to change class????
+.Box
+   State machines are good for modeling domain dynamics.
+   UML has a diagram that pictures State Machines.
+   State machines are often useful for sorting out technical problems
+(like when to write cached data back to a database -- page 639)
+   Use State machines to clarify ideas and record requirements.
+   Separate the changes into a State or Status object
+(Pure fabrication + Indirection).
+The state is actually an attribute of the apparently changing object.
+   The UML does allow objects to change subclasses,
+if you write {dynamic} on a generalization,
+but few people use it.
+   Most programming languages don't allow objects to change their class.
+   Four classic solutions to coding changing behavior.
+.Case
+   Use the $GoF State pattern
+.See ./patterns.html#State
+to code it. Here the state points at objects in different classes.
+   Example
+.See ./StatePatternExample.html
+and code:
+.See ./State.cpp
+.See ./test.State.cpp
+(uses a simple Hollywood "don't call us, we will call you" pattern)
+OR
+.See ./State2.cpp
+.See ./test.State2.cpp
+(A less pure GoF implementation)
+ (Example in the text is on page 642)
+.Else
+   Add a state attribute that is an int or enumeration and write a
+switch statement `in each method` that encodes changeable behavior.
+This was the pre-object-oriented way to handle state changes.
+ See page 640 for classic code example.
+ Here is the running example using this technique:
+.See ./State.not.cpp
+.See ./test.State.not.cpp
+  In Java 5 `enum` allows you to attach specific behaviors to the
+different possible values.  This can replace the switch in State.not.cpp.
+.Else
+   Again -- add a state attribute to the object and tabulate the transitions
+associated with each operation as data in a file or data base.
+   Makes it easy to change behavior patterns without reprogramming.
+ Example in progress:
+.See ./State.table.cpp
+.See ./test.State.table.cpp
+$TBA
+.Else
+   Use Jackson semi-co-routines and Duff's device to simulate a concurrent process
+(covered in CS320
+.See ./cs320/lab/09.html
+)
+ Example:
+$TBA
+.Close.Case
+The first three solutions are well known techniques.
+.List
+ When there is a single operation that changes behavior with the state,
+then use the traditional switch-case... coding.
+ When there is more than one operation that changes its behavior
+with the state,
+use the GoF State pattern code. (Polymorphism).
+ Use data driven code to handle shifting requirements (Protected Variation)
+.Close
+.Close.Box
+   * 31.9 Inheritance in Programs vs Conceptual hierarchies
+   31.10 Association Classes: controlling the connections.
+   ++ I prefer to `reify` complicated associations into a new class
+with it's own attributes and methods.  This is part of normalization for
+the data.  It is useful when your programming language doesn't
+have association classes.  Also    this gives you a place to store the
+attributes of the relationship.  Like when it started and stopped, as
+an example.
+   31.11 Aggregation and Composition: at last... but why so late?
+   ++ Composition implies Aggregation. Aggregation implies Association.
+   ++++ When in doubt: DON'T use either.  
+   + Exception: In a domain model use composition for real wholes and parts.
+   + In designs put an arrow on an association to show pointers
+.As_is 		class Wodget{ Widget * w1, *w2 ; ... };
+   + In designs (only) use composition to show
+storing an object inside an object:
+.As_is 		class Wodget{ Widget w1, w2 ; ... };
+   + In a design composition, officially, means that the parts are destroyed when the
+whole is destroyed.  You can therefore use a diamond to indicate the creator
+and destructor classes.
+
+   31.12 Fixing an error NextGen Iteration 1?
+   *** 31.13 Role Names ($important)
+   * 31.14 Roles...
+   **  31.15 Derived elements($important)
+   31.16 Qualified Associations
+   * 31.17 Reflexive associations (DON'T PANIC. $important but simple)
+   * 31.18 Packages Organize your classes
+   31.19 Example: Monopoly
+
+(important): like, I might set an exam question or use in an example...
+. Questions and Answers
+.See ./18q.html
+.Open Exercises
+.See ./18x.html
+.Close Exercises
+
+. Next Review UP and UML
+.Table -	-	Subject	Prepare	Guide	Quiz
+.Row Next	19
+.Item Revu Interactions and DCDs
+.Item 221-270
+.Item -
+.See ./19.html
+.Item Q9(1-535)
+.Close.Table
+. Next iteration of Project -- Model 3
+.See ./w8.html
+due at start of the next class.
+. Review Questions
+.See ./18r.html

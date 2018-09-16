@@ -1,0 +1,7 @@
+load data
+append
+into table NOK_Relationship
+fields terminated by "/"
+(student_number,first_name,last_name,gender,date_of_birth,current_status,additional_comments,residence_type,nok_name,minor,major,special_needs,city,state,zip,nationality,class,phone_number,email_address,advisor_number)
+
+

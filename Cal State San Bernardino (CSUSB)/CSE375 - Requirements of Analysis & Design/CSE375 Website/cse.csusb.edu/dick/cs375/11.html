@@ -1,0 +1,375 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/11.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:54:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+CSci 375/11 Class Diagrams
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="11.txt">Text Version</A>]
+ 11.html 
+Mon Feb  4 11:37:26 PST 2013
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="11.html#CSci 375/11 Class Diagrams">CSci 375/11 Class Diagrams</A>
+<li><a href="11.html#Revision History">Revision History</A>
+<li><a href="11.html#Project W4 -- SSD and Packages due">Project W4 -- SSD and Packages due</A>
+<li><a href="11.html#How do all these diagrams and documents work together?">How do all these diagrams and documents work together?</A>
+<li><a href="11.html#16 Class Diagrams">16 Class Diagrams</A>
+<li><a href="11.html#PowerPoint Presentation">: PowerPoint Presentation</A>
+<li><a href="11.html#Introduction">: Introduction</A>
+<li><a href="11.html#16.1 - 16.6 Important notations and definitions for class Diagrams">: 16.1 - 16.6 Important notations and definitions for class Diagrams</A>
+<li><a href="11.html#16.7 - 16.9 Notations used later">: 16.7 - 16.9 Notations used later</A>
+<li><a href="11.html#16.10 Generalization, Dependency, and Abstraction">: 16.10 Generalization, Dependency, and Abstraction</A>
+<li><a href="11.html#16.13-16.16 Associations etc">: 16.13-16.16 Associations etc</A>
+<li><a href="11.html#16.17 - 16.20 Advanced stuff: singletons, templates, ...">: 16.17 - 16.20 Advanced stuff: singletons, templates, ...</A>
+<li><a href="11.html#16.21 Relating interaction and class diagrams">: 16.21 Relating interaction and class diagrams</A>
+<li><a href="11.html#My notes on Class Diagram Notation">My notes on Class Diagram Notation</A>
+<li><a href="11.html#Be careful to use arrows correctly in the UML">Be careful to use arrows correctly in the UML</A>
+<li><a href="11.html#Demo if time">Demo if time</A>
+<li><a href="11.html#Exercises">Exercises</A>
+<li><a href="11.html#Project Step 5 Interactions and Classes -- Next Week">Project Step 5 Interactions and Classes -- Next Week</A>
+<li><a href="11.html#Quiz on Interaction Diagrams and Classes">Quiz on Interaction Diagrams and Classes</A>
+<li><a href="11.html#Foot Notes">Foot Notes</A>
+<li><a href="11.html#Questions and Answers">Questions and Answers</A>
+<li><a href="11.html#Next: How to make a good design">Next: How to make a good design</A>
+<li><a href="11.html#Review Questions">Review Questions</A>
+<li><a href="11.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="CSci 375/11 Class Diagrams">CSci 375/11 Class Diagrams</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Date<th scope="col">#<th scope="col">Topic (Participation 2pt)<th scope="col">Study pages (2 pts)<th scope="col">Quiz(15 pts)<th scope="col">Project Work(10 pts)
+<tr><td>Previous<td>10<td>Interactions<td>221-247<td>-<td>W4(Transition to Design)
+<tr><td>Today<td>11<td>Class Diagrams<td>248-270<td>Q5(221-270)<td>-
+<tr><td>Next<td>12<td><a href="#GRASP">GRASP</A><td>271-319<td>-<td>W5(Interaction &amp; Class Diagrams)
+</table><br>(Close Table)<br>
+<H1><a name="Revision History">Revision History</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Version#<th scope="col">Date<th scope="col">Description<th scope="col">Author
+<tr><td>0<td>2005-01-03<td>Used boiler plate to make template<td>RJB
+<tr><td>1<td>2005-02-07<td>Added section Headings<td>RJB
+<tr><td>2<td>2005-02-16<td>Adding questions<td>RJB
+<tr><td>3<td>2006-02-13<td>Updated<td>RJB
+<tr><td>4<td>2011-01-26<td>Added SlideFinder PPT<td>RJB
+</table><br>(Close Table)<br>
+<H1><a name="Project W4 -- SSD and Packages due">Project W4 -- SSD and Packages due</A></H1>
+[<A href="w4.html"> w4.html </A>]
+<H1><a name="How do all these diagrams and documents work together?">How do all these diagrams and documents work together?</A></H1>
+First look inside the front cover of the book:
+[<A href="artifactrelationships.gif"> artifactrelationships.gif </A>]
+<H1><a name="16 Class Diagrams">16 Class Diagrams</A></H1><ol class=Section>
+<H2><a name="PowerPoint Presentation">PowerPoint Presentation</A></H2>
+[<A href="http://www.slidefinder.net/l/larmanchap16/25779248"> 25779248 </A>]
+<H2><a name="Introduction">Introduction</A></H2>
+<li>*** Class diagrams are used for many purposes: domain models, object oriented designs, models of code, defining component interfaces, ...
+<p>
+<li><a name="DCD">DCD</A>::acronym=&quot;Design Class Diagram&quot;, a class diagram that models the
+classes that will appear inside the code for the software.
+[<A href="http://www.youtube.com/watch?v=Vy_gLkxuCnw&amp;feature=related"> watch?v=Vy_gLkxuCnw&amp;feature=related </A>]
+(YouTube with robotic voice and one error (no void in UML!)).
+<p>
+<li>Static model: what is possible.  Also need models of dynamics:
+what happens.  Need to relate them.
+<li>Make sure that what should happen in the machine is possible!
+<p>
+<li>Develop interactions and classes in parallel: Each object is in a
+class so put the class in the class diagram. Each message points at an
+object in a class.... add the message as an operation in the class.  Each
+message links two objects and if they are in different classes then there
+will be a path in the class diagram.  Data (in messages or returned)
+may become attributes in the class diagram. See session
+[<A href="13.html"> 13.html </A>]
+onward.
+<p>
+<li>Your first attempts will be hesitant and messy.
+Later in this class the attempts will be just messy.
+<p>
+<li>In a real project, let the problem drive the diagrams.
+<p>
+<li>We will cover a set of Patterns for placing operations into classes.
+These are called the
+<A name="GRASP" class="Key"> GRASP </A>
+patterns.  The first is simple enough that you can use it in your projects,
+right now:
+<br>(<a name="Information_Expert">Information_Expert</A>): An operation should be done by the class that has the information that is needed by the operation.
+<p>
+<li>Process:  Each use case becomes many scenarios.
+Each scenario becomes one SSD.  Each SSD makes many Interaction diagrams.
+One interaction per message (max) in the SSD.  One DCD for all the interactions.
+See
+[<A href="UC2Code.png"> UC2Code.png </A>]
+for an informal sketch of the flow.
+<p>
+<H2><a name="16.1 - 16.6 Important notations and definitions for class Diagrams">16.1 - 16.6 Important notations and definitions for class Diagrams</A></H2>
+<li>*** 16.1 Notations (<a href="#Q5">Q5</A>) Put a sticky note on this section
+<li>* 16.2 Definitions: Design vs domain
+<li>16.3 Definition: Classifier (UML Jargon)
+<li>**  16.4 Attributes and associations (<a href="#Q5">Q5</A>)
+<li>**** The idea is to make the connections between classes OBVIOUS.
+<li>*** use role names in designs and association names in domain models.
+<li>* 16.5 Notes and comments (<a href="#Q">Q</A>)
+<li>** explain, constrain, and code!
+<li>***   16.6 Operations and methods (<a href="#Q5">Q5</A>)
+<H2><a name="16.7 - 16.9 Notations used later">16.7 - 16.9 Notations used later</A></H2>
+<li>* 16.7..9 Properties: keywords, stereotypes, profiles, and tags, ...
+(Used later in this class)
+<H2><a name="16.10 Generalization, Dependency, and Abstraction">16.10 Generalization, Dependency, and Abstraction</A></H2>
+<li>***   16.10 Generalization and Abstraction (<a href="#Q">Q</A>)
+<p>
+<img src="11gen.gif" alt="Examples of Generalization">
+(some sample generalizations)
+<li>* 16.11 Dependency (<a href="#Q">Q</A>)
+One class depends on another if changing one can effect the correct
+operation of the other.
+<li>* 16.12 Interfaces (<a href="#Q">Q</A>)
+An
+<A name="interface" class="Key"> interface </A>
+is a set of operations that gives access to objects that <span class="InlineFormula">realize</span> that interface.
+It is a socket into which other objects can plug-in.
+<li>++ Think sockets and plugs --
+<p>
+<img src="11port.gif" alt="UML2.0 Standard Example interfaces and components">
+<H2><a name="16.13-16.16 Associations etc">16.13-16.16 Associations etc</A></H2>
+<li>++
+<A name="Navigating Associations." class="Key"> Navigating Associations. </A>
+If class A has an association with class B and x is an object in class A
+then
+<pre> 		x.b</pre>
+is the assoicated elements in B to x (Note the shift to lower case).
+If the association is many-to-one  ( A *---1 B) then &quot;x.b&quot; is a single
+object in B and you can do what you like with it.
+If it is not many to one the &quot;x.b&quot; means a collection of elements.
+Further operations work on all the elements and generates another collection.
+It may be a vector, set, multiset, list, ... depending on the <a href="#DCD">DCD</A>.
+Finally, you can write loop conditions to access each element if &quot;x.b&quot;
+in turn
+<pre> 		[for each y in x.b]</pre>
+Of course, the actual data may be private, but we can always code a
+&quot;getter&quot; function to navigate the association.  So if A (*)-(1) B
+then
+<pre> 		x.getB()</pre>
+is in the design or if A (*)-(*) B then
+<pre> 		[for each y in x.getB()]</pre>
+might be what you want.   In either case your <a href="#DCD">DCD</A> ends up with
+<pre> 		+ getB():B[*]</pre>
+as an operation.
+<p>
+The coding will depend on the language and the precise type of collection
+you choose.  For example in C++ you need to explicitly code objects as pointers.
+If we have chosen to implement the &quot;*&quot; as a vector you might even
+(for example) code &quot;*[for each b in x.b]b.zark()&quot; like this:
+<pre> 		vector&lt;B*&gt; myBs = x-&gt;getB();</pre>
+<pre> 		for(int i=0; i&lt; myBs.size(); i++)</pre>
+<pre> 			mBs[i]-&gt;zark();</pre>
+<p>
+<li>+++ A many to many association is often best handled as an &quot;association class&quot;
+(below).
+<p>
+<li>* 16.13 Composition (<a href="#Q">Q</A>)
+<li>&quot;is a part of&quot; -- like data in an object.
+<li>+ Use in designs not domain models.
+<li>++ Unless the real world container has life and death control over its parts.
+<li>*** avoid &lt;&gt;-- aggregation.  Use ----&gt; instead!
+<li>** 16.14 Constraints (<a href="#Q">Q</A>)
+<li>16.15 Qualified Associations
+<li>**  16.16 Association classes
+<li>+++ or make into a class that links the associated classes.
+<p>
+<img src="11fig16p16.png" alt="Figure16.16 with linking class">
+<p>
+<li>++ For example: SalesOrder and Stock are linked by a many-many relationship
+by SalesOrderItem:
+<p>
+<img src="11qSalesOrder.gif" alt="SalesOrder(1)-(*)SalesOrderItem(*)-(1)Stock">
+<pre> 		* [for so in customer.getSalesOrder()] list.add(so.getStatus())</pre>
+<H2><a name="16.17 - 16.20 Advanced stuff: singletons, templates, ...">16.17 - 16.20 Advanced stuff: singletons, templates, ...</A></H2>
+<li>16.17 Singleton Classes (Future)
+<li>16.18 Template classes and Interfaces (Future)
+<li>**  16.19 User-Defined compartments
+<li>* 16.20 Active Classes (Future)
+<H2><a name="16.21 Relating interaction and class diagrams">16.21 Relating interaction and class diagrams</A></H2>
+<li>***** A vital skill(<a href="#Q5">Q5</A>).
+Each part of an interaction diagram tells you something about the
+design class diagram (DCD).
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Interaction Diagram<th scope="col">Class Diagram
+<tr><td>Object life line<td>Class
+<tr><td>Message to object<td>Operation in target class
+<tr><td>Data<td>May be an attribute of sending class
+<tr><td>Returned Data<td>May be an attribute of class that returned it
+</table><br>(Close Table)<br>
+<li>Example
+[<A href="11getStatusses.gif"> 11getStatusses.gif </A>]
+(Interaction -- finding the statusses of a customer's orders)
+[<A href="11StatussesDCD.gif"> 11StatussesDCD.gif </A>]
+(Changed DCD).
+<li>+++ One DCD for many interaction diagrams.
+<li>++ Each interaction adds to the DCD.
+<li>+ Associations and attributes may add &quot;getter&quot; operations to access private information.
+</ol><p>. . . . . . . . . ( end of section <a href="11.html#16 Class Diagrams">16 Class Diagrams</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="My notes on Class Diagram Notation">My notes on Class Diagram Notation</A></H1>
+[<A href="http://cse.csusb.edu/dick/samples/uml1.html"> ../samples/uml1.html </A>]
+(generic)
+[<A href="http://cse.csusb.edu/dick/samples/uml1b.html"> ../samples/uml1b.html </A>]
+(C++ oriented)
+[<A href="http://cse.csusb.edu/dick/papers/20050502Body.html#Class and Object Diagrams"> ../papers/20050502Body.html#Class and Object Diagrams </A>]
+(UML2.0 changes)
+<H1><a name="Be careful to use arrows correctly in the UML">Be careful to use arrows correctly in the UML</A></H1>
+<img src="arrows.gif" alt="[Meanings of arrows in the UML]">
+<H1><a name="Demo if time">Demo if time</A></H1>
+Developing a communication diagram, a sequence diagram and a class
+diagram in parallel.
+<H1><a name="Exercises">Exercises</A></H1>
+[<A href="11x.html"> 11x.html </A>]
+<H1><a name="Project Step 5 Interactions and Classes -- Next Week">Project Step 5 Interactions and Classes -- Next Week</A></H1>
+[<A href="w5.html"> w5.html </A>]
+is due next week.
+<H1><a name="Quiz on Interaction Diagrams and Classes">Quiz on Interaction Diagrams and Classes</A></H1>
+<p>
+<H1><a name="Foot Notes">Foot Notes</A></H1>
+<br>(<a name="Q5">Q5</A>): May be tested in Quiz 5 (will be tested sooner or later).
+Make a set of diagrams fit together. OPEN BOOK.
+<p>
+<br>(<a name="Q">Q</A>): Some topics will be tested later...
+<H1><a name="Questions and Answers">Questions and Answers</A></H1>
+[<A href="11q.html"> 11q.html </A>]
+<H1><a name="Next: How to make a good design">Next: How to make a good design</A></H1>
+[<A href="12.html"> 12.html </A>]
+<H1><a name="Review Questions">Review Questions</A></H1>
+[<A href="11r.html"> 11r.html </A>]
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<p>
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+[<A href="02DiceGameClasses.gif"> 02DiceGameClasses.gif </A>]
+(example).
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<p>
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good set of objects and/or classes to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what has no value <span class="InlineFormula">now</span>, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<p>
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci and Engineering School, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10 and
+[<A href="02DiceGameSSD.gif"> 02DiceGameSSD.gif </A>]
+(example).
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need it <span class="InlineFormula">now</span>. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">( End of document )</a>  <a href="#Contents">&lt;&lt;Contents </A> | <a href="#Main Content">Top</A></H3>
+</body>

@@ -1,0 +1,44 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Ch2_Make Change - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\JAMESS~1\LOCALS~1\Temp\RSP12D.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/Ch2_Make Change.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Documents and Settings\James Small\Desktop\CIS-5\Data Files\Chapter 2\Source Code\Ch2_Make Change.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\JAMESS~1\LOCALS~1\Temp\RSP12D.tmp" 
+Creating temporary file "C:\DOCUME~1\JAMESS~1\LOCALS~1\Temp\RSP12E.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/Ch2_Make Change.pdb" /debug /machine:I386 /out:"Debug/Ch2_Make Change.exe" /pdbtype:sept 
+".\Debug\Ch2_Make Change.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\JAMESS~1\LOCALS~1\Temp\RSP12E.tmp"
+<h3>Output Window</h3>
+Compiling...
+Ch2_Make Change.cpp
+C:\Documents and Settings\James Small\Desktop\CIS-5\Data Files\Chapter 2\Source Code\Ch2_Make Change.cpp(7) : error C2001: newline in constant
+C:\Documents and Settings\James Small\Desktop\CIS-5\Data Files\Chapter 2\Source Code\Ch2_Make Change.cpp(8) : error C2001: newline in constant
+C:\Documents and Settings\James Small\Desktop\CIS-5\Data Files\Chapter 2\Source Code\Ch2_Make Change.cpp(9) : error C2146: syntax error : missing ';' before identifier 'cout'
+C:\Documents and Settings\James Small\Desktop\CIS-5\Data Files\Chapter 2\Source Code\Ch2_Make Change.cpp(18) : error C2001: newline in constant
+C:\Documents and Settings\James Small\Desktop\CIS-5\Data Files\Chapter 2\Source Code\Ch2_Make Change.cpp(19) : error C2001: newline in constant
+C:\Documents and Settings\James Small\Desktop\CIS-5\Data Files\Chapter 2\Source Code\Ch2_Make Change.cpp(20) : error C2146: syntax error : missing ';' before identifier 'cout'
+C:\Documents and Settings\James Small\Desktop\CIS-5\Data Files\Chapter 2\Source Code\Ch2_Make Change.cpp(35) : error C2001: newline in constant
+C:\Documents and Settings\James Small\Desktop\CIS-5\Data Files\Chapter 2\Source Code\Ch2_Make Change.cpp(36) : error C2001: newline in constant
+C:\Documents and Settings\James Small\Desktop\CIS-5\Data Files\Chapter 2\Source Code\Ch2_Make Change.cpp(37) : error C2146: syntax error : missing ';' before identifier 'cout'
+C:\Documents and Settings\James Small\Desktop\CIS-5\Data Files\Chapter 2\Source Code\Ch2_Make Change.cpp(41) : error C2001: newline in constant
+C:\Documents and Settings\James Small\Desktop\CIS-5\Data Files\Chapter 2\Source Code\Ch2_Make Change.cpp(42) : error C2001: newline in constant
+C:\Documents and Settings\James Small\Desktop\CIS-5\Data Files\Chapter 2\Source Code\Ch2_Make Change.cpp(43) : error C2146: syntax error : missing ';' before identifier 'cout'
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+Ch2_Make Change.exe - 12 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

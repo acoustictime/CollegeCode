@@ -1,0 +1,31 @@
+.Open W0 Project Kickoff
+. Goals for W0
+A vision for a project.
+
+You know each other's names and EMail addresses and set up
+communications so that every
+thing you produce -- every artifact -- is seen by more than one person,
+has two copies (on different systems),
+and is easy to revise.  
+There is a lot to be said for setting up a web site to act as repository for 
+all your artifacts.  Some teams have used Google docs and DropBox
+in the past.
+. Process for W0
+In groups, start in class but work on outside class,
+I will visit each team to give advice and encouragement.
+
+.Open Deliverables for W0
+The deliverables form a packet and every element in the packet should
+be there in the listed order.
+ Cover Sheet
+.List
+ Name of project and names of team members.
+ Vision/Business Case 
+.Close.List
+.Close
+.Open Presentation -- 3 Minutes Maximum
+ Introduce the project title and team members.
+ Ask for questions and comments.
+.Close
+
+.Close W0 Project Kickoff

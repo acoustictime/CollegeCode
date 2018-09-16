@@ -1,0 +1,64 @@
+Script started on Thu 26 Jan 2012 09:40:01 AM PST
+time ]0;jsmall@jb358-1:~/cse330/lab2/insertion[?1034h[jsmall@jb358-1 insertion]$ time ./insertionsort > output
+1000
+
+real	0m2.297s
+user	0m0.002s
+sys	0m0.002s
+]0;jsmall@jb358-1:~/cse330/lab2/insertion[jsmall@jb358-1 insertion]$ time ./insertionsort > output
+2000
+
+real	0m1.521s
+user	0m0.012s
+sys	0m0.002s
+]0;jsmall@jb358-1:~/cse330/lab2/insertion[jsmall@jb358-1 insertion]$ time ./insertionsort > output
+3000
+
+real	0m1.280s
+user	0m0.026s
+sys	0m0.003s
+]0;jsmall@jb358-1:~/cse330/lab2/insertion[jsmall@jb358-1 insertion]$ time ./insertionsort > output
+4000
+
+real	0m1.968s
+user	0m0.046s
+sys	0m0.001s
+]0;jsmall@jb358-1:~/cse330/lab2/insertion[jsmall@jb358-1 insertion]$ time ./insertionsort > output
+5000
+
+real	0m2.297s
+user	0m0.058s
+sys	0m0.005s
+]0;jsmall@jb358-1:~/cse330/lab2/insertion[jsmall@jb358-1 insertion]$ time ./insertionsort > output
+6000
+
+real	0m1.598s
+user	0m0.085s
+sys	0m0.003s
+]0;jsmall@jb358-1:~/cse330/lab2/insertion[jsmall@jb358-1 insertion]$ time ./insertionsort > output
+7000
+
+real	0m1.768s
+user	0m0.117s
+sys	0m0.004s
+]0;jsmall@jb358-1:~/cse330/lab2/insertion[jsmall@jb358-1 insertion]$ time ./insertionsort > output
+8000
+
+real	0m2.727s
+user	0m0.154s
+sys	0m0.005s
+]0;jsmall@jb358-1:~/cse330/lab2/insertion[jsmall@jb358-1 insertion]$ time ./insertionsort > output
+9000
+
+real	0m2.576s
+user	0m0.191s
+sys	0m0.007s
+]0;jsmall@jb358-1:~/cse330/lab2/insertion[jsmall@jb358-1 insertion]$ time ./insertionsort > output
+10000
+
+real	0m2.722s
+user	0m0.231s
+sys	0m0.007s
+]0;jsmall@jb358-1:~/cse330/lab2/insertion[jsmall@jb358-1 insertion]$ exit
+
+Script done on Thu 26 Jan 2012 09:40:39 AM PST

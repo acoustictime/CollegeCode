@@ -1,0 +1,63 @@
+SQL> select ssn, lname, salary, Round(salary * 1.15,0) "New Salary"
+  2  from jmendoza.employee;
+
+SSN       LNAME               SALARY New Salary                                 
+--------- --------------- ---------- ----------                                 
+123456789 Smith                30000      34500                                 
+333445555 Wong                 40000      46000                                 
+999887777 Zelaya               25000      28750                                 
+987654321 Wallace              43000      49450                                 
+666884444 Narayan              38000      43700                                 
+453453453 English              25000      28750                                 
+987987987 Jabbar               25000      28750                                 
+888665555 Borg                 55000      63250                                 
+
+8 rows selected.
+
+SQL> save LAB02_2.sql
+Created file LAB02_2.sql
+SQL> select upper(lname), length(lname)
+  2  from jmendoza.employee
+  3  where substr(lname,1,1)='J' or substr(lname,1,1)='B' or substr(lname,1,1)='Z';
+
+UPPER(LNAME)    LENGTH(LNAME)                                                   
+--------------- -------------                                                   
+ZELAYA                      6                                                   
+JABBAR                      6                                                   
+BORG                        4                                                   
+
+SQL> save LAB02_3.sql
+Created file LAB02_3.sql
+SQL> select e.lname, e.dno, d.dname
+  2  from jmendoza.employee e, jmendoza.department d
+  3  where e.dno = d.dnumber;
+
+LNAME                  DNO DNAME                                                
+--------------- ---------- ---------------                                      
+Smith                    5 Research                                             
+Wong                     5 Research                                             
+Zelaya                   4 Administration                                       
+Wallace                  4 Administration                                       
+Narayan                  5 Research                                             
+English                  5 Research                                             
+Jabbar                   4 Administration                                       
+Borg                     1 Headquarters                                         
+
+8 rows selected.
+
+SQL> save LAB02_4.sql
+Created file LAB02_4.sql
+SQL> select e.lname, d.dname
+  2  from jmendoza.employee e, jmendoza.department d
+  3  where e.dno = d.dnumber and lname like '%a%';
+
+LNAME           DNAME                                                           
+--------------- ---------------                                                 
+Zelaya          Administration                                                  
+Wallace         Administration                                                  
+Narayan         Research                                                        
+Jabbar          Administration                                                  
+
+SQL> save LAB02_5.sql
+Created file LAB02_5.sql
+SQL> spool off

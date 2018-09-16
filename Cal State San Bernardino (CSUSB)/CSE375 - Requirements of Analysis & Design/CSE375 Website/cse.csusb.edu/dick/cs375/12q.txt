@@ -1,0 +1,575 @@
+.Open Questions and Answers on GRASP
+. MVC Architecture
+In the MVC architecture, which one of the 3 is compatible or could be carried over to the other functions in your system? Does view only apply to what the user sees?
+
+THe idea of MVC is that each function as seen be the user is spread out over all three
+types of classes.  Any function has a View, a designated controller, and one or more
+domain classes.
+
+Internally I think that real systems need a Technical Services layer underneath the Model
+of MVC.  There are some things a software system must do (highly technical things) that are
+not what the user wishes to see(V), control(C), or understand(M).
+
+. Chapter 17 pages 273 -- What is the Gang-of-Four
+Four guys who wrote this classic book 
+.See http://www.amazon.com/exec/obidos/ASIN/0201633612
+.See http://libcat.lib.csusb.edu/record=b1526724
+describing some clever
+object-oriented ways of tackling some well known problems.
+See
+.See ./patterns.html#The_Gang_of_Four
+for their names....  We will look at several their patterns later
+in this class.
+
+. What does GRASP do?
+It guides you to better designs.
+
+. Applying GRASP to Object Design.
+There are nine GRASP patterns, which one is most important patterns? which
+one is the most difficult to understand? 
+
+The list in the front cover puts the ones used most often first.  They are all important
+for some problems.
+
+I think that Polymorphism is the one that people who don't `get` objects have the most problem
+with.  But Coupling and Cohesion are a little too abstract to understand -- you have to have
+worked for a month or two inside a humongous design to really get a feel for these ideas.
+
+
+. Chapter 17 pages 271-319  -- New Patterns
+How can you not have a new pattern?  If you have a pattern that evolves into a different pattern, the different pattern is a new pattern.
+
+Because a pattern is deduced from pre-existing examples.  If there
+are no examples then it is not a pattern.  And Patterns tend not to evolve.
+When documented and published they tend to distort reality to fit.  SO they
+don't change once promulgated.
+
+. Chapter 17 pages 271-379 -- GRASP -- object sizes
+What is the ideal size of an object, I think i have a tendency to make them
+too large but when they are too small it seems like a waste of time and code.
+
+This is a common mistake made people who a new to object-oriented design.
+We have some names for these large low cohesion classes: "The God Class",
+"A Mudball class".
+
+Do this and your code will be unmaintainable very quickly.
+
+Make your self some templates so you can make the code for a class quickly.
+
+. Chapter 17 How big does object get before you break it up?
+It depends on the cohesion. In theory you might have hundreds of
+operations that an object can do!  Similarly it can encapsulate a lot of
+data.
+
+It is not a matter of size but whether things belong together, in some
+sense or other:  do all the methods need the same data?  Is all the
+data needed by several methods/operations?
+
+. Which GRASP is most popular
+Information Expert.  First noticed, most often needed, and few will
+argue against it.
+
+. Chapter 17 pages 277 -- Is GRASP a template to master OOD?
+Not a template.  More a set of guidelines.
+Yes.... a set of guidelines that you can use to do better designs.
+
+
+. Chapter 17 pages 277-319 -- GRASP as a cycle
+Do you cycle
+through all of these patterns, and see which best fits with what you're 
+trying to do/design?
+
+You shouldn't have to cycle through either the $GRASP or the $GoF patterns.
+You need to describe the current problem in terms of responsibilities
+and let that remind you of a suitable pattern:
+.Set
+	So what happens when the user clicks that button?
+	A building is made of parts, where do the parts come from?
+	Which object should calculate the Value Added Tax?
+	I'm not sure which design is best....
+.Close.Set
+
+By the way -- it is quite OK to come with the designs intuitively
+and then label them "Controller", "Creator", "Expert", ...
+
+
+. Chapter 17 pages 291 -- Popular GRASP Patterns
+What seems to be the most popular GRASP pattern that everybody seems to use?
+
+Larman has listed them in decreasing frequency of use and popularity.
+But they are in the list because they are in use in many projects already.
+
+.Key Information Expert
+is probably used more often than any other -- even by poeple who
+don't know it by name.   The close runner up is
+.Key Creator
+because most scenarios will lead to creating new objects and we
+have to choose where this creating/construction is invoked.
+
+Low 
+.Key coupling
+and high 
+.Key cohesion
+are the two of the oldest patterns.  But they
+are less useful because they are tools for evaluating a design rather than
+coming up with one.
+
+.Key Controller
+is very common but a bit controversial.
+
+. Chapter 17 pages 277-319 -- GRASP as a learning Aid
+The book talks about GRASP as a learning aid.  Is this just to get us 
+thinking about the ways we can design systems, or should we try to design 
+our systems after these patterns?
+
+I hope it can be more than a learning aid.  I think they will
+guide you to good solutions -- even if used silently.
+
+To be useful to a team,
+however, the $GRASP patterns have to be a shared language.  At this
+time I don't know what the odds are of this happening.  For example
+I can see a tom of ASP and .js files on the WWW so I know that
+a lot of teams use these languages/technologies.  However $GRASP
+doesn't leave such obvious traces to a user.
+
+I did find over 1,000 pages referring to "Larman GRASP" but not much recent
+activity on usenet/google groups.   I figure that quite a few
+current grads are likely to "talk GRASP".
+
+Hmmmm this would be an interesting bit of research for a senior or
+graduate student: what patterns are actually used in practice.
+
+
+. Chapter 17 -- GRASP 
+When was GRASP invented? and have you seen it in use on projects created on CSUSB's campus?
+
+GRASP dates back to the first edition of the text book -- late 1990s I guess.
+
+What tends to happen is that people use it without making any fuss when they
+are doing OO design.  The 9 patterns do no more than name the way most
+good designers thought.  This means I can use them to teach good OO design.
+However you don't see students and staff taking the time and trouble to note
+that the allocated a responsibility using Information Expert, or
+choose a session controller.... it is just obvious....   
+
+On camus there is a lot of non-OO work being done.  A lot of simple scripting
+at the high level.   But even here some of the priciples still apply.  Low
+coupling is still good, and high cohesion is still good.
+
+I do see student work that is not well designed. 
+One thing I have seen too much of in student projects is having SQL scattered all over
+the code rather than hidden in a Technical Services class....  These are students
+who don't do CS375, I'm glad to say.
+. Chapter 17 pages 1-300 -- General Project Question
+If an application returns messages/events back to the user, but not necessarily through the application itself, how is that referenced?
+
+It will depend on the platform you are using.  Once upon a time we tweeaked the
+loudspeaker to generate tomes.... nowadays you send a message to an object in the GUI
+interface, I guess.
+
+Time to research the particular platform:  hit the books and google.
+. Chapter 17 pages ppp-ppp -- Expert GRASP Pattern
+Can you explain the Expert GRASP pattern?
+
+.Key Information Expert
+Your system has to do something -- which part should be responsible? Answer the
+part that has the data (or can find the data) that is needed to carry out the task.
+
+The alternative: mudball designs and the kind of code that your colleagues will
+make fun of and hate you for.
+
+Problem:  when there are several possible experts...  (which may, perhaps, hint
+at lack of cohesion?).
+
+. Chapter 18 pages 302-303 -- Controllers
+System operations are the major input events upon a system and controllers are objects responsible for handling systems operations. Since the system operations and controller are in different layers, how do we assign proper responsibilities?
+
+Controllers are classes and so are inside packages/layers. System operations are
+messages and flow between classes and so can cross layer boundaries.
+. Chapter 18 pages 320-362 -- High Coupling
+How might it be observed that a project is suffering from High Coupling and
+if the level of coupling is tolerable?
+
+When the team is scared to change some parts of the software because it might break the system
+then you probably have too much coupling.
+
+When any change you make involves a dozen classes being modified then you have too much coupling.
+However -- some changes -- called "cross-cutting concerns" do effect almost every part of
+a piece of software even if the coupling is low enough.  It take some special design techniques
+to handle these aspects that effect everything (like security, persistence, language, ...).
+
+. When to start coding
+As soon as possible.  The first iteration in elaboration should test code
+that exercises critical parts of the design, and exorcises some risks.
+
+Note: in this class project is running very slowly, like a slowed down
+movie.  I haven't got lab time for you to implement the designs:-(
+However -- I'd love to see a project group demo some code....
+
+. Chapter 17 pages 271-319 -- GRASP
+All of these diagrams are nice, but when do we get to code?!
+
+I coded up the Dice game in week 1.  Diagrams on page 10 and code
+.See ./DiceGame.cpp
+.See ./Die.cpp
+.See ./testDiceGame.cpp
+.See ./testDie.cpp
+
+Here is the code for last class's quiz:
+.See ./SalesItem.java
+.See ./SalesOrder.java
+.See ./Stock.java
+Enjoy!
+
+There is some code coming the book.  Several pages of it. 
+
+You can start coding your project
+any time you've got an interaction design.   I invite all project teams to
+write code to
+test their design classes and interaction diagrams by coding and demoing them.
+I've laid down this challenge each year... and nobody wants to do it:-(
+
+If we get time... and people pick an interaction I'll do some test driven 
+C++ coding in class.  Should be fun.  Do the design right, and if you know
+the languages -- coding is easy.  It also helps if you have some 
+blank "template" files like
+.See ./testName.cpp
+.See ./class.cpp
+.See ./function.cpp
+.See ./attribute.cpp
+ready to go.
+
+If we had a unit of lab added to thhis class (2 hours) then I'd be
+expecting you to code something from about week 3 onward.  It is
+however the easy part of the unified process -- given that you made sure
+you were competent in the Inception phase.
+
+. Chapter 12 pages 271-319 -- LRG
+What is LRG(low representation gap)?
+
+This is when the internal structure of the software closely reflects
+the structure of the doamin that the software is designed to fit.
+. Chapter 17.4 pages 277 -- GRASP
+Would you say mastering GRASP is needed before a company would even consider your resume?
+
+No.  $GRASP has been out for about 5 years so management and hirers
+haven't heard of it yet.
+
+But they will have heard of `patterns` and the more complex and
+technical "Gang of Four" patterns ($GoF).
+
+. Chapter 17 pages 277 -- The Name Grasp
+For the most part the chapter was understandable, but I keep coming back to one question, Is GRASP an acronym for something?
+
+Yes.  Click here: $GRASP
+
+. Chapter 17 pages 278-279 -- GRASP Patterns
+Is the Pattern Name a single problem in which there needs to have a function to fulfill the void?
+
+Not often.  It tends to be a generic and popular name for a way to resolve a number
+of conflicting forces -- a family of simialr problems.
+
+. Chapter 17 pages ppp-ppp -- GRASP Pattern Association?
+Are different GRASP patterns more prevalent in different phases of the UP, or are all patterns considered throughout the entire process?
+
+GRASP is used to guide design.  Design starts in the very first iteration and may occur
+in the last.... See the pictures linked at end of
+,See ./02.html
+
+. Chapter 17 pages 280 -- GRASP patterns
+Since UMl is a visual language for specifying and constructing objects related to software.
+Are GRASP patterns or principles considered a subset of UML? 
+
+No.  The supplement it.  UML can be used in many ways.  GRASP provides
+guidance on OOAD, not the UML.
+
+. Chapter 17 pages 282-315 -- GRASP patterns
+Are the 9 GRASP patterns, namely, Information Expert, Creator, Controller, Low Coupling, High Cohesion, Polymorphism, Pure Fabrication, Indirection, and Protected Variations mandatory while designing objects with responsibilities in a project? And, should they be used in a particular order?
+
+Use them in the order listed.  Try each in turn until one fits.... 
+
+However, sometimes
+you end up with a tradeoff between alternative good things to do.  Two
+competing patterns.... and that is when this approach becomes interesting.
+
+In other words this is not a rigid program or procedure that does the
+thinking for you.  GRASP is a set of guidelines about what you need to
+think about when doing design.
+
+. Chapter 17 pages 281-282 -- Creator -- Who creates on object
+On page 281, Larman asks about who should create objects.  He quickly mentions how a container should create thing that are contained.  Could you explain this a little more in detail, please?  
+
+As a program runs, objects are constructed.  They are constructed by the pieces of the software.
+These can be the main program in a simple CS201/202/330 type program.  But in a complex
+or realistic piece of software objects construct other objects -- a lot!  So the
+question is: which object constructs this one?  Who calls the constructor?  Where
+to put this code:
+.As_is 		General * handle = new Constructor(data);
+
+Larman suggests that we look in (1) the existing design, and (2) in the domain model
+to find a class that is already tied to the type of object we want to make.  And one tie
+is that of containing it.... the black diamond of the UML: <*>------ that
+indicates who has life and death control over objects of a class.
+
+Thus:  perhaps, in my Depot, and Stocks, .... situation, Creator would lead you to
+make the Depot object construct the Stocks held in the depot.  A Sales Order
+might construct the Sales Items on it, etc.
+
+Note:  Larman is not refering to "containers" in the CSCI330 sense.  These are vital
+tools that are given to us to use, in practice, and so don't get modelled.  Larman
+is looking for real obects, or at worst, already invented software objects.
+
+. Chapter 17.10 pages 292 -- Creator
+Are there any tips or tricks you have learned to determine the best creator?
+
+I don't have any personal tricks or tips.  Just follow the examples
+and thoughts in the book.
+
+
+. Is a Controller in GRASP part of the system or an actor
+A controller is part of the system. It is not an external actor.  The
+external actors may have special user interface classes and then a
+controller and so the controller is a kind of mask for the real user.
+Controllers are how the user appears to the domain layer classes.
+
+
+. Chapter 17 pages ppp-ppp -- grasp controller
+can you explain the  controller from the grasp principles?
+
+A controller object  is sent events by the user interface (it asks to be notified, typically)
+and then passes them on to other controllers (sometimes) or one or more effected domain
+objects.
+
+. Chapter 17 pages 307 -- controller objects
+can you explain more about how control objects are use case handlers 
+
+To be precise, some Controllers are associated with particular use cases.  They
+understand the sequence of events in the scenario and what to do at each step.
+As the events occur, the User Interface passes the messages to the use case controller
+(if the use case is recognisable).  If the type of event does not determine the
+use case (and there are several possible one running....) perhaps you need
+a facade controller that figures out which handler to call.
+
+
+. Why are bloated controllers bad -- why shouldn't they do all the work?
+Because the details of the work will change while the control sequence
+is likely to stay the same... so separating the details makes it easier to
+change the software. The effects of new requirements are localized.
+
+In any case -- it is easier to work with a 100 line class than a 1000
+line class.
+. Chapter  pages 271-319 -- Coupling
+Can you give an example of when high coupling is actually desirable/tolerable?
+
+not without a lot of thought inventing a deliberately bad design.  I'll  see what I can
+do...
+
+. Chapter 17 pages 299 -- Low Coupling
+What does he mean when he says "Assign a responsibility so that coupling remains low."  
+
+So that different parts of the software do not depend on each other.  So that
+changes in one part do not force other parts to change as well.  
+
+To put it another way there is a certain amount of wiggle room between the
+different pieces of the solution.
+
+Here is an example of high coupling.  In my Microsoft 2K Pro lap top
+at home, sometimes when it comes out of hibernate mode it has the size of the
+desktop wrong -- twice as big as the screen or half as big.  Not the wallpaper,
+oddly, but where the icons are put and the size of the pixels used to draw them.
+Further this seems to happen if I enter hibernate mode when the model is active.
+
+I don't understand how they can produce code where the modem and the desktop
+size are coupled together.
+
+And do not get me talking about the way "standby" mode fails on this machine.
+
+. Chapter 17 pages 290 -- Low cohesion.
+On page 290, Larman says that giving MonopolyGame too much to do--as opposed to delegating responsibilities--is, well, bad.  Is there technical reasoning behind this, or is it more for readability?
+
+It is more than reasoning and readability.  
+It is bad experiences with trying to modify "mudball" and "God" classes.  When
+you've got a large loose class you can't find out where things are done
+and so it takes time to fix it.  And often fixing one thing
+breaks something else.
+
+. Chapter 17 pages 299 - Coupling between or inside layers
+In good practice , you should have low coupling but division between all 
+different layers of your code for example, ui,domain,system?
+
+Yes -- the coupling within a package should be higher than the
+coupling between packages.  In other words each package tends
+to be a coherent collection of classes.
+
+However, certain couplings are needed to make the system work -- for
+example UI calling controllers in the domain, and the domain model calling
+the data base technical classes.
+
+. Chapter 17 pages 271-319 -- GRASP Is it ever a good idea to use low-cohesion classes?
+
+Only if there is a really good other reason.   I can't think of one.... In this
+class don't do it without a written excuse from me:-)
+
+. Cohesion on Wikipedia
+.See http://en.wikipedia.org/wiki/Cohesion_(computer_science)
+
+. Chapter 17 pages 314-318 -- Cohesion
+I had some trouble with cohesion, can you clarify it some more?
+See below.
+
+. Chapter 17 pages 314-317 -- High or Low Cohesion
+Should a design goal be low cohesion or high cohesion?
+
+High. 
+
+. Chapter 17 pages 271-319 -- GRASP cohesion
+Is it always best to create a model with high cohesion?
+
+Yes.  It's been a good idea since it was first suggested back in the
+70's.
+
+. Do I think that high cohesion is advantageous
+YES.  Difficult but worthwhile.
+
+. Can you explain more detail about the levels of cohesion?
+I learned about these back in the 1970s and so I could probably remember them, but
+the fact is that these old levels are not important in this class.
+Since then people researching software engineering have developed formulae and tools that
+measure cohesion to the second decimal place.....  but again this is more precision than we need.
+I am skeptical about trying to put a scale on cohesion (and coupling).  
+I see cohesion as the kind of thing that a team should discuss on the way to a better design.
+
+I just hope you start to develop a feel for when a class ahould really be split up because it
+does not "stick together"... Each function/operation refers to a different set of attributes.
+There is no sharing of responsibillities within the class, for example.
+
+Notice:  It is hard for me to remove points for something I can't give you an algorithm to do.
+
+. Chapter 17 pages 314-318 -- Cohesion and Coupling
+Cohesion and Coupling affect one another in opposite ways (High Cohesion = Low Coupling).  How do you find balance between these two and optimize your application?
+
+See below.
+
+. Explain the difference between coupling and cohesion
+Coupling occurs between classes and measures the dependency between
+them.
+
+Cohesion is a property of a single class and measures how well
+the class has a single purpose, common data, and intertwingled 
+operations.
+
+. Chapter 17 pages 317 -- High cohesion vs Low coupling
+I think high cohesion could cause high coupling because "the class has moderate responsibilities and need to collaborate with other classes to fulfill tasks."
+
+I thought this when I first studied them.  But in practice you can organize
+the communication  between classes and packages
+to be through a small well defined interface which
+lowers the coupling, while allowing a lot of communication within
+a class or package.
+
+. Chapter 17 pages 299-319 -- coupling and cohesion
+Should we strive for low coupling and high cohesion in most cases?
+
+YES.  The ideal (impossible) is to have the software divided into
+islands of responsibility. Much shared purpose and data inside each
+island and no communication between the islands.
+
+. Chapter 17 pages 284-293 -- Low Coupling & High Cohesion
+Can you give a brief example how Low Coupling and High Cohesion can go hand to hand or support each other?
+
+. how does high cohesion support low coupling
+If every class has high cohesion then most of the connection are inside the class and
+so the references to other closes are lower.
+
+. Can a class with high cohesion have a large number of methods?
+In theory - yes!  Cohesion is more a matter of sharing all the
+attributes between the methods.
+
+. Is Cohesion a subjective measure
+Yes.   There are `metrics` that attempt to estimate it.  I don't
+trust them.
+
+. Which type of cohesion is best?
+The highest you can get.
+
+. Can you give an example of high cohesion.
+A class Triangle with three vertexes that calculates area and perimeter, and
+other properties of the triangle.
+
+This would still be cohesive if it allowed you to move the triangle.
+
+However, if we added an operation that records sales of pets it would
+loose cohesion.
+
+If we design a class figure that tried to handle Triangles and Circles in one
+class ... we would create low cohesion.
+
+Hope this helps.
+
+. Can you give and example of high and low cohesion in the Monopoly game program?
+I think that by page 360 MGame has lost some cohesion -- and is a temptation
+to a novice programmer. As a rule Larman's designs are good enough
+to have highly cohesive classes.
+
+. Chapter 20 pages 303 -- Reverse Engineering
+Are CASE tools accurate enough to give correct diagrams by reverse engineering the code?
+
+Yes... but ugly and incomplete.  
+
+In other words: they are often badly layed out.  Some tools
+populate a data base and you have to extract the classes etc into diagrams -- the tool
+also retirevies the connections between the pieces.   You get an explorer window
+of packages, clases, interactions, etc... and drag and drop into diagrams.
+
+I am not aware  of any tool that can reconstract the requirements (use cases) from
+the code.  I believe their is a fundamental disconnect between what we want
+and what we have, between the `ought` and the `is`.
+
+
+. Chapter 17 pages ppp-ppp -- Grasp vs GoF
+How does GRASP compare with the Gang of Four design patterns?
+
+$GRASP is simpler and more general.  $GoF are more code oriented
+and tend to be rather sophisticated.  They came first and tend to be
+better known.
+
+. Chapter 17 pages 280 -- Gang of Four patterns
+How do the Gang of Four patterns fit into the $GRASP Model?
+
+It turns out (later chapter) that most of the $GoF patterns
+are applications of Larman's $GRASP principles/patterns.
+Even tho' the $GoF published their patterns first.
+
+On of my reasons for selecting this book is that $GRASP
+summarizes a lot of best practices from many sources.
+
+. Chapter 17 pages 288-289 What do Figures 17.9 and 17.10 mean
+These are informal sequence diagrams showing objects
+sending messages.  See 
+.See ./10.html
+and chapter 15.
+
+However, Craig is including an Actor icon
+to show the user, which is illegal.  He also attempts to show
+the layers in a hypothetical architecture.  The squiggly
+line separates two layers: one the left is the user interface
+(technology) layer, and on the right, is the domain layer.
+
+He also has added an informal notes all over the place!
+In theory these should be in comment boxes.
+
+As a rule I'd like you to be a little more formal in your
+diagrams.  But,  you can document the use of a GRASP pattern
+the same way that Craig does.
+
+
+. Chapter 17 pages 313 -- What is a Facade
+A curtain.  A single class that covers up a lot of detail.
+
+. Chapter 17 pages 475-500 -- Modeling Dynamics -- include in use case diagrams
+What is the significance of the <<include>> tag in a use-case diagram?
+
+It means that two or more use cases contain a common pattern of interaction.
+This is abstracted into an included use case.
+
+.Close Questions and Answers on GRASP

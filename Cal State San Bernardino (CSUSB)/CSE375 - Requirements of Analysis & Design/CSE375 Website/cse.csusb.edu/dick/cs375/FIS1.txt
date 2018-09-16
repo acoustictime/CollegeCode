@@ -1,0 +1,41 @@
+.Open Free Interface to College
+.Open Free Interface to College Use Cases
+Note that some use cases were named but not described! I've also
+had to pick, choose, simplify (abbreviate?), and combine use case descriptions.
+
+. Order Books
+A student goes online and orders the books for the classes in which they have
+enrolled.
+
+. Retrieve Course's Book list
+A student provides one or more course numbers for the current period.  The
+system retrieves the book list from the bookstore.  The system provides the list
+of books to the student, grouped by course.
+
+. Review Class Schedule
+Also known as:
+. Review Schedule
+Student uses FIS to access TRACS and logs in using student Id and a PIN.
+The student requests a class schedule and is shown it by the system.
+
+. Get Syllabus
+This use case lets a student to get a syllabus for a registered class.  
+After accessing FIS the student is listed the courses in which they are 
+registered.  The student chooses to retrieve the syllabus for a course 
+and the system displays the syllabus.
+
+. View Grades
+Also known as
+. Review Grades
+The student must authenticate themselves and is then given a list of classes
+they have taken.  The student selects a class and sees the grade for that class.
+The student can then log of or see other classes.
+
+. Update Class Schedule
+. Get Assignments
+. Review To-Do list
+. View map of location
+.Close Free Interface to College Use Cases
+. Domain Model
+.Image FISDom1.gif First FIS domain model
+.Close Free Interface to College

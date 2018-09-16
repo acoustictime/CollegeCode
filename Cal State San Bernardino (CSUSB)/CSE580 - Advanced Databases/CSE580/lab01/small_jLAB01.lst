@@ -1,0 +1,105 @@
+SQL> get lab01_q1.sql
+  1  select lname, bdate
+  2  from jmendoza.employee
+  3  where dno = (select dno
+  4  	     from jmendoza.employee
+  5   	     where lname = 'Wallace')
+  6  	     minus
+  7               select lname, bdate
+  8               from jmendoza.employee
+  9*              where lname = 'Wallace'
+ 10  /
+
+LNAME           BDATE                                                           
+--------------- ---------                                                       
+Jabbar          29-MAR-69                                                       
+Zelaya          19-JAN-68                                                       
+
+SQL> get lab01_q2.sql
+  1  select ssn, lname
+  2  from jmendoza.employee
+  3  where salary > (select avg(salary)
+  4  		from jmendoza.employee)
+  5* order by salary
+SQL> /
+
+SSN       LNAME                                                                 
+--------- ---------------                                                       
+666884444 Narayan                                                               
+333445555 Wong                                                                  
+987654321 Wallace                                                               
+888665555 Borg                                                                  
+
+SQL> get lab01_q3.sql
+  1  select ssn, lname
+  2  from jmendoza.employee
+  3  where dno in (select dno
+  4  	      from jmendoza.employee
+  5* 	      where lower(lname) like '%l%')
+SQL> /
+
+SSN       LNAME                                                                 
+--------- ---------------                                                       
+987987987 Jabbar                                                                
+987654321 Wallace                                                               
+999887777 Zelaya                                                                
+453453453 English                                                               
+666884444 Narayan                                                               
+333445555 Wong                                                                  
+123456789 Smith                                                                 
+
+7 rows selected.
+
+SQL> get lab01_q4.sql
+  1  select e.lname, e.dno, e.gender
+  2  from jmendoza.employee e, jmendoza.department d, jmendoza.dept_locations l
+  3* where e.dno = d.dnumber and d.dnumber = l.dnumber and l.dlocation = 'Bellaire'
+SQL> /
+
+LNAME                  DNO G                                                    
+--------------- ---------- -                                                    
+Smith                    5 M                                                    
+Wong                     5 M                                                    
+Narayan                  5 M                                                    
+English                  5 F                                                    
+
+SQL> get lab01_q5.sql
+  1  select e.lname, e.salary
+  2  from jmendoza.employee e, jmendoza.employee d
+  3* where e.superssn = d.ssn and d.lname = 'Wallace'
+SQL> /
+
+LNAME               SALARY                                                      
+--------------- ----------                                                      
+Zelaya               25000                                                      
+Jabbar               25000                                                      
+
+SQL> get lab01_q6.sql
+  1  select dno, lname, gender
+  2  from jmendoza.employee, jmendoza.department
+  3* where dno = dnumber and dname = 'Administration'
+SQL> /
+
+       DNO LNAME           G                                                    
+---------- --------------- -                                                    
+         4 Zelaya          F                                                    
+         4 Wallace         F                                                    
+         4 Jabbar          M                                                    
+
+SQL> get lab01_ec.sql
+  1  select ssn, lname, salary
+  2  from jmendoza.employee
+  3  where salary > (select avg(salary)
+  4  		from jmendoza.employee)
+  5  		and
+  6  		dno in (select dno
+  7  	   		      from jmendoza.employee
+  8* 	                      where lower(lname) like '%n%')
+  9  /
+
+SSN       LNAME               SALARY                                            
+--------- --------------- ----------                                            
+666884444 Narayan              38000                                            
+333445555 Wong                 40000                                            
+
+SQL> exit

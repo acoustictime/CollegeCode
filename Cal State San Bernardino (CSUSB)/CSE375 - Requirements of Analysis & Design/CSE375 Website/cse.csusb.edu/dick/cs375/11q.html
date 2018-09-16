@@ -1,0 +1,1015 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/11q.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:55:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+Questions on Class diagrams
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="11q.txt">Text Version</A>]
+ 11q.html 
+Wed Jan 11 07:25:45 PST 2012
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="11q.html#Questions on Class diagrams">Questions on Class diagrams</A>
+<li><a href="11q.html#Chapter 16 pages 225 : Interaction vs Class">: Chapter 16 pages 225 : Interaction vs Class</A>
+<li><a href="11q.html#Could your further explain the 3 different diagrams Communication, Interaction and Sequence">: Could your further explain the 3 different diagrams Communication, Interaction and Sequence</A>
+<li><a href="11q.html#Chapter 15 pages 242 -- Interaction vs Sequence vs Communication">: Chapter 15 pages 242 -- Interaction vs Sequence vs Communication</A>
+<li><a href="11q.html#Chapter 16 pages 248-270 : Why stick to the rules for Diagrams">: Chapter 16 pages 248-270 : Why stick to the rules for Diagrams</A>
+<li><a href="11q.html#Chapter 16 pages 249-??? -- Too Many UML diagrams">: Chapter 16 pages 249-??? -- Too Many UML diagrams</A>
+<li><a href="11q.html#Chapter 12 pages 248-270 -- Class Diagram">: Chapter 12 pages 248-270 -- Class Diagram</A>
+<li><a href="11q.html#Chapter 16 pages 248-270 -- UML Class Diagrams">: Chapter 16 pages 248-270 -- UML Class Diagrams</A>
+<li><a href="11q.html#Chapter 16 pages 249 -- Class diagrams">: Chapter 16 pages 249 -- Class diagrams</A>
+<li><a href="11q.html#Chapter 16 pages 249-270 -- Diagram Progression.">: Chapter 16 pages 249-270 -- Diagram Progression.</A>
+<li><a href="11q.html#Chapter 16 pages 249-270 -- class diagrams --static or dynamic">: Chapter 16 pages 249-270 -- class diagrams --static or dynamic</A>
+<li><a href="11q.html#Chapter 16 pages 248-270 -- UML Keywords">: Chapter 16 pages 248-270 -- UML Keywords</A>
+<li><a href="11q.html#Chapter 18 pages 248-270 -- Names in Class Diagrams">: Chapter 18 pages 248-270 -- Names in Class Diagrams</A>
+<li><a href="11q.html#Chapter 16 pages 249 -- What is a static object modeling?">: Chapter 16 pages 249 -- What is a static object modeling?</A>
+<li><a href="11q.html#Chapter 16 pages 250 -- Class Diagram Notation">: Chapter 16 pages 250 -- Class Diagram Notation</A>
+<li><a href="11q.html#Chapter 11 pages 248-270 -- Class Diagrams">: Chapter 11 pages 248-270 -- Class Diagrams</A>
+<li><a href="11q.html#Chapter 16 pages 248-270 -- Attribute text vs. Association lines">: Chapter 16 pages 248-270 -- Attribute text vs. Association lines</A>
+<li><a href="11q.html#Chapter 16 pages 248-270 -- What's the Relationship Between Interaction and Class Diagrams?">: Chapter 16 pages 248-270 -- What's the Relationship Between Interaction and Class Diagrams?</A>
+<li><a href="11q.html#Chapter 16 pages 250-251 -- Optional diagrams in figure 16.1">: Chapter 16 pages 250-251 -- Optional diagrams in figure 16.1</A>
+<li><a href="11q.html#Chapter 16 pages 252 -- Attribute Text and Association Lines">: Chapter 16 pages 252 -- Attribute Text and Association Lines</A>
+<li><a href="11q.html#Chapter 16 pages 253 -- visibility marks">: Chapter 16 pages 253 -- visibility marks</A>
+<li><a href="11q.html#Chapter 16 pages 257 : UML and pseudocode">: Chapter 16 pages 257 : UML and pseudocode</A>
+<li><a href="11q.html#Chapter 16 pages 248-270 -- Association Class">: Chapter 16 pages 248-270 -- Association Class</A>
+<li><a href="11q.html#Chapter 16 pages 248-270 -- UML Class Diagrams">: Chapter 16 pages 248-270 -- UML Class Diagrams</A>
+<li><a href="11q.html#Chapter 16 pages 256 -- Signatures of Operations">: Chapter 16 pages 256 -- Signatures of Operations</A>
+<li><a href="11q.html#Chapter 16 pages 256 -- Operations Syntax">: Chapter 16 pages 256 -- Operations Syntax</A>
+<li><a href="11q.html#Chapter 16 pages 0 -- class diagrams attributes and operations syntax">: Chapter 16 pages 0 -- class diagrams attributes and operations syntax</A>
+<li><a href="11q.html#Chapter 16 pages 258 -- Keywords">: Chapter 16 pages 258 -- Keywords</A>
+<li><a href="11q.html#Chapter 16 pages 256-257 -- Operations vs Methods">: Chapter 16 pages 256-257 -- Operations vs Methods</A>
+<li><a href="11q.html#Chapter 16 pages 226 -- association classes">: Chapter 16 pages 226 -- association classes</A>
+<li><a href="11q.html#Chapter 16 pages 260 -- Abstract Classes">: Chapter 16 pages 260 -- Abstract Classes</A>
+<li><a href="11q.html#Chapter 16 pages 260 -- Inheritance vs generalization">: Chapter 16 pages 260 -- Inheritance vs generalization</A>
+<li><a href="11q.html#Chapter 16 pages 260-262 -- Dependency vs Association">: Chapter 16 pages 260-262 -- Dependency vs Association</A>
+<li><a href="11q.html#Chapter 16 pages 260 -- Dependency">: Chapter 16 pages 260 -- Dependency</A>
+<li><a href="11q.html#Chapter 16 pages 261 -- Coupling">: Chapter 16 pages 261 -- Coupling</A>
+<li><a href="11q.html#Chapter 16 pages 261 -- dependency and coupling">: Chapter 16 pages 261 -- dependency and coupling</A>
+<li><a href="11q.html#Chapter 16 pages 263 Interface Notations">: Chapter 16 pages 263 Interface Notations</A>
+<li><a href="11q.html#Chapter 16 pages 263 : Interfaces">: Chapter 16 pages 263 : Interfaces</A>
+<li><a href="11q.html#Chapter 16 pages 264 -- composition over aggregation">: Chapter 16 pages 264 -- composition over aggregation</A>
+<li><a href="11q.html#Chapter 16 pages 264 -- Aggregation">: Chapter 16 pages 264 -- Aggregation</A>
+<li><a href="11q.html#Chapter 16 pages 264-266 -- Composition &amp; Association classes">: Chapter 16 pages 264-266 -- Composition &amp; Association classes</A>
+<li><a href="11q.html#Chapter 16.15 pages 265-255 Example of a UML Qualifier">: Chapter 16.15 pages 265-255 Example of a UML Qualifier</A>
+<li><a href="11q.html#Chapter 16.17 pages 266 -- Singleton">: Chapter 16.17 pages 266 -- Singleton</A>
+<li><a href="11q.html#Chapter 16 pages 266-267 -- Singleton Class">: Chapter 16 pages 266-267 -- Singleton Class</A>
+<li><a href="11q.html#Chapter 16 pages 266 -- Singleton">: Chapter 16 pages 266 -- Singleton</A>
+<li><a href="11q.html#Chapter 16 pages 266-267 : Singleton">: Chapter 16 pages 266-267 : Singleton</A>
+<li><a href="11q.html#Chapter 16 pages 267 -- Template Classes and Interfaces">: Chapter 16 pages 267 -- Template Classes and Interfaces</A>
+<li><a href="11q.html#Chapter 16.19 pages 268 -- User-Defined Compartments">: Chapter 16.19 pages 268 -- User-Defined Compartments</A>
+<li><a href="11q.html#Chapter 16-17 : Object Design">: Chapter 16-17 : Object Design</A>
+<li><a href="11q.html#Fowler">: Fowler</A>
+<li><a href="11q.html#answer">: answer</A>
+<li><a href="11q.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="Questions on Class diagrams">Questions on Class diagrams</A></H1><ol class=Section>
+<p>
+<H2><a name="Chapter 16 pages 225 : Interaction vs Class">Chapter 16 pages 225 : Interaction vs Class</A></H2>
+On page 225 Larman states that novices under emphasize interaction and over
+emphasize class diagrams. I am a novice.  After looking at class diagrams,
+I want to create SSD's to get my methods then plug these methods into
+class diagrams. Why do I really need interaction diagrams?
+<p>
+Because you don't know where to put the SSD operations, or what else happens
+when the methods are called.
+<p>
+The  system event should trigger a cascade of operation calls.
+Each call should be to a method with a few lines of code.
+With skill or luck each operation will be in a small class
+along with its data.
+Maintainable and stable code tends to have many smaller classes
+with short methods: 90% have less than 10 lines of code.
+Each understandable on its own.
+<p>
+Most of the operations are <span class="InlineFormula">not in the SSD</span>. Tracking the
+interactions lets you think them out.
+<p>
+So without the interactions...
+you end up with a few bloated classes with large, unmaintainable,
+and buggy methods.  This was a popular approach 20 years ago.
+<p>
+<p>
+<H2><a name="Could your further explain the 3 different diagrams Communication, Interaction and Sequence">Could your further explain the 3 different diagrams Communication, Interaction and Sequence</A></H2>
+I'm not sure when they should be used and what exactly each one accomplishes
+<p>
+Interaction diagrams help you draw design class diagrams.  They define the source
+code in the software your are developing.
+<p>
+[<A href="11q.html#Interaction diagrams"> Interaction diagrams </A>]
+below.
+<p>
+<H2><a name="Chapter 15 pages 242 -- Interaction vs Sequence vs Communication">Chapter 15 pages 242 -- Interaction vs Sequence vs Communication</A></H2>
+I am still struggling with the reasons for each diagram and what makes them
+vital.  Can you clarify the two diagrams and their purpose?
+<p>
+<A name="Interaction diagrams" class="Key"> Interaction diagrams </A>
+are either Sequence diagrams or Communication
+diagrams.  One is good for showing the sequence and the other for
+where the communication is occurring.  That's all.  Some people
+like one and some the other.  I can't guess which is the right one for
+your future career -- so we will do both this quarter.
+<p>
+We use interaction diagrams to design objects that fulfill the user's
+needs.
+<p>
+<H2><a name="Chapter 16 pages 248-270 : Why stick to the rules for Diagrams">Chapter 16 pages 248-270 : Why stick to the rules for Diagrams</A></H2>
+Rules to sticking, it not helps?
+<p>
+The idea is to communicate .. and that means a shared language.
+<p>
+<H2><a name="Chapter 16 pages 249-??? -- Too Many UML diagrams">Chapter 16 pages 249-??? -- Too Many UML diagrams</A></H2>
+In civil and mechanical engineering you haven't done a complete set of
+drawings until you've got a plan and one or more elevations.  In software
+you haven't completely described it until you have both static and dynamic
+models mapped out.
+<p>
+Personal note:  In the 1980's I developed a diagram that did both static
+and dynamic models at once.  I discovered that I needed a three-dimensional
+virtual world to <span class="InlineFormula">draw</span> it in.  I had a student starting work on this project
+but she ended up researching mash-ups.
+<p>
+<H2><a name="Chapter 12 pages 248-270 -- Class Diagram">Chapter 12 pages 248-270 -- Class Diagram</A></H2>
+It looks like class diagrams are very similar to domain diagrams. What are the differences?
+<p>
+Domain diagrams are simplified UML class diagrams:  no operations,
+no visibility, no roll names.  They have a particular purpose:
+to learn about and/or document the world in which the software is
+running.  They also become an inspiration for our software designs.
+<p>
+We also have design diagrams with operations, associations, ....
+We use these to plan how our software will work -- in detail.  Notice
+that the operations come from studying the interactions between objects
+rather than the domain.
+<p>
+Class diagrams are a multipurpose tool.
+<H2><a name="Chapter 16 pages 248-270 -- UML Class Diagrams">Chapter 16 pages 248-270 -- UML Class Diagrams</A></H2>
+How is it decided to use a UML Class Diagram rather than one of the other
+diagrams or models?
+<p>
+Use class diagrams to (1) model the domain  and (2) to model
+the program/source code.
+<p>
+As a rule: do the domain model before SSDs and start the Design class diagram
+after doing one or two interaction diagrams.  Add to the design class
+diagram each time you finish a set of interaction diagrams.
+<p>
+<H2><a name="Chapter 16 pages 249 -- Class diagrams">Chapter 16 pages 249 -- Class diagrams</A></H2>
+What if you are building a small application that does not need to be object oriented? Do you still make a class diagram?
+<p>
+Not really -- but I've done some nice Domain models for presentations
+about software that was not OO.
+<p>
+The only time a project doesn't have a class diagram is when there
+are no classes involved.   The kind of <span class="InlineFormula">trivial</span> programs we tackle
+in CSci201.  Then, of course, you have the badly scheduled project
+where you try to save time to beat the deadline.  Even here
+it is worth drawing a quick and messy class diagram.... to quote
+an ex-student, from long ago, working on a program left behind by another
+program: &quot;What I need is this ^%@$#s programmer's trash can.&quot;
+<p>
+<H2><a name="Chapter 16 pages 249-270 -- Diagram Progression.">Chapter 16 pages 249-270 -- Diagram Progression.</A></H2>
+This isn't entirely about chapter 16.  We've gone over so many different
+diagrams that I'm starting to forget the sequence for them and how they fit
+together.  Could you briefly go over the main ones and bridge one to the
+next?  That'd help more than any question I have about the minutiae of
+class diagrams.
+<p>
+<p>
+OK. First look inside the front cover of the book:
+[<A href="artifactrelationships.gif"> artifactrelationships.gif </A>]
+<p>
+Here is a table based on that.
+<br><strong>Table</strong><table border="1"><tr><th scope="col">From<th scope="col">generate Artifact
+<tr><td>Stakeholders<td>Use Case Diagram
+<tr><td>Use case names+Stakeholders<td>Scenarios, Supp. Spec....
+<tr><td>Scenario<td>SSD
+<tr><td>Stakeholders etc<td>Domain Model
+<tr><td>Operations in SSD<td>Contracts
+<tr><td>Operations+Domain model+Design Classes<td>Interaction diagram
+<tr><td>Interaction diagram+Domain<td>Design Classes
+<tr><td>SSD+Design classes<td>Tests
+<tr><td>Design classes+interactions<td>Source Code
+<tr><td>...
+</table><br>(Close Table)<br>
+<p>
+<H2><a name="Chapter 16 pages 249-270 -- class diagrams --static or dynamic">Chapter 16 pages 249-270 -- class diagrams --static or dynamic</A></H2>
+When is it necessary to use a static or dynamic view class diagram?
+<p>
+Class diagrams are always static.  Interaction diagrams show dynamics.  Do not confuse
+the two types of diagram.
+<p>
+As a rule, you will need a class diagram if there are any classes in your code, but
+you only draw interaction diagrams (one per SSD message) if the interaction is interesting.
+<p>
+<H2><a name="Chapter 16 pages 248-270 -- UML Keywords">Chapter 16 pages 248-270 -- UML Keywords</A></H2>
+What does a UML keyword do when making a UML diagram?
+<p>
+It modifies the meaning of the part of the diagram it is attached to.
+<p>
+<p>
+<H2><a name="Chapter 18 pages 248-270 -- Names in Class Diagrams">Chapter 18 pages 248-270 -- Names in Class Diagrams</A></H2>
+When making function names for class diagrams, do we need to make the names
+as obvious as possible or can we organize it to our liking?
+<p>
+Always make names as obvious as possible.  Learn to like precise naming.
+<p>
+This is especially true of class and function names.
+<p>
+One of the classic refactoring steps in source code is to rename a class,
+function, or attribute to accurately say what it is or does.
+<p>
+<H2><a name="Chapter 16 pages 249 -- What is a static object modeling?">Chapter 16 pages 249 -- What is a static object modeling?</A></H2>
+<p>
+Static is the opposite of dynamic.
+<p>
+Showing the classes and connections between them + their attributes and
+operations.  It is called static because it does not show any changes.  It
+shows the fixed structure of a design.
+<p>
+<H2><a name="Chapter 16 pages 250 -- Class Diagram Notation">Chapter 16 pages 250 -- Class Diagram Notation</A></H2>
+In the figure 16.1 the class diagram looks at the first time overloaded of
+information, its description is very much as the flow of events scenario.
+So, what is the reason to use Class Diagrams in OOA/D that looks very
+ambiguous?
+<p>
+Class diagrams do not show the flow of events.  The show what internal
+events
+are possible.  One class diagram allows hundreds of scenarios.
+<p>
+The class diagram is a central collection of information -- and can be
+quite overwhelming ... and the example in the book deliberately shows you
+every possible
+variation.  Don't do diagrams like this -- except in books and quizzes and
+finals (If asked).
+<p>
+By the way: the Unified Modeling language has something for everybody, but
+most people don't need everything in it.
+<p>
+<H2><a name="Chapter 11 pages 248-270 -- Class Diagrams">Chapter 11 pages 248-270 -- Class Diagrams</A></H2>
+How many different kinds of diagrams use all the basic line ends when
+connecting boxes?  (arrow, diamond, filled arrow, etc.)
+<p>
+The different line ends tend to turn up in different types of diagrams. For
+example the filled (message) arrow head is not used in a class diagram
+for anything.  However the open &quot;stick&quot; arrowhead is used in both
+interaction and class diagrams for different purposes!
+<p>
+<H2><a name="Chapter 16 pages 248-270 -- Attribute text vs. Association lines">Chapter 16 pages 248-270 -- Attribute text vs. Association lines</A></H2>
+What are the differences between the use of Attribute Text and Association
+lines?
+<p>
+They are different ways of saying the almost same thing.
+The line is more obvious.  And so more useful!
+<p>
+You can use both in one diagram.
+<p>
+You can even express the same attribute both ways.  Redundant
+but precises.
+<p>
+First, if the attribute's value is an object in another class in the
+diagram
+then it is best to show the connection clearly as a line.  If the
+diagram is getting cluttered then it is telling you to rethink the
+design.
+<p>
+Second, if the attribute is just a simple data type then you should
+show it in text form.
+<p>
+Other than that,
+You need to make a judgment call about whether to
+do one, the other, or both.   Balance speed with precision.  The good
+news is that doing the wrong thing rarely puts a project at risk.
+<p>
+<p>
+<H2><a name="Chapter 16 pages 248-270 -- What's the Relationship Between Interaction and Class Diagrams?">Chapter 16 pages 248-270 -- What's the Relationship Between Interaction and Class Diagrams?</A></H2>
+The text seems to suggest that an Interaction diagram should come before a Class diagram. Is that always the case?
+<p>
+Close..... It is wise to sort out the interactions before you work out your design.
+So interaction diagrams proceed the Design Class Diagram.
+<p>
+However:  it helps to have a Domain model before you do an interaction diagram.
+<p>
+However2:  In the next iteration you already have a Design Class Diagram and
+draw new interaction diagrams before updating the design.
+<p>
+Interaction diagrams give a dynamic view of a set of objects in different classes
+doing things.  Dynamic means showing the sequence and changes.
+<p>
+Class diagrams show the static view.  It shows what can be done to objects in a class but
+not when.  It also doesn't show why an operation exists -- who uses it or in what
+scenario it is needed.  The dynamic interactions supply this info to the designer.
+<p>
+Rule: do not try to do one diagram that combines interactions and classes.  Have
+one interaction diagram for each step in a scenario plus one class diagram for all
+the classes you are working one.  Many scenarios &gt;--- one DCD.
+<p>
+<H2><a name="Chapter 16 pages 250-251 -- Optional diagrams in figure 16.1">Chapter 16 pages 250-251 -- Optional diagrams in figure 16.1</A></H2>
+The book states that most elements in Figure 16.1 are optional.  Which ones
+are not optional?
+<p>
+First message -- put a PostIt note on Figure 16.1 for project work
+and some quizzes.  You could even
+photocopy it to make a cheat sheet for quizzes.
+<p>
+Larman is providing comfort.  All of them are optional until they are
+needed.  I think of some of them as like some obscure tool that does one
+job
+well and isn't any help otherwise.   It is there in my toolkit.  It
+clutters things up and gets in the way.  But I don't throw it out because
+one day it will be needed again.   For example -- the gadget that makes
+modular phone jacks is a single purpose tool.  And one day I'll need it
+again.
+<p>
+Now some of the notations are like my old hammer and screw drivers....  use
+them
+every day.
+<p>
+Or to put it another way -- which road signs are optional?  Do I have to
+learn
+what they all mean?
+<p>
+<H2><a name="Chapter 16 pages 252 -- Attribute Text and Association Lines">Chapter 16 pages 252 -- Attribute Text and Association Lines</A></H2>
+The book shows 3 ways to show UML Attributes. Attribute text, association
+line, or both. Using both does not seem a good way for me because if you
+change the Attribute text you have to remember to change it in two places
+which in my opinion can lead to errors. Which one do you recommend?
+<p>
+You express the problem well.  I recommend that you don't sweat it.  Make
+a rapid choice and be ready to switch or add notations later.
+<p>
+<p>
+<H2><a name="Chapter 16 pages 253 -- visibility marks">Chapter 16 pages 253 -- visibility marks</A></H2>
+The book indicates + as a public attribute and - as a private attribute,
+which makes sense, but then says that all attributes are assumed private
+otherwise.  Wouldn't this be confusing to someone not familiar with UML?
+Have you had any experience with this?
+<p>
+Yes.   But in an experienced team .... not a problem.
+<p>
+<H2><a name="Chapter 16 pages 257 : UML and pseudocode">Chapter 16 pages 257 : UML and pseudocode</A></H2>
+The book makes only one mention of pseudocode, and it is not in the index.
+I scanned the next chapters but none there either.  Once the class diagram
+is done you have to move to code and I have been taught to go with psuedo-
+code first.  Is there a standard method for pseudocode, and how detailed
+should the class diagrams be to go into pseudocode next.
+<p>
+The UML2.0 <span class="InlineFormula">does</span> provide an
+<A name="Action Language" class="Key"> Action Language </A>
+to define code. <a href="#YAGNI">YAGNI</A> in this class.
+<p>
+My research has not shown me any standard
+<A name="pseudocode" class="Key"> pseudocode </A>
+(notice the spelling so you can Google it!)
+The one in most text books
+(and some courses
+[<A href="http://www.csc.calpoly.edu/~jdalbey/SWE/pdl_std.html"> pdl_std.html </A>]
+) is nearly 25 years old and based on
+a language developed in 1964 called Algol.  This language
+is a great-grandmother of C.  So why not use C with comments?
+<p>
+Joke: What is the name of the pseudocode based on the Java language?
+<a href="#answer">answer</A> below.
+<p>
+Fact: Each team should agree on the pseudocode they want to use.
+<p>
+Fact: modern object-oriented code makes pseudocode a waste of time.
+You might as well write the methods (all 10 lines?) out in the source code
+and TEST them.
+<p>
+But:  If you need a large complex method or algorithm:
+<br><ol class="List">
+<li>Ask if a collection of simpler objects could do the same thing.
+<li>Hit the CSCI books ... and COPY + and say where you got it.
+<li>Source code plus comments... TEST IT.
+</ol><br>
+<p>
+Other problems: teachers need to read/grade paper.
+Old fashioned managers and analysts....
+<p>
+There is also a more abstract
+<A name="Object Constraint Language" class="Key"> Object Constraint Language </A>
+or
+<A name="OCL" class="Key"> OCL </A>
+that is used to specify, without details the properties of operations and data..See ../samples/ocl.html
+<p>
+Personally, I find sequence diagrams with frames and actions (later) are close to pseudocode anyway.
+<p>
+<p>
+<H2><a name="Chapter 16 pages 248-270 -- Association Class">Chapter 16 pages 248-270 -- Association Class</A></H2>
+I am confused when it comes to Association Classes.  Would you please
+explain?
+<p>
+An association indicates a relationship between classes.  Sometimes a
+relationship has a life of its own and needs a third class to keep track of
+it.  This third class knows about each pair of objects that are
+linked plus data about the state of the link.  It will have operations
+that track changes and report on the status.
+<p>
+A classic example -- two people who form a couple...
+<p>
+In mathematical set theory -- the association class is based on the
+Cartesian product.  etc.
+<p>
+They are rare and I tend to replace them by a normal class with
+similar responsibilities.
+<p>
+<H2><a name="Chapter 16 pages 248-270 -- UML Class Diagrams">Chapter 16 pages 248-270 -- UML Class Diagrams</A></H2>
+What is the best way to use a interaction diagram in writing a class, is
+there a method you like best.
+<p>
+I like drawing interaction diagrams while I develop the class diagram.
+<hr><ol class="Box">
+<li>Work out an interaction --using what is in class diagram if possible.
+<li>Modify classes to support the interaction.
+</ol><hr>
+<p>
+Many examples follow in the book.
+<p>
+<H2><a name="Chapter 16 pages 256 -- Signatures of Operations">Chapter 16 pages 256 -- Signatures of Operations</A></H2>
+The book says a change from UML1 to UML2 is that there are no return types
+in the signatures of the operations.  It claims that it is &quot;an obvious
+problem, but purposefully injected into the UML2 specifications.&quot;  Why?
+The book says that some specifications &quot;will revert to a  UML1-ish syntax.&quot;
+How are we required to do the signature.
+<p>
+Stick with the old in this class -- add &quot;:Class Name&quot; to indicate return
+types
+of operations.  More next.
+<H2><a name="Chapter 16 pages 256 -- Operations Syntax">Chapter 16 pages 256 -- Operations Syntax</A></H2>
+Can your break down the UML syntax format for Operations?
+<p>
+<li><a name="operation">operation</A>::= name &quot;(&quot; parameters &quot;)&quot; optional( &quot;:&quot; returned_object_class)
+constraints
+<p>
+The parameters look like this
+<li><a name="parameter">parameter</A>::= name &quot;:&quot; class
+<p>
+<H2><a name="Chapter 16 pages 0 -- class diagrams attributes and operations syntax">Chapter 16 pages 0 -- class diagrams attributes and operations syntax</A></H2>
+when creating our diagrams, should we use some type of standard notation
+for functions and variables, or if we know what programming language we are
+using, we should use the syntax of that language?
+<p>
+In most projects you will have 2 or 3 language involved -- which notation
+should you use?
+<p>
+I'd stick with the standard.
+<p>
+In this class I expect you to use the standard notation:
+<pre> 		void zark(int ping);</pre>
+will loose points, but
+<pre> 		zark (ping:Int)</pre>
+is OK -- and a bit shorter.
+<p>
+<H2><a name="Chapter 16 pages 258 -- Keywords">Chapter 16 pages 258 -- Keywords</A></H2>
+Figure 6.1 only shows a few of the UML keywords, where can I find the
+others?
+<p>
+The Object Management Groups (OMG) web site lists the standard ones
+in the draft UML standard.  I think the UML Language Reference Manual
+also will list them.
+<p>
+I suppose I should put them up on my web site.... but you
+and others can add your own! So there is no complete list.
+By the way -- if you'd like to do an independent study of the keywords
+and stereotypes in UML2.0 -- creating the documentation for my web site...
+you could earn credit for an elective!
+<p>
+<H2><a name="Chapter 16 pages 256-257 -- Operations vs Methods">Chapter 16 pages 256-257 -- Operations vs Methods</A></H2>
+I need some clarification on the operations and methods.
+<p>
+This is jargon.  An operation describes how to call a function
+or how to send a message to a class -- and what to expect in return.  The details
+of how the function/operation does it is called the <span class="InlineFormula">method</span>.  A classic example
+would be
+<pre> 		sort()</pre>
+which reorganizes a set of objects in a container.   This does not define which algorithm
+is to be used -- is it bubble, selection, insertion, quick, merge, or something
+exotic that works well in out application only?
+If we had to specify this we would put it in a comment and call
+that the <span class="InlineFormula">method</span> of <span class="InlineFormula">sort</span>.
+<p>
+<H2><a name="Chapter 16 pages 226 -- association classes">Chapter 16 pages 226 -- association classes</A></H2>
+What's a good way to identify when association classes are needed?   It's not just every time one is shown in our diagram of interfaces, is it?
+<p>
+What is a diagram of interfaces?
+<p>
+You use an association class only when you have a relationship that also has data or
+operations associated with it.
+<p>
+Personally.... I just add a class that &quot;Reifies&quot; the relationship -- which is how you
+code it.
+<p>
+<H2><a name="Chapter 16 pages 260 -- Abstract Classes">Chapter 16 pages 260 -- Abstract Classes</A></H2>
+What is an abstract class?
+<p>
+A class that has no objects of its own.  In C++ you indicate this by writing &quot;=0&quot; in
+any virtual member function.  In Java you declare:
+<pre> 		public abstract class Name {.....}</pre>
+<p>
+Typically, an abstract class is a generalization of a set of concrete classes.  You can
+then declare a pointer that can be attached to any object in any of the
+special concrete classes as the program runs.  You declare it as pointing thru the
+abstract class.  In C++ something it can look like this.
+<pre> 	class Abstract{....};</pre>
+<pre> 	class Concrete1: public Abstract{....};</pre>
+<pre> 	class Concrete2: public Abstract{....};</pre>
+<pre> 		Abstract * pointer;</pre>
+<pre> 		...</pre>
+<pre> 		pointer = new Concrete1(....);</pre>
+<pre> 		...</pre>
+<pre> 		pointer = new Concrete2(....);</pre>
+<pre> 		...</pre>
+<p>
+I have some working examples you can download, compile, run, etc in
+[<A href="http://cse.csusb.edu/dick/cs202/abstraction.html"> ../cs202/abstraction.html </A>]
+<p>
+<p>
+<H2><a name="Chapter 16 pages 260 -- Inheritance vs generalization">Chapter 16 pages 260 -- Inheritance vs generalization</A></H2>
+On page 260, Larman asks if generalization is the same as object oriented inheritance.  He answers &quot;no&quot; if it is used in a domain model conceptual-perspective class diagram.  Then he practically answers &quot;yes&quot; when it is used in DCD software-perspective class diagram.  I'm still a little confused by this and wonder if you can help explain more about this concept?
+<p>
+In the world you (a student) don't have to write
+<pre> 		class Student : public Human {....};</pre>
+to assert your humanity. The relation is part of the domain.
+In C++/Java/.... you do.  And the coding of this
+effect is called &quot;inheritance&quot;.
+<p>
+We use similar class diagrams to picture the world outside the computer -- domain
+models -- and inside the computer  -- Designs.  The idea of &quot;inheritance&quot; has a lot
+of technical baggage -- but in the real world: Cats are Pets and Pets are Animals, and
+Animals are Creatures, and Creatures are Things.
+<p>
+In the domain we are talking philosophy, in the design we are talking technology.
+An Inheritance is a technology for implementing generalization.
+<p>
+<H2><a name="Chapter 16 pages 260-262 -- Dependency vs Association">Chapter 16 pages 260-262 -- Dependency vs Association</A></H2>
+What is the difference between dependency and association and how to
+distinguish them?
+<p>
+A association means that objects in one class know about objects in the
+other
+class.    If the is an association between class A and class B then
+each object <span class="InlineFormula">a</span> in class A knows about a number of B objects.  And vice
+versa.
+Typically <span class="InlineFormula">a</span> has an attribute that refers to a B.
+This is a strong form of dependency.
+<p>
+Class A depends on class B if a change in B is likely to force
+you change B.   It happens in several way:  an operation in
+A uses a B to get some result, An operation A returns an object of
+type B, ...    Notice that an association is also a dependency but we
+don't show it.
+<p>
+<H2><a name="Chapter 16 pages 260 -- Dependency">Chapter 16 pages 260 -- Dependency</A></H2>
+should dependency lines be connected for every component of a package?
+<p>
+Not always. THis can get messy and may indicate a bad architecture.
+If every class in a package has the same dependency -- don't connect them
+all, just the package itself.  If only one or two depend then connect
+them individually.  In between -- a matter of judgment: which statement
+is most valuable: &quot;only these depend&quot;(individual classes), &quot;some of these
+depend&quot;(package).
+<p>
+<H2><a name="Chapter 16 pages 261 -- Coupling">Chapter 16 pages 261 -- Coupling</A></H2>
+Can you explain coupling?
+<p>
+Any time you have two pieces of source code and one of them refers to a name
+defined in the other then they are coupled.  Changing one can break the other.  This
+makes changing code difficult.  And code is always changing.  So we have a dozen
+technologies and techniques that reduce or control coupling.
+<p>
+We will study a more precise definition later in this course.
+<p>
+<H2><a name="Chapter 16 pages 261 -- dependency and coupling">Chapter 16 pages 261 -- dependency and coupling</A></H2>
+Are dependency and coupling the same thing?
+<p>
+They are very close in meaning.
+Coupling is the older term and is a symmetric relationship.  Two
+modules are coupled together.  But one module depends on the other.
+<p>
+Any dependency is a form of coupling.  And couplings can be quite
+weak. But a coupling can be two way (horrible to work with) when
+A depends on B and B depends on A.   Then you always have
+to work on both A and B at once.
+<p>
+<p>
+<H2><a name="Chapter 16 pages 263 Interface Notations">Chapter 16 pages 263 Interface Notations</A></H2>
+Can you explain the figure 16.12 different notations to show interfaces in UML? which one is more popular? The socket one?
+<p>
+All the notations have the same meaning.  Some are easier to draw but less
+detailed.
+<p>
+I have not seen any surveys on the use of these symbols.  The &quot;lollipop&quot; &quot;---o&quot; is
+easy to draw and use.  The &quot;cup&quot; is a little clumsy.  Putting them together to
+describe how software components implement a system -- depends on people using components.
+If they do I'm sure they use the notation -- but again I don't have the figures.
+<p>
+An interface is like a power socket.  If you have the right kind of
+plug you can get power.  And the power can come from a dozen different power stations.
+Because it is a standard your laptop and my iPod can both recharge at the same
+interface.  And we don't care where the power is generated.
+<p>
+An interface describes a set of operations/functions for communicating with a class.
+The client calls those functions and class that has those functions can act as the
+provider of the operations.
+<p>
+By the way... do you know how many interfaces are defined in a large
+program?
+[<A href="http://www.jot.fm/issues/issue_2005_07/article1"> article1 </A>]
+(you don't need this data but it is amazing).
+<p>
+<H2><a name="Chapter 16 pages 263 : Interfaces">Chapter 16 pages 263 : Interfaces</A></H2>
+Are there any other important UML interface notations?
+<p>
+Not for this class.
+<p>
+There are a few other notations (a little square box on the
+boundary of a component) that you can find in the OMG standard
+[<A href="11port.gif"> 11port.gif </A>]
+(on the web if you dig for it). It isn't in the index of <a href="#Fowler">Fowler</A>'s
+book -- but in the diagrams on pages 136-137.
+The square box (a port?) indicates a collection of required
+and provided interfaces that are grouped together.
+This notation may (or may not) become important.
+<p>
+<p>
+<H2><a name="Chapter 16 pages 264 -- composition over aggregation">Chapter 16 pages 264 -- composition over aggregation</A></H2>
+So if composition is vague in UML where should we go in depth with it?
+(glossary, never?)
+<p>
+Composition is defined very precisely -- but many think it is the
+wrong definition:-(
+<p>
+Use it precisely as it is defined: a composition has control over
+the deletion of it's parts.  Removing the whole will destroy
+the parts.
+<p>
+On the other hand <span class="InlineFormula">aggregation</span> is not well defined, see below.
+<p>
+<H2><a name="Chapter 16 pages 264 -- Aggregation">Chapter 16 pages 264 -- Aggregation</A></H2>
+Can you give some examples of why the author recommends that we not use
+aggregation in UML?
+<p>
+Not really -- I have tons of examples of diagrams that use it -- and
+where the author doesn't know what they mean by it!
+<p>
+In CSCI320 we use &lt;&gt;----&gt; to indicate a pointer in a physical data
+structure diagram.  But it is cleaner to do -----&gt;.
+This is the heart of the problem.  &lt;&gt;-----&gt; helps C++ programmers
+indicate pointers to objects.  In abstract and in Java this is a waste of
+time.
+Objects are always handled as pointers!  No need to worry -- the compiler
+does it for you.
+<p>
+<H2><a name="Chapter 16 pages 264-266 -- Composition &amp; Association classes">Chapter 16 pages 264-266 -- Composition &amp; Association classes</A></H2>
+Can composite aggregates [fat diamond arrows] be used in association classes to show a hierarchy?
+<p>
+Yes. It is called the &quot;part-whole&quot; or &quot;HAS A&quot; hierarchy.
+<p>
+Do not confuse it with the &quot;is a special kind of&quot; hierarchy formed by generalization.
+This one dates back to Aristotle.
+<p>
+In OO and in Ontologies we have both hierarchies...
+<p>
+By the way:  Generalization is not a precise hierarchy but a
+&quot;Directed Acyclic Graph&quot; -- no loops but one class can be
+a special case of many more general classes.
+<p>
+<p>
+<H2><a name="Chapter 16.15 pages 265-255 Example of a UML Qualifier">Chapter 16.15 pages 265-255 Example of a UML Qualifier</A></H2>
+The classic example (From Fowler) is having a Sales Order that has many
+Sales Items
+<li><span class=Formula>SalesOrder 1-----------* SalesItem</span>
+but each Sales Item is for a particular Product, and on a given Sales Order
+there is no more than 1 line
+for each Product:
+<li><span class=Formula>SalesOrder [Product]1-----------1 SalesItem</span>
+<p>
+In other words a qualifier acts like a subscript or a key.  Without it many items
+fit, but with it, just one is selected.
+<p>
+<p>
+<p>
+<H2><a name="Chapter 16.17 pages 266 -- Singleton">Chapter 16.17 pages 266 -- Singleton</A></H2>
+Can you give us an example of a Singleton pattern?
+<p>
+A singleton is a class with a single object -- created by the class and
+accessed via the class.
+<p>
+Sample uses:
+<br><ol class="List">
+<li>The number &pi;.  In a math intensive program you need to use the
+value of &pi; in lots of different places.  But you are writing in a pure
+Object-Oriented language so you can't do the C++ thing of an external
+constant
+<pre> #include &lt;cmath&gt;</pre>
+<pre> const double PI = 4*atan(1);</pre>
+So instead you place it in a class called MathConstant and program it
+so that this is static and unchanging once created
+<pre> 		MathConstant.PI</pre>
+(Typical trick: the MathConstant constructor is private).
+<li>If you add E, SQRT2, etc to MathConstant then it is <span class="InlineFormula">still</span> a singleton!
+<li>You want to be hide the details of handling a data base.  So you define a
+single object to which you send all the data base handling commands
+as simple messages with arguments.   The Singleton pattern lets
+you make the data base accessible without exposing which data
+base it is.  You just throw commands at it:
+<pre> 		DataBase::instance().select(&quot;PARTNUMB&quot;, &quot;PART&quot;);</pre>
+<li>To create objects in one
+a family of classes you can have a Factory object that knows,
+for each subclass what kind of object you need and how to construct
+it.
+<li>More later ...
+</ol><br>
+To put it a different way:  Singletons allow us to create operations
+that are in essence free standing functions within the OO paradigm.
+<p>
+<H2><a name="Chapter 16 pages 266-267 -- Singleton Class">Chapter 16 pages 266-267 -- Singleton Class</A></H2>
+How detailed does the singleton class need to be when you are trying to indicate that one instance?
+<p>
+You put a &quot;1&quot; in the box.  And you copy the code from the last singleton you wrote,
+if it isn't already given to you.
+<p>
+Key point:  Singletons are a bore to code.  When you are told you have a framework with
+a Singleton Mumble class (say) then you know that your goinf to be writing
+<pre> 		Mumble * instance = Mumble::getInstance()</pre>
+pretty soon.
+<p>
+In this class I will not expect you to memorize the code for the singleton pattern.
+So you don't have to make space for it in your cheat sheet.
+<p>
+<H2><a name="Chapter 16 pages 266 -- Singleton">Chapter 16 pages 266 -- Singleton</A></H2>
+What projects are the Singleton Pattern mostly used in?
+<p>
+I guess that nearly every project will have a singleton class.
+<p>
+In retrospect -- we should have build them into our programming languages:-(
+<p>
+<p>
+<H2><a name="Chapter 16 pages 266-267 : Singleton">Chapter 16 pages 266-267 : Singleton</A></H2>
+If an object on the UML is noted with the singleton &quot;1&quot;, does that imply
+that it is (or should) be destroyed after the program is done with that
+object?
+<p>
+All objects are destroyed when the program stopped!!!!
+<p>
+<A name="Persistent Objects" class="Key"> Persistent Objects </A>
+are stored in a file or data base before it is too late.
+<p>
+Singleton's are a special case.  You can program them to construct
+themselves when the program restarts or (lazy) the first time they
+are needed. Mostly they don't change state and have a fixed value
+and so you don't have to reread the data.  They are
+&quot;one off&quot; objects.  So you put(hardwire) the values in the code.
+You can load the initial values from a file
+and if they change write them out before the program finishes.
+This is good for parameters.  XML is a natural code for a
+singleton, I guess.
+<p>
+<H2><a name="Chapter 16 pages 267 -- Template Classes and Interfaces">Chapter 16 pages 267 -- Template Classes and Interfaces</A></H2>
+Can you explain template clases and interfaces and their used?
+<p>
+Template classes are classes that have a parameter.  In C++, for example, we have:
+vector, list, deque, stack, queue, etc. etc.  all of them ready to hold any type of
+data we want.  The compiler generates a particular version of the template when we write
+some thing like this
+<pre> 		vector &lt;int&gt; counters(26);</pre>
+<pre> 		vector &lt;double&gt; r(3);</pre>
+etc.
+<p>
+<H2><a name="Chapter 16.19 pages 268 -- User-Defined Compartments">Chapter 16.19 pages 268 -- User-Defined Compartments</A></H2>
+is there any restrictions to how many compartments you can put in a class
+box?
+<p>
+No.
+<p>
+Except wisdom and good taste.
+<p>
+<p>
+<H2><a name="Chapter 16-17 : Object Design">Chapter 16-17 : Object Design</A></H2>
+Should objects reflect their
+counterparts in the real world? In your diagram you show unfilledOrders()
+happening in the Depot. I agree that in the real world the Depot fills
+orders and should know what orders were not filled. On the other hand an
+Order object should know its own status, whether it is filled or not filled
+and it should know what customer it belongs to. So with just this knowledge
+(early iteration) how do I model this object and this method?
+<p>
+The names and attributes of classes in our design often come directly
+from the Domain Model.  The operation do not.  These come from the
+Interaction diagrams we draw the implement messages in out SSDs that
+formalize how use cases work.   These interaction often add
+extra attributes and classes that are not in the domain model.... when
+we have no other choice.
+<p>
+In this particular case(Depot, Stocks, etc),
+there are strong reasons for expecting an Order
+object to be able to name its Customer and Status.  The simplest
+model just connects Order to 1 Customer and 1 Status via a
+couple of associations like this:
+<p>
+<img src="11qSalesOrder.gif" alt="SalesOrder knows its Customer and Status">
+<p>
+When we come to attributes and operations Order might
+have these:
+<hr><ol class="Box">
+<li>- stock:Stock
+<li>- quantity:int
+<li>- customer:Customer
+<li>- status:{fulfilled,unfulfilled}
+<li>....
+<li>+ getCustomer():Customer
+<li>+ getStatus():FufillmentStatus
+</ol><hr>
+(Forgive the improvised notation!)
+<p>
+We would decide on whether these operations and attributes
+are <span class="InlineFormula">really</span> needed in Order by looking at
+the use cases we are developing <span class="InlineFormula">now</span> or have developed.  We would also use
+Larman's <a href="#GRASP">GRASP</A> rules.
+<p>
+This a very important question -- where to allocate responsibilities.
+We will spend most of the rest of the quarter working on it!
+<p>
+As for Depot: my handout explored how a Depot can find out
+what orders are unfulfilled without storing them.  It doesn't
+know the answer to the question.... but it can compute it
+using other objects.
+<p>
+The other approach is worth studying...  unfulfilled orders
+can find out which depot they are in, and so on.
+<p>
+There may be a third, more sophisticated realization
+which needs us to have got as far as the Polymorphism and State patterns...
+<p>
+<p>
+Here is a quick but partial answer to the general question:
+<ul class="Set">
+<li>Many objects inside the
+computer exist to <span class="InlineFormula">reflect real world objects</span>.  They should
+have attributes(data) that match real world properties.  They
+act as surrogates for the real world.  We put these electronic imitations
+in the &quot;Domain Layer&quot; and design them to reflect the &quot;Domain Model&quot;.
+They can have extra attributes if we need them.
+<p>
+<li>There are also lots of objects in computers that have nothing to do
+with reality.
+<p>
+But:
+<p>
+<li>Objects in the computer are defined by their behaviors and these
+are often different to the behaviors found in the real world.  We
+need to allocate operations (responsibilities) to classes
+to make the program work.  We also want to the code to be
+stable: able to absorb later changes (whatever they might be).
+<p>
+<li>We end up with a different set of classes to the obvious
+set of domain classes.
+</ul>
+More to come!
+<p>
+<p>
+<H2><a name="Fowler">Fowler</A></H2>
+Martin Fowler, UML Distilled Third Edn.: A brief guide to the standard
+object
+Modeling language, Addison Wesley, 2005.
+<p>
+<H2><a name="answer">answer</A></H2>
+<A name="Decaf" class="Key"> Decaf </A>
+is the name of Java pseudocode!  &lt;rimshot/&gt;
+</ol>
+</ol>
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci Dept, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10.
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

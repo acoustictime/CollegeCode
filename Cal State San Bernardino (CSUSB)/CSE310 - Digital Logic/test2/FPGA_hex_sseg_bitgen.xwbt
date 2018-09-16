@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Documents and Settings\user\Desktop\test2\FPGA_hex_sseg.ncd
+OUTFILE=C:\Documents and Settings\user\Desktop\test2\FPGA_hex_sseg.bit
+FAMILY=Spartan3
+PART=xc3s200-4ft256
+WORKINGDIR=C:\Documents and Settings\user\Desktop\test2
+LICENSE=WebPack
+USER_INFO=207760173_0_0_057

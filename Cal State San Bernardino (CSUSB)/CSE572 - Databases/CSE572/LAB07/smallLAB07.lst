@@ -1,0 +1,48 @@
+SQL> create view Project_VU("Project","Controlled by Department","Total Project Hours") as
+  2  select pname, dname, sum(hours)
+  3  from project, department, works_on
+  4  where pno = pnumber and dnum = dnumber
+  5  group by pname, dname;
+
+View created.
+
+SQL> desc user_views;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ VIEW_NAME                                 NOT NULL VARCHAR2(30)
+ TEXT_LENGTH                                        NUMBER
+ TEXT                                               LONG
+ TYPE_TEXT_LENGTH                                   NUMBER
+ TYPE_TEXT                                          VARCHAR2(4000)
+ OID_TEXT_LENGTH                                    NUMBER
+ OID_TEXT                                           VARCHAR2(4000)
+ VIEW_TYPE_OWNER                                    VARCHAR2(30)
+ VIEW_TYPE                                          VARCHAR2(30)
+ SUPERVIEW_NAME                                     VARCHAR2(30)
+ EDITIONING_VIEW                                    VARCHAR2(1)
+ READ_ONLY                                          VARCHAR2(1)
+
+SQL> select view_name, text_length, text
+  2  from user_views
+  3  where view_name = 'PROJECT_VU';
+
+VIEW_NAME                      TEXT_LENGTH                                      
+------------------------------ -----------                                      
+TEXT                                                                            
+--------------------------------------------------------------------------------
+PROJECT_VU                             127                                      
+select pname, dname, sum(hours)                                                 
+from project, department, works_on                                              
+where pno = p                                                                   
+                                                                                
+
+SQL> select *
+  2  from Project_vu
+  3  where "Controlled by Department" = 'Administration';
+
+Project         Controlled by D Total Project Hours                             
+--------------- --------------- -------------------                             
+Computerization Administration                   55                             
+Newbenefits     Administration                   55                             
+
+SQL> spool off

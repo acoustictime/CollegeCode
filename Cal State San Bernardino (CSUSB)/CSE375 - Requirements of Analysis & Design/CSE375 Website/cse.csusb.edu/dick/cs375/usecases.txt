@@ -1,0 +1,144 @@
+.Open Use Case Templates
+. Advice
+.List
+ All use cases need a name that starts with a strong verb. 
+ In complex systems you should give each use case a short identifier.
+.As_is 		UC3: Register in class.
+ Each use case is about how  the primary actor achieves some tangible goal.
+ Use cases should be described using text rather than diagrams.
+ A use case is a family of scenarios related to one goal of one user.
+ Scenarios are numbered sequences of steps.
+ Beware small uses cases like 'login', 'logout', 'input one item': these are
+only steps in a user-level use case.
+ Each step should state what an actor does and/or what the system responds.
+ Scenarios can repeat steps but any long branches should be placed as
+an alternative scenario.
+ The steps must not mention how the system does something.
+ Why not write use cases in HTML?
+ Put use cases on a project web site.
+ Keep It Simple: use the simplest format you need.
+ Make sure you store use cases so that they are easily found, edited, and used.
+ Keep track of different versions.
+ Writing use cases is a team sport.
+ Focus on a particular user (give them a name even).
+ Don't get bogged down in all the special ways it can go wrong until you've
+finished the main success story.
+ Don't repeat yourself: if several use cases include the same steps then
+document the common steps as a new named use case and `include` it:
+.As_is 		1. user logs in. Include $login.
+ Document hitches and glitches to the main case as `extensions`: alternative scenarios.
+ Don't document every use case in complete detail at first: start with
+a list of names and then drill down and analyze 10% of them.
+ Analyze the difficult and valuable use cases first.
+ Your analysis of a use case is incomplete until it is `running`.
+ Do the diagram (if any) last.  Good for your power point presentations.
+ Keep a index/table of use case names and their status: named, brief, casual, fully-dressed,
+designed, coded, tested, accepted by stakeholder,
+needs maintenance,..., obsolete, removed to archive.
+.Close.List
+. Level 1 -- Give it a name
+The first level of description is to name the use case and its primary actor.  
+. Level 2 -- Brief Format
+Name + Terse one paragraph description of who does what to get what.
+.As_is Remove abusive poster. 
+.As_is 	The administrator identifies an abusive poster
+.As_is 	and the system blocks the abuser from posting any more messages
+.Open Level 3 -- Casual
+Name
+(Main Success Scenario): one paragraph.
+(Alternate scenario 1):  if ...., one paragraph
+(Alternate scenario 2):  if ...., one paragraph
+.As_is Remove abusive poster. 
+.As_is 	(main): The administrator identifies an abusive poster
+.As_is 	and the system blocks the abuser from posting any more messages
+.As_is 	(Alternative 1): If the administrator identifies a poster
+.As_is 	who is posting a message then the message is rejected and
+.As_is 	the poster informed.
+.As_is 	The system blocks the abuser from posting any more messages
+.Close Casual
+.Open Level 4 -- Fully Dressed
+Here are the headings for a fully dressed use case.
+You don't prepare these for use cases that are neither important nor interesting.
+. Name
+Start with a verb, numbering optional
+.As_is 		UC1: Remove abusive poster.
+. Scope
+The System under Design --(SuD)
+. Level
+User-goal or sub-function
+. Primary Actor
+Asks the $SuD to deliver service to meet goals
+. Stakeholders and Interests
+.Set
+ (stakeholder1): what they want.
+ (stockholder2): what they want.
+.Close.Set
+. Preconditions
+State what special and interesting things must be true for this particular  case to work.
+. Postconditions
+List the interesting things that are true after a scenario is completed.
+.Open Main Success Scenario
+ an actor does something or system responds
+ an actor does something or system responds
+.Close Main Success Scenario
+.Open Extensions
+(steps letter): condition
+.List
+ an actor does something/system does something
+.Close.List
+.Close Extensions
+. Special Requirements
+.Set
+ desired quality or technological limitation
+.Close.Set
+. Variations in Technology and Data
+.Set
+ step number: possible change in technology or data format
+.Close.Set
+. Frequency of Occurrence
+. Miscellaneous
+.Set
+ Question
+ Topic to research
+.Close.Set
+.Close Fully Dressed
+. Fully dressed as a table
+Here is a Tabular Format for a Fully Dressed Use Case.
+.Table
+.Row Name
+.Item Start with a verb, numbering optional
+.Row Scope
+.Item The System under Design
+.Row Level
+.Item User-goal or sub-function
+.Row Primary Actor
+.Item Asks the $SuD to deliver service to meet goals
+.Row Stakeholders and Interests
+.Item (stakeholder1): what they want.
+.Row Preconditions
+.Item State what special and interesting things must be true for this particular  case to work.
+.Row Postconditions
+.Item List the interesting things that are true after a scenario is completed
+.Row Main Success Scenario
+.Item 
+.List
+ actor does something or system responds
+ actor does something or system responds
+ actor does something or system responds
+.Close.List
+.Row Extensions
+.Item (steps letter): condition
+.List
+ actor does something or system responds
+ actor does something or system responds
+.Close.List
+.Row Special Requirements
+.Item desired qualities or technological limitations
+.Row Variations in Technology and Data
+.Item step number: possible change in technology or data format
+.Row Frequency of Occurrence
+.Item How often
+.Row Miscellaneous
+.Item Open issues to research
+.Close.Table
+.Close Use Case Templates

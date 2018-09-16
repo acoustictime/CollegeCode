@@ -1,0 +1,363 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/14.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:51:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+CSci 375/14 Design and Code
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="14.txt">Text Version</A>]
+ 14.html 
+Wed Jan 11 07:25:51 PST 2012
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="14.html#CSci 375/14 Design and Code">CSci 375/14 Design and Code</A>
+<li><a href="14.html#Revision History">Revision History</A>
+<li><a href="14.html#Message of the day">Message of the day</A>
+<li><a href="14.html#From Design into code">From Design into code</A>
+<li><a href="14.html#19 Design for Visibility">: 19 Design for Visibility</A>
+<li><a href="14.html#Chapter 19 pages 363-368 -- popularity of different types of visibility">: Chapter 19 pages 363-368 -- popularity of different types of visibility</A>
+<li><a href="14.html#Chapter 19 pages 366 -- visibility">: Chapter 19 pages 366 -- visibility</A>
+<li><a href="14.html#Error in Figure 19.4">: Error in Figure 19.4</A>
+<li><a href="14.html#20 Mapping Design to Code">: 20 Mapping Design to Code</A>
+<li><a href="14.html#21 Test-Driven Code and Refactoring">: 21 Test-Driven Code and Refactoring</A>
+<li><a href="14.html#22 UML Tools and UML as Blueprint">22 UML Tools and UML as Blueprint</A>
+<li><a href="14.html#Example -- Implementing the Account class">Example -- Implementing the Account class</A>
+<li><a href="14.html#Exercises on Mapping Diagrams to Code">Exercises on Mapping Diagrams to Code</A>
+<li><a href="14.html#Questions and Answers">Questions and Answers</A>
+<li><a href="14.html#Next -- Back to Analysis again">Next -- Back to Analysis again</A>
+<li><a href="14.html#Next Iteration of project -- Find examples of GRASP in your project">Next Iteration of project -- Find examples of GRASP in your project</A>
+<li><a href="14.html#Review Questions">Review Questions</A>
+<li><a href="14.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="CSci 375/14 Design and Code">CSci 375/14 Design and Code</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Date<th scope="col">#<th scope="col">Topic (Participation 2pt)<th scope="col">Study pages (2 pts)<th scope="col">Quiz(15 pts)<th scope="col">Project Work(10 pts)
+<tr><td>Previous<td>13<td>Object Design<td>320-362<td>Q6(271-362)<td>-
+<tr><td>Today<td>14<td>Design..Code<td>363-398<td>-<td>W6(<a href="#GRASP">GRASP</A>)
+<tr><td>Next<td>15<td>More Analysis<td>401-434<td>Q7(1-434)<td>-
+</table><br>(Close Table)<br>
+<H1><a name="Revision History">Revision History</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Version#<th scope="col">Date<th scope="col">Description<th scope="col">Author
+<tr><td>0<td>2005-01-03<td>Used boiler plate to make template<td>RJB
+<tr><td>1<td>2005-01-17<td>Added section headings one or two notes<td>RJB
+<tr><td>2<td>2006-02-16<td>Updated to 2006 format <td>RJB
+<tr><td>3<td>2006-02-23<td>Added some notes <td>RJB
+<tr><td>4<td>2006-12-05<td>Added tools <td>RJB
+<tr><td>5<td>2007-01-10<td>Added link to project <td>RJB
+</table><br>(Close Table)<br>
+<H1><a name="Message of the day">Message of the day</A></H1>
+The wise way of doing something is seldom the quick and dirty way that we
+would like when learning a discipline.
+<p>
+<p>
+<H1><a name="From Design into code">From Design into code</A></H1><ol class=Section>
+<H2><a name="19 Design for Visibility">19 Design for Visibility</A></H2>
+<li>Introduction: How does this object know about the other objects?
+<li>++ Common error: declaring parameters as attributes.
+<li>19.1 Visibility between Objects - Example
+<li>** 19.2 What is visibility -- definitions and types
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Visibility<th scope="col">Life<th scope="col">Scope<th scope="col">Note
+<tr><td>Attribute<td>=object
+<td>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Name<th scope="col">Scope
+<tr><td>private<td>one object
+<tr><td>public<td>All objects (bad)
+<tr><td>protected<td>One object and objects derived from it
+</table><br>(Close Table)<br>
+<td>Very common. Keep private.
+<tr><td>Static Attribute<td>=program<td>One class<td>Shared by all objects in a class.
+<tr><td>Parameter<td>one operation call<td>method<td>communication between caller and called
+<tr><td>Local<td>one operation call<td>one block(C++)/method(Java)<td>Needs initialization.
+<tr><td>Global<td>For ever<td>Any object<td>Just say NO to global variables.
+Use either
+[<A href="patterns.html#Singleton"> patterns.html#Singleton </A>]
+or a class with a public static getter operation.
+</table><br>(Close Table)<br>
+<H2><a name="Chapter 19 pages 363-368 -- popularity of different types of visibility">Chapter 19 pages 363-368 -- popularity of different types of visibility</A></H2>
+Out of the types of visibility (attribute, static attribute, parameter, local, and global) which one is the most commonly used in object-oriented programming?
+<p>
+It is not a matter of popularity!   You must not think that you can guess the most popular
+visibility for a particular item of data.  You must discover the <span class="InlineFormula">right</span> one.
+<p>
+Worse -- a particular piece of data will have different visibilities to different classes, and
+at different times.  For example:  the Widget class may keep a local &quot;knobs&quot; attributes,
+but pass it to another class as a parameter.  The receiving class could then store it in a
+variable that is local to the method...
+<p>
+But -- as a rule --
+the smaller the scope of a variable the less trouble you will have with accidental usage. So,
+most experienced programmers will prefer local to parameter, parameter to attribute,
+attribute to global.  In deed most will reject globally visible data, out of hand.
+<p>
+So:
+<br><ol class="List">
+<li>Local -- safest
+<li>Parameter
+<li>Attribute
+<li>Static Attribute
+<li>Global -- worst
+</ol><br>
+<p>
+<li>++ Visibility implies a coupling.
+<p>
+<li>+++ You can also apply an operation to a visible object to get to other objects.
+<p>
+<H2><a name="Chapter 19 pages 366 -- visibility">Chapter 19 pages 366 -- visibility</A></H2>
+Can you explain more detail about types of visibility?
+Also what is the
+difference between the diagram on the book page 366 figure 19.2,3,4,5 /
+attribute visibility and local visibility, Parameter visibility and
+Parameter to attribute visibility?
+<p>
+Walkthrough in class.
+<p>
+<H2><a name="Error in Figure 19.4">Error in Figure 19.4</A></H2>
+There are two messages numbered &quot;2&quot;. This one
+<pre> 			desc = getProductDescription(id)</pre>
+should be number 1.
+<H2><a name="20 Mapping Design to Code">20 Mapping Design to Code</A></H2>
+<li><span class=Formula>Introduction</span>
+<li><span class=Formula>20.1 Programming as iterative and evolutionary</span>
+<li><span class=Formula>20.2 Design to code</span>
+<li><span class=Formula>** 20.3 DCD to Class Definitions</span>
+<li><span class=Formula>** 20.4 Interactions to Methods</span>
+<li><span class=Formula>** 20.5 Collection Objects.</span>
+<li><span class=Formula>+++ Aim high:</span>
+<br><ol class="List">
+<li>Declare object variables as pointers.
+<li>Declare type of object variables as general as possible.
+<li>Declare pointers(C++, objects in Java) at the most abstract class and then they
+can actually point at lots of different types of low level objects.
+</ol><br>
+<li><span class=Formula>** 20.6 Exceptions and Errors</span>
+<li><span class=Formula>20.7 Example: Sale.makeLineItem method</span>
+<li><span class=Formula>** 20.8 Order of Implementation</span>
+<li><span class=Formula>20.9 Test First Development</span>
+<li><span class=Formula>=~= Test Driven Development -- (TDD)</span>
+<hr><ol class="Box">
+My experience with TDD:
+<li>It is a lot more fun than Test-Last development.
+(And fun = motivation = productivity).
+<li>It guides you to simple and elegant solutions that
+&quot;Do the simplest thing that could possible work&quot;.
+<li>The tests are excellent live (tested) documentation
+of the software.
+<li>+++ As a rule, when coding a class -- start by coding a unit test of the class, then
+make the class pass the test.
+</ol><hr>
+<li><span class=Formula>Simple example:  develop a function that tests for primality --</span>
+[<A href="tprime.cpp"> tprime.cpp </A>]
+(first version),
+[<A href="tp1.cpp"> tp1.cpp </A>]
+(2nd),
+[<A href="tp2.cpp"> tp2.cpp </A>]
+(3rd), etc..
+<li><span class=Formula>* 20.10 Summary</span>
+<p>
+<li><span class=Formula>20.11 NextGen Code  (not on any quiz/final)</span>
+<li><span class=Formula>20.12 Monopoly code (ditto)</span>
+<H2><a name="21 Test-Driven Code and Refactoring">21 Test-Driven Code and Refactoring</A></H2>
+<li><span class=Formula>Introduction</span>
+<li><span class=Formula>*** 21.1 Test Driven Code: USE IT (no quiz/final question)</span>
+<li><span class=Formula>+++++ In C++ master using the assert function to test classes/objects.</span>
+<li><span class=Formula>+++ Get into the habit of writing unit tests before you write the class.</span>
+<li><span class=Formula>*** 21.2 Refactoring: USE IT (no quiz/final question)</span>
+<li><span class=Formula>++ These two disciplines fit together.</span>
+<hr><ol class="Box">
+<li>You can't refactor easily without tests.
+<li>Test driven code needs to be refactored to maintain a clean
+design.
+<li>A clean design is easier to change -- and things will change.
+</ol><hr>
+<li><span class=Formula>21.3 Resources</span>
+<li><span class=Formula>++ Only wear one hat at a time!</span>
+<ul class="Set">
+<li>Either refactor or extend, not both.
+<li>Either work on interfaces or implementations, not both.
+</ul>
+<li><span class=Formula>++ A key idea:</span>
+<A name="DRY" class="Key"> DRY </A>
+Don't repeat yourself!
+<li><span class=Formula>A very good study of refactoring is Uncle Bob Martin's &quot;Clean Code&quot; book.</span>
+</ol>
+<H1><a name="22 UML Tools and UML as Blueprint">22 UML Tools and UML as Blueprint</A></H1>
+<li><span class=Formula>22.1 Forward, Reverse, and Roundtrip</span>
+<li><span class=Formula>-- 22.2 Tools can get in the way</span>
+<li><span class=Formula>22.3 What to look for in a tool</span>
+<li><span class=Formula>22.4 Updating sketches</span>
+<li><span class=Formula>22.5 Recommended Resources</span>
+<H1><a name="Example -- Implementing the Account class">Example -- Implementing the Account class</A></H1>
+UML diagram of the Account class from Deitel and Deitel's ATM example.
+Found in the CSUSB's Library-&gt;EBooks-&gt;Safari-&gt;Deitel-&gt;... page306.  This
+is part of an ATM program running at a bank.  Typical scenario involves the
+customer providing a PIN and inputting money and getting money.  These effect the
+customer's account.
+<p>
+<img src="Account.png" alt="[UML class Account]">
+<p>
+Note 1: credits from the ATM are not immediately available but are added to the total balance
+until confirmed by a separate application run inside the bank...
+<p>
+Note 2: The Account does not verify that the Customer
+has available funds. This responsibility is allocated to the
+&quot;Withdrawal&quot; class which acts as a session Controller for Customer withdrawals.
+<p>
+Note 3: The Account will need a constructor... and for testing something
+like this
+<pre> 	Account ( int acctN, int PIN, double aBal, double tBal);</pre>
+will fit the class diagram well.  The resulting file looks like:
+[<A href="Account.cpp"> Account.cpp </A>]
+<p>
+Here is the TDD test:
+[<A href="test.Account.cpp"> test.Account.cpp </A>]
+which fails to even compile.
+<p>
+We will now &quot;Do The Simplest Thing That Could Possibly Work&quot; and so
+develop the code for the class.
+<p>
+<p>
+<H1><a name="Exercises on Mapping Diagrams to Code">Exercises on Mapping Diagrams to Code</A></H1>
+[<A href="14x.html"> 14x.html </A>]
+<H1><a name="Questions and Answers">Questions and Answers</A></H1>
+[<A href="14q.html"> 14q.html </A>]
+<H1><a name="Next -- Back to Analysis again">Next -- Back to Analysis again</A></H1>
+[<A href="15.html"> 15.html </A>]
+for reading etc.
+<H1><a name="Next Iteration of project -- Find examples of GRASP in your project">Next Iteration of project -- Find examples of GRASP in your project</A></H1>
+[<A href="w6.html"> w6.html </A>]
+due at start of class 15.
+<H1><a name="Review Questions">Review Questions</A></H1>
+[<A href="14r.html"> 14r.html </A>]
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci Dept, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10.
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

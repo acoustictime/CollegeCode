@@ -1,0 +1,142 @@
+* {	
+	margin: 0px auto;	
+	
+}
+
+head {
+	width:800px;
+	text-align:center;
+	
+}
+
+body {	
+
+	width:800px;
+}
+
+h1 {
+	background-color:#eee;
+	width:800px;
+	border-radius: 2em;
+	border-style:solid;
+	text-align:center;
+	margin:10px;
+}
+
+h2 {
+	font-size:16px;
+	text-align:center;
+	margin:15px;
+
+}
+
+
+
+#images {
+	text-align:center;
+}
+
+#me {
+	font-size:1.5em;
+	line-height: 1.5;
+}
+
+#section_split {
+	width:800px;
+	border-radius: 2em;
+	border-style:solid;
+	text-align:center;
+	margin:15px;
+	box-shadow: 10px 10px 8px -2px black; 
+}
+
+#nav {
+	width:800px;
+	text-align:center;
+	margin:20px auto;
+}
+
+#nav li {
+	display:inline;
+	font-size:2em;
+	padding:8px;
+	text-decoration:none;
+	border-radius: 2em;
+	
+}
+
+#nav li:hover {
+	background-color:#eee;
+	border:2px solid;
+}
+
+#me {
+	magin:25px;
+	padding:15px;
+}
+
+#tabs {
+	margin:25px;
+}
+
+#red {
+	margin:10px;
+}
+
+#blue{
+	margin:10px;
+}
+
+#green {
+	margin:10px;
+}
+
+#footer {
+	margin:20px;
+	text-align:center;	
+	width:500px;
+	height:15px;
+	margin:auto;
+}
+
+#tabs .ui-tabs-nav {
+	height: 2.35em;
+	text-align: center;
+}
+#tabs .ui-tabs-nav li {
+	display: inline-block;
+	float: none;
+	margin: 0em;
+}
+
+#red .ui-slider-range { background: red; }
+#red .ui-slider-handle { border-color: black; }
+#green .ui-slider-range { background: green; }
+#green .ui-slider-handle { border-color: black; }
+#blue .ui-slider-range { background: blue; }
+#blue .ui-slider-handle { border-color: black; }
+
+
+#datePicker {
+	margin:10px;
+}
+
+#sizeSlider {
+	margin:20px;
+}
+
+#displayDate {
+	text-align:center;
+	font-size:5px;
+}
+
+#redButton {
+	display: block; 
+	background-color:red;
+}
+
+#blueButton {
+	display: block; 
+	background-color:blue;
+}
+

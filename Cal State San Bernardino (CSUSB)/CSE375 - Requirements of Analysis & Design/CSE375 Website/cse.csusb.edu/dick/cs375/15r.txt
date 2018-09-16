@@ -1,0 +1,12 @@
+. Review Questions 15 -- More Analysis
+ What is an iteration? 
+ In the Unified Process what do we emphasize: make it complete | make it good |
+make it fast | use Java | drawing all the diagrams first and then code |
+write the code first and then draw the diagrams ? (pick the best fitting answer)
+ Give an example of generalization for a domain model
+that is not in the text or on the web site.
+Include a diagram.
+ When do you use generalization in a domain model (Guideline)? 
+ What classes should be {abstract}?
+ Draw a diagram of these facts: Square are Rectangles, Rectangles are Figures,
+an Ellipse is a Figure, All Triangles are Figures.

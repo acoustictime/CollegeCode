@@ -1,0 +1,41 @@
+select ssn, lname, salary
+from jmendoza.employee
+where salary > (select avg(salary)
+		from jmendoza.employee)
+
+		and
+
+		dno in (select dno
+	   		      from jmendoza.employee
+	                      where lower(lname) like '%n%')
+select lname, bdate
+from jmendoza.employee
+where dno = (select dno
+	     from jmendoza.employee
+ 	     where lname = 'Wallace')
+
+	     minus
+
+             (select lname, bdate
+             from jmendoza.employee
+             where lname = 'Wallace')
+
+select ssn, lname
+from jmendoza.employee
+where salary > (select avg(salary)
+		from jmendoza.employee)
+order by salary
+select ssn, lname
+from jmendoza.employee
+where dno in (select dno
+	      from jmendoza.employee
+	      where lower(lname) like '%l%')
+select e.lname, e.dno, e.gender
+from jmendoza.employee e, jmendoza.department d, jmendoza.dept_locations l
+where e.dno = d.dnumber and d.dnumber = l.dnumber and l.dlocation = 'Bellaire'
+select e.lname, e.salary
+from jmendoza.employee e, jmendoza.employee d
+where e.superssn = d.ssn and d.lname = 'Wallace'
+select dno, lname, gender
+from jmendoza.employee, jmendoza.department
+where dno = dnumber and dname = 'Administration'

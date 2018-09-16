@@ -1,0 +1,211 @@
+<html>
+
+<!-- Mirrored from cse.csusb.edu/kay/cs330/lab7.html by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 27 Mar 2012 14:57:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+<title>CSE 330 Lab 7</title>
+</head>
+<body>
+
+<h1>CSE 330 Lab 7: Deque</h1>
+
+<p>
+Complete the implemention of class <code>Deque</code> below. 
+<p>
+The test codes <code>Deque_test.cpp</code> and <code>test.cpp</code> should compile
+and run with your implementation
+without any warnings or errors.
+<p>
+Do not use STL <code>Deque</code>.
+
+<hr>
+
+<pre>
+#ifndef DEQUE_H
+#define DEQUE_H
+
+// Deque.h - an implementation of double-ended queue
+
+#include &lt;vector>
+
+using namespace std;
+
+template &lt;class T> class DequeIterator;
+
+template &lt;class T>
+class Deque {
+public:
+	typedef DequeIterator&lt;T> iterator;
+	
+	Deque(): vecOne(), vecTwo() { }
+	Deque(const unsigned int size, const T& initial): vecOne(size/2, initial), vecTwo(size-(size/2), initial) { }
+	Deque(const Deque&lt;T> & d): vecOne(d.vecOne), vecTwo(d.vecTwo) { }
+        ~Deque() { } // destructors for vecOne and vecTwo are automatically called
+                     // never call a destructor explicitly
+        Deque & operator=(const Deque&lt;T> & d);
+
+	T & operator[](unsigned int);
+	T & front();
+	T & back();
+	bool empty();
+	iterator begin();
+	iterator end();
+	void erase(const iterator &);
+	void erase(const iterator &, const iterator &);
+	void insert(const iterator &, const T &);
+	int size();
+	void push_front(const T & value);
+	void push_back(const T & value);
+	void pop_front();
+	void pop_back();
+protected:
+	vector&lt;T> vecOne;
+	vector&lt;T> vecTwo;
+};
+
+// Your code goes here ...
+
+template &lt;class T>
+class DequeIterator {
+	friend class Deque&lt;T>;
+	typedef DequeIterator&lt;T> iterator;
+public:
+	DequeIterator(): theDeque(0), index(0) { }
+	DequeIterator(Deque&lt;T> * d, int i): theDeque(d), index(i) { }
+	DequeIterator(const iterator & d): theDeque(d.theDeque), index(d.index) { }
+
+	T & operator*();
+	iterator & operator++();
+	iterator operator++(int);
+	iterator & operator--();
+	iterator operator--(int);
+	bool operator==(const iterator & r);
+	bool operator!=(const iterator & r);
+	bool operator&lt;const iterator & r);
+	T & operator[](unsigned int i);
+	iterator operator=(const iterator & r);
+	iterator operator+(int i);
+	iterator operator-(int i);
+protected:
+	Deque&lt;T> * theDeque;
+	int index;
+};
+#endif
+</pre>
+
+<hr>
+
+<pre>
+// Deque_test.cpp
+
+#include &lt;iostream>
+#include &lt;cassert>
+
+#include "Deque.h"
+
+using namespace std;
+
+main()
+{
+	Deque&lt;int> d;
+
+	d.push_back(10);
+	d.push_back(20);
+	assert(d.front() == 10);
+	assert(d.back() == 20);
+
+	d.push_front(1);
+	d.push_front(2);
+	d.push_front(3);
+	assert(d.front() == 3);
+	assert(d.back() == 20);
+
+	d.pop_back();
+	d.pop_back();
+	d.pop_back();
+	assert(d.front() == 3);
+	assert(d.back() == 2);
+
+	d.push_back(1);
+	d.push_back(0);
+
+	Deque&lt;int>::iterator i;
+	int counter = 3;
+	for (i = d.begin(); i != d.end(); i++)
+		assert(*i == counter--);
+
+	for (counter = 0; counter &lt; d.size(); counter++)
+		assert(d[counter] == d.size()-counter-1);
+
+	i = d.begin() + 3;
+	Deque&lt;int>::iterator j(i), k;
+	k = j = i - 2;
+	assert(*k == 2);
+
+	for (i = d.begin(); not(i == d.end()); ++i)
+		cout << *i << " ";
+	cout << endl;
+
+	d.erase(d.begin()+3);
+	d.erase(d.begin(), d.begin()+2);
+	assert(d.size() == 1);
+	assert(d[0] == 1);
+
+	Deque&lt;int> c(d);
+	c.front() = 3;
+	assert(c.back() == 3);
+
+	c.push_front(1);
+	c.insert(c.begin(), 0);
+	c.insert(c.begin()+2, 2);
+
+	for (i = c.begin(); not(i == c.end()); ++i)
+		cout << *i << " ";
+	cout << endl;
+
+	for (counter = 0; counter &lt; c.size(); counter++)
+		assert(c[counter] == counter);
+
+	cout << "SUCCESS\n";
+}
+</pre>
+
+
+
+<hr>
+
+<pre>
+// test.cpp
+
+#include &lt;iostream>
+#include &lt;cassert>
+//#include &lt;queue>
+#include "Deque.h"
+
+using namespace std;
+
+main()
+{
+	Deque&lt;int> d;
+
+	d.push_back(10);
+	d.push_back(20);
+	d.push_front(1);
+	d.push_front(2);
+	d.push_front(3);
+
+	Deque&lt;int> c;
+	c = d;
+
+	Deque&lt;int>::iterator i;
+	for (i = c.begin(); i != c.end(); ++i)
+		cout << *i << " ";
+	cout << endl;
+}
+</pre>
+<hr>
+</body>
+
+<!-- Mirrored from cse.csusb.edu/kay/cs330/lab7.html by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 27 Mar 2012 14:57:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>

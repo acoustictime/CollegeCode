@@ -1,0 +1,17 @@
+
+
+528  *     *event   *Europe         *MS     *Justinian begins new codification of Roman law *
+532  *     *event   *Constantinople *MS     *Monophysite rebellion, destroyed half of city !, under Justinian *
+533  *     *event   *Europe         *MS     *Justinian starts reconquest of West *
+534  *     *event   *France         *CM     *Franks conquer Burgundy *
+537  *     *event   *Europe         *CM     *Franks conquer Provence & E Switzerland *
+540  *     *event   *Italy          *CM     *Ostragoths retake most of Italy from Roman forces *
+550  *     *work    *Europe         *MS     *fibulae, gilt, bronze *
+553  *     *event   *Europe         *ART 153*Ostragoths dissolved (Arian) *
+568  *     *event   *Ravenna        *MS     *Lombards start rule, accept Christianity*
+596  *     *event   *England        *MS     *St Augustine to England,1st Archbishop of Canterbury *
+622  *     *event   *Arabia         *LG     *Moslem era begins *
+632  *     *event   *Jerusalem      *LG     *Moslem conquest of Jerusalem *
+640  *     *event   *Egypt          *GZ     *Moslem conquest of Egypt *
+650  *     *event   *Jerusalem      *ART 153*Church of Holy Sepulchre destroyed*
+

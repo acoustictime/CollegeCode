@@ -1,0 +1,29 @@
+Command line:
+   FPGA_hex_sseg_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  1133
+
+Tue Feb 19 11:09:45 2013
+
+
+ Elaboration Time: 0.078125 sec
+
+ Current Memory Usage: 306.5 Meg
+
+ Total Signals          : 110
+ Total Nets             : 112
+ Total Signal Drivers   : 40
+ Total Blocks           : 18
+ Total Primitive Blocks : 12
+ Total Processes        : 45
+ Total Traceable Variables  : 25
+ Total Scalar Nets and Variables : 278
+Total Line Count : 93
+
+ Total Simulation Time: 0.078125 sec
+
+ Current Memory Usage: 306.5 Meg
+
+Tue Feb 19 11:09:47 2013
+

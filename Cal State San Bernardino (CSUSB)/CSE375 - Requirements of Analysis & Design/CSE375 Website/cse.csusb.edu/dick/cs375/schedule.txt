@@ -1,0 +1,138 @@
+. CSci 375 Draft Schedule
+.Table Date	Topic(Class2 pts) 	Study pages	Revu(2 pts)	Quiz(15 pts) or Project Work(10 pts)
+.Row Tu 1/8	Surviving CSci375	-
+.See ./01.html
+.Item -
+.Item Mock $Q0 and $W0
+.Row Th 1/10	Introduction
+.Item vii-40
+.See ./02.html
+.Item 
+.See ./02r.html
+.Item Kickoff Project
+.See ./w0.html
+.Row Tu 1/15	Inception
+.Item 41-59
+.See ./03.html
+.Item 
+.See ./03r.html
+.Item Q1(1-59)
+.Row Th 1/17	Use Cases
+.Item 61-89
+.See ./04.html
+.Item 
+.See ./04r.html
+.Item W1 (section 4.3)
+.See ./w1.html
+.Row M 1/21	HOLIDAY
+.Row Tu 1/22	More Requirements
+.Item 89-120
+.See ./05.html
+.Item 
+.See ./05r.html
+.Item Q2(61-120)
+.Row Th 1/24	Domain Modeling I
+.Item 121-157
+.See ./06.html
+.Item 
+.See ./06r.html
+.Item W2(Use Case Model 1)
+.See ./w2.html
+.Row M 01/28	--	LAST DROP
+.Row Tu 1/29	Domain Modeling II
+.Item 157-171
+.See ./07.html
+.Item 
+.See ./07r.html
+.Item Q3(121-171)
+.Row Th 1/31	SSDs
+.Item 173-196
+.See ./08.html
+.Item 
+.See ./08r.html
+.Item W3(Domain Model 1)
+.See ./w3.html
+.Row Tu 2/05	Packages
+.Item 197-219
+.See ./09.html
+.Item 
+.See ./09r.html
+.Item Q4(173-219)
+.Row Th 2/07	Interactions
+.Item 221-247
+.See ./10.html
+.Item 
+.See ./10r.html
+.Item W4(move to design)
+.See ./w4.html
+.Row Tu 2/12	Class Diagrams
+.Item 248-270
+.See ./11.html
+.Item 
+.See ./11r.html
+.Item Q5(221-270)
+.Row Th 2/14	$GRASP I
+.Item 271-319
+.See ./12.html
+.Item 
+.See ./12r.html
+.Item W5(Interactions & Classes)
+.See ./w5.html
+.Row Tu 2/19	Object Design
+.Item 320-362
+.See ./13.html
+.Item 
+.See ./13r.html
+.Item Q6(271-362)
+.Row Th 2/21	Design..Code
+.Item 363-398
+.See ./14.html
+.Item 
+.See ./14r.html
+.Item W6($GRASP)
+.See ./w6.html
+.Row Tu 2/26	More Analysis
+.Item 401-413
+.See ./15.html
+.Item 
+.See ./15r.html
+.Item Q7(1-413) 
+.Row Th 2/28	$GRASP II
+.Item 413-435
+.See ./16.html
+.Item 
+.See ./16r.html
+.Item W7(Model 2)
+.See ./w7.html
+.Row Tu 3/05	$GoF Patterns
+.Item 435-476
+.See ./17.html
+.Item 
+.See ./17r.html
+.Item Q8(1-471)
+.Row Th 3/07	Domain Modeling III
+.Item 501-539
+.See ./18.html
+.Item 
+.See ./18r.html
+.Item W8(Model 3: model 2 improved)
+.See ./w8.html
+.Row Tu 3/12	Review Interactions and DCDs
+.Item 221-270
+.See ./19.html
+.Item 
+.See ./19r.html
+.Item Q9(1-535)
+.Row Th 3/14	Review
+.Item All
+.See ./20.html
+.Item 
+.See ./20r.html
+.Item W9(Model 4)
+.See ./w9.html
+.Row Tu 3/19	Final 4-5:50pm	All
+.Row F 3/22	Grades to WWW
+.Row Tu 3/26	Grades to CMS
+.Close.Table
+Q0::=`A mock quiz on the terminology used in $OOAD`.
+W0::=`An introduction to some projects`.

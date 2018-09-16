@@ -1,0 +1,236 @@
+SQL> start create_employee.sql
+ 13  ;
+
+Table created.
+
+SQL> start create_department.sql
+  7  ;
+
+Table created.
+
+SQL> start create_dept_locations
+  6  ;
+
+Table created.
+
+SQL> start create_project.sql
+  7  ;
+
+Table created.
+
+SQL> start create_works_on.sql
+  7  ;
+
+Table created.
+
+SQL> start create_dependent.sql
+  9  ;
+
+Table created.
+
+SQL> alter table employee CONSTRAINT employee_super_ssn_FK FOREIGN KEY (super_ssn) REFERENCES Employee(ssn);
+alter table employee CONSTRAINT employee_super_ssn_FK FOREIGN KEY (super_ssn) REFERENCES Employee(ssn)
+                     *
+ERROR at line 1:
+ORA-01735: invalid ALTER TABLE option 
+
+
+SQL> alter table employee add CONSTRAINT employee_super_ssn_FK FOREIGN KEY (super_ssn) REFERENCES Employee(ssn);
+
+Table altered.
+
+SQL> alter table employee add CONSTRAINT employee_dno_FK FOREIGN KEY (dno) REFERENCES Department(dnumber);
+
+Table altered.
+
+SQL> alter table dept_locations add CONSTRAINT dept_locations_dnumber_FK FOREIGN KEY (dnumber) REFERENCES Department(dnumber);
+
+Table altered.
+
+SQL> alter table project add CONSTRAINT project_dnum_FK FOREIGN KEY (dnum) REFERENCES Department(dnumber);
+
+Table altered.
+
+SQL> alter table dependent add CONSTRAINT dependent_essn_FK FOREIGN KEY (essn) REFERENCES Employee(ssn);
+
+Table altered.
+
+SQL> alter table works_on add CONSTRAINT works_on_essn_FK FOREIGN KEY (essn) REFERENCES Employee(ssn);
+
+Table altered.
+
+SQL> alter table works_on add CONSTRAINT works_on_pno_FK FOREIGN KEY (pno) REFERENCES Project(pnumber);
+
+Table altered.
+
+SQL> alter table works_on drop CONSTRAINT works_on_essn_FK cascade;
+
+Table altered.
+
+SQL> alter table works_on add CONSTRAINT works_on_essn_FK FOREIGN KEY (essn) REFERENCES Employee(SSN) on delete cascade;
+
+Table altered.
+
+SQL> alter table dependent drop CONSTRAINT dependent_essn_FK cascade;
+
+Table altered.
+
+SQL> alter table dependent add CONSTRAINT dependent_essn_FK FOREIGN KEY (essn) REFERENCES Employee(ssn) on delete cascade;
+
+Table altered.
+
+SQL> desc employee;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SSN                                       NOT NULL CHAR(9)
+ FNAME                                     NOT NULL VARCHAR2(15)
+ MINIT                                              CHAR(1)
+ LNAME                                     NOT NULL VARCHAR2(15)
+ BDATE                                              DATE
+ ADDRESS                                            VARCHAR2(40)
+ SEX                                                CHAR(1)
+ SALARY                                             NUMBER(7,2)
+ SUPER_SSN                                          CHAR(9)
+ DNO                                       NOT NULL VARCHAR2(3)
+
+SQL> desc department;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ DNUMBER                                   NOT NULL VARCHAR2(3)
+ DNAME                                              VARCHAR2(20)
+ MGR_SSN                                   NOT NULL CHAR(9)
+ MGR_START_DATE                                     DATE
+
+SQL> desc dept_locations;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ DNUMBER                                   NOT NULL VARCHAR2(3)
+ DLOCATION                                 NOT NULL VARCHAR2(15)
+
+SQL> desc project;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PNUMBER                                   NOT NULL VARCHAR2(5)
+ PNAME                                              VARCHAR2(20)
+ PLOCATION                                          VARCHAR2(20)
+ DNUM                                               VARCHAR2(3)
+
+SQL> desc works_on;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ESSN                                      NOT NULL CHAR(9)
+ PNO                                       NOT NULL VARCHAR2(5)
+ HOURS                                              NUMBER(3,2)
+
+SQL> desc dependent;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ESSN                                      NOT NULL CHAR(9)
+ DEPENDENT_NAME                            NOT NULL VARCHAR2(20)
+ SEX                                                CHAR(1)
+ BDATE                                              DATE
+ RELATIONSHIP                              NOT NULL VARCHAR2(15)
+
+SQL> spool off
+SQL> select constraint_name, constraint_type,search_condition
+  2  from user_constraints
+  3  where table_name = any('EMPLOYEE','DEPARTMENT','DEPT_LOCATIONS','PROJECT','WORKS_ON','DEPENDENT');
+
+CONSTRAINT_NAME                C                                                
+------------------------------ -                                                
+SEARCH_CONDITION                                                                
+--------------------------------------------------------------------------------
+DEPARTMENT_MGR_SSN_NN          C                                                
+"MGR_SSN" IS NOT NULL                                                           
+                                                                                
+DEPARTMENT_DNUMBER_PK          P                                                
+                                                                                
+                                                                                
+DEPARTMENT_DNAME_UK            U                                                
+                                                                                
+                                                                                
+
+CONSTRAINT_NAME                C                                                
+------------------------------ -                                                
+SEARCH_CONDITION                                                                
+--------------------------------------------------------------------------------
+DEPENDENT_RELATIONSHIP_NN      C                                                
+"RELATIONSHIP" IS NOT NULL                                                      
+                                                                                
+DEPENDENT_ESSN_DEP_NAME_PK     P                                                
+                                                                                
+                                                                                
+DEPENDENT_ESSN_FK              R                                                
+                                                                                
+                                                                                
+
+CONSTRAINT_NAME                C                                                
+------------------------------ -                                                
+SEARCH_CONDITION                                                                
+--------------------------------------------------------------------------------
+DEPT_LOCATIONS_DNUM_DLOC_PK    P                                                
+                                                                                
+                                                                                
+DEPT_LOCATIONS_DNUMBER_FK      R                                                
+                                                                                
+                                                                                
+EMPLOYEE_FNAME_NN              C                                                
+"FNAME" IS NOT NULL                                                             
+                                                                                
+
+CONSTRAINT_NAME                C                                                
+------------------------------ -                                                
+SEARCH_CONDITION                                                                
+--------------------------------------------------------------------------------
+EMPLOYEE_LNAME_NN              C                                                
+"LNAME" IS NOT NULL                                                             
+                                                                                
+EMPLOYEE_DNO_NN                C                                                
+"DNO" IS NOT NULL                                                               
+                                                                                
+EMPLOYEE_SSN_PK                P                                                
+                                                                                
+                                                                                
+
+CONSTRAINT_NAME                C                                                
+------------------------------ -                                                
+SEARCH_CONDITION                                                                
+--------------------------------------------------------------------------------
+EMPLOYEE_SUPER_SSN_FK          R                                                
+                                                                                
+                                                                                
+EMPLOYEE_DNO_FK                R                                                
+                                                                                
+                                                                                
+PROJECT_PNUMBER_PK             P                                                
+                                                                                
+                                                                                
+
+CONSTRAINT_NAME                C                                                
+------------------------------ -                                                
+SEARCH_CONDITION                                                                
+--------------------------------------------------------------------------------
+PROJECT_PNAME_UK               U                                                
+                                                                                
+                                                                                
+PROJECT_DNUM_FK                R                                                
+                                                                                
+                                                                                
+WORKS_ON_ESSN_PNO_PK           P                                                
+                                                                                
+                                                                                
+
+CONSTRAINT_NAME                C                                                
+------------------------------ -                                                
+SEARCH_CONDITION                                                                
+--------------------------------------------------------------------------------
+WORKS_ON_PNO_FK                R                                                
+                                                                                
+                                                                                
+WORKS_ON_ESSN_FK               R                                                
+                                                                                
+                                                                                
+
+20 rows selected.
+
+SQL> spool off

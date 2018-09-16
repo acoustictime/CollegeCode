@@ -1,0 +1,17 @@
+HTTrack3.43-9+htsswf+htsjava launched on Tue, 27 Mar 2012 07:57:10 at http://cse.csusb.edu/kay/cs330/ +*.png +*.gif +*.jpg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2010], %s -->" -%l "en, en, *" http://cse.csusb.edu/kay/cs330/ -O1 "C:\My Web Sites\CSE330 Final" +*.png +*.gif +*.jpg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+07:57:26	Info: 	engine: warning: entry cleaned up, but no trace on heap: cse.csusb.edu/icons/blank.gif (C:/My Web Sites/CSE330 Final/cse.csusb.edu/icons/blank.gif)
+07:57:27	Info: 	engine: warning: entry cleaned up, but no trace on heap: cse.csusb.edu/icons/text.gif (C:/My Web Sites/CSE330 Final/cse.csusb.edu/icons/text.gif)
+07:57:28	Info: 	engine: warning: entry cleaned up, but no trace on heap: cse.csusb.edu/kay/cs330/war/Deck.h (C:/My Web Sites/CSE330 Final/cse.csusb.edu/kay/cs330/war/Deck.h)
+07:57:29	Info: 	engine: warning: entry cleaned up, but no trace on heap: cse.csusb.edu/kay/cs330/war/Player.h (C:/My Web Sites/CSE330 Final/cse.csusb.edu/kay/cs330/war/Player.h)
+07:57:30	Info: 	engine: warning: entry cleaned up, but no trace on heap: cse.csusb.edu/icons/unknown.gif (C:/My Web Sites/CSE330 Final/cse.csusb.edu/icons/unknown.gif)
+07:57:31	Info: 	engine: warning: entry cleaned up, but no trace on heap: cse.csusb.edu/kay/cs330/capsize.cpp (C:/My Web Sites/CSE330 Final/cse.csusb.edu/kay/cs330/capsize.cpp)
+
+HTTrack Website Copier/3.43-9 mirror complete in 27 seconds : 62 links scanned, 61 files written (424695 bytes overall) [444430 bytes received at 16460 bytes/sec]
+(No errors, 0 warnings, 6 messages)

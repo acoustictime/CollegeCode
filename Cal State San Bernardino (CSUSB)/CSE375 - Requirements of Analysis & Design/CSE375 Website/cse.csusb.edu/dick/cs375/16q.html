@@ -1,0 +1,1043 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/16q.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:53:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+Questions 16 -- More GRASP
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="16q.txt">Text Version</A>]
+ 16q.html 
+Wed Jan 11 07:25:57 PST 2012
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="16q.html#Questions 16 -- More GRASP">Questions 16 -- More GRASP</A>
+<li><a href="16q.html#Administrative Question -- credit for code">: Administrative Question -- credit for code</A>
+<li><a href="16q.html#When does the first iteration end">: When does the first iteration end</A>
+<li><a href="16q.html#What is in the Domain">: What is in the Domain</A>
+<li><a href="16q.html#Chapter 23 pages 401-434 -- Iteration 2">: Chapter 23 pages 401-434 -- Iteration 2</A>
+<li><a href="16q.html#Chapter 25 pages 413 -- GRASP">: Chapter 25 pages 413 -- GRASP</A>
+<li><a href="16q.html#Chapter 25 pages 414 -- Polymorphism">: Chapter 25 pages 414 -- Polymorphism</A>
+<li><a href="16q.html#Chapter 25 pages 414-421 -- GRASP: More Objects With Responsibilities -- Got">: Chapter 25 pages 414-421 -- GRASP: More Objects With Responsibilities -- Got</A>
+<li><a href="16q.html#Chapter 25 pages 414-420 -- Polymorphism">: Chapter 25 pages 414-420 -- Polymorphism</A>
+<li><a href="16q.html#Chapter 25 pages 413-435 -- Adapter/Bridge">: Chapter 25 pages 413-435 -- Adapter/Bridge</A>
+<li><a href="16q.html#Chapter 25 pages 413-135 -- Polymorphism">: Chapter 25 pages 413-135 -- Polymorphism</A>
+<li><a href="16q.html#Which is the commonest of the last 5 GRASP patterns">: Which is the commonest of the last 5 GRASP patterns</A>
+<li><a href="16q.html#What is Polymorphism">: What is Polymorphism</A>
+<li><a href="16q.html#Chapter 25 pages 415 -- Is there an non-polymorphic way to code the UML diagram">: Chapter 25 pages 415 -- Is there an non-polymorphic way to code the UML diagram</A>
+<li><a href="16q.html#Chapter 25 pages 416-435 -- Polymorphism">: Chapter 25 pages 416-435 -- Polymorphism</A>
+<li><a href="16q.html#Chapter 25 pages 414-420 -- Polymorphism and Interfaces">: Chapter 25 pages 414-420 -- Polymorphism and Interfaces</A>
+<li><a href="16q.html#How do I write an Interface in C++">: How do I write an Interface in C++</A>
+<li><a href="16q.html#Chapter 25 pages 420-421 -- Contraindications to polymorphism">: Chapter 25 pages 420-421 -- Contraindications to polymorphism</A>
+<li><a href="16q.html#Chapter 25 pages 424 -- GRASP -- Pure Fabrication">: Chapter 25 pages 424 -- GRASP -- Pure Fabrication</A>
+<li><a href="16q.html#Chapter 25 pages 421-424 -- Pure Fabrication">: Chapter 25 pages 421-424 -- Pure Fabrication</A>
+<li><a href="16q.html#Chapter 25 pages 421 -- Pure Fabrication">: Chapter 25 pages 421 -- Pure Fabrication</A>
+<li><a href="16q.html#Chapter 25 pages 421-426 Pure Fabrication">: Chapter 25 pages 421-426 Pure Fabrication</A>
+<li><a href="16q.html#Chapter 25 pages 421-426 Pure Fabrication">: Chapter 25 pages 421-426 Pure Fabrication</A>
+<li><a href="16q.html#When using GRASP why is the use case realization so important in creating the design model">: When using GRASP why is the use case realization so important in creating the design model</A>
+<li><a href="16q.html#Chapter 25 pages 433 -- Information Hiding">: Chapter 25 pages 433 -- Information Hiding</A>
+<li><a href="16q.html#Chapter 25 pages 427-434 -- Protected Variations">: Chapter 25 pages 427-434 -- Protected Variations</A>
+<li><a href="16q.html#Protected Variation in Design">: Protected Variation in Design</A>
+<li><a href="16q.html#Chapter 25 pages 428 -- PV">: Chapter 25 pages 428 -- PV</A>
+<li><a href="16q.html#Chapter 25.2 pages 421 -- Pure Fabrication">: Chapter 25.2 pages 421 -- Pure Fabrication</A>
+<li><a href="16q.html#Chapter 25 pages 422-423 -- Pure fabrication">: Chapter 25 pages 422-423 -- Pure fabrication</A>
+<li><a href="16q.html#Chapter 25 pages 424 -- decomposition">: Chapter 25 pages 424 -- decomposition</A>
+<li><a href="16q.html#Behaviorial decomposition and coupling">: Behaviorial decomposition and coupling</A>
+<li><a href="16q.html#Chapter 25 pages 425 -- Pure Fabrication">: Chapter 25 pages 425 -- Pure Fabrication</A>
+<li><a href="16q.html#Chapter 26 pages 436-440 -- Factory and Adapter">: Chapter 26 pages 436-440 -- Factory and Adapter</A>
+<li><a href="16q.html#Chapter 25 pages 426 -- Indirection.">: Chapter 25 pages 426 -- Indirection.</A>
+<li><a href="16q.html#Chapter 25 pages 427-433 -- Protected variation and Polymorphism">: Chapter 25 pages 427-433 -- Protected variation and Polymorphism</A>
+<li><a href="16q.html#Chapter 25 pages 421 -- Pure Fabrication">: Chapter 25 pages 421 -- Pure Fabrication</A>
+<li><a href="16q.html#Chapter 20 pages 413-425 -- Pure Fabrication">: Chapter 20 pages 413-425 -- Pure Fabrication</A>
+<li><a href="16q.html#Chapter 25 pages 413-435 -- Pure Fabrication">: Chapter 25 pages 413-435 -- Pure Fabrication</A>
+<li><a href="16q.html#Warning -- do not over do Pure Fabrication">: Warning -- do not over do Pure Fabrication</A>
+<li><a href="16q.html#Chapter 25 pages 424-425 -- Decompositions">: Chapter 25 pages 424-425 -- Decompositions</A>
+<li><a href="16q.html#Chapter 25 pages 425-427 -- Indirection">: Chapter 25 pages 425-427 -- Indirection</A>
+<li><a href="16q.html#Chapter 25 pages 426 -- De-couple">: Chapter 25 pages 426 -- De-couple</A>
+<li><a href="16q.html#Chapter 25 pages 433 -- Information Hiding">: Chapter 25 pages 433 -- Information Hiding</A>
+<li><a href="16q.html#Chapter 25 pages 433 -- Information Hiding">: Chapter 25 pages 433 -- Information Hiding</A>
+<li><a href="16q.html#Chapter 25 pages 413-435 -- Open-Closed Principle">: Chapter 25 pages 413-435 -- Open-Closed Principle</A>
+<li><a href="16q.html#Chapter 25.4 pages 434 -- OCP">: Chapter 25.4 pages 434 -- OCP</A>
+<li><a href="16q.html#Chapter 26 pages 459-461 -- considering grasp and other principles in the">: Chapter 26 pages 459-461 -- considering grasp and other principles in the</A>
+<li><a href="16q.html#Previous">: Previous</A>
+<li><a href="16q.html#Should we consider exceptions and errors in all projects">: Should we consider exceptions and errors in all projects</A>
+<li><a href="16q.html#Code smells and stenches -- in real working environments">: Code smells and stenches -- in real working environments</A>
+<li><a href="16q.html#What are the best strategies used to apply polymorphism">: What are the best strategies used to apply polymorphism</A>
+<li><a href="16q.html#How exactly does test-driven development work">: How exactly does test-driven development work</A>
+<li><a href="16q.html#How does the implementation model differ from the use case model">: How does the implementation model differ from the use case model</A>
+<li><a href="16q.html#Chapter 25 pages 417-419 : Drawing Polymorphism">: Chapter 25 pages 417-419 : Drawing Polymorphism</A>
+<li><a href="16q.html#Chapter 25 pages 420-421 : When shouldn't we design with interfaces?">: Chapter 25 pages 420-421 : When shouldn't we design with interfaces?</A>
+<li><a href="16q.html#Chapter 25 pages 427 : Persistent Storage">: Chapter 25 pages 427 : Persistent Storage</A>
+<li><a href="16q.html#Chapter 25 pages 433 : Data Hiding">: Chapter 25 pages 433 : Data Hiding</A>
+<li><a href="16q.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="Questions 16 -- More GRASP">Questions 16 -- More GRASP</A></H1><ol class=Section>
+<H2><a name="Administrative Question -- credit for code">Administrative Question -- credit for code</A></H2>
+If we were to make our project a real project and make it executable would there be anyway to get credit from it possibly? senior project? independent study?
+<p>
+Not in this class.  Senior Project -- many senior projects start in CS375 -- if you can find a
+client!  Independent study -- possibly -- never happened -- and whoever acted as advisor on the
+project would want something from it (we do independent studies. projects, theses, etc for
+free). For example -- I would want to incorporate it in the materials for this class.
+<p>
+<H2><a name="When does the first iteration end">When does the first iteration end</A></H2>
+Each iteration starts with the team deciding how long the iteration will take -- one week,
+2 weeks, .... and what will be analyzed+designed+coded+designed.  This is called
+a time-box.
+<p>
+When the time is up, that is it. Whatever work that has not been done is completed in a later
+iteration.  The wise team, learns something about how fast they can work. They use this
+to schedule the work for the next iteration.
+<p>
+<H2><a name="What is in the Domain">What is in the Domain</A></H2>
+If you can kick it, it is real, and so in the domain.
+<p>
+If it does not go away when you destroy the computer.... it is real and so in
+the domain.
+<p>
+If it ceases to exist when your computer is destroyed then it is inside the software and
+not part of the domain.
+<p>
+<H2><a name="Chapter 23 pages 401-434 -- Iteration 2">Chapter 23 pages 401-434 -- Iteration 2</A></H2>
+I am unclear on when to design with an interface and when not to.
+<p>
+(1) Use an interface class to limit dependency between classes.  This
+lowers coupling.
+<p>
+(2) Use an interface class to allow polymorphism.  This lets you
+reuse more code and reduces maintenance.
+<p>
+<p>
+<H2><a name="Chapter 25 pages 413 -- GRASP">Chapter 25 pages 413 -- GRASP</A></H2>
+Out of the last four GRASP patterns Polymorphism, Indirection, Pure
+Fabrication, and Protected Variations which would you say is the most
+important or the one we should worry more about?
+<p>
+All of them... equally.  And they also have a habit of fitting together.
+These are the sophisticated tools of an <a href="#OO">OO</A> designer's trade.
+<p>
+In my experience, however, C++ students have more trouble figuring out
+one pattern more than any other....
+<p>
+<H2><a name="Chapter 25 pages 414 -- Polymorphism">Chapter 25 pages 414 -- Polymorphism</A></H2>
+Can I understand the solution for Polymorphism  is to create a controller
+to handle the alternatives?
+<p>
+Not just a GRASP controller.
+Polymorphism is an invisible hand that
+helps the program execute the right code when a message is passed.
+<p>
+<p>
+<H2><a name="Chapter 25 pages 414-421 -- GRASP: More Objects With Responsibilities -- Got">Chapter 25 pages 414-421 -- GRASP: More Objects With Responsibilities -- Got</A></H2>
+Polymorphism
+When is polymorphism not needed?
+<p>
+Small programs. Simple projects. No modifications.  No class hierarchies.
+<p>
+In other words -- programming in the 1960s.
+<p>
+<H2><a name="Chapter 25 pages 414-420 -- Polymorphism">Chapter 25 pages 414-420 -- Polymorphism</A></H2>
+Should we write code first to locate our polymorphism cases or is it done
+in the OO/D phase?
+<p>
+No. You should incorporate polymorphism in your designs before you
+discover it in code... it is part of the UML.
+<p>
+<p>
+<H2><a name="Chapter 25 pages 413-435 -- Adapter/Bridge">Chapter 25 pages 413-435 -- Adapter/Bridge</A></H2>
+Can you provide examples(actual code if possible) of an adapter and bridge
+design pattern.
+<p>
+For some reason everybody uses the stack as an example...
+<p>
+Adapter:
+[<A href="http://c2.com/cgi/wiki?AdapterPattern"> wiki?AdapterPattern </A>]
+(A stack in Java).
+<p>
+Bridge -- the C++ STL stack and queue are bridges or wrappers
+for other STL classes.  Here is an abbreviated version of the
+definition of a stack:
+<pre> class stack {</pre>
+<pre>  ... //declares c as a suitable container</pre>
+<pre>       bool      empty() const             { return c.empty(); }</pre>
+<pre>       size_type size()  const             { return c.size(); }</pre>
+<pre>       value_type&amp;       top()             { return c.back(); }</pre>
+<pre>       const value_type&amp; top() const       { return c.back(); }</pre>
+<pre>       void push(const value_type&amp; x)      { c.push_back(x); }</pre>
+<pre>       void pop()                          { c.pop_back(); }</pre>
+<pre>     };</pre>
+<p>
+<p>
+<H2><a name="Chapter 25 pages 413-135 -- Polymorphism">Chapter 25 pages 413-135 -- Polymorphism</A></H2>
+How effective are polymorphic operations while replacing components in a
+client-server relationship?
+<p>
+It should work OK.  Especially if the client-server use the CORBA protocols
+that allow polymorphic message passing between remote objects.
+<p>
+Similarly, I'm sure that Java Remote Messaging (or whatever they call it)
+is
+polymorphic.
+<p>
+Not so sure about RPCs -- they predate objects.
+<p>
+<p>
+<H2><a name="Which is the commonest of the last 5 GRASP patterns">Which is the commonest of the last 5 GRASP patterns</A></H2>
+<p>
+I don't know.  I also don't think the information is important.  They are are
+sophisticated.  They are all used.  And often they are used together in the more complex
+&quot;Gang of Four&quot; patterns.
+<p>
+<H2><a name="What is Polymorphism">What is Polymorphism</A></H2>
+This is when you refer to an object indirectly (a pointer) and the
+behavior that happens is determined by the object rather than the class
+of the pointer.  See
+[<A href="http://cse.csusb.edu/dick/cs202/polymorphism.html"> ../cs202/polymorphism.html </A>]
+for a lot more on polymorphism in C++.
+<p>
+<H2><a name="Chapter 25 pages 415 -- Is there an non-polymorphic way to code the UML diagram">Chapter 25 pages 415 -- Is there an non-polymorphic way to code the UML diagram</A></H2>
+<p>
+No.   The UML &quot;realization&quot; and &quot;Generalization&quot; arrows imply polymorphic behavior.
+<p>
+Luckily, the code is easy, even in C++.  See
+[<A href="fig25_25_1.cpp"> fig25_25_1.cpp </A>]
+and
+[<A href="test.fig25_25_1.cpp"> test.fig25_25_1.cpp </A>]
+plus stubs
+[<A href="Sale.cpp"> Sale.cpp </A>]
+and
+[<A href="TaxLineItems.cpp"> TaxLineItems.cpp </A>]
+for example.
+<p>
+Note:  I had hoped to use my log to figure how long the above code took to write
+and test.  But I uncovered a bug in the logging script:-(  Even so, I seem
+to have started just after 7am and finished linking the code into this page before
+7:15am.  So it took 15 minutes to encode and test Figure 25.1 including stubs
+for two dependent classes.
+<p>
+Once done.... I wouldn't expect to change the interface again.   I would
+have to replace the stubs for the concrete classes...   After that I can
+create new Tax Calculator classes any time I like, compile them separately,
+and use them without breaking the existing code.  Priceless!
+<p>
+<H2><a name="Chapter 25 pages 416-435 -- Polymorphism">Chapter 25 pages 416-435 -- Polymorphism</A></H2>
+What improvements does the landedOn method provide in the Monopoly Problem? What was lacking about the method used in the pseudocode?
+<p>
+Switches are hard to get right, hard to modify, and a source of future problems.
+<p>
+It is nearly always beetter to write code that automagically selects the right
+behavior with zero programming.
+<pre> 	class Player</pre>
+<pre> 	{</pre>
+<pre> 		Square * location;</pre>
+<pre> 		...</pre>
+<pre> 		virtual Something takeTurn(....) //Fig 25.3 Page 417</pre>
+<pre> 		{</pre>
+<pre> 			...</pre>
+<pre> 			location=board-&gt;getSquare(location, fvTot);</pre>
+<pre> 			location-&gt;landedOn();</pre>
+<pre> 		}</pre>
+<pre> 		...</pre>
+<pre> 	};</pre>
+<p>
+I think we need another example of polymorphic C++ code...
+First think back to the beginning of the class when we simulated the Dice
+Game.
+Look at pages 8 to 11 of Larman.
+Remember that when we did this in class we had many ways of rolling the
+dice.
+As long as they fitted the same interface the game worked.
+<p>
+Now look at the code I wrote:
+[<A href="DiceGame.cpp"> DiceGame.cpp </A>]
+[<A href="Die.cpp"> Die.cpp </A>]
+[<A href="testDiceGame.cpp"> testDiceGame.cpp </A>]
+[<A href="testDie.cpp"> testDie.cpp </A>]
+<p>
+Polymorphism lets you extend ANY class with new behaviors
+without rewriting the original.
+<p>
+To demonstrate polymorphism in C++ I edited Die2 to inherit from
+Die
+[<A href="Die2.cpp"> Die2.cpp </A>]
+and tested it
+[<A href="testDie2.cpp"> testDie2.cpp </A>]
+(of course).
+<p>
+I then generated a new version of DiceGame:
+[<A href="DiceGame2.cpp"> DiceGame2.cpp </A>]
+that uses both kinds of dice... and tested it
+[<A href="testDiceGame2.cpp"> testDiceGame2.cpp </A>]
+and (of course) it worked (after removing one stupidity).
+<p>
+Notice that I only changed one line of code in the DiceGame class
+<pre> &lt; 	DiceGame(){die1 = new Die(); die2 = new Die(); }</pre>
+<pre> &gt; 	DiceGame(){die1 = new Die(); die2 = new Die2(); }</pre>
+<p>
+We could go further and switch dice as the program runs....
+<p>
+Here are my notes
+[<A href="http://www.csci.csusb.edu/dick/cs202/polymorphism.html"> polymorphism.html </A>]
+from CSci202.
+<p>
+<p>
+<H2><a name="Chapter 25 pages 414-420 -- Polymorphism and Interfaces">Chapter 25 pages 414-420 -- Polymorphism and Interfaces</A></H2>
+When should you consider using an interface?
+<p>
+(1) When they are given to you.  Java Libraries are full of predefined
+interfaces defining how to write classes that work well with the library.
+<p>
+(2) Use interfaces to define and control the complexity of interactions
+in your software.
+<p>
+(3) Use interface classes to hide information about multiple implementations
+of a single idea.  Example: hide different algorithms behind a common
+set of functions.
+<p>
+<p>
+Simple answer:  a lot.
+<p>
+Use an interface to (1) control the coupling between two or more classes or
+(2) separate the implementation of a responsibility from the
+classes that use that responsibility.
+<p>
+An interface is a list of functions.  The clients only call those
+functions.  The provider implements them.  The interface stands between them.
+<p>
+<H2><a name="How do I write an Interface in C++">How do I write an Interface in C++</A></H2>
+It looks just like a normal class but has these restrictions:
+<br><ol class="List">
+<li>No attributes.
+<li>No private or protected members.
+<li>Just public functions;
+<li>No function bodies.
+<li>All functions are declared <span class="InlineFormula">virtual</span>.
+<li>One function is declared to be pure/abstract:
+<pre> 		virtual SomeType someName ( someParameters ) = 0 ;</pre>
+<p>
+Perhaps has a capital &quot;I&quot; (for interface) in front of the class's name.
+</ol><br>
+<p>
+In C++ you should declare an interface to be a class
+with all functions public and virtual. It must have no data members.
+One function should be an abstract function.  For example
+<pre> class Istack // interface</pre>
+<pre> { public:</pre>
+<pre> 	virtual void pop()=0;</pre>
+<pre> 	virtual void push(Data);</pre>
+<pre> 	virtual Data top()const;</pre>
+<pre> };</pre>
+The implementations a derived from the interface and define the
+bodies of the function and internal data.  For example here is
+a vector stack:
+<pre> class Stack : public IStack</pre>
+<pre> { public:</pre>
+<pre> 	void pop(){ v.pop_back();}</pre>
+<pre> 	void push(Data d){ v.push_back(d); }</pre>
+<pre> 	Data top()const { return v.last(); }</pre>
+<pre></pre>
+<pre> 	Stack(){};</pre>
+<pre>  private: vector&lt;Data&gt;v;</pre>
+<pre> };</pre>
+Exercise: create an implementation of a stack based on
+some other data structure.
+<p>
+<H2><a name="Chapter 25 pages 420-421 -- Contraindications to polymorphism">Chapter 25 pages 420-421 -- Contraindications to polymorphism</A></H2>
+The book refers to &quot;future proofing&quot; against an unknown possible variation in the polymorphism section but it sounds more like something that is high cohesion. What is the difference between polymorphism and high cohesion?
+<p>
+Polymorphism is a powerful property of object-oriented programming.  It is a technique that
+simplifies code drastically -- when there are choices that the code must make.  For example, if
+we were writing code for a college we might find that the code executed for graduate students
+and undergraduate students was different.  Without polymorphism we would have to use if-then-else
+or switch statements to code the choice.  If we use polymorphism than each student
+knows if it is an undergraduate or a graduate and behaves in the correct way -- without any code.
+<p>
+Cohesion is a property of pieces of code.  I agree that polymorphism could help this.
+<p>
+However Larman is worried about people creating polymorphic objects that work
+the same today, just in
+case they will be different next year.... because this is usually a waste of time.
+<p>
+However -- in Java, Ruby, Python, Smalltalk, etc -- polymorphism is automatic.   In C++ it is
+not. I recommend you include the word &quot;virtual&quot; in all higher level classes...
+<p>
+<H2><a name="Chapter 25 pages 424 -- GRASP -- Pure Fabrication">Chapter 25 pages 424 -- GRASP -- Pure Fabrication</A></H2>
+Can you please clarify the difference between representational decomposition and behavioral decomposition?
+<p>
+Decomposition in this context means: choosing the classes in your design and code.  In general,
+the modules and packages in your design/code.
+<p>
+A
+<A name="behavioral decomposition" class="Key"> behavioral decomposition </A>
+is what happens when a programmer thinks it would be cool/neat/fun/clever/simpler/logical/etc.
+to add a new class because it can contain some useful behavior.  In GRASP terms this
+generates a &quot;Pure Fabrication&quot;.  There are lots of examples coming.
+<p>
+A
+<A name="representational decomposition" class="Key"> representational decomposition </A>
+occurs when a developer notices that the clients/stakeholders/users have a class of
+objects and decides that the design and code can support that concept as well.  This
+is typically linked to using the &quot;Information Expert&quot; GRASP.
+<p>
+<H2><a name="Chapter 25 pages 421-424 -- Pure Fabrication">Chapter 25 pages 421-424 -- Pure Fabrication</A></H2>
+The book says the Pure Fabrication bad because it violates High Cohesion and Low Coupling, but on page 424 is show a diagram that has a system called Cup that all it handles is a roll. To me that looks like Low Coupling, or am I wrong?
+<p>
+Actually the book says that Pure Fabrication is a way of improving
+coupling and cohesion.
+<p>
+<H2><a name="Chapter 25 pages 421 -- Pure Fabrication">Chapter 25 pages 421 -- Pure Fabrication</A></H2>
+Pure Fabrication seems like an awkward way to solve a problem because it
+does not represent a real class.  Is there much value to fabricating
+problems in <a href="#OO">OO</A> design to come to a solution?
+<p>
+I agree -- I do not like Fabricating classes.
+It is the last GRASP you should consider when the other GRASP
+rules have been tried.
+<p>
+<H2><a name="Chapter 25 pages 421-426 Pure Fabrication">Chapter 25 pages 421-426 Pure Fabrication</A></H2>
+Should we approach pure fabrication with caution, or use it any/everywhere?
+Is it generally worth throwing in more classes for higher cohesion and
+lower coupling, even if it means the number of classes, and pehaps
+complexity, goes up?
+<p>
+I would use <span class="InlineFormula">Pure Fabrication</span>  with extreme caution.
+Larman talks of <span class="InlineFormula">desperation</span>.  I agree.
+I would only use it when
+<br><ol class="List">
+<li>I can't think of a better pattern OR it is used with another pattern
+like <span class="InlineFormula">Protected Variation</span> or <span class="InlineFormula">Indirection</span>.
+<li>It lowers coupling and raise cohesion.
+</ol><br>
+<p>
+<H2><a name="Chapter 25 pages 421-426 Pure Fabrication">Chapter 25 pages 421-426 Pure Fabrication</A></H2>
+Would creating more classes reduce or increase complexity?  If it's a very
+large project, it would seem fabricating a lot of classes could make it
+much more complicated.  In the long run, is it better to do just that?
+<p>
+As a rule, the complexity comes from connections rather than the number
+of pieces.  One large class where every method interacts with every
+other method and attribute is much harder to work with than a collection
+of loosely connected classes each working on a subset of the original
+attributes.
+<p>
+Think of classes (and packages) as creating firewalls.
+<p>
+Of course a large random collection of classes is just as much a
+mess as one large class full of random members!
+<p>
+It depends on the classes.  Not the number -- but how they
+work together and how they work internally.
+<p>
+<H2><a name="When using GRASP why is the use case realization so important in creating the design model">When using GRASP why is the use case realization so important in creating the design model</A></H2>
+Because this means that the software is (1) useful and (2) not bloated.
+<p>
+We only add attributes, functions, and classes when they provide value to the user.  So we avoid gold-plated and bloated software.
+<p>
+GRASP, however, tends to make sure that our designs will be helpful in the
+future when new use cases are added or old cases are modified.
+<p>
+<H2><a name="Chapter 25 pages 433 -- Information Hiding">Chapter 25 pages 433 -- Information Hiding</A></H2>
+In Parnas' quote, he mentions that difficult design decisions, along with design decisions that are likely to change should be hidden. Considering that, if you have just a normal design decision, do you just leave those alone?
+<p>
+Interesting question..... key point -- easy decisions are not likely to change and so you
+don't have to hide them in a special module.   So, think about the probability
+that you might make the wrong decision and the ammount of rewriting involved.
+<p>
+For years I have separated the part of the design that handle the hardware from the
+core logic of the program.  It has never caused a problem.  Just a little extra thought.
+<p>
+<H2><a name="Chapter 25 pages 427-434 -- Protected Variations">Chapter 25 pages 427-434 -- Protected Variations</A></H2>
+When we analyse a problem area we can often spot things that vary.  The stakeholders
+will mention that they are about to through out their old Spangling Server and replace it with
+a new faster, cheaper, and smaller version.  Or you discover that one part
+of an organization insists on using 9 digit ISBNs and the rest 13 bit ISBN. Or, on a smaller
+sclae, the behavior of Wodgets change as time goes one.  There are times when their state lets
+them execute the zark procedure, and their are times when they can't. Here
+we have a varying state.  We would like instances of Wodget to change
+class... something that is not part of normal
+object technology.  Again something varies and we need a way to handle the variation
+simply.
+And so it goes on.
+<p>
+When you have variations like this -- it wise to take a little time and ingenuity to find a way
+of <span class="InlineFormula">containing the damage</span>.  Changes are like a leak in a starship -- you need
+to find a way to stop the variation infecting the whole
+system.  For example with every function testing to see which kind of ISBN is needed. Or
+which Spangling Server we have running...  This is known as Protected Variation.
+<p>
+It is one of the oldest design principles in the business.
+<p>
+We had an example at the beginning of this class when I brought in a dozen ways of
+simulating a throw of the dice.  Each group figured out a way of faking the behavior, even tho'
+some of them only hard dominoes of playing cards, not dice.   We often need the same
+solution in real life problem areas.
+<p>
+<H2><a name="Protected Variation in Design">Protected Variation in Design</A></H2>
+The original way of hiding variations was to hide them behind a collection of functions.
+<p>
+So, for example you would have half-a-dozen subprograms for controlling a plotter.  These
+would be used in exactly the same way when the old Calcom Drum plotter was replaced by a new
+Wang flat bed plotter.     You might even design a whole language for
+driving graphic devices which carefully disguised the different gadgets.
+Been here, done this.
+<p>
+These days you think in terms of creating a class -- which contains a list of function, of course,
+that do the same thing.  Only here we attach the function to objects, and can use
+inheritance and polymorphism to place difference behind a wall which presents a common interface.
+<p>
+To summarize: PV implies the use of interfaces and abstraction in design.  Often you can
+Indirection and Polymorphism.
+<p>
+<H2><a name="Chapter 25 pages 428 -- PV">Chapter 25 pages 428 -- PV</A></H2>
+What is meant by the statement that an Operating System is an example of indirection to achieve PV?
+<p>
+It means that because we have an operating system you don't have to worry about most of
+the administrative and physical details of the hardware.  Example -- when was the last time you
+thought about what that folder on your desktop actually is -- what the data structure is?
+When programming, do you worry about the hundreds of other processes running on your computer?
+Do you actually know what happens when you execute
+<pre> 		stream.fopen(&quot;foobar.dat&quot;,ios::in);</pre>
+and does it matter?
+<p>
+These are some of the many design decisions and physical VARIATIONS that the OS
+PROTECTS you from.
+<p>
+<H2><a name="Chapter 25.2 pages 421 -- Pure Fabrication">Chapter 25.2 pages 421 -- Pure Fabrication</A></H2>
+Briefly, use Pure Fabrication when you can solve a problem (high coupling, low cohesion, protect variations, ...)
+by inventing a  class of objects.
+<p>
+More below...
+<H2><a name="Chapter 25 pages 422-423 -- Pure fabrication">Chapter 25 pages 422-423 -- Pure fabrication</A></H2>
+As applications are pluggable, can Pure Fabrication Patterns be used as a strategy to introduce objects in the domain model at any layer in the design?
+<p>
+Yes -- Protected Variation include pluggable components -- a component hides different
+implementations behind a common (standard?) interface.
+<p>
+No.  Pure Fabrication is defined as adding classes to the design that do <span class="InlineFormula">not</span> appear in the
+domain.  They are classes invented to make the code better, not to reflect the real world,
+or to interface with the user interface.
+<p>
+If, however you invent a class and you discover that it was in the domain already -- this is a
+&quot;Duh&quot; moment -- then you (1) slap your face, (2) add it to the domain model and (3)
+use Information Expert instead.   Note:  slapping your face is an important step because
+it discourages you from being lazy when domain modeling:-)
+<p>
+<H2><a name="Chapter 25 pages 424 -- decomposition">Chapter 25 pages 424 -- decomposition</A></H2>
+can you explain behavioral decomposition
+<p>
+See
+[<A href="15q.html#behaviorial decomposition"> 15q.html#behaviorial decomposition </A>]
+(last class)
+<p>
+<H2><a name="Behaviorial decomposition and coupling">Behaviorial decomposition and coupling</A></H2>
+Can you explain how using  behavioral decomposition can affect coupling?
+<p>
+Normally adding a class because it can hold a particular behavior (not to reflect
+the real world) can lower coupling.  However, if it attracts behaviors that need data
+or operations that are in other classes then it becomes coupled to them and
+this raises the overall coupling.
+<p>
+When you refactor the code you notice that the fabricates class is always calling another class
+to get is work done.... perhaps it is time to remove the middle man?  Or does it satisfy some
+other need such as Protected Variation?
+<p>
+<H2><a name="Chapter 25 pages 425 -- Pure Fabrication">Chapter 25 pages 425 -- Pure Fabrication</A></H2>
+Pure fabrication seems to address a specific need and is used as a last resort. How would pure fabrication be overused if it was created for a specific need?
+<p>
+PV is overused in several ways.  (1) People try to handle variations that never actually happen.
+The counter to this is to say <a href="#YAGNI">YAGNI</A> -- You ain't Gonna Need It.  (2) People use
+PV as an excuse for adding unreal ideas into the domian model.  This muddles up things
+that are needed for technical reasons with ideas that the stakeholders are paying for.
+<p>
+<H2><a name="Chapter 26 pages 436-440 -- Factory and Adapter">Chapter 26 pages 436-440 -- Factory and Adapter</A></H2>
+Are simple and concrete factory used like GoF adapter pattern?
+<p>
+No.  Factories are used  to create objects.  An alternative to Larman's Creator GRASP pattern.
+<p>
+Adapters are organizational or structural patterns that hide variations behind a common
+pure fabrication.  They are used in a different way.
+<p>
+The only thing they have in common is that they are part of the design not that is not found
+in the real world.  The solve technical problems not model domain issues.
+<p>
+<H2><a name="Chapter 25 pages 426 -- Indirection.">Chapter 25 pages 426 -- Indirection.</A></H2>
+&quot;By adding a level of indirection and adding polymorphism, the adapter
+objects protect the inner design against variations in the external
+interfaces.&quot;  I'm not clear on how exactly that is being done.  It seems to
+me that a change to the TaxMasterSystem's interface would necessitate a
+change in the TaxMasterAdapter.  If that adapter wasn't there, you'd just
+have to change code in whatever class (probably Sale) was responsible for
+tracking the taxes, wouldn't you?  Could you go over this?
+<p>
+The idea is to have fixed interfaces and variable internals.  Your design
+should
+specify a fixed point behind which variation can occur.
+<p>
+So you shouldn't change the Interface as much as add in new variation
+behind the
+indirect object.
+<p>
+Question:  do you change the way you drive when you get a new battery?
+<p>
+<H2><a name="Chapter 25 pages 427-433 -- Protected variation and Polymorphism">Chapter 25 pages 427-433 -- Protected variation and Polymorphism</A></H2>
+Protected Variation and Polymorphism seem related.  What is the difference
+between the two?  Where would you apply one pattern over the other?
+<p>
+Polymorphism is a powerful technology that is very useful for
+handling Protected Variation.   Protected Variation gives one reason &quot;why&quot;
+for a particular use of Polymorphism.
+<p>
+<p>
+<H2><a name="Chapter 25 pages 421 -- Pure Fabrication">Chapter 25 pages 421 -- Pure Fabrication</A></H2>
+When (as the book states) is a solution by Expert not appropriate, thus
+causing me to use a Pure Fabrication pattern?
+<p>
+You use it when expert, creator, controller, ... and all the others are
+not appropriate.
+<p>
+Expert fails when there is no class in your design or in the domain model
+that has the data, or doesn't know where to find it.  Sometimes it fails because
+you end up with bad coupling between experts.  Sometimes you have two many partial experts.
+You have to use your brain.
+<p>
+<H2><a name="Chapter 20 pages 413-425 -- Pure Fabrication">Chapter 20 pages 413-425 -- Pure Fabrication</A></H2>
+Would pure fabrication be a class that you create that has nothing to do
+with your original design except for the fact that it has code that is used
+several times throughout. Ex So instead of writing code several times for
+say adding two numbers, I could make an add class that would do the work
+and I would just pass the numbers?
+<p>
+Yes.  But you might also invent a class (with no inspiration from the
+domain) to reduce coupling or because it looks cohesive.   It is not
+just a matter of needing the functionality more than once.  It can be
+for other reasons.
+<p>
+<p>
+<H2><a name="Chapter 25 pages 413-435 -- Pure Fabrication">Chapter 25 pages 413-435 -- Pure Fabrication</A></H2>
+Why is Pure Fabrication even an option? Is it just named as a last resort
+or is it really used that often?
+<p>
+Because there are some occasions when nothing else works.... for example
+you just didn't notice an important idea in the domain.   Then the design
+process
+tells you that you missed something.... you Fabricate it and then discover
+that it was there all along!
+<p>
+But sometimes the best way to make software easy to change is to
+add a class that acts as a hinge and separates one part from another
+by a flexible coupling... As an example, in the &quot;Apollo 13&quot; movie
+they have to connect a round hose to a square hole -- and use
+the cardboard cover of a manual to do it.  This is very like
+fabricating a new object to make the system work with no
+reference to worls outside the system.
+<p>
+<H2><a name="Warning -- do not over do Pure Fabrication">Warning -- do not over do Pure Fabrication</A></H2>
+<p>
+<H2><a name="Chapter 25 pages 424-425 -- Decompositions">Chapter 25 pages 424-425 -- Decompositions</A></H2>
+Can you explain in better detail of what a
+<A name="representational decomposition" class="Key"> representational decomposition </A>
+and a
+<A name="behavioral decomposition" class="Key"> behavioral decomposition </A>
+is?
+<p>
+Designing software is all about breaking the software into pieces that
+make some kind of sense.  We call this process &quot;decomposition&quot;.  Then
+the different parts can be &quot;composed&quot; to make the software work. In <a href="#OO">OO</A>
+projects we decompose the solution into classes.  But where do these
+classes come from?
+<p>
+When you create a class of objects -- why do you do it?  Do you
+do it because the client is always talking about something like
+that?  If so Larman would say you have a &quot;representational decomposition&quot;.
+Do you discover it during design or coding -- and it makes the
+program more maintainable but has no meaning to your client?  If
+so Larman would call this a &quot;behavioral decomposition&quot;.
+<p>
+For example, in my Login handout the &quot;Finder&quot; class is the result of behavioral
+decomposition, but using &quot;Person&quot; is from a representational one.
+<p>
+<p>
+<H2><a name="Chapter 25 pages 425-427 -- Indirection">Chapter 25 pages 425-427 -- Indirection</A></H2>
+My question is on Indirection, seems like a simple enough example in the
+book but is there any other examples that might be worth while in knowing?
+<p>
+I'm sure there are.... does any body in the class have an example?
+<p>
+<p>
+<H2><a name="Chapter 25 pages 426 -- De-couple">Chapter 25 pages 426 -- De-couple</A></H2>
+Can you give an example on how to de-couple objects?
+<p>
+See previous.
+<p>
+I have a simple example of an object that decouples my
+code from some C++ library functions.
+<p>
+Suppose I don't like the way we get random number is C++ then
+I can create a class of Random objects with this interface
+<pre> class Random</pre>
+<pre> { public:</pre>
+<pre> 	Random(double lowest=0, double highest=1);</pre>
+<pre> 	virtual double next();</pre>
+<pre>   ...</pre>
+<pre> };</pre>
+I could test it like this
+<pre> 	Random r(0,1);</pre>
+<pre> 	for(...) cout &lt;&lt; r.next() &lt;&lt; endl;</pre>
+and implement it by including
+<pre>   private:</pre>
+<pre> 	double low, range;</pre>
+in the above class and then writing:
+<pre> Random::Random(double lowest=0, double highest=1)</pre>
+<pre> {</pre>
+<pre> 	low = lowest;</pre>
+<pre> 	range = highest - lowest;</pre>
+<pre> 	srand(time(NULL));</pre>
+<pre> }</pre>
+<pre> double Random::next()</pre>
+<pre> {</pre>
+<pre> 		return low+(range*rand())/RAND_MAX;</pre>
+<pre> }</pre>
+<p>
+<p>
+<p>
+<H2><a name="Chapter 25 pages 433 -- Information Hiding">Chapter 25 pages 433 -- Information Hiding</A></H2>
+The book briefly covers information hiding.  Give examples of information
+hiding and how it relates to protected variations?
+<p>
+Parnas formulated Information Hiding in the 1970's.   In his example he
+split a program into 3 modules:  one handled the input device (a card
+punch),
+one handled the logic of problem, and one handling the output device (
+a line printer).  So when the user wanted to change the program to use
+magnetic tape... the input and output parts changed but not the middle.
+When the user got a disk drive the same thing happened.  And so on.
+<p>
+Our division of UI + Domain Layer + Services is inspired by this.
+<p>
+<H2><a name="Chapter 25 pages 433 -- Information Hiding">Chapter 25 pages 433 -- Information Hiding</A></H2>
+Information hiding is good because it doesn't allow users to alter data.
+<p>
+The clever idea is that you can know how to use a class without having
+to know how it works.  Like your watch.  So not only is the data hidden
+but so can the code!
+<p>
+Parnas had a strong version of Information Hiding.
+If a programmer was using a data type (think class) then all you
+would be told about where the operations that you could do to it.
+All other code would be hidden from you.  In C++ this tends to
+mean that you are given a header (Widget.h) file and a compiled
+(Widget.o) file but not the source code (Widget.cpp) of the whole file.
+Now this does share some information about the data in the Widget
+objects -- but this is inevitable given the way C++ works.
+<p>
+Brookes argued that all code should be available for every body to read an
+modify.   But later he stated he had rethought this to match Parnas.
+<p>
+The XP people (as always) have their own extreme position:  all code
+is open to the team: to read and to write at any time.... but you
+instantly test all changes.
+<p>
+<H2><a name="Chapter 25 pages 413-435 -- Open-Closed Principle">Chapter 25 pages 413-435 -- Open-Closed Principle</A></H2>
+I got confused when reading about the Open-Closed Principle.  Could you
+please go over it.
+<p>
+See next...
+<H2><a name="Chapter 25.4 pages 434 -- OCP">Chapter 25.4 pages 434 -- OCP</A></H2>
+An example of an
+<A name="Open-Closed Principle" class="Key"> Open-Closed Principle </A>
+is... X can be opened to Y and always Z. And it's only open to Y if it Y
+needs to access something and has permission to. While Z can always access
+it because it has permission to.
+That look right?
+<p>
+I'd express it like this: if X uses Y in some way or other you don't want
+changes to Y to effect X, but you also want to be able to change Y in ways
+that don't change X.
+<p>
+<p>
+<H2><a name="Chapter 26 pages 459-461 -- considering grasp and other principles in the">Chapter 26 pages 459-461 -- considering grasp and other principles in the</A></H2>
+design
+Should we avoid extracting child objects out of parent, and then passing
+around the child objects?
+<p>
+Sounds like the law of Demeter to me.
+<H2><a name="Previous">Previous</A></H2>
+<H2><a name="Should we consider exceptions and errors in all projects">Should we consider exceptions and errors in all projects</A></H2>
+Sadly, yes.
+<p>
+An empirical law:  the exceptional case is often as important as the normal
+one.
+(From a hospital project).
+<p>
+<H2><a name="Code smells and stenches -- in real working environments">Code smells and stenches -- in real working environments</A></H2>
+Do real companies talk about code smells?
+<p>
+Depends how &quot;hip&quot; they are.  The term &quot;code smell&quot; is a recent invention of
+the eXtreme Programming people.... but it has caught on in many forward
+looking workplaces. &quot;Stench&quot; is not as common and more of a joke or insult.
+<p>
+Note.  The more traditional, set-in-their-ways places may not have &quot;got&quot;
+this
+idea yet.   But it usually catches on pretty fast when introduced.
+<p>
+<H2><a name="What are the best strategies used to apply polymorphism">What are the best strategies used to apply polymorphism</A></H2>
+If you've got it in you implementation language -- use it.
+<p>
+In design -- follow GRASP.
+<p>
+<H2><a name="How exactly does test-driven development work">How exactly does test-driven development work</A></H2>
+You write tests, you write code, you test the code and fix it until
+all tests are OK.  Then stop.
+<p>
+How well does that work?   Very well -- if you choose your tests well.
+<p>
+Hint:  if you don't have a TDD environment like JUnit get into the habit
+of starting with a main program that defines a test of the classes
+you are about to write.  For example, in C++ use main and cassert...
+<p>
+I might start with this
+<pre> #include &lt;iostream&gt;</pre>
+<pre> #include &lt;cassert&gt;</pre>
+<pre> int main(int argc, char* argv[])</pre>
+<pre> {// test prime number function</pre>
+<pre> 	assert( prime(2) );</pre>
+<pre> 	assert( prime(3) );</pre>
+<pre> 	assert( not prime(4) );</pre>
+<pre> 	assert( prime(5) );</pre>
+<pre> 	assert( not prime(9) );</pre>
+<pre> 	assert( not prime(42));</pre>
+<pre> }//end main</pre>
+and the work on it (if time I'd do this in class) giving the following
+series of (failing) attempts:
+[<A href="tp.cpp"> tp.cpp </A>]
+[<A href="tp1.cpp"> tp1.cpp </A>]
+[<A href="tp2.cpp"> tp2.cpp </A>]
+<p>
+<H2><a name="How does the implementation model differ from the use case model">How does the implementation model differ from the use case model</A></H2>
+Use case models (requirements) define the problems, the Implementation
+models describe solutions -- in detail.
+<p>
+<H2><a name="Chapter 25 pages 417-419 : Drawing Polymorphism">Chapter 25 pages 417-419 : Drawing Polymorphism</A></H2>
+Looking at the 'poly' drawing on page 419 I was thinking how would I know
+what interaction diagram these drawings would belong to(assuming I had
+hundreds of diagrams). Is there a recommended mechanism for organizing the
+vast assortment of diagrams, especially interactions to use case scenarios,
+or do we improvise?
+<p>
+The agile answer is to throw the diagrams away once you've learned
+what you need from them.  It is based on two thoughts:
+<br><ol class="List">
+<li>The best place for information is in people's brains, not paper.
+<li>The code is the real place for the details.
+</ol><br>
+<p>
+This can work well if you can, any time you want, extract a
+diagram from the code by using a tool: <span class="InlineFormula">reverse engineering</span>.
+<p>
+The <span class="InlineFormula">Fragile</span> answer (traditional) is to give every drawing a unique id,
+file it, index them, ...   You may end up with a project librarian
+working full time just to control the documentation and code:-(
+This is the what happens with aircraft and automobile designs.
+But this presumes that people will read the diagrams to construct
+the product.
+<p>
+In this case the department recommends the IEEE standard
+<span class="InlineFormula">SRS</span> -- Software Requirements Specification... with a few modifications.
+[<A href="http://cse.csusb.edu/dick/SRS/"> ../SRS/ </A>]
+Other organizations will have other standards.  And
+of course you could always use my own language
+[<A href="http://cse.csusb.edu/dick/maths/"> ../maths/ </A>]
+and tools
+[<A href="http://cse.csusb.edu/dick/tools/"> ../tools/ </A>]
+to organize your documents:-)
+<p>
+<p>
+A possible answer is to find a good <span class="InlineFormula">repository</span> tool that
+has a very good search engine, so you can retrieve (for example)
+all diagrams that have a <span class="InlineFormula">incantation</span> message coming from
+a <span class="InlineFormula">WizardOfId</span> class.
+<p>
+<p>
+<H2><a name="Chapter 25 pages 420-421 : When shouldn't we design with interfaces?">Chapter 25 pages 420-421 : When shouldn't we design with interfaces?</A></H2>
+<p>
+I'm not sure of the meaning here.  We definitely
+should design the operations for classes before we design
+the attributes and methods.
+<p>
+But special <span class="InlineFormula">interfaces</span> (Java)
+or <span class="InlineFormula">classes with pure virtual operations and no data members</span>(C++)
+should arise as a side effect of designing a class structure.  It is rare that
+you spot the need for an interface before you have an example
+of an implementation of that class.  Indeed I think that some
+interfaces are best found by refactoring tested code.  On the other hand
+an interface that doesn't have an implementation is probably
+a waste of design time.
+<p>
+The exceptions to this theory are:
+<br><ol class="List">
+<li>The <a href="#GoF">GoF</A> patterns nearly always have an interface defined somewhere.
+<li>Developing frameworks for others to use.
+<li>Developing <span class="InlineFormula">components</span> -- plug compatible pieces of software
+accessed by well defined interfaces.
+<li>Java.
+<li>Breaking circular inheritance relationships.
+</ol><br>
+<p>
+By the way... this like asking if one should use screws in a
+piece of hardware: it depends on the material and the problem.
+<p>
+<H2><a name="Chapter 25 pages 427 : Persistent Storage">Chapter 25 pages 427 : Persistent Storage</A></H2>
+When should a persistent storage class be implemented?
+<p>
+Good question:  after designing the data base (or files) and
+just before the first tests which use persistent data.  Note
+don't test with live data until you've tested with simulated
+test data.
+<p>
+<H2><a name="Chapter 25 pages 433 : Data Hiding">Chapter 25 pages 433 : Data Hiding</A></H2>
+Is Information Hiding and using Private member variables the same concept.J From the books description, it sounds like using a private variable to only allow limited access to it for use?
+<p>
+<A name="Information Hiding" class="Key"> Information Hiding </A>
+has several meanings... see
+[<A href="http://cse.csusb.edu/dick/samples/methods.html#information_hiding"> ../samples/methods.html#information_hiding </A>]
+for example.
+<p>
+Making parts of a class private is just the smallest part of
+the idea!
+<p>
+Making data private is the least controversial.  The only exception
+I know of is the C++ STL <span class="InlineFormula">pair</span> type.
+</ol><p>. . . . . . . . . ( end of section <a href="16q.html#Questions 16 -- More GRASP">Questions 16 -- More GRASP</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci Dept, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10.
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

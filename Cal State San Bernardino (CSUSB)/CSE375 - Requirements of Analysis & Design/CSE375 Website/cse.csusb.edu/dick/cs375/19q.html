@@ -1,0 +1,847 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/19q.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:55:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+Questions and answers
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="19q.txt">Text Version</A>]
+ 19q.html 
+Thu Mar 22 15:41:11 PDT 2012
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="19q.html#Questions and answers">Questions and answers</A>
+<li><a href="19q.html#Chapter 1 pages 1-535 -- How to model GUI interactions">: Chapter 1 pages 1-535 -- How to model GUI interactions</A>
+<li><a href="19q.html#Chapter pages 221-270 -- Interaction/DCD">: Chapter pages 221-270 -- Interaction/DCD</A>
+<li><a href="19q.html#Chapter 0 pages 0 -- What is dynamic binding">: Chapter 0 pages 0 -- What is dynamic binding</A>
+<li><a href="19q.html#Chapter 16 pages 242 -- Bloated Controllers">: Chapter 16 pages 242 -- Bloated Controllers</A>
+<li><a href="19q.html#Chapter 16 pages 268 -- User-Defined Compartments">: Chapter 16 pages 268 -- User-Defined Compartments</A>
+<li><a href="19q.html#Chapter 16 pages 269 -- Active Class">: Chapter 16 pages 269 -- Active Class</A>
+<li><a href="19q.html#Chapter 0 pages 0 -- If one of our classes calls a SQL class, how do we represent this in our diagram?">: Chapter 0 pages 0 -- If one of our classes calls a SQL class, how do we represent this in our diagram?</A>
+<li><a href="19q.html#Chapter 19 pages 559-586 + 651-654 -- Object Oriented Database">: Chapter 19 pages 559-586 + 651-654 -- Object Oriented Database</A>
+<li><a href="19q.html#Chapter 17 pages 475-500 -- state machines and the Web">: Chapter 17 pages 475-500 -- state machines and the Web</A>
+<li><a href="19q.html#Chapter 19 pages 367 -- Code in diagrams">: Chapter 19 pages 367 -- Code in diagrams</A>
+<li><a href="19q.html#Chapter 26 pages 471 -- GoF">: Chapter 26 pages 471 -- GoF</A>
+<li><a href="19q.html#Chapter 31 pages 501-533 -- conceptual classes">: Chapter 31 pages 501-533 -- conceptual classes</A>
+<li><a href="19q.html#Chapter 31 pages p. 519 -- Composite Aggregation">: Chapter 31 pages p. 519 -- Composite Aggregation</A>
+<li><a href="19q.html#How are quality scenarios related to the analysis of architectural artifacts?">: How are quality scenarios related to the analysis of architectural artifacts?</A>
+<li><a href="19q.html#Chapter 33 pages 542-550 : Architectural Analysis">: Chapter 33 pages 542-550 : Architectural Analysis</A>
+<li><a href="19q.html#Chapter 33 pages 554-555 : Separation of concerns">: Chapter 33 pages 554-555 : Separation of concerns</A>
+<li><a href="19q.html#Chapter 33 pages 542 -- Evolution Point">: Chapter 33 pages 542 -- Evolution Point</A>
+<li><a href="19q.html#Chapter 34 pages 559-568 -- Layers Pattern">: Chapter 34 pages 559-568 -- Layers Pattern</A>
+<li><a href="19q.html#Chapter 34 pages 563-4 -- Architecturally significant scenarios">: Chapter 34 pages 563-4 -- Architecturally significant scenarios</A>
+<li><a href="19q.html#Chapter 34 pages 365 -- Packages vs Subsystem">: Chapter 34 pages 365 -- Packages vs Subsystem</A>
+<li><a href="19q.html#Chapter 34 pages 564 -- Package Diagrams just in time for the 455 final">: Chapter 34 pages 564 -- Package Diagrams just in time for the 455 final</A>
+<li><a href="19q.html#Chapter 34 pages 571 -- Layer Pattern issues">: Chapter 34 pages 571 -- Layer Pattern issues</A>
+<li><a href="19q.html#Chapter 34.3 pages 573 -- layers">: Chapter 34.3 pages 573 -- layers</A>
+<li><a href="19q.html#Chapter 34 pages 576 -- Logical Architecture Refinement">: Chapter 34 pages 576 -- Logical Architecture Refinement</A>
+<li><a href="19q.html#Chapter 34 pages 576 -- Model View &amp; Upward Communication">: Chapter 34 pages 576 -- Model View &amp; Upward Communication</A>
+<li><a href="19q.html#Chapter 34 pages 541-558 : Architecture">: Chapter 34 pages 541-558 : Architecture</A>
+<li><a href="19q.html#Chapter 34 pages 564 : Interaction &amp; Packages">: Chapter 34 pages 564 : Interaction &amp; Packages</A>
+<li><a href="19q.html#Chapter 34 pages 570-571 : Layer Patterns">: Chapter 34 pages 570-571 : Layer Patterns</A>
+<li><a href="19q.html#Chapter 34 pages 574 -- Three tier architecture">: Chapter 34 pages 574 -- Three tier architecture</A>
+<li><a href="19q.html#Chapter 34 pages 561 -- UI objects">: Chapter 34 pages 561 -- UI objects</A>
+<li><a href="19q.html#Chapter 34 pages 562 -- Coupling">: Chapter 34 pages 562 -- Coupling</A>
+<li><a href="19q.html#Chapter 34 pages 559-577 -- Non-Layered Architectures">: Chapter 34 pages 559-577 -- Non-Layered Architectures</A>
+<li><a href="19q.html#Chapter 34 pages 559-586 -- Logical Architecture Refinement">: Chapter 34 pages 559-586 -- Logical Architecture Refinement</A>
+<li><a href="19q.html#Chapter 34 pages 570 -- Relaxed Layered Coupling">: Chapter 34 pages 570 -- Relaxed Layered Coupling</A>
+<li><a href="19q.html#Chapter 34 pages 559-577 -- Swing">: Chapter 34 pages 559-577 -- Swing</A>
+<li><a href="19q.html#Chapter 34.1 pages 564 -- Architecturally Significant Scenarios">: Chapter 34.1 pages 564 -- Architecturally Significant Scenarios</A>
+<li><a href="19q.html#Chapter 34 pages 569 - 570 -- Using Observer">: Chapter 34 pages 569 - 570 -- Using Observer</A>
+<li><a href="19q.html#Chapter 34 pages 571-575 -- Other Layer Pattern">: Chapter 34 pages 571-575 -- Other Layer Pattern</A>
+<li><a href="19q.html#Chapter 34 pages 572-573 -- Fuzzy Set Membership in Different Layers">: Chapter 34 pages 572-573 -- Fuzzy Set Membership in Different Layers</A>
+<li><a href="19q.html#Chapter 35 pages 559-586 -- Package">: Chapter 35 pages 559-586 -- Package</A>
+<li><a href="19q.html#Chapter 35 pages 580 -- Local caching">: Chapter 35 pages 580 -- Local caching</A>
+<li><a href="19q.html#Chapter 35 pages 582 -- Packages">: Chapter 35 pages 582 -- Packages</A>
+<li><a href="19q.html#Chapter 38 pages 627 -- Framework">: Chapter 38 pages 627 -- Framework</A>
+<li><a href="19q.html#Chapter 38 pages 651-654 -- UML Deployment and Component Diagrams">: Chapter 38 pages 651-654 -- UML Deployment and Component Diagrams</A>
+<li><a href="19q.html#Chapter 38 pages 652 -- Deployment diagram">: Chapter 38 pages 652 -- Deployment diagram</A>
+<li><a href="19q.html#Chapter 38 pages 651-653 -- Deployment vs.Component diagram">: Chapter 38 pages 651-653 -- Deployment vs.Component diagram</A>
+<li><a href="19q.html#Chapter 38 pages 653 -- Execution Environment Node and operating systems">: Chapter 38 pages 653 -- Execution Environment Node and operating systems</A>
+<li><a href="19q.html#Chapter 39 pages 656 -- Software Architect document">: Chapter 39 pages 656 -- Software Architect document</A>
+<li><a href="19q.html#Chapter 39 pages 651-660 -- Documenting Architecture -- SAD">: Chapter 39 pages 651-660 -- Documenting Architecture -- SAD</A>
+<li><a href="19q.html#Chapter 33 pages All : Architecture">: Chapter 33 pages All : Architecture</A>
+<li><a href="19q.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="Questions and answers">Questions and answers</A></H1><ol class=Section>
+<H2><a name="Chapter 1 pages 1-535 -- How to model GUI interactions">Chapter 1 pages 1-535 -- How to model GUI interactions</A></H2>
+I am still a bit confused on GUI modeling. For example, if a GUI has a drop down menu of choices, how is the choice that the user makes represented in an Interaction diagram?
+<p>
+The precise UI code is determined by your platform.  It may even be documented using a UML
+interaction diagram.
+<p>
+When I'm working on a design,  I abstract away from the platform to focus on the logic.
+Here is the scenario you mean (I guess):
+<br><ol class="List">
+<li>The user selects the menu and the system shows them a list of choices.
+<li>The user looks at the list and selects one.
+<li>The system does the selected action...
+</ol><br>
+<p>
+Translated into messages in a SSD:
+<p>
+<img src="menu.png" alt="[SSD of menu selection]">
+<p>
+Next step is to use GRASP to design the detailed interactions.... Exercise?
+<p>
+<H2><a name="Chapter pages 221-270 -- Interaction/DCD">Chapter pages 221-270 -- Interaction/DCD</A></H2>
+Was there a common mistake among all the groups concerning Interaction Diagrams and DCDs that should be avoided?
+<p>
+Doing too much in one diagram: Trying to put a whole scenario into one interaction diagram
+rather than the responses to each message in turn in separate diagrams.
+<p>
+Another common error is having too many DCDs...  You should have one DCD for many different interaction
+diagrams.
+<p>
+When you have more than 20 classes and the DCD is too big to fit on poster
+or board.... then you must collecting the classes into
+logical groups and draw each package as separate diagrams + a package diagram showing
+the dependencies between the packages.  We don't have much time to discuss this, this
+quarter.
+<p>
+Start to control the complexity by splitting the classes into layers: UI vs Domain
+vs Services.
+<p>
+<H2><a name="Chapter 0 pages 0 -- What is dynamic binding">Chapter 0 pages 0 -- What is dynamic binding</A></H2>
+We mention this in CS202 and talk a lot about it in CS320 (Advert).
+<p>
+It is a long explanation.... but vital to understanding the Zen of Objects.
+<p>
+A binding is a connection between a symbol and a value.  Computer programs are full of them.  If they
+are computed by the compiler and/or linker then they are
+<A name="Static Bindings" class="Key"> Static Bindings </A>
+but if they can be changed as the program runs they are called
+<A name="Dynamic Bindings" class="Key"> Dynamic Bindings </A>
+instead.
+<p>
+Example:  When you declare a local variable
+<pre> 	double x=5;</pre>
+then the type of the variable <span class="InlineFormula">x</span> is
+<A name="bound" class="Key"> bound </A>
+to the type <span class="InlineFormula">double</span>.   In C++ you can not change the type so it is statically
+bound to <span class="InlineFormula">x</span>.  The value of <span class="InlineFormula">x</span> is 5, but this is dynamic.  You can change it as the program runs.
+<p>
+Life gets more interesting when you have objects and pointers to objects.  The objects
+have a static type.  But the pointer can point at objects of different types.  And the
+type of object you point at, within limits, can be changed as the program runs.  As a result
+the type of the object we point at is dynamic.   The limit, with objects, is that a pointer
+can only point at objects that are derived from the type that is declared:
+<pre> 		General * p; // General has a two derived special types: Special and SuperSpecial</pre>
+<pre> 		p = new Special; // p refers to an object of type Special.</pre>
+<pre> 		p = new SuperSpecial; // p refers to an object of type SuperSpecial.</pre>
+<p>
+Now, what happens if we write
+<pre> 		p-&gt;something() ; // call the something() function</pre>
+when we have <span class="InlineFormula">something()</span> declared in General, Special, and SuperSpecial???
+<p>
+<p>
+Answer: if &quot;something&quot; has static binding then you get
+<pre> 			General::something()</pre>
+but if
+it is dynamically bound, the running program can give you the General, Special,
+or the Superspecial version of function <span class="InlineFormula">something()</span> depending on what <span class="InlineFormula">p</span> is
+pointing at..
+<p>
+Dynamic binding gives us polymorphism.
+<p>
+<H2><a name="Chapter 16 pages 242 -- Bloated Controllers">Chapter 16 pages 242 -- Bloated Controllers</A></H2>
+Are there ever cases, perhaps with extremely small programs, where there is only one controller?
+<p>
+Yes.  Lots.  Indeed most programmers cheerfully put everything in a single controller class.  This
+starts out OK, but as the program grows -- and all useful programs grow.....
+<p>
+As the bloated termite said when we left Noah's Ark: &quot; I can't believe I ate the whole thing&quot;.
+<p>
+So.... A single function program, with simple data, and few external interfaces or data bases.....
+put it in a single controller.... and REFACTOR the moment things get complicated.  You are
+accumulating
+<A name="Technical Debt" class="Key"> Technical Debt </A>
+with each added function in the small project.
+<p>
+<H2><a name="Chapter 16 pages 268 -- User-Defined Compartments">Chapter 16 pages 268 -- User-Defined Compartments</A></H2>
+As I was reading through chapters 15 and 16 again I noticed that the section on user-defined compartments did not have much information. When would it be a good idea to include user-defined compartments in a class box, and what would generally be put into those compartments?
+<p>
+There isn't much you can say about what individuals and teams will do to add new compartments.  Perhaps
+a list of responsibilities?  perhaps a list of authors?  ....  Actually it is better to
+record authors as tags: <span class="InlineFormula">{author=RJB, email=rjbotting@csusb.edu}</span>.  Similarly variations
+in meaning should be written as stereotypes.
+<p>
+SO my advice... don't add compartments.
+<p>
+<H2><a name="Chapter 16 pages 269 -- Active Class">Chapter 16 pages 269 -- Active Class</A></H2>
+Can you explain active class / active object? The book doesn't explain that very well.
+<p>
+An active object has an independent thread of control or else it runs on a
+different central Processor.  In other words it is doing it's own thing,
+and you send it messages which it may or may not ignore.   Not elementary
+programming.  Easiest in Java.... but tricky anyway.
+<p>
+<H2><a name="Chapter 0 pages 0 -- If one of our classes calls a SQL class, how do we represent this in our diagram?">Chapter 0 pages 0 -- If one of our classes calls a SQL class, how do we represent this in our diagram?</A></H2>
+<p>
+There is no special way to show a data base in the UML.
+<p>
+It depends on the diagram and whether you are using the class or implementing it.
+<p>
+If your software uses a preexisting library of classes for handling a SQL database
+then you can show in a class diagram if you like.  You should show the data base as
+an actor (in a box) in a use case.  You may show an object in the SQL class
+in an interaction diagram and add a comment.  You could also name it
+like this
+<pre> 		sql : SQL::classname</pre>
+and use it to show how it is used.  Another option (not one I've seen) is
+to show a &quot;lost message&quot; that leaves the calling objects and goes to a black dot.
+<p>
+If you are writing a class that uses SQL to access a database then you show the
+data base as an actor in a use case diagram.  Put the SQL classes in a Technical Services package (keep things tidy!).  Show the class in Design Class Diagrams and objects
+of that class in interaction diagrams.  You would be wise to create a Facade to hide the SQL.
+<p>
+<H2><a name="Chapter 19 pages 559-586 + 651-654 -- Object Oriented Database">Chapter 19 pages 559-586 + 651-654 -- Object Oriented Database</A></H2>
+Object Oriented Database came up once before and once again in chapter 38. Can you give more details about this type of database.
+<p>
+Sorry, no.  Not part of this course and outside my knowledge.
+<p>
+<H2><a name="Chapter 17 pages 475-500 -- state machines and the Web">Chapter 17 pages 475-500 -- state machines and the Web</A></H2>
+does a web project have a state machine? since processes are only activated when a request to the server is sent.
+<p>
+Most experts in web design use a state machine to document the states a session
+can be in -- basically one state per page.  Clicks and user actions are events
+that change the state.  This is non-standard, optional, but helpful.
+<p>
+<H2><a name="Chapter 19 pages 367 -- Code in diagrams">Chapter 19 pages 367 -- Code in diagrams</A></H2>
+Is it a good idea to include notes on diagrams containing code?  (i.e. page 367)
+<p>
+When the code says something useful/valuable it is a good idea.  For example --
+you have to explain to
+a team member a particular coding trick.  Or, for example, you want to
+document how to use a class that you have invented or found in an existing
+library.
+<p>
+<p>
+<H2><a name="Chapter 26 pages 471 -- GoF">Chapter 26 pages 471 -- GoF</A></H2>
+Are there any Grasp of Four patterns you have found to be extremely useful and actually said &quot;hey lets use a adapter in this situation, it would be perfect!&quot; or is it more of a thing that will normally just kind of happen while creating UML and doing the UP?
+<p>
+(1)  There are no &quot;Grasp of Four&quot;!    Exercise -- what is the correct term?
+<p>
+(2) I have always found the &quot;Protected Variations&quot; GRASP extremely useful.  For 40 years....
+<p>
+(3) These days I tend to work with computer languages, and these demand the Composite GoF pattern.
+<p>
+(4) In Java you will be using Singleton's all the time -- lots of &quot;getInstance()&quot;.
+<p>
+(5) the half a dozen GoF in Larman are probably the most useful.
+<p>
+The GoF tend to pop up as a solution to a knotty design problem -- whether or not you use the UML or the UP.
+<p>
+<p>
+<H2><a name="Chapter 31 pages 501-533 -- conceptual classes">Chapter 31 pages 501-533 -- conceptual classes</A></H2>
+This chapter focuses on conceptual classes as oppose to software classes. Will most of these classes become software classes?
+<p>
+I hope so.  However, learning about the domain is itself a worthwhile
+activity, even if it turns out that some classes are not reflected
+in the software.
+<p>
+One reason why Larman in the UP delays Business or Domain Modeling is so
+that you choose the classes to model using the use cases.  This means you
+are almost certainly going to use them in a DCD(Design Class Model).
+<p>
+<H2><a name="Chapter 31 pages p. 519 -- Composite Aggregation">Chapter 31 pages p. 519 -- Composite Aggregation</A></H2>
+What is the difference between aggregation and composite aggregation?
+<p>
+We discussed this  complex and messy in
+[<A href="11q.html"> 11q.html </A>]
+and in
+[<A href="18q.html"> 18q.html </A>]
+<p>
+<H2><a name="How are quality scenarios related to the analysis of architectural artifacts?">How are quality scenarios related to the analysis of architectural artifacts?</A></H2>
+That was in last years CS375 not this one.  Sorry!
+<p>
+<H2><a name="Chapter 33 pages 542-550 : Architectural Analysis">Chapter 33 pages 542-550 : Architectural Analysis</A></H2>
+In this chapter the author says that non-functional requirements are given thorough attention more than the functional ones. Why would this be the case?
+<p>
+Basically Larman has put of the tough part until now.  This is the
+chapter where most of the advice on architectural design is discussed.
+And architectural design is about special non-functional requirements.  The rest
+of the book is about meeting functional requirements.  In
+those parts of the book the only non-functional requirement is implicit:
+trying to preserve the programmer's sanity.
+<p>
+<H2><a name="Chapter 33 pages 554-555 : Separation of concerns">Chapter 33 pages 554-555 : Separation of concerns</A></H2>
+Are there other techniques we can use in order to achieve a separation of concerns?
+<p>
+The term comes from accounting.
+<p>
+Discussion: how many different ways can you think of for making
+sure that two different requirements or design decisions don't
+end up in the same piece of code? (Check the patterns
+and principles I've listed on this site).
+<p>
+<H2><a name="Chapter 33 pages 542 -- Evolution Point">Chapter 33 pages 542 -- Evolution Point</A></H2>
+How difficult is it to incorporate evolution points as they arise?
+<p>
+Some changes can have a wide impact.  Some effect only one method in one
+function in one class.  The ideal architecture should let changes effect
+only small am mounts of code.   However, usually, you don't know the
+ideal architecture until after the changes happen, so you work
+harder than you might want.  Spotting an evolution point -- a hot spot
+for change early in the project can give you a more robust architecture
+that focuses change into small pieces of code.
+<p>
+<H2><a name="Chapter 34 pages 559-568 -- Layers Pattern">Chapter 34 pages 559-568 -- Layers Pattern</A></H2>
+Dr. Botting can you give a clear explanation of Facade and Facade Pattern? please.
+<p>
+You need to use some classes -- example to help your software access a data
+base.  You hide the complications of doing this inside classes that you
+write.
+The classes you write provide a simpler way to access the data base.  The
+rest of the program uses the simpler functions.
+<p>
+The simpler classes are called a Facade -- the curtain that hides the details.
+<p>
+Consequence: technical details of the data base are separated from the
+problems of the domain.  This is good.
+<p>
+In this case the Facade would be put in a Technical Services layer.
+<p>
+You can put a Facade around any complex subsystem in your software.  It is an example of using GRASP &quot;Indirection&quot;.  Such Facades belong in other layers.
+<p>
+<H2><a name="Chapter 34 pages 563-4 -- Architecturally significant scenarios">Chapter 34 pages 563-4 -- Architecturally significant scenarios</A></H2>
+In an inter-layer and/or inter-package interaction scenario what determines
+an architecturally significant scenarios.
+<p>
+I guess experience counts!  You don't need this knowledge for this class.
+<p>
+A scenario is significant if it forces a particular structure.  So you look
+for scenarios that involve classes in many layers.  You want to explore
+requirements that lead to calls to functions in classes from the user
+interface level down to technical services.
+<p>
+<H2><a name="Chapter 34 pages 365 -- Packages vs Subsystem">Chapter 34 pages 365 -- Packages vs Subsystem</A></H2>
+Can you explain in better detail the difference between simple packages and subsystems?
+<p>
+Not really -- and it is not two important for this class.
+<p>
+But when you have a set of classes that all use each other and are all
+about the same thing, and their objects have lots of interactions... then
+this is a subsystem rather a package.     It is a matter of coherence.  How
+closely are things stuck together by the solutions that they encode.
+<p>
+<H2><a name="Chapter 34 pages 564 -- Package Diagrams just in time for the 455 final">Chapter 34 pages 564 -- Package Diagrams just in time for the 455 final</A></H2>
+So when we use a package diagram do we also need a counterpart IE, interaction diagram and where does the deployment diagram fit in?
+<p>
+Personally I'd only show interactions between packages when you have an audience
+who are likely to be unable to see what the dependency arrows mean.
+<p>
+Deployment is for explaining the hardware and software you are using.  Only needed
+if you are doing something out of the normal box.
+<p>
+<H2><a name="Chapter 34 pages 571 -- Layer Pattern issues">Chapter 34 pages 571 -- Layer Pattern issues</A></H2>
+in what situations is logical views of architecture more convenient to use than Process and Deployment views of architecture?
+<p>
+It is not a matter of convenience.  Mostly you will need both:  deployment
+defines your platform and the logical architecture the structure of you
+software.
+<p>
+However, if there is only one program running on a plain vanilla PC
+then the deployment diagram is almost worthless.  And if the program
+only has 2 or 3 classes then packaging them doesn't seem worthwhile either.
+<p>
+<H2><a name="Chapter 34.3 pages 573 -- layers">Chapter 34.3 pages 573 -- layers</A></H2>
+How can layers affect performance?
+<p>
+It takes time to call a function. Suppose we have 26 packages called
+A, B, C, ... Z. If A::a() calls B::b() that calls
+<li><a name="C">C</A>::c() that calls.... Z::z() then you have 26 function calls.  However
+<li><a name="if A">if A</A>::a() just calls Z::z() directly it only takes 1 function call.  This
+is 26 times faster.
+<p>
+As a rule -- don't worry about  this unless tests show that the
+software performs badly.  Much time has been wasted by programmer
+doing &quot;premature optimization&quot; -- improving the speed of
+parts of the software that don't effect the whole.
+<p>
+<H2><a name="Chapter 34 pages 576 -- Logical Architecture Refinement">Chapter 34 pages 576 -- Logical Architecture Refinement</A></H2>
+What is polling?
+<p>
+This is a technique that was originally used in hardware.  One part
+of a system needs to know when some event happens.  So it repeatedly asks
+&quot;Has it happened yet?&quot;.
+<p>
+Think of a child on a road trip: &quot;Are we there yet?&quot;
+<p>
+<H2><a name="Chapter 34 pages 576 -- Model View &amp; Upward Communication">Chapter 34 pages 576 -- Model View &amp; Upward Communication</A></H2>
+can you go into more detail about &quot;pull-from-above&quot; or &quot;polling&quot; and
+&quot;push-from-below&quot;? I am unclear on their uses and purpose.
+<p>
+Software is easier to develop and maintain if it is organized
+so that the dependencies don't form cycles: A::a() calls B::b()
+<li><a name="which calls C">which calls C</A>::c() which calls A::a2(), for example.  Now we should place
+A above B and B above C because that is the direction of calling -- but
+C also calls A -- this is therefore
+<A name="push from below." class="Key"> push from below. </A>
+<p>
+One solution is to refactor... for example does a2() really belong in
+A or should it be moved to package C?  This can move hole classes
+from one package to another!  For example you might start a design
+with an SMTP server in the User Interface layer because is is
+an actor in the use case.   But the logical architecture starts to look
+messy so you move the SMTP handling classes done into
+the Technical Service layer.  The design becomes a lot
+cleaner.
+<p>
+Another solution is to create a low level interface for A (call it I)
+<li><a name="that contain I">that contain I</A>::a2().  Then make A::a2() implements I::a2() and
+<li><a name="C">C</A>::c() calls I::a2().  The interfaces decouples the two packages.
+<li><a name="A neat variation is for A">A neat variation is for A</A>::a to pass a an object <span class="InlineFormula">callback</span> that
+<li><a name="implements the interface I">implements the interface I</A>::a2() down to C -- and C::c() calls it
+to signal the event.
+<p>
+However, you can sometime reverse the direction of call.  Suppose
+<li><a name="that C">that C</A>::c() calls A::a2() to tell A that something has happened or
+to pass A some data that it needs.  Instead we can write a function
+<li><a name="in A that calls a function C">in A that calls a function C</A>::c2() that gets the data from C (
+<A name="pulling from above" class="Key"> pulling from above </A>
+) or
+finds out if the event has happened (
+<A name="polling" class="Key"> polling </A>
+).
+<p>
+<p>
+<H2><a name="Chapter 34 pages 541-558 : Architecture">Chapter 34 pages 541-558 : Architecture</A></H2>
+A lot of this looks the same as the logical architecture we've done in our
+first iteration.  Is this more of a reminder to make sure our previous
+architecture diagrams are up to date?  Further, how should the architecture
+in this iteration differ from the previous iterations architecture?
+<p>
+Yes: this is a review.
+<p>
+In theory (and I hope in your future practice) logical architecture should be
+pretty stable after the first two iterations because you should use
+the first few iterations to test it out.
+<p>
+Architecture changes when some thing unexpected happens: a new
+wide ranging requirement: example -- no SSNs will be used any more.
+The other tectonic event: change of hardware or platform.
+<p>
+<H2><a name="Chapter 34 pages 564 : Interaction &amp; Packages">Chapter 34 pages 564 : Interaction &amp; Packages</A></H2>
+When should interaction diagrams denote package information? Would not class diagrams be a better location for communicating 'cross boundary connections' between packages?
+<p>
+This is right: use packages to keep complexity under control and use
+a package diagram to show what you're doing.
+<p>
+But once a class is put in a package then its name in other diagrams
+changes.
+If you omit the package names from interaction diagrams you don't know where
+to find the classes -- who said the names were different?  Each package is
+a <span class="InlineFormula">namespace</span>.
+<p>
+<p>
+<H2><a name="Chapter 34 pages 570-571 : Layer Patterns">Chapter 34 pages 570-571 : Layer Patterns</A></H2>
+Please explain &quot;layer patterns&quot; in greater detail and give some examples of how to apply them?
+<p>
+Over the last 5 years people have learned that it pays to put
+certain types of classes into a &quot;layer&quot;.  Layers separate classes
+that shouldn't get muddled up with each other. For example all
+the classes that are inspired by the domain model form a &quot;layer&quot;.
+All the classes/code describing the &quot;look-and-feel&quot; of the user
+interface form another famous layer -- and every body agrees we
+don't want to muddle up the user interface with the &quot;model&quot;.  Another
+classic layer: persistence.  These classes handle the data base (and/or files)
+that preserve data between runs of programs. Again it makes life
+simple if the domain does not have to worry about the kind
+of data storage you are using and vice versa.  The book has an
+excellent picture of the classic architecture:  Use it.
+<p>
+<H2><a name="Chapter 34 pages 574 -- Three tier architecture">Chapter 34 pages 574 -- Three tier architecture</A></H2>
+Is the three tier architecture what we call today MVC?
+<p>
+Yes -- the three tiers evolved from MVC and are a popular way to implement it.
+<p>
+<H2><a name="Chapter 34 pages 561 -- UI objects">Chapter 34 pages 561 -- UI objects</A></H2>
+Why do SSDs illustrate the system operations, but hid the UI objects?
+<p>
+Because Larman says so!
+<p>
+Also because this is not a book about how to use the .XXX library of
+language YYY with OS ZZZ.
+<p>
+<H2><a name="Chapter 34 pages 562 -- Coupling">Chapter 34 pages 562 -- Coupling</A></H2>
+What kind of coupling is noteworthy? The coupling diagram showed in our book is so messy,I don't think it can help me understand better.
+<p>
+Coupling is by definition messy -- and makes the software hard to understand.
+This is why we try to reduce it.  In diagrams the arrows are warnings to the
+programmers to be careful.
+<p>
+<a href="#TBA">TBA</A>
+<p>
+<H2><a name="Chapter 34 pages 559-577 -- Non-Layered Architectures">Chapter 34 pages 559-577 -- Non-Layered Architectures</A></H2>
+What would be some of the benefits of having a non-layered architecture?  It seems to be more of a death trap than anything else.
+<p>
+Non-layered architecture is a booby trap.   Good for a simple program. and
+hatches a disaster as the software grows to meet new technology and stake holder's
+needs.
+<p>
+<p>
+<H2><a name="Chapter 34 pages 559-586 -- Logical Architecture Refinement">Chapter 34 pages 559-586 -- Logical Architecture Refinement</A></H2>
+When is it appropriate to use the refined logical architecture over a regular package diagram?
+<p>
+Large pieces of software.
+<p>
+<p>
+<H2><a name="Chapter 34 pages 570 -- Relaxed Layered Coupling">Chapter 34 pages 570 -- Relaxed Layered Coupling</A></H2>
+Can you explain in detail what Relaxed Layered Coupling is?
+<p>
+It just means that your upper layer classes can skip layers.  I think it
+is harmless and common.  What ever the theorists say.
+<p>
+<H2><a name="Chapter 34 pages 559-577 -- Swing">Chapter 34 pages 559-577 -- Swing</A></H2>
+On page 309 the books states that it assumes we are familiar with Swing.  Chapter 34 talks about Swing.  I am not familiar with Swing, can you elaborate?
+<p>
+Swing is just a collection of classes that helps a Java programmer define a
+user interface.  You don't need to know about them for this class.  The
+Wikipedia
+[<A href="http://en.wikipedia.org/wiki/Java_Swing"> Java_Swing </A>]
+has a good general discussion.
+<p>
+In Chapter 34 actually hides the SWING library behind the ProcessSaleFrame
+class, or a couple of other similar classes.
+<p>
+<p>
+<H2><a name="Chapter 34.1 pages 564 -- Architecturally Significant Scenarios">Chapter 34.1 pages 564 -- Architecturally Significant Scenarios</A></H2>
+Aren't architecturally significant scenarios like a detailed use case but drawn like Figure 34.4 on page 564?
+<p>
+That is no scenario, it is a sequence diagram.
+<p>
+Scenarios are lists of user actions.  The figure shows one user action and
+a ton of internal message passing.
+<p>
+<H2><a name="Chapter 34 pages 569 - 570 -- Using Observer">Chapter 34 pages 569 - 570 -- Using Observer</A></H2>
+Message
+Could you go over the use of Observer in upward collaboration and what exactly is a PropertyListener?
+<p>
+I've just signed up to the UML discussions Google group.
+When messages are sent to this group I get Email telling me about them.
+Years ago I joined the Math-thinking mailing list.   And so on. To do this you
+have to have your EMail address validated so that the mailer can send you the
+messages.  Then the mail server adds you to a list of people
+who get the messages.   It relies on me having a valid address.  I rely
+on it to send me the data I want as it happens.   I am an
+EMailListener, you might say.  I am an observer of events by Email.
+I get the info but I am only loosely coupled to the rest of the group.
+<p>
+When we need information to flow in the opposite direction to the planned dependencies
+-- for example we want a value calculated in the domain layer to appear
+in a form/web page -- then we reduce the coupling by programming the
+upper objects/classes to listen in the lower levels -- using Observer.
+<p>
+This means that the listening class must declare its capacity to listen.  This
+is done by implementing a particular list of functions -- a particular
+interface.  So if there is a property Listener interface then a class
+becomes a Property Listener by implementing that interface.  In C++
+<pre> 	class ImAListener : public IPropertyListener { ... }</pre>
+The compiler checks to see that the class fulfills its promise.  The
+objects of the class can be sent messages about the property being listened
+for.
+<p>
+In the domain we keep a list of objects that are interested in the changes.
+All we need to know is that they implement IPropertyListener.  We provide
+a couple of functions that add and remove IPropertyListeners from our
+list.  When the property changes we send the message with the new data...
+<p>
+An object that implements IPropertyListener can add itself to the list
+and so receive notifications.
+<p>
+<p>
+.Chapter 34 pages 576 -- Upward Communication
+On page 576, a UIFacade is added to the UI layer to add indirection to the GUI objects.  Since it is not a part of the &quot;physical&quot; UI, it seems to me that it fits better as part of the domain layer--especially since one of its main purposes is to act as a controller for domain objects.  What am I missing?
+<p>
+I think you've got it.  This Facade -- like all Facades -- lies
+on the fault line between two packages.  It could be put in either the
+package that it provides access to it or in the packages that use it.
+And now you see why we can't put it in with the &quot;users&quot; packages -- there
+may be more than one.  Also a Facade is more heavily coupled to
+the package/system that it &quot;protects&quot;  than its users.  So we
+put it, in this case in the UI package.
+The Book says that a facade does not normally do its own work. Does that mean there are times when it does its own work?
+<p>
+I guess so.... but I don't like it.  I think Facades should be thin.
+<p>
+<p>
+<H2><a name="Chapter 34 pages 571-575 -- Other Layer Pattern">Chapter 34 pages 571-575 -- Other Layer Pattern</A></H2>
+Is the application layer optional?
+<p>
+Yes.  Use when you have many controllers.
+<p>
+<H2><a name="Chapter 34 pages 572-573 -- Fuzzy Set Membership in Different Layers">Chapter 34 pages 572-573 -- Fuzzy Set Membership in Different Layers</A></H2>
+Different layers should be simple and understandable so why are fuzzy set terms used by different development teams?
+<p>
+Larman is using the term &quot;Fuzzy Set&quot; as a metaphor.  He means that sometimes
+it may not be clear where a class belongs in the layers.  In this case it
+is better to proceed as if it was in two packages than to freeze the
+project in a big row about the correct place.
+<p>
+<p>
+<H2><a name="Chapter 35 pages 559-586 -- Package">Chapter 35 pages 559-586 -- Package</A></H2>
+Can you give an example of how packages work?
+<p>
+How software is organized depends on the language.  It also doesn't
+become critical until you have a large piece of software.  So which bit of
+enormous code do you want to see, and in what language?  I have a couple
+large systems written in C (not OO but well organized).
+<p>
+In C++ we use three techniques: split source code into files and use
+independent compilation, separate files into directories, finally, and new,
+we place different classes and functions in separate namespaces so that
+we can use the same names for different purposes.
+<p>
+In Java you use: files, directories (on the Internet), and the &quot;package&quot;
+declaration.
+<p>
+Idea:  code that implements things in different packages should
+be placed so that it doesn't interfere.
+<p>
+<H2><a name="Chapter 35 pages 580 -- Local caching">Chapter 35 pages 580 -- Local caching</A></H2>
+How important role does local caching play in NextGen requirements?
+<p>
+In computer science, local caching is a technique for making a program run faster by
+sing the <span class="InlineFormula">principle of locality</span>.  For example keeping a local copy of recent
+data in a CPU.  Another common example in an operating system is keep pages
+in RAM until they have to be copied to disk.  Finally in a network
+we often maintain local copies of data on several nodes -- the Internet
+DNS system uses this to speed name servers.
+<p>
+Keeping a local copy of important data in a distributed system also improves
+reliability -- if the network goes down you still have the data.
+<p>
+I'd say that these principles apply to NextGen:  local caching will
+improve reliability and speed -- given careful design.
+<p>
+It also makes a nice example for some GoF patterns.
+<p>
+<H2><a name="Chapter 35 pages 582 -- Packages">Chapter 35 pages 582 -- Packages</A></H2>
+Why is it a good idea to reduce widespread dependencies?
+<p>
+A widespread dependency means that a small change can have  <span class="InlineFormula">widespread</span> consequences.
+Change this class and you'll have to fix bugs in a dozen other places for example.
+<p>
+<p>
+<H2><a name="Chapter 38 pages 627 -- Framework">Chapter 38 pages 627 -- Framework</A></H2>
+What are other examples of frameworks besides the Java's Swing framework
+<p>
+Microsoft .NET has some...  I found a couple of dozen at
+[<A href="http://en.wikipedia.org/wiki/Framework"> Framework </A>]
+on the Wikipedia.
+<p>
+Symptom: interfaces and abstract classes -- you have to supply the functions
+that the framework names.  The framework supplies some functions and
+you provide others.
+<p>
+<H2><a name="Chapter 38 pages 651-654 -- UML Deployment and Component Diagrams">Chapter 38 pages 651-654 -- UML Deployment and Component Diagrams</A></H2>
+I am unsure on when to use the 3D box and when to use the 2D box that we
+have been using, and also what it would mean to switch to two.
+<p>
+Some cases are simple: hardware is 3D, your code is 2D.  Example
+the users PC.
+<p>
+Similarly any piece of software that interprets code is 3D.  Example
+the server's OS and the user's JVM.
+<p>
+If it is not hardware and it doesn't interpret, run, or execute
+code it is an artifact -- 2D.
+<p>
+<H2><a name="Chapter 38 pages 652 -- Deployment diagram">Chapter 38 pages 652 -- Deployment diagram</A></H2>
+In a deployment diagram, can a device node ever appear inside an execution
+environment node?
+<p>
+I can't see how!  This would imply that a piece of software is interpreting
+some hardware!  Normally it is the other way round.
+<p>
+The norm is: hardware executes software.
+<p>
+However -- an execution environment can communicate with hardware --
+but that means the device is OUTSIDE the execution environment box.
+<p>
+<H2><a name="Chapter 38 pages 651-653 -- Deployment vs.Component diagram">Chapter 38 pages 651-653 -- Deployment vs.Component diagram</A></H2>
+What makes a Deployment diagram different from a Component diagram?
+<p>
+A component diagram shows how software components are connected. A Deployment diagram
+shows how hardware components are connected (and some software).
+<p>
+Components have a special icon in their top left hand corner and use a
+lot of lollipop connectors.
+<p>
+<a href="#YAGNI">YAGNI</A> in the final.
+<p>
+<H2><a name="Chapter 38 pages 653 -- Execution Environment Node and operating systems">Chapter 38 pages 653 -- Execution Environment Node and operating systems</A></H2>
+Other than server software requirements (I.E. Widget server only runs on Windows server 2003) are there any other reasons the OS would be shown in its own box and not using {OS=*}?
+<p>
+No.
+<p>
+<H2><a name="Chapter 39 pages 656 -- Software Architect document">Chapter 39 pages 656 -- Software Architect document</A></H2>
+How much detail can, or should go into The software Architect documentation?
+<p>
+Enough detail to explain the problem or concern and to make it clear
+why your proposed solution is a good way to do it.  Not in the final.
+<H2><a name="Chapter 39 pages 651-660 -- Documenting Architecture -- SAD">Chapter 39 pages 651-660 -- Documenting Architecture -- SAD</A></H2>
+Why is it important to create a SAD.
+<p>
+I'll never forget a graduate student in England who was working at the
+Rutherford labs.... &quot;What I really need is this programmers waste paper basket!&quot;.
+<p>
+You need to document why you chose a particular solution, and why you
+rejected other solutions.
+<p>
+The document also improves the chances of getting a better solution.
+<p>
+To be brutal: every problem has a obvious solution that just doesn't work.
+The SAD forces you to sweat the details and get a solution that will work.
+<p>
+<H2><a name="Chapter 33 pages All : Architecture">Chapter 33 pages All : Architecture</A></H2>
+Is there ANY WAY to avoid using packages?  I don't like them!
+<p>
+The only alternative is to keep every program you write small:
+no more 200 lines and no more than a dozen classes.
+<p>
+That way you end up with a thousand programs and problems with
+how they interact.
+<p>
+Packages are like tectonic plates.  They allow a certain amount of sliding
+and shifting but you hope that there won't be any big shifts.
+<p>
+<p>
+</ol>
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci and Engineering School, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10 and
+[<A href="02DiceGameSSD.gif"> 02DiceGameSSD.gif </A>]
+(example).
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

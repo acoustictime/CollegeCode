@@ -1,0 +1,51 @@
+. Assigned Work 6: Using GRASP to design classes
+.Table Version#	Date	Description	Author
+.Row 0	2005-02-14	Copied from W5 and edited	RJB
+.Row 1	2009-03-04	More specific rules for Interactions	RJB
+.Close.Table
+. Given
+.List
+ Requirements
+.Set
+	Vision
+	Business Case
+	Use Cases
+	Supplementary Specifications(if any)
+	Business Rules(if any)
+	Glossary
+.Close.Set
+ Domain model with classes, associations, and some attributes.
+
+ SSDs of interesting scenarios
+
+ A first logical architecture
+
+	Interaction diagrams (sequence or communication).
+	A design class diagram that supports the interaction diagrams.
+.Close.List
+. Deliverables
+The deliverables form a packet and every element in the packet should
+be there in the listed order.
+.List
+	At 2more than one (improved?) Interaction diagram (sequence or communication)
+that handles a system message from your SSD.
+	At notes indicate the GRASP patterns you used to allocate responsibillities
+on your interaction diagrams.
+	At least one improved class diagram that supports the interaction diagram.
+.Close.List
+Note: as before each interaction diagram has precisely one found message that is taken from the
+SSD, and all the interaction diagrams are supported by a single design class diagram.
+. Suggested Process
+.List
+	Review previous documentation.
+	Think and redraw diagrams: interactions+classes.
+	Do many `system events` each with a single interaction diagram
+	Accumulate methods and data into a single design class diagram!
+	Present interaction and class diagram showing how you used
+at least one GRASP pattern.
+	Submit one copy of one interaction digram with one or two GRASP patterns.
+.Close.List
+. Grading
+In this and later iterations omitting or misusing
+$GRASP will loose points.
+

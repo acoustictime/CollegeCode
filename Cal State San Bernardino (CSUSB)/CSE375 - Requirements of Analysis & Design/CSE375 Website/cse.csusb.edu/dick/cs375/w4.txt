@@ -1,0 +1,44 @@
+. Assigned Work 4: SSDs and Logical Architecture
+.Table Version#	Date	Description	Author
+.Row 0	2005-02-04	Copied from w3 and editted	RJB
+.Row 1	2011-01-26	Added some notes	RJB
+.Close.Table
+. Given
+Requirements
+.List
+  Vision
+  Business Case
+  Use Cases including interesting scenarios of significant use cases
+  Supplementary Specifications(if any)
+  Business Rules(if any)
+  Glossary
+  Domain model with classes, associations, and some attributes.
+.Close.List
+. Deliverables
+The deliverables form a packet and every element in the packet should
+be there in the listed order.
+.List
+  SSD of at least one interesting scenario of a significant use case.
+  A first logical architecture.
+.Close.List
+Note: these two types of documentation are independent of each other.
+The SSD does not change if you re-package the design!
+. Process
+.List
+  Review previous documentation.
+  Think...
+  Draw rough diagrams.
+  Edit rough diagrams
+  Prepare a less rough one to hand in
+  Bring to class on paper and present(5 minutes).
+Submit copy of deliverables.
+.Close.List
+
+. Grading
+Points are for following the notation (messages and packages)
+and the hints in pages 173-219.
+In early iterations most documents will need revision as the
+project proceeds.
+. Hint: KISS
+Keep It Simple!
+

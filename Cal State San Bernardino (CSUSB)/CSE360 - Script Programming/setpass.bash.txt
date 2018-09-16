@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ $# -ne 2]; then
+        echo "Usage: $0 username password";
+        exit;
+fi
+
+user=$1;
+pass=$2;
+
+./setpass.exp $user $pass
+
+exit

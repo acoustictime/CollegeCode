@@ -1,0 +1,38 @@
+SQL> select ssn, lname, dno
+  2  from employee
+  3  where address like '%H%';
+
+SSN       LNAME                  DNO                                            
+--------- --------------- ----------                                            
+123456789 Smith                    5                                            
+333445555 Wong                     5                                            
+666884444 Narayan                  5                                            
+453453453 English                  5                                            
+987987987 Jabbar                   4                                            
+888665555 Borg                     1                                            
+
+6 rows selected.
+
+SQL> select e.lname, e.fname, e.salary, avg(d.salary)
+  2  from employee e, employee d
+  3  where e.salary > (select avg(f.salary) from employee f where e.dno = f.dno and e.dno = d.dno)
+  4  group by e.lname, e.fname, e.salary,e.dno
+  5  order by avg(d.salary);
+
+LNAME           FNAME               SALARY AVG(D.SALARY)                        
+--------------- --------------- ---------- -------------                        
+Wallace         Jennifer             43000         31000                        
+Narayan         Ramesh               38000         33250                        
+Wong            Franklin             40000         33250                        
+
+SQL> select lname, bdate, salary
+  2  from employee
+  3  where salary = (select salary from employee where lname = 'English');
+
+LNAME           BDATE         SALARY                                            
+--------------- --------- ----------                                            
+Zelaya          19-JAN-68      25000                                            
+English         31-JUL-72      25000                                            
+Jabbar          29-MAR-69      25000                                            
+
+SQL> spool off

@@ -1,0 +1,23 @@
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/FourBitAdder/FourBitAddr.xst" -ofn "C:/Documents and Settings/user/Desktop/FourBitAdder/FourBitAddr.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc s3c.ucf -p xa9500xl "FourBitAddr.ngc" FourBitAddr.ngd  
+ngdbuild -intstyle ise -dd _ngo -i -p xa9500xl "FourBitAddr.ngc" FourBitAddr.ngd  
+cpldfit -intstyle ise -p xa95*xl-*-* -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -terminate keeper FourBitAddr.ngd 
+XSLTProcess FourBitAddr_build.xml 
+tsim -intstyle ise FourBitAddr FourBitAddr.nga 
+taengine -intstyle ise -f FourBitAddr -w --format html1 -l FourBitAddr_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n FourBitAddr -i FourBitAddr 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/FourBitAdder/FourBitAddr.xst" -ofn "C:/Documents and Settings/user/Desktop/FourBitAdder/FourBitAddr.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc "C:/Documents and Settings/user/Desktop/lab4/s3c.ucf" -p xa9500xl "FourBitAddr.ngc" FourBitAddr.ngd  
+ngdbuild -intstyle ise -dd _ngo -i -p xa9500xl "FourBitAddr.ngc" FourBitAddr.ngd  
+cpldfit -intstyle ise -p xa95*xl-*-* -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -terminate keeper FourBitAddr.ngd 
+XSLTProcess FourBitAddr_build.xml 
+tsim -intstyle ise FourBitAddr FourBitAddr.nga 
+taengine -intstyle ise -f FourBitAddr -w --format html1 -l FourBitAddr_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n FourBitAddr -i FourBitAddr 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/FourBitAdder/FourBitAddr.xst" -ofn "C:/Documents and Settings/user/Desktop/FourBitAdder/FourBitAddr.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xa9500xl "FourBitAddr.ngc" FourBitAddr.ngd  
+cpldfit -intstyle ise -p xa95*xl-*-* -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -terminate keeper FourBitAddr.ngd 
+XSLTProcess FourBitAddr_build.xml 
+tsim -intstyle ise FourBitAddr FourBitAddr.nga 
+taengine -intstyle ise -f FourBitAddr -w --format html1 -l FourBitAddr_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n FourBitAddr -i FourBitAddr 

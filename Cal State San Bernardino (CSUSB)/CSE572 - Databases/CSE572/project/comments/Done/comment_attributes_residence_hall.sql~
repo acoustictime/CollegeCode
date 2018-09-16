@@ -1,0 +1,18 @@
+/*
+Project Option: Coyote Residence Office
+TEAM: King James & The Knights of the Data Table
+CREATED BY: Mark Takahashi
+*/
+
+comment on column Residence_Hall.RH_Name
+is ' The name of the Residence Hall -- Format: Mark Smith ';
+
+comment on column Residence_Hall.Hall_Manager
+is ' The hall manager of the Residence Hall -- Format: Smith Mark';
+
+comment on column Residence_Hall.Phone_Number
+is ' The phone number of the Residence Hall-- Format: 909-486-5067';
+
+comment on column Residence_Hall.Residence_Number
+is ' Primary key Residence Number identifying the Residence Hall -- Format: 2001';
+

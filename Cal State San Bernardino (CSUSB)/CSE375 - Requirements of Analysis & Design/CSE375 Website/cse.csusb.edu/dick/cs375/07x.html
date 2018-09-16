@@ -1,0 +1,213 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/07x.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:54:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+Exercises in class 07
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="07x.txt">Text Version</A>]
+ 07x.html 
+Tue Jan 31 14:29:29 PST 2012
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="07x.html#Exercises in class 07">Exercises in class 07</A>
+<li><a href="07x.html#Adding Attributes to a Domain Model">: Adding Attributes to a Domain Model</A>
+<li><a href="07x.html#Scope -- SuperMartStockControl">: : Scope -- SuperMartStockControl</A>
+<li><a href="07x.html#Vision">: : Vision</A>
+<li><a href="07x.html#Use Cases">: : Use Cases</A>
+<li><a href="07x.html#Initial Domain Model">: : Initial Domain Model</A>
+<li><a href="07x.html#Missing Facts">: : Missing Facts</A>
+<li><a href="07x.html#Copy and Add Attributes -- KISS">: : Copy and Add Attributes -- KISS</A>
+<li><a href="07x.html#Exercise -- Inventory for CSU">: Exercise -- Inventory for CSU</A>
+<li><a href="07x.html#Exercise -- Grading">: Exercise -- Grading</A>
+<li><a href="07x.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="Exercises in class 07">Exercises in class 07</A></H1><ol class=Section>
+<li>What is the syntax for writing an attribute in an UML class?
+Show how you would say that a <span class="InlineFormula">Person</span> (class) has a public attribute <span class="InlineFormula">age</span>
+which is a number and starts at zero.
+Which parts do you omit in a typical rough domain model?
+<li>Explain the following Domain Model:
+<p>
+<img src="07domain.gif" alt="[Boxes C and B connected by A ...]">
+<p>
+<li>Draw a diagram that shows that a class <span class="InlineFormula">Person</span> has a unique associated <span class="InlineFormula">Address</span>. Redraw
+this to show that a Person has an attribute <span class="InlineFormula">address</span> that has type <span class="InlineFormula">string</span>.
+<li>What is a derived attribute? How do you show a derived attribute?  Give an example.
+<li>Give a guideline for choosing between an attribute and an association in a domain model.
+<li>In which UP phase do you start a domain model, and how often do you
+expect to update it?
+<p>
+<li>Here are two types of diagram, use case and domain model. What is A, B, C, X, Y?
+What is the relation between X and Y?
+<p>
+<img src="07diagram.gif" alt="[Box A connected to box B by line C plus Stickman X connected to oval Y]">
+<p>
+<H2><a name="Adding Attributes to a Domain Model">Adding Attributes to a Domain Model</A></H2><ol class=Section>
+<H3><a name="Scope -- SuperMartStockControl">Scope -- SuperMartStockControl</A></H3>
+<H3><a name="Vision">Vision</A></H3>
+To be able to keep track of the stocks of products held
+on different shelves in the SuperMart Store.
+<H3><a name="Use Cases">Use Cases</A></H3><ol class=Section>
+<li>Stock control clerk gets stock levels for a given product.
+<li>Stock man moves stock from one shelf to another.
+<li>Manager prints an inventory.
+<li>Purchasing manager orders new stocks.
+<li>...
+</ol><p>. . . . . . . . . ( end of section <a href="07x.html#Use Cases">Use Cases</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H3><a name="Initial Domain Model">Initial Domain Model</A></H3>
+<img src="07x.gif" alt="Each Stock is on one shelf and for one Product">
+<H3><a name="Missing Facts">Missing Facts</A></H3>
+<li>Each product has a text description and a restockLevel.
+<li>Each shelf has a code position in the store -- the coding is a 6 character string.
+<li>Each stock has a price and a number of items of the product.
+<li>We also need to keep track of how much a product costs.
+<H3><a name="Copy and Add Attributes -- KISS">Copy and Add Attributes -- KISS</A></H3>
+Include all attributes -- even value objects and possible foreign keys.
+</ol><p>. . . . . . . . . ( end of section <a href="07x.html#Adding Attributes to a Domain Model">Adding Attributes to a Domain Model</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<p>
+<li>Domain models are models
+of real kickable objects....
+We are working on an inventory program describing stuff at CSUSB.  Can you
+recall ior reconstruct the domain model from last time?  Can we add any attributes to it.
+If time -- draw a shared domain model on the board.
+<p>
+<H2><a name="Exercise -- Inventory for CSU">Exercise -- Inventory for CSU</A></H2>
+<H2><a name="Exercise -- Grading">Exercise -- Grading</A></H2>
+</ol><p>. . . . . . . . . ( end of section <a href="07x.html#Exercises in class 07">Exercises in class 07</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci and Engineering School, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10 and
+[<A href="02DiceGameSSD.gif"> 02DiceGameSSD.gif </A>]
+(example).
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

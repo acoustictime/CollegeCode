@@ -1,0 +1,302 @@
+<html>
+
+<!-- Mirrored from cse.csusb.edu/kay/cs330/lab8.html by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 27 Mar 2012 14:57:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+<title>CSE 330 Lab 8</title>
+</head>
+<body>
+
+<h1>CSE 330 Lab 8: Set</h1>
+
+<p>
+Complete the implemention of classes
+ <code>Node</code>,
+ <code>Set</code>, and
+ <code>Set_iterator</code> given below.
+<p>
+ The test codes <code>test.cpp</code> and <code>Set_test.cpp</code> should compile
+and run with your implementation
+without any warnings or errors.
+
+<p>
+Do not use STL <code>set</code>.
+
+<hr>
+
+<pre>
+#ifndef SET_H
+#define SET_H
+
+// Set.h - an implementation of Set using Node and Set_iterator
+
+using namespace std;
+
+template &lt;class T> class Set;
+template &lt;class T> class Set_iterator;
+
+template &lt;class T>
+class Node {
+public:
+	Node(): value(0), parent(0), leftChild(0), rightChild(0) { }
+	Node(const T & x, Node * p, Node * lc, Node * rc):
+		value(x), parent(p), leftChild(lc), rightChild(rc) { }
+        // here copy constructor and assignment op don't make too much sense!
+        Node(const Node<T> & n): 
+                value(n.value), parent(0), leftChild(0), rightChild(0) { }
+        Node<T> & operator=(const Node<T> & n) { value = n.value; return *this; }
+
+	~Node() { delete leftChild; delete rightChild; } // this is very recursive, delete also calls the destructor of the object it is deleting
+
+	void insert(Node&lt;T> * newNode); // this is a helper func for Set::insert()
+	Node * find(const T & x);
+	Node * merge(Node&lt;T> * left, Node&lt;T> * right);
+protected:
+	T value;
+	Node * parent;
+	Node * leftChild;
+	Node * rightChild;
+
+friend class Set&lt;T>;
+friend class Set_iterator&lt;T>;
+};
+
+// Your code for Node goes here ...
+
+template &lt;class T>
+class Set {
+public:
+	typedef Set_iterator&lt;T> iterator;
+
+	Set(): root(0), my_size(0) { }
+
+	// the big three
+	Set(const Set&lt;T> & );
+	~Set() { delete root; }
+	Set<T> operator=(const Set<T> & );
+
+	bool empty() const { return root == 0; }
+	unsigned int size() const { return my_size; }
+	iterator insert(const T & x); // return an iterator to x if it already exists, otherwise insert and return an iterator to x
+	void erase(const iterator & it);
+	void erase(const T & x) { root = remove(root, x); }
+	unsigned int count(const T & x) const; // returns 1 or 0 because this is a set, not a multi-set
+	iterator find(const T & x) const;
+	iterator begin() const; // for in-order traversal
+	iterator end() const { return iterator(0); }
+protected:
+	Node&lt;T> * root;
+	unsigned int my_size;
+	Node&lt;T> * remove(Node&lt;T> *, const T &);
+};
+
+template &lt;class T>
+Set&lt;T>::Set(const Set&lt;T> & op)
+{
+      root = 0;
+      for (iterator i = op.begin(); i != op.end(); ++i)
+              insert(*i);
+}
+
+template &lt;class T>
+Set&lt;T> Set&lt;T>::operator=(const Set&lt;T> & op)
+{
+      delete root;
+      root = 0;
+      for (iterator i = op.begin(); i != op.end(); ++i)
+              insert(*i);
+      return *this;
+}
+
+// More code for Set goes here ...
+
+template &lt;class T>
+class Set_iterator {
+public:
+	Set_iterator(): n(0) { }
+	Set_iterator(Node&lt;T> * newNode): n(newNode) { }
+
+	bool operator==(Set_iterator it) const { return n == it.n; }
+	bool operator!=(Set_iterator it) const { return n != it.n; }
+	Set_iterator & operator++(); // inorder traversal, pre-increment
+	Set_iterator operator++(int); // inorder traversal, post-increment
+	T & operator*() { return n->value; }
+	Set_iterator & operator=(Set_iterator&lt;T> it) { n = it.n; return *this; }
+protected:
+	Node&lt;T> * n;
+friend class Set&lt;T>;
+};
+
+// More code for Set_iterator goes here ...
+
+#endif
+</pre>
+
+<hr>
+
+<pre>
+// Set_test.cpp
+
+#include &lt;iostream>
+#include &lt;cassert>
+
+#include "Set.h"
+
+using namespace std;
+
+main()
+{
+   Set&lt;int> s;
+
+   assert(s.size() == 0);
+   assert(s.empty());
+
+   s.insert(10);
+
+   Set&lt;int>::iterator iter = s.begin();
+   assert(*iter == 10);
+
+   s.insert(6);
+   s.insert(6);
+
+   assert(s.count(6) == 1);
+   assert(s.count(10) == 1);
+   assert(s.count(12) == 0);
+
+   iter = s.begin();
+   assert(*iter == 6);
+   ++iter;
+   assert(*iter == 10);
+   ++iter;
+   assert(iter == s.end());
+
+   s.insert(7);
+   s.insert(9);
+   s.insert(9);
+   s.insert(8);
+   s.insert(11);
+   iter = s.begin();
+   assert(*iter == 6);
+   ++iter;
+   assert(*iter == 7);
+   ++iter;
+   assert(*iter == 8);
+   ++iter;
+   assert(*iter == 9);
+   ++iter;
+   assert(*iter == 10);
+   ++iter;
+   assert(*iter == 11);
+
+   Set&lt;int> s2;
+   s2.insert(3);
+   s2.insert(7);
+   s2.insert(-1);
+   s2.insert(16);
+   s2.insert(11);
+   s2.insert(4);
+
+   iter = s2.find(3);
+   assert(*iter == 3);
+   iter = s2.find(888);
+   assert(iter == s2.end());
+
+   s2.erase(7);
+   iter = s2.begin();
+   assert(*iter == -1);
+   ++iter;
+   assert(*iter == 3);
+   ++iter;
+   assert(*iter == 4);
+   ++iter;
+   assert(*iter == 11);
+   ++iter;
+   assert(*iter == 16);
+   ++iter;
+   assert(iter == s2.end());
+
+   s2.erase(16);
+   iter = s2.begin();
+   assert(*iter == -1);
+   ++iter;
+   assert(*iter == 3);
+   ++iter;
+   assert(*iter == 4);
+   ++iter;
+   assert(*iter == 11);
+   ++iter;
+   assert(iter == s2.end());
+
+   s2.erase(3);
+   iter = s2.begin();
+   assert(*iter == -1);
+   ++iter;
+   assert(*iter == 4);
+   ++iter;
+   assert(*iter == 11);
+   ++iter;
+   assert(iter == s2.end());
+
+   s2.erase(11);
+   iter = s2.begin();
+   assert(*iter == -1);
+   ++iter;
+   assert(*iter == 4);
+   ++iter;
+   assert(iter == s2.end());
+
+   s2.erase(-1);
+   iter = s2.begin();
+   assert(*iter == 4);
+   ++iter;
+   assert(iter == s2.end());
+
+   s2.erase(4);
+   iter = s2.begin();
+   assert(iter == s2.end());
+
+   cout << "All tests passed." << endl;
+}
+</pre>
+
+
+
+<hr>
+<pre>
+
+// test.cpp
+
+#include &lt;iostream>
+#include &lt;cassert>
+
+#include "Set.h"
+
+using namespace std;
+
+main()
+{
+   Set&lt;int> s;
+
+   s.insert(10);
+   s.insert(7);
+   s.insert(6);
+   s.insert(9);
+   s.insert(8);
+   s.insert(11);
+
+   Set&lt;int>::iterator i = s.find(7);
+   s.erase(i);
+
+   for (i = s.begin(); i != s.end(); i++)
+	cout << *i << endl;
+
+   cout << "All tests passed." << endl;
+}
+</pre>
+<hr>
+
+</body>
+
+<!-- Mirrored from cse.csusb.edu/kay/cs330/lab8.html by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 27 Mar 2012 14:57:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>

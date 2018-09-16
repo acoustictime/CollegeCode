@@ -1,0 +1,101 @@
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim FPGA_hex_sseg.ngc FPGA_hex_sseg_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/Documents and Settings/user/Desktop/Lab5_FPGA/s3c.ucf" -p xc3s200-ft256-4 "FPGA_hex_sseg.ngc" FPGA_hex_sseg.ngd  
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim FPGA_hex_sseg.ngc FPGA_hex_sseg_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/Documents and Settings/user/Desktop/Lab5_FPGA/s3c.ucf" -p xc3s200-ft256-4 "FPGA_hex_sseg.ngc" FPGA_hex_sseg.ngd  
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim FPGA_hex_sseg.ngc FPGA_hex_sseg_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/Documents and Settings/user/Desktop/Lab5_FPGA/s3c.ucf" -p xc3s200-ft256-4 "FPGA_hex_sseg.ngc" FPGA_hex_sseg.ngd  
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/Documents and Settings/user/Desktop/Lab5_FPGA/s3c.ucf" -p xc3s200-ft256-4 "FPGA_hex_sseg.ngc" FPGA_hex_sseg.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ngd FPGA_hex_sseg.pcf 
+par -w -intstyle ise -ol high -t 1 FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ncd FPGA_hex_sseg.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FPGA_hex_sseg.twx FPGA_hex_sseg.ncd -o FPGA_hex_sseg.twr FPGA_hex_sseg.pcf 
+bitgen -intstyle ise -f FPGA_hex_sseg.ut FPGA_hex_sseg.ncd 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim FPGA_hex_sseg.ngc FPGA_hex_sseg_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/Documents and Settings/user/Desktop/Lab5_FPGA/s3c.ucf" -p xc3s200-ft256-4 "FPGA_hex_sseg.ngc" FPGA_hex_sseg.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ngd FPGA_hex_sseg.pcf 
+par -w -intstyle ise -ol high -t 1 FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ncd FPGA_hex_sseg.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FPGA_hex_sseg.twx FPGA_hex_sseg.ncd -o FPGA_hex_sseg.twr FPGA_hex_sseg.pcf 
+bitgen -intstyle ise -f FPGA_hex_sseg.ut FPGA_hex_sseg.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim FPGA_hex_sseg.ngc FPGA_hex_sseg_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/Documents and Settings/user/Desktop/Lab5_FPGA/s3c.ucf" -p xc3s200-ft256-4 "FPGA_hex_sseg.ngc" FPGA_hex_sseg.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ngd FPGA_hex_sseg.pcf 
+par -w -intstyle ise -ol high -t 1 FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ncd FPGA_hex_sseg.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FPGA_hex_sseg.twx FPGA_hex_sseg.ncd -o FPGA_hex_sseg.twr FPGA_hex_sseg.pcf 
+bitgen -intstyle ise -f FPGA_hex_sseg.ut FPGA_hex_sseg.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim FPGA_hex_sseg.ngc FPGA_hex_sseg_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/Documents and Settings/user/Desktop/Lab5_FPGA/s3c.ucf" -p xc3s200-ft256-4 "FPGA_hex_sseg.ngc" FPGA_hex_sseg.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ngd FPGA_hex_sseg.pcf 
+par -w -intstyle ise -ol high -t 1 FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ncd FPGA_hex_sseg.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FPGA_hex_sseg.twx FPGA_hex_sseg.ncd -o FPGA_hex_sseg.twr FPGA_hex_sseg.pcf 
+bitgen -intstyle ise -f FPGA_hex_sseg.ut FPGA_hex_sseg.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/Documents and Settings/user/Desktop/Lab5_FPGA/s3c.ucf" -p xc3s200-ft256-4 "FPGA_hex_sseg.ngc" FPGA_hex_sseg.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ngd FPGA_hex_sseg.pcf 
+par -w -intstyle ise -ol high -t 1 FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ncd FPGA_hex_sseg.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FPGA_hex_sseg.twx FPGA_hex_sseg.ncd -o FPGA_hex_sseg.twr FPGA_hex_sseg.pcf 
+bitgen -intstyle ise -f FPGA_hex_sseg.ut FPGA_hex_sseg.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim FPGA_hex_sseg.ngc FPGA_hex_sseg_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/Documents and Settings/user/Desktop/Lab5_FPGA/s3c.ucf" -p xc3s200-ft256-4 "FPGA_hex_sseg.ngc" FPGA_hex_sseg.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ngd FPGA_hex_sseg.pcf 
+par -w -intstyle ise -ol high -t 1 FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ncd FPGA_hex_sseg.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FPGA_hex_sseg.twx FPGA_hex_sseg.ncd -o FPGA_hex_sseg.twr FPGA_hex_sseg.pcf 
+bitgen -intstyle ise -f FPGA_hex_sseg.ut FPGA_hex_sseg.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim FPGA_hex_sseg.ngc FPGA_hex_sseg_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/Documents and Settings/user/Desktop/Lab5_FPGA/s3c.ucf" -p xc3s200-ft256-4 "FPGA_hex_sseg.ngc" FPGA_hex_sseg.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ngd FPGA_hex_sseg.pcf 
+par -w -intstyle ise -ol high -t 1 FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ncd FPGA_hex_sseg.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FPGA_hex_sseg.twx FPGA_hex_sseg.ncd -o FPGA_hex_sseg.twr FPGA_hex_sseg.pcf 
+bitgen -intstyle ise -f FPGA_hex_sseg.ut FPGA_hex_sseg.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim FPGA_hex_sseg.ngc FPGA_hex_sseg_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/Documents and Settings/user/Desktop/Lab5_FPGA/s3c.ucf" -p xc3s200-ft256-4 "FPGA_hex_sseg.ngc" FPGA_hex_sseg.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ngd FPGA_hex_sseg.pcf 
+par -w -intstyle ise -ol high -t 1 FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ncd FPGA_hex_sseg.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FPGA_hex_sseg.twx FPGA_hex_sseg.ncd -o FPGA_hex_sseg.twr FPGA_hex_sseg.pcf 
+bitgen -intstyle ise -f FPGA_hex_sseg.ut FPGA_hex_sseg.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim FPGA_hex_sseg.ngc FPGA_hex_sseg_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/Documents and Settings/user/Desktop/Lab5_FPGA/s3c.ucf" -p xc3s200-ft256-4 "FPGA_hex_sseg.ngc" FPGA_hex_sseg.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ngd FPGA_hex_sseg.pcf 
+par -w -intstyle ise -ol high -t 1 FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ncd FPGA_hex_sseg.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FPGA_hex_sseg.twx FPGA_hex_sseg.ncd -o FPGA_hex_sseg.twr FPGA_hex_sseg.pcf 
+bitgen -intstyle ise -f FPGA_hex_sseg.ut FPGA_hex_sseg.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim FPGA_hex_sseg.ngc FPGA_hex_sseg_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/Documents and Settings/user/Desktop/Lab5_FPGA/s3c.ucf" -p xc3s200-ft256-4 "FPGA_hex_sseg.ngc" FPGA_hex_sseg.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ngd FPGA_hex_sseg.pcf 
+par -w -intstyle ise -ol high -t 1 FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ncd FPGA_hex_sseg.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FPGA_hex_sseg.twx FPGA_hex_sseg.ncd -o FPGA_hex_sseg.twr FPGA_hex_sseg.pcf 
+bitgen -intstyle ise -f FPGA_hex_sseg.ut FPGA_hex_sseg.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim FPGA_hex_sseg.ngc FPGA_hex_sseg_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/Documents and Settings/user/Desktop/Lab5_FPGA/s3c.ucf" -p xc3s200-ft256-4 "FPGA_hex_sseg.ngc" FPGA_hex_sseg.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ngd FPGA_hex_sseg.pcf 
+par -w -intstyle ise -ol high -t 1 FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ncd FPGA_hex_sseg.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FPGA_hex_sseg.twx FPGA_hex_sseg.ncd -o FPGA_hex_sseg.twr FPGA_hex_sseg.pcf 
+bitgen -intstyle ise -f FPGA_hex_sseg.ut FPGA_hex_sseg.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.xst" -ofn "C:/Documents and Settings/user/Desktop/test2/FPGA_hex_sseg.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim FPGA_hex_sseg.ngc FPGA_hex_sseg_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/Documents and Settings/user/Desktop/Lab5_FPGA/s3c.ucf" -p xc3s200-ft256-4 "FPGA_hex_sseg.ngc" FPGA_hex_sseg.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ngd FPGA_hex_sseg.pcf 
+par -w -intstyle ise -ol high -t 1 FPGA_hex_sseg_map.ncd FPGA_hex_sseg.ncd FPGA_hex_sseg.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FPGA_hex_sseg.twx FPGA_hex_sseg.ncd -o FPGA_hex_sseg.twr FPGA_hex_sseg.pcf 
+bitgen -intstyle ise -f FPGA_hex_sseg.ut FPGA_hex_sseg.ncd 

@@ -1,0 +1,190 @@
+. CSci 375/12 GRASP I
+.Table Date	#	Topic (Participation 2pt)	Study pages (2 pts)	Quiz(15 pts)	Project Work(10 pts)
+.Row Previous	11	Class Diagrams	248-270	Q5(221-270)	-
+.Row Today	12	$GRASP	271-319	-	W5(Interaction & Class Diagrams)
+.Row Next	13	Object Design	320-362	Q6(271-362)	-
+.Close.Table
+. Revision History
+.Table Version#	Date	Description	Author
+.Row 0	2005-01-03	Used boiler plate to make template	RJB
+.Row 1	2005-01-14	Added Chapter headings and Notes	RJB
+.Row 2	2006-02-14	Updated to new look	RJB
+.Row 3	2007-01-10	Added project link 	RJB
+.Row 4	2012-02-13	Added pictures  	RJB
+.Close.Table
+.Open The GRASP Patterns
+ *** The GRASP patterns tell you what classes you may need, what operations
+they will need, and what messages they will send.  The give a reason for
+each arrow and object in your interaction diagrams.
+ **** When you read this chapter take note of how Larman documents the use of $GRASP.
+He links a message to its objects with a GRASP pattern name.  Do this in your
+projects in this class.
+. What is a pattern
+An Example Pattern: The Pizza Inversion Pattern
+.See http://www.cmcrossroads.com/bradapp/docs/pizza-inv.html
+(Ho Ho Only Serious).
+
+. What is GRASP?
+(see $GRASP below).
+. 17.1 UML vs Principles
+  * UML lets you communicate, recall, store ideas...
+  * Principles help you choose the right way to go, make decisions and choices.
+. 17.2 Object Design
+  ** $OO design is about choosing who does what inside the computers.
+. Figure 17.1 How it all fits together
+.Key Artifacts and Relations in the UP
+.See ./artifactrelationships.gif
+. 17.3 Responsibilities -- things that objects know how to do
+  * The `R` in `gRasp`.
+  ****    Objects are `little` capsules of intelligence.
+  ****    They know how and know what: they have operations and attributes.
+  ****    Responsibilities -- things an object can be trusted to do or recall.
+. 17.4 GRASP -- good ways to allocate responsibilities to objects
+  Exercise: name as many GRASP as you can from memory.
+
+Here
+.See ./16answer.html
+are the 9 GRASP principles/patterns
+. 17.5 Connections
+. 17.6 Patterns
+  *** a workable resolution to a set of conflicting forces.
+  * Patterns are the `P` in GRASP.
+  * A Pattern is a "good enough" way of solving a complex problem. It
+balances the competing forces in a sensible way.  It has been used on at
+least three similar situations.  Patterns are found and recorded not
+created.
+
+  * Patterns resolve a set of forces in a repeatable and useful way.
+
+  *** See inside cover of book.
+  See my notes
+.See ./patterns.html
+  See the famous
+.See http://c2.com/cgi/wiki?CategoryPattern
+  See Brad Appletons Documents
+.See http://www.cmcrossroads.com/bradapp/docs/
+
+  For more Patterns and discussions of patterns see
+.See http://c2.com/cgi/wiki
+(The WikiWikiWeb).
+  Also checkout the Wikipedia entry
+.See http://en.wikipedia.org/wiki/GRASP_%28Object_Oriented_Design%29
+
+. 17.7 Summary: process, responsibility metaphor, patterns, UML
+. 17.8 Short Example: Monopoly
+  Exercise: can you reconstruct this example without looking at the book?
+  By the way here is a first rough transcription of these figures into C++:
+.See ./testPlayMonopoly.cpp
+. 17.9 Applying GRASP
+The GRASP patterns or principles give hints as to which class does what.  When
+you know that something must be done in your software..... GRASP guides you to
+the classes that will do it.
+. Beware the System Object
+We are designing the contents of the system and so it must not appear in any
+design diagrams.
+. 17.10 Creator
+  * This only applies to the operation of constructing a new object.  Who does it?
+Who `calls` the constructor?
+  *** take note of the suitable creators for an object.  Make a list. Learn them!
+  ** learn the sequence diagram notation
+  *** This pattern suggests where the `create` function is called. 
+In other words it tells you where the arrow should come from, not where it goes to.
+Create messages always go to a class.
+  +++ The creator of a class of objects can also be made responsible for managing them:
+Deleting them, keeping lists of them, finding an object with a property, etc.
+But this may make it less cohesive and force others to be coupled to the creator.
+Creator::pattern=`creating an object should be the responsibility of a class that is closely related to the created object`.  
+.Image ./CreatorPattern.gif [owners and close friends make good creators]
+  ++ you always need at least
+one way of creating an object that doesn't depend on already having an object
+of that type already.  So which class or object is close enough to the created object.
+  + Or else you can use a GoF $Factory -- a GRASP Pure Fabrication (later).  This is for creating complex polymorphic objects.
+  ++ Danger: in the book the Creator pattern is limitted by the "High Cohesion"
+pattern (later).  The "High Cohesion" pattern is a lot more than the Creator pattern.
+$Pure_Fabrication.
+. 17.11 Information Expert
+  A very powerful idea.
+Expert::pattern=`allocate a responsibility to a class that has the information`. Look
+in both the design classes and the domain model to find a type of object 
+that knows enough to handle the responsibility.  Knowledge includes
+having the data, and also knowing who has got the data!
+.Image InformationExpertPattern.gif [Look for info in the domain]
+
+  *** Tends to incorporate parts of the domain model into the software design.
+. 17.12 Low Coupling
+  ***** Coupling has guided good software design for nearly 40 years.
+  + Reduce dependencies between objects.
+Low_coupling::pattern=`Assign a responsibilities so that class depends less on other classes using a "need to know basis"`. Organize responsibilities so that classes do not depend on each other two much.
+. 17.13 Controller
+Controller::pattern=`Assign the responsibility for handling system event messages to a class representing either the whole system, device, or subsystem, or representing the use case /scenario within which the system event occurs`.
+  **** Don't fill up user interface classes with domain/business stuff.
+  ** Don't clutter Doamin information with particular how a use
+case works.
+  *****  You can ONLY use the controller pattern when the incoming
+message is from the User Interface.
+  ** Controlers are only occasionally  objects in Domain Model classes.
+Since these get messages because they know about real objects.
+  Take note of the suitable controlers.  Learn them.
+
+.Image ./ControllerPattern.gif [Possible controllers]
+
+  +++ A controler is often responsible for finding an object when the user
+supplies an identifier.  
+See "IDs to Objects" on page 460 for the reasons for passing objects rather than
+ids.
+However the controler should not search for matching IDs.  It should get
+help from parts of the domain layer, for example a Creator or a metaclass
+to find the right object. The found object can then be returned to the
+controller and passed to other parts of the system.
+
+.Image ID2ObjectPattern.gif [Controller asks creator to convert ID to Object]
+
+.See ./patterns.html#IDs_to_Objects
+
+  **** Separate the model and view by a controler.
+
+.Image MVCinUML.gif Model-View-Controller packages in the UML
+
+.See ./patterns.html#MVC
+
+  + Some people dislike use case/session controlers.
+  ++ A scenario/use case controler is natural when the logic of the use case
+is complicated.
+  + View is often technology dependent and Controllers determined
+by the user's needs of the moment.
+  + The "model" or domain layer is independent of technology
+and inspired by the domain or business model.
+. 17.14 High Cohesion
+  This is a general purpose rule.
+  **** Cohesion has guided good software design for nearly 40 years.
+  + Separate concerns into different classes.
+  + place responsibilities to give focussed objects.
+High_cohesion::pattern=`Design elements to have strongly related and focused responsibilities"`.
+
+  + Ballancing cohesion and coupling is an art form.
+
+  + The Controller Pattern often comes into conflict with High Cohesion in
+some designs.  When it does look for smaller Controllers that can be more 
+Cohesive.
+  
+  + The Creator Pattern comes into conflict with High Cohesion in some designs.
+When it does look for smaller Creators that can be more Cohesive.
+  
+. 17.15 Resources
+.Close The GRASP Patterns
+. Questions and Answers
+.See ./12q.html
+. Exercises 
+.See ./12x.html
+Possble handout....
+. Next -- GRASP 1
+Start by reviewing the
+.See ./13.html
+on Object Design with $GRASP.
+. Project Step 5 Interactions and Classes
+.See ./w5.html
+is due next class.
+
+.Close
+. Review Questions
+.See ./12r.html

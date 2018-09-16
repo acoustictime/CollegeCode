@@ -1,0 +1,189 @@
+--------------------------------------------------------------------------------
+Release 13.2 Trace  (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\13.2\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml FPGA_hex_sseg.twx FPGA_hex_sseg.ncd -o FPGA_hex_sseg.twr
+FPGA_hex_sseg.pcf
+
+Design file:              FPGA_hex_sseg.ncd
+Physical constraint file: FPGA_hex_sseg.pcf
+Device,package,speed:     xc3s200,ft256,-4 (PRODUCTION 1.39 2011-06-20)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+an<0>       |   12.612(R)|clk_BUFGP         |   0.000|
+an<1>       |   12.159(R)|clk_BUFGP         |   0.000|
+an<2>       |   11.909(R)|clk_BUFGP         |   0.000|
+an<3>       |   12.681(R)|clk_BUFGP         |   0.000|
+sseg<0>     |   10.898(R)|clk_BUFGP         |   0.000|
+sseg<1>     |   12.741(R)|clk_BUFGP         |   0.000|
+sseg<2>     |   11.351(R)|clk_BUFGP         |   0.000|
+sseg<3>     |   11.006(R)|clk_BUFGP         |   0.000|
+sseg<4>     |   11.625(R)|clk_BUFGP         |   0.000|
+sseg<5>     |   12.323(R)|clk_BUFGP         |   0.000|
+sseg<6>     |   12.263(R)|clk_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.084|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+btn<1>         |c4             |   10.827|
+btn<1>         |led<0>         |   11.243|
+btn<1>         |sseg<0>        |   13.906|
+btn<1>         |sseg<1>        |   13.609|
+btn<1>         |sseg<2>        |   13.725|
+btn<1>         |sseg<3>        |   14.346|
+btn<1>         |sseg<4>        |   13.801|
+btn<1>         |sseg<5>        |   13.667|
+btn<1>         |sseg<6>        |   13.869|
+btn<1>         |temp<1>        |    9.887|
+btn<1>         |temp<2>        |   10.886|
+btn<1>         |temp<3>        |   11.330|
+sw<0>          |c4             |   10.482|
+sw<0>          |led<0>         |   10.898|
+sw<0>          |sseg<0>        |   13.561|
+sw<0>          |sseg<1>        |   13.264|
+sw<0>          |sseg<2>        |   13.380|
+sw<0>          |sseg<3>        |   14.001|
+sw<0>          |sseg<4>        |   13.456|
+sw<0>          |sseg<5>        |   13.322|
+sw<0>          |sseg<6>        |   13.524|
+sw<0>          |temp<0>        |    8.628|
+sw<0>          |temp<1>        |    9.616|
+sw<0>          |temp<2>        |   10.541|
+sw<0>          |temp<3>        |   10.985|
+sw<1>          |c4             |   10.699|
+sw<1>          |led<0>         |   11.115|
+sw<1>          |sseg<0>        |   13.778|
+sw<1>          |sseg<1>        |   13.481|
+sw<1>          |sseg<2>        |   13.597|
+sw<1>          |sseg<3>        |   14.218|
+sw<1>          |sseg<4>        |   13.673|
+sw<1>          |sseg<5>        |   13.539|
+sw<1>          |sseg<6>        |   13.741|
+sw<1>          |temp<1>        |    9.504|
+sw<1>          |temp<2>        |   10.758|
+sw<1>          |temp<3>        |   11.202|
+sw<2>          |c4             |    8.828|
+sw<2>          |led<0>         |    9.244|
+sw<2>          |sseg<0>        |   11.907|
+sw<2>          |sseg<1>        |   11.610|
+sw<2>          |sseg<2>        |   11.726|
+sw<2>          |sseg<3>        |   12.347|
+sw<2>          |sseg<4>        |   11.802|
+sw<2>          |sseg<5>        |   11.668|
+sw<2>          |sseg<6>        |   11.887|
+sw<2>          |temp<2>        |    8.904|
+sw<2>          |temp<3>        |    9.331|
+sw<3>          |c4             |    8.451|
+sw<3>          |led<0>         |    8.988|
+sw<3>          |sseg<0>        |   11.530|
+sw<3>          |sseg<1>        |   11.233|
+sw<3>          |sseg<2>        |   11.349|
+sw<3>          |sseg<3>        |   11.970|
+sw<3>          |sseg<4>        |   11.425|
+sw<3>          |sseg<5>        |   11.291|
+sw<3>          |sseg<6>        |   11.465|
+sw<3>          |temp<3>        |    8.954|
+sw<4>          |c4             |    9.891|
+sw<4>          |led<0>         |   10.307|
+sw<4>          |sseg<0>        |   12.970|
+sw<4>          |sseg<1>        |   12.673|
+sw<4>          |sseg<2>        |   12.789|
+sw<4>          |sseg<3>        |   13.410|
+sw<4>          |sseg<4>        |   12.865|
+sw<4>          |sseg<5>        |   12.731|
+sw<4>          |sseg<6>        |   12.933|
+sw<4>          |temp<0>        |    7.676|
+sw<4>          |temp<1>        |    8.585|
+sw<4>          |temp<2>        |    9.950|
+sw<4>          |temp<3>        |   10.394|
+sw<5>          |c4             |   10.459|
+sw<5>          |led<0>         |   10.875|
+sw<5>          |sseg<0>        |   13.538|
+sw<5>          |sseg<1>        |   13.241|
+sw<5>          |sseg<2>        |   13.357|
+sw<5>          |sseg<3>        |   13.978|
+sw<5>          |sseg<4>        |   13.433|
+sw<5>          |sseg<5>        |   13.299|
+sw<5>          |sseg<6>        |   13.501|
+sw<5>          |temp<1>        |    9.098|
+sw<5>          |temp<2>        |   10.518|
+sw<5>          |temp<3>        |   10.962|
+sw<6>          |c4             |    8.448|
+sw<6>          |led<0>         |    8.864|
+sw<6>          |sseg<0>        |   11.527|
+sw<6>          |sseg<1>        |   11.230|
+sw<6>          |sseg<2>        |   11.346|
+sw<6>          |sseg<3>        |   11.967|
+sw<6>          |sseg<4>        |   11.422|
+sw<6>          |sseg<5>        |   11.288|
+sw<6>          |sseg<6>        |   11.462|
+sw<6>          |temp<2>        |    7.984|
+sw<6>          |temp<3>        |    8.951|
+sw<7>          |c4             |    7.562|
+sw<7>          |led<0>         |    8.020|
+sw<7>          |sseg<0>        |   10.641|
+sw<7>          |sseg<1>        |   10.344|
+sw<7>          |sseg<2>        |   10.460|
+sw<7>          |sseg<3>        |   11.081|
+sw<7>          |sseg<4>        |   10.536|
+sw<7>          |sseg<5>        |   10.402|
+sw<7>          |sseg<6>        |   10.576|
+sw<7>          |temp<3>        |    8.065|
+---------------+---------------+---------+
+
+
+Analysis completed Tue Feb 19 12:30:46 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 74 MB
+
+
+

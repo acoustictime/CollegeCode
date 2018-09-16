@@ -1,0 +1,138 @@
+* {	
+	margin: 0px auto;	
+}
+
+head {
+	width:800px;
+	text-align:center;
+}
+
+body {	
+	width:800px;
+	text-align:center;
+	background-color:#gray;
+}
+
+h1 {
+	background-color:#eee;
+	width:800px;
+	border-radius: 2em;
+	border-style:solid;
+	text-align:center;
+	margin:10px;
+}
+
+h2 {
+	font-size:16px;
+	text-align:center;
+	margin:15px;
+	padding:10px;
+	
+}
+
+h3 {
+	font-size:36px;
+	text-align:center;
+	margin:15px;
+	padding:10px;
+	
+}
+
+#images {
+	text-align:center;
+}
+
+#me {
+	font-size:1.5em;
+	line-height: 1.5;
+	
+}
+
+#section_split {
+	width:800px;
+	border-radius: 2em;
+	border-style:solid;
+	text-align:center;
+	margin:15px;
+	box-shadow: 10px 10px 8px -2px black; 
+}
+
+#nav {
+	width:800px;
+	text-align:center;
+	margin:12px auto;
+}
+
+#nav li {
+	display:inline;
+	font-size:2em;
+	padding:1px;
+	text-decoration:none;
+	border-radius: 2em;
+	
+}
+
+#nav li:hover {
+	background-color:#eee;
+	border:2px solid;
+}
+
+
+#mainBox {
+	padding:5px;
+	height:200px;
+	width:200px;
+	background-color:gray;
+	border-width:2px;
+	border-color:black;
+	border-style:inset;
+}
+
+#mainBox td {
+	text-align:center;
+	height:50px;
+	width:50px;
+	border-width:2px;
+	border-color:black;
+	border-style:inset;
+	padding: 0;
+}
+
+#mainBox td:hover {
+	background-color:teal;
+}
+
+.empty {	
+	background-color:#eee;	
+}
+
+.full {
+	background-color:teal;
+}
+
+.winner {
+	background-color:yellow;
+}
+
+#result {
+	font-size: 1em;
+	text-align:center;
+}
+
+#summary {
+	font-size: 1em;
+	text-align:center;
+}
+
+#summary div {
+	margin-top:20px;
+}
+
+#resetButton {
+	width:90px;
+	font-size:5px;
+}
+
+#displayedDate {
+	font-size:50px;
+}

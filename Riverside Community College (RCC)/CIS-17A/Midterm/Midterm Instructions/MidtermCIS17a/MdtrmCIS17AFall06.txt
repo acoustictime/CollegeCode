@@ -1,0 +1,184 @@
+MidTerm  Fall 2006 CIS17A
+
+Points for each quesiton
+Menu 5
+1    15
+2    15
+3    15
+4    15
+5    15
+6    20
+7    20  Extra Credit
+
+Note: Submit the Midterm to my RCC email account mark.lehr@rcc.edu
+with the following subject:  LastName,FirstName - Midterm - 72403 for
+the face to face class or LastName,FirstName - Midterm - 72404 for
+the online class.
+
+Submit the solutions/program in a zipped folder.  
+Do the best you can and turn in as much as you can.  
+
+Note:  I just want one program for the solution to all the problems 
+that follow. The program should prompt the user for which problem 
+solution to display. Use a do-while and switch construct somewhat
+like the following for the display of the menu and the selection of
+which problem to run
+
+	int inN;
+        do{
+         Menu();
+         inN=getN();
+         switch(inN){
+          case 1:    problem1();break;
+          case 2:    problem2();break;
+          case 3:    problem3();break;
+          case 4:    problem4();break;
+          case 5:    problem5();break;
+          case 6:    problem6();break;
+          case 7:    problem7();break;
+          default:   def(inN);}
+        }while(inN<8);
+
+Note:  I have provided a program that implements this format.
+In addition, all of your homework from now on should use a 
+similar structure.
+
+
+1)  Develop an application that will determine if a bank customer 
+has exceeded his checking account. For each customer, the following 
+facts are available:
+
+a. Account number (Five digits only, i.e. test for this)
+b. Balance at the beginning of the month 
+c. Total of all checks written by this customer this month 
+     Loop until customer is through entering checks.
+d. Total of all deposits credited to this customer's account this 
+     month.  Loop until customer is through entering deposits.
+
+The program should input each of these facts from input dialogs as 
+integers, calculate the new balance, display the new balance and 
+debit the account $12 if overdrawn. Also, if overdrawn, tell the 
+customer the additional $12 fee has been accessed and what the 
+balance would be with this fee included.
+
+Use structures!
+
+
+2)  Develop an application that will determine the gross pay for 
+any number of employees. The company pays "straight-time" for the 
+first 20 hours worked, double time for all hours worked in 
+excess of 20 hours but less than 40 hours, and triple time for any 
+hours worked over 40 hours.
+
+The program should be able to loop and input the employee's name, 
+hours worked, and the rate of pay.  Once this has been done then 
+the gross pay should be calculated.  Output all the pertinent information
+with respect to the employee as a check and the process starts all over 
+again until you input an invalid rate of pay or hours worked.  This
+means a negative rate of pay or negative number of hours worked is
+not acceptable.
+
+
+3) Write a function using the following structure and prototype.
+
+struct stats
+{
+    float avg;
+    float median;
+    float *mode;
+    int nModes;
+};
+
+stat *avgMedMode(int *,int); 
+
+The function takes in an integer array and the size of the array.
+Then returns a pointer to a structure containing the average, median
+and mode.  I will input a small array to test this out so ask for
+how many inputs to fill the array, then the values to place into the
+array.  Make sure you delete the dynamic array creation for the mode
+when you exit the problem.
+
+
+4) A company wants to transmit data over the telephone, but they are 
+concerned that their phones may be tapped. All of their data is 
+transmitted as four-digit integers. However, they utilize the digits 
+0,1,2,3,4,5,6,7 only. They have asked you to write a program that 
+will encrypt their data so that it may be transmitted more securely.
+Your application should read a four-digit integer with the numbers 
+0 to 7 entered by the user in an input dialog and encrypt it as 
+follows: Replace each digit by (the sum of that digit plus 3) modulus 8. 
+Then swap the first digit with the second, and swap the third digit 
+with the fourth. Then print the encrypted integer. Write a separate 
+application that inputs an encrypted four-digit integer and decrypts 
+it to form the original number.
+Note:  sometimes errors occur and the digits 8, and 9 might appear.  
+Detect this condition and flag the error.
+
+
+5)  a) Using a byte variable, what is the largest factorial that can 
+be calculated.  A factorial is simply 
+
+n! = 1 * 2 * 3 * 4 ... * (n-2) * (n-1) * n
+
+For instance, 1! = 1,  2! = 2,  3! = 6,  4! = 24,  5! = 120 etc....
+
+b)  What would be the largest factorial using short, int, long, float, 
+double, etc...  Use all the primitive data types that you are familiar 
+with.
+
+Note:  I want you to have fun investigating this and the program you 
+turn in should print the final results.  You don't know 
+how to capture errors yet so run each till it overflows then back off by 1.
+Don't need the program that tests for this.
+
+
+6) a)  Convert the following 2 numbers to binary, octal and hex.
+	31.734375, 47.8
+   b)  Convert the following hex numbers to binary, octal, and decimal
+	CD.BC, E.CC
+Note:  This doesn't require a program, however, I want you to write a 
+simple program that outputs the answers you did by hand.
+
+
+
+7)  Extra Credit.  
+
+Consider the following algorithm to generate a sequence of numbers. 
+Start with an integer n. If n is even, divide by 2. If n is odd, multiply 
+by 3 and add 1. Repeat this process with the new value of n, terminating 
+when n = 1. 
+For example, the following sequence of numbers will be generated for n = 22:
+22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1
+
+For an input n, the cycle-length of n is the number of numbers generated up 
+to and including the 1. In the example above, the cycle length of 22 is 16. 
+Given any two numbers i and j, you are to determine the maximum cycle length 
+over all numbers between i and j, including both endpoints.
+
+Input
+The input will consist of a series of pairs of integers i and j, one pair of 
+integers per line. All integers will be less than 1,000,000 and greater than 0.
+
+Output
+For each pair of input integers i and j, output i, j in the same order in which 
+they appeared in the input and then the maximum cycle length for integers between 
+and including i and j. These three numbers should be separated by one space, 
+with all three numbers on one line and with one line of output for each line of input.
+
+Sample Input
+
+1 10
+100 200
+201 210
+900 1000
+
+Sample Output
+
+1 10 20
+100 200 125
+201 210 89
+900 1000 174
+
+Note:  Things are not always what they appear.  Make sure you read the specification
+carefully and account for what is specified.  Do not make an assumption that does
+not apply.

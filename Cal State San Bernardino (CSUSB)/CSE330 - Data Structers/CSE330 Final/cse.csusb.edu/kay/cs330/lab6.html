@@ -1,0 +1,149 @@
+<html>
+
+<!-- Mirrored from cse.csusb.edu/kay/cs330/lab6.html by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 27 Mar 2012 14:57:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+<title>CSE 330 Lab 6</title>
+</head>
+<body>
+
+<h1>CSE 330 Lab 6: Stack and Queue</h1>
+
+<p>
+Implement classes <code>Stack</code> and <code>Queue</code> that provide the stack and queue functionalities needed by the test code <code>Stack_test.cpp</code> and <code>Queue_test.cpp</code>  respectivelly.
+<code>Stack_test.cpp</code> is given below. You are to give your own <code>Queue_test.cpp</code>.  
+When you do this, you should not use STL <code>Stack</code> or <code>Queue</code> class.  
+
+<p>
+First get the simpler test program <code>test.cpp</code> given below working, then get <code>Stack_test.cpp</code> working.
+
+<p>
+Remember when you need to compile a program that needs class <code>String</code> from lab 3, you must include
+<code>String.h</code> and compile as follows:
+<pre>
+$ g++ Stack_test.cpp ../lab3/String.o
+</pre>
+
+<hr>
+
+<pre>
+#ifndef STACK_H
+#define STACK_H
+
+// Stack.h  -- a stack implemented as an adapter (of vector or list or ...)
+
+#include "../lab5/List.h"
+
+using namespace std;
+
+//Use the following line for STL containers.
+//template &lt;class T, template &lt;class T, class = allocator&lt;T> > class Container = list>
+template &lt;class T, template &lt;class T> class Container = List>
+class Stack
+{
+public:
+   //We don't need a constructor or destructor because the Container has/should have one
+   //Stack(): container() { }
+   //~Stack() { ~container(); }
+   bool empty() const;
+   unsigned int size() const;
+   void push(const T & x);
+   void pop();
+   T & top();
+
+private:
+   Container&lt;T> container;
+};
+
+#endif
+</pre>
+
+<hr>
+
+<pre>
+// Stack_test.cpp
+
+#include &lt;iostream>
+#include &lt;cassert>
+#include "Stack.h"
+#include "../lab3/String.h"
+#include "../lab4/Vector.h"
+#include "../lab5/List.h"
+
+using namespace std;
+
+int main()
+{
+   Stack&lt;int, Vector> s1;
+   assert(s1.size() == 0);
+   assert(s1.empty());
+
+   s1.push(16);
+   assert(s1.size() == 1);
+   assert(s1.top() == 16);
+
+   s1.pop();
+   assert(s1.size() == 0);
+
+   s1.push(11);
+   assert(s1.size() == 1);
+   assert(s1.top() == 11);
+
+   s1.push(22);
+   assert(s1.size() == 2);
+   assert(s1.top() == 22);
+
+   s1.push(33);
+   assert(s1.size() == 3);
+   assert(s1.top() == 33);
+
+   s1.pop();
+   assert(s1.size() == 2);
+   assert(s1.top() == 22);
+
+   Stack&lt;String, List> s2;
+   s2.push("abc");
+   s2.push("de");
+   s2.pop();
+   assert(s2.top() == "abc");
+
+   cout << "SUCCESS\n";
+}
+</pre>
+
+
+
+<hr>
+
+<pre>
+// test.cpp - a simple test program for Stack.h
+
+#include &lt;iostream>
+
+#include "../lab4/Vector.h"
+#include "Stack.h"
+
+using namespace std;
+
+main()
+{
+	Stack&lt;int> s;      // uses List as the default container
+	s.push(5);
+	s.push(6);
+	cout << s.top() << endl;
+
+	Stack&lt;double, Vector> v; // uses Vector as the container
+	v.push(1.5);
+	v.push(2.3);
+	v.pop();
+	cout << v.top() << endl;
+}
+</pre>
+
+<hr>
+
+</body>
+
+<!-- Mirrored from cse.csusb.edu/kay/cs330/lab6.html by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 27 Mar 2012 14:57:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>

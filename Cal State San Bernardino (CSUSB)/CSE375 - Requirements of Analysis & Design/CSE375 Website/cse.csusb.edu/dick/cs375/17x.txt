@@ -1,0 +1,39 @@
+.Open Exercises for class 17 -- GoF Design Patterns and GRASP
+ List the names of the nine GRASP patterns and their meanings.
+
+ Copy the figure below and write on each icon what it means.
+
+.Image UMLIcons.png [Nine classic UML Icons]
+
+. Exercise on interfaces and the lollipop notation
+Teacher dictates a description of a set of classes and interfaces
+and how they interact.... class attempts to take draw the description
+either using the lollipop or the normal "box+stereotype" notation.
+
+
+ Draw two diagrams, using the different interface notations that express the fact
+that class `A` use interface `I` to use class `B`.
+
+ Here is a bad attempt at the Singleton pattern.  Why doesn't it work?
+(long answer -- there are several things wrong with this code).
+.As_is 	 class Singleton
+.As_is 	 { static Singleton instance;
+.As_is 	   public: Singleton() { return &instance; }
+.As_is 	 };
+
+
+ What GoF pattern would you like to have explained?
+
+.Open What GRASP patterns can you detect in the given GOF pattern
+ Explain how the GoF Observer pattern fits with GRASP.
+ Explain how the GoF Composite pattern fits with GRASP.
+ Explain how the GoF Facade pattern fits with GRASP.
+ Explain how the GoF Factory pattern fits with GRASP.
+ Explain how the GoF Singleton pattern fits with GRASP.
+ Explain how the GoF Adapter pattern fits with GRASP.
+.Close
+
+ Reverse Engineering: Draw a DCD of the classes in
+.See ./ID2Object.cpp
+
+.Close

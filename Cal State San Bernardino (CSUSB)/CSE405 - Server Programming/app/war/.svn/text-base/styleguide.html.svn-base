@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+  <head>
+    <title>CSE405 Bootstrap</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     <!-- Bootstrap Stylesheets and Main Stylesheet -->
+     
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet"> 
+    
+    <!-- Bootstrap, Jquery, and Main Javascript -->
+    
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>  
+  </head>
+  
+  <body>
+  
+    <!-- Page is in Two Sections, the First below is the Nav Bar on top of the screen -->
+    
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          
+          <a href = "/" class="brand">CSE405 Bootstrap</a>
+          
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li id="homenav" class="active"><a href= "/">Home</a></li>
+              <li id="adminnav"><a href= "/admin/admin.html">Admin Page</a></li>
+              <li id="styleguide"><a href= "styleguide.html">Styleguide</a></li>
+              <li id="ajaxhtml"><a href= "ajax.html">Ajax Assignment</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Page is in Two Sections, the Second below is the main container for content -->
+    
+    <div class="container">
+      <h1>Notes on Styleguides</h1>
+      <ul>
+        <li>Using 2 Spaces for Indent:  I thought I had my spacing and indentation in order, but upon taking the time to fix it using 2 spaces,
+        I was shocked at how clean the code looked</li>
+        <li>Used protocol-less url's for loading external files</li>
+        <li>Stopped using onclick for my buttons and started using proper HTML semantics</li>
+        <li>Separted any style elements from the HTML document and used .css files</li>
+        <li>Separted code blocks better than I previously had it</li>
+        <li>Ran the HTML Validator and the CSS Validator and removed errors</li>
+        <li>Removed optional tags: noticed I had setup id's but never used them, so I removed them</li>
+        <li>I only have one CSS element but fixed spacing on it</li>
+        <li>Cleaned up javascript using better spacing and separting code blocks with blank lines</li>
+        <li>Overall, the style guides helped make the code look cleaner and easier to look at.  Will probably make it 
+        easier in the future if I need to change anything</li>
+      
+      
+    </div>
+  </body>
+</html>

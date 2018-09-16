@@ -1,0 +1,198 @@
+SQL> start create_publisher.sql;
+  6  ;
+
+Table created.
+
+SQL> start create_book.sql
+  6  ;
+
+Table created.
+
+SQL> start create_book_authors.sql
+  6  ;
+
+Table created.
+
+SQL> start create_borrower.sql
+  7  ;
+
+Table created.
+
+SQL> start create_library_branch
+  6  ;
+
+Table created.
+
+SQL> start create_book_copies.sql
+SQL> ;
+
+Table created.
+
+SQL> start create_book_loans.sql
+SQL> ;
+
+Table created.
+
+SQL> desc book;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BOOK_ID                                   NOT NULL VARCHAR2(10)
+ TITLE                                     NOT NULL VARCHAR2(20)
+ PUBLISHER_NAME                            NOT NULL VARCHAR2(20)
+
+SQL> desc book_authors;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BOOK_ID                                   NOT NULL VARCHAR2(10)
+ AUTHOR_NAME                               NOT NULL VARCHAR2(15)
+
+SQL> desc publisher;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PNAME                                     NOT NULL VARCHAR2(20)
+ ADDRESS                                   NOT NULL VARCHAR2(20)
+ PHONE                                              CHAR(10)
+
+SQL> desc book_copies;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BOOK_ID                                   NOT NULL VARCHAR2(10)
+ BRANCH_ID                                 NOT NULL VARCHAR2(10)
+ NO_COPIES                                 NOT NULL NUMBER(38)
+
+SQL> desc book_loans;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BOOK_ID                                   NOT NULL VARCHAR2(10)
+ BRANCH_ID                                 NOT NULL VARCHAR2(10)
+ CARD_NO                                   NOT NULL VARCHAR2(10)
+ DATE_OUT                                           DATE
+ DUE_DATE                                           DATE
+
+SQL> desc library_branch;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BRANCH_ID                                 NOT NULL VARCHAR2(10)
+ BRANCH_NAME                               NOT NULL VARCHAR2(20)
+ ADDRESS                                   NOT NULL VARCHAR2(15)
+
+SQL> desc borrower;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CARD_NO                                   NOT NULL VARCHAR2(10)
+ BNAME                                     NOT NULL VARCHAR2(15)
+ ADDRESS                                   NOT NULL VARCHAR2(15)
+ PHONE                                              CHAR(10)
+
+SQL> select constraint_name,constraint_type,search_condition
+  2  from user_constraints;
+
+CONSTRAINT_NAME                C                                                
+------------------------------ -                                                
+SEARCH_CONDITION                                                                
+--------------------------------------------------------------------------------
+PUBLISHER_ADDRESS_NN           C                                                
+"ADDRESS" IS NOT NULL                                                           
+                                                                                
+BOOK_TITLE_NN                  C                                                
+"TITLE" IS NOT NULL                                                             
+                                                                                
+BOOK_PUBLISHER_PNAME_NN        C                                                
+"PUBLISHER_NAME" IS NOT NULL                                                    
+                                                                                
+
+CONSTRAINT_NAME                C                                                
+------------------------------ -                                                
+SEARCH_CONDITION                                                                
+--------------------------------------------------------------------------------
+BORROWER_BNAME_NN              C                                                
+"BNAME" IS NOT NULL                                                             
+                                                                                
+BORROWER_ADDRESS_NN            C                                                
+"ADDRESS" IS NOT NULL                                                           
+                                                                                
+LIBRARY_BRANCH_BRANCH_NAME__NN C                                                
+"BRANCH_NAME" IS NOT NULL                                                       
+                                                                                
+
+CONSTRAINT_NAME                C                                                
+------------------------------ -                                                
+SEARCH_CONDITION                                                                
+--------------------------------------------------------------------------------
+LIBRARY_BRANCH_ADDRESS_NN      C                                                
+"ADDRESS" IS NOT NULL                                                           
+                                                                                
+BOOK_COPIES_NO_COPIES_NN       C                                                
+"NO_COPIES" IS NOT NULL                                                         
+                                                                                
+BOOK_COPIES_BRANCH_ID_FK       R                                                
+                                                                                
+                                                                                
+
+CONSTRAINT_NAME                C                                                
+------------------------------ -                                                
+SEARCH_CONDITION                                                                
+--------------------------------------------------------------------------------
+BOOK_LOANS_BRANCH_ID_FK        R                                                
+                                                                                
+                                                                                
+BOOK_LOANS_CARD_NO_FK          R                                                
+                                                                                
+                                                                                
+BOOK_AUTHORS_FK                R                                                
+                                                                                
+                                                                                
+
+CONSTRAINT_NAME                C                                                
+------------------------------ -                                                
+SEARCH_CONDITION                                                                
+--------------------------------------------------------------------------------
+BOOK_COPIES_BOOK_ID_FK         R                                                
+                                                                                
+                                                                                
+BOOK_LOANS_BOOK_ID_FK          R                                                
+                                                                                
+                                                                                
+BOOK_PUBLISHER_PNAME_FK        R                                                
+                                                                                
+                                                                                
+
+CONSTRAINT_NAME                C                                                
+------------------------------ -                                                
+SEARCH_CONDITION                                                                
+--------------------------------------------------------------------------------
+PUBLISHER_PNAME_PK             P                                                
+                                                                                
+                                                                                
+BOOK_BOOK_ID_PK                P                                                
+                                                                                
+                                                                                
+BOOK_AUTHORS_BID_ANAME_PK      P                                                
+                                                                                
+                                                                                
+
+CONSTRAINT_NAME                C                                                
+------------------------------ -                                                
+SEARCH_CONDITION                                                                
+--------------------------------------------------------------------------------
+BORROWER_CARD_NO_PK            P                                                
+                                                                                
+                                                                                
+LIBRARY_BRANCH_PK              P                                                
+                                                                                
+                                                                                
+BOOK_COPIES_BO_ID_BR_ID_PK     P                                                
+                                                                                
+                                                                                
+
+CONSTRAINT_NAME                C                                                
+------------------------------ -                                                
+SEARCH_CONDITION                                                                
+--------------------------------------------------------------------------------
+BOOK_LOANS_BOID_BR_ID_CA_NO_PK P                                                
+                                                                                
+                                                                                
+
+22 rows selected.
+
+SQL> spool off

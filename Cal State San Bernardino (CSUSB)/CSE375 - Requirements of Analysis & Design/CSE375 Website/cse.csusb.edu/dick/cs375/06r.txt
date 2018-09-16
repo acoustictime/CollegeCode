@@ -1,0 +1,18 @@
+.Open Review Questions 6
+ List the artifacts that are developed during inception and indicate their degree of completeness.
+ What three goals are normally tackled during elaboration?
+ What artifacts are started during elaboration?
+ What is a domain model?
+ Here are the two basic symbols used in a simple domain model, what do they mean?
+.Image 06domain.gif [C in a Box and A on a line]
+
+ Give 2 examples of the kinds of things that do not appear in a domain model.
+ What is the relation between domain models and design class diagrams.
+ List half-a-dozen types of conceptual classes.
+ What is a description class and why are they useful?
+ When should you show an association in a domain model?
+ What is a multiplicity?  Give 4 examples.
+ Here is a text version of some multiplicities: Section(*)-----(1)Teacher(*)-----(1)Department.
+Explain what they are saying.
+ List half-a-dozen categories of association.
+.Close

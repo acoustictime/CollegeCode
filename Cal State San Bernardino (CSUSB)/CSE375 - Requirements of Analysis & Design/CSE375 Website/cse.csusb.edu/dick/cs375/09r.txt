@@ -1,0 +1,14 @@
+.Open Review Questions 09
+ What UML diagram do you use to plan the organization of a complex piece of software?
+Give a simple example.
+ What is a dependency in the UML? How do you show it and what does it mean?
+ What is the relationship between the Domain Model and the Domain Layer?
+ Explain the model-view separation principle.
+ Explain the relationships between a dynamic model and a static model of an interaction.
+ I have a dynamic model that shows a message `m` being passed 
+from class `A` to class `B`.  Where do I put `m` in the static model?
+ Draw an interaction diagram that shows that an object `a` in class `A`
+sends a message `m`(`d`) to an object `b` of class B.
+ Draw a plausible static Design class diagram that supports the interaction
+in the previous question. 
+.Close

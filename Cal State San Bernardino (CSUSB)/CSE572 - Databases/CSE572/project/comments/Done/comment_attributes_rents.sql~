@@ -1,0 +1,20 @@
+/*
+Project Option: Coyote Residence Office
+TEAM: King James & The Knights of the Data Table
+CREATED BY: Mark Takahashi
+*/
+
+comment on column Rents.Place_Number
+is 'The place number that the rent invoice refers to  -- Format: 10';
+
+comment on column Rents.Student_Number
+is 'The unique student number assigned at time of enrollment -- Format: 600014';
+
+comment on column Rents.Room_Number
+is 'Primary identifier of the Room -- Format: 3001';
+
+comment on column Rents.Lease_Number
+is 'The unique number associated with the lease -- Format: 10000';
+
+
+

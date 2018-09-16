@@ -1,0 +1,14 @@
+. Review Questions 17 -- GoF Design Patterns
+ Copy the figure below and write on each icon what it means.
+
+.Image UMLIcons.png [Nine classic UML Icons]
+
+ List the names of the nine GRASP patterns and their meanings.
+ Draw two diagrams, using the different interface notations that express the fact
+that class `A` use interface `I` to use class `B`.
+ Explain how the GoF Adapter pattern fits with GRASP.
+ Explain how the GoF Factory pattern fits with GRASP.
+ Explain how the GoF Singleton pattern fits with GRASP.
+ Explain how the GoF Composite pattern fits with GRASP.
+ Explain how the GoF Facade pattern fits with GRASP.
+ Explain how the GoF Observer pattern fits with GRASP.

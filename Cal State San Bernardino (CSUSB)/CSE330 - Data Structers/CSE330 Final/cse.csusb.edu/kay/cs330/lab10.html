@@ -1,0 +1,178 @@
+<html>
+
+<!-- Mirrored from cse.csusb.edu/kay/cs330/lab10.html by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 27 Mar 2012 14:57:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+<title>CSE 330 Lab 10</title>
+</head>
+<body>
+
+<h1>CSE 330 Lab 10: Map</h1>
+
+<p>
+Complete the implemention of the class <code>Map</code> given below.
+<p>
+ The test codes <code>Map_test.cpp</code> and <code>test.cpp</code> should compile
+and run with your implementation
+without any warnings or errors.
+
+<p>
+Do not use STL <code>map</code> or <code>algorithm</code>.
+
+<hr>
+
+<pre>
+#ifndef PAIR_H
+#define PAIR_H
+
+// Pair.h
+
+using namespace std;
+
+template < class T1, class T2 >
+class Pair
+{
+public:
+   Pair(): first(), second() {}
+   Pair(const T1 & first, const T2 & second): first(first), second(second) { }
+
+   bool operator==(const Pair & rhs) const { return first == rhs.first; }
+   bool operator<=(const Pair & rhs) const { return first <= rhs.first; }
+   bool operator<(const Pair & rhs) const { return first < rhs.first; }
+   bool operator>(const Pair & rhs) const { return first > rhs.first; }
+
+   T1 first;
+   T2 second;
+};
+
+#endif
+</pre>
+
+<hr>
+
+<pre>
+#ifndef MAP_H
+#define MAP_H
+
+// Map.h
+
+#include "../lab8/Set.h"
+#include "Pair.h"
+
+using namespace std;
+
+template < class key, class value >
+class Map : public Set < Pair < key, value > >
+{
+public:
+   typedef Set < Pair < key, value > > parent;
+   typedef Set_iterator < Pair < key, value > > iterator;
+
+   Map(): parent() {}
+
+   iterator find(const key & k);
+   value & operator[](const key & k);
+   void erase(const key & k);
+};
+
+// your code goes here
+
+#endif
+</pre>
+<hr>
+
+<pre>
+// Test_map.cpp
+
+#include < iostream >
+#include < cassert >
+//#include < map >
+#include "Map.h"
+//#include < string >
+#include "../lab3/String.h"
+
+using namespace std;
+
+int main()
+{
+   Map < String, int > m;
+
+   assert(m.size() == 0);
+   assert(m.empty());
+
+   m["abby"] = 9;
+   assert(m["abby"] == 9);
+
+   m["billy"] = 6;
+   assert(m["billy"] == 6);
+   assert(m["abby"] == 9);
+
+   m["katie"] = -2;
+   assert(m["katie"] == -2);
+   assert(m["billy"] == 6);
+   assert(m["abby"] == 9);
+
+   m["bobby"] = -4;
+   assert(m["bobby"] == -4);
+   assert(m["katie"] == -2);
+   assert(m["billy"] == 6);
+   assert(m["abby"] == 9);
+
+   m["binky"] = 100;
+   m["abby"] = -100;
+   assert(m["binky"] == 100);
+   assert(m["bobby"] == -4);
+   assert(m["katie"] == -2);
+   assert(m["billy"] == 6);
+   assert(m["abby"] == -100);
+
+   assert(m["charles"] == 0);
+
+   assert((*m.find("katie")).second == -2);
+
+   assert(m.find("katie") != m.end());
+
+   Map&lt;String, int>::iterator i;
+   for (i = m.begin(); i != m.end(); i++)
+        cout << (*i).first << " " << (*i).second << endl;
+
+   m.erase("katie");
+   assert(m.find("katie") == m.end());
+
+   cout << "Success!" << endl;
+}
+
+</pre>
+
+<hr>
+
+<pre>
+
+// Small test.cpp to test Map
+
+#include &lt;iostream>
+#include &lt;cassert>
+
+#include "Map.h"
+
+using namespace std;
+
+int main()
+{
+   Map&lt;double, long> counts;
+
+   counts[2.1] = 5;
+   counts[-4] = 2;
+   counts[.35] = 3;
+   counts[-4] = 7;
+   cout << counts[2.1] << " " << counts[-4] << " " << counts[.35] << endl;
+}
+</pre>
+
+<hr>
+
+</body>
+
+<!-- Mirrored from cse.csusb.edu/kay/cs330/lab10.html by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 27 Mar 2012 14:57:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,12 @@
+grant update, alter, delete on advisor to durbach;
+grant update, alter, delete on course to durbach;
+grant update, alter, delete on inspection_report to durbach;
+grant update, alter, delete on instructor to durbach;
+grant update, alter, delete on rented_residence to mtakahashi;
+grant update, alter, delete on rents to mtakahashi;
+grant update, alter, delete on residence_hall to mtakahashi;
+grant update, alter, delete on room to mtakahashi;
+grant update, alter, delete on invoice to ecarbajal;
+grant update, alter, delete on next_of_kin to ecarbajal;
+grant update, alter, delete on lease to ecarbajal;
+grant update, alter, delete on reminder to ecarbajal;

@@ -1,0 +1,100 @@
+SQL> start task1.sql
+SQL> ;
+  1  CREATE VIEW Employees_Vu("Employee Id", Employee, "Department Id")
+  2  as select lname, ssn, dno
+  3*    from durbach.employee
+SQL> /
+
+View created.
+
+SQL> select *
+  2  from Employees_Vu;
+
+Employee Id     EMPLOYEE  Department Id                                         
+--------------- --------- -------------                                         
+Smith           123456789             5                                         
+Wong            333445555             5                                         
+Zelaya          999887777             4                                         
+Wallace         987654321             4                                         
+Narayan         666884444             5                                         
+English         453453453             5                                         
+Jabbar          987987987             4                                         
+Borg            888665555             1                                         
+
+8 rows selected.
+
+SQL> set long 200
+SQL> select view_name, text
+  2  from user_views;
+
+VIEW_NAME                                                                       
+------------------------------                                                  
+TEXT                                                                            
+--------------------------------------------------------------------------------
+EMPLOYEES_VU                                                                    
+select lname, ssn, dno                                                          
+   from durbach.employee                                                                                                                                      
+
+SQL> select Employee, "Department Id"
+  2  from Employees_Vu;
+
+EMPLOYEE  Department Id                                                         
+--------- -------------                                                         
+123456789             5                                                         
+333445555             5                                                         
+999887777             4                                                         
+987654321             4                                                         
+666884444             5                                                         
+453453453             5                                                         
+987987987             4                                                         
+888665555             1                                                         
+
+8 rows selected.
+
+SQL> start task5.sql
+SQL> ;
+  1  CREATE VIEW DEPT04_Vu (EmpNo, Employee, DeptNo)
+  2  as select ssn, lname || ', ' || fname, dno
+  3     from durbach.employee
+  4     where dno = 4
+  5* WITH CHECK OPTION CONSTRAINT DNO04_VU_CK
+SQL> /
+
+View created.
+
+SQL> desc Dept04_Vu;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPNO                                     NOT NULL CHAR(9)
+ EMPLOYEE                                           VARCHAR2(32)
+ DEPTNO                                             NUMBER
+
+SQL> select *
+  2  from Dept04_Vu;
+
+EMPNO     EMPLOYEE                             DEPTNO                           
+--------- -------------------------------- ----------                           
+999887777 Zelaya, Alicia                            4                           
+987654321 Wallace, Jennifer                         4                           
+987987987 Jabbar, Ahmad                             4                           
+
+
+SQL> update Dept04_Vu
+  2  set DeptNo = 5
+  3  where employee = 'JABBAR, AHMAD';
+       *
+ERROR at line 1:
+ORA-01031: insufficient privileges 
+                          
+
+SQL> start task8.sql
+SQL> ;
+  1  CREATE VIEW Salary_Vu (Employee, Department, Salary)
+  2  as select lname, dname, salary
+  3     from durbach.employee, durbach.department
+  4*    where dno = dnumber
+SQL> /
+
+View created.
+
+SQL> spool off

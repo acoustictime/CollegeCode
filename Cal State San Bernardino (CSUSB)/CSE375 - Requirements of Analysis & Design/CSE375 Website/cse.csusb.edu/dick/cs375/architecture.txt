@@ -1,0 +1,23 @@
+.Open Architectural Templates
+.Open Technical_memo
+. Issue
+. Solution summary
+. Factors involved
+. Solution
+. Motivation
+. Unresolved Issues
+. Alternatives
+.Close Technical_memo
+.Open Architectural Factor Table
+.Table Factor	Scenarios	Variability	Impact	Priority	Difficulty/Risk
+.Row Factor Name
+.Row Describe factor
+.Item Give scenarios and measures of quality
+.Item Describe things that might change
+.Item Define impact on stakeholders, architecture, and other factors
+.Item High, Low, Medium
+.Item High, Low, Medium
+.Row Etc.
+.Close.Table
+.Close
+.Close Architectural Templates

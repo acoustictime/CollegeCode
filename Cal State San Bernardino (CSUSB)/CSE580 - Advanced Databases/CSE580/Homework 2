@@ -1,0 +1,49 @@
+6.16
+
+A.
+
+Retrieve the names of all employees in dept 5 who work more than 10 hours per week on the productX project?
+
+
+B.
+
+List the names of all employees who have a dependent with the same first name as themselves.
+
+
+C.
+
+Find the names of all employees who are direeclty supervised by Franklin Wong
+
+
+D.
+
+For each project, list the project name and the total hours per week (by all employees) spent on that project
+
+
+
+
+6.18
+
+A.
+
+How many copies of the book titled THe Lost Tribe are owned by the library branch whose name is Sharpstown?
+
+B.
+
+How many copies of the book titled The Lost Tribe are owed by each library branch?
+
+C.
+
+Retrieve the names of all borrowers who do not have any books checked out.
+
+D.
+
+For each book that is loaned out from the Sharpstown branch and whose Due_Date is today, retrieve the book title, the borrowers' name, and the borrowers address
+
+E.
+
+For each library brnach, retreieve the branch name and the total number of books loaned out from that branch
+
+
+
+

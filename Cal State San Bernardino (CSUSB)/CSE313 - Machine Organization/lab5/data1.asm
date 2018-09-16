@@ -1,0 +1,4 @@
+	.ORIG x3100
+	.FILL #7
+	.FILL #2
+	.END

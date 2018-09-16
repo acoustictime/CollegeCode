@@ -1,0 +1,66 @@
+.Open Assigned field / Project work
+. Teams
+The ideal team size is about 4.
+. Plan
+The work is assigned on a Thursday so you have more days to do it. 
+There will be time at the end of each Thursday class to
+start each iteration.  
+
+The work is
+timeboxed: Present what you have at the start of the class when it is due.  
+
+Give me the $Deliverables then.
+
+Exception -- the final version of the project is due at the start of
+the final.  
+
+Project deliverables can be hard copy or a link plus access to
+the information on the web.   If you elect to put artifacts on the web
+keep with the safer formats: .html, .txt, .pdf, .gif, .jpg.
+
+You are building up a packet of artifacts, increment by increment.
+In theory source code, tests, and executables would be a major part
+of each iteration.... but we won't have time in this class to do this.
+
+. Contents of Final Report
+.List
+        Vision + Business case
+        Use case Diagram
+        Use cases: details on interesting scenarios.
+        Supplementary specifications: desirable qualities.
+	Architecture -- package diagram
+        Domain model class diagram 
+        Glossary
+        Business Rules
+        System Sequence Diagrams for nearly all interesting scenarios.
+        Interactions: sequence or communication diagrams for all interesting
+messages in your SSD....
+        Design classes ($DCD) that support all your interactions.
+.Close.List
+. Schedule of Field / Project Work
+.Table Due in Class#	Project Work(10 pts)
+.Row 03	W0 (Project Vison)
+.See ./w0.html
+.Row 05	W1 (Inception: section 4.3)
+.See ./w1.html
+.Row 07	W2(Use Case Model 1)
+.See ./w2.html
+.Row 09	W3(Domain Model 1)
+.See ./w3.html
+.Row 11	W4(transition to design: SSD+packages)
+.See ./w4.html
+.Row 13	W5(Interaction + Class Diagrams)
+.See ./w5.html
+.Row 15	W6(GRASP)
+.See ./w6.html
+.Row 17	W7(Model 2: use cases, domain, objects, classes)
+.See ./w7.html
+.Row 19	W8(Model 3: model 2 improved)
+.See ./w8.html
+.Row Final	W9(Model 4: model 3)
+.See ./w9.html
+.Close.Table
+. Other Work
+Don't forget to read the web pages and the assigned part of the book,
+and do the review questions.
+.Close

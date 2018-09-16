@@ -1,0 +1,261 @@
+<html>
+
+<!-- Mirrored from cse.csusb.edu/kay/cs330/lab5.html by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 27 Mar 2012 14:57:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+<title>CSE 330 Lab 5</title>
+</head>
+<body>
+
+<h1>CSE 330 Lab 5: List</h1>
+
+<p>
+Implement class <code>List</code> that provides the list functionality needed by the test code 
+<code>List_test.cpp</code> given below.  
+When you do this, you should not use STL <code>list</code> class.  
+
+<p>
+First get the simpler test program <code>test.cpp</code> given below working, then get <code>List_test.cpp</code> working.
+
+<p>
+Since <code>List</code> is a template container class, it should be implemented in one file: <code>List.h</code>. 
+Complete <code>List.h</code> given below.
+
+<hr>
+
+<pre>
+#ifndef LIST_H
+#define LIST_H
+
+// List.h - a doubly-linked list
+
+#include &lt;algorithm>
+
+using namespace std;
+
+// forward declaration of classes defined in this header
+template &lt;class T> class Link;
+template &lt;class T> class List_iterator;
+
+template &lt;class T> 
+class List
+{
+public:
+   typedef List_iterator&lt;T> iterator;
+
+   List();
+   List(const List&lt;T> & l);
+   ~List();
+
+   bool empty() const;
+   unsigned int size() const; 
+   T & back() const;
+   T & front() const;
+   void push_front(const T & x);
+   void push_back(const T & x);
+   void pop_front();
+   void pop_back();
+   iterator begin() const;
+   iterator end() const;
+   void insert(iterator pos, const T & x); // insert x before pos
+   void erase(iterator & pos);             // pos must be valid after erase() returns
+   List&lt;T> & operator=(const List&lt;T> & l);
+
+protected:
+   Link&lt;T> * first_link;
+   Link&lt;T> * last_link;
+   unsigned int my_size;
+};
+
+template &lt;class T>
+List&lt;T>::List()
+{
+        first_link = 0;
+        last_link = 0;
+        my_size = 0;
+}
+
+template &lt;class T>
+List&lt;T>::List(const List & l)
+{
+        first_link = 0;
+        last_link = 0;
+        my_size = 0;
+        for (Link&lt;T> * current = l.first_link; current != 0; current = current -> next_link)
+                push_back(current -> value);
+}
+
+template &lt;class T>
+typename List&lt;T>::iterator List&lt;T>::begin() const
+{
+        return iterator(first_link);
+}
+
+// Your code goes here ...
+
+template &lt;class T> 
+class Link 
+{
+private:
+   Link(const T & x): value(x), next_link(0), prev_link(0) {}
+                
+   T value;     
+   Link&lt;T> * next_link;
+   Link&lt;T> * prev_link;
+
+   friend class List&lt;T>;
+   friend class List_iterator&lt;T>;
+};
+
+template &lt;class T> class List_iterator
+{
+public:
+   typedef List_iterator&lt;T> iterator;
+
+   List_iterator(Link&lt;T> * source_link): current_link(source_link) { }
+   List_iterator(): current_link(0) { }
+   List_iterator(List_iterator&lt;T> * source_iterator): current_link(source_iterator.current_link) { }
+
+   T & operator*();  // dereferencing operator
+   iterator & operator=(const iterator & rhs);
+   bool operator==(const iterator & rhs) const;
+   bool operator!=(const iterator & rhs) const;
+   iterator & operator++();  // pre-increment, ex. ++it
+   iterator operator++(int); // post-increment, ex. it++
+   iterator & operator--();  // pre-decrement
+   iterator operator--(int); // post-decrement
+
+protected:
+   Link&lt;T> * current_link;
+
+   friend class List&lt;T>;
+};
+
+template &lt;class T>
+T & List_iterator&lt;T>::operator*()
+{
+        return current_link -> value;
+}
+
+template &lt;class T>
+List_iterator&lt;T> & List_iterator&lt;T>::operator++() // pre-increment
+{
+        current_link = current_link -> next_link;
+        return *this;
+}
+
+// more code goes here
+
+#endif
+</pre> 
+
+<hr>
+
+<pre>
+// List_test.cpp
+
+#include &lt;iostream>
+#include &lt;cassert>
+#include "List.h"
+
+using namespace std;
+
+int main()
+{
+   List&lt;int> l;
+
+   assert(l.size() == 0);
+   assert(l.empty());
+
+   l.push_front(44);         // list = 44
+   assert(!l.empty());
+   assert(l.front() == 44);
+   assert(l.back() == 44);
+
+   l.push_front(33);         // list = 33, 44
+   assert(l.size() == 2);
+   assert(l.front() == 33);
+   assert(l.back() == 44);
+
+   l.push_front(22);         // list = 22, 33, 44
+   List&lt;int>::iterator it = l.begin();
+   l.insert(it, 11);         // list = 11, 22, 33, 44
+   it = l.begin();
+   assert(l.front() == 11);
+   assert(*it == 11);
+   assert(*++it == 22);
+   assert(*++it == 33);
+   assert(*++it == 44);
+
+   it = l.begin();
+   ++it;
+   ++it;
+   ++it;
+   l.insert(it, 38);         // list = 11, 22, 33, 38, 44
+   List&lt;int>::iterator it2 = l.begin();
+   assert(*it2 == 11);
+   assert(*++it2 == 22);
+   assert(*++it2 == 33);
+   assert(*++it2 == 38);
+   assert(*++it2 == 44);
+
+   l.pop_front();            // list = 22, 33, 38, 44
+   it2 = l.begin();
+   assert(*it2 == 22); 
+   assert(*++it2 == 33);     
+   assert(*++it2 == 38);
+   assert(*++it2 == 44);
+   
+   l.pop_back();             //list = 22, 33, 38
+   List&lt;int> copy = l;       //copy = 22, 33, 38
+   assert(copy.size() == 3);
+   List&lt;int>::iterator it3 = copy.begin();
+   assert(*it3 == 22);
+   assert(*++it3 == 33);
+        
+   copy.erase(it3);         //copy = 22, 38
+   assert(copy.size() == 2); 
+   it3 = copy.begin(); 
+   assert(*it3 == 22);
+   assert(*++it3 == 38);
+   
+   cout << "SUCCESS\n";
+}  
+</pre>
+
+<hr>
+
+<pre>
+// test.cpp - a simple test program for List.h
+
+#include &lt;iostream>
+#include "List.h"
+
+using namespace std;
+
+int main()
+{
+   List&lt;int> l;
+
+   l.push_back(44);  // list = 44
+   l.push_back(33);  // list = 44, 33
+   l.push_back(11);  // list = 44, 33, 11
+   l.push_back(22);  // list = 44, 33, 11, 22
+
+   List&lt;int> m(l);
+
+   List&lt;int>::iterator itr(m.begin());
+   while (itr != m.end()) {
+        cout << *itr << endl;
+        itr++;
+   }
+}
+</pre>
+
+<hr>
+
+</body>
+
+<!-- Mirrored from cse.csusb.edu/kay/cs330/lab5.html by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 27 Mar 2012 14:57:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>

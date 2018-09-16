@@ -1,0 +1,69 @@
+.Open Exercises 10 UML Interaction diagrams
+ Name the two types of interaction diagrams and give very simple example of the
+same interaction using one type of diagram and the other.
+ Copy the following diagram and label an object and a message.  What does it tell you about
+the operations in the classes.
+
+.Image communication.png [Example communication diagram]
+
+ Redraw the above diagram as a sequence diagram.
+ How do you show that one class is responsible for creating an object?  Show notation for both
+types of interaction diagram.
+ How do you show that a class is responsible for executing an operation rather than an object?
+ How do you show an operation that will be `static` in C++ or Java?
+ How can you show an array and an element in an array?
+ What is a `found message`?   What does it mean?
+ How do you show a returned object in a sequence diagram?  
+ Explain these structures: alt, loop, and opt.
+ How do you show an action (x=x/2.0; for instance) in a sequence diagram?
+ Explain `ref` and `sd` and the relation between them.
+ In a communication diagram -- how many messages per link?  How are the sequenced?
+ I have messages numbered 1, 2, 3, 2.1, 1.1, 3.1, 1.2, 3.2.  In what sequence are they
+actually sent?
+ What does this mean in a communication diagram: [gender = male]? And what does
+*[i=1..20]?
+
+ Explain these diagrams....
+
+.Image 10diagram.gif [Use case to interaction]
+
+ The interaction diagram above tells you that the program will have a class
+called C that has a particular operation in it.  What can you deduce about 
+this operation?
+
+ What do the interaction diagrams below tell you about the operations in class Die?
+
+.Image 10rDie.gif [Two interaction diagrams]
+
+ Redraw the above sequence diagrams as comunication diagrams.
+.See ./10xDiceCommunication.png
+
+ What interaction diagrams might be drawn for this SSD?
+.See ./09SSD060208.jpg
+(Don't draw the diagrams ... just decide how many and what each would do).
+
+ Here is the declaration of a member function in C++ & Java translate it into
+a (1) sequence diagram, and (2) a communication diagram:
+.As_is 		C++:  void A::f ( B* b) { b->g(this); C* c = new C; c->h(b); }
+.As_is 		Java class A: public void f ( B b) { b.g(this); C c = new C; c.h(b); }
+
+Answers:
+.See ./10ExAf.png
+
+ Here is some more C++ and Java code.... fit it into both your interaction diagrams
+.As_is 		C++: void B::g ( A *a) { a->k(); }
+.As_is 		Java class B: public void g ( A  a) { a.k(); }
+
+.See ./10ExAfBk.png
+
+ Given an incomplete pair of diagrams of the same set of events/messages
+-- one communication and one sequence --
+use the given information to fill in the blanks.
+
+ Act out a given interaction diagram.
+
+ Read a given diagram aloud -- read out what steps does it does.
+
+ Given a dictation of a set of steps.... draw the diagram.
+
+.Close Exercises 10 UML Interaction diagrams

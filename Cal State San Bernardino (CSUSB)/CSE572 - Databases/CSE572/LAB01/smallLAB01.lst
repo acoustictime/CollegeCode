@@ -1,0 +1,167 @@
+SQL> select ssn, lname, salary * 12 "Annual Salary"
+  2  from jmendoza.employee;
+
+SSN       LNAME           Annual Salary                                         
+--------- --------------- -------------                                         
+123456789 Smith                  360000                                         
+333445555 Wong                   480000                                         
+999887777 Zelaya                 300000                                         
+987654321 Wallace                516000                                         
+666884444 Narayan                456000                                         
+453453453 English                300000                                         
+987987987 Jabbar                 300000                                         
+888665555 Borg                   660000                                         
+
+8 rows selected.
+
+SQL> save LAB01_2.sql
+Created file LAB01_2.sql
+SQL> desc jmendoza.department;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ DNAME                                     NOT NULL VARCHAR2(15)
+ DNUMBER                                   NOT NULL NUMBER(38)
+ MGRSSN                                    NOT NULL CHAR(9)
+ MGRSTARTDATE                                       DATE
+
+SQL> select *
+  2  from jmendoza.department;
+
+DNAME              DNUMBER MGRSSN    MGRSTARTD                                  
+--------------- ---------- --------- ---------                                  
+Operations               2 123456789 01-JAN-05                                  
+Research                 5 333445555 22-MAY-88                                  
+Administration           4 987654321 01-JAN-95                                  
+Headquarters             1 888665555 19-JUN-81                                  
+
+SQL> desc jmendoza.employee;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FNAME                                     NOT NULL VARCHAR2(15)
+ MINIT                                              CHAR(1)
+ LNAME                                     NOT NULL VARCHAR2(15)
+ SSN                                       NOT NULL CHAR(9)
+ BDATE                                              DATE
+ ADDRESS                                            VARCHAR2(30)
+ GENDER                                             CHAR(1)
+ SALARY                                             NUMBER(10,2)
+ SUPERSSN                                           CHAR(9)
+ DNO                                                NUMBER(38)
+
+SQL> select ssn "Employee ID", lname, bdate
+  2  from jmendoza.employee;
+
+Employee  LNAME           BDATE                                                 
+--------- --------------- ---------                                             
+123456789 Smith           09-JAN-65                                             
+333445555 Wong            08-DEC-55                                             
+999887777 Zelaya          19-JAN-68                                             
+987654321 Wallace         20-JUN-50                                             
+666884444 Narayan         15-SEP-62                                             
+453453453 English         31-JUL-72                                             
+987987987 Jabbar          29-MAR-69                                             
+888665555 Borg            10-NOV-37                                             
+
+8 rows selected.
+
+SQL> save LAB01_4.sql
+Created file LAB01_4.sql
+SQL> select lname, salary
+  2  from jmendoza.employee
+  3  where salary > 25000;
+
+LNAME               SALARY                                                      
+--------------- ----------                                                      
+Smith                30000                                                      
+Wong                 40000                                                      
+Wallace              43000                                                      
+Narayan              38000                                                      
+Borg                 55000                                                      
+
+SQL> save LAB01_5.sql
+Created file LAB01_5.sql
+SQL> select lname || ', ' || dno "Employee and Department"
+  2  from jmendoza.employee;
+
+Employee and Department                                                         
+---------------------------------------------------------                       
+Smith, 5                                                                        
+Wong, 5                                                                         
+Zelaya, 4                                                                       
+Wallace, 4                                                                      
+Narayan, 5                                                                      
+English, 5                                                                      
+Jabbar, 4                                                                       
+Borg, 1                                                                         
+
+8 rows selected.
+
+SQL> save LAB01_6.sql
+Created file LAB01_6.sql
+SQL> select lname, dno, bdate
+  2  from jmendoza.employee
+  3  where bdate > to_date('01-JAN-60') and bdate < to_date('01-JUL-73')
+  4  order by bdate;
+
+LNAME                  DNO BDATE                                                
+--------------- ---------- ---------                                            
+Narayan                  5 15-SEP-62                                            
+Smith                    5 09-JAN-65                                            
+Zelaya                   4 19-JAN-68                                            
+Jabbar                   4 29-MAR-69                                            
+English                  5 31-JUL-72                                            
+
+SQL> save LAB01_7.sql
+Created file LAB01_7.sql
+SQL> select lname, salary
+  2  from jmendoza.employee
+  3  where salary < 35000 or salary > 50000;
+
+LNAME               SALARY                                                      
+--------------- ----------                                                      
+Smith                30000                                                      
+Zelaya               25000                                                      
+English              25000                                                      
+Jabbar               25000                                                      
+Borg                 55000                                                      
+
+SQL> save LAB01_8.sql
+Created file LAB01_8.sql
+SQL> select lname, dno
+  2  from jmendoza.employee
+  3  where dno=4 or dno=5
+  4  order by dno, lname desc;
+
+LNAME                  DNO                                                      
+--------------- ----------                                                      
+Zelaya                   4                                                      
+Wallace                  4                                                      
+Jabbar                   4                                                      
+Wong                     5                                                      
+Smith                    5                                                      
+Narayan                  5                                                      
+English                  5                                                      
+
+7 rows selected.
+
+SQL> save LAB01_9.sql
+Created file LAB01_9.sql
+SQL> select lname
+  2  from jmendoza.employee
+  3  where substr(lname,3,1)!='a' and substr(lname,3,1)!='e' and substr(lname,3,1)!='i' and substr(lname,3,1)!='o' and substr(lname,3,1)!='u';
+
+LNAME                                                                           
+---------------                                                                 
+Wong                                                                            
+Zelaya                                                                          
+Wallace                                                                         
+Narayan                                                                         
+English                                                                         
+Jabbar                                                                          
+Borg                                                                            
+
+7 rows selected.
+
+SQL> save LAB01_10.sql
+Created file LAB01_10.sql
+SQL> spool off

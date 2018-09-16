@@ -1,0 +1,63 @@
+. Assigned Work 9: The Fourth Iteration
+.Table Version#	Date	Description	Author
+.Row 0	2005-03-15	Copied from w8 and edited	RJB
+.Row 1	2005-03-15	Revized	RJB
+.Row 2	2007-03-09	Revized to remove architecture	RJB
+.Row 3	2008-12-23	Revized to remove deployment	RJB
+.Close.Table
+. Given: Model 3
+.List
+        Vision + Business case
+        Use cases: some fully dressed ones... Some casual. Some brief.
+        Supplementary specifications: desirable qualities.
+	Architecture -- package diagram
+        Use case model
+        Domain model.
+        Glossary 
+        Business Rules
+        System Sequence Diagrams for interesting scenarios.
+        Interactions: sequence or communication diagrams for some interesting
+messages in your SSD.
+With many comments
+explaining why (GRASP) you choose that assignment of messages to classes.
+        A $DCD
+.Close.List
+Plus reviewers comments.
+. Process
+.Set
+	Review everything & correct errors
+	Check the following list of common mistakes
+.See [BollojuLeung06]
+to see if you've done them.
+	Add generalizations to class diagrams
+	Review and add new interaction diagrams and update your DCD.
+	Annotate all GRASP and GoF patterns used.
+	Review & improve  everything
+.Close.Set
+. Paper Deliverable Due Before Start Time of Final -- Model 4
+The deliverables form a packet and every element in the packet should
+be there in the listed order.
+.List
+        Vision + Business case
+        Use cases: more fully dressed ones... more scenarios
+        Use case model
+        Supplementary specifications: desirable qualities.
+	Architecture -- package diagram
+        Domain model + that has at least one example of a generalization.
+        Glossary
+        Business Rules
+        System Sequence Diagrams for nearly all interesting scenarios.
+        Interactions: sequence or communication diagrams for all interesting
+messages in your SSD.
+With some comments
+explaining why (GRASP and GoF) you choose that assignment of messages to 
+classes.
+        Design classes ($DCD) that support all your interactions.
+These should include some generalizations/interfaces/polymorphism.
+.Close.List
+. Grading
+Everything should fit together.
+
+Includes and uses some generalizations.
+
+

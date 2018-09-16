@@ -1,0 +1,38 @@
+.Open The Dice Game Example from the book
+This is a list of the files I developed for the book's first example
+
+Diagrams:
+.See ./02DiceGameClasses.gif
+.See ./02DiceGameSSD.gif
+
+Code:
+.See ./DiceGame2.cpp
+.See ./DiceGame3.cpp
+.See ./DiceGame3.cpp.errors
+.See ./DiceGame.cpp
+.See ./DiceGame.cpp.errors
+.See ./DiceGame.java
+.See ./testDiceGame2
+.See ./testDiceGame2.cpp
+.See ./testDiceGame3.cpp
+.See ./testDiceGame.cpp
+
+The above refer to
+
+Diagrams:
+.See ./10rDie.gif
+.See ./10rDie.tiff
+
+Code:
+.See ./Die2.cpp
+.See ./Die.cpp
+.See ./Die.cpp.errors
+.See ./Die.java
+.See ./LoadedDie.cpp
+.See ./LoadedDie.cpp.errors
+.See ./testDie2.cpp
+.See ./testDie.cpp
+.See ./testLoadedDie.cpp
+.Close The Dice Game Example from the book
+
+

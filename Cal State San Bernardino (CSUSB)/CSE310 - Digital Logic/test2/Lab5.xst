@@ -1,0 +1,5 @@
+set -tmpdir "C:/Documents and Settings/user/Desktop/test2/xst/projnav.tmp"
+set -xsthdpdir "C:/Documents and Settings/user/Desktop/test2/xst"
+elaborate
+-ifn Lab5.prj
+-ifmt mixed

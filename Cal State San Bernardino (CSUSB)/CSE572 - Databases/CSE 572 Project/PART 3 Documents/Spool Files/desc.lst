@@ -1,0 +1,169 @@
+SQL> desc advisor
+ Name                    Null?    Type
+ ----------------------- -------- ----------------
+ ADVISOR_ROOM_NUMBER     NOT NULL VARCHAR2(10)
+ PHONE_NUMBER            NOT NULL VARCHAR2(10)
+ DEPARTMENT              NOT NULL VARCHAR2(30)
+ ADVISOR_NUMBER          NOT NULL CHAR(4)
+
+SQL> desc course
+ Name                    Null?    Type
+ ----------------------- -------- ----------------
+ COURSE_NUMBER           NOT NULL VARCHAR2(7)
+ TITLE                   NOT NULL VARCHAR2(30)
+ ROOM_NUMBER             NOT NULL VARCHAR2(10)
+ DEPARTMENT              NOT NULL VARCHAR2(30)
+ INSTRUCTOR_NAME         NOT NULL VARCHAR2(100)
+
+SQL> desc insepection_report
+ERROR:
+ORA-04043: object insepection_report does not 
+exist 
+
+
+SQL> desc inspection_report
+ Name                    Null?    Type
+ ----------------------- -------- ----------------
+ INSPECTION_DATE         NOT NULL DATE
+ SATISFACTORY            NOT NULL CHAR(20)
+ COMMENTS                NOT NULL VARCHAR2(4000)
+ APARTMENT_NUMBER        NOT NULL VARCHAR2(6)
+
+SQL> desc instructor
+ Name                    Null?    Type
+ ----------------------- -------- ----------------
+ INSTRUCTOR_NAME         NOT NULL VARCHAR2(100)
+ INSTRUCTOR_EMAIL        NOT NULL VARCHAR2(60)
+ INSTRUCTOR_PHONE        NOT NULL VARCHAR2(10)
+
+SQL> desc staff_member
+ Name                    Null?    Type
+ ----------------------- -------- ----------------
+ STAFF_NUMBER            NOT NULL CHAR(4)
+ FIRST_NAME              NOT NULL VARCHAR2(30)
+ LAST_NAME               NOT NULL VARCHAR2(30)
+ DATE_OF_BIRTH           NOT NULL DATE
+ GENDER                  NOT NULL CHAR(1)
+ STREET                  NOT NULL VARCHAR2(30)
+ CITY                    NOT NULL VARCHAR2(30)
+ STATE                   NOT NULL CHAR(2)
+ ZIP                     NOT NULL VARCHAR2(10)
+ LOCATION                NOT NULL VARCHAR2(30)
+ POSITION                NOT NULL VARCHAR2(30)
+ EMAIL_ADDRESS                    VARCHAR2(60)
+
+SQL> desc student_apartment
+ Name                    Null?    Type
+ ----------------------- -------- ----------------
+ APARTMENT_NUMBER        NOT NULL VARCHAR2(6)
+ AVAILABLE_ROOMS         NOT NULL NUMBER(4)
+ STAFF_NUMBER            NOT NULL CHAR(4)
+ RESIDENCE_NUMBER        NOT NULL CHAR(4)
+
+SQL> desc student
+ Name                    Null?    Type
+ ----------------------- -------- ----------------
+ STUDENT_NUMBER          NOT NULL VARCHAR2(6)
+ FIRST_NAME              NOT NULL VARCHAR2(30)
+ LAST_NAME               NOT NULL VARCHAR2(30)
+ GENDER                  NOT NULL CHAR(1)
+ DATE_OF_BIRTH           NOT NULL DATE
+ CURRENT_STATUS          NOT NULL VARCHAR2(7)
+ ADDITIONAL_COMMENTS              VARCHAR2(4000)
+ RESIDENCE_TYPE                   VARCHAR2(17)
+ MINOR                            VARCHAR2(30)
+ MAJOR                   NOT NULL VARCHAR2(30)
+ SPECIAL_NEEDS                    VARCHAR2(4000)
+ STREET                  NOT NULL VARCHAR2(30)
+ CITY                    NOT NULL VARCHAR2(30)
+ STATE                   NOT NULL CHAR(2)
+ ZIP                     NOT NULL VARCHAR2(10)
+ NATIONALITY                      VARCHAR2(30)
+ CLASS                   NOT NULL VARCHAR2(12)
+ PHONE_NUMBER                     VARCHAR2(10)
+ EMAIL_ADDRESS                    VARCHAR2(60)
+ ADVISOR_NUMBER          NOT NULL CHAR(4)
+
+SQL> desc takes_course
+ Name                    Null?    Type
+ ----------------------- -------- ----------------
+ STUDENT_NUMBER          NOT NULL VARCHAR2(6)
+ COURSE_NUMBER           NOT NULL VARCHAR2(7)
+
+SQL> desc NOK_relationship
+ Name                    Null?    Type
+ ----------------------- -------- ----------------
+ STUDENT_NUMBER          NOT NULL VARCHAR2(6)
+ NOK_NAME                NOT NULL VARCHAR2(100)
+ NOK_RELATIONSHIP        NOT NULL VARCHAR2(30)
+
+SQL> desc rented_residence
+ Name                    Null?    Type
+ ----------------------- -------- ----------------
+ RESIDENCE_NUMBER        NOT NULL CHAR(4)
+ ADDRESS                 NOT NULL VARCHAR2(200)
+
+SQL> desc rents
+ Name                    Null?    Type
+ ----------------------- -------- ----------------
+ PLACE_NUMBER            NOT NULL VARCHAR2(4)
+ STUDENT_NUMBER          NOT NULL VARCHAR2(6)
+ ROOM_NUMBER             NOT NULL VARCHAR2(4)
+ LEASE_NUMBER            NOT NULL VARCHAR2(5)
+
+SQL> desc residence_hall
+ Name                    Null?    Type
+ ----------------------- -------- ----------------
+ RH_NAME                 NOT NULL VARCHAR2(25)
+ HALL_MANAGER            NOT NULL VARCHAR2(100)
+ PHONE_NUMBER            NOT NULL VARCHAR2(10)
+ RESIDENCE_NUMBER        NOT NULL CHAR(4)
+
+SQL> desc room
+ Name                    Null?    Type
+ ----------------------- -------- ----------------
+ ROOM_NUMBER             NOT NULL VARCHAR2(4)
+ RENT                    NOT NULL NUMBER(6,2)
+ RESIDENCE_NUMBER        NOT NULL CHAR(4)
+
+SQL> desc invoice
+ Name                    Null?    Type
+ ----------------------- -------- ----------------
+ INVOICE_NUMBER          NOT NULL VARCHAR2(4)
+ PAYMENT_METHOD          NOT NULL VARCHAR2(6)
+ RENTAL_ADDRESS          NOT NULL VARCHAR2(300)
+ PAYMENT_RECEIVED_DATE            DATE
+ ROOM_NUMBER             NOT NULL VARCHAR2(7)
+ PAYMENT_DUE_DATE        NOT NULL DATE
+ PLACE_NUMBER            NOT NULL VARCHAR2(4)
+ STUDENT_NUMBER          NOT NULL VARCHAR2(6)
+ LEASE_NUMBER            NOT NULL VARCHAR2(5)
+
+SQL> desc next_of_kin
+ Name                    Null?    Type
+ ----------------------- -------- ----------------
+ NOK_NAME                NOT NULL VARCHAR2(100)
+ NOK_PHONE_NUMBER        NOT NULL VARCHAR2(10)
+ NOK_STREET              NOT NULL VARCHAR2(30)
+ NOK_CITY                NOT NULL VARCHAR2(30)
+ NOK_STATE               NOT NULL CHAR(2)
+ NOK_ZIP                 NOT NULL VARCHAR2(10)
+
+SQL> desc lease
+ Name                    Null?    Type
+ ----------------------- -------- ----------------
+ LEASE_NUMBER            NOT NULL VARCHAR2(5)
+ DURATION                NOT NULL CHAR(1)
+ RENTAL_ADDRESS          NOT NULL VARCHAR2(300)
+ MOVE_OUT_DATE           NOT NULL DATE
+ MOVE_IN_DATE            NOT NULL DATE
+ ROOM_NUMBER             NOT NULL VARCHAR2(7)
+ PHONE_NUMBER            NOT NULL VARCHAR2(10)
+
+SQL> desc reminder
+ Name                    Null?    Type
+ ----------------------- -------- ----------------
+ REMINDER_DATE           NOT NULL DATE
+ INVOICE_NUMBER          NOT NULL VARCHAR2(4)
+
+SQL> spool off

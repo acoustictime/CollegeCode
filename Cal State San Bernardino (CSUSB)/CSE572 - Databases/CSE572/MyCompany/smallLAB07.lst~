@@ -1,0 +1,97 @@
+SQL> create view Project_VU("Project Name","Department Name", "Total Hours") as
+  2  select pname, dname, sum(hours)
+  3  from department, project, works_on
+  4  where dnumber=dnum and pno=pnumber
+  5  group by pname, dname;
+create view Project_VU("Project Name","Department Name", "Total Hours") as
+            *
+ERROR at line 1:
+ORA-01031: insufficient privileges 
+
+
+SQL> desc user_views;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ VIEW_NAME                                 NOT NULL VARCHAR2(30)
+ TEXT_LENGTH                                        NUMBER
+ TEXT                                               LONG
+ TYPE_TEXT_LENGTH                                   NUMBER
+ TYPE_TEXT                                          VARCHAR2(4000)
+ OID_TEXT_LENGTH                                    NUMBER
+ OID_TEXT                                           VARCHAR2(4000)
+ VIEW_TYPE_OWNER                                    VARCHAR2(30)
+ VIEW_TYPE                                          VARCHAR2(30)
+ SUPERVIEW_NAME                                     VARCHAR2(30)
+ EDITIONING_VIEW                                    VARCHAR2(1)
+ READ_ONLY                                          VARCHAR2(1)
+
+SQL> /
+
+View created.
+
+SQL> desc user_views;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ VIEW_NAME                                 NOT NULL VARCHAR2(30)
+ TEXT_LENGTH                                        NUMBER
+ TEXT                                               LONG
+ TYPE_TEXT_LENGTH                                   NUMBER
+ TYPE_TEXT                                          VARCHAR2(4000)
+ OID_TEXT_LENGTH                                    NUMBER
+ OID_TEXT                                           VARCHAR2(4000)
+ VIEW_TYPE_OWNER                                    VARCHAR2(30)
+ VIEW_TYPE                                          VARCHAR2(30)
+ SUPERVIEW_NAME                                     VARCHAR2(30)
+ EDITIONING_VIEW                                    VARCHAR2(1)
+ READ_ONLY                                          VARCHAR2(1)
+
+SQL> select view_name, text_length, text
+  2  from user_views
+  3  where view_name = 'Project_VU';
+
+no rows selected
+
+SQL> select view_name
+  2  from user_views;
+
+VIEW_NAME                                                                       
+------------------------------                                                  
+PROJECT_VU                                                                      
+
+SQL> select view_name, text_length, text
+  2  from user_views;
+
+VIEW_NAME                      TEXT_LENGTH                                      
+------------------------------ -----------                                      
+TEXT                                                                            
+--------------------------------------------------------------------------------
+PROJECT_VU                             123                                      
+select pname, dname, sum(hours)                                                 
+from department, project, works_on                                              
+where dnumber                                                                   
+                                                                                
+
+SQL> select *
+  2  from Project_VU;
+
+Project Name    Department Name Total Hours                                     
+--------------- --------------- -----------                                     
+ProductZ        Research                 50                                     
+Reorganization  Headquarters             25                                     
+Newbenefits     Administration           55                                     
+Computerization Administration           55                                     
+ProductY        Research               37.5                                     
+ProductX        Research               52.5                                     
+
+6 rows selected.
+
+SQL> select *
+  2  from Project_VU
+  3  where "Department Name" = 'Administration';
+
+Project Name    Department Name Total Hours                                     
+--------------- --------------- -----------                                     
+Computerization Administration           55                                     
+Newbenefits     Administration           55                                     
+
+SQL> spool off

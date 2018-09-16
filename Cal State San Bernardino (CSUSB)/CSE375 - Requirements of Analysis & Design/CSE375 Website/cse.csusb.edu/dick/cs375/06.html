@@ -1,0 +1,364 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/06.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:53:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+CSci 375/06 Domain Model
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="06.txt">Text Version</A>]
+ 06.html 
+Wed Jan 25 13:08:19 PST 2012
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="06.html#CSci 375/06 Domain Model">CSci 375/06 Domain Model</A>
+<li><a href="06.html#Arbitrary Rule 1:  Everything Evolves">Arbitrary Rule 1:  Everything Evolves</A>
+<li><a href="06.html#Iteration 1">Iteration 1</A>
+<li><a href="06.html#Domain Modeling I">Domain Modeling I</A>
+<li><a href="06.html#Associations">Associations</A>
+<li><a href="06.html#Questions and Answers on Domain Models">Questions and Answers on Domain Models</A>
+<li><a href="06.html#Review Questions">Review Questions</A>
+<li><a href="06.html#Exercises on Domain Models">Exercises on Domain Models</A>
+<li><a href="06.html#Project Use Case Model 1">Project Use Case Model 1</A>
+<li><a href="06.html#Next: attributes etc in domain models">Next: attributes etc in domain models</A>
+<li><a href="06.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="CSci 375/06 Domain Model">CSci 375/06 Domain Model</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Date<th scope="col">#<th scope="col">Topic (Participation 2pt)<th scope="col">Study pages (2 pts)<th scope="col">Quiz(15 pts)<th scope="col">Project Work(10 pts)
+<tr><td>Previous<td>5<td>More Requirements<td>89-120<td>Q2(61-120)<td>-
+<tr><td>Today<td>6<td>Domain Model<td>121-157<td>-<td>W2(Use Case Model 1)
+<tr><td>Next<td>7<td>Domain Model II<td>157-171<td>Q3(121-171)<td>-
+</table><br>(Close Table)<br>
+<H1><a name="Arbitrary Rule 1: Everything Evolves">Arbitrary Rule 1: Everything Evolves</A></H1>
+From now one put the version number, date, and authors on all
+documents.  If possible maintain a
+<A name="Revision History" class="Key"> Revision History </A>
+on all documents:
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Version#<th scope="col">Date<th scope="col">Description<th scope="col">Author
+<tr><td>0<td>2005-01-03<td>Used boiler plate to make template<td>RJB
+<tr><td>1<td>2005-01-24<td>Added section headings<td>RJB
+<tr><td>2<td>2005-01-27<td>Added notes on each section heading<td>RJB
+<tr><td>3<td>2005-01-31<td>Added questions and answers<td>RJB
+<tr><td>4<td>2006-01-11<td>Removed Q&amp;A and corrected a definition<td>RJB
+<tr><td>5<td>2006-01-27<td>Added notes on domain model as defining a language<td>RJB
+<tr><td>6<td>2006-01-29<td>Added Q&amp;A<td>RJB
+<tr><td>7<td>2006-12-13<td>Removed Q&amp;A<td>RJB
+<tr><td>8<td>2007-01-24<td>Adding Q&amp;A<td>RJB
+<tr><td>9<td>2007-03-20<td>Removed questions into 06q.html<td>RJB
+<tr><td>10<td>2008-01-23<td>Corrected some typographical errors<td>RJB
+<tr><td>11<td>2010-01-24<td>Corrected some more typographical errors<td>RJB
+<tr><td>11<td>2011-12-15<td>Extracted classroom exercises to private file<td>RJB
+</table><br>(Close Table)<br>
+<H1><a name="Iteration 1">Iteration 1</A></H1>
+<li>*** Tackle difficult/risky things first in a real project.
+<li>** You don't eat an elephant in one bite.
+<li>* Some Use cases will spread over a series of iterations.
+<li>** Inception leads to Elaboration.
+<H1><a name="Domain Modeling I">Domain Modeling I</A></H1>
+<li>** A Domain/Business Model is a UML class diagram.
+<li>*** Not objects inside the software you are designing!
+<li>++++ There are NO actors or use case bubbles in a domain model.  And the only class
+box in a use case must be given stereotype &quot;&lt;&lt;agent&gt;&gt;&quot;.
+<li>+ A Domain model shows categories of real (and imaginary)
+objects plus the relationships between them.
+<p>
+<A name="UML Class Models" class="Key"> UML Class Models </A>
+<ul class="Set">
+<li>Rectangular Boxes indicate sets of similar objects.
+In the UML we call collections of similar objects a class.
+<li>Each class(box) must have a name.  It should be a singular noun phrase.
+Examples: Student, Faculty, Course, Section, ...
+<li>Some classes can have an extra compartment that lists the properties
+of the objects in the class.  These are called attributes.
+Examples: sid, emailId, courseNumber, sectionNumber, date, age, ...
+<li>Links between the boxes... lines connecting them indicate relationships
+between the objects.  These are called associations.  They should
+have a name. Example: Teaches, Takes, Has, Describes, ...
+<li>For each association connecting two classes for each object in a class
+there is a number of associated objects in the other class.  This
+called a multiplicity.  They are written at the other end of the link.
+Examples: A student can be enrolled in 0 to 6 Sections and a Section can
+have any number (*) of Students:
+<pre> 		Student (*)----(0..6)Section</pre>
+(The UML notation puts multiplicities beside the links and omits parentheses).
+</ul>
+<p>
+In class demo drawing a Domain Model of CSUSB on the board.
+<p>
+<li>+ Domain Models answer these questions.
+What type of things do the stakeholders talk about? How are the things
+related? What are the important properties of the things.
+What words appear in the requirements, and how are they related?
+<p>
+<li>*** Take care to note the UML class diagram rules!
+<p>
+<li>++ Domain Modeling is a useful discipline that plays its part throughout
+software development. In theory most domain modeling is done in
+early iterations, but even when delivering a project we may discover
+some previously unknown part of the world that we must think about.
+In practice, Domain Modeling is often started during the systems analysis --
+but is often called constructing a
+<A name="Conceptual Model" class="Key"> Conceptual Model </A>
+of a data base.
+<p>
+<A name="Artifacts:" class="Key"> Artifacts: </A>
+The domain model influences use cases and glossary in Requirements.
+It inspires many of the classes in Design.
+In turn, it may evolve to fit changes in Requirements, and as a result
+of discoveries made in Design and Implementation.
+See figure 9.1.
+<p>
+<li>++ A running prototype often uncovers unexpected properties of the
+domain that changes the Domain Model.
+<p>
+<li>** Example Figure 9.2: A class diagram with classes, attributes, and
+associations. ONLY. (for now...)
+<p>
+<li>Definitions:
+<li><a name="Domain_Model">Domain_Model</A>::=&quot;A picture of the Reality that the system is embedded in&quot;.
+Not a picture of a part of the System being constructed.
+A Domain Model is a
+<A name="Visual Dictionary" class="Key"> Visual Dictionary </A>
+of the system's environment.
+<p>
+<li>A Domain model is a visual picture of many of the terms in the Glossary.
+<p>
+<li>++ A Domain Model defines the semantics of the stake-holder's languages by
+documenting the kinds of objects involved and the roles they play in
+relationships with other objects.
+<p>
+<li>The
+<A name="domain layer" class="Key"> domain layer </A>
+is the part of the software design
+that directly reflects the systems environment.
+It is not the same as the Domain Model.
+It should be closely related to the current Domain Model.
+<p>
+<li>A
+<A name="data model" class="Key"> data model </A>
+is a picture of the persistent data in the software system or data base.
+This will overlap the Domain Model.  A domain model can include things with no
+data.  A data model may picture data that is not about the domain.  Some
+transient classes should be omitted in a data model.
+<p>
+<li>+ In time, a full domain model becomes an
+<A name="ontology" class="Key"> ontology </A>
+defining the key words and phrases that describe the stakeholder's world.
+Working on a domain model is working on the meaning of the stakeholder's
+words.  A Domain Model is a partial
+<A name="semantics" class="Key"> semantics </A>
+of the &quot;real&quot; world.
+<p>
+<A name="Motivation: Why model a domain?" class="Key"> Motivation: Why model a domain? </A>
+See Exercise below!
+<p>
+<li>* Guideline: How to create a Domain Model
+<li>* Guideline: How to find
+<A name="conceptual classes." class="Key"> conceptual classes. </A>
+<li>*** Three Strategies for uncovering classes and relationships:
+<br><ol class="List">
+<li>Reuse existing models.
+<ul class="Set">
+<li><span class=Formula>Read the systems analysis documents and talk to the analysts.</span>
+<li><span class=Formula>Simplify the DBMS's data models/ERD's.</span>
+<li><span class=Formula>Listen to users and stakeholders.</span>
+<li><span class=Formula>++ Use a known pattern from Model Driven Architecture.</span>
+</ul>
+<li>Use the book's list of categories (stick a notelet in this page).
+<li>Noun phrases
+</ol><br>
+<li>Example: POS Domain
+<li>Example: Monopoly
+<p>
+<li>Guidelines
+<ul class="Set">
+<li>* Sketches not blueprints.
+<li>** Leave boxes open on the left and bottom until drafted.
+<li>* Things will change, but you don't have to change the model.
+How much will it cost to do it?
+How much will you regret not doing it?
+<li>Reports may be part of the system
+or part of the domain, or both.
+<li>You are making a map describing the territory.  Use the native's
+language.
+<li>++ Look out for aliases: many names for one concept.
+<li>++ Look out for ambiguities: one name with more than one meaning.
+<li>Some things are intangible but important
+<li>If it is represented by text/string/number/... it's not a class. It may be an
+attribute ... but only if it is interesting.
+<li>Use description classes sometimes.
+</ul>
+<H1><a name="Associations">Associations</A></H1>
+<li>Associations: how, when, why so few, not software but ideas, Notation
+<p>
+<li>Guideline: naming associations
+<p>
+<li>How to find associations: Categories, Names, Analysts(DFDs and ERDs).
+<p>
+<li>Examples
+<p>
+<ul class="Set"><li>My Advice
+<li>++ Use multiplicities
+<li>-- Normalize many-many associations into new classes.
+<li>-- Doubt 1-1 relations! They may be 1-optional, optional-optional, or
+generalizations!
+</ul>
+Domain models are models
+of real kickable objects.... what can you see in the classroom.
+We are working on an inventory program describing stuff at CSUSB.  In groups,
+list names of the kinds of object in the class room.  Can you spot any associations?
+If time -- draw a shared domain model on the board.
+<p>
+<H1><a name="Questions and Answers on Domain Models">Questions and Answers on Domain Models</A></H1>
+[<A href="06q.html"> 06q.html </A>]
+<H1><a name="Review Questions">Review Questions</A></H1>
+[<A href="06r.html"> 06r.html </A>]
+Submit one question+answer at start of next class.
+<H1><a name="Exercises on Domain Models">Exercises on Domain Models</A></H1>
+[<A href="06x.html"> 06x.html </A>]
+<p>
+<p>
+<p>
+<H1><a name="Project Use Case Model 1">Project Use Case Model 1</A></H1>
+The first requirements (use case model 1)
+[<A href="w2.html"> w2.html </A>]
+are due at the start of class 07.
+<p>
+<H1><a name="Next: attributes etc in domain models">Next: attributes etc in domain models</A></H1>
+[<A href="07.html"> 07.html </A>]
+[<A href="07r.html"> 07r.html </A>]
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci and Engineering School, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10 and
+[<A href="02DiceGameSSD.gif"> 02DiceGameSSD.gif </A>]
+(example).
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

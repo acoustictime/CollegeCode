@@ -1,0 +1,896 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/05q.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:53:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+Questions and Answers on Requirements
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="05q.txt">Text Version</A>]
+ 05q.html 
+Wed Jan 11 07:25:32 PST 2012
+<br>
+<h6><br>Opening Microsoft files (winzip, word, excel, powerpoint)
+on this page may require you to <a href="http://acm.csusb.edu/Services/webaccessibility/compliance/readers_and_viewers.htm">download a special viewer</a>.
+Or you can download and save the files and use your preferred office applications to view and edit them.</h6>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="05q.html#Questions and Answers on Requirements">Questions and Answers on Requirements</A>
+<li><a href="05q.html#Chapter 5 page 57 -- What are Quality Attributes">: Chapter 5 page 57 -- What are Quality Attributes</A>
+<li><a href="05q.html#Chapter 3 pages 61-89 -- How to measure number of mistakes per hour">: Chapter 3 pages 61-89 -- How to measure number of mistakes per hour</A>
+<li><a href="05q.html#Chapter 5 pages 89-120 -- Use Cases">: Chapter 5 pages 89-120 -- Use Cases</A>
+<li><a href="05q.html#Chapter 6 pages 83 -- Use Cases and user goals">: Chapter 6 pages 83 -- Use Cases and user goals</A>
+<li><a href="05q.html#Chapter 6 pages 90-92 -- Context and Activity diagrams">: Chapter 6 pages 90-92 -- Context and Activity diagrams</A>
+<li><a href="05q.html#Chapter 6 page 81 -- Why Black box use cases">: Chapter 6 page 81 -- Why Black box use cases</A>
+<li><a href="05q.html#Chapter 6 page 89 -- Why use Use Case Diagrams">: Chapter 6 page 89 -- Why use Use Case Diagrams</A>
+<li><a href="05q.html#Chapter 6 pages 89-100 -- Additional systems.">: Chapter 6 pages 89-100 -- Additional systems.</A>
+<li><a href="05q.html#Chapter 6-7 pages 89-120 -- Use cases vs Business case">: Chapter 6-7 pages 89-120 -- Use cases vs Business case</A>
+<li><a href="05q.html#Chapter 6 page 91 -- What are UML Stereotypes">: Chapter 6 page 91 -- What are UML Stereotypes</A>
+<li><a href="05q.html#Chapter 6 page 93 -- Requirements in Context">: Chapter 6 page 93 -- Requirements in Context</A>
+<li><a href="05q.html#Chapter 6 pages 90 -- Combining Use cases">: Chapter 6 pages 90 -- Combining Use cases</A>
+<li><a href="05q.html#Chapter 6 pages 91 -- Can we use stick figures to represent external systems">: Chapter 6 pages 91 -- Can we use stick figures to represent external systems</A>
+<li><a href="05q.html#Chapter 6 pages 91-92 -- Is it better to downplay diagrams for use cases">: Chapter 6 pages 91-92 -- Is it better to downplay diagrams for use cases</A>
+<li><a href="05q.html#Chapter 6 pages 93 -- What is the Boss Test">: Chapter 6 pages 93 -- What is the Boss Test</A>
+<li><a href="05q.html#Chapter 6 pages 95 -- Use Case Realizations">: Chapter 6 pages 95 -- Use Case Realizations</A>
+<li><a href="05q.html#Chapter 6 pages 95-99 : Use Cases not coded by the construction phase">: Chapter 6 pages 95-99 : Use Cases not coded by the construction phase</A>
+<li><a href="05q.html#Chapter 6 page 97 Figure 6.7 Requirements Workshop">: Chapter 6 page 97 Figure 6.7 Requirements Workshop</A>
+<li><a href="05q.html#Chapter 6 pages 89-120 -- Mistakes in Use cases">: Chapter 6 pages 89-120 -- Mistakes in Use cases</A>
+<li><a href="05q.html#Chapter 7 pages 89-120 -- Vision vs. Use cases">: Chapter 7 pages 89-120 -- Vision vs. Use cases</A>
+<li><a href="05q.html#Chapter 7 pages 89-120 -- how to write a feature list and what exactly belongs in one.">: Chapter 7 pages 89-120 -- how to write a feature list and what exactly belongs in one.</A>
+<li><a href="05q.html#Chapter 7 page 102-104 -- who can read Supplementary specifications">: Chapter 7 page 102-104 -- who can read Supplementary specifications</A>
+<li><a href="05q.html#Chapter 7 pages 104-105 Supplementary Specifications and Contingency Plans">: Chapter 7 pages 104-105 Supplementary Specifications and Contingency Plans</A>
+<li><a href="05q.html#Chapter 7.6 page 108 Visions vs Goals and other requirements artifacts">: Chapter 7.6 page 108 Visions vs Goals and other requirements artifacts</A>
+<li><a href="05q.html#Chapter 7 page 114 -- At the end of Inception is the vision complete">: Chapter 7 page 114 -- At the end of Inception is the vision complete</A>
+<li><a href="05q.html#Chapter 7 page 114 -- Vision changes">: Chapter 7 page 114 -- Vision changes</A>
+<li><a href="05q.html#Chapter 7 pages 101-120 -- Other Requirements">: Chapter 7 pages 101-120 -- Other Requirements</A>
+<li><a href="05q.html#Chapter 7.5 pages 107 -- Special Requirements">: Chapter 7.5 pages 107 -- Special Requirements</A>
+<li><a href="05q.html#Chapter 7.4-7.5 pages 104-108 -- Supplementary Specification">: Chapter 7.4-7.5 pages 104-108 -- Supplementary Specification</A>
+<li><a href="05q.html#Chapter 7 pages 111 -- how long is a Vision">: Chapter 7 pages 111 -- how long is a Vision</A>
+<li><a href="05q.html#Chapter 7 pages 111-112 : What to add to a Vision statement">: Chapter 7 pages 111-112 : What to add to a Vision statement</A>
+<li><a href="05q.html#Chapter 7 pages 111 -- Vision vs use cases">: Chapter 7 pages 111 -- Vision vs use cases</A>
+<li><a href="05q.html#Chapter 7 pages 114 -- Vision or Use Cases first">: Chapter 7 pages 114 -- Vision or Use Cases first</A>
+<li><a href="05q.html#Chapter 7 pages 102 -- Organization of Requirements Artifacts">: Chapter 7 pages 102 -- Organization of Requirements Artifacts</A>
+<li><a href="05q.html#Chapter 7 pages 103 -- vision vs Supplementary specification">: Chapter 7 pages 103 -- vision vs Supplementary specification</A>
+<li><a href="05q.html#Chapter 7.7 pages 111 -- Vision">: Chapter 7.7 pages 111 -- Vision</A>
+<li><a href="05q.html#Chapter 7 pages 111 -- Vision">: Chapter 7 pages 111 -- Vision</A>
+<li><a href="05q.html#Chapter 7 pages 112 -- What is a Fishbone Diagram">: Chapter 7 pages 112 -- What is a Fishbone Diagram</A>
+<li><a href="05q.html#Chapter 7.7 pages 112 -- affinity grouping">: Chapter 7.7 pages 112 -- affinity grouping</A>
+<li><a href="05q.html#Chapter 7 pages 104-108 : Supplementary Spec. and Requirements">: Chapter 7 pages 104-108 : Supplementary Spec. and Requirements</A>
+<li><a href="05q.html#Chapter 7 pages 102 : Requirement Artifacts and stakeholder views">: Chapter 7 pages 102 : Requirement Artifacts and stakeholder views</A>
+<li><a href="05q.html#Chapter 7.3 pages 103 : Projects using the web">: Chapter 7.3 pages 103 : Projects using the web</A>
+<li><a href="05q.html#Chapter 7 pages 81-120 -- More Requirements -- ERDs and data dictionaries">: Chapter 7 pages 81-120 -- More Requirements -- ERDs and data dictionaries</A>
+<li><a href="05q.html#Chapter 7.9 pages 115-116 Data Dictionary">: Chapter 7.9 pages 115-116 Data Dictionary</A>
+<li><a href="05q.html#Chapter 7 page 117 -- Glossary changes">: Chapter 7 page 117 -- Glossary changes</A>
+<li><a href="05q.html#Chapter 7 pages 115 -- Example of a Glossary">: Chapter 7 pages 115 -- Example of a Glossary</A>
+<li><a href="05q.html#Chapter 7 pages 102-102 -- Glossary organization">: Chapter 7 pages 102-102 -- Glossary organization</A>
+<li><a href="05q.html#Chapter 7 pages 115-116 -- Data Dictionary">: Chapter 7 pages 115-116 -- Data Dictionary</A>
+<li><a href="05q.html#Chapter 7 pages 117 -- Domain or Business rules">: Chapter 7 pages 117 -- Domain or Business rules</A>
+<li><a href="05q.html#Chapter 7 page 115 -- Data Dictionary Guideline">: Chapter 7 page 115 -- Data Dictionary Guideline</A>
+<li><a href="05q.html#Chapter 7 page 117 : Where and how to put Domain Rules">: Chapter 7 page 117 : Where and how to put Domain Rules</A>
+<li><a href="05q.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="Questions and Answers on Requirements">Questions and Answers on Requirements</A></H1><ol class=Section>
+<p>
+<H2><a name="Chapter 5 page 57 -- What are Quality Attributes">Chapter 5 page 57 -- What are Quality Attributes</A></H2>
+<p>
+I call them &quot;Qualities&quot; or even &quot;Ilities&quot;.  They are properties of the
+software.  For example:  how fast it runs, How much disk space it uses,
+how often it breaks down, how difficult is it to change it, how much
+do people value it, how secure is it, ....
+<p>
+Qualities are nearly always measurements rather than Yes/No properties.
+<p>
+They are also holistic -- you can not confine &quot;security&quot; to a special
+object.  It comes from the careful design of all the objects
+in the system.
+<p>
+<H2><a name="Chapter 3 pages 61-89 -- How to measure number of mistakes per hour">Chapter 3 pages 61-89 -- How to measure number of mistakes per hour</A></H2>
+This quality requirement does need refining. So let me refine it a little bit:
+<hr><ol class="Box">
+<li>Take a random user from the target pool and train them in using the
+product,
+<li>Set them a task using the project in the usability lab,
+<li>Videotape them,
+<li>Two independent reviews count the number of times the user makes a
+mistake.
+</ol><hr>
+<p>
+Or.... simpler.
+<hr><ol class="Box">
+<li>Software is instrumented for testing purposes to count the number of times
+a user clicks the &quot;undo&quot; button.
+</ol><hr>
+<p>
+Exercise: work at another more detailed procedure for measuring the number
+of mistakes a user makes...
+<p>
+<H2><a name="Chapter 5 pages 89-120 -- Use Cases">Chapter 5 pages 89-120 -- Use Cases</A></H2>
+Also, are all the diagrams in &quot;Use-Case Model&quot; (front cover of book) a
+necessary part of a Use-Case Model?
+<p>
+Yes -- if you need them.  The Systems Sequence Diagram is not used
+by all methodologists.  And I'd happily omit a complete use case diagram:-)
+<p>
+Think of all the artifacts -- documents -- as optional, useful
+at the time, and evolving as you go.  Not tablets cast in stone.
+<p>
+<H2><a name="Chapter 6 pages 83 -- Use Cases and user goals">Chapter 6 pages 83 -- Use Cases and user goals</A></H2>
+The book states, &quot; user-goal level use cases will be one-to-one with user
+goals&quot;. Does this mean that each use case covers only one user goal?
+<p>
+Yes, and vice versa, each high-level user goal should have precisely one use
+case.
+And each use case you satisfy precisely one user goal.
+<p>
+<p>
+<H2><a name="Chapter 6 pages 90-92 -- Context and Activity diagrams">Chapter 6 pages 90-92 -- Context and Activity diagrams</A></H2>
+What is the difference between a Context Diagram and an Activity diagram?
+<p>
+A Context diagram shows the System Under Design in the center and the
+things it interacts with around the outside.
+<p>
+An activity diagram has a mess of boxes, all connected together by control
+flows, with no center, and no indication of connections with other
+systems or things.
+<p>
+Activity diagrams show, in detail, what can happen inside the central
+system in a Context diagram.
+<p>
+<p>
+<H2><a name="Chapter 6 page 81 -- Why Black box use cases">Chapter 6 page 81 -- Why Black box use cases</A></H2>
+Are black box use cases the most recommended only because of their simplicity?
+<p>
+No.  They are recommended because users don't want to know about the internal
+details of a piece of software.  They want to <span class="InlineFormula">use</span> it.  So a use case
+documents how to use the software and not how the software achieves that
+effect.
+<p>
+<H2><a name="Chapter 6 page 89 -- Why use Use Case Diagrams">Chapter 6 page 89 -- Why use Use Case Diagrams</A></H2>
+Is that necessary to create use case diagrams?why we have to create it? Is this diagram for our custom or just for reference stuff? And How do I organize effective information include use cases, scenarios, sequences, fully dressed use cases and put them together?
+<p>
+A Use case diagram shows what a piece of software can do.
+It makes a good poster in a room where a team works.  They can be used to
+rapidly sketch out the scope of a piece of software.  They make an excellent
+presentation Audio-visual aid (power point slide) for users, managers,
+and other stakeholders.
+<p>
+Organization:  put them on a web site.
+<p>
+<H2><a name="Chapter 6 pages 89-100 -- Additional systems.">Chapter 6 pages 89-100 -- Additional systems.</A></H2>
+When you discover the need for a supporting system to be created before
+your main system can be fully utilized, what is the best way to incorporate
+that into your project schedule?
+<p>
+Most projects need some infrastructure -- work on it mainly in
+inception and a bit at the start of each iteration during elaboration,
+possibly later.
+<p>
+If you discover the need for unexpected software to support the software under
+development then you have a big problem.  It indicate week systems analysis and design.
+All bets are off.  The whole project needs rethinking.
+<p>
+<p>
+<H2><a name="Chapter 6-7 pages 89-120 -- Use cases vs Business case">Chapter 6-7 pages 89-120 -- Use cases vs Business case</A></H2>
+Can you compare and contrast system use case and business use case?
+<p>
+Business case says <span class="InlineFormula">why</span> the system should be done.
+Use case says <span class="InlineFormula">what</span> the system does for its users.
+<p>
+<p>
+<H2><a name="Chapter 6 page 91 -- What are UML Stereotypes">Chapter 6 page 91 -- What are UML Stereotypes</A></H2>
+<p>
+A stereotype restricts the meaning of an icon in the UML.   In the
+UML a rectangular box represents a &quot;classifier&quot; -- something that describes a
+class of objects.  The stereotype &quot;&lt;&lt;actor&gt;&gt;&quot; means that the box describes
+an active object that is outside the system under design.
+<p>
+<H2><a name="Chapter 6 page 93 -- Requirements in Context">Chapter 6 page 93 -- Requirements in Context</A></H2>
+I am glad that sometimes use cases do not REALLY fit. Nonetheless, as
+important as training is required in an organization and as a part of any
+system design and implementation, is training per se considered just a
+feature? And, if it not, can it be included in the AD phases?
+<p>
+I don't think that training is thought of as part of software analysis
+and design -- it is not covered in the <a href="#UP">UP</A>.  However it is important in real projects.
+See CSCI372. It is part
+of the <span class="InlineFormula">deployment</span> discipline in the <a href="#RUP">RUP</A>
+[<A href="http://commons.wikimedia.org/wiki/File:RUP_disciplines_greyscale_20060121.svg"> File:RUP_disciplines_greyscale_20060121.svg </A>]
+and tends to start
+up at the end of elaboration and continue through construction
+and die down during transition.
+<p>
+Training can only take place when you have got a stable and fairly
+complete piece of software running hence the delay until elaboration is
+pretty complete.  Prior to that you should be showing the software to
+your users, but not as training, but in requirements workshops to determine
+how the software should look, fell, and work.
+<p>
+<H2><a name="Chapter 6 pages 90 -- Combining Use cases">Chapter 6 pages 90 -- Combining Use cases</A></H2>
+First be careful that the use cases are actually the same thing.  For
+example it is tempting to combine  <span class="InlineFormula">Cash In</span> and <span class="InlineFormula">Cash out</span> into
+<span class="InlineFormula">Process Sale</span> use case? They look just like they are just different steps of paying.
+<p>
+This is the kind of question you have to ask stakeholders when working in a
+new Domain/Business/Enterprise -- &quot;what do you mean 'Cash in'?&quot;
+I think the answer would be: At regular intervals and when the
+cashier goes off duty the cashier must hand over the big bills from their
+tills and .....  Or perhaps this is what the enterprise calls &quot;Cash out&quot;?
+What ever -- they are independent of processing sales.
+<p>
+How ever when you do have a use case that seems to include another one then there
+is a notation in the UML Use Case diagram that indicates this.  We won't be using it.
+<p>
+<H2><a name="Chapter 6 pages 91 -- Can we use stick figures to represent external systems">Chapter 6 pages 91 -- Can we use stick figures to represent external systems</A></H2>
+<p>
+Yes.  But some people may get confused.
+<p>
+<H2><a name="Chapter 6 pages 91-92 -- Is it better to downplay diagrams for use cases">Chapter 6 pages 91-92 -- Is it better to downplay diagrams for use cases</A></H2>
+<p>
+Yes.  I guess so.   More precisely -- it is damaging
+to make a single use case diagram the only work
+done on requirements.   I see the diagram as a tool for
+presenting requirements to stake holders.  They make excellent
+Power Point slides.... It forms a visual summary of the details.  It is in the
+details that the real work is done.
+<p>
+<p>
+I agree with the book -- I've seen a lot of projects that wasted time
+drawing
+complicated use case diagrams when a few simple written use cases would
+have
+been time well spent.  Sadly several software engineering texts actively
+encourage diagrams and don't even mention the writing...
+<p>
+Fact: in games and IT,
+<A name="writing is were design happens." class="Key"> writing is were design happens. </A>
+In scientific work the design tends to be done using mathematics.
+<p>
+So put your effort into writing scenarios etc rather than a use case diagram.
+<p>
+<H2><a name="Chapter 6 pages 93 -- What is the Boss Test">Chapter 6 pages 93 -- What is the Boss Test</A></H2>
+<p>
+A test for good use cases.... would their boss be happy if the user did this
+use case all day?
+<p>
+<H2><a name="Chapter 6 pages 95 -- Use Case Realizations">Chapter 6 pages 95 -- Use Case Realizations</A></H2>
+What exactly are use case realizations and how do they work with a use
+case?
+<p>
+A realization describes, in detail, how the software handles a use case.
+It will say precisely what objects are involved and how they
+interact to give the user what they need.
+<H2><a name="Chapter 6 pages 95-99 : Use Cases not coded by the construction phase">Chapter 6 pages 95-99 : Use Cases not coded by the construction phase</A></H2>
+<p>
+What if 80-90% of the use cases aren't done by the time the construction
+phase comes around?  Should the project go ahead and start coding what is
+available, or should the project stay in the elaboration phase a little
+longer?
+<p>
+If you haven't got any running code by then you ain't doing
+it right.  We expect some running and critical code by the end
+of the first iteration in elaboration (in a real project ...
+in cs375 code is optional).
+<p>
+<p>
+<H2><a name="Chapter 6 page 97 Figure 6.7 Requirements Workshop">Chapter 6 page 97 Figure 6.7 Requirements Workshop</A></H2>
+I don't understand what the figure is trying to show me versus the text on pg 95.
+<p>
+<img src="processroom.gif" alt="[Process and Room Figure 6.7 page 97]">
+<p>
+It is a diagram of a room where a requirements workshop is held.  It shows
+the people who should attend.  It shows the ideal equipment you should
+have.   And on the calendars it shows you when such a workshop
+should take place: in inception, and several times in elaboration.
+Under the first calendar is a brain-map and a fish-bone diagram.  On the right
+of these are two projected screens for displaying artifacts -- in this case use cases.
+<p>
+<H2><a name="Chapter 6 pages 89-120 -- Mistakes in Use cases">Chapter 6 pages 89-120 -- Mistakes in Use cases</A></H2>
+What seems to be the biggest mistake students make when making use cases?
+<p>
+I'm not sure. (1) wasting time on completely defining a single step in a scenario
+as if it was a use case.  All use cases should help the user get a tangible result.
+(2) Possibly starting to describe the technical details
+of the user interface. (3) Describing the internal design of the software.
+<H2><a name="Chapter 7 pages 89-120 -- Vision vs. Use cases">Chapter 7 pages 89-120 -- Vision vs. Use cases</A></H2>
+In a small business model, can vision be considered as a well described use
+case? If not, How can be differentiate?
+<p>
+No.  Use cases are detailed and visions broad-brush.  One vision
+has many use cases.
+<p>
+<H2><a name="Chapter 7 pages 89-120 -- how to write a feature list and what exactly belongs in one.">Chapter 7 pages 89-120 -- how to write a feature list and what exactly belongs in one.</A></H2>
+<p>
+Follow the book's advice -- it is just an unsorted list
+of things that the system will/shall do.
+<p>
+Feature lists were popular before people learned about use cases.
+Some enterprises may still use them -- we won't!
+<p>
+<p>
+<H2><a name="Chapter 7 page 102-104 -- who can read Supplementary specifications">Chapter 7 page 102-104 -- who can read Supplementary specifications</A></H2>
+Does the supplementary specifications have to be visible to the end user since it has licensing information?
+<p>
+All requirements documents <span class="InlineFormula">must</span> be shared with stakeholders -- including
+some end users ... exception mass marketed software, where it is hard to
+get end users for a new product before releasing it.
+<p>
+<H2><a name="Chapter 7 pages 104-105 Supplementary Specifications and Contingency Plans">Chapter 7 pages 104-105 Supplementary Specifications and Contingency Plans</A></H2>
+Under supplementary specification, I noticed the author goes into very specific details in documenting project requirements. However, a contingency plans is never mentioned in the inception phase. Should a contingency plan or disaster recovery be discussed during this phase? Or, will it be best to wait until the construction phase?
+<p>
+<p>
+Contingency planning should start before software analysis and design
+and should be a part of developing software at all phases.
+Disaster recovery planning is part of Systems Analysis and Design
+(<a href="#CS372">CS372</A>).
+<p>
+To a
+large extent, most contingencies should be discovered about during
+inception and classified as one of these: &quot;out of scope&quot;, &quot;Alternative scenario&quot;,
+&quot;use case extension&quot;, &quot;special use case&quot;, &quot;critical use case&quot;, etc.
+I don't think they should be part of a supplementary specification how ever.
+<p>
+For example most real projects will need a &quot;Back up&quot; use case
+and a &quot;Recover&quot; use case, both with some thing like &quot;Administrator&quot;
+as the primary actor.  Oddly, designing for these use cases is
+very similar to designing any other data intensive use case.
+<p>
+<H2><a name="Chapter 7.6 page 108 Visions vs Goals and other requirements artifacts">Chapter 7.6 page 108 Visions vs Goals and other requirements artifacts</A></H2>
+There seems to be quite a bit of overlap in the vision and the
+requirements, as in user level goal.
+<p>
+A
+<A name="Vision Statement" class="Key"> Vision Statement </A>
+is a short statement of what we expect the project to achieve. It
+is inspirational.  It is an &quot;Executive summary&quot;.  But it leads
+to many goals and requirements.  These are only implicit
+in the vision, they are discovered in &quot;Requirements Analysis&quot;
+<p>
+Example:  the vision may talk of &quot;reliable 24/7&quot; services.  Requirements
+analysis uncovers a dozen use cases involving monitoring, back up,
+restoration, roll backs, disaster recovery, etc. To say nothing
+of a ton of systems design...   like the UPS, the multiple servers,
+no single point of failure, ...
+<p>
+<H2><a name="Chapter 7 page 114 -- At the end of Inception is the vision complete">Chapter 7 page 114 -- At the end of Inception is the vision complete</A></H2>
+<p>
+Yes.... but it is also wrong.   Only when the project is over do
+you discover where you ended up.   The vision points the direction,
+the journey defines where you end up.
+<H2><a name="Chapter 7 page 114 -- Vision changes">Chapter 7 page 114 -- Vision changes</A></H2>
+Is it common for the vision to change as the use cases and supplementary specifications are being written?
+<p>
+I can't give you any statistics about real projects.   I'm sure it does happen.
+<p>
+It has never happened with my own projects, as far as I can recall.
+<p>
+In the student projects I have supervised in the last 37 years
+I have seen three projects completely implode and need rethinking while
+we were working on the specifications.  In both cases the whole
+basis of the work was an assumption that proved false.
+<p>
+A well written vision should be a high level picture that can survive
+discoveries made when writing use cases and other specifications.
+<p>
+<p>
+<H2><a name="Chapter 7 pages 101-120 -- Other Requirements">Chapter 7 pages 101-120 -- Other Requirements</A></H2>
+The book says that these secondary requirements aren't central to learning
+OOA/D, so how is it decided when they should be applied to your case
+studies?
+<p>
+Larman and this course will return to this topic later.
+<H2><a name="Chapter 7.5 pages 107 -- Special Requirements">Chapter 7.5 pages 107 -- Special Requirements</A></H2>
+Can you give us an example of what we would consider special requirements?
+<p>
+Try this that arrived by EMail last week: &quot;To establish A.D.A. compliance
+all syllabuses  will follow this .doc file template...&quot;
+<p>
+Or this: &quot;The pace maker must defibrillate the heart within 1 second of
+fibrillation occurring&quot;.
+<p>
+Or: &quot;This is a throw-away prototype -- non-portable, incomplete,
+and unmaintainable&quot;.
+<p>
+<H2><a name="Chapter 7.4-7.5 pages 104-108 -- Supplementary Specification">Chapter 7.4-7.5 pages 104-108 -- Supplementary Specification</A></H2>
+In the NextGen Example of a partial Supplementary Specification, is the
+Supplementary Specification a part of the Use Case or is it completely
+separate?  I am assuming it is a separate document and if so where would it
+be included with the other documents?
+<p>
+The Supplementary Specification is not part of a particular use case
+but a separate artifact -- a document/web page/file.  Probably placed
+after the use cases.
+<p>
+<H2><a name="Chapter 7 pages 111 -- how long is a Vision">Chapter 7 pages 111 -- how long is a Vision</A></H2>
+There is a commentary on page 111 that says &quot;Please go read the 7-page
+Vision at the project website&quot; isn't the vision supposed to be a short
+description of the project and not a 7 page report?
+<p>
+A 7-page vision is for a big project!  The book is using a industrial
+scale project and for these the vision statement can get a lot
+larger than the ones we are going to need in our 10 week projects.
+<p>
+<H2><a name="Chapter 7 pages 111-112 : What to add to a Vision statement">Chapter 7 pages 111-112 : What to add to a Vision statement</A></H2>
+What would be useful additions to the Vision statement of a UP project?
+<p>
+The goal of Vision statements are
+<li><a name="vision_goals">vision_goals</A>::=
+<ul class="Set">
+<li><span class=Formula>Enable executives learn about the project fast.</span>
+<li><span class=Formula>Define a common purpose for the development team.</span>
+<li><span class=Formula>Set boundaries on the scope of the project.</span>
+<li><span class=Formula>Enable new people learn about the project fast.</span>
+</ul>
+But if you are tempted to add some item apply this test:
+<hr><ol class="Box">
+<li><span class=Formula>What is the value of this information?</span>
+</ol><hr>
+If the item helps one of the <a href="#vision_goals">vision_goals</A> above, then it may belong.
+Otherwise make into a use case or add to the supplementary specifications.
+<p>
+The books shows things like this
+<hr><ol class="Box">
+<li><span class=Formula>The business case: why develop the system. The Bottom Line. Half a</span>
+page!
+<li><span class=Formula>The Context of the work</span>
+<hr><ol class="Box">
+<li><span class=Formula>Stakeholders</span>
+<li><span class=Formula>Market</span>
+<li><span class=Formula>Current systems: rival, old, connected to,...</span>
+</ol><hr>
+<li><span class=Formula>Goals: stakeholder and user</span>
+<li><span class=Formula>Product overview</span>
+<hr><ol class="Box">
+<li><span class=Formula>A context diagram defining the boundaries</span>
+<li><span class=Formula>Benefits</span>
+<li><span class=Formula>Assumptions and risks</span>
+<li><span class=Formula>Costs and Pricing</span>
+<li><span class=Formula>...</span>
+<li><span class=Formula>Features</span>
+</ol><hr>
+</ul>
+My instinct is to ask what can be omitted! <a href="#KISS">KISS</A>.
+<p>
+One very successful executive said he would read anything, as long
+as it fitted on a postcard..... and this would be my ideal &quot;vision
+statement&quot;
+<p>
+<H2><a name="Chapter 7 pages 111 -- Vision vs use cases">Chapter 7 pages 111 -- Vision vs use cases</A></H2>
+It seems as though the use case and the vision go hand in hand, does the
+vision summarize the entire project detail for detail? If so then shouldn't
+that be in the use case?
+<p>
+Vision
+statements should go for the  big picture and avoid the details of
+how the vision is achieved in my opinion.
+<p>
+I agree that uses cases and the vision go hand-in-hand.
+<p>
+<H2><a name="Chapter 7 pages 114 -- Vision or Use Cases first">Chapter 7 pages 114 -- Vision or Use Cases first</A></H2>
+The book states that &quot;it isn't useful to be rigid about the order&quot;, but
+doesn't a use case first require a vision to create a use case?
+<p>
+I agree that in theory the Vision should come first, but in practice
+you might need to sketch a use case to get an idea of the
+scope of the system.
+<p>
+Indeed they probably develop together in a real project.
+<p>
+<H2><a name="Chapter 7 pages 102 -- Organization of Requirements Artifacts">Chapter 7 pages 102 -- Organization of Requirements Artifacts</A></H2>
+Chapter 7 contains lot of requirement artifacts that can be key in adding
+clarity to use cases. Since there are so many of these artifacts, is there
+a particular way to organize all of these artifacts together or produce a
+sort of &quot;design document&quot; out of them?
+<p>
+Good question -- I've spent 20 or 30 years working on it.
+<p>
+The current best practice is to organize requirements about user goals when
+ever possible.
+<p>
+The other practice is to use computerized (and backed up) files or data base.
+I think that a project web site complete with blog, wiki, and forum is a good idea.
+<p>
+Larman uses 4 or 5 documents, The supplementary specs have headings from
+the FURPS+ classification.  I've tried PQRST in a prototype
+IDE but it didn't work as well as many small documents and a good search
+engine
+or two.  I know other famous people who put each requirement
+on a 3&gt;&lt;5 card and use a rubber band to keep the pack together.  The
+IEEE standard SRS provides another way to organize requirements
+[<A href="http://www.csci.csusb.edu/dick/SRS/"> http://www.csci.csusb.edu/dick/SRS/ </A>]
+and the literature of software engineering has lots of
+designs for &quot;repositories&quot;...
+<p>
+I don't think we have found the perfect one-size-fits-all structure yet,
+so I go for flexibility and a little bit of automation and content
+control.
+<p>
+Personally, in projects at this university,
+I'm leaning towards a simple web site with a project
+blog as index, a search engine, and a lot of simple HTML, GIF, JPEG, PDF,
+and TXT files.  Perhaps add an upload page that records some
+metadata as part of the update?
+<p>
+One thing I plan to explore, is integrating the tools and languages I developed in the
+last 20 years into Eclipse...  And see what structure evolves.
+<p>
+<p>
+<H2><a name="Chapter 7 pages 103 -- vision vs Supplementary specification">Chapter 7 pages 103 -- vision vs Supplementary specification</A></H2>
+<p>
+The Vision is a high-level fuzzy document:  In the vision you
+might find: <span class="InlineFormula">the system shall be reliable</span>.
+The supplementary specs will be worked out in details
+<hr><ol class="Box">
+<li>The mean time to failure under
+normal load will be 10 weeks
+<li>The maximum time to recover from a failure will be
+less than 6 hours 90% of the time`.
+<li>... Etc.
+</ol><hr>
+<p>
+Or: Vision: <span class="InlineFormula">fast</span>.  Spec: <span class="InlineFormula">reacts to user input in less than 0.1s under normal load, 95% of the time. Etc.</span>
+<p>
+Or -- Vision: <span class="InlineFormula">user friendly</span>.  Spec: a randomly chosen administrativve assistant
+will prefer
+to use our product over MS Word 60% of the time&quot;. Etc.
+<p>
+<H2><a name="Chapter 7.7 pages 111 -- Vision">Chapter 7.7 pages 111 -- Vision</A></H2>
+How short can a vision be? Can it be at least a half a page?
+<p>
+Yes.  As long as it covers the subject -- defines the direction and
+scope of the project.  Where are we going and what will be involved
+in the journey.
+<p>
+<H2><a name="Chapter 7 pages 111 -- Vision">Chapter 7 pages 111 -- Vision</A></H2>
+Other than the vision and the executive summary are there any other
+documents that would be useful to help introduce a new person to the
+project?
+<p>
+I like Domain (or Business) models, but they are an acquired taste!
+<p>
+Most people like some kind of context diagram: DFD or use case.
+<p>
+I'm tempted to add that a really good video can help.  For a sample
+go to
+[<A href="http://csci.csusb.edu/dick/cs690/"> http://csci.csusb.edu/dick/cs690/ </A>]
+and select some of the PowerPoint downloads.  Some a good and some
+less good...
+<p>
+Personally I think that software developers under use the audio-visual
+technology
+that we can use to communicate our vision.  We need to think less like
+bureaucrats and more like Steve Jobs, perhaps.
+<p>
+<H2><a name="Chapter 7 pages 112 -- What is a Fishbone Diagram">Chapter 7 pages 112 -- What is a Fishbone Diagram</A></H2>
+A fishbone diagram
+[<A href="http://en.wikipedia.org/wiki/Fishbone_diagram"> Fishbone_diagram </A>]
+is a diagnostic tool working back from some problem
+to its causes.  I've never used them -- I use a much freer &quot;brain mapping&quot;
+technique.  But they have turned up in many papers and articles. Google
+.See
+http://images.google.com/images?hl=en&amp;ie=ISO-8859-1&amp;oe=ISO-8859-1&amp;q=%22Fish-
+bone+Diagram%22&amp;btnG=Search+Images
+finds 204 images today.
+<p>
+<H2><a name="Chapter 7.7 pages 112 -- affinity grouping">Chapter 7.7 pages 112 -- affinity grouping</A></H2>
+Can you explain and or give an example of affinity grouping?
+<p>
+<a href="#YAGNI">YAGNI</A> in this course.  Unless you find it helps...
+Google Images:
+.See
+http://images.google.com/images?hl=en&amp;ie=ISO-8859-1&amp;oe=ISO-8859-1&amp;q=%22affinity+grouping%22
+<p>
+Again I prefer brain mapping for personal work, but I can see this
+technique
+working well in a team setting.
+<p>
+Note:  I'm surprised the book didn't mention
+<A name="Kelly grids" class="Key"> Kelly grids </A>
+and personal construct theory --
+.See
+http://www.google.com/search?svnum=10&amp;hl=en&amp;lr=&amp;ie=ISO-8859-1&amp;oe=ISO-8859-1&amp;q=%22Kelly+Grid%22&amp;sa=N&amp;tab=iw
+that also are useful for sorting out fuzzy areas -- especially pathological
+ones.
+<p>
+<H2><a name="Chapter 7 pages 104-108 : Supplementary Spec. and Requirements">Chapter 7 pages 104-108 : Supplementary Spec. and Requirements</A></H2>
+The supplementary specification deals mostly with non-functional
+or quality
+requirements.  Could you explain the difference between functional and
+non-functional requirements?
+<p>
+Briefly: a functional requirement describes something that the
+software/system must be able to do.  All other requirements
+are non-functional.
+<p>
+Functional requirements pass the &quot;Hey Mom&quot; test:
+<br><ol class="List">
+<li><span class=Formula>Hey mom, I just calculated pi to 30 decimal places!</span>
+<li><span class=Formula>Hey mom, I was secure.</span>
+</ol><br>
+Which is the functional requirement above?
+<H2><a name="Chapter 7 pages 102 : Requirement Artifacts and stakeholder views">Chapter 7 pages 102 : Requirement Artifacts and stakeholder views</A></H2>
+The author emphasizes that requirement artifacts will iteratively become
+more complete. In the inception phase how do 'stakeholders views' about the
+project influence the extent that requirement artifacts be developed in the
+beginning?
+<p>
+Stakeholders can tell which requirements have the greatest value.
+Your task is to select from these the ones which (1) tell you most
+about the project and (2) can be done in the next iteration.
+<p>
+This may involve some negotiation!
+<p>
+Traps:  stakeholders want to define everything up front.  Developers
+want to do the easy ones first.
+<p>
+<H2><a name="Chapter 7.3 pages 103 : Projects using the web">Chapter 7.3 pages 103 : Projects using the web</A></H2>
+Is it possible to work on a project that uses all Internet based
+technologies, e.g. web conferencing, web sites, IDE's, where all players
+are in different locations and never physically meet.  Is this a good idea?
+<p>
+It is possible.  It has been done.  And sometimes it works!
+See
+[<A href="http://csci.csusb.edu/dick/biba.php?from=05q&amp;search=HerbslebMockus03"><cite>HerbslebMockus03</cite></A>]
+[<A href="http://csci.csusb.edu/dick/biba.php?from=05q&amp;search=HerbslebMoitra01"><cite>HerbslebMoitra01</cite></A>]
+[<A href="http://csci.csusb.edu/dick/biba.php?from=05q&amp;search=CohnFord03"><cite>CohnFord03</cite></A>]
+[<A href="http://csci.csusb.edu/dick/biba.php?from=05q&amp;search=GaoChenToyoshimaLeung99"><cite>GaoChenToyoshimaLeung99</cite></A>]
+[<A href="http://csci.csusb.edu/dick/biba.php?from=05q&amp;search=Tiwana04"><cite>Tiwana04</cite></A>]
+<p>
+Allow time for the added setup and the technological and human risks.
+<p>
+<H2><a name="Chapter 7 pages 81-120 -- More Requirements -- ERDs and data dictionaries">Chapter 7 pages 81-120 -- More Requirements -- ERDs and data dictionaries</A></H2>
+Are ERD's considered Data Dictionary/Glossary ? Why isn't an ERD mentioned
+as a requirement?
+<p>
+I think of ERD's as a visual data dictionary.  Larman and RUP have
+a &quot;Business Model&quot; or &quot;Domain Model&quot; that is close to a conceptual ERD.  I guess
+that a Chen ERD should be filed as a supplementary requirement.
+<p>
+ERD's are static models and tell you about the domain.... more
+about domain models later.
+<p>
+<p>
+<H2><a name="Chapter 7.9 pages 115-116 Data Dictionary">Chapter 7.9 pages 115-116 Data Dictionary</A></H2>
+How do you write a data dictionary? I noticed the term is defined as data about the data, but how is it applied?
+<p>
+We cover these in CS372 and in data base classes.
+<p>
+A data dictionary has a lot of definitions:
+it defines all data elements, data types,
+data processing, data records = entities, ...
+<p>
+You can buy expensive data dictionary software.
+<p>
+You can get one with your Data Base Management System.
+<p>
+You can use a spread sheet or personal data base.
+<p>
+I use a file/web page that is full of <span class="InlineFormula">XBNF</span> definitions.
+<p>
+<H2><a name="Chapter 7 page 117 -- Glossary changes">Chapter 7 page 117 -- Glossary changes</A></H2>
+Can the glossary grow or change as we progress through iterations and the scope grows, changes or shrinks?
+<p>
+It grows. It may also be corrected.
+<p>
+<H2><a name="Chapter 7 pages 115 -- Example of a Glossary">Chapter 7 pages 115 -- Example of a Glossary</A></H2>
+The author talks about the Glossary very briefly. Where can I find a better
+example of one?
+<p>
+I'm not sure if it is better but I put one at the end of all my notes
+in this course.  Keep it simple -- a list/spreadsheet/database
+of terms and what they mean in particular contexts.
+I write my glossaries using an eXtended Bacchus-Naur-Form.
+Examples:
+[<A href="http://cse.csusb.edu/dick/samples/glossary.html"> ../samples/glossary.html </A>]
+[<A href="http://cse.csusb.edu/dick/samples/languages.glossary.html"> ../samples/languages.glossary.html </A>]
+[<A href="http://cse.csusb.edu/dick/samples/uml.glossary.html"> ../samples/uml.glossary.html </A>]
+[<A href="http://cse.csusb.edu/dick/samples/objects.glossary.html"> ../samples/objects.glossary.html </A>]
+[<A href="http://cse.csusb.edu/dick/samples/c++.glossary.html"> ../samples/c++.glossary.html </A>]
+[<A href="http://cse.csusb.edu/dick/samples/stl.glossary.html"> ../samples/stl.glossary.html </A>]
+[<A href="http://cse.csusb.edu/dick/samples/java.glossary.html"> ../samples/java.glossary.html </A>]
+[<A href="http://cse.csusb.edu/dick/samples/comp.html.glossary.html"> ../samples/comp.html.glossary.html </A>]
+[<A href="http://cse.csusb.edu/dick/samples/methods.glossary.html"> ../samples/methods.glossary.html </A>]
+[<A href="http://cse.csusb.edu/dick/samples/math.glossary.html"> ../samples/math.glossary.html </A>]
+[<A href="http://cse.csusb.edu/dick/samples/php.glossary.html"> ../samples/php.glossary.html </A>]
+<p>
+<H2><a name="Chapter 7 pages 102-102 -- Glossary organization">Chapter 7 pages 102-102 -- Glossary organization</A></H2>
+Is there any particular way that the glossary should be organized?
+<p>
+Alphabetically is good for looking things up.
+<p>
+<p>
+<H2><a name="Chapter 7 pages 115-116 -- Data Dictionary">Chapter 7 pages 115-116 -- Data Dictionary</A></H2>
+Is it appropriate to define user types (Salesperson, Manager, etc.) in a
+Data Dictionary?
+<p>
+Yes.  I think it is valuable to define some very specific &quot;personas&quot;
+to understand how different users will want the system to work.
+<p>
+<H2><a name="Chapter 7 pages 117 -- Domain or Business rules">Chapter 7 pages 117 -- Domain or Business rules</A></H2>
+What is the difference between Domain Rules and Business Rules?
+<p>
+Nothing.
+<p>
+Many enterprises would be shocked to be
+described as a business -- for example -- students who have
+been working in the summer at the University Of California,
+Santa Barbara would be wise to document the various rules
+that their software must respect as &quot;Domain rules&quot; not
+&quot;Business Rules&quot;.  By the way -- these rules come from
+Physics and Biology.
+<p>
+Or, contra-wise, if you work for Citrix you would be wise to
+ask people for the Business Rules seeing they are trying to
+make money.
+<p>
+<p>
+<H2><a name="Chapter 7 page 115 -- Data Dictionary Guideline">Chapter 7 page 115 -- Data Dictionary Guideline</A></H2>
+It was stated in the book:
+&quot;Start the Glossary early. It will quickly become a useful repository of
+detailed information related to fine-grained elements.&quot;
+What
+<A name="fine-grained elements" class="Key"> fine-grained elements </A>
+is the book referring to?
+<p>
+The detailed listing of the data types in the problem.
+Mostly data elements like a &quot;student id&quot; or &quot;course name abbreviation&quot;.
+The details are just like a noncomputerized declaration of a variable or data type.
+<p>
+<H2><a name="Chapter 7 page 117 : Where and how to put Domain Rules">Chapter 7 page 117 : Where and how to put Domain Rules</A></H2>
+<A name="Domain Rules" class="Key"> Domain Rules </A>
+belong in the Supplementary Specification.  They should be given
+a name and this can be used to link steps in a use case to
+the rules.
+<p>
+There are <span class="InlineFormula">many</span> ways to express these rules:
+<br><ol class="List">
+<li><span class=Formula>natural language: English, ...</span>
+<li><span class=Formula>diagrams: tree  diagrams, OBDD</span>
+[<A href="http://cse.csusb.edu/dick/cs556/index.html#OBDDs"> ../cs556/index.html#OBDDs </A>]
+, flow charts, activity diagrams, ...
+<li><span class=Formula>tables: decision tables, and/or tables, Kaunaugh maps, ...</span>
+[<A href="http://cse.csusb.edu/dick/maths/notn_9_Tables.html"> ../maths/notn_9_Tables.html </A>]
+<li><span class=Formula>logic+math: formulas, well formed formulas, ...</span>
+[<A href="http://cse.csusb.edu/dick/cs556/index.html#PC"> ../cs556/index.html#PC </A>]
+[<A href="http://cse.csusb.edu/dick/cs556/index.html#LPC"> ../cs556/index.html#LPC </A>]
+[<A href="http://cse.csusb.edu/dick/maths/"> ../maths/ </A>]
+<li><span class=Formula>code: pseudo-code, object constraint language</span>
+[<A href="http://cse.csusb.edu/dick/samples/ocl.html"> ../samples/ocl.html </A>]
+, ...
+<li><span class=Formula>...?</span>
+</ol><br>
+<p>
+<p>
+</ol>
+<p>
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci Dept, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10.
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

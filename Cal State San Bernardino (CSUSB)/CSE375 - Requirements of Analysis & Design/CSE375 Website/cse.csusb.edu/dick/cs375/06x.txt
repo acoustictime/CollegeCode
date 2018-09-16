@@ -1,0 +1,78 @@
+.Open Exercises for class 06
+ List the artifacts that are developed during inception and indicate their degree of completeness.
+ What three goals are normally tackled during elaboration?
+ What artifacts are started during elaboration?
+ What is a domain model?
+ Here are the two basic symbols used in a simple domain model, what do they mean?
+.Image 06domain.gif [C in a Box and A on a line]
+
+ Give 2 examples of the kinds of things that do not appear in a domain model.
+ What is the relation between domain models and design class diagrams.
+ List half-a-dozen types of conceptual classes.
+ What is a description class and why are they useful?
+ When should you show an association in a domain model?
+ What is a multiplicity?  Give 4 examples.
+ Here is a text version of some multiplicities: Section(*)-----(1)Teacher(*)-----(1)Department.
+Explain what they are saying.
+ List half-a-dozen categories of association.
+.Open Practice domain modeling. 
+.Open CSUSB Inventory Control
+Suppose that you have to develop the CSUSB Inventory program for Facilities
+Services. This software tracks all the equipment and furniture on campus. 
+It enables us to find where things have gone to. Each thing is in one place
+and places can have any number of things. CSUSB Inventory is used when we 
+move, instal, replace, repair, and remove things from service.  It helps us
+find things and put them in  the right place.  Places include classrooms 
+and stores.
+
+List the nouns in the above.
+
+Draw a domain model.
+.Close CSUSB Inventory Control
+.Open Depot Stock Control Software
+. Instructions
+  Draw a domain model to fit the following description in the space at the bottom of this sheet.  
+
+Hint: use a pencil  and an eraser. Or a black/white board with chalk.  Draw incomplete
+boxes.
+
+. Vision -- Depot Stock Control Software
+Software runs in a depot that ships stocks requested by orders.  It helps
+the depot manager manage stock levels and outstanding orders.
+. Use Case UC1 Manager reviews unfulfilled orders
+The manager at a depot logs in and sees a list of the sales orders that his depot has not yet fulfilled.
+.Open Exercise 1
+Your diagram should show the following information (and not much else!).
+. Classes
+ Depot, Product, Stock, Customer, Sales Order, Sales Item
+. Associations
+ A Depot holds Stocks.
+ Products are stocked as Stocks. 
+ A Depot has Customers. 
+ A Customer can have Sales Orders. 
+ A Sales Order has Sales Items.
+ A Stock can be ordered as a Sales Item
+. Multiplicities
+ Each Stock has precisely one Product and is held at one Depot.
+ Each Customer is served by only one depot.
+ Each Sales Item is on one Sales Order and is for one Stock.
+.Close Exercise 1
+. Answer 1 -- With no association names
+.See ./06xans.png
+.Open Exercise 2
+See this
+.See ./07x1.png
+and add these
+. Attributes
+ Depot: Id and address, 
+ Customer: name and address,
+ Sales order: dateOrdered, dueDate,
+ Sales Item:  price and quantity, 
+ Product: description and units.
+.Close
+
+. Answer 2 -- Domain Model with attributes
+.See ./07x1ans.gif
+.Close Exercise 2
+.Close Depot Stock Control Software
+.Close Exercises for class 06

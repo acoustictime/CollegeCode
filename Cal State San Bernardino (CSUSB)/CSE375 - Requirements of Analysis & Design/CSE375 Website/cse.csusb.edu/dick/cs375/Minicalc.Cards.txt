@@ -1,0 +1,35 @@
+.Open Minicalc CRC-like Cards
+.Open Constant
+A Constant is a special kind of Expression.
+
+A Constant has a integer value.
+
+When created the value is given to the constant to be stored.
+
+When evaluated a Constant returns its value
+.Close Constant
+
+.Open Operation
+A Operation is a special kind of Expression.
+
+A Operation has a left and right hand Expression plus an operator.
+
+When created these objects are given to the Operation.
+
+When evaluated an Operation evaluates its left and right expressions and
+returns the result of applying the operator to their values.
+.Close Operation
+
+.Open Addition
+An Addition is a special kind of Operator.
+
+When applied, an Addition is given two integers and it returns their sum.
+.Close Addition
+
+.Open Multiplication
+An Multiplication is a special kind of Operator.
+
+When applied, an Multiplication is given two integers and it returns their product.
+.Close Addition
+
+.Close

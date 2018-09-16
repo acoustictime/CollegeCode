@@ -1,0 +1,98 @@
+.Open Exercise on Use Case formats in Class 04
+I'm using my "MATHS" language to convert our work
+into HTML... with internal links.  We started with the
+name, added a brief description, and then elaborated it to get a casual form.
+We ran out of time for the Fully dressed format.... and I did some work on this
+on Friday Morning Jan 19th.  Notice -- there is still work to be done.  In an
+agile world we don't expect perfection -- we expect "Good enough, for now."
+
+.Open Use Case Add class
+. Brief Format Add class
+A student logs in, selects and adds classes, and logs out.
+
+. Casual Format Add class
+(main): A student logs in, selects and adds classes, and logs out.
+
+(alternative1):In $main, If the password does not match, send error message, go back to login.
+
+(alternative2):in $alternative2, After three attempts at logging in, kick them out.
+
+(alternative3):In $main, if class canceled or full, suggest alternatives, student selects one.
+
+(alternative4):In $main, if pre-reqs missing send student to department.
+
+(alternative5):In $alternative3 if no alternative fits send to department.
+
+(alternative6):In all scenarios, if inactive for 3 minutes, logout.
+
+.Open Fully Dressed Use Case Add Class
+.Table
+.Row Name
+.Item Add class
+.Row Scope
+.Item WebReg 2.0
+.Row Level
+.Item User-goal
+.Row Primary Actor
+.Item 
+(student): A student who wants to add some classes.
+.Row Stakeholders and Interests
+.Item 
+(CSUSB): want to enroll as many students as possible into the classes that they
+want when there is room for them.
+(departments): Need students to take relevant classes for their program.
+(LDAP): Validates student logins.
+(SIS+): Current server for enrollment information.
+(CMP): Future service for enrollment data.
+.Row Preconditions
+.Item $student has to registered as a $CSUSB student.
+.Row Postconditions
+.Item $student will be enrolled in selected classes.
+.Row Main Success Scenario
+.Item 
+.List
+ $student logs in, $LDAP validates log in and $SIS+ validates registration,
+ System displays current schedule.
+ $student searches for an open sections and finds some.
+ $student selects section(s) to add.
+System asks $SIS+ to add student to class and displays confirmation.
+ The previous three steps can repeated until the student logs out.
+ $student logs out and system offers to email confirmation information.
+ If student selects to get EMail the system sends it and logs the student out.
+.Close.List
+.Row Extensions
+.Item 
+.Set
+ (1a): If student gives wrong password, Ask again (twice).
+ (1aa): After three attempts to login, log student out and log event in security log
+ (1b): If student is not registered, invite them to go to Sierra Hall
+ (3a): If none match student search criteria, try for near missed and suggest
+talking to $department.
+ (4a): No open class fits $student schedule.  Ask student to talk to $department.
+ ...
+.Close.Set
+.Row Special Requirements
+.Item 
+Security: only students enroll or access their data.
+
+Reliability: 24/7.
+
+Load: must handle 1000 adds in a day at peak load with less than 10secs delay.
+.Row Variations in Technology and Data
+.Item 
+1. SIS+ will become CMP in 2 years.
+
+*. Students will start to use web enhanced cell phones...
+
+?. How about using instant messages?
+.Row Frequency of Occurrence
+.Item Lots.
+.Row Miscellaneous
+.Item Open issues to research
+
+LDAP protocol, Access to SIS+, current screen layouts and WebReg performance.
+.Close.Table
+.Close Fully Dressed Use Case Template
+
+.Close Use Case Add Class
+.Close

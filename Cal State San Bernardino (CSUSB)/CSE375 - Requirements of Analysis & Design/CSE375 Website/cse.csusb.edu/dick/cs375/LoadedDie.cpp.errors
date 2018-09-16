@@ -1,0 +1,2 @@
+LoadedDie.cpp: In member function ‘virtual void LoadedDie::roll()’:
+LoadedDie.cpp:11: error: ‘cerr’ was not declared in this scope

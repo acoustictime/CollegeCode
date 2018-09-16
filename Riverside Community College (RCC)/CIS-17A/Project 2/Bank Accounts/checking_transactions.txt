@@ -1,0 +1,11 @@
+1 OpeningBalance 10000
+2 Withdraw 50
+3 ServiceCharges 5.1
+4 Interest 33.2602
+5 Withdraw 500
+6 Deposit 50
+7 Withdraw 1000
+8 ServiceCharges 5.2
+9 Interest 28.5042
+10 ServiceCharges 5
+11 Interest 28.5825

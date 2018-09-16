@@ -1,0 +1,484 @@
+.Open Questions and answers on use cases -- use cases
+. Scope Bounds the system under design
+What does Larman mean when he says the scope bounds the system under design?
+
+"Scope" is a technical term.  It names a kind of metaphorical boundary
+around the system it applies to.  A Project's scope is what the project is
+about.  If something is "out of scope" we don't waste time on it.  In
+requirements scope limits or bounds what we have to worry about.  If
+something is "in scope" we have to analyse and design for it.  If it
+is out of scope, we don't.
+
+
+. Why so little documentation
+Why is it that so little of documentation is necessary for the inception / use cases? Shouldn't there be more documentation to better identify its uses more throughly to cut through confusion and reveal a clearer goal?
+
+Personally I find the thought of preparing a 4 or 5 page fully dressed
+use case more than enough documentation to get a project started.
+
+. Chapter 6 page 65 No external Primary actors
+Why does the author suggest we should be suspicious if no primary actors are external computer systems?
+
+I can't find this suggestion.... 
+
+I think that you should be suspicious of any use case where the primary actor
+is inside the system you are designing.   Use case serve real users!
+
+
+. Chapter 6 page 66 offstage actors
+The book details offstage actors. Isn't this more of a higher detail plan?
+Isn't this type of detail a little to much for this step of the process?
+
+No!  
+
+Back in the 1960's and 70's we taked a lot about avoiding detail at
+the start of projects and `refining` later.
+
+Trouble is that details can kill a project -- In particular an off stage actor like
+the government can really make a project a lot more interesting without
+doing any thing in the final system.
+
+In the $UP you take a small part of the software and do detailed analysis and
+design on it.  You work out all the details on a small number of requirements.
+Rather than (as in the past) leaving all the details until later.
+
+. Actors and user roles
+Should all actors be identified? Can I just identify a specific person or group who will play the role of each actor?
+
+You should at least name the actors and if necesary give same more 
+information -- if it is interesting.  
+
+I dread the use case diagram with the actor "User" and use case "login".
+It tells me nothing about the system, and everything about the 
+thoughtlessness of the person who drew the diagram.
+
+In fact,
+I like to be very precise and even give a personal name to my primary actors.  For
+detailed interaction design I spell out as much as I can about them:
+age, gender, status, skills, habits, ....  These
+.Key personas
+improve the usability of the system by matching the behavior to the particular
+users that matter..
+
+. What is the difference between actors and user roles? 
+Not much.  A person can play many roles in different use cases... and
+each time may appear as a different "actor".... I think.
+
+. Chapter 6.4 page 66 -- limit on the number of use cases
+Motivation is enticing! However, when presenting use cases to emphasize and define goals and perspectives, is there a limitation of the number of use cases required to fulfill the requirements of the case or project?
+
+No. A big project has many use cases.  A small project has one simple use
+case.
+
+Use cases are a good indicator of the effort needed to develop a project.
+
+. Chapter 6 page 77
+Is it better to record non-functional requirements with the use case in the beginning and then move them to special requirements later, or to list them in the special requirements from the beginning?
+
+I don't know.   I've gone both ways.   Try this: start with a non-functional
+requirement attached to a use case.... and when it appears elsewhere
+factor it out into a "supplementary spec" in another artifact and link
+the two together.
+
+Note: there is a lot to be said for using hyperlinks in your documents.
+
+. Chapter 6.16 pages 87-89 Use Case Tests
+For application requirements analysis, the boss, EBP, and Size tests are enumerated. Is there any reason as to why a System Test is not considered a use-case test? Shouldn't that be considered an important test to insure a good product? It only seems logical to me!
+
+OK.  The book is confusing.  It means "How to spot a good use case".  It is
+not talking about "How to test the system".  The questions are about
+how to reject bad use cases before you try to code them.
+
+. Use cases and functionality
+Do the use cases define all the functionality within the scope of the system and nothing outside the scope?
+
+Yes.
+. Chapter 4/6 pp 61 -- Use Cases
+Who is Ben Stien?
+
+A well known misprint: `Ben Stein`...  I've never heard of him before,
+but agree with the philosphy: decide what you want before trying to get it!
+.See 
+http://thinkexist.com/quotation/the_indispensable_first_step_to_getting_the/12868.html
+
+. Chapter 6 pp 61-67 -- Requirements and Formats
+This chapter mentions the Supplementary Specification, Glossary, Vision, 
+and Business Rules requirements but doesn't define them, how are they used?
+
+We will cover these later in the book/course.
+
+. Chapter 6 pp 61-67 -- Requirements and Formats
+How should it be decided which use case format to use?
+(Brief, Casual, Fully Dressed)
+
+Start simple.... and elaborate as the project proceeds.
+
+
+. Ch 6 pp 061-089 -- Use Case text vs diagram
+I thought that use cases were primarily a VISUAL representation of
+a certain system scenario.  However, now in the text, it seems that they
+are mostly just written "stories".  Is one better than the other, or
+should we just use both types in tandem?
+
+One of the commonest errors made by people new to use cases is think
+that they are a diagram.  A use case is not a diagram.  A project
+has a diagram that shows many use cases as bubbles.
+
+Fact:  the scenarios/text forms provide the real benefit
+for designing software.  The diagram is a visual aid and index.
+It summarizes all the use cases.
+. Ch 6 pp 061-089 -- Use Case text vs diagram
+Which should we use text or diagram?
+
+Both ultimately.  Start with the simple text formats, refine
+some in detail.... and draw a diagram when you want to
+summarize the whole picture.
+
+Beware drawing a diagram too early.  They help most when you have many
+actors and many cases and you need to see how they fit together: who
+does what.
+. Chapter 3 pp 61-89 -- Use Cases
+Can Use Cases be use to demonstrate why a system shouldn't be design?
+
+I don't see why not... but I've never heard of this happening.
+
+. Chapter 6 pp 61-89 -- Use cases
+With an almost infinite number of things that can go wrong with a system,
+how do you determine what alternate flows should and shouldn't be included
+in the use case?
+
+Don't forget that use cases grow as the project proceeds.  New
+alternatives are always being added.  So the question is which alternatives
+do you explore first.  I guess the answer is -- start with the riskiest
+and most interesting ones.
+
+One nice thing about fully dressed use cases is that you can write
+a single alternative flow that can occur in many steps in the use case.
+An example would be
+.As_is 		*z. if power is cut, .....
+The asterisk means that the same action is carried out what ever
+step is in progress.  Similarly you can write
+.As_is 		3-15a. If user does not respond in 10 minutes, ...
+as an action to be taken in steps 3 through to 15 if the user times out.
+
+. Chapter 6 pp 61-89 -- Nonfunctional Requirements
+Since use cases focus on developing functional requirements, and 
+nonfunctional requirements are only discovered offhand during that process,
+is there a formal method for developing nonfunctional requirements (beyond
+"I think the program should be fast")?
+
+I suppose you could list all the different types of non-functional
+types and run through the list with your stakeholders -- how fast
+must this respond? How valuable will it be to recover data lost
+in an earthquake? ...  But in practice if you keep your ears and eyes
+open, critical ones are obvious as you talk with the stakeholders
+and think about the system.
+
+. Chapter 6.2 pp 63 -- Use Case
+Have you ever worked on a project or known of a project that didn't use, 
+use cases?
+
+All of them prior to 2001.
+
+. Chapter 6 pp 65 -- Use Cases vs. Functional Requirements
+Explain in better detail the differences between a Use Case and a 
+Functional Requirement?
+
+A Use Case is one way to express a functional requirement.  Currently
+most people think that it is best practice for expressing and organizing
+requirements.
+. Chapter 6 pp 65 -- Use Case Requirements
+The books says, "Use cases are indeed requirements (although not all 
+requirements)." How do you know which requirements are important?
+
+Good question.  Best practice answer: ask the stakeholders.
+
+One cunning idea is to ask them to allocate hypothetical $100 to
+each one to indicate the relative importance.
+
+
+. Chapter 6 pp 67-68 -- Conflicts between stakeholder requirements
+What if there is a conflict with a stakeholders interest, either with 
+another stakeholder, existing technology, etc?  How do you resolve it?
+
+This topic deserves a book there are so many ramifications -- is the
+conflict personalities, business politics, people loosing power,
+different views, a legitimate trade off, ...
+
+I would get the the conflict clarified and get the opposing people
+to meet in a neutral area.... Then, if that fails, talk to their
+bosses...
+
+This is one reason why companies hire in special facilitators and 
+consultants
+to develop the requirements with them.
+
+This is really a
+.See ./cs372/
+topic... I most write more on it!
+
+
+. Chapter 6 pp 76 -- Use Case
+In the middle of the page 76, it shows a scenario of Paying by Credit.  The
+scenario states that system sends an authorization request to an external
+service system.  However, in class you said that the use case should not 
+contain internal operations that the user would not know about.  So is this
+scenario different?
+
+Key point -- the external agency is external to our system and so must
+be mentioned.  In fact, I hope the person understands that the money
+is coming out of the bank that owns the credit card!
+
+. Chapter 6 pp 85 -- Primary Actor
+In the POS example the author states that the cashier is the primary actor
+because he/she initiates the action of the system. There is mention of the
+customer self service check outs that are now widely used. In this case is
+the customer the primary actor and is this system considered a separate use
+case or a modified version of the first since most of the actions remain 
+the same?
+
+Interesting question.  I think the smart move would be to create
+an included use case that is shared between the two concrete ones.
+This technique is later in the book and course.
+. Chapter 4 pp 50 -- Business Case
+I was constructing a Vision and Business Case for the project, when I
+realized I didn't know much about what goes into the creation of a Business
+Case. Can you elaborate?
+
+In this course we will keep it simple -- explain in business terms what
+it costs and why it is worth doing anyway.
+The Business Case explains why
+it is good for the enterprise to develop the software under design.  This
+often means: increasing the bottom line.
+
+Some enterprises have a complicated report format that is used
+to state the Business Case. Review
+.See http://csci.csusb.edu/dick/cs372/c2.html#The%20Business%20Case
+to see the information that is often required.
+
+
+.  pp  -- What is the significance of use cases?
+
+They are probably the most important technique, so far invented,
+for documenting what your software
+needs to do. They are a tool that places what the system must do
+in the context of the user needs.  They also help you organize the
+design and code.
+
+. Chapter 6 pp 61-65 -- Use Cases
+When writing use cases for large projects is it necessary to write a use
+case for every scenario, or would it be sufficient to write use cases for
+the most complex scenarios and create use case diagrams for all.
+
+Scenarios are parts of use cases -- one use case has many scenarios.
+Each scenario should belong to at least one use case.
+
+So to rephrase the question:
+
+. Must I write scenarios for every use case?
+
+Answer: not yet.
+
+. Can I do just the most complex use cases first?
+
+Answer: Probably -- the trick is to pick the use cases that will have the
+biggest impact on the design of the software.  Start with some important
+use case that involves many ideas from the user's domain -- even if
+it only has one simple scenario.
+
+As an example: suppose you know that your software has to solve a
+hard problem then you should work out a simple use case that sets up
+a problem and lets you test the solution...
+
+Another example: you are using a novel protocol -- focus on
+use cases that need the protocol.
+
+Example: the problem involves a lot of entities/tables in a data base --
+pick use cases that need data from many of these...
+
+. What happens if I do the wrong use cases first?
+
+You may find that of software needs a big rewrite and your
+design a big rethink late in the project.
+
+. Chapter 4 pp 061-089 -- Use Cases
+Are use cases a complete collection of scenarios, or some kind of a
+representative collection of scenarios?
+
+They start out as being a subset and grow into completeness as the project
+proceeds.
+
+The worst case is discovering a scenario at the end of the project
+that can not be handled by the code you have got running.  So we
+search out scenarios that stretch our architecture early in the project.
+. Chapter 6 pp 62-64 -- Use Case Actors
+Isn't the Fully Dressed format for use cases too complex, I thought it was
+supposed to be simple(pg65)? or Should we be using all of these formats to
+be completely thorough in our analysis.
+
+Don't write fully dressed cases for every use case -- just the really
+important ones.  Importance varies as the project proceeds.  Initially
+you need the 10% that involve risk and define the architecture.  Later
+you only "fully dress" a use case just before you start to implement
+it.
+
+Use cases go through 5 stages: name, brief, casual, fully-dressed,
+implemented.
+
+The complexity of a fully dressed use case reflects the complexity
+that the software has to handle.  Ignore it and watch your software
+fail.
+
+
+Use cases go through 5 stages: name, brief, casual, fully-dressed,
+implemented.
+
+. Chapter 6 pp 64 -- Use Cases and Use Case Model
+How do you determine when to use the Use Case and the Use Case Model?
+
+Write text to clarify one use case.
+
+Use the diagram to clarify many use cases.
+
+I draw a fast use case diagram first in pencil/chalk and use it as
+a visual list of names.   Then I describe each use case in more detail.
+
+But you can often pick one critical use case and write it first and
+delay the diagram until you have to present the material or when
+you start to get lost in all the different use cases.
+
+The diagram + text makes up the "use case model".  The diagram is
+optional (but nice).  The text: name, brief, casual, ... is essential.
+
+
+. Chapter 6 pp 66-67 -- Use Case Formats
+Out of the three common use case formats (brief, casual, and fully
+dressed). Which is the one that is the most effective?
+
+Three different tools for three different purposes:  like three different
+wrenches or screw drivers.   Or three different kitchen knives.
+
+Pick the right one for the job in hand.  You need brief descriptions
+to get started and fully dressed before you code.
+
+Choose the tool that gives you most information.
+
+. Chapter 6 pp 66-67 -- use cases
+Can a use case still work if you mix up the primary actor and the
+supporting actor? Meaning will it still work if i unknowingly put the
+primary actor in the supporting actor spot and vise versa?
+
+It will certainly help you document what is happening.  The real catch
+is that you'll describe a solution that is fitted to the wrong person.
+This won't make your users very happy!
+
+Start by selecting a primary actor..... and then ask what they might
+want to do.
+. Chapter 6 pp 66 -- Actors / Associations
+There are three types of actors.  If two actors interact can they be
+connected to each other.
+
+NO!
+
+Common mistake: connecting actors that communicate or connecting bubbles
+that share data -- DON'T!
+
+There is one valid (and IMHO useful) connection between actors:
+generalization.
+Like this:
+ Student ----|> Person
+which says that a Student does everything that a Person does.
+
+. Chapter 6 pp 66 -- Actors / Associations
+Also, in a use case diagram what is the difference between associations
+drawn with arrows and associations drawn with just lines.
+
+Not much.  The arrow comes from the primary actor.
+
+
+. Chapter 6 pp 78,79 -- Use case format
+
+The book says that there isn't one best format for use cases, on projects
+in the real world which format is used more, the one-column style or the
+two-column style?
+
+I don't have any evidence which formats you'll meet in the real world.
+Luckily it is easy to shift to fit the company you work for.
+
+Personally, I use the one column format because it is simpler to write.
+My guess is that you'll many others doing this as well.
+
+
+. Chapter 6 pp 88 -- EBP Test
+Can you give a better description of an EBP Test than the books
+description?
+
+Not really:  it implies that a use case should be valuable and to some
+extent
+independent of other use cases(a transaction).  I'm not sure about the
+accuracy of the other criteria (response to an event, in one place,
+at one time, ...).
+
+Perhaps it can give you an image -- the user reaches for the computer and
+gets something done and then stops, and the enterprise profits as a result.
+
+
+. Ch 6 pp 66-72 -- Use Case Formats
+When will we use each of the three use case formats?  When will we need to
+use a fully dressed use case?
+
+In a real project you start out elaboration with only 10% of the use cases
+in fully-dressed format... but end up transition with nearly all of them
+fully documented.
+
+You follow the rule: select use cases that shine a light on the
+problems and solutions for refinement.
+
+Refinement::usecases=`supplying more details, moving from name to brief
+format, to casual format, and finally fully-dressed format`, refinement
+may lead to rethinking and correcting mistakes or out-of-date information.
+
+In this class:  Today I'd like us to have one fully-dressed use-case to
+work with but I don't plan to remove points if everyone is a bit casual.
+
+
+. Ch 6 pp 72 -- use cases customization
+What customization is needed for Different business?
+
+It depends on whether there is a common core of useful things that are 
+needed
+across all the businesses you are considering.
+
+You can make customization easier in use cases by using the $essential
+style -- omitting all mention of hardware and user interface details.
+
+. Ch 6 pp 90 -- Use case diagrams
+Figure 6.3 seems to violate use case rules(IE. reads like a flow chart, 
+does to many things),why is this acceptable?
+
+What is missing are the control flows that specifies the sequence of use 
+cases.
+If they were shown you would have a non-standard flowchart.
+
+Use case shouldn't have a sequence... a set of independently scheduled
+things that the user needs to do: at the time and place of the user's
+desire.  If you become aware of some kind of constraint -- example
+user must "login" before "editing a file" then your use cases are
+two small -- steps in a scenario.
+
+In other words:  sequences should be in the use case scenarios, not
+between the use cases themselves.   Exception: pre and post conditions in
+a fully dressed format
+can express a sequence.  Not shown in the use case diagram.
+
+. Ch 6 pp 80 -- Essential Style Writing
+When should essential style writing be used?
+
+When ever possible!  Delay physical details until cast in stone.  In any
+case better expressed in code or as configuration files (eg. CSS).
+
+essential::=`describing things without mentioning user interface or other 
+physical details`.
+
+Example: don't use the words "click", "button", "page", "data base", ...
+.Close Questions and answers on use cases -- use cases

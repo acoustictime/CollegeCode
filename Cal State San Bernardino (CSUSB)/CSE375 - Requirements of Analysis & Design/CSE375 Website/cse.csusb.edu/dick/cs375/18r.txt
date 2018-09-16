@@ -1,0 +1,25 @@
+. Review Questions 18 -- Refining the Domain Model
+ Draw diagrams showing each of these facts using the UML
+.List
+ A is associated with B.
+ A is a generalization of B and C.
+ A is an aggregation of B and C.
+ A is a composition of B and C.
+ A plays role a in class B.
+.Close.List
+ Give a real life (not from text or my notes) of a generalization using the UML notation.
+ When is it worth adding a subclass to a class in the domain model?
+ When is it worth adding a superclass to the domain model?
+ What is an `abstract` class?
+ What effect does having an abstract superclass have on the objects in the
+class's subclasses'
+ Draw a UML diagram that shows the relationship between two people being controlled by a class called "Relationship".
+ Why should you avoid aggregation in a domain model?
+ Give a simple guideline for using composition in a domain model.
+ Draw a diagram of a real life domain (not in the text or my notes) of a role name on an association between two classes.
+ How do you show in the UML that a class `Circle` has an `area` that is determined by its `radius`?
+ Invent a new example of a reflexive relationship -- like figure 31.25 but from
+your own experience.
+ Distinguish a Package from a Class -- how to draw them and what they mean.
+ Explain how you can make an object appear to change its behavior from one class
+to another in a language like C++ or Java that does not allow dynamic typing.

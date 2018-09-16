@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/405/james/!svn/ver/11/app/.settings
+END
+org.eclipse.wst.common.project.facet.core.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/405/james/!svn/ver/11/app/.settings/org.eclipse.wst.common.project.facet.core.xml
+END
+org.eclipse.jdt.core.prefs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/405/james/!svn/ver/11/app/.settings/org.eclipse.jdt.core.prefs
+END
+com.google.gdt.eclipse.core.prefs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/405/james/!svn/ver/11/app/.settings/com.google.gdt.eclipse.core.prefs
+END
+org.eclipse.core.resources.prefs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/405/james/!svn/ver/20/app/.settings/org.eclipse.core.resources.prefs
+END
+com.google.appengine.eclipse.core.prefs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/405/james/!svn/ver/11/app/.settings/com.google.appengine.eclipse.core.prefs
+END

@@ -1,0 +1,713 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/13q.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:53:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+Questions and Answers on Object Design
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="13q.txt">Text Version</A>]
+ 13q.html 
+Wed Jan 11 07:25:50 PST 2012
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="13q.html#Questions and Answers on Object Design">Questions and Answers on Object Design</A>
+<li><a href="13q.html#Overall Picture">: Overall Picture</A>
+<li><a href="13q.html#Chapter 18 pages 320-362 -- SSD -&gt; GRASP -&gt; Interaction Diagrams">: Chapter 18 pages 320-362 -- SSD -&gt; GRASP -&gt; Interaction Diagrams</A>
+<li><a href="13q.html#Chapter 18 pages 320-362 -- Object Design">: Chapter 18 pages 320-362 -- Object Design</A>
+<li><a href="13q.html#Does every system need a start up use case">: Does every system need a start up use case</A>
+<li><a href="13q.html#When should you do the start up use case first">: When should you do the start up use case first</A>
+<li><a href="13q.html#Chapter 18 pages 347 -- Initialization Design">: Chapter 18 pages 347 -- Initialization Design</A>
+<li><a href="13q.html#Chapter 18 pages 320-362 -- Start Up Use Case">: Chapter 18 pages 320-362 -- Start Up Use Case</A>
+<li><a href="13q.html#Chapter 18 pages 320-360 -- Object Design">: Chapter 18 pages 320-360 -- Object Design</A>
+<li><a href="13q.html#Chapter 19 pages 320-362 -- Object Design">: Chapter 19 pages 320-362 -- Object Design</A>
+<li><a href="13q.html#Chapter 18 pages 326-327 -- Case realizations">: Chapter 18 pages 326-327 -- Case realizations</A>
+<li><a href="13q.html#Chapter 18 pages 326-327 -- Use Case realizations">: Chapter 18 pages 326-327 -- Use Case realizations</A>
+<li><a href="13q.html#Chapter 18 pages 334 -- Final Design -- static or dynamic views">: Chapter 18 pages 334 -- Final Design -- static or dynamic views</A>
+<li><a href="13q.html#Chapter 18 pages 345-346 -- Connecting the UI to the Domain">: Chapter 18 pages 345-346 -- Connecting the UI to the Domain</A>
+<li><a href="13q.html#Chapter 18 pages 345 -- How to connect the UI Layer to the Domain Layer">: Chapter 18 pages 345 -- How to connect the UI Layer to the Domain Layer</A>
+<li><a href="13q.html#Section 18.2 Artifacts -- where to find the incoming messages">: Section 18.2 Artifacts -- where to find the incoming messages</A>
+<li><a href="13q.html#Chapter 18 pages 345-346 -- UI Layer">: Chapter 18 pages 345-346 -- UI Layer</A>
+<li><a href="13q.html#Chapter 18 pages 358 -- CQS -- the Command Query Separation Principle">: Chapter 18 pages 358 -- CQS -- the Command Query Separation Principle</A>
+<li><a href="13q.html#Chapter 18 pages 358 -- CQS">: Chapter 18 pages 358 -- CQS</A>
+<li><a href="13q.html#Chapter 18 pages 320-362 -- CQS">: Chapter 18 pages 320-362 -- CQS</A>
+<li><a href="13q.html#Chapter 18 pages 356 -- Visibility?">: Chapter 18 pages 356 -- Visibility?</A>
+<li><a href="13q.html#Chapter 18 pages 322 -- Object Design">: Chapter 18 pages 322 -- Object Design</A>
+<li><a href="13q.html#Chapter 13r pages 320-362 -- Error Handlers">: Chapter 13r pages 320-362 -- Error Handlers</A>
+<li><a href="13q.html#Chapter 18 pages 335-336 -- Controller &amp; Expert">: Chapter 18 pages 335-336 -- Controller &amp; Expert</A>
+<li><a href="13q.html#Chapter 18 pages 320-362 -- Object design">: Chapter 18 pages 320-362 -- Object design</A>
+<li><a href="13q.html#Chapter 18 pages 320-362 -- Object Design">: Chapter 18 pages 320-362 -- Object Design</A>
+<li><a href="13q.html#Chapter 18 pages 320-362 -- Initialization Design and the start up use case">: Chapter 18 pages 320-362 -- Initialization Design and the start up use case</A>
+<li><a href="13q.html#Chapter 18 pages 347-348 -- Start Up use case and operator IDs">: Chapter 18 pages 347-348 -- Start Up use case and operator IDs</A>
+<li><a href="13q.html#Chapter 18.5 pages 357 -- playGame">: Chapter 18.5 pages 357 -- playGame</A>
+<li><a href="13q.html#Chapter 18 pages 333 -- visibility">: Chapter 18 pages 333 -- visibility</A>
+<li><a href="13q.html#Explain Use Realization in more detail">: Explain Use Realization in more detail</A>
+<li><a href="13q.html#Can you explain the software object register on page 329">: Can you explain the software object register on page 329</A>
+<li><a href="13q.html#There are lots of diagram -- which should we use">: There are lots of diagram -- which should we use</A>
+<li><a href="13q.html#Are there more $GRASP patterns that we use in object design">: Are there more $GRASP patterns that we use in object design</A>
+<li><a href="13q.html#What is the principle of Least Surprise">: What is the principle of Least Surprise</A>
+<li><a href="13q.html#When to use public or private methods in a class">: When to use public or private methods in a class</A>
+<li><a href="13q.html#Chapter 18 pages 347 -- UI Design">: Chapter 18 pages 347 -- UI Design</A>
+<li><a href="13q.html#Chapter 18 pages 356 -- Visibility">: Chapter 18 pages 356 -- Visibility</A>
+<li><a href="13q.html#Chapter 21 pages 386 - 388 -- Test Driven Development">: Chapter 21 pages 386 - 388 -- Test Driven Development</A>
+<li><a href="13q.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="Questions and Answers on Object Design">Questions and Answers on Object Design</A></H1><ol class=Section>
+<H2><a name="Overall Picture">Overall Picture</A></H2>
+Would you please be so kind and explain the hierarchy or sequence in the
+development of UP, UC, Domains, SSD, Diagrams, GRASP, etc.. The author
+mentions all these methods, but it is not only overwhelming but confusing
+at times.
+<p>
+UP is a process with phases that describe the mixtures of activities
+as you develop the software.
+<p>
+UC?  Use Case:  a description of something a user wants and the steps
+they can take to get it.  They palce the requirements for a system
+in context and are a scource of scenarios that will be realized later.
+<p>
+Domain Models describe the ideas in the clients minds and world.  These
+should be started in the early phases of the UP.  They are a source of
+ideas for designing classes.
+<p>
+An SSD shows a scenario with formalized messages as the first step
+in realizing a use case scenario.
+<p>
+There are 13 types of UML diagram.  And you can use any of them....
+but we focus on: use case, interaction, and class diagrams.
+<p>
+GRASP is a set of 9 guidelines for designing maintainable OO software.
+[<A href="16answer.html"> 16answer.html </A>]
+<p>
+<img src="artifactrelationships.gif" alt=" [Artifacts and relationships]">
+[<A href="13.html"> 13.html </A>]
+<p>
+<H2><a name="Chapter 18 pages 320-362 -- SSD -&gt; GRASP -&gt; Interaction Diagrams">Chapter 18 pages 320-362 -- SSD -&gt; GRASP -&gt; Interaction Diagrams</A></H2>
+So, from the SSD we extract the system operations.  For each system
+operation, we can use GRASP to determine which objects have what
+responsibilities related to the system operation, how they work together to
+complete the operation, and what information they need to know for the
+operation to function properly.  Based on what we discover through GRASP,
+we construct interaction diagrams.  Does that sound right?
+<p>
+Yep!
+<p>
+Actually -- there is some feedback and iteration between GRASPing and the diagrams.
+<p>
+<H2><a name="Chapter 18 pages 320-362 -- Object Design">Chapter 18 pages 320-362 -- Object Design</A></H2>
+All this object designing is great for creating a new system, but what if
+you're planning on using/implementing parts of another, already built
+system or framework?  Would you still show objects and diagrams that are
+already built into the system/framework you plan on using?  You wouldn't
+use these systems/frameworks as objects themselves, would you?
+<p>
+Good question!  Here are some thoughts
+<br><ol class="List">
+<li>You are using an external system that you can not change.
+It should appear as an actor in use cases.  You will have to
+<span class="InlineFormula">understand</span> how to use it.  You can use the same diagrams
+(interaction, class, protocol state machine) to analyse
+how it behaves.   You can then include these in your
+designs.
+<li>Often we design classes that act to make a given subsystem
+work the way we want it too.  These patterns will be covered later:
+[<A href="patterns.html#Facade"> patterns.html#Facade </A>]
+,
+[<A href="patterns.html#Adaptor"> patterns.html#Adaptor </A>]
+,
+[<A href="patterns.html#PV"> patterns.html#PV </A>]
+, ...   A simple example in today's reading is the way Larman
+hides a random number generator inside the Die class.
+<li>If we are talking about frameworks like MSFC or Java Swing then
+you'll find  diagrams a powerful aid for <span class="InlineFormula">understanding</span>
+how they work and how you use them.
+<li>You'll may need to think about how you plan to use an existing
+subsystem/framework/class -- it appears as a balck box but
+you may need to use interaction diagrams to think out what you
+want to do with it.
+<li>If you have an object-oriented framework you will have to extend
+existing classes (in C++ derive new classes from old ones).
+You will also have to implement interfaces.  Diagrams help.
+<li>With luck the given system/framework will have diagrams already.
+<li>You may have a tool that will <span class="InlineFormula">reverse engineer</span> existing
+sytems into design diagrams.
+<p>
+<li>If you have classes that exist they may have to be changed.  Diagrams
+can help.
+<p>
+<li>K.I.S.S.   I don't mean you draw everything!  I mean you draw things
+when you have to <span class="InlineFormula">understand</span> them.  Neither do I mean that you have
+to draw everything before you code... Code+test is a powerful way
+to check your <span class="InlineFormula">understanding</span> and documenting what you have learned.
+</ol><br>
+<p>
+<H2><a name="Does every system need a start up use case">Does every system need a start up use case</A></H2>
+YES.
+<H2><a name="When should you do the start up use case first">When should you do the start up use case first</A></H2>
+When it is obvious what it should or if there is a serious risk
+that would be resolved by implementing a start up case.
+<p>
+Notice the problem: doing the other use cases exposes the information
+that you need (but don't know you'll need) for the start up case.
+<p>
+<H2><a name="Chapter 18 pages 347 -- Initialization Design">Chapter 18 pages 347 -- Initialization Design</A></H2>
+On page 347 Craig's view of creating initialization sounds 'waterfallish'.
+Why should we hesitate to start with initialization, we are 'iterating'
+(w/errors expected), are we not?
+<p>
+His observation is that we don't what we are initializing until
+we have finished designing the classes and interactions.
+<p>
+I interpret this to mean that in each iteration,
+just before you code the new stuff, you work on designing the intialization.
+<p>
+However: unit testing can start earlier.  But this probably only
+needs 'mock objects' to be initialized.
+<p>
+<H2><a name="Chapter 18 pages 320-362 -- Start Up Use Case">Chapter 18 pages 320-362 -- Start Up Use Case</A></H2>
+The book advises us to create the initialization design at last, why is this important?  aren't these the earliest ones to execute? if so then why is it good practice to design them at last?
+<p>
+Unlike most use cases
+the &quot;Start up&quot; use case is not determined by what the user (probably called
+&quot;Admin&quot; by the way) needs when starting the system but by the current design.
+So, you don't need any scenarios or SSDs.
+<p>
+You need to know <span class="InlineFormula">what</span> objects to create -- and this comes from design.
+<p>
+Don't forget that design is a process of discovering what needs to be inside
+the software.  Until you you know this, you can not set it up.
+<p>
+Other examples  of these kinds of use case are
+<A name="Make a back up" class="Key"> Make a back up </A>
+,
+<A name="Recover after disaster" class="Key"> Recover after disaster </A>
+, and
+<A name="Shut down" class="Key"> Shut down </A>
+, I guess.
+<p>
+Exception -- designing the instalation process for an application.
+THis will need a proper set of scenarios etc. No
+time to discuss this in this course.
+<p>
+<p>
+<H2><a name="Chapter 18 pages 320-360 -- Object Design">Chapter 18 pages 320-360 -- Object Design</A></H2>
+Seems to me that the book puts a good portion of stress in Object Design, how important of a process is it in real life applications?
+<p>
+No design means software that is at best more expensive to maintain.
+<p>
+Even the most code-centric processes tend to see a design as something that
+the code helps you discover via testing and refactoring.  Larman just stresses
+and demonstrates a way of getting there quickly and reliably.
+<p>
+<H2><a name="Chapter 19 pages 320-362 -- Object Design">Chapter 19 pages 320-362 -- Object Design</A></H2>
+Can you explain exactly what the controllers are? Are they the interactions between classes and the UI?
+<p>
+A controler is any class in your design that gets messages from the
+User Interface and handles them.  Typically it does this by sending messages
+to other objects rather than doing things internally.
+<p>
+<H2><a name="Chapter 18 pages 326-327 -- Case realizations">Chapter 18 pages 326-327 -- Case realizations</A></H2>
+Should Case realizations be based on conceptual classes or on actual software classes? Or, are these classes interchangeable in the Domain Model?
+<p>
+Do not omit the word &quot;use&quot; from &quot;Use case&quot;!
+<H2><a name="Chapter 18 pages 326-327 -- Use Case realizations">Chapter 18 pages 326-327 -- Use Case realizations</A></H2>
+Should Use Case realizations be based on conceptual classes or on actual software classes? Or, are these classes interchangeable in the Domain Model?
+<p>
+(1) look in the current (growing) design model for suitable classes.  (2)
+look in the domain model to see if you can use one of those concepts to
+inspire a design class.
+<p>
+<H2><a name="Chapter 18 pages 334 -- Final Design -- static or dynamic views">Chapter 18 pages 334 -- Final Design -- static or dynamic views</A></H2>
+Can you explain the Dynamic view and Static view of enterItem design in page 334? what is the difference between this two view? which one is more popular?
+<p>
+Ball game analogy: The design class diagram is rather like a rule book -- it shows all the moves that you
+can make and how they might be related.  Each dynamic view describes, in detail a particular
+play: who has the ball, where you pass it to, where people run....
+<p>
+Transit analogy: The design class diagram is a map showing all possible routes and transit points
+and a dynamic view shows a particular trip you can take.
+<p>
+Every body, if there is more than one or two classes, needs and uses a design class diagram --
+static view.
+<p>
+You need dynamic views of particular transactions, parts of the design that are not obvious.
+<p>
+<H2><a name="Chapter 18 pages 345-346 -- Connecting the UI to the Domain">Chapter 18 pages 345-346 -- Connecting the UI to the Domain</A></H2>
+The section on connecting the UI layer to the Domain layer confused me. Can you explain this more?
+<p>
+The connection is made by sending messages (calling member functions) that
+you find in Larman's SSDs.
+See more below.
+<H2><a name="Chapter 18 pages 345 -- How to connect the UI Layer to the Domain Layer">Chapter 18 pages 345 -- How to connect the UI Layer to the Domain Layer</A></H2>
+How do you connect the UI Layer to the Domain Layer?
+<p>
+The UI layer is made of objects concerned with the look-and-feel of the
+application.  They tend to be designed to fit a particular framework and language.
+You have to
+set up objects -- using the GUI framework you are using, that send
+SSD messages to controllers and/or domain objects.
+<p>
+The details depend on the UI framework you are using.  A typical technique is
+to define a class of object that fits an interface given by
+the framework and pass an object of this class to the UI Framework as an
+&quot;observer&quot; or &quot;subscriber&quot;.  Modern Java applications do this
+with the &quot;ActionListener&quot; interface, for example.
+We will return to this later in the book.
+<p>
+Note:  in very simple systems I've seen the domain code placed inside
+the framework's UI classes.  I think this leads to a unmaintainable mess.
+<p>
+Recently I took one of my messes -- a large UNIX script and hooked it up
+with a PHP+HTML user interface.  The connection was by calling (1)
+creating temporary files and (2) calling the scripts.   Simple, no objects,
+and ........ it broke the first time the server was reconstituted.  GACK!
+<p>
+It is confusing unless you've worked with a modern GUI framework... I've dug up
+the following old page
+[<A href="http://cse.csusb.edu/dick/cs320/java/test.GUIApplet.html"> ../cs320/java/test.GUIApplet.html </A>]
+as an example of a papge with a GUI applet.  All it does is report the incoming
+events from the primitive Java GUI Framework it uses.  You can look at the code
+[<A href="http://cse.csusb.edu/dick/cs320/java/GUIApplet.java"> ../cs320/java/GUIApplet.java </A>]
+if you wish -- but do not copy it.  It is full of deprecated classes and messages
+that are likely not to compile in the future.  What I need is time to bring myself
+and my code into the 21st century by implementing an ActionListener Interface.
+<p>
+<H2><a name="Section 18.2 Artifacts -- where to find the incoming messages">Section 18.2 Artifacts -- where to find the incoming messages</A></H2>
+Look in (or draw) a SSD.  Each message is input into your system of objects.
+<p>
+<H2><a name="Chapter 18 pages 345-346 -- UI Layer">Chapter 18 pages 345-346 -- UI Layer</A></H2>
+During which iteration should the UI Layer be connected to the Domain Layer?
+<p>
+The first time you have an end-to-end test of a scenario you will need to have
+a imulated user do something.... and that only works if the UI is connected to
+the Domain layer.
+<p>
+Seeing the connection is critical this should be done at the start of Elaboration.
+A partial user interface, connected to a very incomplete design with domain and
+support classes involved.... just to see if your ideas will work.
+<p>
+<p>
+<H2><a name="Chapter 18 pages 358 -- CQS -- the Command Query Separation Principle">Chapter 18 pages 358 -- CQS -- the Command Query Separation Principle</A></H2>
+Exactly what is the Command-Query Separation Principle?
+<p>
+No operation should change an object and also return a value.
+See bottom of page 358.
+<p>
+In C++ this means that if you have a function in a class then it is
+either a constructor (returns no value), a void function (returns no value),
+or a &quot;const&quot; function (doesn't change the object -- is a query).
+<H2><a name="Chapter 18 pages 358 -- CQS">Chapter 18 pages 358 -- CQS</A></H2>
+Still after reading the Command-Query Seperation Principle, I'm not getting the big picture. Is this a important concept and if so could you explain it?
+<p>
+It should have been beaten into you in CSCI201 and 202:-)
+<p>
+<H2><a name="Chapter 18 pages 320-362 -- CQS">Chapter 18 pages 320-362 -- CQS</A></H2>
+Can you give some examples of how Command-Query Separation Principle methods are used?
+<p>
+If you look at the way that the C++ STL stack works
+[<A href="http://cse.csusb.edu/dick/samples/stl.html#Stacks"> ../samples/stl.html#Stacks </A>]
+the operations of pushing and popping do not return any values, and the operation
+<span class="InlineFormula">top</span> and <span class="InlineFormula">empty</span> don't change the stack.  Here
+[<A href="http://cse.csusb.edu/dick/samples/stl.html#Example of an STL Stack"> ../samples/stl.html#Example of an STL Stack </A>]
+is an example of how they are used.
+<p>
+Similarly with the
+[<A href="http://cse.csusb.edu/dick/samples/stl.html#Queues"> ../samples/stl.html#Queues </A>]
+in the C++ Standard Library keeps commands and queries separate.  The above
+link has an example of how the operations are used.
+<p>
+However Java stacks do not follow CQS
+[<A href="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Stack.html"> Stack.html </A>]
+<p>
+Here is an exercise.  Does a Java Vector
+[<A href="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html"> Vector.html </A>]
+follow CQS or not?
+<p>
+<H2><a name="Chapter 18 pages 356 -- Visibility?">Chapter 18 pages 356 -- Visibility?</A></H2>
+Is it absolutely necessary to initialize an object during startup, with references to objects, in order to assure visibility?
+<p>
+All objects must be initialized, period.
+<p>
+Temporary objects (local to a single method) can be initialized by that method.
+<p>
+Attributes in classes need to be initialized by constructors when the object is created.
+<p>
+The above are simple and obvious - but what about global objects, connection points between
+layers for example?  What about the data base structure of the doamin at the start of work
+each morning, or after the system crashes and needs rebooting?  These things get
+put into the &quot;Start Up&quot; use case.
+<p>
+Trying to use an invisible object -- you must be joking:-)
+<H2><a name="Chapter 18 pages 322 -- Object Design">Chapter 18 pages 322 -- Object Design</A></H2>
+It seems a lot of it (object design) is just linking up diagrams that are already made.  Is that correct or am I missing things?
+<p>
+The book makes the thinking and creativity involved in drawing and linking the
+diagrams explicit.  Normally done inside the brain or in a quick discussion.
+<p>
+<H2><a name="Chapter 13r pages 320-362 -- Error Handlers">Chapter 13r pages 320-362 -- Error Handlers</A></H2>
+Should error handlers and exceptions be programmed first in a project or later? It seems wise to start on it first since it'll be used throughout the course of a project.
+<p>
+Most people do the main or &quot;Happy day&quot; scenarios before handling the erroneous
+scenarios.   It isn't until you have this that you know where the exceptions
+will happen and can plan what to do with them -- the alternate scenarios.
+<p>
+However -- at least one project discovered
+<li>The exceptional case is as least as interesting as the normal case.
+<p>
+So you may be right, some exceptional cases are worth designing early in a
+project.
+<p>
+Setting a set of error handling Just In Case they will be used doesn't
+sound like a good idea unless it is a very simple facility.
+<p>
+<H2><a name="Chapter 18 pages 335-336 -- Controller &amp; Expert">Chapter 18 pages 335-336 -- Controller &amp; Expert</A></H2>
+O.K. I am not sure if this is correct but it seems to me that the Controller is a class, the Contract Operation is a funtion of the class, a Scenario is an algorithm. Who is the expert?
+<p>
+Let me clarify:  You have to find a class that can act as a controler
+for a use case (or part of a use case).  This class will have functions
+taken from the operations (=functions) in the SSD for the scenario.
+The functions (=operations) will be members of the controler class.
+And, complex operations or functions can have a contract specifying what they
+achieve.   Contracts appear in code as comments (if at all).
+<p>
+The controler class becomes an expert in that particular scenario.
+However -- it will often reflect something in the user's world as well.
+<p>
+<H2><a name="Chapter 18 pages 320-362 -- Object design">Chapter 18 pages 320-362 -- Object design</A></H2>
+What is the most difficult part during Object Design?
+<p>
+Discovering the classes that you need to do what the user's want.
+<p>
+<p>
+<H2><a name="Chapter 18 pages 320-362 -- Object Design">Chapter 18 pages 320-362 -- Object Design</A></H2>
+I see that Operation contracts are being used with Object Design are they a necessity?
+<p>
+I think that they are of most value for camplex operations that make lots
+of things happen.  I also think that written contracts are a great help
+to learning the ideas -- in a text book.
+<p>
+I used contracts in my Ph.D. Where I used them the code worked without error.
+Where I didn't use them I got bugs.  However, I used logic and mathematics
+to express them and that saves a lot of writing.
+<p>
+<H2><a name="Chapter 18 pages 320-362 -- Initialization Design and the start up use case">Chapter 18 pages 320-362 -- Initialization Design and the start up use case</A></H2>
+How do Applications Start up? does Interaction diagrams change with the context of the application?
+<p>
+Each application will have it's own start up process.  The OS loads
+the program and starts it running -- typically at a function called 'main'.
+<p>
+Larman reccomends always having a &quot;
+<A name="Start Up" class="Key"> Start Up </A>
+&quot; use case.  However this is best
+worked on after you have completed the work on the other use cases in
+the iteration.  Page 347-349 and 360 give examples.
+<p>
+Initialzation has to create objects and connections between them.
+<p>
+<H2><a name="Chapter 18 pages 347-348 -- Start Up use case and operator IDs">Chapter 18 pages 347-348 -- Start Up use case and operator IDs</A></H2>
+In a real POS a cashier enters their operator ID.  Where would this fit in to the NextGen POS?
+<p>
+Larman doesn't cover this in his book.  I can think of several ways
+we might build this into NextGen.
+<p>
+I don't think that cashier authentication will be
+part of the start up use case.   The
+start up use case contains the bootstrap process that starts the whole system.
+Done every morning perhaps.    I would guess (and I mean guess) that
+a cashier logs in at the start of a shift and logs out when they 'cash in'.
+<p>
+<p>
+To work on how cashiers are authenticated we have to go back to analysing
+the system -- will the NextGen POS use a RFID tag?  Or finger print
+recognition?  Perhaps a retina scan?   Or an old-fashioned password
+technique.  We also need to know something about the desired work patterns:
+how often and how fast do logins occur?  We also need to know what should
+be done if someone attempts to authenticate themselves 20 times before
+the get in..... and so on.  How long can a POS be idel before
+the Cashier is deemed to be unautheticated?
+Once we have analysed these into a set
+of scenarios we can  then  go to an SSD, interactions, and design classes.
+<p>
+In all the options above, we need to add a new class to the domain model
+named Cashier with data like 'id' and some secret (encrypted data).  Add to
+this a Boolean flag: authenticated.
+<p>
+I'd bet on Cashier appearing in a DCD and having a an operation to
+authenticate them, and to report on whether they have been authenticated or
+not.
+<p>
+Perhaps I should (1) set this as an exercise, or (2) charge a consultancy fee??
+More later...
+<p>
+<p>
+<H2><a name="Chapter 18.5 pages 357 -- playGame">Chapter 18.5 pages 357 -- playGame</A></H2>
+Not so much a question, more like a comment.... I will never look at Monopoly the same again.
+<p>
+Good! Solving an interesting problem depends on seeing the problem in a new
+and different way.  The whole world can look different sometimes when you
+find the right way to look at it.
+<p>
+<H2><a name="Chapter 18 pages 333 -- visibility">Chapter 18 pages 333 -- visibility</A></H2>
+How do you make objects visible or not visible?
+<p>
+In code, use key words like &quot;public&quot; and &quot;private&quot;.
+<p>
+In the UML use &quot;+&quot; and &quot;-&quot; etc.
+<p>
+To make a single (or small collection of objects) visible to all
+parts of the software (globally) place them in a class with a method
+that an object...  this leads to the <a href="#GoF">GoF</A> Singleton pattern.
+<p>
+<H2><a name="Explain Use Realization in more detail">Explain Use Realization in more detail</A></H2>
+(1) Start with a written use case.
+<p>
+(2) Use SSDs to break down a scenario in the use case into system actions
+using an SSD.
+<p>
+(3) Take each system action and use an interaction diagram + pre-existing
+class to find (and create) are set of objects and interactions that do
+what the system action requires.  Use <a href="#GRASP">GRASP</A> to guide you.
+<p>
+(3) update the design class diagram with the attributes, operations, and classes
+that you need n the step.
+<p>
+(4) In a real project -- write tests for the new classes and then write the code for the classes.
+<p>
+(5) Repeat ...with another system action, another scenario, ...
+As each scenario is completed, and in a real project -- test it.
+<p>
+<H2><a name="Can you explain the software object register on page 329">Can you explain the software object register on page 329</A></H2>
+This is part of the &quot;Point Of Sale&quot; project.  This is all about the behavior
+of registers in stores.  These are real registers that hurt if you
+drop them on your foot. BUT the &quot;register in figure 19.5, page 329
+is an object inside the software.  Declared like this perhaps:
+<pre>  Register register;</pre>
+in the code.
+<p>
+The Register class will need a makeNewSale(...) method:
+<pre>  class Register{</pre>
+<pre>  	public void makeNewSale(...){ ...}</pre>
+<pre>  }</pre>
+<p>
+This is pre case where the software holds up a mirror to the real world.
+We create an object that reflects a real object.
+<p>
+Choosing to use a Register object to create a new Sale object -- is an example of <a href="#GRASP">GRASP</A> Creator.
+<p>
+<H2><a name="There are lots of diagram -- which should we use">There are lots of diagram -- which should we use</A></H2>
+This is a team decision -- what do you need to think about and/or
+record for the future?
+<p>
+Think of the diagrams as a toolkit.  Become good at all of them so that
+you can pick up and use one as needed.
+<p>
+Think of the diagrams as the contents of a kitchen drawer -- make sure you know
+how to use the knives, filters, beater, spatula, .... when they
+help you cook the meal.
+<p>
+Every diagram in the UML is there because some people begged for it to be included.
+<p>
+<H2><a name="Are there more <a href="#GRASP">GRASP</A> patterns that we use in object design">Are there more <a href="#GRASP">GRASP</A> patterns that we use in object design</A></H2>
+Yes.  Complete list inside front of book or at
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<p>
+<H2><a name="What is the principle of Least Surprise">What is the principle of Least Surprise</A></H2>
+Design your functions and classes so that programmers who use them
+are not surprised by what happens as a result.   Adding two numbers
+should not lead to the screen turning blue, for example.
+<p>
+<p>
+<H2><a name="When to use public or private methods in a class">When to use public or private methods in a class</A></H2>
+As a rule -- minimize the public methods.  Use the CIA rule: does the
+world need to know how to do this?  Then make it public, else make it
+private.
+<p>
+<H2><a name="Chapter 18 pages 347 -- UI Design">Chapter 18 pages 347 -- UI Design</A></H2>
+When should we begin 'designing' or 'thinking ui'?
+<p>
+The term
+<A name="User Interface Design" class="Key"> User Interface Design </A>
+is ambiguous.
+<ul class="Set">
+<li><span class=Formula>Deciding on the look and feel.</span>
+<li><span class=Formula>Deciding on the interaction patterns.</span>
+<li><span class=Formula>Designing objects to support the above</span>
+</ul>
+The trick is to try an separate them.  For example controlers
+can support interactions and the UI layer encode the <span class="InlineFormula">look and feel</span>.
+<p>
+<A name="Look and feel" class="Key"> Look and feel </A>
+is best started by story boards and mock-up code -- very
+early on.  It will change.  There is a lot to be said for
+letting the user change it to what they want!
+<p>
+<A name="Interaction design" class="Key"> Interaction design </A>
+is a whole topic in its own right and needs to
+be started early.... but in my opinion will be revized thru-out
+the whole history of the product -- as the users and
+technology changes.  So your logical architecture needs
+to keep these decisions separate (hidden) from the rest
+of the classes/code.
+<p>
+<H2><a name="Chapter 18 pages 356 -- Visibility">Chapter 18 pages 356 -- Visibility</A></H2>
+How does this need for visiblity fit into the larger GRASP model?
+<p>
+GRASP tells you where to put operations... Visibility is about
+where you may have to put attributes. More next time
+[<A href="14.html"> 14.html </A>]
+<p>
+<H2><a name="Chapter 21 pages 386 - 388 -- Test Driven Development">Chapter 21 pages 386 - 388 -- Test Driven Development</A></H2>
+Chapter 21 leads with Test Driven Development, is there any other type of
+development.  It seems to me that all forms of development are test driven
+in one form or another.
+<p>
+Test driven development has a very specific meaning:
+<br><ol class="List">
+<li><span class=Formula>Start code with the tests.  And it fails.</span>
+<li><span class=Formula>Fix each test failure in turn in the simplest way you can.</span>
+<li><span class=Formula>Don't code anything unless a test fails.</span>
+<li><span class=Formula>Stop adding code when all the tests pass.</span>
+<li><span class=Formula>Refactor the working code so that it doesn't smell.</span>
+<li><span class=Formula>The tests document the code.</span>
+</ol><br>
+<p>
+Doing tests last is not test driven...
+<p>
+Getting into a code and debug cycle without thinking isn't test
+driven either.
+<p>
+<p>
+</ol>
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci Dept, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10.
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

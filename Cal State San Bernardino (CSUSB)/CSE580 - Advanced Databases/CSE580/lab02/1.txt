@@ -1,0 +1,21 @@
+CREATE VIEW Employees_Vu("Employee Id", Employee, "Department Id")
+as select lname, ssn, dno
+   from durbach.employee
+
+CREATE VIEW DEPT04_Vu (EmpNo, Employee, DeptNo)
+as select ssn, lname || ', ' || fname, dno
+   from durbach.employee
+   where dno = 4
+WITH CHECK OPTION CONSTRAINT DNO04_VU_CK;
+
+CREATE VIEW DEPT04_Vu (EmpNo, Employee, DeptNo)
+as select ssn, lname || ', ' || fname, dno
+   from durbach.employee
+   where dno = 4
+WITH CHECK OPTION CONSTRAINT DNO04_VU_CK
+
+CREATE VIEW Salary_Vu (Employee, Department, Salary)
+as select lname, dname, salary
+   from durbach.employee, durbach.department
+   where dno = dnumber
+

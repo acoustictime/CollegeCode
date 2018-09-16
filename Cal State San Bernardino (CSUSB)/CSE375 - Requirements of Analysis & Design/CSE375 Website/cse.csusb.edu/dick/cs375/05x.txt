@@ -1,0 +1,29 @@
+.Open Review Questions 5
+ What do you find in a use-case diagram?
+ Draw a use case diagram that shows that actor A has two use cases called B and C as
+part of system S.
+ What are A, B, and C in this image?
+
+.Image abcUseCase.gif [Use case diagram with A B and C]
+
+ List names of 4 artifacts other than use cases used to describe requirements.
+ Give 4 sample headings in a supplementary specification.
+ Give 4 sample parts of a vision.
+ What is a data dictionary or glossary?
+ Give an example of a rule.
+. Exercise -- The CSUSB Inventory -- Exam Question
+Suppose that you have to develop the CSUSB Inventory program for Facilities
+Services. This software tracks all the equipment and furniture on campus. 
+It enables us to find where things have gone to. Each thing is in one place
+and places can have any number of things. CSUSB Inventory is used when we 
+move, instal, replace, repair, and remove things from service.  It helps us
+find things and put them in  the right place.  Places include classrooms 
+and stores.
+
+a. Draw a simple use case diagram showing three(3) likely use cases for the CSUSB Inventory.
+
+b. Write an casual description of one(1) use case in your diagram.  It should have at least two scenarios.
+
+c. Describe another likely requirement for the CSUSB Inventory that is not expressed
+as a scenario in a use case.
+.Close 

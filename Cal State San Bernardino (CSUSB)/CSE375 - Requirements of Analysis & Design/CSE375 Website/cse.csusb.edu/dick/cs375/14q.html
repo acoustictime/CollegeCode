@@ -1,0 +1,782 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/14q.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:53:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+Questions and Answers on Design into Code
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="14q.txt">Text Version</A>]
+ 14q.html 
+Wed Jan 11 07:25:52 PST 2012
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="14q.html#Questions and Answers on Design into Code">Questions and Answers on Design into Code</A>
+<li><a href="14q.html#What is an IDE">: What is an IDE</A>
+<li><a href="14q.html#Chapter 20 pages 369 -- BEware of bugs in the above code">: Chapter 20 pages 369 -- BEware of bugs in the above code</A>
+<li><a href="14q.html#Chapter 20 pages 371 -- Mapping designs to code">: Chapter 20 pages 371 -- Mapping designs to code</A>
+<li><a href="14q.html#Chapter 20 pages 373 -- What is a DCD">: Chapter 20 pages 373 -- What is a DCD</A>
+<li><a href="14q.html#Chapter 19 pages 366-368 -- Differences in Parameter, Attribute, Local, and Global Visibility">: Chapter 19 pages 366-368 -- Differences in Parameter, Attribute, Local, and Global Visibility</A>
+<li><a href="14q.html#Chapter 19 pages 363-368 -- Visibility vs inheritance">: Chapter 19 pages 363-368 -- Visibility vs inheritance</A>
+<li><a href="14q.html#Chapter 19 pages 363-398 -- Visibility and design patterns">: Chapter 19 pages 363-398 -- Visibility and design patterns</A>
+<li><a href="14q.html#Explain Global Visibility">: Explain Global Visibility</A>
+<li><a href="14q.html#Chapter 14 pages 363-398 -- Visibility of global data assigned to local varaibles">: Chapter 14 pages 363-398 -- Visibility of global data assigned to local varaibles</A>
+<li><a href="14q.html#Chapter 18 pages 363-398 -- Design Into Code">: Chapter 18 pages 363-398 -- Design Into Code</A>
+<li><a href="14q.html#How does visibility affect global variables?">: How does visibility affect global variables?</A>
+<li><a href="14q.html#Chapter 20 pages 370 -- Cycle of annoyance.">: Chapter 20 pages 370 -- Cycle of annoyance.</A>
+<li><a href="14q.html#Chapter 20 pages 374 : Exceptions">: Chapter 20 pages 374 : Exceptions</A>
+<li><a href="14q.html#Should errors be handled by the object that detects them or by another">: Should errors be handled by the object that detects them or by another</A>
+<li><a href="14q.html#How are exceptions and errors handled handled when you have already">: How are exceptions and errors handled handled when you have already</A>
+<li><a href="14q.html#Chapter 20 pages 375-376 -- Order of implementation">: Chapter 20 pages 375-376 -- Order of implementation</A>
+<li><a href="14q.html#Chapter 20 pages 376 -- Test-Driven or Test-First Development">: Chapter 20 pages 376 -- Test-Driven or Test-First Development</A>
+<li><a href="14q.html#Chapter 20 pages 376 -- Test_Development TDD vs TFD">: Chapter 20 pages 376 -- Test_Development TDD vs TFD</A>
+<li><a href="14q.html#Chapter 21 pages 376-398 -- Test-Driven Development -- TTD">: Chapter 21 pages 376-398 -- Test-Driven Development -- TTD</A>
+<li><a href="14q.html#Chapter 20 pages 376 -- TDD order">: Chapter 20 pages 376 -- TDD order</A>
+<li><a href="14q.html#Chapter 20 pages 380-400 -- What is TDD for">: Chapter 20 pages 380-400 -- What is TDD for</A>
+<li><a href="14q.html#Beck01">: Beck01</A>
+<li><a href="14q.html#Chapter 21 pages 386 -- Test Driven Development TDD">: Chapter 21 pages 386 -- Test Driven Development TDD</A>
+<li><a href="14q.html#Chapter 21 pages 381 : TDD">: Chapter 21 pages 381 : TDD</A>
+<li><a href="14q.html#Chapter 21 pages 387 -- Writing test code">: Chapter 21 pages 387 -- Writing test code</A>
+<li><a href="14q.html#Chapter 21 pages 386-387 -- Test-Driven Development">: Chapter 21 pages 386-387 -- Test-Driven Development</A>
+<li><a href="14q.html#Chapter 21 pages 385-389 -- eXtreme Programming">: Chapter 21 pages 385-389 -- eXtreme Programming</A>
+<li><a href="14q.html#Chapter 21 pages 385 -- eXtreme Programming -- is XP used often">: Chapter 21 pages 385 -- eXtreme Programming -- is XP used often</A>
+<li><a href="14q.html#Chapter 20 pages 376-384 -- Design Code -- XP eXtreme Programming">: Chapter 20 pages 376-384 -- Design Code -- XP eXtreme Programming</A>
+<li><a href="14q.html#Chapter 21 pages 389 -- refactoring">: Chapter 21 pages 389 -- refactoring</A>
+<li><a href="14q.html#Chapter 21 pages 390 -- Code Smells">: Chapter 21 pages 390 -- Code Smells</A>
+<li><a href="14q.html#Chapter 21 pages 389-392 -- Refactoring">: Chapter 21 pages 389-392 -- Refactoring</A>
+<li><a href="14q.html#Chapter 25 pages 390 -- Generalize Relationship">: Chapter 25 pages 390 -- Generalize Relationship</A>
+<li><a href="14q.html#Chapter 22 pages 396 -- round trip engineering">: Chapter 22 pages 396 -- round trip engineering</A>
+<li><a href="14q.html#How reliable are the unit testing frameworks in testing code">: How reliable are the unit testing frameworks in testing code</A>
+<li><a href="14q.html#What do you do with objects that are created and then never do anything.">: What do you do with objects that are created and then never do anything.</A>
+<li><a href="14q.html#Chapter 21 pages 389-393 : Refactoring">: Chapter 21 pages 389-393 : Refactoring</A>
+<li><a href="14q.html#Chapter 21 pages 389-393 : Refactoring">: Chapter 21 pages 389-393 : Refactoring</A>
+<li><a href="14q.html#Chapter All pages All : Real World">: Chapter All pages All : Real World</A>
+<li><a href="14q.html#Chapter 23 pages 402 : The Phases">: Chapter 23 pages 402 : The Phases</A>
+<li><a href="14q.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="Questions and Answers on Design into Code">Questions and Answers on Design into Code</A></H1><ol class=Section>
+<H2><a name="What is an IDE">What is an IDE</A></H2>
+An Integrated Development Environment.  Example Eclipse.
+For more look under the Menu in KDE, under Development.
+<p>
+<H2><a name="Chapter 20 pages 369 -- BEware of bugs in the above code">Chapter 20 pages 369 -- BEware of bugs in the above code</A></H2>
+&quot;BEWARE OF BUGS IN THE ABOVE CODE.&quot;  That is part of the quote from the
+beginning of chapter 20.  Is it true that the first computer bug was an
+actual bug (I heard a moth) flying into the circuitry of an ancient
+mainframe.
+<p>
+Yes, when
+<A name="Admiral Grace Hopper" class="Key"> Admiral Grace Hopper </A>
+was a young programmer she did stick a fried
+moth into the console log as evidence of a &quot;bug in the machine&quot;.
+<p>
+By the way -- the word &quot;debugging&quot; was already in use at the time!
+<p>
+Side track
+<hr><ol class="Box">
+<A name="Donald Knuth" class="Key"> Donald Knuth </A>
+(the source of the quote) is one of the great computer scientists.
+He is famous for the meticulous care he takes to prove and
+analyze algorithms.  He also developed a major (and popular) tool
+in a very iterative way -- he paid people every time they found a new bug.
+He wrote a paper called &quot;The First 700 Hundred Errors in &Tau;<sub>&Epsilon;</sub>&Chi;&quot; about
+this experience.  I think that all CSci students owe it to themselves
+to learn about him...
+[<A href="http://www.npr.org/templates/story/story.php?storyId=4532247"> story.php?storyId=4532247 </A>]
+(news story with link to a 9 minute audio story).
+</ol><hr>
+<p>
+<p>
+<H2><a name="Chapter 20 pages 371 -- Mapping designs to code">Chapter 20 pages 371 -- Mapping designs to code</A></H2>
+Do we have to write source code for all the classes showed in the class
+diagrams at the same time?
+<p>
+For this course -- no.  Unless you want to.
+<p>
+In practice, you can't test until you have code for every class that you
+use.
+However, the classes can be full of
+<A name="stubs" class="Key"> stubs </A>
+-- functions that are incomplete and return fake results.
+<p>
+Normally you grow the code piece by piece -- class by class.  You start work
+on a class by coding some unit tests.
+<p>
+<p>
+<p>
+<H2><a name="Chapter 20 pages 373 -- What is a DCD">Chapter 20 pages 373 -- What is a DCD</A></H2>
+<li><a name="DCD">DCD</A>::acronym=&quot;Design Class Diagram&quot;.
+It is a blueprint for some code.
+<p>
+It is a diagram that shows the classes that you have designed, that will
+be put in the code.  Each class is coded as a class, each attribute as
+a data member or field.  Each operation becomes a member function or
+method.  The associations become pointers and objects.
+<p>
+A DCD differs from a Domain Model
+because &lt;exercise&gt;.
+<p>
+<H2><a name="Chapter 19 pages 366-368 -- Differences in Parameter, Attribute, Local, and Global Visibility">Chapter 19 pages 366-368 -- Differences in Parameter, Attribute, Local, and Global Visibility</A></H2>
+<p>
+OK. A method can only work if it has some data.  Where does it get
+that data?   There are four places where the data might be found:
+the parameters of the method, attributes of the methods'cs class, the
+varaibles declared inside the method, or in some global
+(or static) place in the system.
+<p>
+Look in these places and you may find the data.... but if not you
+have to decide where to put that data so that the method can get at it.
+<p>
+And sometimes you end up changing the design to make sure that the data is
+available via one or more new function calls.
+<p>
+<H2><a name="Chapter 19 pages 363-368 -- Visibility vs inheritance">Chapter 19 pages 363-368 -- Visibility vs inheritance</A></H2>
+Is visibility in design be equivalent to inheritance in OO programming?
+<p>
+No, not equivalent.  But inheritance will make &quot;protected&quot; members visible to the classes
+that inherit them.  In the context of this chapter.... inherited &quot;protected&quot; variables have
+attribute visibility.  The private ones are not visible.
+<p>
+<H2><a name="Chapter 19 pages 363-398 -- Visibility and design patterns">Chapter 19 pages 363-398 -- Visibility and design patterns</A></H2>
+Does visibility change between different design patterns?
+<p>
+Yes and no.  Yes -- A different pattern leads to a different set of
+interactions and so you end up with the data being placed in different
+classes, and passed around in different ways.  No -- the reasoning
+about what data is being transferred and where it comes from
+stays the same.
+<p>
+<p>
+<H2><a name="Explain Global Visibility">Explain Global Visibility</A></H2>
+This is something we told you to not do in CS201 and CS202.
+<p>
+Global visibility occurs when there is a single variable/object that
+can be used by any part of the software.  It is easy to do this in
+C++ and difficult in Java.
+<p>
+It is the most convenient and most easily abused visibility.
+<p>
+Because any method in any class can access and change a global object, it
+is easy for bugs to appear that are unexpected.  It is like having
+pockets that every body has access to -- no personal space.
+<p>
+<p>
+<H2><a name="Chapter 14 pages 363-398 -- Visibility of global data assigned to local varaibles">Chapter 14 pages 363-398 -- Visibility of global data assigned to local varaibles</A></H2>
+In web applications, I have seen programmers declare global variables(such
+as database info) in configuration files only to reassign them to local
+variables in a class(in this example, a database class). Is this
+good/common practice? What is the purpose of this?
+<p>
+It may be common.  I'd like to see examples to see if it is good.
+It smells of entangling the User Interface with a Technical Service.  But
+the configuration file may actually act as a way of separating the
+design decisions.
+<p>
+In some common rapid development environments you describe the web pages
+in an extended mark up language that lets you insert data from a database
+into the page directly.  This gets the program working fast,
+I wonder how maintainable it will be.  And I wonder if it can handle
+some of the more complicated computations that appear in some
+situations.
+<p>
+<H2><a name="Chapter 18 pages 363-398 -- Design Into Code">Chapter 18 pages 363-398 -- Design Into Code</A></H2>
+Instead of visibility, could a user write pseudo-code and explain basically
+the same thing there?
+<p>
+Yes.
+Whether you write pseudocode or draw class diagrams you still have to sort
+out
+where the data comes from and where it can be accessed.
+<p>
+But reasoning is the same whatever expression the final form takes.
+<p>
+<p>
+<H2><a name="How does visibility affect global variables?">How does visibility affect global variables?</A></H2>
+Not much!
+Global variables are just visible to the whole program.
+Coupled to everything!  Anything you do, anywhere in the code, can mung a global variable.
+This seems good when you first begin programming.... but after a number
+(depending on the person) of bad experiences people tend to get rid of them.
+<p>
+For example in my PhD graphics program I had three global variables: X,Y,SCALE that
+were available for drawing pictures:
+<pre> 	PROCEDURE SQUARE</pre>
+<pre> 	BEGIN</pre>
+<pre> 		X:=X+1; DRAW; Y:=Y+1; DRAW; X:=X-1; DRAW; Y:=Y-1; DRAW;</pre>
+<pre> 	END;</pre>
+These days we send commands to a graphic Canvas....
+<pre> 	graphic.drawLine(x,y,x+1,y);</pre>
+<pre> 	graphic.drawLine(x+1,y,x+1,y+1);</pre>
+<pre> 	graphic.drawLine(x+1,y+1,x,y+1);</pre>
+<pre> 	graphic.drawLine(x,y+1,x,y);</pre>
+You can see how seductive the global variable form was.... But
+[<A href="http://csci.csusb.edu/dick/test.Henrici.html"> test.Henrici.html </A>]
+<p>
+<H2><a name="Chapter 20 pages 370 -- Cycle of annoyance.">Chapter 20 pages 370 -- Cycle of annoyance.</A></H2>
+As a novice programmer, I can easily see becoming discouraged by having to
+change documentation every time I think of a new method that should be
+added to a class, or a new class that should be added to the system.  One
+of the important aspects of diagramming/planning is to give you a fuller
+understanding of what you will be working on; but constantly updating the
+documentation seems to me to be a distraction.  Do you know how frequently
+technical writers with programming experience are employed for this exact
+purpose?  Or is some poor sod of a programmer usually tasked with doing it?
+<p>
+I completely agree that it is annoying to go back to adjust previous
+analysis
+and design artifacts.   Indeed, in practice -- but not in this class --
+I think we should only go back when we can see a value to it.   I believe
+that well written code can can capture a lot of the meta-data that is
+discovered in diagrams.
+<p>
+I don't think technical writers are or should be used for this purpose.
+There job is to prepare information for users, managers, salespeople, ...
+<p>
+I remember a poor student, many years ago, in England spending the
+entire summer drawing a flow chart of a FORTRAN program.  He was paid
+but what a waste.
+<p>
+I remember flowcharting the machine code of a
+compiler I was modifying as part of my Ph.D.
+work..... until a faculty member asked why I didn't call the company
+up and ask them for their flowcharts.  I hadn't thought of doing this!
+So I did.... and they said that they hadn't drawn diagram but had written
+it in Algol 60, would I like a copy.   I said yes.... and there was all the
+information I needed.
+<p>
+Any thoughts?
+<p>
+<H2><a name="Chapter 20 pages 374 : Exceptions">Chapter 20 pages 374 : Exceptions</A></H2>
+How would exceptions or error handling be involved with the transition from
+UML to Code?
+<p>
+There are notations in parts of the UML for showing exceptions.
+I don't want to burden you with these in this course.   The official
+ones are used in <span class="InlineFormula">activity diagrams</span> (none of the diagrams we've met so
+far)
+and involve lightening strokes and little triangular &quot;Delta&quot; symbols.
+Follow Craig's notation in class diagrams:
+<pre> 		{exception SmokingGnu}</pre>
+<p>
+At the user level, alternate scenarios can probably be coded best
+using exceptions.
+<p>
+The problem is that Java forces you to handle exceptions.
+My advice in this case is: don't clutter the UML design
+with exceptions but code them carefully.  We will talk about some exception
+handling patterns later... meanwhile check
+[<A href="patterns.html#Exception Principles"> patterns.html#Exception Principles </A>]
+for 4 useful hints.
+<p>
+<H2><a name="Should errors be handled by the object that detects them or by another">Should errors be handled by the object that detects them or by another</A></H2>
+object
+If you can handle them locally -- and hide there occurrence from
+the rest of the system this is good.  But normally you need to at least
+record the errors in a log so that an administrator can spot trends.
+<p>
+<H2><a name="How are exceptions and errors handled handled when you have already">How are exceptions and errors handled handled when you have already</A></H2>
+planned for them
+It depends on your plan.  All the book is suggesting is thinking about and
+possibly
+programming a simple central error handling subsystem early in the project.
+<p>
+<p>
+<H2><a name="Chapter 20 pages 375-376 -- Order of implementation">Chapter 20 pages 375-376 -- Order of implementation</A></H2>
+While in the test phase, are tests based on the logic of the DCD? Or, should tests be performed at random?
+<p>
+Review Exercise: name the four phases of the UP.
+<p>
+First -- there is no &quot;test phase&quot;.  Testing is done in every UP phase, and in every iteration.
+<p>
+We have several types of tests.
+<p>
+Unit tests make sure that a single class's reactions to various calls/messages are correct.
+They are based on the DCD plus other known properties of the objects.
+Started at the start of each iteration after Inception.
+<p>
+Integration tests can be based on the interaction diagrams -- does this set of objects play
+together nicely? Probably in the middle of iterations.
+<p>
+Other tests are based on scenarios in the use cases.  Towards the end  (but with small
+programs I do this first).
+<p>
+Then we have client based &quot;acceptance tests&quot;.  Probably done at the end of iterations.
+<p>
+Random testing has been used, successfully, by NASA to estimate the mean time to failure of software.
+They used operational scenarios weighted by the expected frequency of events in the real world.
+<p>
+<H2><a name="Chapter 20 pages 376 -- Test-Driven or Test-First Development">Chapter 20 pages 376 -- Test-Driven or Test-First Development</A></H2>
+About how successful are Test-Driven/Test-First Development projects?
+<p>
+Very.
+<H2><a name="Chapter 20 pages 376 -- Test_Development TDD vs TFD">Chapter 20 pages 376 -- Test_Development TDD vs TFD</A></H2>
+What is the difference between Test Driven Development (TDD) and Test First Development (TFD)?
+<p>
+Not much!
+<p>
+<H2><a name="Chapter 21 pages 376-398 -- Test-Driven Development -- TTD">Chapter 21 pages 376-398 -- Test-Driven Development -- TTD</A></H2>
+Isn't unit testing apart of test-driven development?  It would be hard to
+test an entire program at first.  You would need to break up the testing
+into sections.
+<p>
+Unit testing is an important part of TDD.
+<p>
+The classic form is:  write a test for one new feature,
+make the program work by adding the feature, write a test for
+a new feature, fix the program,..... and so on.  And then
+refactor the code.
+The tests accumulate
+as you complete the system.
+<p>
+<p>
+<H2><a name="Chapter 20 pages 376 -- TDD order">Chapter 20 pages 376 -- TDD order</A></H2>
+Is there any particular order when implementing the TDD method? In figure
+20.7 we are given an order that seems a bit all over the place, is there
+logic to it? Or is it just how one feels on what they want to do.
+<p>
+One of the nicest things about TDD is the freedom you get to adjust to
+the things you discover as you develop the code.
+<p>
+However if you look, carefully at Fig 20.7 the order is determined
+by the arrows -- but backwards.   The arrows indicate a strong dependency.
+For example &quot;Sale&quot; knows about a &quot;Payment&quot;.  And so we must get
+&quot;Payment&quot; up and running before we can start on &quot;Sale&quot;.
+<p>
+The jumping around is more apparent than real.   You can probably
+do a PERT on it!
+<p>
+<p>
+<H2><a name="Chapter 20 pages 380-400 -- What is TDD for">Chapter 20 pages 380-400 -- What is TDD for</A></H2>
+So is
+TDD just a test or more than that?
+<p>
+Kent Beck wrote an article Test First Development arguing it was a whole
+lot
+more than a test:
+<H2><a name="Beck01">Beck01</A></H2><ol class=Section>
+<li>Kent Beck
+<li>Aim, Fire
+<li>IEEE Software Magazine V18n5(Sep/Oct 2001)pp87-89
+[<A href="http://doi.ieeecomputersociety.org/10.1109/52.951502"> 52.951502 </A>]
+<li>=DEMO TESTING first is ANALYSIS DESIGN  SPECIFICATION
+<li>&quot;Never write a line of functional code without a broken test case&quot;.
+<li>Ward Cunningham: &quot;Test-first coding is not a testing technique&quot;.
+<li>Writing tests helps you understand the problem: analysis.
+<li>Writing tests described the logic of the design.
+<li>Hard to write GUI tests.
+<li>Claims that creatively lazy test-first coding tends to be more cohesive
+and less coupled -- because the interfaces tend to be minimized to saving
+typing: &quot;intense feedback substitutes for the ability to guess right&quot;
+<li>Test cases expose misunderstandings in pair programming.
+<li>Test cases document the all important answer to &quot;What was this idiot
+thinking when he wrote this?&quot;.
+</ol>
+.
+<H2><a name="Chapter 21 pages 386 -- Test Driven Development TDD">Chapter 21 pages 386 -- Test Driven Development TDD</A></H2>
+Is TDD really feasible on a very large scale development environment?
+<p>
+The British Civil Service included specifying tests as the last stage of
+design prior.  But this was Big Design Up Front -- -- --(<a name="BDUF">BDUF</A>)<br>
+So we specified pages and pages of tests -- covering every piece of code
+once and every decision -- both ways... A very different process but
+demonstrating that designing the tests first is possible.  Indeed you will
+find it as part of the departments own IEEE based process.
+<p>
+<li>Chapter 21.1 pages  386 -- TDD
+The book didn't cover any disadvantages of using TDD, could you go over
+some that you mentioned in class? (if you did)
+<p>
+I've yet to discover any disadvantages of TDD. But I don't think I've got
+any
+hard data.
+<p>
+<H2><a name="Chapter 21 pages 381 : TDD">Chapter 21 pages 381 : TDD</A></H2>
+Should we be writing test code during, before, or after interaction and
+class
+diagrams?
+<p>
+You can do the
+unit tests for any class when you know the attributes and operations.
+So,
+I figure that you can start unit tests while you are still working
+on the class diagrams.   Possibly even earlier!
+<p>
+<H2><a name="Chapter 21 pages 387 -- Writing test code">Chapter 21 pages 387 -- Writing test code</A></H2>
+I haven't written &quot;test code&quot; for a program.  Is this written code
+additional to the program code or is it part of the program code?  Which
+add on testers work best in your opinion?
+<p>
+Test code is additional code.
+<p>
+I'm cheap so I tend to write the test code as the 'main' function, rather
+than invest in a tool.  In C++ I use 'assert'.
+<p>
+Notice -- user interface code is tested differently to the other layers.
+Test code exercises classes on your behalf.  UI code has to be tested
+by Users.
+<p>
+<p>
+<H2><a name="Chapter 21 pages 386-387 -- Test-Driven Development">Chapter 21 pages 386-387 -- Test-Driven Development</A></H2>
+Who conducts this test-driven test? Is it an independent company that reports back to all stake holders or this refer to local / lab bench testing.
+<p>
+For tests to drive development they must be done quickly and on site -- I like the
+term &quot;lab bench testing&quot; -- it has the right image to it.
+<p>
+You can have two types of tests that can be used to drive coding:  internal
+&quot;unit&quot; tests developed by the programmers and external &quot;whitebox&quot; tests
+developed by clients.  Both are good for driving the development of code.
+For tests to drive the coding you need to be able to complete the tests
+quickly -- seconds rather than minutes.    In XP the programmers start
+testing the code at the start of the week, and the client tests it at the
+end of the week's work.
+<p>
+In some projects
+testing is done by a separate team or even a specialized &quot;Quality Assurance&quot; company.
+This does not provide the kind of rapid feedback needed to help the coder.  The aim was
+to protect the stakeholders. This is an older
+procedure -- there used to be several local companies doing this -- I was involved in providing
+training to them in the late eighties.  I associate it with government projects.
+<p>
+<H2><a name="Chapter 21 pages 385-389 -- eXtreme Programming">Chapter 21 pages 385-389 -- eXtreme Programming</A></H2>
+When should one use
+<A name="XP" class="Key"> XP </A>
+and is it a good development process to use?
+<p>
+We know that it works very well when you can get the whole team plus a user representative
+into a single room.  Projects that need more people, or where you can't get a good
+user working in the team are a lot more iffy.  Similarly if you can't afford to dedicate
+a single space to the client+programmer team.
+<p>
+<H2><a name="Chapter 21 pages 385 -- eXtreme Programming -- is XP used often">Chapter 21 pages 385 -- eXtreme Programming -- is XP used often</A></H2>
+<p>
+I have no real data.  XP had a lot of hype, and quite a bit of criticism
+in the last 8 years.  I suspect that it is hardly ever done properly --
+lots of enterprises will develop their on variations.   XP is a
+very tight discipline. A very prescriptive set of practices.  And there
+is no evidence that it scales up to distributed and outsourced
+processes.
+<p>
+<H2><a name="Chapter 20 pages 376-384 -- Design Code -- XP eXtreme Programming">Chapter 20 pages 376-384 -- Design Code -- XP eXtreme Programming</A></H2>
+I can see the whole OO A/D process finally coming to the actual coding of
+software (the favorite part of any programmer); my question is on page 376
+Larman mentions extreme programming, is this method of unit testing all
+production code useful?  What if requirements change in the middle of
+coding? Would that make extreme programming less adaptable?
+<p>
+Yes, XP has worked on many projects.
+<p>
+It is also one of the best processes for handling change.
+Most if the XP practices are designed to handle requirements that change.
+Hence the title of Beck's book &quot;Embrace Change&quot;.  Examples:  every week
+some change is made to the software and presented to the user.  There
+is a user representative on the development team. Every week
+the user representative selects what needs to be done in the coming week
+from a menu of possible requirements.   (I'd love to do a planning game
+exercise but we don't have time). Another XP practice is to have no
+documentation except code... so change is handled fast.  Finally code is
+continuously refectored so that it is easy to change.
+There are more practices that are
+designed to provide very fast feedback and self-correction.
+<p>
+For more check out
+[<A href="http://en.wikipedia.org/wiki/Extreme_Programming"> Extreme_Programming </A>]
+in the Wikipedia.
+<p>
+<p>
+<H2><a name="Chapter 21 pages 389 -- refactoring">Chapter 21 pages 389 -- refactoring</A></H2>
+can you explain a situation where refactoring is used
+<p>
+Think of refactoring as doing the laundry.
+Testing/modifying code tends to make it dirty, refactoring cleans it up.
+[<A href="http://csci.csusb.edu/dick/biba.php?from=14q&amp;search=Martin09"><cite>Martin09</cite></A>]
+<p>
+Whenever you have got to where the software passes all its tests you should take time to
+&quot;refactor&quot; it, repeating the tests after each small change.   There is clear evidence in real
+projects that software &quot;rusts&quot; if not cleaned up on a regular basis.
+<p>
+<H2><a name="Chapter 21 pages 390 -- Code Smells">Chapter 21 pages 390 -- Code Smells</A></H2>
+Of the code smells listed in the book what is the worst smell?  In what
+situations might some of these smells be okay?
+<p>
+Duplicated code smells bad to me.  But what smells worse is any code
+I can't understand by looking at it.
+<p>
+Sometimes a complicated algorithm just can't be improved.  It is me
+that has to change to understand it.
+<p>
+<p>
+<H2><a name="Chapter 21 pages 389-392 -- Refactoring">Chapter 21 pages 389-392 -- Refactoring</A></H2>
+What are some methods of improving code smells?  Some codes I(also many
+students) have written really stink!
+<p>
+I agree....
+<p>
+But refactoring does help.   Look it up on the web!
+[<A href="http://en.wikipedia.org/wiki/Refactoring"> Refactoring </A>]
+<p>
+Time to hit the books.... After this course is over?
+<p>
+<p>
+<H2><a name="Chapter 25 pages 390 -- Generalize Relationship">Chapter 25 pages 390 -- Generalize Relationship</A></H2>
+What is the generalize relationship? The book mentions it, but only to state that it's outside the scope of the introduction
+<p>
+We will return to it later.  It is the ---|&gt; relation.   It expresses (in the domain)
+the fact that one class of object <span class="InlineFormula">is a special kind of</span> another class.
+Example
+<li><span class=Formula>A cat is a special kind of pet.</span>
+<p>
+In a DCD it indicates the use of inheritance/extension. Example
+<pre> 		Cat : public Pet { Sound sound(){return &quot;Mew&quot;;} };</pre>
+or
+<pre> 		public class Cat extends Pet implements IMouser { ...}</pre>
+<p>
+<p>
+<H2><a name="Chapter 22 pages 396 -- round trip engineering">Chapter 22 pages 396 -- round trip engineering</A></H2>
+Can you better explain round trip engineering and how it is used?
+<p>
+Disclaimer: I'm a cynic about this process.
+<p>
+It was almost a slogan invented by Rational.  If you have a tool that converts diagrams to
+code and code to diagrams then you can carry out the following process
+<p>
+repeat
+(<ol class="Formula">
+<li><span class=Formula>generate the code</span>
+<li><span class=Formula>repeat</span>
+(<ol class="Formula">
+<li><span class=Formula>test the code</span>
+<li><span class=Formula>modify the code</span>
+</ol>)
+<li><span class=Formula>until all tests pass or you get lost in the code</span>
+<li><span class=Formula>regenerate the diagrams</span>
+<li><span class=Formula>tidy up the diagrams</span>
+</ol>)
+<p>
+<H2><a name="How reliable are the unit testing frameworks in testing code">How reliable are the unit testing frameworks in testing code</A></H2>
+From what I here from people that use them they are highly reliable -- but
+they
+rely on people writing good unit tests.  Writing the tests takes skill and
+care.
+Using the tools is usually reported as fun and addictive.
+<p>
+<p>
+<H2><a name="What do you do with objects that are created and then never do anything.">What do you do with objects that are created and then never do anything.</A></H2>
+Think more about them -- you've probably forgotten some obvious thing that
+they
+have to be able to do.  For example: helping you print out results.
+<p>
+A true dead-end object that is created and never used is probably
+incorrect.
+<p>
+<p>
+<H2><a name="Chapter 21 pages 389-393 : Refactoring">Chapter 21 pages 389-393 : Refactoring</A></H2>
+Refactoring seems more geared towards XP and agile UP.  Would you even
+re-factor in a project where you aren't using XP/ agile UP?  Wouldn't the
+purpose of all the design to prevent refactoring?
+<p>
+Yes refactoring is now a vital part of XP.  But it is a useful
+tool in most real projects.
+<p>
+Even <span class="InlineFormula">fragile</span> projects that practice <span class="InlineFormula">Big Design Up Front</span> enter a
+maintenance phase.  In this the code is changed -- sometimes for decades.
+If it isn't refactored then it <span class="InlineFormula">rusts</span> -- becomes badly designed, dangerous
+to change, and ultimately buggy.
+<p>
+Notice that in theory we can get the design right on paper.... but in
+practice
+most projects have areas where you have to code a solution before
+you understand the problem enough to do the design.  You now have
+a choice: (1) reverse engineer the diagrams and throw
+away your code... and then recode it. OR (2) refactor
+the working solution into a well-designed form.
+<p>
+<H2><a name="Chapter 21 pages 389-393 : Refactoring">Chapter 21 pages 389-393 : Refactoring</A></H2>
+And, if you do refactor,
+would you go back and fix/change all the diagrams that would be effected by
+the refactoring?
+<p>
+It depends on the degree of ceremony in the process.  But to be rational
+the real question is to redraw when there is an obvious value to do so
+or it is cheap to do (by reverse engineering).
+<H2><a name="Chapter All pages All : Real World">Chapter All pages All : Real World</A></H2>
+In the real world, how much time would have passed in our project already?
+<p>
+I guess about two weeks.  I'm tempted to be nasty and make
+joke about only seeing about 2 or 3 days work so far:-)
+<p>
+Warning:  the next piece of assigned work (due next week) involves
+reworking and
+handing in a copy of everything... so I can see where your
+next iteration is starting from.
+<p>
+<H2><a name="Chapter 23 pages 402 : The Phases">Chapter 23 pages 402 : The Phases</A></H2>
+If a project is given 6 months to finish, how many weeks should be given to
+the second iteration.  Should this iteration be more important then the
+first.
+<p>
+The quick answer is that you don't really know until you've finished
+the first iteration.  In other words,  the plan you make at the start
+of the project is based on experience and guess work and
+<span class="InlineFormula">must be revised</span> as you learn more about the project and
+your team.
+<p>
+This doesn't mean that you can't work out a set of iterations.
+Perhaps you should.   The problem is that you are likely to
+be wrong.   This may be why <span class="InlineFormula">PERT</span> is the
+<span class="InlineFormula">Planning, estimation, and REEVALUATION Technique</span>.
+<p>
+Here is a simple technique:  the team takes every feature and guesses
+how many <span class="InlineFormula">days</span> it will take to complete:
+analysis+design+code+integrate+test.
+Choose a collection of valuable and risky features that add up to
+say 3 weeks (15 days)work (say) and call this the first iteration.  Now do
+it.
+How long did it take?  Say it was 20 days!  Now treat all your other
+estimates
+as needing 20/15 times what you planned.  Start on another 15 day iteration
+and discover it take only 10 days ... faster take the original estimates
+and multiply them by 10/15 to get the next set of features.... MEANWHILE
+involve a user and other stakeholders in rethinking the features
+that want.  There is nothing like running software to change
+your mind about what you really want!
+<p>
+The other way to be sure is to allocate 3 weeks per iteration
+(a guess!) and then decide, at the start of each one what you expect
+to get done.  Look up <span class="InlineFormula">Scrum</span> on the WWW!
+<p>
+Note:  There is no plan that is not project and team dependent.
+<p>
+</ol><p>. . . . . . . . . ( end of section <a href="14q.html#Questions on Visibility and moving from UML to Code">Questions on Visibility and moving from UML to Code</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci Dept, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10.
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

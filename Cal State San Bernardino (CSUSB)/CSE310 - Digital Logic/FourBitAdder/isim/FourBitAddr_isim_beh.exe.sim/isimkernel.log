@@ -1,0 +1,29 @@
+Command line:
+   FourBitAddr_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  1310
+
+Tue Jan 22 12:45:13 2013
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 306.495 Meg
+
+ Total Signals          : 94
+ Total Nets             : 42
+ Total Signal Drivers   : 25
+ Total Blocks           : 14
+ Total Primitive Blocks : 9
+ Total Processes        : 26
+ Total Traceable Variables  : 18
+ Total Scalar Nets and Variables : 122
+Total Line Count : 34
+
+ Total Simulation Time: 0.171875 sec
+
+ Current Memory Usage: 306.495 Meg
+
+Tue Jan 22 12:45:48 2013
+

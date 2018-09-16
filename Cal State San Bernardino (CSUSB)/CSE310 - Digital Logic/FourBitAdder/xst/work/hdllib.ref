@@ -1,0 +1,6 @@
+MO half_adder NULL half_adder.v vlg5A/half__adder.bin 1359489208
+MO FPGA_hex_sseg NULL ../lab4/FPGA_hex_sseg.v vlg47/_f_p_g_a__hex__sseg.bin 1359489194
+MO full_adder NULL full_adder.v vlg5A/full__adder.bin 1359489208
+MO FourBitAddr NULL FourBitAddr.v vlg6A/_four_bit_addr.bin 1359489208
+MO disp_mux NULL ../lab4/disp_mux.v vlg4D/disp__mux.bin 1359489194
+MO hex_to_sseg NULL ../lab4/hex_to_sseg.v vlg6C/hex__to__sseg.bin 1359489194

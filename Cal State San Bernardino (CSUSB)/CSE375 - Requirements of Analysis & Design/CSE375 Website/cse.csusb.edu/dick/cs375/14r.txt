@@ -1,0 +1,11 @@
+. Review Questions 14 -- Design into Code
+ Name and describe the 5 (five) levels of visibility in an object-oriented program.
+ What is TDD? Expand the acronym and explain in more detail.
+ Suppose you have a set of design diagrams etc. for a new class.... what is
+the first code you should write to code the class?
+ Given an interaction diagram and DCD write the code...
+ Give a general rule for selecting the order in which to code the classes in a DCD.
+ Can you translate the Java class Payment (section 20.11, p377) into C++?
+ What do we mean by "refactoring"?  Give four examples of refactoring steps. 
+ When is it a good idea to update your diagrams to match the code you
+have developed?

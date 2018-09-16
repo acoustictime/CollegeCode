@@ -1,0 +1,121 @@
+. CSci 375/16 GRASP Revisitted
+.Table Date	#	Topic (Participation 2pt)	Study pages (2 pts)	Quiz(15 pts)	Project Work(10 pts)
+.Row Previous	15	More Analysis	401-413	Q7(1-413)	-
+.Row Today	16	$GRASP II	413-435	-	W7(Model 2: use cases, domain, interactions, classes)
+.Row Next	17	$GoF	435-476	Q8(1-476)	-
+.Close.Table
+. Revision History
+.Table Version#	Date	Description	Author
+.Row 0	2005-01-03	Used boiler plate to make template	RJB
+.Row 1	2005-01-17	Added section headings	RJB
+.Row 2	2005-03-02	Added notes	RJB
+.Row 3	2005-03-07	Added notes and questions	RJB
+.Row 4	2006-02-16	Update	RJB
+.Row 5	2007-01-10	Added link to project 	RJB
+.Row 6	2007-03-07	Added notes on interfaces 	RJB
+.Row 7	2007-12-07	Removing topic from schedule 	RJB
+.Row 8	2009-03-05	Added sample codemfrom question answers 	RJB
+.Close.Table
+. Chapter 25 GRASP II: Objects and Responsibilities
+    Introduction
+
+Can you list the first 5 GRASP patterns without looking? 
+.See ./15answer.html
+
+    *** 25.1 Polymorphism ($vital)
+polymorphism::idea=following,
+.List
+	A variable is declared as referring to a general type,
+.As_is 		GeneralType * example;  //C++
+	But is assigned to objects that are special types of that type
+.As_is 		example = new SpecialType (data );
+	Then the variable gets the behavior of the `special` type of object.
+.As_is 		example -> function( moreData);
+.Close.List
+Also see
+.See ./patterns.html#abstraction
+
+	+ Example: you call your Pet, and the Dog comes, but the Cat
+thinks about it.
+	+ Example: Snap Crackle Pop, Rice Crispies
+.See ../cs202/polymorphism.html#A Good Example
+	* Example in NextGen: Tax calculation
+C++ Code:
+.See ./fig25_25_1.cpp
+.See ./test.fig25_25_1.cpp
+.See ./Sale.cpp
+.See ./TaxLineItems.cpp
+	* Example in monopoly: squares
+	+++ When you have a method with a switch or complex if-else-if-else...
+you've probably missed a chance to use polymorphism.
+Typical C++ code for 
+.As_is 			Player::Taketurn(...):
+.As_is 	class Player
+.As_is 	{
+.As_is 		Square * location;
+.As_is 		...
+.As_is 		virtual Something takeTurn(....) //Fig 25.3 Page 417
+.As_is 		{
+.As_is 			... 
+.As_is 			location=board->getSquare(location, fvTot);
+.As_is 			location->landedOn();
+.As_is 		}
+.As_is 		... 
+.As_is 	};
+	Exercise
+.See ./test.poly.cpp
+    +++ Notice!   You don't get polymorphism until you have a pointer that points at a generalization/abstraction/interface.  A pointer
+alone is $Indirection.  An inheritance hierarchy is the way things
+are!
+
+    ***25.2 
+.Key Pure Fabrication
+($vital)
+fabricate::= create | lie | make.
+	Use it to gather similar responsibilities: persistence, dice cup, 
+the web, an LDAP, etc. into a invented object/class.
+    ***25.3 
+.Key Indirection
+($vital)
+indirection::machine_code=`When an instruction uses the address to find the address of the operand`.
+	Use to separate two objects that shouldn't be directly coupled.
+	Tax calculator adapter
+	Persistence
+	++ "Most network problems can be solved by adding a level of indirection"
+	++ Indirection fits with $Polymorphism.
+	++ Also known as using a pointer in C++.
+
+    ******25.4 
+.Key Protected Variation
+or
+.Key PV
+($vital)
+ Hide `hot points`, design decisions, special concerns, etc. behind a common interface or object.  Design your software so that bends rather than breaks by
+including "hinges" or flexible components.
+ ***** Protected Variation is an explanation for Pure Fabrication, Polymorphism and
+Indirection.
+$PV often is handled by combining indirection and polymorphism: point at
+the general, and define special kinds of variations.
+	** interesting philosophy on pages 428-432 covers several variations on PV.
+	** Note the anecdote on page 432: the cost of future proofing.
+	** Notice -- you need to document likely variations in your requirements
+.Close
+.See ./patterns.html
+. Exercises on GRASP
+.See ./16x.html
+. Next Quiz
+Make sure you know the UML notations for interfaces and something
+about all the patterns (GRASP+GoF) covered up to the start of the quiz.
+. Online Tutorial on patterns
+.See http://en.wikipedia.org/wiki/Category:Software_design_patterns
+(Vince Huston)
+. Questions and Answers
+.See ./16q.html
+. Next -- Back to the next iterations
+.See ./17.html
+including a quiz on UML interfaces and the GRASP+GoF.
+. Next Iteration of Project -- Model 2
+.See ./w7.html
+due at start of class 17.
+. Review Questions
+.See ./16r.html

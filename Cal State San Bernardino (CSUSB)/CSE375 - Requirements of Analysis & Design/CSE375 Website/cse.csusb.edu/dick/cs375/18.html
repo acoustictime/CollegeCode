@@ -1,0 +1,334 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/18.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:53:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+CSci 375/18 Domain Model III
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="18.txt">Text Version</A>]
+ 18.html 
+Thu Mar  7 15:00:07 PST 2013
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="18.html#CSci 375/18 Domain Model III">CSci 375/18 Domain Model III</A>
+<li><a href="18.html#Revision History">Revision History</A>
+<li><a href="18.html#Projects: Start iteration 3 at end of class">Projects: Start iteration 3 at end of class</A>
+<li><a href="18.html#Chapter 31 Refining the Domain Model">Chapter 31 Refining the Domain Model</A>
+<li><a href="18.html#Questions and Answers">Questions and Answers</A>
+<li><a href="18.html#Exercises">Exercises</A>
+<li><a href="18.html#Next Review UP and UML">Next Review UP and UML</A>
+<li><a href="18.html#Next iteration of Project -- Model 3">Next iteration of Project -- Model 3</A>
+<li><a href="18.html#Review Questions">Review Questions</A>
+<li><a href="18.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="CSci 375/18 Domain Model III">CSci 375/18 Domain Model III</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Date<th scope="col">#<th scope="col">Topic (Participation 2pt)<th scope="col">Study pages (2 pts)<th scope="col">Quiz(15 pts)<th scope="col">Project Work(10 pts)
+<tr><td>Previous<td>17<td>GoF<td>435-476<td>Q8(1-476)
+<tr><td>Today<td>18<td>Domain Model III<td>501-539<td>-<td>W8(Model 3: model 2 improved)
+<tr><td>Next<td>19
+<td>Revu Interactions and DCDs
+<td>221-270
+<td>-
+[<A href="19.html"> 19.html </A>]
+<td>Q9(1-535)
+</table><br>(Close Table)<br>
+<H1><a name="Revision History">Revision History</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Version#<th scope="col">Date<th scope="col">Description<th scope="col">Author
+<tr><td>0<td>2005-01-03<td>Used boiler plate to make template<td>RJB
+<tr><td>1<td>2006-01-20<td>Updated reading page numbers<td>RJB
+<tr><td>2<td>2006-03-08<td>Added some notes<td>RJB
+<tr><td>3<td>2007-01-10<td>Added link to project <td>RJB
+</table><br>(Close Table)<br>
+<H1><a name="Projects: Start iteration 3 at end of class">Projects: Start iteration 3 at end of class</A></H1>
+[<A href="w8.html"> w8.html </A>]
+<H1><a name="Chapter 31 Refining the Domain Model">Chapter 31 Refining the Domain Model</A></H1>
+A long chapter with lots of notation which you need to master.
+<li><span class=Formula>31.1 New concepts for NextGen</span>
+<li><span class=Formula>*** 31.2 example of Generalization in a domain Model(<a href="#important">important</A>)</span>
+<li><span class=Formula>*** 31.2 Super and sub classes(<a href="#important">important</A>).  Aristotle was here!</span>
+<hr><ol class="Box">
+<li><span class=Formula>The is-a rule</span>
+<li><span class=Formula>The 100% Rule</span>
+</ol><hr>
+<li><span class=Formula>* 31.4 When is it worth adding a subclass</span>
+<li><span class=Formula>* 31.5 When is it worth adding a superclass</span>
+<li><span class=Formula>31.6 NextGen Example</span>
+<li><span class=Formula>++ These hierarchies define what are called</span>
+<A name="ontologies" class="Key"> ontologies </A>
+that define a way of thought and the semantics of the client's language!
+<li><span class=Formula>++ A domain can have</span>
+<A name="multiple hierarchies" class="Key"> multiple hierarchies </A>
+, for example, in a Hospital
+a Person is either Male or Female.  But some people are Patients, as well.
+And -- also -- You find special People who are Doctors and Nurses... And
+so Person is simultaneously in these different hierarchies:  a Male Nurse,
+a Female Doctor, a Female Patient who is also a Nurse, and a Male Patient
+that is neither a Docotr or a Nurse....  It really helps to draw a picture
+of these possibilities and UML2.0 provides a way to label generalisations
+to get this effect.
+<p>
+<img src="MultipleHierarchies.png" alt="[See description above ]">
+<p>
+<li><span class=Formula>* 31.7 Abstract classes: must have concrete subclasses, ultimately.</span>
+<li><span class=Formula>++ By the way, the {complete} constraint has the same effect on a single</span>
+generalization when there are many hierarchies.  See above.
+<li><span class=Formula>* An interface is a special kind of abstract class that has no attributes and</span>
+no concrete functions/operations.
+<p>
+<li><span class=Formula>* 31.8 But what if objects need to change class????</span>
+<hr><ol class="Box">
+<li><span class=Formula>State machines are good for modeling domain dynamics.</span>
+<li><span class=Formula>UML has a diagram that pictures State Machines.</span>
+<li><span class=Formula>State machines are often useful for sorting out technical problems</span>
+(like when to write cached data back to a database -- page 639)
+<li><span class=Formula>Use State machines to clarify ideas and record requirements.</span>
+<li><span class=Formula>Separate the changes into a State or Status object</span>
+(Pure fabrication + Indirection).
+The state is actually an attribute of the apparently changing object.
+<li><span class=Formula>The UML does allow objects to change subclasses,</span>
+if you write {dynamic} on a generalization,
+but few people use it.
+<li><span class=Formula>Most programming languages don't allow objects to change their class.</span>
+<li><span class=Formula>Four classic solutions to coding changing behavior.</span>
+<br>Case<ol class="Case">
+<li><span class=Formula>Use the <a href="#GoF">GoF</A> State pattern</span>
+[<A href="patterns.html#State"> patterns.html#State </A>]
+to code it. Here the state points at objects in different classes.
+<li><span class=Formula>Example</span>
+[<A href="StatePatternExample.html"> StatePatternExample.html </A>]
+and code:
+[<A href="State.cpp"> State.cpp </A>]
+[<A href="test.State.cpp"> test.State.cpp </A>]
+(uses a simple Hollywood &quot;don't call us, we will call you&quot; pattern)
+OR
+[<A href="State2.cpp"> State2.cpp </A>]
+[<A href="test.State2.cpp"> test.State2.cpp </A>]
+(A less pure GoF implementation)
+<li>(Example in the text is on page 642)
+</ol><br>(End of Case)<br>Case<ol class="Case">
+<li><span class=Formula>Add a state attribute that is an int or enumeration and write a</span>
+switch statement <span class="InlineFormula">in each method</span> that encodes changeable behavior.
+This was the pre-object-oriented way to handle state changes.
+<li>See page 640 for classic code example.
+<li>Here is the running example using this technique:
+[<A href="State.not.cpp"> State.not.cpp </A>]
+[<A href="test.State.not.cpp"> test.State.not.cpp </A>]
+<li>In Java 5 <span class="InlineFormula">enum</span> allows you to attach specific behaviors to the
+different possible values.  This can replace the switch in State.not.cpp.
+</ol><br>(End of Case)<br>Case<ol class="Case">
+<li><span class=Formula>Again -- add a state attribute to the object and tabulate the transitions</span>
+associated with each operation as data in a file or data base.
+<li><span class=Formula>Makes it easy to change behavior patterns without reprogramming.</span>
+<li>Example in progress:
+[<A href="State.table.cpp"> State.table.cpp </A>]
+[<A href="test.State.table.cpp"> test.State.table.cpp </A>]
+<a href="#TBA">TBA</A>
+</ol><br>(End of Case)<br>Case<ol class="Case">
+<li><span class=Formula>Use Jackson semi-co-routines and Duff's device to simulate a concurrent process</span>
+(covered in CS320
+[<A href="cs320/lab/09.html"> cs320/lab/09.html </A>]
+)
+<li>Example:
+<a href="#TBA">TBA</A>
+</ol><br>(Close Case )<br>
+The first three solutions are well known techniques.
+<br><ol class="List">
+<li>When there is a single operation that changes behavior with the state,
+then use the traditional switch-case... coding.
+<li>When there is more than one operation that changes its behavior
+with the state,
+use the GoF State pattern code. (Polymorphism).
+<li>Use data driven code to handle shifting requirements (Protected Variation)
+</ol>
+</ol><hr>
+<li><span class=Formula>* 31.9 Inheritance in Programs vs Conceptual hierarchies</span>
+<li><span class=Formula>31.10 Association Classes: controlling the connections.</span>
+<li><span class=Formula>++ I prefer to <span class="InlineFormula">reify</span> complicated associations into a new class</span>
+with it's own attributes and methods.  This is part of normalization for
+the data.  It is useful when your programming language doesn't
+have association classes.  Also    this gives you a place to store the
+attributes of the relationship.  Like when it started and stopped, as
+an example.
+<li><span class=Formula>31.11 Aggregation and Composition: at last... but why so late?</span>
+<li><span class=Formula>++ Composition implies Aggregation. Aggregation implies Association.</span>
+<li><span class=Formula>++++ When in doubt: DON'T use either.</span>
+<li><span class=Formula>+ Exception: In a domain model use composition for real wholes and parts.</span>
+<li><span class=Formula>+ In designs put an arrow on an association to show pointers</span>
+<pre> 		class Wodget{ Widget * w1, *w2 ; ... };</pre>
+<li><span class=Formula>+ In designs (only) use composition to show</span>
+storing an object inside an object:
+<pre> 		class Wodget{ Widget w1, w2 ; ... };</pre>
+<li><span class=Formula>+ In a design composition, officially, means that the parts are destroyed when the</span>
+whole is destroyed.  You can therefore use a diamond to indicate the creator
+and destructor classes.
+<p>
+<li><span class=Formula>31.12 Fixing an error NextGen Iteration 1?</span>
+<li><span class=Formula>*** 31.13 Role Names (<a href="#important">important</A>)</span>
+<li><span class=Formula>* 31.14 Roles...</span>
+<li><span class=Formula>**  31.15 Derived elements(<a href="#important">important</A>)</span>
+<li><span class=Formula>31.16 Qualified Associations</span>
+<li><span class=Formula>* 31.17 Reflexive associations (DON'T PANIC. <a href="#important">important</A> but simple)</span>
+<li><span class=Formula>* 31.18 Packages Organize your classes</span>
+<li><span class=Formula>31.19 Example: Monopoly</span>
+<p>
+<br>(<a name="important">important</A>): like, I might set an exam question or use in an example...
+<H1><a name="Questions and Answers">Questions and Answers</A></H1>
+[<A href="18q.html"> 18q.html </A>]
+<H1><a name="Exercises">Exercises</A></H1><ol class=Section>
+[<A href="18x.html"> 18x.html </A>]
+</ol><p>. . . . . . . . . ( end of section <a href="18.html#Exercises">Exercises</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<p>
+<H1><a name="Next Review UP and UML">Next Review UP and UML</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">-<th scope="col">-<th scope="col">Subject<th scope="col">Prepare<th scope="col">Guide<th scope="col">Quiz
+<tr><td>Next<td>19
+<td>Revu Interactions and DCDs
+<td>221-270
+<td>-
+[<A href="19.html"> 19.html </A>]
+<td>Q9(1-535)
+</table><br>(Close Table)<br>
+<H1><a name="Next iteration of Project -- Model 3">Next iteration of Project -- Model 3</A></H1>
+[<A href="w8.html"> w8.html </A>]
+due at start of the next class.
+<H1><a name="Review Questions">Review Questions</A></H1>
+[<A href="18r.html"> 18r.html </A>]
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<p>
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+[<A href="02DiceGameClasses.gif"> 02DiceGameClasses.gif </A>]
+(example).
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<p>
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good set of objects and/or classes to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what has no value <span class="InlineFormula">now</span>, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<p>
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci and Engineering School, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10 and
+[<A href="02DiceGameSSD.gif"> 02DiceGameSSD.gif </A>]
+(example).
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need it <span class="InlineFormula">now</span>. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">( End of document )</a>  <a href="#Contents">&lt;&lt;Contents </A> | <a href="#Main Content">Top</A></H3>
+</body>

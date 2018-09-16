@@ -1,0 +1,227 @@
+lease
+
+10000/1/4135 Sierra St. San Bernardino, CA. 92408/15-DEC-12/30-AUG-12/3001/909-303-3030
+10001/3/1621 Euerka St. San Bernardino, CA. 92407/15-JUN-12/30-AUG-12/3002/909-222-2222
+10002/4/1317 5th St. San Bernardino, CA. 92408/15-AUG-12/30-AUG-12/3003/909-111-1111
+10003/2/14 University Ave. San Bernardino, CA. 92407/15-MAR-12/30-AUG-12/3004/909-333-3333
+10004/1/74 Euerka St. San Bernardino, Ca. 92408/15-DEC-12/30-AUG-12/3005/909-444-4444
+10005/1/123 4th St. San Bernardino, CA. 92407/15-DEC-12/30-AUG-12/3006/909-777-7777
+10006/4/14 Market Ave. San Bernardino, CA. 92408/15-AUG-12/30-AUG-12/3007/909-555-5555
+10007/4/35 Kinsey Ave. San Bernardino, CA. 92407/15-AUG-12/30-AUG-12/3008/909-999-9999
+10008/3/280 Drake Dr. San Bernardino, CA. 92408/15-JUN-12/30-AUG-12/3009/909-666-6666
+10009/1/654 Lincoln Ave. San Bernardino, Ca. 92408/15-DEC-12/30-AUG-12/3010/909-888-8888
+10010/2/719 Waterman Ave. San Bernardino, CA. 92408/15-MAR-12/30-AUG-12/3011/909-123-4567
+10011/1/4564 Waver Ave. San Bernardino, Ca. 92408/15-DEC-12/30-AUG-12/3012/909-765-4321
+
+staff member
+
+1000/Anthony/Gonzalez/06-MAY-47/M/123 Four St/Redlands/CA/92373/CSUSB Main/Phys Ed Professor/agonz@csusb.edu
+1001/Michelle/Smith/09-JUN-58/F/654 Fourth St/Riverside/CA/92504/CSUSB Main/CSE Professor/msmith@csusb.edu
+1002/Mark/Preciado/03-JAN-45/M/352 Anderson Way/Riverside/CA/92504/CSUSB Main/Math Tutor/mpreciado@csusb.edu
+1003/Ashley/Lopez/03-APR-73/F/984 Halsey St/Redlands/CA/92375/CSUSB Main/English Professor/alopze@csusb.edu
+1004/Sergio/Martinez/11-DEC-82/M/253 Wilson Way/San Bernardino/CA/92408/CSUSB Main/Math Professor/smartinez@csusb.edu
+1005/Lisa/Turtle/27-SEP-61/F/352 Bell Way/Chino/CA/92347/CSUSB Main/History Professor/lturtle@csusb.edu
+
+Advisor
+
+1001/PS414/909-123-4567/CSE
+1003/CS130/951-765-4321/English
+1005/JB470/123-456-7890/History
+1000/Ls 120/987-654-3210/Phys Ed
+
+Next of Kin
+
+Mark Smith/Brother/995-846-7778/987 Alpha St/Riverside/CA/92504
+Tony Stark/Father/909-456-7815/1534 Anderson Ave/Redlands/CA/92373
+Robert Mitts/Brother/654-654-7895/3564 Besson Lane/Chino/CA/92445
+William Tell/Uncle/951-564-7914/333 Citrus Ave/Ontario/CA/92446
+Art Inder/Brother/665-445-7921/66 Holt Ave/San Bernardino/CA/92408
+Carl Vaughn/Father/214-467-6657/35335 Willow Way/Upland/CA/92444
+Scott Nelson/Cousin/214-655-9998/3374 Sierra Ave/Pomona/CA/92437
+Ashley Doherty/Sister/315-321-4556/674 Arch Way/Big Bear/CA/92404
+Terry Spinks/Mother/336-654-7779/353 Gardena Ave/Adelanto/CA/92616
+
+Student
+
+600001/Curtis/Wright/M/10-JUL-80/Renting/None/Residence Hall/Mark Smith/Math/Computer Science/None/456 Besson Lane/Redlands/CA/92373/American/Freshman/909-111-1111/cwright@coyote.csusb.edu/1001
+600002/Michael/Baldridge/M/04-SEP-82/Renting/None/Residence Hall/Tony Stark//Math/None/457 Wilshire Blvd/Grand Terrace/CA/92409/Austrailian/Sophomore/909-222-2222/mbaldridge@coyote.csusb.edu/1003
+600003/Liz/Smith/F/11-JUN-87/Renting/None/Residence Hall///English/Wheelchair/41 Rock Blvd/Chino/CA/92647/American/Junior/909-333-3333/lsmith@coyote.csusb.edu/1005
+600004/Andrew /Sherwood/M/11-DEC-91/Renting/None/Residence Hall/Carl Vaughn/Finance/Computer Systems/None/3654 Brookside/Redlands/CA/92374/Japanese/Freshman/909-444-4444/asherwood@coyote.csusb.edu/1000
+600005/Melissa/Vaughn/F/01-DEC-93/Renting/None/Student Apartment//Math/Computer Science/None/253 Sierra St/Riverside/CA/92504/American/Senior/909-555-5555/mvaughn@coyote.csusb.edu/1003
+600006/Beth/Lopez/F/04-MAR-89/Renting/None/Student Apartment/Terry Spinks/Physics/Computer Science/None/2533 Wilson Ave/Banning/CA/92223/American/Sophomore/909-666-6666/blopez@coyote.csusb.edu/1001
+600007/Jennifer/West/F/12-APR-90/Renting/None/Residence Hall///Education/None/35 Pocket St/Beaumont/CA/92222/American/Junior/909-777-7777/jwest@coyote.csusb.edu/1000
+600008/John/Wiley/M/11-JUL-77/Renting/None/Student Apartment/Scott Nelson/Math/Physics/None/30566 Ash St/San Bernardino/CA/92408/American/Freshman/909-888-8888/jwiley@coyote.csusb.edu/1005
+600009/Jessica/Wilson/F/01-AUG-88/Renting/None/Student Apartment///Art History/None/1400 Barton Rd/Arrowhead/CA/92404/Korean/Senior/909-999-9999/jwilson@coyote.csusb.edu/1000
+600010/Ryan/Oliver/M/27-SEP-89/Renting/None/Student Apartment/Robert Mitts//Liberal Studies/Deaf/30 N Fish St/Pomona/CA/92746/German/Sophomore/909-123-4567/roliver@coyote.csusb.edu/1003
+600011/Jesse/Gomez/M/11-APR-92/Renting/None/Student Apartment///Philosphy/None/135 Wilshire Blvd/Chino/CA/92465/Italian/Junior/909-765-4321/jgomez@coyote.csusb.edu/1001
+600012/Paul/Darkwa/M/01-JAN-81/Waiting/None//Art Inder//Psychology/Wheelchair/3634 Torrent Rd/Ontario/CA/92665/American/Freshman/909-101-1010/pdarkwa@coyote.csusb.edu/1005
+600013/Susan/Storey/F/02-FEB-82/Waiting/None//Ashley Doherty/Computer Science/Communications/Blind/3260 Peak St/Rialto/CA/92344/American/Senior/909-202-2020/sstorey@coyote.csusb.edu/1003
+600014/Melanie/Williams/F/03-MAR-83/Renting/None/Residence Hall/William Tell//Physics/None/896 Asus St/Loma Linda/CA/92377/American/Freshman/909-303-3030/mwilliams@coyote.csusb.edu/1001
+
+Instructor
+
+Richard Botting/rbotting@csusb.edu/456-789-1230
+Josephine Mendoza/jmendoza@csusb.edu/654-321-9870
+Owen Murphy/omurphy@csusb.edu/987-654-3210
+Kay Zemoudeh/kzemoudeh@csusb.edu/303-123-3030
+Arturo Concepcion/aconcepcion@csusb.edu/665-456-7787
+Yasha Karant/ykarant@csusb.edu/214-666-4524
+
+
+Course
+
+CSE572/Database Systems/PS110/Josephine Mendoza/Computer Science
+CSE330/Data Structures/JB359/Kay Zemoedeh/Computer Science
+CSE201/Computer Science I/JB358/Richard Botting/Computer Science
+CSE202/Computer Science II/JB360/Richard Botting/Computer Science
+CSE455/Software Engineering/JB120/Arturo Concepcion/Computer Science
+CSE488/Ethics/UH120/Yasha Karant/Computer Science
+CSE350/File Systems/UH220/Owen Murphy/Computer Science
+Comm311/Business Communications/UH350/Yasha Karant/Communication
+CSE460/Operation Systems/JB114/Kay Zemoudeh/Computer Science
+CSE580/Advanced Databases/JB220/Josephine Mendoza/Computer Science
+
+Takes Course
+
+6001/CSE572
+6002/CSE330
+6003/CSE202
+6004/CSE350
+6005/CSE580
+6006/Comm311
+6007/CSE572
+6008/CSE350
+6009/CSE460
+6010/CSE455
+6011/CSE460
+6012/CSE330
+6013/CSE580
+6014/CSE201
+6001/CSE455
+6002/CSE488
+6003/CSE488
+6004/CSE460
+6005/CSE460
+6006/CSE488
+6007/CSE330
+6008/Comm311
+6009/CSE350
+6010/CSE580
+6011/CSE580
+6012/Comm311
+6013/CSE488
+
+Rented residence
+
+2001/4135 Sierra St. San Bernardino, CA. 92408
+2002/1621 Euerka St. San Bernardino, CA. 92407
+2003/1317 5th St. San Bernardino, CA. 92408
+2004/14 University Ave. San Bernardino, CA. 92407
+2005/74 Euerka St. San Bernardino, Ca. 92408
+2006/123 4th St. San Bernardino, CA. 92407
+2007/14 Market Ave. San Bernardino, CA. 92408
+2008/35 Kinsey Ave. San Bernardino, CA. 92407
+2009/280 Drake Dr. San Bernardino, CA. 92408
+2010/654 Lincoln Ave. San Bernardino, Ca. 92408
+2011/719 Waterman Ave. San Bernardino, CA. 92408
+2012/4564 Waver Ave. San Bernardino, Ca. 92408
+
+Room
+
+3001/300/2001
+3002/400/2002
+3003/500/2003
+3004/475/2004
+3005/480/2005
+3006/350/2006
+3007/600/2007
+3008/500/2008
+3009/400/2009
+3010/300/2010
+3011/350/2011
+3012/450/2012
+
+Residence Hall
+
+Serrano Village/Jermey Piven/654-789-1451/2001
+Arrowhead Village/Anthony Cooper/123-467-9998/2002
+University Village/Melissa Anderson/606-606-1244/2003
+Mountainside Village/Jacob Wright/124-657-1164/2004
+Athena Village/Steven Ortega/995-654-4459/2005
+Sunrise Village/Lisa Riton/652-456-7778/2006
+
+Student Apartment
+
+7001/3/1001/2007
+7002/4/1002/2008
+7003/1/1003/2009
+7004/0/1003/2010
+7005/2/1002/2011
+7006/1/1001/2012
+
+Inspection Report
+
+15-OCT-12/Satisfactory/Apartment in satisfactory condition.  No problems/7001
+16-OCT-12/Unsatisfactory/Apartment in unsatisfactory condition.  Holes in walls./7002
+17-OCT-12/Satisfactory/Apartment in satisfactory condition.  No problems/7003
+18-OCT-12/Unsatisfactory/Apartment in unsatisfactory condition.  Carpet had fire damage/7004
+19-OCT-12/Unsatisfactory/Apartment in unsatisfactory condition.  Spray Paint on walls/7005
+20-OCT-12/Satisfactory/Apartment in satisfactory condition.  No problems/7006
+15-FEB-13/Satisfactory/Apartment in satisfactory condition.  No problems/7001
+16-FEB-13/Satisfactory/Apartment in satisfactory condition.  No problems/7002
+
+Rents
+
+600014/3001/10000/1
+600002/3002/10001/2
+600001/3003/10002/3
+600003/3004/10003/4
+600004/3005/10004/5
+600007/3006/10005/6
+600005/3007/10006/7
+600009/3008/10007/8
+600006/3009/10008/9
+600008/3010/10009/10
+600010/3011/10010/11
+600011/3012/10011/12
+
+Invoice
+
+4001/Credit/1317 5th St. San Bernardino, CA. 92408/25-SEP-12/3003/30-SEP-12/3/600001/10002
+4002/Debit/1621 Euerka St. San Bernardino, CA. 92407/25-SEP-12/3002/30-SEP-12/2/600002/10001
+4003/Cash/14 University Ave. San Bernardino, CA. 92407/14-SEP-12/3004/30-SEP-12/4/600003/10003
+4004/Credit/74 Euerka St. San Bernardino, Ca. 92408/26-SEP-12/3005/30-SEP-12/5/600004/10004
+4005/Cash/14 Market Ave. San Bernardino, CA. 92408/24-SEP-12/3007/30-SEP-12/7/600005/10006
+4006/Credit/123 4th St. San Bernardino, CA. 92407/03-OCT-12/3006/30-SEP-12/6/600007/10005
+4007/Check/280 Drake Dr. San Bernardino, CA. 92408/29-SEP-12/3009/30-SEP-12/9/600006/10008
+4008/Credit/654 Lincoln Ave. San Bernardino, Ca. 92408/27-SEP-12/3010/30-SEP-12/10/600008/10009
+4009/Check/35 Kinsey Ave. San Bernardino, CA. 92407/29-SEP-12/3008/30-SEP-12/8/600009/10007
+4010/Check/719 Waterman Ave. San Bernardino, CA. 92408/28-SEP-12/3011/30-SEP-12/11/600010/10010
+4011/Check/35 Kinsey Ave. San Bernardino, CA. 92407/14-JAN-13/3008/30-JAN-13/8/600009/10007
+4012/Credit/4564 Waver Ave. San Bernardino, Ca. 92408/24-SEP-12/3012/30-SEP-12/12/600011/10011
+4013/Check/719 Waterman Ave. San Bernardino, CA. 92408/13-JAN-13/3011/30-JAN-13/11/600010/10010
+4014/Check/4135 Sierra St. San Bernardino, CA. 92408/27-SEP-12/3001/30-SEP-12/1/600014/10000
+4015/Debit/1621 Euerka St. San Bernardino, CA. 92407/10-FEB-13/3002/30-JAN-13/2/600002/10001
+4016/Credit/1317 5th St. San Bernardino, CA. 92408/27-JAN-13/3003/30-JAN-13/3/600001/10002
+4017/Cash/14 University Ave. San Bernardino, CA. 92407/27-JAN-13/3004/30-JAN-13/4/600003/10003
+4018/Cash/14 Market Ave. San Bernardino, CA. 92408/27-JAN-13/3007/30-JAN-13/7/600005/10006
+
+Reminder
+
+15-SEP-12/4001
+15-SEP-12/4002
+15-SEP-12/4004
+15-SEP-12/4005
+15-SEP-12/4006
+01-OCT-12/4006
+15-SEP-12/4007
+15-SEP-12/4008
+15-SEP-12/4009
+15-SEP-12/4010
+15-SEP-12/4012
+15-SEP-12/4014
+15-JAN-13/4015
+01-FEB-13/4015
+15-JAN-13/4016
+15-JAN-13/4017
+15-JAN-13/4018

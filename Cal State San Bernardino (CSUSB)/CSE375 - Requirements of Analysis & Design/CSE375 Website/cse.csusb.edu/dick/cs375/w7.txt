@@ -1,0 +1,66 @@
+. Assigned Work 7: The Second complete set of Models
+.Table Version#	Date	Description	Author
+.Row 0	2005-03-03	Copied from W6 and edited	RJB
+.Row 1	2005-03-03	More specific rules	RJB
+.Close.Table
+We are now two thirds of the way through the course and you should
+have collected a lot of ideas about your project: 
+Requirements, domain, and design.
+
+Now is the time to review it and redo as needed.
+. Given
+.List
+ Requirements
+.Set
+	Vision
+	Business Case
+	Use Cases
+ SSDs of interesting scenarios
+	Supplementary Specifications(if any)
+	Business Rules(if any)
+	Glossary
+.Close.Set
+ Domain model (classes, associations, and some attributes)
+ Design
+.List
+	A first logical architecture
+	Interaction diagrams (sequence or communication).
+	DCD -- Design Class Diagram that supports the interaction diagrams.
+.Close.List
+.Close.List
+. Paper Deliverables
+The deliverables form a packet and every element in the packet should
+be there in the listed order.
+.Key Model 2:
+.List
+	Vision + Business case
+	Use cases: more fully dressed ones... more scenarios
+	Use case model
+	Supplementary specifications: desirable qualities.
+	Domain model
+	Architecture -- package diagram
+	Glossary: define your terms 
+	Business Rules: any special domain rules.
+	System Sequence Diagrams for some interesting scenarios.
+	Interactions: sequence or communication diagrams for some interesting
+messages in your SSD.
+One interaction per interesting message!
+	Design classes that support your interactions.
+All in a single design class diagram.
+	Include some comments explaining why (GRASP) you choose that assignment of messages to classes.
+.Close.List
+. In Class Deliverable
+Present the most exciting (least boring?) discovery you made in creating the paper work.
+
+Special rule for 2008:  NO Logins!
+. Process
+.List
+	Review previous documentation.
+	Think...
+	Add new scenarios and use cases...
+	Think and edit existing...
+.Close.List
+. Grading
+Everything should fit together.
+This time I will be requiring better use of GRASP.
+

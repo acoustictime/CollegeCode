@@ -1,0 +1,7 @@
+1 OpeningBalance 155
+2 Interest 0.518389
+3 Withdraw 50
+4 Deposit 1000
+5 Deposit 1000
+6 Interest 7.04178
+7 Interest 7.06526

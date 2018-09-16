@@ -1,0 +1,87 @@
+<html>
+
+<!-- Mirrored from cse.csusb.edu/kay/cs330/lab2.html by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 27 Mar 2012 14:57:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+<title>CSE 330 Lab 2</title>
+</head>
+<body>
+
+<h1>CSE 330 Lab 2: Time Complexity</h1>
+
+<p>
+Empirically test the assertion that the execution times of
+selection sort, bubble sort, and insertion sort
+algorithms are in O(n<sup>2</sup>).
+To do this, implement and execute each algorithm using vectors of different sizes
+and record the execution times. If an algorithm is indeed in 
+O(n<sup>2</sup>), there must exist a constant c such that for any n the
+execution time is c * n<sup>2</sup>.
+Implement each algorithm and first make sure the corresponding program works correctly.
+Then for each n determine the execution time and
+the value of n<sup>2</sup>. Now working your way backward you could compute the 
+value of c by dividing the execution time by n<sup>2</sup>. If the values
+of c are roughly equal for each n then the algorithm is indeed in O(n<sup>2</sup>).
+</p>
+You could use the <tt>time</tt> command to measure how much time your program takes for a given value of n. Run your program as follows:
+<pre>time a.out > output</pre>
+where the user enters n and the program generates a vector (of size n) of random integers in the range [0-1,000,000).
+The program then proceeds to sort and output the numbers into <tt>output</tt> file. 
+<strong> It is important to make sure that n is a user input and the above output redirection is used. Otherwise, the typescript of the sample runs would get unmanageably too large!</strong>
+After the program terminates, the <tt>time</tt> command prints real, user, and system times. You are interested in user time. Type 
+<pre>man time</pre> to learn more about this command.
+<br>
+Run each program 10 times starting with n = 1,000 and incrementing n each time by 1,000.
+<br>
+Hand in a printout of each program, the typescript of all 10 runs for each program, and the following completed table for each program/algorithm:
+<br>
+<br>
+<table border="1">
+<tr>
+<td>n</td> <td>n<sup>2</sup></td> <td>Exec Time (sec)</td> <td>c = Time / n<sup>2</sup></td>
+</tr>
+<tr>
+<td>1,000</td> <td>1,000,000</td> <td> ... </td> <td> ... </td>
+</tr>
+<tr>
+<td>2,000</td> <td>4,000,000</td> <td> ... </td> <td> ... </td>
+</tr>
+<tr>
+<td> ... </td> <td> ... </td> <td> ... </td> <td> ... </td>
+</tr>
+<tr>
+<td> 10,000 </td> <td> 100,000,000</td> <td> ... </td> <td> ... </td>
+</tr>
+</table>
+
+<br><br>
+Use STL vector v to implement all three functions where n is the size of the vector. The algorithms for the functions follow:
+
+<pre>
+//selection sort
+for (i = 0; i < n-1; i++)
+    for (j = i+1; j < n; j++)
+        if (v[i] > v[j])
+            swap(v[i], v[j])
+</pre>
+
+<pre>
+//bubble sort
+for (i = n-1; i > 0; i--)
+    for (j = 0; j < i; j++)
+        if (v[j] > v[j+1])
+            swap(v[j], v[j+1])
+</pre>
+
+<pre>
+//insertion sort
+for (i = 1; i < n; i++)
+    for (elem = v[i], j = i-1; j >=0 and elem < v[j]; j--)
+        v[j+1] = v[j]
+    v[j+1] = elem
+</pre>
+</body>
+
+<!-- Mirrored from cse.csusb.edu/kay/cs330/lab2.html by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 27 Mar 2012 14:57:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>

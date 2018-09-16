@@ -1,0 +1,46 @@
+#!/bin/bash
+echo "
+subnet 192.168.1.0 netmask 255.255.255.0 {
+
+# --- default gateway
+        range 192.168.1.128 192.168.1.254;
+        option subnet-mask              255.255.255.0;
+        option broadcast-address        192.168.1.255;
+        option domain-name              "coyote.net";
+        option domain-name-servers      139.182.2.1,192.168.1.1;
+        option routers                  192.168.1.1;
+        option time-offset              -28800; # PST
+
+
+        default-lease-time 21600;
+        max-lease-time 43200;
+" > test.conf
+
+for i in $(seq 179 190); do ping -c 1 192.168.0.$i;done
+
+arp -a > allarp.txt
+
+counter=$1
+
+usersfile="allarp.txt"
+
+while read line
+do
+       mac=$(cat -$line | arp -a | cut -d\  -f4 | grep 00:)
+       ip=$(cat -$line | arp -a | cut -d\  -f2 | cut -d\( -f2 | cut -d\) -f1)
+
+
+        echo "host host$counter" >> test.conf;
+        echo "hardware ethernet $mac;">> test.conf;
+        echo "fixed-address $ip;">> test.conf;
+
+        counter=$(($counter + 1))
+
+
+done < $usersfile;
+
+
+exit;
+
+
+

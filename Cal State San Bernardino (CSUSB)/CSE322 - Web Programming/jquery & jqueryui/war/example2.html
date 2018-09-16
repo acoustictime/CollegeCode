@@ -1,0 +1,62 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>CSUSB CSE322 James Small</title>
+    <link type="text/css" rel="stylesheet" href="tictac_style.css"> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/example2.js"></script>
+  </head>
+ 
+  <body>
+
+  </div>
+    <h1>CSUSB CSE322 James Small</h1>
+    
+    <ul id="nav">
+    	<li onclick="back()">Back</li>
+    </ul>
+    
+    <div id="section_split"></div>
+    
+    <h3>Tic Tac Toe - Bet You Can't Win!</h3>
+    
+    <div id="result">Result =</div>
+   
+    <table id="mainBox">
+		<tr>
+			<td class="empty" id="one" onclick="buttonClicked(one)"></td>
+			<td class="empty" id="two" onclick="buttonClicked(two)"></td>
+			<td class="empty" id="three" onclick="buttonClicked(three)"></td>
+		</tr>
+		<tr>
+			<td class="empty" id="four" onclick="buttonClicked(four)"></td>
+			<td class="empty" id="five" onclick="buttonClicked(five)"></td>
+			<td class="empty" id="six" onclick="buttonClicked(six)"></td>
+		</tr>
+		<tr>
+
+			<td class="empty" id="seven" onclick="buttonClicked(seven)"></td>
+			<td class="empty" id="eight" onclick="buttonClicked(eight)"></td>
+			<td class="empty" id="nine" onclick="buttonClicked(nine)"></td>
+		</tr>
+    </table>
+      
+	<div id="summary">
+		<div id="resetButton"><button onclick="reset()">New Game</button></div>
+		<div id="wins">Wins = 0</div>
+		<div id="losses">Lose = 0</div>
+		<div id="draws">Draws = 0</div>
+
+	</div>
+  </body>
+</html>

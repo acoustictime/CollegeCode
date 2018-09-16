@@ -1,0 +1,58 @@
+.Open Example Winter 2010 -- How to organize The Frequently Asked Questions on this site
+.Open Blog
+ Jan 27th. RJB generated the missing Domain Model graphic. and added UCs.
+ Jan 22nd. RJB drew first domain model. 
+ Jan 21st. RJB explained the problem to the class and elicited first use case.
+RJB initiated file with glossary.
+.Close Blog
+. Vision
+A piece of software that will $rapidly organize the accumulated questions and answers
+.See Use Case 1
+for a topic in this course.
+
+.Open Use Case 1 -- Organize FAQs
+(UC1Name): organize FAQs
+(UC1Primary actor): me -- faculty, harassed, confused.
+(UC1Main scenario): 
+.List
+  user gives file name and system finds it.
+  system sorts the file by page number ($Risk1)
+  user reviews result
+  system publishes result
+.Close.List
+.Close
+. Use Case 2 -- Add a new FAQ to an organized set of FAQs
+
+. Use Case 3 -- Delete FAQ from set of FAQs
+
+. Use Case 4 -- Edit a FAQ
+
+. Note
+Are UC2,3,4 too detailed? All parts of a larger Usecase.
+
+. Qualities
+(rapidly): Some response in a tenth of a second, complete reorganization within
+5 seconds in 99.9% of cases.
+
+. Risks
+(Risk1): Is the format consistent for page numbers?  Answer: NO.
+
+. Domain Model
+A set of FAQs contain many FAQ, and each FAQ has a headline and a number
+(0 or more) other lines.
+
+.Image example2010domain.png [FAQs<*>-FAQ<*>--Line]
+
+. Glossary and Data Dictionary
+FAQ::glossary="Frequently Asked Question".
+
+FAQ::data=headline #nonheadline.
+FAQs::= #FAQ, any number of FAQ.
+headline::= ". " line.
+nonheadline ::= line ~ headline.
+line::= #(char~eoln) eoln.
+
+Details in
+.See http://cse.csusb.edu/dick/maths/
+
+.Close Example Winter 2010 -- How to organize The Frequently Asked Questions on this site

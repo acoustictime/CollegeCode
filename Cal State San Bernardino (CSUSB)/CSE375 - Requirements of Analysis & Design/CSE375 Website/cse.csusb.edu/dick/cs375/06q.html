@@ -1,0 +1,754 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/06q.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:54:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+Questions and Answers on Domain Models and Elaboration
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="06q.txt">Text Version</A>]
+ 06q.html 
+Wed Jan 11 07:25:34 PST 2012
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="06q.html#Questions and Answers on Domain Models and Elaboration">Questions and Answers on Domain Models and Elaboration</A>
+<li><a href="06q.html#Chapter 5 pages 121-157 -- Why Domain Models Why not Glossary">: Chapter 5 pages 121-157 -- Why Domain Models Why not Glossary</A>
+<li><a href="06q.html#Chapter 6 pages -- Domain Model">: Chapter 6 pages -- Domain Model</A>
+<li><a href="06q.html#Chapter 6 pages 121-157 -- Domain Models Optional">: Chapter 6 pages 121-157 -- Domain Models Optional</A>
+<li><a href="06q.html#Chapter 8 page 12? -- Use cases vs domain models">: Chapter 8 page 12? -- Use cases vs domain models</A>
+<li><a href="06q.html#Chapter 9 pages 131-157 -- Domain Models vs Use Cases">: Chapter 9 pages 131-157 -- Domain Models vs Use Cases</A>
+<li><a href="06q.html#Chapter 9 pages 134-136 -- Domain Model">: Chapter 9 pages 134-136 -- Domain Model</A>
+<li><a href="06q.html#Chapter 8 pages 121-157 -- How to find Conceptual Classes">: Chapter 8 pages 121-157 -- How to find Conceptual Classes</A>
+<li><a href="06q.html#Chapter 8 pages 121-157 -- Important Factors in Domain model">: Chapter 8 pages 121-157 -- Important Factors in Domain model</A>
+<li><a href="06q.html#Chapter 8 pages 121-130 -- Coding?">: Chapter 8 pages 121-130 -- Coding?</A>
+<li><a href="06q.html#Chapter 8 pages 126-127 -- Elaboration">: Chapter 8 pages 126-127 -- Elaboration</A>
+<li><a href="06q.html#Chapter 8 pages 127 -- Elaboration">: Chapter 8 pages 127 -- Elaboration</A>
+<li><a href="06q.html#Chapter 8 pages 129 -- Elaboration Artifacts">: Chapter 8 pages 129 -- Elaboration Artifacts</A>
+<li><a href="06q.html#Chapter 8 pages -- elaboration">: Chapter 8 pages -- elaboration</A>
+<li><a href="06q.html#Chapter 8 pages 127 -- Difficult things first">: Chapter 8 pages 127 -- Difficult things first</A>
+<li><a href="06q.html#Chapter 8 pages 128 -- What Artifacts May Start in Elaboration?">: Chapter 8 pages 128 -- What Artifacts May Start in Elaboration?</A>
+<li><a href="06q.html#Chapter 9 pages 131-150 -- Domain Models needed or Visual Aid">: Chapter 9 pages 131-150 -- Domain Models needed or Visual Aid</A>
+<li><a href="06q.html#Chapter 9 pages 131-139 -- Domain Model Necessary">: Chapter 9 pages 131-139 -- Domain Model Necessary</A>
+<li><a href="06q.html#Chapter 9 pages 131 -- Domain Modeling">: Chapter 9 pages 131 -- Domain Modeling</A>
+<li><a href="06q.html#Chapter 9 pages 131 : Domain Model -- whay wait until elaboration">: Chapter 9 pages 131 : Domain Model -- whay wait until elaboration</A>
+<li><a href="06q.html#Chapter 9 pages 131-173 : Domain Models vs DFDs">: Chapter 9 pages 131-173 : Domain Models vs DFDs</A>
+<li><a href="06q.html#Chapter 9 pages 121-171 -- how much different are the domain models from data model">: Chapter 9 pages 121-171 -- how much different are the domain models from data model</A>
+<li><a href="06q.html#Chapter 9 pages 134-135 -- Domain Model as Visual Dictionary">: Chapter 9 pages 134-135 -- Domain Model as Visual Dictionary</A>
+<li><a href="06q.html#Chapter 9 Page 135 Why are Software artifacts not in the Domain model">: Chapter 9 Page 135 Why are Software artifacts not in the Domain model</A>
+<li><a href="06q.html#Chapter 9 pages 135-136 What is a domain model">: Chapter 9 pages 135-136 What is a domain model</A>
+<li><a href="06q.html#Chapter 9 Page 139 How to find conceptual classes">: Chapter 9 Page 139 How to find conceptual classes</A>
+<li><a href="06q.html#Chapter 9 Pages 136-173 Topic Conceptual Classes">: Chapter 9 Pages 136-173 Topic Conceptual Classes</A>
+<li><a href="06q.html#Chapter 9.3 Page 137 The Domain Layer">: Chapter 9.3 Page 137 The Domain Layer</A>
+<li><a href="06q.html#Chapter 9.3 Page 137 Domain layer vs Domain vs other layers">: Chapter 9.3 Page 137 Domain layer vs Domain vs other layers</A>
+<li><a href="06q.html#Chapter 9 pages 136-137 -- Are domain layers part of the domain model">: Chapter 9 pages 136-137 -- Are domain layers part of the domain model</A>
+<li><a href="06q.html#Chapter 9 pages 136-137 -- Do we need to worry about domain layers now">: Chapter 9 pages 136-137 -- Do we need to worry about domain layers now</A>
+<li><a href="06q.html#Chapter 9 pages 136 -- Conceptual Classes">: Chapter 9 pages 136 -- Conceptual Classes</A>
+<li><a href="06q.html#Chapter 9 pages 146 -- Attributes vs Classes">: Chapter 9 pages 146 -- Attributes vs Classes</A>
+<li><a href="06q.html#Chapter 9 pages 143-147 Description and conceptual classes">: Chapter 9 pages 143-147 Description and conceptual classes</A>
+<li><a href="06q.html#Chapter 9 Pages 149-150 associations vs description classes">: Chapter 9 Pages 149-150 associations vs description classes</A>
+<li><a href="06q.html#Chapter 9 pages 146 -- Mistakes in Domain Models">: Chapter 9 pages 146 -- Mistakes in Domain Models</A>
+<li><a href="06q.html#Chapter 9 pages 155 -- Associations">: Chapter 9 pages 155 -- Associations</A>
+<li><a href="06q.html#Chapter 9 pages 145 -- iterative domain model">: Chapter 9 pages 145 -- iterative domain model</A>
+<li><a href="06q.html#Chapter 9.15 pages 157 -- Domain Models in CS372">: Chapter 9.15 pages 157 -- Domain Models in CS372</A>
+<li><a href="06q.html#Chapter 9 pages 139-141 -- Domain Models (Conceptual Classes)">: Chapter 9 pages 139-141 -- Domain Models (Conceptual Classes)</A>
+<li><a href="06q.html#Chapter 9 pages 146 -- Unreal World Domain Models">: Chapter 9 pages 146 -- Unreal World Domain Models</A>
+<li><a href="06q.html#Chapter 9.11 pages 146 -- Guideline: how to model the unreal world">: Chapter 9.11 pages 146 -- Guideline: how to model the unreal world</A>
+<li><a href="06q.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="Questions and Answers on Domain Models and Elaboration">Questions and Answers on Domain Models and Elaboration</A></H1><ol class=Section>
+<p>
+<H2><a name="Chapter 5 pages 121-157 -- Why Domain Models Why not Glossary">Chapter 5 pages 121-157 -- Why Domain Models Why not Glossary</A></H2>
+Why create domain models? The book said to better understand key concepts
+and vocabulary but isn't that what a glossary is for?
+<p>
+A diagram is worth 1K words.
+<p>
+Some people have visual minds.
+<p>
+A glossary does not make connections between entries visible.  A Class
+diagram does.
+<p>
+Use the glossary for details like: an sid has 9 digits. Use Domain model to
+show that every student has an sid as an attribute.
+<p>
+<H2><a name="Chapter 6 pages -- Domain Model">Chapter 6 pages -- Domain Model</A></H2>
+Is the primary purpose of the domain model to solely complement a set of
+use cases?
+<p>
+In my opinion there is more to domain modeling than complementing the use cases.
+They give different views of what is needed.
+There are two real purposes for domain models.  (1) they force you to
+understand
+the stakeholders (and users) better. (2) they are used when you design
+the
+software to serve those stakeholders.
+<p>
+<H2><a name="Chapter 6 pages 121-157 -- Domain Models Optional">Chapter 6 pages 121-157 -- Domain Models Optional</A></H2>
+On page 132 it says &quot;As with all things in an agile modeling and UP spirit,
+a domain model is optional.&quot;  Is this some kind of joke or can we option
+not to have a domain model in our project?
+How do you decide which artifacts are necessary to a project?
+<p>
+It is not a joke.  In a <span class="InlineFormula">real</span> project you decide what artifacts are worth
+doing in any given iteration and at any given time.
+<p>
+However, in this class, I have to be sure that <span class="InlineFormula">you</span> have the option to
+either produce and artifact when it is needed.
+This means
+that I will be requiring domain models for your projects -- just to give you
+some training.
+<p>
+<H2><a name="Chapter 8 page 12? -- Use cases vs domain models">Chapter 8 page 12? -- Use cases vs domain models</A></H2>
+How useful in your observations is it to have domain models separate from
+use cases (and how often is it beneficial) to do the domain modeling?
+<p>
+I used domain models for 20 years before we had use cases.  Domain modeling
+has
+been that vital first step in most of my projects for a long time.  However these
+days I may sketch out some use cases first to get an idea of what
+are the important parts of the real world that my software has to
+work with.
+<p>
+They do different things:  the use cases force you to provide something of
+clear value to the user and stakeholders.  The domain model provides you with a structure
+that helps you figure out the internal details of object oriented design.
+<p>
+So you need a mix of both.  Use Cases focuses your effort on the
+things in the domain that need modeling, and Domain models
+inspire some of the details your design.
+<p>
+I think that putting a domain model (graphic) and a ton of use cases
+in a single document is unwise.
+<p>
+<H2><a name="Chapter 9 pages 131-157 -- Domain Models vs Use Cases">Chapter 9 pages 131-157 -- Domain Models vs Use Cases</A></H2>
+Use cases feel much more intuitive than domain models.  What do domain
+models expose that use cases do not?
+<p>
+The reality behind the things the users want to do.   A set of use cases
+can tell you what people need to do ... a domain model connects
+the dots.
+<p>
+A use case answer the question &quot;how does a student enroll in a course&quot;,
+a domain models can rapidly answer questions like &quot;how many courses
+can a student be enrolled in at one time&quot;.
+<p>
+<H2><a name="Chapter 9 pages 134-136 -- Domain Model">Chapter 9 pages 134-136 -- Domain Model</A></H2>
+Are conceptual models, domain object models, and analysis object models,
+the same as domain model?
+<p>
+Not quite.   Conceptual models can be Chen style ERD/data base designs.
+A domain model is simpler and omits some classes and lots of attributes.
+<p>
+I think a domain object model is the same as Larman's &quot;domain model&quot;.
+<p>
+Analysis object models are very similar to domain models.
+<p>
+<p>
+We divide up a complex piece of software into layers -- there is
+a lot more on this coming in the rest of the class.  Each layer
+is a collection of related classes.  One layer contains a lot of
+information about the User Interfaces.  The next layer is the
+&quot;Domain Layer&quot; which implements the classes that reflect the business:
+the rules, entities, etc. Inside that we have some very technical layers
+like the &quot;Persistence layer&quot; that looks after the data base.
+<p>
+More later in the course.
+<p>
+.
+<H2><a name="Chapter 8 pages 121-157 -- How to find Conceptual Classes">Chapter 8 pages 121-157 -- How to find Conceptual Classes</A></H2>
+Listen to the stakeholders.  Look in your use cases for nouns.
+For more see
+[<A href="06.html"> 06.html </A>]
+and pages 138 onward.
+<p>
+<H2><a name="Chapter 8 pages 121-157 -- Important Factors in Domain model">Chapter 8 pages 121-157 -- Important Factors in Domain model</A></H2>
+What are the important factors of using a domain model?
+<p>
+When drawing a model -- listening to the stakeholders and accurately
+drawing what they are thinking.  Secondly -- not making the model
+over elaborate: no operations, few attributes, no data types,...  put
+data details in Glossary/Data Dictionary.  Rough at first -- tidy when
+presenting.
+<p>
+Later when designing you'll need a readable picture of the stakeholder's
+world as a source of Design Classes.
+<p>
+<p>
+<H2><a name="Chapter 8 pages 121-130 -- Coding?">Chapter 8 pages 121-130 -- Coding?</A></H2>
+Is the elaboration phase the first phase you can start coding? If so how
+much should you be coding?
+<p>
+You can code up a few prototypes in inception, but the real start of
+high-quality code is in elaboration.
+<p>
+<p>
+<H2><a name="Chapter 8 pages 126-127 -- Elaboration">Chapter 8 pages 126-127 -- Elaboration</A></H2>
+It was indicated that the inception phase may last only one week. How long
+should the Elaboration phase last?
+<p>
+<p>
+It will depend on the project -- how many iterations will it take to
+resolve all the
+really unstable and risky requirements?
+<p>
+<H2><a name="Chapter 8 pages 127 -- Elaboration">Chapter 8 pages 127 -- Elaboration</A></H2>
+The book says that elaboration involves programming and testing the core
+risky software architecture, discovering and stabilizing the majority of
+the requirements, and mitigating and retiring the major risks, this list
+makes elaboration seem complex and difficult; is elaboration the most
+difficult phase in the unified process?
+<p>
+I think it is.  Also the least boring and most creative.   Unless, of
+course,
+you enjoy coding well understood requirements using well designed classes.
+<p>
+<H2><a name="Chapter 8 pages 129 -- Elaboration Artifacts">Chapter 8 pages 129 -- Elaboration Artifacts</A></H2>
+Out of the artifacts for the elaborations phase which is the most important
+one that should be done first?
+<p>
+The one that teaches you most about the project.
+<p>
+Ask &quot;What don't we know?&quot; and then look for a way to learn and record the
+data.
+<H2><a name="Chapter 8 pages -- elaboration">Chapter 8 pages -- elaboration</A></H2>
+How many artifacts do we need for the elaboration phase?
+<p>
+It depends on the project -- each use case leads to an artifact... so
+many use cases means many artifacts.
+<p>
+<H2><a name="Chapter 8 pages 127 -- Difficult things first">Chapter 8 pages 127 -- Difficult things first</A></H2>
+The idea of iterations is to give a little improvement to the stakeholders
+at a time, right?  So if you handle the difficult tasks first, it could
+take a long time to get that first iteration done, and then if they hate
+it, you have nothing.  So wouldn't it be better to do something not so
+difficult first and then the most difficult thing?
+<p>
+I used to agree with you.  But no longer. Now I say:
+&quot;Tackle Risks before they tackle you.&quot;
+<p>
+In my research into software development projects
+I found out that
+many projects go over schedule
+and budget because they discover some bad news in the last 10% of
+the available time.  So it is a wise strategy to go for the
+&quot;interesting&quot; things first.
+<p>
+Notice that if the leading risk is that the stakeholders will loose faith
+in you
+then the first priority will be to do something that will
+win their confidence -- for example a rapid (easy) throw-away prototype
+during the inception phase.   Similarly if
+you are not sure what the stakeholders need then you should also
+do some throw-away prototyping in inception, and before elaboration.
+<p>
+Elaboration is about XRaying the problem like a hospital does
+before deciding on an operation -- what complications might occur?  Can
+we mitigate them?  Can we prepare for them?
+<p>
+<H2><a name="Chapter 8 pages 128 -- What Artifacts May Start in Elaboration?">Chapter 8 pages 128 -- What Artifacts May Start in Elaboration?</A></H2>
+Can you give us an example of an artifact that started in elaboration?
+<p>
+Open the front of the book. At the top of the left hand inside cover
+there is a table.  Go down the column headed Elab.  Look at each row
+that has an 's' for start in the Elab column.   Domain Model is the first
+one.
+(Today's topic).  There are 4 others.  Exercise: which?
+<p>
+<H2><a name="Chapter 9 pages 131-150 -- Domain Models needed or Visual Aid">Chapter 9 pages 131-150 -- Domain Models needed or Visual Aid</A></H2>
+Do all good projects have to contain a domain model or is it just an extra
+visual aid?
+<p>
+Yes.
+<p>
+With small projects you can get away with doing the model in your head.
+Example: there would be a single class in the model.
+Problems occur if the project expands
+and you have to explain your thoughts to somebody who just joined the team.
+<p>
+<H2><a name="Chapter 9 pages 131-139 -- Domain Model Necessary">Chapter 9 pages 131-139 -- Domain Model Necessary</A></H2>
+Is the domain model meant to be strictly followed? It seems as though its
+not necessary from a software development point of view.
+<p>
+Once upon a time we thought that the domain model was the same as
+the class diagram describing the objects implemented in the software.
+Now we know better.  The domain model is an excellent place to
+find design class names.  But the precise structures in our design
+come from analyzing the necessary interactions between objects
+needed to realize use cases.
+<p>
+<H2><a name="Chapter 9 pages 131 -- Domain Modeling">Chapter 9 pages 131 -- Domain Modeling</A></H2>
+Would it be safe to say that domain models include the relevant nouns and
+their attributes in a system?
+<p>
+Yes.
+<p>
+The hard part is the word &quot;relevant&quot;:-)
+<p>
+<H2><a name="Chapter 9 pages 131 : Domain Model -- whay wait until elaboration">Chapter 9 pages 131 : Domain Model -- whay wait until elaboration</A></H2>
+What are the advantages of doing the domain model in the elaboration phase
+as opposed to the inception phase? It would appear that having a domain
+model in place would be helpful in determining use cases.
+<p>
+I tended to agree...  But many experts and practitioners prefer
+to have the use case model first to control and guide the growth
+of the domain model.  Inception lets you pick a few important
+features and your first domain model is limited to these needs: <a href="#KISS">KISS</A>.
+<p>
+The risk of doing a domain model early is drawing things `You Ain't Gonna
+Need It`.
+<p>
+Modern methodologists aim for lean  or low ceremony methods and
+so they minimize the number of artifacts they mention and delay their
+introduction as long as they can.
+<p>
+<H2><a name="Chapter 9 pages 131-173 : Domain Models vs DFDs">Chapter 9 pages 131-173 : Domain Models vs DFDs</A></H2>
+How does a Domain Model differ from a DFD?
+<p>
+A DFD shows how data moves through an enterprise: where it comes
+from(sources), where it is stored(entities), where is is changed and
+computed
+(processes), and where it finally goes to (sinks).
+<p>
+A domain model does not show movement but ideas about the real world.
+In particular it does not show any processing/activity.
+<p>
+If you are given a DFD then you can find candidate classes and
+associations by looking at the names of: sources, stores, flows,
+and sinks.  But you must be careful to remove references to
+the implementation (data base, table, punched card(;-), ...).
+<p>
+<H2><a name="Chapter 9 pages 121-171 -- how much different are the domain models from data model">Chapter 9 pages 121-171 -- how much different are the domain models from data model</A></H2>
+<p>
+A data model shows how to organize persistent data.  A domain model
+describes the ideas in the real world surrounding the computer system.
+<p>
+You can take the domain model and remove all things that don't need to be
+remembered between use cases and add the keys and entities that normalize
+the data, and then refactor the data to get adequate performance...
+<p>
+<H2><a name="Chapter 9 pages 134-135 -- Domain Model as Visual Dictionary">Chapter 9 pages 134-135 -- Domain Model as Visual Dictionary</A></H2>
+On page 134 the books calls the Domain Model a &quot;Visual Dictionary&quot; and they
+also say that it could alternatively have been expressed in plain text by
+using the UP Glossary. Which one is better to use, the Domain Model, the UP
+Glossary, or should you use both?
+<p>
+Use both.
+<p>
+Note: In my experience, glossaries are faster with computerized tools and
+diagrams better with manual ones.  You can sketch a fast domain model
+with pencil+paper or Board+marker a lot faster than you can write down
+and sort a set of definitions.  Retrieving information from a diagram
+can be much faster than reading text...  So text is
+best on a computer system that has a good search engine.
+<p>
+<H2><a name="Chapter 9 Page 135 Why are Software artifacts not in the Domain model">Chapter 9 Page 135 Why are Software artifacts not in the Domain model</A></H2>
+A domain model is a picture of things outside the software, not inside it.
+<p>
+This is a deliberate decision to think about the problem before we try to solve it.
+We deliberately document the stakeholder's ideas before we decide how to code them.
+<p>
+<H2><a name="Chapter 9 pages 135-136 What is a domain model">Chapter 9 pages 135-136 What is a domain model</A></H2>
+Is the domain model a series of boxes showing the visualization if it has multiple steps or just one box, one small concept.
+<p>
+Domain models do not show steps in a process.  They are not flow charts!
+<p>
+The typical model is a picture of types of things and their properties and relationships.
+They show a set of entities connected by lines.  No steps.  Hardly ever just
+one box.  No series.  Think: network diagram or electrical circuit.  Or a map
+of a transport system.  Parts and connections.  Things and their properties.
+<p>
+<H2><a name="Chapter 9 Page 139 How to find conceptual classes">Chapter 9 Page 139 How to find conceptual classes</A></H2>
+The book lists three strategies for finding conceptual classes, but only
+discusses two of them. What is the best way to find the conceptual classes?
+Which do you prefer?
+<p>
+With experience you can not miss domain model classes!
+<p>
+I like to do it like this: (1) noun phrases, (2) existing models and experience, (3) categories.
+<p>
+When learning -- do it in the order suggested: patterns, categories, nouns.
+<p>
+When I grade: I DO NOT CARE how you found the classes and associations --  they just have to
+be believable when found.
+<p>
+<H2><a name="Chapter 9 Pages 136-173 Topic Conceptual Classes">Chapter 9 Pages 136-173 Topic Conceptual Classes</A></H2>
+In the definition for a conceptual class, the author vaguely defines it by
+alluding to ideas, things or objects. Why is it that a hierarchy of the
+abstraction is not considered instead? Intrinsically, it appears that
+classes should somehow be categorized as domains are divided into layers.
+Don't they?
+<p>
+Larman introduces hierarchies of abstraction later.  The UML
+of <span class="InlineFormula">generalization</span> is needed.
+<p>
+I've never seen a layered domain model.   However we do introduce layers
+in our designs to separate the user interface from the business logic for example.
+This is something different -- later.
+<p>
+<H2><a name="Chapter 9.3 Page 137 The Domain Layer">Chapter 9.3 Page 137 The Domain Layer</A></H2>
+Could you explain a example of Domain Layers?
+<p>
+Later.   The key idea is that our software has a specific set of objects whose
+purpose is to model the sate of the user's world.  It is a mirror world.   Similar
+names for the classes, associations reflect real relationships, operations that
+are triggered by real world events.  Typically, these classes rely on other &quot;layers&quot;
+to -- for example: look after the data base, communicate with the user, record errors,
+and so on.  We will talk about this layered architecture later.
+<p>
+<H2><a name="Chapter 9.3 Page 137 Domain layer vs Domain vs other layers">Chapter 9.3 Page 137 Domain layer vs Domain vs other layers</A></H2>
+Also how do domain models and domain layers differ from each other?
+<p>
+A layer is a collection of classes in the software that share a common purpose.
+Examples would be running the GUI, interfacing with the database, listening
+to the user, keeping track of what is being done, etc.
+<p>
+The domain is in the real world.  You can often kick the objects pictured in the
+domain model.   The Domain layer is inside the software -- objects. Unkickable.
+<p>
+Formal distinction: models of software, like the &quot;domain layer&quot;, include some
+extra decorations like arrowheads and diamond ends.
+<p>
+Larman and all other methodologists separate the design and code for
+doing the user interface from the design and code for the logic
+of the problem.  They are kept separate so that (1) we can rapidly change
+from one device or platform to another as needed. (2) we don't have to
+worry about two incompatible problems (look_and_feel vs how it
+works) at the same time.
+<p>
+This is one of the oldest patterns for modularizing software.
+<p>
+The domain model should avoid mentioning the user interface -- no
+screens, table, panels, HTML controls, formats, colors, etc.  This
+should be treated as a separate model.  It is a design model.
+A Domain model is a picture of the user's world outside the software
+you are designing.
+<p>
+Think of the user interface as the sides of a box
+with the logic inside and the user outside.  The domain model
+is a drawing of what is outside the box... not a diagram of
+the label on the box.  Designing the label is not the same as designing
+the device inside....
+<p>
+<H2><a name="Chapter 9 pages 136-137 -- Are domain layers part of the domain model">Chapter 9 pages 136-137 -- Are domain layers part of the domain model</A></H2>
+<p>
+No.  The domain layer is the part of the design that is inspired by the domain model.
+<p>
+<H2><a name="Chapter 9 pages 136-137 -- Do we need to worry about domain layers now">Chapter 9 pages 136-137 -- Do we need to worry about domain layers now</A></H2>
+No. Resist the temptation to do so.
+<p>
+By the end of a long project of any complexity you will
+probably abandon the domain model (except as a rough
+introduction for newcomers) and keep a special set of diagrams
+defining the domain layer in the new software.  If done
+well you'll be able to reverse engineer a domain model
+from the domain layer.
+<p>
+<p>
+<li>Chapter 9 pages 134 -- Abstraction
+What does the book mean when by, &quot;an abstraction of the conceptual
+classes&quot;?
+<p>
+An abstraction omits details.  A conceptual class is an idea about real
+things.
+<p>
+<H2><a name="Chapter 9 pages 136 -- Conceptual Classes">Chapter 9 pages 136 -- Conceptual Classes</A></H2>
+Can you give us a better definition of a conceptual class and a realistic
+model?
+<p>
+Conceptual model -- formal picture of the concepts used in a domain or
+business -- including the relationships between the concepts.
+<p>
+A model is realistic if it reflects reality rather than a computer systems.
+<p>
+<p>
+<H2><a name="Chapter 9 pages 146 -- Attributes vs Classes">Chapter 9 pages 146 -- Attributes vs Classes</A></H2>
+Can you give a better example or rule for the Guideline of Attributes vs
+Guidelines? The current guideline is &quot;If we do not think of some conceptual
+class X as a number or text in the real world, X is probably a conceptual
+class, not an attribute.&quot;
+<p>
+Not really -- this is a very good rule.  Thus things like
+Airplane, Students, Faculty, Person, Widget, Shop, CellPhone,
+Cat, Dog, Animal, ... are probably should be classes.  Typical
+attributes of a Student: age, gender, name, sid, major, program, ...
+Typical Attributes of a Faculty: age, gender, SSN, name, rank, step,
+salary, ...
+<p>
+<H2><a name="Chapter 9 pages 143-147 Description and conceptual classes">Chapter 9 pages 143-147 Description and conceptual classes</A></H2>
+What is the difference between a description class and a conceptual class?
+<p>
+The objects in a conceptual class tend to be concrete and obvious -- you trip over them if
+you walk round the factory, as it were.  Their descriptions (in the real world) are pieces
+of paper or cards or even --in a data base.
+<p>
+Example:  Go to JB359 and you will see a series of computers: jb359-01,
+jb359-02,  .... but they are all the same kind of computer.  So if
+we are maintaining an inventory of computers we would be wise to
+have &quot;Computer&quot; as a conceptual class and a separate one describing the
+type of computer: manufacturer=dell, memory=...., cpu=....., ...
+<li><span class=Formula>Lab (0..1)------(*)Computer (*)-------(1) ComputerDescription</span>
+<p>
+As a result we save one copy of the description for 30 different computers.
+<p>
+If we delete all the computers in the lab ... we can still find the data to order
+some replacements.
+<p>
+Now think about what happens if we upgrade the lab....
+and the computers are put into a cluster in the graduate lab jb361...
+THe descriptions stay the same.
+Having the description is worth while.
+<p>
+<H2><a name="Chapter 9 Pages 149-150 associations vs description classes">Chapter 9 Pages 149-150 associations vs description classes</A></H2>
+In a Domain Model, if description classes are used to eloquently present and
+describe classes, aren't associations redundant?
+<p>
+No.  You have to connect the description to the object that it applies to. That
+is what associations do.   The connect a particular item on a shelf to a
+description of that item, for example.
+<p>
+<H2><a name="Chapter 9 pages 146 -- Mistakes in Domain Models">Chapter 9 pages 146 -- Mistakes in Domain Models</A></H2>
+The author mentions a couple of mistakes with Attributes vs. Classes. What
+are some other mistakes that are made that the author did not mention?
+<p>
+I know of a common mistake that people make with associations ...
+showing a link that is the same as a chain of associations.
+<p>
+For example: in a genealogy program you will probably need the idea
+&quot;Grandfather&quot; but you wouldn't show it if you already have &quot;Father&quot;
+and &quot;Parent&quot; because a grandfather is the father of a parent, and
+any father of a parent is a grandfather.
+<p>
+The definition of grandfather would go in the project glossary.
+Using discrete math:
+<li><a name="grandfather">grandfather</A>::= father o parent.
+<p>
+Exercise:  why don't you define
+<li><a name="grandfather">grandfather</A>::= father o father.
+<p>
+However sometimes you may need the extra association.  For example,
+in some cultures a boy has a special relationship with a paternal
+uncle -- a brother of the boy's father.   And at first sight you might
+think that this means that we don't need a &quot;paternalUncle&quot;.  But this
+is wrong when there is one designated &quot;parentalUncle&quot; among the many
+possible brother's of the boy's father.
+<p>
+There is a way to record, in the UML, the constraint that &quot;parentalUncle&quot;
+is one of many but we won't stress it in this class.
+<p>
+<p>
+<H2><a name="Chapter 9 pages 155 -- Associations">Chapter 9 pages 155 -- Associations</A></H2>
+Can you please elaborate on how two classes can have multiple associations?
+<p>
+They can play different rolls to each other.  For example -- A faculty
+member can be the adviser of a Student and also teach that student.
+A faculty member can be a member of a department and teach for
+another (or the same) department -- so two distinct associations.
+I once knew a teach whose daughter was in the same school -- two
+associations: daughter----father and student----teacher.
+<p>
+<H2><a name="Chapter 9 pages 145 -- iterative domain model">Chapter 9 pages 145 -- iterative domain model</A></H2>
+should there be simpler domain models showing classes, then attributes and
+links, multiple models? or just one big one.
+<p>
+You end up with one big one -- as long as it fits on a board/poster/piece
+of paper.
+<p>
+Teachers typically introduce one bit of the UML at a time.
+<p>
+For presentations however you often need to hide the details!
+<p>
+One reason for using a tool like DIA or Rose or Umbrello is because they
+let you record the complications and display (and print)
+just the details you need.
+<p>
+I can demo this in a lab or in my office...
+<p>
+One technique is to develop a complex diagram as a team on a board,
+and then copy down the details into a
+<A name="Glossary" class="Key"> Glossary </A>
+document, and the boxes, names and links into permanent paper document.
+<p>
+Again -- Analysis and Design is more than drawing diagrams -- diagrams
+plus text.
+<p>
+<H2><a name="Chapter 9.15 pages 157 -- Domain Models in CS372">Chapter 9.15 pages 157 -- Domain Models in CS372</A></H2>
+It seems like this chapter, we had a taste of in 372, one thing I remember
+is the domain model. Will we need to do a more complete one for our
+projects? Meaning... more detailed?
+<p>
+Yes -- Domain modeling (business modeling) is a part of systems analysis
+and covered a bit in CS372.   In your projects you will probably work
+out a lot of detail -- but most models will be of the classes
+inside the software.  Business/Domain models are models of what is outside
+the computer.
+<p>
+<p>
+<H2><a name="Chapter 9 pages 139-141 -- Domain Models (Conceptual Classes)">Chapter 9 pages 139-141 -- Domain Models (Conceptual Classes)</A></H2>
+Pages 139-141 discuss finding conceptual classes for &quot;business information
+system&quot;s.  How would you find conceptual classes for game programs?
+<p>
+You imagine the game running and think about the &quot;things&quot; that the player
+thinks is on the screen/earphones.
+<p>
+For example in the &quot;Mythica&quot; game there are Gods, Heroes, Temples, Weapons,
+...
+The job of the software is to make these come alive for the player.
+<p>
+<p>
+<H2><a name="Chapter 9 pages 146 -- Unreal World Domain Models">Chapter 9 pages 146 -- Unreal World Domain Models</A></H2>
+I was wondering if you could build a domain model for the Unreal World so I
+could understand it better.
+<p>
+I'll try an do one in class...  This note is to remind you that
+in many domains some abstract things -- contracts, goals, plans,
+assignments,
+etc. are very important.
+<p>
+<H2><a name="Chapter 9.11 pages 146 -- Guideline: how to model the unreal world">Chapter 9.11 pages 146 -- Guideline: how to model the unreal world</A></H2>
+It says that some software systems are for domains that find very little
+analogy in natural business domains, and one example is software for
+telecommunications.
+<p>
+Can you give more examples?
+<p>
+This section of the book is about reminding you that some important objects
+are not physical.  An example would be a Bank Account or Certificate
+of Deposit.   These are very <span class="InlineFormula">real</span> to the owner and the bank but
+you can't touch them or kick them.
+<p>
+All Games have to simulate a world that is more or less unreal.
+<p>
+</ol><p>. . . . . . . . . ( end of section <a href="06q.html#Questions and Answers on Domain Models and Elaboration">Questions and Answers on Domain Models and Elaboration</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci Dept, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10.
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

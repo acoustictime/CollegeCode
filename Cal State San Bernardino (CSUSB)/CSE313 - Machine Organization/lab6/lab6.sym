@@ -1,0 +1,11 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	MDONE                   3024
+//	MLOOP                   301B
+//	MULT                    3008
+//	STORE                   3028
+//	X                       3005
+//	XDONE                   3015
+//	XY                      3007
+//	Y                       3006
+//	ZERO                    3020

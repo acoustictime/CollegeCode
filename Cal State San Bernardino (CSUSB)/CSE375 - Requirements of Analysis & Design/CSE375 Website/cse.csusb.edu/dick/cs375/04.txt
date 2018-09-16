@@ -1,0 +1,404 @@
+. CSci 375/04 Use Cases
+.Table Date	#	Topic (Participation 2pt)	Study pages (2 pts)	Quiz(15 pts)	Project Work(10 pts)
+.Row Previous	3	Inception	41-59	Q1(1-59)	-
+.Row Today	4	Use Cases	61-89	-	W1 (section 4.3)
+.Row Next	5	More Requirements	89-120	Q2(61-120)	-
+.Close.Table
+. Input -- Use Cases pages 61-89
+.Open An Example Use Case 2010
+(Name): organize $FAQs
+(Primary actor): me -- faculty, harrassed, confused.
+(Main scenario): 
+.List
+  user gives file name and system finds it.
+  system sorts the file by page number
+  user reviews result
+  system publishes result
+.Close.List
+Notice that the steps are too small to make a `use case`.  All use
+cases are made up of steps.
+
+Further developments in this example are in
+.See ./example2010.html
+
+
+FAQs::="Frequently Asked Questions",
+.Close An Example Use Case 2010
+
+.List
+  ++ My advice
+.See http://www/dick/cs375/usecases.html#Advice
+  + My page on use cases
+.See http://www/dick/cs375/usecases.html
+  + A
+.Key use case
+is a collection `scenarios` of an `actor` using the system 
+(and other actors perhaps) to achieve a `goal`.
+  + Definitions
+actor::="Something with behavior, goals, ...".
+scenario::text="an instance of a use case...", a list of steps
+that an actor takes with the system responses.
+use_case::set(text)="a collection of related scenarios...", a use case always has
+a main scenario where the user gets what they want in a simple way.
+main_scenario::="How the user is supposed to get what they want from the system", alternative
+scenarios spell out what can go wrong and how the system handles it.
+
+  * A use case diagram gives a nice summary of names and relationships
+of the actors and the use cases in a system.
+  * Motivation: why
+  * Functional requirements?
+  * Three Kinds of Actor: primary, secondary/supporting, off-stage.
+Notice: an actor can be the primary actor in one use case but supporting in
+a second use case, and off-stage for other use cases.
+  +++ Stakeholders are people with an interest (stake) in the new system.
+They can be primary, supporting, or off stage in any particular use case.
+  ***   Four Use case Formats/Levels:
+.List
+ +++ A name
+.See ./usecases.html#Level 1 -- Give it a name
+ 
+.Image Brief50.jpg [briefs]
+.See http://www/dick/cs375/usecases.html#Level 2 -- Brief Format
+ 
+.Image Casual50.jpg [Hawian shirt]
+.See http://www/dick/cs375/usecases.html#Level 3 -- Casual
+ 
+.Image FullyDressed50.jpg [Tuxedo]
+.See http://www/dick/cs375/usecases.html#Level 4 -- Fully Dressed
+
+.Close.List
+  * Example
+  Meaning of sections
+  Two column format?
+  **  Guidelines
+.List
+  * no user-interface details.
+  * A use case name starts with a strong verb: make, delete, manage, 
+construct, find, discover, buy, sell.
+  * TERSE.  Delete words.
+  **  Black box: no internal/invisible steps. 
+Each step involves an external actor.  Primary, secondary, or off stage.
+  Actors and their goals.
+  * How to find.
+  *** Tests for use cases: are they valuable, atomic, and not too large or small.
+  ++ A common mistake when beginning is to write a list of steps and call each step
+a `use case`.  If there is a sequence in your `use cases` then they are probably
+part of a real use case.
+  +++ I find that a combination of casual and Fully dressed is often best.  It
+identifies the primary actor and has numbered steps in the main and alternate
+scenarios... but doesn't go into the other details.  
+.Close.List
+.Close.List
+. Common error -- use cases with no main scenario
+You must clearly identify the main scenario and distinguish it from the
+alternatives.
+
+Otherwise the scenarios get very muddled and you loose tack of the user's goal.
+
+We are not trying to write a program full of selections and loops (yet).  We
+just need to separate out the various steps the user takes and link them
+to the systems visible response.
+. Why don't you like the two column format
+I don't think it is worth the effort fighting the word processor to
+keep the two columns synchronized etc.   It may look nice,
+but I (and Larman) have come to feel it costs more time
+to do than you get back from it.
+
+When we analyze a use case as part of design we use
+a UML sequence diagram that has "columns".  One for the `System` and one
+for each actor taking part.  We have tools to draw these diagrams.
+They are called SSDs.  If your process includes SSDs you don't need
+a two column use case format.
+
+SSD::="Systems Sequence Diagram", Shows the sequence of messages betweeen external actors
+and the system to achieve a scenario in a use case.
+
+In this class I require you to use SSDs for use cases.
+
+. Chapter 6 Page 70 Types of actors
+Can you clarify the differences between primary, supporting and offstage actors in relation to the system under design?
+
+I tend to call supporting actors secondary actors.
+
+All these actors are stakeholders in the system.
+
+.Key Primary actors 
+start the use case, secondary actors are accessed by the
+use case. 
+.Key Secondary actors 
+play a more passive roll.  The primary actor
+plays the active roll getting the ball rolling.  The secondary or
+supporting actors get sucked into the use case.  
+Classic examples are a Data Base Management System or a LDAP server.
+
+To large extent the name of the use case mentions the primary actors goal.  
+All use cases must have a primary actor and their goal --- or else they
+are not use cases.
+
+An 
+.Key off-stage actor 
+is a stake-holder who has an interest in the use case but doesn't
+take part in it.  Some body who does not take part but is effected by the out come.
+
+Example:  the dept chair is not taking part in this class, but
+he has an interest in it being taught on time, in the right place, and with
+some level of competence.  He/she is off-stage but a stake holder.
+
+In ham and eggs, the primary actor is eating breakfast, the pig is a secondary actor, 
+and the hen is an off-stage actor.
+
+. Chapter 6 pp 63 -- Use Case diagram or text
+I have known use case as diagram and text, but the book wrote in bold "use
+cases are not diagrams, they are text" can you elaborate more on what the 
+book has?
+
+The diagram shows a collection of use cases and so is not a use case.  This
+is like the fact that a bottle of water is not the same as a vending machine
+full of bottles of water.
+
+A use case defines a sequences of actions by a user and the system that
+gives the user some tangible outcome.  A use case diagram
+does not show the sequences. It omits important information.  But it
+summarizes  the relation between many use cases and actors instead.
+
+A use case diagram is like a bag of hard candy -- you can't
+get the benefit without extracting a candy and unwrapping it.
+
+Put it another way:  don't waste time on an elaborate diagram because
+you can get more value out of describing an interesting use case in detail.
+
+
+. Chapter 6 pp 64 -- Use-Case Model a diagram or text
+Why use-case modeling is primarily an act of writing text, not drawing 
+diagrams? I think I prefer reading diagrams than long text.
+
+My sympathies.  I agree.... but use cases are meant to be read
+(indeed written) by non-computer
+people and so diagrams get in the way.
+
+. Chapter 6 pp 6.1 -- Use case text or diagram
+When using use-cases, when do we know to use diagrams or/and text to 
+describe the scenario?
+
+Scenarios should always be text -- and inside a use case.
+The use cases fit inside a diagram.
+
+During Systems Analysis  or Business Modeling
+you can use diagrams (DFDs, Activity diagrams)
+to discover use cases.  But not in Requirements.
+
+Analyzing a very complex use case might need an activity diagram, but if
+it does then I'll bet that the a human will get lost trying to use it,  So
+it is a bad idea already.   Exception -- mapping out the interaction between a
+computer primary actor and the system under design.  Protocols....
+
+. Chapter 6 pp 64 -- use case
+I have a question about the clarity of use-cases.  In a software company 
+are they meant to be presented and thoroughly explained to the developers, 
+lets say in a meeting room, or is the use-case printed and handed to each 
+development team to read over and ask questions later?
+
+This is an important process question.  In many organizations the
+requirements are "thrown over the wall" to the developers.  Many
+people think that this is a mistake.  Either the developers should work 
+with
+stakeholders to develop use cases in special "Requirements Workshops"
+(best practice)
+or the developers draft them and get the stakeholders to
+review them (not as good)
+
+. Chapter 6 pp 66 -- Preferred Use Care Formats
+Out of the 3 common use case formats (brief, casual, fully dressed) What is
+the most popular format to use and why?
+
+Every body likes the short ones.  In practice use cases should grow as the
+project moves forward.  Each starts as just a name, then becomes brief,
+then casual, and finally fully dressed... just before working
+out how to realize it.
+
+. Chapter 6.7 pp 66 -- Preferred Use Case Format in our work
+What type of common use case format do you want us to use, Brief, Casual or
+Fully Dressed?
+
+All of them.  You need practice at all styles.  Also in a real project,
+you should, most of the time,  have use cases with all levels of detail.
+Not until the end will most of them be fully dressed.  Initially just
+1 out of 10 might be fully dressed. See
+.See ./w2.html
+for work that involves all formats.
+
+By the way -- using the fully dressed one with a good template
+is not as hard as you might think.   It is the thinking
+that takes time not the format.  And the thinking is what improves your
+software.  The format lets you share your thoughts.
+
+
+. Chapter 6 pp 73-74 -- Stakeholders and Interests
+What is the importance of Stakeholders holder's interest in the use cases?
+
+They are paying for it!!!
+
+More -- much software fails because it fails to meet the stakeholder's
+needs.
+
+When the book says "Stakeholder's Interests" it does not mean things
+like "Going to movies".  It means things like: 
+"Needs UC17 to complete within 3 seconds" and
+"Will loose job if unable to access data base."
+
+. Chapter 6 page 75 Happy Path
+Is the "Happy Path" the most likely case of a use case senario or just an example
+ of a use case? Can you put into perspective the "Happy Path"?
+
+It is not the frequency that makes a path "happy" but the happiness of
+the primary actor getting what they want in the simplest way possible.
+
+Joke: Murphy's law makes sure that the Happy Path happens alternative
+Thursdays.
+
+. Chapter 6 pp -- What is an extension
+An extension is an alternative flow.  
+An extension
+.Key extends
+another scenario by adding conditions and options to steps.
+
+If complicated an extension may be
+described as a separate use case.  This notation and technique will be covered
+later in this class.
+
+. Chapter 6 pp 74-76 -- Basic & Alternate Flow
+How come the basic flow does not include any conditions or branching? If it did
+have conditions and branching, would it be called a Alternate flow?
+
+This is to keep the main flow clean and uncluttered.  And even alternate flows should be
+kept as simple sequences if at all possible.
+
+This discipline helps!
+
+We hide the 
+.Key conditions at the start of the alternate flows.  
+That way we
+can design programs that handle the main flow nicely with out getting
+distracted.  Then the extensions/alternatives can be added to the clean,
+simple (but fragile) prototype.
+
+I think of the alternate flows as exception handlers.  The main
+flow 'throws' the exception automatically to the alternate flow.  But
+we don't have to write that.
+
+This is very nice when the alternate flow is triggered in many different
+steps.   The use case is much shorter and simpler when the main flow
+has few conditions.
+
+However -- we often have simple loops and could have a simple pair of
+branches in the main flow -- as long as you can write the step as a single
+sentence:
+.Set
+ Repeat steps 2 through 5 until exhausted.
+
+ If user likes tea then the user selects tea else user chooses coffee.
+.Close.Set
+
+
+. Chapter 6 pp 75-76 -- Extensions -- how many and how deep
+In regards to the number of extensions is there a rule of thumb? How deep 
+into an extension do you go? How many extensions do you do?
+
+There is no ideal number of extensions.  You add to them throughout the
+first three phases (and maybe even in transition).  Start with none.
+End with many.
+
+You should stop when adding an extension gives no value to the 
+stakeholders.
+
+. Chapter 6 pp 84-86 -- One or Many use cases
+When a actor faces two or more cases to complete a transaction; for example
+to purchase a car the dealer has to verify his credit record, driven
+record, being a citizen or resident and must have a current job.
+So, my question is:
+We should develop a single class diagram to show the entire process with
+their respective Use case or is better to do it separate using single Use
+cases diagram?
+
+One use case diagram per medium sized project.  One for a simple project.  Many diagrams
+only in big projects -- and put them in packages...
+
+NO CLASSES in a use case diagram.
+
+You should treat this as one use case that has several steps in its scenarios.
+So ONE BUBBLE on the use case diagram.  Expand the details like this:
+.Set
+ UC1: Purchase car
+ Prime Actor: Customer
+ Other Actors: Dealer, Credit agency, DMV, DHS,...
+ Main Scenario:
+.List
+ Purchaser expresses interest in car.
+ Dealer verifies credit record.
+ Dealer checks residence and driving record.
+ ...
+.Close.List
+.Close.Set
+
+If, AND ONLY IF, I discover the same steps appearing in other use case
+scenarios
+would I separate out these steps as a separate (secondary) use case.  We may look at
+the notation
+later in the course.
+
+. Chapter 6 pp 87-88 -- Stakeholders and Interests List
+What is a boss test? Is it just finding out if your boss is happy?
+
+I think it means: would the boss be happy to see you doing it all day.
+Example:
+.Set
+	Salesman makes a sale.
+(YES) -- useful use case
+	Salesman twiddles fingers
+(NO) -- not a useful use case
+	Salesman downloads porn.
+(NO) -- abuse case -- not useful.
+.Close.Set
+
+. Links on Use Cases
+.See http://en.wikipedia.org/wiki/Use_Case
+(Wikipedia),
+.See http://alistair.cockburn.us/index.php/Basic_use_case_template
+(Alistair Cockburn's templates),
+.See http://web.mit.edu/ssit/cis/UseCaseTemplate.html
+(Complex fully dressed template in HTML from MIT), and
+.See ./fullydressed.html
+(from here).
+.Open Example of a Simple system
+. System is called the  "Shopping Aid"
+. Vision
+A handheld, wireless device that helps shoppers buy the items that they want. A shopper has a list of items that they want. They are sold at different stores. The device keeps an up-to-date list of wanted items as the user shops.
+. Use Case -- Go Shopping
+The shopper inputs a list of wanted items and the system displays stores where they can be found. The shopper goes from store to store looking for the products that match their list.  They buy a product at the first store where they find it, mark it as bought and the system updates their list or items and stores.
+. Use Case -- Start Up
+. Use Case -- Administer User Accounts
+. Use Case -- Backup data
+. Etc.
+.Close Example of a Simple system
+. More Questions on Use Cases
+.See ./04q.html
+. Review Questions on Use Cases 1
+.See ./04r.html
+. Example from 2010
+.See ./example2010.html
+(Exercises): Write a Use Case for...
+.See ./04x.html
+. Next -- More Requirements
+Prepare by reading
+.See ./05.html
+and the assigned readings on that page.  Do as many review questions 
+.See ./05r.html
+as you have time for.
+Submit one review question+answer
+for credit.
+
+. Start Work Project Inception
+The deliverable artifacts and presentation are in
+.See ./w1.html
+and they are due at start of class 05.
+

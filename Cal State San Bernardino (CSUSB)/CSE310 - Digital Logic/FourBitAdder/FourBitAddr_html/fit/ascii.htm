@@ -1,0 +1,320 @@
+<html><body>
+<pre>
+ 
+cpldfit:  version O.61xd                            Xilinx Inc.
+                                  Fitter Report
+Design Name: FourBitAddr                         Date:  1-29-2013, 11:53AM
+Device Used: XA9536XL-15-VQ44
+Fitting Status: Successful
+
+*************************  Mapped Resource Summary  **************************
+
+Macrocells     Product Terms    Function Block   Registers      Pins           
+Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
+8  /36  ( 22%) 26  /180  ( 14%) 13 /108 ( 12%)   0  /36  (  0%) 14 /34  ( 41%)
+
+** Function Block Resources **
+
+Function    Mcells      FB Inps     Pterms      IO          
+Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
+FB1           5/18        8/54       15/90       5/17
+FB2           3/18        5/54       11/90       9/17
+             -----       -----       -----      -----    
+              8/36       13/108      26/180     14/34 
+
+* - Resource is exhausted
+
+** Global Control Resources **
+
+Global clock net(s) unused.
+Global output enable net(s) unused.
+Global set/reset net(s) unused.
+
+** Pin Resources **
+
+Signal Type    Required     Mapped  |  Pin Type            Used    Total 
+------------------------------------|------------------------------------
+Input         :    9           9    |  I/O              :    14      28
+Output        :    5           5    |  GCK/IO           :     0       3
+Bidirectional :    0           0    |  GTS/IO           :     0       2
+GCK           :    0           0    |  GSR/IO           :     0       1
+GTS           :    0           0    |
+GSR           :    0           0    |
+                 ----        ----
+        Total     14          14
+
+** Power Data **
+
+There are 0 macrocells in high performance mode (MCHP).
+There are 8 macrocells in low power mode (MCLP).
+End of Mapped Resource Summary
+**************************  Errors and Warnings  ***************************
+
+WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
+   use the default filename of 'FourBitAddr.ise'.
+*************************  Summary of Mapped Logic  ************************
+
+** 5 Outputs **
+
+Signal              Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
+Name                Pts   Inps          No.  Type    Use     Mode Rate State
+c4                  4     5     FB1_2   41   I/O     O       LOW  FAST 
+s<3>                4     4     FB1_9   5    I/O     O       LOW  FAST 
+s<2>                3     3     FB1_14  13   I/O     O       LOW  FAST 
+s<1>                4     4     FB2_2   38   I/O     O       LOW  FAST 
+s<0>                3     3     FB2_11  28   I/O     O       LOW  FAST 
+
+** 3 Buried Nodes **
+
+Signal              Total Total Loc     Pwr  Reg Init
+Name                Pts   Inps          Mode State
+fa_3/S0/fa_3/S0_D   2     2     FB1_17  LOW  
+fa_1/S0/fa_1/S0_D   2     2     FB1_18  LOW  
+c2/c2_D2            4     5     FB2_18  LOW  
+
+** 9 Inputs **
+
+Signal              Loc     Pin  Pin     Pin     
+Name                        No.  Type    Use     
+b<2>                FB1_1   40   I/O     I
+c0                  FB1_17  18   I/O     I
+a<1>                FB2_1   39   I/O     I
+a<3>                FB2_8   31   I/O     I
+a<0>                FB2_9   30   I/O     I
+a<2>                FB2_10  29   I/O     I
+b<0>                FB2_13  23   I/O     I
+b<1>                FB2_15  21   I/O     I
+b<3>                FB2_16  20   I/O     I
+
+Legend:
+Pin No. - ~ - User Assigned
+**************************  Function Block Details  ************************
+Legend:
+Total Pt     - Total product terms used by the macrocell signal
+Imp Pt       - Product terms imported from other macrocells
+Exp Pt       - Product terms exported to other macrocells
+               in direction shown
+Unused Pt    - Unused local product terms remaining in macrocell
+Loc          - Location where logic was mapped in device
+Pin Type/Use - I  - Input             GCK - Global Clock
+               O  - Output            GTS - Global Output Enable
+              (b) - Buried macrocell  GSR - Global Set/Reset
+X            - Signal used as input to the macrocell logic.
+Pin No.      - ~  - User Assigned
+*********************************** FB1  ***********************************
+Number of function block inputs used/remaining:               8/46
+Number of signals used by logic mapping into function block:  8
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB1_1   40    I/O     I
+c4                    4       0     0   1     FB1_2   41    I/O     O
+(unused)              0       0     0   5     FB1_3   43    GCK/I/O 
+(unused)              0       0     0   5     FB1_4   42    I/O     
+(unused)              0       0     0   5     FB1_5   44    GCK/I/O 
+(unused)              0       0     0   5     FB1_6   2     I/O     
+(unused)              0       0     0   5     FB1_7   1     GCK/I/O 
+(unused)              0       0     0   5     FB1_8   3     I/O     
+s<3>                  4       0     0   1     FB1_9   5     I/O     O
+(unused)              0       0     0   5     FB1_10  6     I/O     
+(unused)              0       0     0   5     FB1_11  7     I/O     
+(unused)              0       0     0   5     FB1_12  8     I/O     
+(unused)              0       0     0   5     FB1_13  12    I/O     
+s<2>                  3       0     0   2     FB1_14  13    I/O     O
+(unused)              0       0     0   5     FB1_15  14    I/O     
+(unused)              0       0     0   5     FB1_16  16    I/O     
+fa_3/S0/fa_3/S0_D     2       0     0   3     FB1_17  18    I/O     I
+fa_1/S0/fa_1/S0_D     2       0     0   3     FB1_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: a<1>               4: b<1>               7: c2/c2_D2 
+  2: a<2>               5: b<2>               8: fa_3/S0/fa_3/S0_D 
+  3: a<3>               6: b<3>             
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+c4                   .XX.X.XX................................ 5
+s<3>                 .X..X.XX................................ 4
+s<2>                 .X..X.X................................. 3
+fa_3/S0/fa_3/S0_D    ..X..X.................................. 2
+fa_1/S0/fa_1/S0_D    X..X.................................... 2
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB2  ***********************************
+Number of function block inputs used/remaining:               5/49
+Number of signals used by logic mapping into function block:  5
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB2_1   39    I/O     I
+s<1>                  4       0     0   1     FB2_2   38    I/O     O
+(unused)              0       0     0   5     FB2_3   36    GTS/I/O 
+(unused)              0       0     0   5     FB2_4   37    I/O     
+(unused)              0       0     0   5     FB2_5   34    GTS/I/O 
+(unused)              0       0     0   5     FB2_6   33    GSR/I/O 
+(unused)              0       0     0   5     FB2_7   32    I/O     
+(unused)              0       0     0   5     FB2_8   31    I/O     I
+(unused)              0       0     0   5     FB2_9   30    I/O     I
+(unused)              0       0     0   5     FB2_10  29    I/O     I
+s<0>                  3       0     0   2     FB2_11  28    I/O     O
+(unused)              0       0     0   5     FB2_12  27    I/O     
+(unused)              0       0     0   5     FB2_13  23    I/O     I
+(unused)              0       0     0   5     FB2_14  22    I/O     
+(unused)              0       0     0   5     FB2_15  21    I/O     I
+(unused)              0       0     0   5     FB2_16  20    I/O     I
+(unused)              0       0     0   5     FB2_17  19    I/O     
+c2/c2_D2              4       0     0   1     FB2_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: a<0>               3: b<0>               5: fa_1/S0/fa_1/S0_D 
+  2: a<1>               4: c0               
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+s<1>                 X.XXX................................... 4
+s<0>                 X.XX.................................... 3
+c2/c2_D2             XXXXX................................... 5
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*******************************  Equations  ********************************
+
+********** Mapped Logic **********
+
+
+c2/c2_D2 <= ((a(1) AND NOT fa_1/S0/fa_1/S0_D)
+	OR (a(0) AND b(0) AND fa_1/S0/fa_1/S0_D)
+	OR (a(0) AND c0 AND fa_1/S0/fa_1/S0_D)
+	OR (b(0) AND c0 AND fa_1/S0/fa_1/S0_D));
+
+
+c4 <= ((a(3) AND NOT fa_3/S0/fa_3/S0_D)
+	OR (a(2) AND b(2) AND fa_3/S0/fa_3/S0_D)
+	OR (a(2) AND c2/c2_D2 AND fa_3/S0/fa_3/S0_D)
+	OR (b(2) AND c2/c2_D2 AND fa_3/S0/fa_3/S0_D));
+
+
+fa_1/S0/fa_1/S0_D <= b(1)
+	 XOR 
+fa_1/S0/fa_1/S0_D <= a(1);
+
+
+fa_3/S0/fa_3/S0_D <= b(3)
+	 XOR 
+fa_3/S0/fa_3/S0_D <= a(3);
+
+
+s(0) <= NOT (a(0)
+	 XOR 
+s(0) <= NOT (((b(0) AND c0)
+	OR (NOT b(0) AND NOT c0)));
+
+
+s(1) <= fa_1/S0/fa_1/S0_D
+	 XOR 
+s(1) <= ((a(0) AND b(0))
+	OR (a(0) AND c0)
+	OR (b(0) AND c0));
+
+
+s(2) <= NOT (a(2)
+	 XOR 
+s(2) <= NOT (((b(2) AND c2/c2_D2)
+	OR (NOT b(2) AND NOT c2/c2_D2)));
+
+
+s(3) <= fa_3/S0/fa_3/S0_D
+	 XOR 
+s(3) <= ((a(2) AND b(2))
+	OR (a(2) AND c2/c2_D2)
+	OR (b(2) AND c2/c2_D2));
+
+Register Legend:
+ FDCPE (Q,D,C,CLR,PRE,CE); 
+ FTCPE (Q,D,C,CLR,PRE,CE); 
+ LDCP  (Q,D,G,CLR,PRE); 
+
+******************************  Device Pin Out *****************************
+
+Device : XA9536XL-15-VQ44
+
+
+   --------------------------------  
+  /44 43 42 41 40 39 38 37 36 35 34 \
+ | 1                             33 | 
+ | 2                             32 | 
+ | 3                             31 | 
+ | 4                             30 | 
+ | 5        XA9536XL-15-VQ44     29 | 
+ | 6                             28 | 
+ | 7                             27 | 
+ | 8                             26 | 
+ | 9                             25 | 
+ | 10                            24 | 
+ | 11                            23 | 
+ \ 12 13 14 15 16 17 18 19 20 21 22 /
+   --------------------------------  
+
+
+Pin Signal                         Pin Signal                        
+No. Name                           No. Name                          
+  1 KPR                              23 b<0>                          
+  2 KPR                              24 TDO                           
+  3 KPR                              25 GND                           
+  4 GND                              26 VCC                           
+  5 s<3>                             27 KPR                           
+  6 KPR                              28 s<0>                          
+  7 KPR                              29 a<2>                          
+  8 KPR                              30 a<0>                          
+  9 TDI                              31 a<3>                          
+ 10 TMS                              32 KPR                           
+ 11 TCK                              33 KPR                           
+ 12 KPR                              34 KPR                           
+ 13 s<2>                             35 VCC                           
+ 14 KPR                              36 KPR                           
+ 15 VCC                              37 KPR                           
+ 16 KPR                              38 s<1>                          
+ 17 GND                              39 a<1>                          
+ 18 c0                               40 b<2>                          
+ 19 KPR                              41 c4                            
+ 20 b<3>                             42 KPR                           
+ 21 b<1>                             43 KPR                           
+ 22 KPR                              44 KPR                           
+
+
+Legend :  NC  = Not Connected, unbonded pin
+         PGND = Unused I/O configured as additional Ground pin
+         TIE  = Unused I/O floating -- must tie to VCC, GND or other signal
+         KPR  = Unused I/O with weak keeper (leave unconnected)
+         VCC  = Dedicated Power Pin
+         GND  = Dedicated Ground Pin
+         TDI  = Test Data In, JTAG pin
+         TDO  = Test Data Out, JTAG pin
+         TCK  = Test Clock, JTAG pin
+         TMS  = Test Mode Select, JTAG pin
+  PROHIBITED  = User reserved pin
+****************************  Compiler Options  ****************************
+
+Following is a list of all global compiler options used by the fitter run.
+
+Device(s) Specified                         : xa95*xl-*-*
+Optimization Method                         : DENSITY
+Multi-Level Logic Optimization              : ON
+Ignore Timing Specifications                : OFF
+Default Register Power Up Value             : LOW
+Keep User Location Constraints              : ON
+What-You-See-Is-What-You-Get                : OFF
+Exhaustive Fitting                          : OFF
+Keep Unused Inputs                          : OFF
+Slew Rate                                   : FAST
+Power Mode                                  : LOW
+Ground on Unused IOs                        : OFF
+Set I/O Pin Termination                     : KEEPER
+Global Clock Optimization                   : ON
+Global Set/Reset Optimization               : ON
+Global Ouput Enable Optimization            : ON
+Input Limit                                 : 54
+Pterm Limit                                 : 25
+</pre>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

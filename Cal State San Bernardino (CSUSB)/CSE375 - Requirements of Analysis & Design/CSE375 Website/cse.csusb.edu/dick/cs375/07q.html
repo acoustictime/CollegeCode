@@ -1,0 +1,998 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/07q.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:54:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+Questions and Answers on Domain Models
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="07q.txt">Text Version</A>]
+ 07q.html 
+Wed Jan 11 07:25:37 PST 2012
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="07q.html#Questions and Answers on Domain Models">Questions and Answers on Domain Models</A>
+<li><a href="07q.html#Chapter 7 pages 151-171 -- Domain Model II">: Chapter 7 pages 151-171 -- Domain Model II</A>
+<li><a href="07q.html#Chapter 9 pages 131 -- When to start a Domain Model">: Chapter 9 pages 131 -- When to start a Domain Model</A>
+<li><a href="07q.html#Chapter 9 pages 134-136 -- domain modeling vs Software Classes">: Chapter 9 pages 134-136 -- domain modeling vs Software Classes</A>
+<li><a href="07q.html#Chapter 7 pages 168 -- Domain Models">: Chapter 7 pages 168 -- Domain Models</A>
+<li><a href="07q.html#When to use the full notation for attributes">: When to use the full notation for attributes</A>
+<li><a href="07q.html#Private visibility">: Private visibility</A>
+<li><a href="07q.html#must a class have at least one attribute to exist?">: must a class have at least one attribute to exist?</A>
+<li><a href="07q.html#Chapter 9 -- Associations and complexity">: Chapter 9 -- Associations and complexity</A>
+<li><a href="07q.html#Chapter 9 page 153 Clarify Roles and Navigability">: Chapter 9 page 153 Clarify Roles and Navigability</A>
+<li><a href="07q.html#Chapter 9 page 158 -- Why no data types">: Chapter 9 page 158 -- Why no data types</A>
+<li><a href="07q.html#Chapter 9 pages 158-162 -- More on attributes and data types">: Chapter 9 pages 158-162 -- More on attributes and data types</A>
+<li><a href="07q.html#Chapter 9 pages 161 -- Data Types">: Chapter 9 pages 161 -- Data Types</A>
+<li><a href="07q.html#Can you put attributes in a data type">: Can you put attributes in a data type</A>
+<li><a href="07q.html#Chapter 9 pages 163-164 -- When to define new data type classes">: Chapter 9 pages 163-164 -- When to define new data type classes</A>
+<li><a href="07q.html#Chapter 9 pages 162-163">: Chapter 9 pages 162-163</A>
+<li><a href="07q.html#Chapter 9 pages 163 -- Attributes and Value objects">: Chapter 9 pages 163 -- Attributes and Value objects</A>
+<li><a href="07q.html#Chapter 9 page 163 -- Attributes and Value Objects">: Chapter 9 page 163 -- Attributes and Value Objects</A>
+<li><a href="07q.html#Chapter 9 pages 163 -- Data Types vs Value Objects">: Chapter 9 pages 163 -- Data Types vs Value Objects</A>
+<li><a href="07q.html#Chapter 9 pages 163 -- data type and Value objects">: Chapter 9 pages 163 -- data type and Value objects</A>
+<li><a href="07q.html#Chapter 9 Foreign Keys -- What are Foreign Keys">: Chapter 9 Foreign Keys -- What are Foreign Keys</A>
+<li><a href="07q.html#Chapter 9 What replaces Foreign Keys in OO Domain Models">: Chapter 9 What replaces Foreign Keys in OO Domain Models</A>
+<li><a href="07q.html#Chapter 9 pages 121-171 -- Foreign Keys">: Chapter 9 pages 121-171 -- Foreign Keys</A>
+<li><a href="07q.html#Chapter 9 pages 146 -- Attributes vs Classes">: Chapter 9 pages 146 -- Attributes vs Classes</A>
+<li><a href="07q.html#Chapter 9 pages 165 -- Foreign Keys -- Just say No -- 1">: Chapter 9 pages 165 -- Foreign Keys -- Just say No -- 1</A>
+<li><a href="07q.html#Chapter 9 pages 165 -- Foreign Keys -- Just say No -- 2">: Chapter 9 pages 165 -- Foreign Keys -- Just say No -- 2</A>
+<li><a href="07q.html#Chapter 9 -- Sharing attributes in Domain Models">: Chapter 9 -- Sharing attributes in Domain Models</A>
+<li><a href="07q.html#Chapter 6 pages 157-171 -- Domain Models">: Chapter 6 pages 157-171 -- Domain Models</A>
+<li><a href="07q.html#Chapter 9 pages 155 -- multiplicity missing and many-to-many">: Chapter 9 pages 155 -- multiplicity missing and many-to-many</A>
+<li><a href="07q.html#Chapter 9 pages 153 -- Multiplicity and one-to-one">: Chapter 9 pages 153 -- Multiplicity and one-to-one</A>
+<li><a href="07q.html#Chapter 9 pages 157-171 -- Attribute Notation">: Chapter 9 pages 157-171 -- Attribute Notation</A>
+<li><a href="07q.html#Chapter 9 pages 161 -- Boolean Data Types">: Chapter 9 pages 161 -- Boolean Data Types</A>
+<li><a href="07q.html#Chapter 9 pages 163 -- Define new data type classes">: Chapter 9 pages 163 -- Define new data type classes</A>
+<li><a href="07q.html#Chapter 9 pages 162-163 : Data Types in Domain Models">: Chapter 9 pages 162-163 : Data Types in Domain Models</A>
+<li><a href="07q.html#Chapter 9 pages 165 -- foreign key attribute">: Chapter 9 pages 165 -- foreign key attribute</A>
+<li><a href="07q.html#Chapter 9 pages 163-167 : attributes and foreign keys">: Chapter 9 pages 163-167 : attributes and foreign keys</A>
+<li><a href="07q.html#Chapter 9 Page 165 -- data type and property and Foreign Key attributes">: Chapter 9 Page 165 -- data type and property and Foreign Key attributes</A>
+<li><a href="07q.html#Chapter 9.16 pages 165 -- Design Creep">: Chapter 9.16 pages 165 -- Design Creep</A>
+<li><a href="07q.html#Chapter 9 pages 169 -- What is with the author... and waterfalls">: Chapter 9 pages 169 -- What is with the author... and waterfalls</A>
+<li><a href="07q.html#Chapter 9 pages 169 -- Domain Modeling II Table 9.4">: Chapter 9 pages 169 -- Domain Modeling II Table 9.4</A>
+<li><a href="07q.html#Chapter 9 pages 169 -- overdoing Domain Modeling">: Chapter 9 pages 169 -- overdoing Domain Modeling</A>
+<li><a href="07q.html#Chapter 9 pages 157-171 -- Domain Models - data types and object sizes">: Chapter 9 pages 157-171 -- Domain Models - data types and object sizes</A>
+<li><a href="07q.html#Chapter 9 pages 158-160 -- Attributes">: Chapter 9 pages 158-160 -- Attributes</A>
+<li><a href="07q.html#Chapter 9 pages 158 -- Can an attribute be a class itself">: Chapter 9 pages 158 -- Can an attribute be a class itself</A>
+<li><a href="07q.html#Chapter 9 pages 158 &amp; 160 -- Attributes considered superfluous">: Chapter 9 pages 158 &amp; 160 -- Attributes considered superfluous</A>
+<li><a href="07q.html#Chapter 9 pages 158 -- Domain Models -- Can we go over some derived attributes">: Chapter 9 pages 158 -- Domain Models -- Can we go over some derived attributes</A>
+<li><a href="07q.html#Chapter 9 pages 159-160 -- attribute notation">: Chapter 9 pages 159-160 -- attribute notation</A>
+<li><a href="07q.html#Chapter 9 pages 161 -- attribute related to classes or Data">: Chapter 9 pages 161 -- attribute related to classes or Data</A>
+<li><a href="07q.html#Chapter 9 pages 160 -- how can you determine if an attribute is noteworthy">: Chapter 9 pages 160 -- how can you determine if an attribute is noteworthy</A>
+<li><a href="07q.html#Chapter 9 pages 170 -- UP Business Object Model vs Domain Model">: Chapter 9 pages 170 -- UP Business Object Model vs Domain Model</A>
+<li><a href="07q.html#Chapter 9 page 170 -- attributes are data types">: Chapter 9 page 170 -- attributes are data types</A>
+<li><a href="07q.html#CS372 -- Normalization in UML">: CS372 -- Normalization in UML</A>
+<li><a href="07q.html#Vectors and Lists in Domain models">: Vectors and Lists in Domain models</A>
+<li><a href="07q.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="Questions and Answers on Domain Models">Questions and Answers on Domain Models</A></H1><ol class=Section>
+<H2><a name="Chapter 7 pages 151-171 -- Domain Model II">Chapter 7 pages 151-171 -- Domain Model II</A></H2>
+On page 165 the book mentions the error of relating
+&quot;conceptual classes in the domain model&quot; using attributes.  It gives the example of the &quot;foreign key attribute&quot;.  Can you give another example?
+<p>
+Putting &quot;SID&quot; in a class that called &quot;StudentInClass&quot; so that the object
+knows which &quot;Student&quot; is enrolled in the &quot;Class&quot;.  Just link
+&quot;StudentInClass&quot;
+to &quot;Student&quot;.
+<p>
+In a CASE system, having an attribute &quot;className1&quot; in the &quot;Association&quot;
+class
+so that the you can find out where an &quot;Association&quot; comes from.
+<p>
+<p>
+<H2><a name="Chapter 9 pages 131 -- When to start a Domain Model">Chapter 9 pages 131 -- When to start a Domain Model</A></H2>
+In chapter 9 the author talks about Domain Models and there purpose. How do
+you know when its the appropriate time apply a domain model to a project?
+<p>
+I like to draw a domain model as part of systems analysis -- before the
+inception phase,  but the book suggests starting at the beginning of the
+first
+elaboration iteration, see bottom of page 169.  This is wise because
+this is when you have a use case to select the parts of the domain
+that will be valuable to model.
+<p>
+<p>
+<H2><a name="Chapter 9 pages 134-136 -- domain modeling vs Software Classes">Chapter 9 pages 134-136 -- domain modeling vs Software Classes</A></H2>
+I'm confused about conceptual classes and software artifacts and classes.
+whats the difference and why cant they be shown in a domain model?
+<p>
+Domain models are about the problem and software artifacts are about the
+solution and its code.   It is not wise to show your solution muddled
+up with the problem.  So, model the problem in a separate diagram
+and use it to help you create new, different models of your solution.
+<p>
+<p>
+<H2><a name="Chapter 7 pages 168 -- Domain Models">Chapter 7 pages 168 -- Domain Models</A></H2>
+On page 168 it says there is no one correct domain model.  Is there a
+incorrect one?
+<p>
+There is many more incorrect diagrams than correct ones.
+<p>
+First, you have all the models that don't follow the syntax and
+semantics of the UML.  These are clearly wrong and need
+correcting.
+<p>
+There a large number of diagrams that are drawn properly but
+don't tell the truth.  We also say these are incorrect.
+Some are more correct than
+others.  This is because we don't know everything... especially
+at the start of the elaboration phase.  As we learn more we can
+get a better model.  The process is iterative -- just like
+in a mathematical iterative method we get closer and closer to
+the correct value at each step.  That is the theory.  In practice
+we don't always go back and correct our early domain models.
+<p>
+I think that we should not worry too much about
+the correctness of our first Domain Models, the first one is
+&quot;always be wrong&quot;. Why is that?  In my experience
+class are forgotten, relations are misunderstood, attributes
+misplaced, ....
+<p>
+But it is still important to record what we think.
+We can show our best approximation to other
+people and get their opinions.  We can walk through them. And we
+can use them to develop solutions that can be tested...  All
+this gathers data that let's us improve our understanding of the
+stakeholder's world.
+<p>
+It is important to have a visible approximation to improve.
+<p>
+The question is not whether our models are correct but whether they are
+useful.
+You will see that even a model which doesn't match reality perfectly
+can lead to workable software.
+<p>
+<p>
+<H2><a name="When to use the full notation for attributes">When to use the full notation for attributes</A></H2>
+when doing at attribute notation is it necessary to use full syntax for an attribute in the UML? And can you go more into detail what it really is?and what does private visibility mean?
+<p>
+Not often in a domain model.  Sometimes in a design class diagram.
+<p>
+<H2><a name="Private visibility">Private visibility</A></H2>
+is when an attribute is in a class but nobody outside the class can access it.
+This is a coding concept.  In OO code, data members
+(attributes) are nearly always private.  Public operations provide controlled
+access to them.
+<p>
+Public/private/etc are not really a domain concern and so we don't show it
+in a domain model.
+<H2><a name="must a class have at least one attribute to exist?">must a class have at least one attribute to exist?</A></H2>
+<p>
+Interesting question.   I guess so.
+<p>
+But you don't have to show it in a domain model.
+<p>
+Domain modeling is about classes and associations so we only show
+interesting attributes.
+<p>
+<H2><a name="Chapter 9 -- Associations and complexity">Chapter 9 -- Associations and complexity</A></H2>
+How do you know when you have too many associations if all you are doing is trying to clarify in a meaningful way the model?
+<p>
+(1) Any time you add an association that is not in the real world you have gone too far.
+<p>
+(2) Any time you show an association that is already implied by a sequence
+of associations you have already drawn, you have overcomplicated the diagram.
+Instead define the term in the glossary.   Example:  In a family data base
+you might show the association between parent and child, but you
+don't show grandparent-grandchild, uncle-nephew, siblings, cousins,
+2nd cousins....  instead define them in the glossary.
+<p>
+(3) Any time you have an association that is not going to be useful in a use case it is <a href="#YAGNI">YAGNI</A> -- You Ain't Gonna Need It.  Don't draw it.
+<p>
+<H2><a name="Chapter 9 page 153 Clarify Roles and Navigability">Chapter 9 page 153 Clarify Roles and Navigability</A></H2>
+In the UML a
+<A name="role" class="Key"> role </A>
+is a name written at the end of an association which names what part an object of
+that type plays in an object of the other class.   For example the <a href="#role">role</A>
+<span class="InlineFormula">son</span> would be on an association between <span class="InlineFormula">Male</span> and <span class="InlineFormula">Boy</span> at the <span class="InlineFormula">Boy</span> end
+with <span class="InlineFormula">father</span> at the other end.   Roles are almost entirely optional in diagrams.
+If left out then a class named &quot;Foo&quot; has the default role &quot;foo&quot; in
+its associated classes.
+<p>
+Roles are often appear as data members in classes in code.  So they can implemented
+in any phase of the RUP/UP.
+<p>
+<A name="Navigability" class="Key"> Navigability </A>
+is something else, and has nothing to do in Domain Models but is important
+when doing OO Design.   (A Domain Model is about Analysis not Design!).
+<p>
+Navigability is indicated by adding an arrowhead to an association.  It
+shows that the class to which the arrow points does not know about the association,
+but the other class does know about the object at the other end.   The arrow is
+often used in OO <span class="InlineFormula">Designs</span> (not Domains) to indicate a pointer in code.
+<p>
+<H2><a name="Chapter 9 page 158 -- Why no data types">Chapter 9 page 158 -- Why no data types</A></H2>
+Why do we not specify data types within the model?
+<p>
+To avoid wasting our time and board space.  Define them in the glossary.
+<p>
+<H2><a name="Chapter 9 pages 158-162 -- More on attributes and data types">Chapter 9 pages 158-162 -- More on attributes and data types</A></H2>
+Can you explain more on attributes and data types?
+<p>
+See below:
+<H2><a name="Chapter 9 pages 161 -- Data Types">Chapter 9 pages 161 -- Data Types</A></H2>
+What is the difference between attributes and Data Types or are Data Types
+a type of attribute?
+<p>
+An attribute has one value... a data type is all the possible
+values of an attribute.
+<p>
+Example: attribute -- number_of_students_in_cs375 vs Number.
+<p>
+So you could say that data types describe types of attribute.  However
+in a domain model attributes are properties of real objects
+and not data.
+<p>
+For example: People have names.  They would still have names if
+we destroyed every computer and every paper record in the world!
+So we show &quot;name&quot; as an attribute of Person in our domain model.
+<p>
+We don't worry about coding names
+in a domain model.  This would be defining a data type to represent
+names:  perhaps a string, perhaps a record with three parts,
+perhaps a VARCHAR in a data base, perhaps a pointer to a complex
+data structure, ... etc.
+<p>
+Note important (valuable) properties of attributes as Business Rules,
+and you can define Abstract Data Types...
+<p>
+<H2><a name="Can you put attributes in a data type">Can you put attributes in a data type</A></H2>
+When creating a data type is it possible to include attributes like it is possible with a class?
+<p>
+Yes.  If you have to draw a diagram describing a new type of data.... and that
+means in a Design Class, not a domain one.
+<p>
+<H2><a name="Chapter 9 pages 163-164 -- When to define new data type classes">Chapter 9 pages 163-164 -- When to define new data type classes</A></H2>
+Can you go over when to define new data type classes and some of the
+pitfalls you have encountered?
+<p>
+The main pitfall is wasting time drawing boxes that do not
+need to be drawn.  An example follows -- the Boolean data type.
+Similarly: Number, Integer(=int), Real (=double), Character (=char),
+Byte, String, ...
+<p>
+So in a domain model you are drawing boxes that represent classes
+of real things, not computer data.  We can note special data types in
+in the glossary.  They might turn up in design class diagram later,
+but mostly they are defined, in detail, in code.
+<p>
+<H2><a name="Chapter 9 pages 162-163">Chapter 9 pages 162-163</A></H2>
+Although attributes in the domain model are conceptual perspectives,
+shouldn't be beneficial to expand attributes to exemplify and represent
+actual calculations?
+<p>
+First:  you should only show interesting attributes in your Domain
+Model diagram.  Put in only those that tell your something special
+about the class, that define more precisely the kind of object you
+are drawing a picture of.  Instead it is best to document most
+attributes in a data dictionary or glossary.
+<li><span class=Formula>Student has attributes: name, SID, phone#, address, and status.</span>
+<p>
+If you have a formula for an attribute then it is a derived attribute
+and you should document the rule.  This is (in my humble opinion) best
+put in a a different artifact.  I don't like cluttering my diagrams
+more than is necessary.
+<p>
+If an attribute is calculated by a constructor or operation then
+this should documented, but not it the Domain Model Class Diagram.
+Keep that simple and put the details elsewhere.
+<p>
+<H2><a name="Chapter 9 pages 163 -- Attributes and Value objects">Chapter 9 pages 163 -- Attributes and Value objects</A></H2>
+The book mentions value objects, what are they and how are they used?
+<p>
+See next
+<H2><a name="Chapter 9 page 163 -- Attributes and Value Objects">Chapter 9 page 163 -- Attributes and Value Objects</A></H2>
+On page 163, Larman says value objects slightly differ from data types.  How do they differ when applying UML diagrams?
+<p>
+<p>
+<a href="#YAGNI">YAGNI</A>.  I think they are objects that are just values.  No operations
+or member functions.  At most you can combine them -- like numbers
+can be added and subtracted.  I agree with Larman.  A fuzzy concept
+that isn't worth worrying about.
+<p>
+In a domain model
+<A name="value objects" class="Key"> value objects </A>
+are things like: bits, numbers, quantities, money, measurements, dates,
+times,
+codes, text, strings, etc. We don't need to draw them as a class.
+They are well analyzed all ready -- some have
+been studied for millenia -- so we don't need to clutter the diagram.
+<p>
+On the other hand some of them should be put in the glossary.
+Codes and units deserve
+to be recorded in the glossary.
+<p>
+NASA caused a lot of entertainment when they managed to miss Mars.
+Mars is a large target and they missed it -- just because one set
+of programmers used metric units and a different group used Imperial
+units:  feet are not meters!
+<p>
+<H2><a name="Chapter 9 pages 163 -- Data Types vs Value Objects">Chapter 9 pages 163 -- Data Types vs Value Objects</A></H2>
+The book briefly mentions something called &quot;value objects&quot;, which are said
+to be like data types, but with minor variations.  Could you please explain
+these variations?
+<p>
+When we come to code value objects we will probably use a predefined
+or primitive data type in our programming language.
+<p>
+So we use the name in our models as a type of data
+and define the name, briefly, in a glossary rather than a diagram.
+<p>
+The UML also uses the word &quot;data type&quot; for classes of value objects.
+But this stereotype only pays off in a design model.  Avoid in a domain
+model.
+<p>
+<H2><a name="Chapter 9 pages 163 -- data type and Value objects">Chapter 9 pages 163 -- data type and Value objects</A></H2>
+Are value objects important? And how are they similar to data types? also
+what are the differences?
+<p>
+The main importance for value objects in domain modeling is that they
+let you draw simpler diagrams.  Attributes that are values have a data type
+that doesn't need a box on the diagram.
+<p>
+Value objects get more important when we move from a model of the real
+world into modeling the code inside our program (design models).
+<p>
+The words &quot;data type&quot; is UML jargon for classes that contain value objects.
+<p>
+I don't plan to ask you to repeat these definitions in a quiz or on the
+final BUT your models (projects, in class, in the final) must not show a
+box describing a data type/class of obvious value objects.
+<p>
+Experience -- in the civil service, once you introduced a &quot;Date&quot;
+entity it rapidly would get attached to just about every other
+entity -- often two or three times.   So we had a rule of not showing it.
+In the UML: Dates are a data type with value objects and so we
+use attributes not associations.
+<p>
+In the past (before Larman) I told students to put NO attributes in a
+domain model!
+<p>
+<H2><a name="Chapter 9 Foreign Keys -- What are Foreign Keys">Chapter 9 Foreign Keys -- What are Foreign Keys</A></H2>
+Why are foreign keys needed? Is it through association of one attribute and another that a foreign key is made? Why is it significant?
+<p>
+Foreign keys are part of data base jargon.
+Keys are used in data bases to connect associated objects.
+In RAM we use pointers(mostly).
+<p>
+A Key is an attribute that identifies
+one unique object in a class of objects.
+In a database, associations are stored by using keys.
+So if an attribute identifies a unique object in another class
+is is said to be Foreign Key.
+<p>
+<H2><a name="Chapter 9 What replaces Foreign Keys in OO Domain Models">Chapter 9 What replaces Foreign Keys in OO Domain Models</A></H2>
+According to the book, it says the most common violation of this principle
+is to add a kind of foreign key attribute. And the related type is
+association.
+My question is: If we do not use foreign key like database does, so how do
+we make two classes relate or influence with each other? what the
+association exactly is how does it makes two classes works? how to describe
+association into technique level, like what specific techniques does it
+use?
+<p>
+In the domain there are no foreign keys!  So we don't use them in a model
+of the domain.  In Object Oriented code pointers are used to implement
+associations.  In design models the default is that associations are
+implemented by pointers.  Arrowheads indicate the details.
+<p>
+<H2><a name="Chapter 9 pages 121-171 -- Foreign Keys">Chapter 9 pages 121-171 -- Foreign Keys</A></H2>
+When should we use a foreign key?
+<p>
+Only in data models.
+Note: a domain model is not a data model.
+Neither is a Design Class Diagram!
+In a Data Model mark with stereotype &lt;&lt;FK&gt;&gt; and also so show the
+association it implements.
+<p>
+<H2><a name="Chapter 9 pages 146 -- Attributes vs Classes">Chapter 9 pages 146 -- Attributes vs Classes</A></H2>
+I'm not clear on attributes and classes.  I confuse the two and need a
+little extra explanation about their differences.
+<p>
+Example:  Class Person, attribute: their Email address.
+<p>
+Attributes are properties of objects.  Classes are collections of objects
+with the same kinds of attributes.
+<p>
+Example: A Triangle is a class of Figure.  It has many attributes --
+3 vertexes, 3 sides, 3 angles, area, perimeter, ...
+<p>
+Exercise: spot the attribute in this list: Person, Dog, gender, Course.
+<p>
+Exercise: spot the class in this list: height, width, Rectangle, area.
+<p>
+<p>
+<H2><a name="Chapter 9 pages 165 -- Foreign Keys -- Just say No -- 1">Chapter 9 pages 165 -- Foreign Keys -- Just say No -- 1</A></H2>
+The book states that Foreign Keys should not be represented in a domain model, but what about Unique IDs, or other keys in general?
+<p>
+Put them in the glossary.  They are part of some data processing system,
+not the real world.  So they don't belong in a domain model.
+<p>
+<H2><a name="Chapter 9 pages 165 -- Foreign Keys -- Just say No -- 2">Chapter 9 pages 165 -- Foreign Keys -- Just say No -- 2</A></H2>
+Larman tells you not to include foreign keys in your domain models.  In
+your notes, it says, &quot;Make connections (functional dependencies, foreign
+keys) highly visible.&quot;  Is it open to interpretation?
+<p>
+Not really: putting a foreign key as an attribute does not
+make the connection highly visible.  So I think you should
+show a visible connection.  Once you have a visible association, the attribute
+is redundant and belongs in a glossary not a domain model
+diagram.  This allows you to use OO coding techniques in the program.
+<p>
+Foreign
+keys define a many-to-one relationship between between entities
+in a data base.  So it is better
+to make the link obvious. Remove the attribute and draw an
+association and put a &quot;1&quot; at the other end.
+<p>
+<H2><a name="Chapter 9 -- Sharing attributes in Domain Models">Chapter 9 -- Sharing attributes in Domain Models</A></H2>
+In a domain model can various classes share the same attributes?
+<p>
+First -- two attributes in different classes can have the same name and type.
+An example might be <span class="InlineFormula">address : Address</span> used for homes and workplaces.
+<p>
+Second -- they remain two different attributes.
+<p>
+Third -- when several attribute names+types appear in two or more classes,
+and you feel they should be shared, then
+you should start to think about abstracting the common data into a more
+abstract generalized class.  More on this later.
+<p>
+<H2><a name="Chapter 6 pages 157-171 -- Domain Models">Chapter 6 pages 157-171 -- Domain Models</A></H2>
+The book defines association as a relationship between classes that
+indicates some meaningful and interesting connection. What is considered a
+'meaningful and interesting' connection?
+<p>
+The key idea is to not waste time drawing lines that don't give the user
+value for money.    In a domain model an association is
+meaningful if their is a stakeholder who has a meaning for it.
+It is interesting if there is a stakeholder who has an interest
+in it.
+<p>
+In other words:  if the fact of a connection was lost -- who would suffer?
+If nobody you don't need it.  It isn't interesting.
+<p>
+Again:  if you can't find evidence that people know about a
+connection then perhaps it is meaningless.
+<p>
+This is an area where experience matters.  I hope these thoughts
+help.
+<p>
+<H2><a name="Chapter 9 pages 155 -- multiplicity missing and many-to-many">Chapter 9 pages 155 -- multiplicity missing and many-to-many</A></H2>
+There is a diagram showing a multiplicity of many depicted with a *.  If
+you wanted to express many, couldn't you just leave it blank. And if you
+leave it blank does that imply 0 to many  or 1 to many? In a many to many
+can you just put one * in the middle to show it applies to both sides?  or
+is that ambiguous?
+<p>
+I often leave out the asterisks that indicate &quot;many&quot;.  The official meaning
+of a missing multiplicity on an association
+is something like &quot;The person drawing the diagram doesn't know how many
+there are&quot;. And the meaning of &quot;*&quot; is &quot;the drawer knows it could be
+any number&quot;.
+<p>
+Whether you put in an asterisk or leave the end unmarked, you have
+allowed there to be 0,1,2,3, ...
+<p>
+The middle of an association is for the name of the association.  Only put
+an asterisk there if you want to (1) name an association called &quot;*&quot; or
+(2) confuse your team mates.
+<p>
+It is better to leave both ends of many-to-many
+associations unmarked -- as long as the the people who see
+the diagram understand what this means (many).  Notice: many untrained
+UML users jump to the conclusion that the default means &quot;1&quot;.  This is
+incorrect.
+<p>
+In my experience many-to-many association don't need a special
+short hand notation.  Instead they should be replaced by class linking
+the ends.  This is a partial normalization.  As a result in my designs
+you don't find lots of many-to-many associations.  For example, you'll
+find structures like the following all over my models:
+<p>
+<img src="07x.gif" alt="Shelf(1)----(*)Stocks(*)---(1)Product">
+<p>
+<H2><a name="Chapter 9 pages 153 -- Multiplicity and one-to-one">Chapter 9 pages 153 -- Multiplicity and one-to-one</A></H2>
+So you should always question 1 to 1 multiplicities? Usually it turns into
+1 to 0..1 right?
+<p>
+Mostly --- sometimes (worst case scenario) you discover a
+optional-to-optional
+association:  two objects that may or may not be linked.
+<p>
+This my personal habit -- based on nearly 30 years of domain and
+data modeling.  Larman disagrees.   I think he believes that it's
+not worth worrying to much about it.   He has a point.
+<p>
+In the domain model in figure 9.27, there are many 1 to 1 relationships.
+Are all of these relationships correct, or should it be modified? In class
+you warned us to be suspicious of 1 to 1 relationships, yet this model has
+four of them.
+<p>
+My rule is intended to make you think about the real world.  Figure 9.27
+raises these questions:
+<br><ol class="List">
+<li><span class=Formula>Can a customer only have one Sale at a time?</span>
+<li><span class=Formula>Can a customer exist without having a sale?</span>
+<p>
+<li><span class=Formula>Can a Sale exist without a CashPayment (not for long we hope)?</span>
+<p>
+<li><span class=Formula>So every store has a ledger....and only one: This means</span>
+simultaneous creation (unlikely), and never getting a new ledger...
+<p>
+<li><span class=Formula>Similarly: How can a register always have a single Cashier?</span>
+Do they chain Cashier in place?
+</ol><br>
+<p>
+I encourage you to try my way and decide after the class is over.
+<p>
+<H2><a name="Chapter 9 pages 157-171 -- Attribute Notation">Chapter 9 pages 157-171 -- Attribute Notation</A></H2>
+In the book Larman says that when writing attributes he does not usually
+draw an explicit visibility symbol unless needed, since most modelers
+assume that attributes are private. Are we going to follow this in class?
+<p>
+Yes -- in this class the default visibility for attributes is private
+and for operations public.
+<p>
+Note: in domain models the concept of privacy is meaningless.  Privacy
+defines what attributes can be changed by an operation, and a domain
+model has no operations.  So in a domain model only show visibility
+if your CASE tool forces you to.
+<p>
+<H2><a name="Chapter 9 pages 161 -- Boolean Data Types">Chapter 9 pages 161 -- Boolean Data Types</A></H2>
+Could you please show an example of a Boolean data type?
+<p>
+Boolean data are the classic data types you do not
+waste space drawing a box of on a UML diagram!  Booleans are just
+bits: they are attributes with two values.  Document them like
+this
+<pre>		unclean : Boolean</pre>
+or (in a C++ shop)
+<pre> 		unclean : bool</pre>
+<p>
+When I'm in a hurry I tend to do something quick and nonstandard
+however:
+<pre> 		unclean?</pre>
+<p>
+But you asked me to draw a Boolean data type.   Bearing in mind
+you will waste time and money doing this in your models here is my
+description of the Boolean data type:
+<p>
+<img src="07boolean.gif" alt="The Boolean data type">
+<p>
+In words: There are two Boolean values: true and false.  There are three
+Boolean operators: conjunction (and), disjunction (or), and negation (not).
+<p>
+From now <a href="#YAGNI">YAGNI</A>.
+<p>
+Compare with the following Glossary entry
+<br>Net<div class="Net"><ol>
+<li><a name="Boolean">Boolean</A>::data_type = {true, false} with operators: and, or, not.
+</ol><br>(End of Net)</div><br>
+<p>
+<H2><a name="Chapter 9 pages 163 -- Define new data type classes">Chapter 9 pages 163 -- Define new data type classes</A></H2>
+If we find that we need to define new data type classes during  domain
+modeling, do we need to change the whole diagram? what about the
+associations with the other classes?
+<p>
+The job of a domain model is to mirror the real world, not to define data.
+Put data definitions in a glossary for preference.
+<p>
+Adding a data type or class can be as simple as adding a box and
+connecting it to one or two other boxes.  How easy this is
+depends on how you drew the diagram.  If you have it in a computer
+file it is easy to insert it, link it, and make room for it.
+If it is on paper then the wise designer uses pencil not pen.
+On a white board or chalk board you can easily fix it.
+<p>
+You can always leave a lot of space between boxes in your first models
+so that you have room for the boxes you a certain to add later.
+<p>
+<p>
+<H2><a name="Chapter 9 pages 162-163 : Data Types in Domain Models">Chapter 9 pages 162-163 : Data Types in Domain Models</A></H2>
+Explain the use of data types in the &quot;Domain Model&quot;.
+<p>
+Data types are things like numbers and strings.  They don't
+do anything.  They just supply information about really
+important things.  For example a baby's weight
+and birth date are important information about a baby.
+<p>
+As a useful rule we don't show data types as classes in
+most models.  So we show a box called &quot;Baby&quot; but not
+&quot;Weight&quot; or &quot;BirthDate&quot;.  On the other hand
+we should show &quot;Person&quot; (or perhaps Mother and Father)
+as boxes in the domain model of a system for reporting
+births.  Why?
+<p>
+<H2><a name="Chapter 9 pages 165 -- foreign key attribute">Chapter 9 pages 165 -- foreign key attribute</A></H2>
+What is a foreign key attribute?
+<p>
+When the value of an attribute selects a particular object.
+<p>
+<H2><a name="Chapter 9 pages 163-167 : attributes and foreign keys">Chapter 9 pages 163-167 : attributes and foreign keys</A></H2>
+What is the difference between attributes and foreign keys?
+<p>
+Attributes in the domain model are real information about
+a real object.  They would exist if the computer system and data
+base was destroyed.
+<p>
+Foreign keys identify other objects:  therefore they first appear
+as many-to-one associations in a domain model.  Later the
+association may (or may not) be handle by a foreign key
+in a data structure or data base.  In an object-oriented design, however,
+you would use (probably) an aggregation/pointer to make
+the link.
+<p>
+<H2><a name="Chapter 9 Page 165 -- data type and property and Foreign Key attributes">Chapter 9 Page 165 -- data type and property and Foreign Key attributes</A></H2>
+What is the difference between a data type property of an object and a
+foreign key attribute?
+<p>
+See above.   Here are examples.
+<p>
+Property: your height.   It is a property of the person.  OK for a
+domain model, better in a glossary.
+<p>
+Data Type: int, double, char, string, ....
+<p>
+Foreign Key: SSN, SID, assigned identifiers in general.
+<p>
+<H2><a name="Chapter 9.16 pages 165 -- Design Creep">Chapter 9.16 pages 165 -- Design Creep</A></H2>
+Design creep is when you start working on design before you need to/in an
+earlier stage than you should, correct?
+<p>
+Yes.   Also when you start to base the requirements on what you think
+the design might be, rather then the other way round.
+<H2><a name="Chapter 9 pages 169 -- What is with the author... and waterfalls">Chapter 9 pages 169 -- What is with the author... and waterfalls</A></H2>
+What is with the authors great disdain for the waterfall effect! It is
+referred to over and over in the text. Was this such a big problem in the
+past to warrant such warning?
+<p>
+How about 40 years of failed waterfall projects? (With one or two
+successes).
+<p>
+For a balanced view see
+[<A href="http://en.wikipedia.org/wiki/Waterfall_model"> Waterfall_model </A>]
+on the WikiPedia.
+<p>
+<p>
+<H2><a name="Chapter 9 pages 169 -- Domain Modeling II Table 9.4">Chapter 9 pages 169 -- Domain Modeling II Table 9.4</A></H2>
+In table 9.4 on page 169. The table shows no refinement of the Domain model
+artifact and the SW architecture document artifact in later phases. Why?
+<p>
+By the time you enter Construction you should have a reliable
+idea of what the stakeholder's world is all about -- and it will be in the
+form of executable source code.  So why revise the diagram?  Is their
+any value in doing it?  If so -- you would, I guess, but many
+programmers have more faith in code than in any diagrams.
+<p>
+Exception: reverse engineering the diagrams from the code.
+<p>
+<H2><a name="Chapter 9 pages 169 -- overdoing Domain Modeling">Chapter 9 pages 169 -- overdoing Domain Modeling</A></H2>
+What is the best way to avoid over modeling a domain model?
+<p>
+Hmmmmm -- Experience helps but perhaps the following captures
+what I do.
+<p>
+Think five times before you put anything in the diagram.
+<br><ol class="List">
+<li>What is the value to the stakeholders of putting this in the diagram?
+<li>Is it something inside the software we are designing?
+If it is inside do it later.
+<li>Is it part of the technology of the user interface?
+If it is put it in a separate, later, user interface layer.
+<li>Is it wasting our time to put this in the diagram?
+Or is it best put in a textual/tabular document?
+<li>Can we say this simpler?
+</ol><br>
+<p>
+<H2><a name="Chapter 9 pages 157-171 -- Domain Models - data types and object sizes">Chapter 9 pages 157-171 -- Domain Models - data types and object sizes</A></H2>
+When should you define new data type classes, is there a set size for an
+object or class or is it up to the programming staff.
+<p>
+A domain model is not a model of a program and so doesn't show any data
+types -- just
+classes of <span class="InlineFormula">thing</span> that are important to the stakeholders.
+<p>
+When we get to designing programs -- real soon now -- we will get a set of
+guide lines
+called <a href="#GRASP">GRASP</A> that tell us when to create new classes/data types.
+<p>
+The size of an object should be just small enough to support it's
+responsibilities.
+<p>
+<H2><a name="Chapter 9 pages 158-160 -- Attributes">Chapter 9 pages 158-160 -- Attributes</A></H2>
+An attribute that is composite for two or more attributes should follow a
+specific role to be created it. For example, Total, Rent and Payment
+attributes conform a totalRentPayment attribute.
+<p>
+First -- The name of an attribute can any number of words and numbers.
+Normally the first one should be a lower-case letter.
+<p>
+Second -- it is quite normal to have the name of an attribute made out
+of several words as in &quot;totalRentPayment&quot; = &quot;total&quot;+&quot;rent&quot;+&quot;payment&quot;, even
+if these words are also names of other attributes in the same (or another)
+class.
+<p>
+Third -- it is also common that the value of an attribute is calculated
+from other attributes -- these are said to be
+<A name="derived attributes." class="Key"> derived attributes. </A>
+It is very common for attributes named &quot;total...&quot; to be derived attributes
+and so to appear with a &quot;/&quot; in the class
+<pre> 		/ totalRentPayment</pre>
+and document the rule for computing it as a comment, or elsewhere
+(glossary, business rules, ...).
+<p>
+A final comment -- in a domain model only show the interesting
+derived attributes to keep the model simple.
+<p>
+<p>
+<H2><a name="Chapter 9 pages 158 -- Can an attribute be a class itself">Chapter 9 pages 158 -- Can an attribute be a class itself</A></H2>
+<p>
+An attribute is a single property of an object in a class.
+<p>
+An attribute has at least two things:  a name and a class:
+<pre> 		name : class</pre>
+<pre> 		lightBulb : LightBulb</pre>
+In domain modeling we often omit one or other of these. Usually the class
+is obvious or not worth noting so we just put the name.
+<pre> 		lightBulb</pre>
+(especially when the class is a primitive/value object/data type.)
+<p>
+However I've seen people leave out the name and just put a class
+name -- some CASE systems let you do this. Then it becomes hard to
+guess what the attributes name is.
+<p>
+Notice that an attribute can have a set of objects as its value.
+This shows up as a multiplicity other than 1.
+<pre> 		content : Item[*]</pre>
+Follow Larman's
+advice and use an association instead of an attribute.
+<p>
+<H2><a name="Chapter 9 pages 158 &amp; 160 -- Attributes considered superfluous">Chapter 9 pages 158 &amp; 160 -- Attributes considered superfluous</A></H2>
+<p>
+I read 13 pages about attributes and I don't see a need for them in the
+domain model, did I miss something? I agree with the statement on page 160
+that they seem best suited for the glossary/data dictionary.
+<p>
+So do I: <a href="#KISS">KISS</A>.
+<p>
+Just occasionally they clarify what an object is, that is all.
+<p>
+Before adding an attribute ask: what is the value to this project
+of messing up my diagram?
+<p>
+However: put valuable attributes somewhere.
+<p>
+<H2><a name="Chapter 9 pages 158 -- Domain Models -- Can we go over some derived attributes">Chapter 9 pages 158 -- Domain Models -- Can we go over some derived attributes</A></H2>
+<p>
+From MyGradingSystem:
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Derived Attribute<th scope="col">Class<th scope="col">Calculation
+<tr><td>grade<td>StudentInClass<td>Calculated from percentTotalScore
+[<A href="http://cse.csusb.edu/dick/syllabus.html#Grading"> ../syllabus.html#Grading </A>]
+<tr><td>percentTotalScore<td>StudentInClass<td>=totalScore*100/class.total
+<tr><td>totalScore<td>StudentInClass<td>=&Sigma; [s:scores] (s).
+<tr><td>total<td>Class<td>=&Sigma; [s:done.scores] (s).
+<tr><td>. . .
+</table><br>(Close Table)<br>
+<p>
+<H2><a name="Chapter 9 pages 159-160 -- attribute notation">Chapter 9 pages 159-160 -- attribute notation</A></H2>
+can u give more examples of &quot;embedded&quot; things in a domain model
+<p>
+A domain model has classes, associations, and attributes -- that is
+all.  Perhaps one or two classes might have a stereotype.  But
+only attributes are embedded inside classes in a domain model.
+<p>
+Why?  Because objects in the real world don't compute things so
+they don't have operations!  Also, <a href="#KISS">KISS</A>.
+<p>
+Exercise: anything you think should be embedded in a class box in a domain
+model
+that I've missed?
+<p>
+<H2><a name="Chapter 9 pages 161 -- attribute related to classes or Data">Chapter 9 pages 161 -- attribute related to classes or Data</A></H2>
+It was mentioned that we should relate conceptual classes with an
+association. And Although the attribute guideline given was very helpful,do
+you have any suggestions on what we should relate the attributes to?
+<p>
+Here is an algorithm:
+<br><ol class="List">
+<li>When an attribute has values that are objects that
+are in a class in your diagram -- don't write an attribute but
+create a link to that class.  Similarly when the attribute
+names an object in a class you know about.
+<li>When an attribute identifies or is a real object and you've not got a box
+for it,
+add the box and link it.
+<li>When you don't know what the values of an attribute are, go and
+find out before you draw anything.
+<li>When attribute has a value that is just a value -- not an object.  Omit
+it.
+See below.
+<p>
+<H2><a name="Chapter 9 pages 160 -- how can you determine if an attribute is noteworthy">Chapter 9 pages 160 -- how can you determine if an attribute is noteworthy</A></H2>
+<p>
+If you are in doubt -- initially put it in the glossary not the diagram.
+When you show the diagram to the team or the stakeholders they will tell
+you
+if it was noteworthy! If, and only
+if other people complain about it should you put it in the domain model.
+<p>
+Don't  waste time worrying about whether to put a doubtful attribute in
+a class.  As Yoda night sat &quot;Do or Don't Do&quot;.
+<p>
+Ask yourself how someone would pay to see that attribute...
+<p>
+</ol><br>
+<p>
+<H2><a name="Chapter 9 pages 170 -- UP Business Object Model vs Domain Model">Chapter 9 pages 170 -- UP Business Object Model vs Domain Model</A></H2>
+What is the difference between UP business object model and domain model?
+<p>
+A business model will include models of business processes as well
+as the objects in the business.
+A Business Object Model includes a Domain Model but
+also describes how the business works: scenarios
+for &quot;Business Use Cases&quot; (<a href="#YAGNI">YAGNI</A>) and Activity diagrams
+of procedures and work flows.
+<p>
+<H2><a name="Chapter 9 page 170 -- attributes are data types">Chapter 9 page 170 -- attributes are data types</A></H2>
+The author states that &quot;attributes should generally be data types&quot;. Are there cases when they are not data types?
+<p>
+In this class.... they all attributes will be data type or I'll ....
+only kidding:-)
+<p>
+<H2><a name="CS372 -- Normalization in UML">CS372 -- Normalization in UML</A></H2>
+See
+[<A href="http://cse.csusb.edu/dick/cs372"> ../cs372 </A>]
+for details or any data base class.
+<p>
+In this class it means:  no many-many associations and no associations that
+are not binary.
+<p>
+It is a wise move when drawing design classes and data models.
+<p>
+<H2><a name="Vectors and Lists in Domain models">Vectors and Lists in Domain models</A></H2>
+How do we show a vector or list in a domain model.
+<p>
+First -- we don't need to show a class.  All practical languages have
+a library that given class A will let us code a <span class="InlineFormula">vector of A's</span>.
+UML multiplicities should be used -- either on associations or one
+attributes.
+UML attributes can have a &quot;[*]&quot; multiplicity.
+If vital you can add an informal property &quot;{vector}&quot;, &quot;{list}&quot;,
+&quot;{set}&quot;, &quot;{stack}&quot;, &quot;{map}&quot;.
+<p>
+</ol>
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci Dept, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10.
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

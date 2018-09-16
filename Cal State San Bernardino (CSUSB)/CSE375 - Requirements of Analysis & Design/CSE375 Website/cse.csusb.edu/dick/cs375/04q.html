@@ -1,0 +1,676 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/04q.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:54:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+Questions and answers on use cases -- use cases
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="04q.txt">Text Version</A>]
+ 04q.html 
+Wed Jan 11 07:25:29 PST 2012
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="04q.html#Questions and answers on use cases -- use cases">Questions and answers on use cases -- use cases</A>
+<li><a href="04q.html#Scope Bounds the system under design">: Scope Bounds the system under design</A>
+<li><a href="04q.html#Why so little documentation">: Why so little documentation</A>
+<li><a href="04q.html#Chapter 6 page 65 No external Primary actors">: Chapter 6 page 65 No external Primary actors</A>
+<li><a href="04q.html#Chapter 6 page 66 offstage actors">: Chapter 6 page 66 offstage actors</A>
+<li><a href="04q.html#Actors and user roles">: Actors and user roles</A>
+<li><a href="04q.html#What is the difference between actors and user roles?">: What is the difference between actors and user roles?</A>
+<li><a href="04q.html#Chapter 6.4 page 66 -- limit on the number of use cases">: Chapter 6.4 page 66 -- limit on the number of use cases</A>
+<li><a href="04q.html#Chapter 6 page 77">: Chapter 6 page 77</A>
+<li><a href="04q.html#Chapter 6.16 pages 87-89 Use Case Tests">: Chapter 6.16 pages 87-89 Use Case Tests</A>
+<li><a href="04q.html#Use cases and functionality">: Use cases and functionality</A>
+<li><a href="04q.html#Chapter 4/6 pp 61 -- Use Cases">: Chapter 4/6 pp 61 -- Use Cases</A>
+<li><a href="04q.html#Chapter 6 pp 61-67 -- Requirements and Formats">: Chapter 6 pp 61-67 -- Requirements and Formats</A>
+<li><a href="04q.html#Chapter 6 pp 61-67 -- Requirements and Formats">: Chapter 6 pp 61-67 -- Requirements and Formats</A>
+<li><a href="04q.html#Ch 6 pp 061-089 -- Use Case text vs diagram">: Ch 6 pp 061-089 -- Use Case text vs diagram</A>
+<li><a href="04q.html#Ch 6 pp 061-089 -- Use Case text vs diagram">: Ch 6 pp 061-089 -- Use Case text vs diagram</A>
+<li><a href="04q.html#Chapter 3 pp 61-89 -- Use Cases">: Chapter 3 pp 61-89 -- Use Cases</A>
+<li><a href="04q.html#Chapter 6 pp 61-89 -- Use cases">: Chapter 6 pp 61-89 -- Use cases</A>
+<li><a href="04q.html#Chapter 6 pp 61-89 -- Nonfunctional Requirements">: Chapter 6 pp 61-89 -- Nonfunctional Requirements</A>
+<li><a href="04q.html#Chapter 6.2 pp 63 -- Use Case">: Chapter 6.2 pp 63 -- Use Case</A>
+<li><a href="04q.html#Chapter 6 pp 65 -- Use Cases vs. Functional Requirements">: Chapter 6 pp 65 -- Use Cases vs. Functional Requirements</A>
+<li><a href="04q.html#Chapter 6 pp 65 -- Use Case Requirements">: Chapter 6 pp 65 -- Use Case Requirements</A>
+<li><a href="04q.html#Chapter 6 pp 67-68 -- Conflicts between stakeholder requirements">: Chapter 6 pp 67-68 -- Conflicts between stakeholder requirements</A>
+<li><a href="04q.html#Chapter 6 pp 76 -- Use Case">: Chapter 6 pp 76 -- Use Case</A>
+<li><a href="04q.html#Chapter 6 pp 85 -- Primary Actor">: Chapter 6 pp 85 -- Primary Actor</A>
+<li><a href="04q.html#Chapter 4 pp 50 -- Business Case">: Chapter 4 pp 50 -- Business Case</A>
+<li><a href="04q.html#pp -- What is the significance of use cases?">: pp -- What is the significance of use cases?</A>
+<li><a href="04q.html#Chapter 6 pp 61-65 -- Use Cases">: Chapter 6 pp 61-65 -- Use Cases</A>
+<li><a href="04q.html#Must I write scenarios for every use case?">: Must I write scenarios for every use case?</A>
+<li><a href="04q.html#Can I do just the most complex use cases first?">: Can I do just the most complex use cases first?</A>
+<li><a href="04q.html#What happens if I do the wrong use cases first?">: What happens if I do the wrong use cases first?</A>
+<li><a href="04q.html#Chapter 4 pp 061-089 -- Use Cases">: Chapter 4 pp 061-089 -- Use Cases</A>
+<li><a href="04q.html#Chapter 6 pp 62-64 -- Use Case Actors">: Chapter 6 pp 62-64 -- Use Case Actors</A>
+<li><a href="04q.html#Chapter 6 pp 64 -- Use Cases and Use Case Model">: Chapter 6 pp 64 -- Use Cases and Use Case Model</A>
+<li><a href="04q.html#Chapter 6 pp 66-67 -- Use Case Formats">: Chapter 6 pp 66-67 -- Use Case Formats</A>
+<li><a href="04q.html#Chapter 6 pp 66-67 -- use cases">: Chapter 6 pp 66-67 -- use cases</A>
+<li><a href="04q.html#Chapter 6 pp 66 -- Actors / Associations">: Chapter 6 pp 66 -- Actors / Associations</A>
+<li><a href="04q.html#Chapter 6 pp 66 -- Actors / Associations">: Chapter 6 pp 66 -- Actors / Associations</A>
+<li><a href="04q.html#Chapter 6 pp 78,79 -- Use case format">: Chapter 6 pp 78,79 -- Use case format</A>
+<li><a href="04q.html#Chapter 6 pp 88 -- EBP Test">: Chapter 6 pp 88 -- EBP Test</A>
+<li><a href="04q.html#Ch 6 pp 66-72 -- Use Case Formats">: Ch 6 pp 66-72 -- Use Case Formats</A>
+<li><a href="04q.html#Ch 6 pp 72 -- use cases customization">: Ch 6 pp 72 -- use cases customization</A>
+<li><a href="04q.html#Ch 6 pp 90 -- Use case diagrams">: Ch 6 pp 90 -- Use case diagrams</A>
+<li><a href="04q.html#Ch 6 pp 80 -- Essential Style Writing">: Ch 6 pp 80 -- Essential Style Writing</A>
+<li><a href="04q.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="Questions and answers on use cases -- use cases">Questions and answers on use cases -- use cases</A></H1><ol class=Section>
+<H2><a name="Scope Bounds the system under design">Scope Bounds the system under design</A></H2>
+What does Larman mean when he says the scope bounds the system under design?
+<p>
+&quot;Scope&quot; is a technical term.  It names a kind of metaphorical boundary
+around the system it applies to.  A Project's scope is what the project is
+about.  If something is &quot;out of scope&quot; we don't waste time on it.  In
+requirements scope limits or bounds what we have to worry about.  If
+something is &quot;in scope&quot; we have to analyse and design for it.  If it
+is out of scope, we don't.
+<p>
+<p>
+<H2><a name="Why so little documentation">Why so little documentation</A></H2>
+Why is it that so little of documentation is necessary for the inception / use cases? Shouldn't there be more documentation to better identify its uses more throughly to cut through confusion and reveal a clearer goal?
+<p>
+Personally I find the thought of preparing a 4 or 5 page fully dressed
+use case more than enough documentation to get a project started.
+<p>
+<H2><a name="Chapter 6 page 65 No external Primary actors">Chapter 6 page 65 No external Primary actors</A></H2>
+Why does the author suggest we should be suspicious if no primary actors are external computer systems?
+<p>
+I can't find this suggestion....
+<p>
+I think that you should be suspicious of any use case where the primary actor
+is inside the system you are designing.   Use case serve real users!
+<p>
+<p>
+<H2><a name="Chapter 6 page 66 offstage actors">Chapter 6 page 66 offstage actors</A></H2>
+The book details offstage actors. Isn't this more of a higher detail plan?
+Isn't this type of detail a little to much for this step of the process?
+<p>
+No!
+<p>
+Back in the 1960's and 70's we taked a lot about avoiding detail at
+the start of projects and <span class="InlineFormula">refining</span> later.
+<p>
+Trouble is that details can kill a project -- In particular an off stage actor like
+the government can really make a project a lot more interesting without
+doing any thing in the final system.
+<p>
+In the <a href="#UP">UP</A> you take a small part of the software and do detailed analysis and
+design on it.  You work out all the details on a small number of requirements.
+Rather than (as in the past) leaving all the details until later.
+<p>
+<H2><a name="Actors and user roles">Actors and user roles</A></H2>
+Should all actors be identified? Can I just identify a specific person or group who will play the role of each actor?
+<p>
+You should at least name the actors and if necesary give same more
+information -- if it is interesting.
+<p>
+I dread the use case diagram with the actor &quot;User&quot; and use case &quot;login&quot;.
+It tells me nothing about the system, and everything about the
+thoughtlessness of the person who drew the diagram.
+<p>
+In fact,
+I like to be very precise and even give a personal name to my primary actors.  For
+detailed interaction design I spell out as much as I can about them:
+age, gender, status, skills, habits, ....  These
+<A name="personas" class="Key"> personas </A>
+improve the usability of the system by matching the behavior to the particular
+users that matter..
+<p>
+<H2><a name="What is the difference between actors and user roles?">What is the difference between actors and user roles?</A></H2>
+Not much.  A person can play many roles in different use cases... and
+each time may appear as a different &quot;actor&quot;.... I think.
+<p>
+<H2><a name="Chapter 6.4 page 66 -- limit on the number of use cases">Chapter 6.4 page 66 -- limit on the number of use cases</A></H2>
+Motivation is enticing! However, when presenting use cases to emphasize and define goals and perspectives, is there a limitation of the number of use cases required to fulfill the requirements of the case or project?
+<p>
+No. A big project has many use cases.  A small project has one simple use
+case.
+<p>
+Use cases are a good indicator of the effort needed to develop a project.
+<p>
+<H2><a name="Chapter 6 page 77">Chapter 6 page 77</A></H2>
+Is it better to record non-functional requirements with the use case in the beginning and then move them to special requirements later, or to list them in the special requirements from the beginning?
+<p>
+I don't know.   I've gone both ways.   Try this: start with a non-functional
+requirement attached to a use case.... and when it appears elsewhere
+factor it out into a &quot;supplementary spec&quot; in another artifact and link
+the two together.
+<p>
+Note: there is a lot to be said for using hyperlinks in your documents.
+<p>
+<H2><a name="Chapter 6.16 pages 87-89 Use Case Tests">Chapter 6.16 pages 87-89 Use Case Tests</A></H2>
+For application requirements analysis, the boss, EBP, and Size tests are enumerated. Is there any reason as to why a System Test is not considered a use-case test? Shouldn't that be considered an important test to insure a good product? It only seems logical to me!
+<p>
+OK.  The book is confusing.  It means &quot;How to spot a good use case&quot;.  It is
+not talking about &quot;How to test the system&quot;.  The questions are about
+how to reject bad use cases before you try to code them.
+<p>
+<H2><a name="Use cases and functionality">Use cases and functionality</A></H2>
+Do the use cases define all the functionality within the scope of the system and nothing outside the scope?
+<p>
+Yes.
+<H2><a name="Chapter 4/6 pp 61 -- Use Cases">Chapter 4/6 pp 61 -- Use Cases</A></H2>
+Who is Ben Stien?
+<p>
+A well known misprint: <span class="InlineFormula">Ben Stein</span>...  I've never heard of him before,
+but agree with the philosphy: decide what you want before trying to get it!
+.See
+http://thinkexist.com/quotation/the_indispensable_first_step_to_getting_the/12868.html
+<p>
+<H2><a name="Chapter 6 pp 61-67 -- Requirements and Formats">Chapter 6 pp 61-67 -- Requirements and Formats</A></H2>
+This chapter mentions the Supplementary Specification, Glossary, Vision,
+and Business Rules requirements but doesn't define them, how are they used?
+<p>
+We will cover these later in the book/course.
+<p>
+<H2><a name="Chapter 6 pp 61-67 -- Requirements and Formats">Chapter 6 pp 61-67 -- Requirements and Formats</A></H2>
+How should it be decided which use case format to use?
+(Brief, Casual, Fully Dressed)
+<p>
+Start simple.... and elaborate as the project proceeds.
+<p>
+<p>
+<H2><a name="Ch 6 pp 061-089 -- Use Case text vs diagram">Ch 6 pp 061-089 -- Use Case text vs diagram</A></H2>
+I thought that use cases were primarily a VISUAL representation of
+a certain system scenario.  However, now in the text, it seems that they
+are mostly just written &quot;stories&quot;.  Is one better than the other, or
+should we just use both types in tandem?
+<p>
+One of the commonest errors made by people new to use cases is think
+that they are a diagram.  A use case is not a diagram.  A project
+has a diagram that shows many use cases as bubbles.
+<p>
+Fact:  the scenarios/text forms provide the real benefit
+for designing software.  The diagram is a visual aid and index.
+It summarizes all the use cases.
+<H2><a name="Ch 6 pp 061-089 -- Use Case text vs diagram">Ch 6 pp 061-089 -- Use Case text vs diagram</A></H2>
+Which should we use text or diagram?
+<p>
+Both ultimately.  Start with the simple text formats, refine
+some in detail.... and draw a diagram when you want to
+summarize the whole picture.
+<p>
+Beware drawing a diagram too early.  They help most when you have many
+actors and many cases and you need to see how they fit together: who
+does what.
+<H2><a name="Chapter 3 pp 61-89 -- Use Cases">Chapter 3 pp 61-89 -- Use Cases</A></H2>
+Can Use Cases be use to demonstrate why a system shouldn't be design?
+<p>
+I don't see why not... but I've never heard of this happening.
+<p>
+<H2><a name="Chapter 6 pp 61-89 -- Use cases">Chapter 6 pp 61-89 -- Use cases</A></H2>
+With an almost infinite number of things that can go wrong with a system,
+how do you determine what alternate flows should and shouldn't be included
+in the use case?
+<p>
+Don't forget that use cases grow as the project proceeds.  New
+alternatives are always being added.  So the question is which alternatives
+do you explore first.  I guess the answer is -- start with the riskiest
+and most interesting ones.
+<p>
+One nice thing about fully dressed use cases is that you can write
+a single alternative flow that can occur in many steps in the use case.
+An example would be
+<pre> 		*z. if power is cut, .....</pre>
+The asterisk means that the same action is carried out what ever
+step is in progress.  Similarly you can write
+<pre> 		3-15a. If user does not respond in 10 minutes, ...</pre>
+as an action to be taken in steps 3 through to 15 if the user times out.
+<p>
+<H2><a name="Chapter 6 pp 61-89 -- Nonfunctional Requirements">Chapter 6 pp 61-89 -- Nonfunctional Requirements</A></H2>
+Since use cases focus on developing functional requirements, and
+nonfunctional requirements are only discovered offhand during that process,
+is there a formal method for developing nonfunctional requirements (beyond
+&quot;I think the program should be fast&quot;)?
+<p>
+I suppose you could list all the different types of non-functional
+types and run through the list with your stakeholders -- how fast
+must this respond? How valuable will it be to recover data lost
+in an earthquake? ...  But in practice if you keep your ears and eyes
+open, critical ones are obvious as you talk with the stakeholders
+and think about the system.
+<p>
+<H2><a name="Chapter 6.2 pp 63 -- Use Case">Chapter 6.2 pp 63 -- Use Case</A></H2>
+Have you ever worked on a project or known of a project that didn't use,
+use cases?
+<p>
+All of them prior to 2001.
+<p>
+<H2><a name="Chapter 6 pp 65 -- Use Cases vs. Functional Requirements">Chapter 6 pp 65 -- Use Cases vs. Functional Requirements</A></H2>
+Explain in better detail the differences between a Use Case and a
+Functional Requirement?
+<p>
+A Use Case is one way to express a functional requirement.  Currently
+most people think that it is best practice for expressing and organizing
+requirements.
+<H2><a name="Chapter 6 pp 65 -- Use Case Requirements">Chapter 6 pp 65 -- Use Case Requirements</A></H2>
+The books says, &quot;Use cases are indeed requirements (although not all
+requirements).&quot; How do you know which requirements are important?
+<p>
+Good question.  Best practice answer: ask the stakeholders.
+<p>
+One cunning idea is to ask them to allocate hypothetical $100 to
+each one to indicate the relative importance.
+<p>
+<p>
+<H2><a name="Chapter 6 pp 67-68 -- Conflicts between stakeholder requirements">Chapter 6 pp 67-68 -- Conflicts between stakeholder requirements</A></H2>
+What if there is a conflict with a stakeholders interest, either with
+another stakeholder, existing technology, etc?  How do you resolve it?
+<p>
+This topic deserves a book there are so many ramifications -- is the
+conflict personalities, business politics, people loosing power,
+different views, a legitimate trade off, ...
+<p>
+I would get the the conflict clarified and get the opposing people
+to meet in a neutral area.... Then, if that fails, talk to their
+bosses...
+<p>
+This is one reason why companies hire in special facilitators and
+consultants
+to develop the requirements with them.
+<p>
+This is really a
+[<A href="cs372/index.html"> cs372/ </A>]
+topic... I most write more on it!
+<p>
+<p>
+<H2><a name="Chapter 6 pp 76 -- Use Case">Chapter 6 pp 76 -- Use Case</A></H2>
+In the middle of the page 76, it shows a scenario of Paying by Credit.  The
+scenario states that system sends an authorization request to an external
+service system.  However, in class you said that the use case should not
+contain internal operations that the user would not know about.  So is this
+scenario different?
+<p>
+Key point -- the external agency is external to our system and so must
+be mentioned.  In fact, I hope the person understands that the money
+is coming out of the bank that owns the credit card!
+<p>
+<H2><a name="Chapter 6 pp 85 -- Primary Actor">Chapter 6 pp 85 -- Primary Actor</A></H2>
+In the POS example the author states that the cashier is the primary actor
+because he/she initiates the action of the system. There is mention of the
+customer self service check outs that are now widely used. In this case is
+the customer the primary actor and is this system considered a separate use
+case or a modified version of the first since most of the actions remain
+the same?
+<p>
+Interesting question.  I think the smart move would be to create
+an included use case that is shared between the two concrete ones.
+This technique is later in the book and course.
+<H2><a name="Chapter 4 pp 50 -- Business Case">Chapter 4 pp 50 -- Business Case</A></H2>
+I was constructing a Vision and Business Case for the project, when I
+realized I didn't know much about what goes into the creation of a Business
+Case. Can you elaborate?
+<p>
+In this course we will keep it simple -- explain in business terms what
+it costs and why it is worth doing anyway.
+The Business Case explains why
+it is good for the enterprise to develop the software under design.  This
+often means: increasing the bottom line.
+<p>
+Some enterprises have a complicated report format that is used
+to state the Business Case. Review
+[<A href="http://csci.csusb.edu/dick/cs372/c2.html#The%20Business%20Case"> The%20Business%20Case in c2 </A>]
+to see the information that is often required.
+<p>
+<p>
+<H2><a name="pp -- What is the significance of use cases?">pp -- What is the significance of use cases?</A></H2>
+<p>
+They are probably the most important technique, so far invented,
+for documenting what your software
+needs to do. They are a tool that places what the system must do
+in the context of the user needs.  They also help you organize the
+design and code.
+<p>
+<H2><a name="Chapter 6 pp 61-65 -- Use Cases">Chapter 6 pp 61-65 -- Use Cases</A></H2>
+When writing use cases for large projects is it necessary to write a use
+case for every scenario, or would it be sufficient to write use cases for
+the most complex scenarios and create use case diagrams for all.
+<p>
+Scenarios are parts of use cases -- one use case has many scenarios.
+Each scenario should belong to at least one use case.
+<p>
+So to rephrase the question:
+<p>
+<H2><a name="Must I write scenarios for every use case?">Must I write scenarios for every use case?</A></H2>
+<p>
+Answer: not yet.
+<p>
+<H2><a name="Can I do just the most complex use cases first?">Can I do just the most complex use cases first?</A></H2>
+<p>
+Answer: Probably -- the trick is to pick the use cases that will have the
+biggest impact on the design of the software.  Start with some important
+use case that involves many ideas from the user's domain -- even if
+it only has one simple scenario.
+<p>
+As an example: suppose you know that your software has to solve a
+hard problem then you should work out a simple use case that sets up
+a problem and lets you test the solution...
+<p>
+Another example: you are using a novel protocol -- focus on
+use cases that need the protocol.
+<p>
+Example: the problem involves a lot of entities/tables in a data base --
+pick use cases that need data from many of these...
+<p>
+<H2><a name="What happens if I do the wrong use cases first?">What happens if I do the wrong use cases first?</A></H2>
+<p>
+You may find that of software needs a big rewrite and your
+design a big rethink late in the project.
+<p>
+<H2><a name="Chapter 4 pp 061-089 -- Use Cases">Chapter 4 pp 061-089 -- Use Cases</A></H2>
+Are use cases a complete collection of scenarios, or some kind of a
+representative collection of scenarios?
+<p>
+They start out as being a subset and grow into completeness as the project
+proceeds.
+<p>
+The worst case is discovering a scenario at the end of the project
+that can not be handled by the code you have got running.  So we
+search out scenarios that stretch our architecture early in the project.
+<H2><a name="Chapter 6 pp 62-64 -- Use Case Actors">Chapter 6 pp 62-64 -- Use Case Actors</A></H2>
+Isn't the Fully Dressed format for use cases too complex, I thought it was
+supposed to be simple(pg65)? or Should we be using all of these formats to
+be completely thorough in our analysis.
+<p>
+Don't write fully dressed cases for every use case -- just the really
+important ones.  Importance varies as the project proceeds.  Initially
+you need the 10% that involve risk and define the architecture.  Later
+you only &quot;fully dress&quot; a use case just before you start to implement
+it.
+<p>
+Use cases go through 5 stages: name, brief, casual, fully-dressed,
+implemented.
+<p>
+The complexity of a fully dressed use case reflects the complexity
+that the software has to handle.  Ignore it and watch your software
+fail.
+<p>
+<p>
+Use cases go through 5 stages: name, brief, casual, fully-dressed,
+implemented.
+<p>
+<H2><a name="Chapter 6 pp 64 -- Use Cases and Use Case Model">Chapter 6 pp 64 -- Use Cases and Use Case Model</A></H2>
+How do you determine when to use the Use Case and the Use Case Model?
+<p>
+Write text to clarify one use case.
+<p>
+Use the diagram to clarify many use cases.
+<p>
+I draw a fast use case diagram first in pencil/chalk and use it as
+a visual list of names.   Then I describe each use case in more detail.
+<p>
+But you can often pick one critical use case and write it first and
+delay the diagram until you have to present the material or when
+you start to get lost in all the different use cases.
+<p>
+The diagram + text makes up the &quot;use case model&quot;.  The diagram is
+optional (but nice).  The text: name, brief, casual, ... is essential.
+<p>
+<p>
+<H2><a name="Chapter 6 pp 66-67 -- Use Case Formats">Chapter 6 pp 66-67 -- Use Case Formats</A></H2>
+Out of the three common use case formats (brief, casual, and fully
+dressed). Which is the one that is the most effective?
+<p>
+Three different tools for three different purposes:  like three different
+wrenches or screw drivers.   Or three different kitchen knives.
+<p>
+Pick the right one for the job in hand.  You need brief descriptions
+to get started and fully dressed before you code.
+<p>
+Choose the tool that gives you most information.
+<p>
+<H2><a name="Chapter 6 pp 66-67 -- use cases">Chapter 6 pp 66-67 -- use cases</A></H2>
+Can a use case still work if you mix up the primary actor and the
+supporting actor? Meaning will it still work if i unknowingly put the
+primary actor in the supporting actor spot and vise versa?
+<p>
+It will certainly help you document what is happening.  The real catch
+is that you'll describe a solution that is fitted to the wrong person.
+This won't make your users very happy!
+<p>
+Start by selecting a primary actor..... and then ask what they might
+want to do.
+<H2><a name="Chapter 6 pp 66 -- Actors / Associations">Chapter 6 pp 66 -- Actors / Associations</A></H2>
+There are three types of actors.  If two actors interact can they be
+connected to each other.
+<p>
+NO!
+<p>
+Common mistake: connecting actors that communicate or connecting bubbles
+that share data -- DON'T!
+<p>
+There is one valid (and IMHO useful) connection between actors:
+generalization.
+Like this:
+<li>Student ----|&gt; Person
+which says that a Student does everything that a Person does.
+<p>
+<H2><a name="Chapter 6 pp 66 -- Actors / Associations">Chapter 6 pp 66 -- Actors / Associations</A></H2>
+Also, in a use case diagram what is the difference between associations
+drawn with arrows and associations drawn with just lines.
+<p>
+Not much.  The arrow comes from the primary actor.
+<p>
+<p>
+<H2><a name="Chapter 6 pp 78,79 -- Use case format">Chapter 6 pp 78,79 -- Use case format</A></H2>
+<p>
+The book says that there isn't one best format for use cases, on projects
+in the real world which format is used more, the one-column style or the
+two-column style?
+<p>
+I don't have any evidence which formats you'll meet in the real world.
+Luckily it is easy to shift to fit the company you work for.
+<p>
+Personally, I use the one column format because it is simpler to write.
+My guess is that you'll many others doing this as well.
+<p>
+<p>
+<H2><a name="Chapter 6 pp 88 -- EBP Test">Chapter 6 pp 88 -- EBP Test</A></H2>
+Can you give a better description of an EBP Test than the books
+description?
+<p>
+Not really:  it implies that a use case should be valuable and to some
+extent
+independent of other use cases(a transaction).  I'm not sure about the
+accuracy of the other criteria (response to an event, in one place,
+at one time, ...).
+<p>
+Perhaps it can give you an image -- the user reaches for the computer and
+gets something done and then stops, and the enterprise profits as a result.
+<p>
+<p>
+<H2><a name="Ch 6 pp 66-72 -- Use Case Formats">Ch 6 pp 66-72 -- Use Case Formats</A></H2>
+When will we use each of the three use case formats?  When will we need to
+use a fully dressed use case?
+<p>
+In a real project you start out elaboration with only 10% of the use cases
+in fully-dressed format... but end up transition with nearly all of them
+fully documented.
+<p>
+You follow the rule: select use cases that shine a light on the
+problems and solutions for refinement.
+<p>
+<li><a name="Refinement">Refinement</A>::usecases=`supplying more details, moving from name to brief
+format, to casual format, and finally fully-dressed format`, refinement
+may lead to rethinking and correcting mistakes or out-of-date information.
+<p>
+In this class:  Today I'd like us to have one fully-dressed use-case to
+work with but I don't plan to remove points if everyone is a bit casual.
+<p>
+<p>
+<H2><a name="Ch 6 pp 72 -- use cases customization">Ch 6 pp 72 -- use cases customization</A></H2>
+What customization is needed for Different business?
+<p>
+It depends on whether there is a common core of useful things that are
+needed
+across all the businesses you are considering.
+<p>
+You can make customization easier in use cases by using the <a href="#essential">essential</A>
+style -- omitting all mention of hardware and user interface details.
+<p>
+<H2><a name="Ch 6 pp 90 -- Use case diagrams">Ch 6 pp 90 -- Use case diagrams</A></H2>
+Figure 6.3 seems to violate use case rules(IE. reads like a flow chart,
+does to many things),why is this acceptable?
+<p>
+What is missing are the control flows that specifies the sequence of use
+cases.
+If they were shown you would have a non-standard flowchart.
+<p>
+Use case shouldn't have a sequence... a set of independently scheduled
+things that the user needs to do: at the time and place of the user's
+desire.  If you become aware of some kind of constraint -- example
+user must &quot;login&quot; before &quot;editing a file&quot; then your use cases are
+two small -- steps in a scenario.
+<p>
+In other words:  sequences should be in the use case scenarios, not
+between the use cases themselves.   Exception: pre and post conditions in
+a fully dressed format
+can express a sequence.  Not shown in the use case diagram.
+<p>
+<H2><a name="Ch 6 pp 80 -- Essential Style Writing">Ch 6 pp 80 -- Essential Style Writing</A></H2>
+When should essential style writing be used?
+<p>
+When ever possible!  Delay physical details until cast in stone.  In any
+case better expressed in code or as configuration files (eg. CSS).
+<p>
+<li><a name="essential">essential</A>::=`describing things without mentioning user interface or other
+physical details`.
+<p>
+Example: don't use the words &quot;click&quot;, &quot;button&quot;, &quot;page&quot;, &quot;data base&quot;, ...
+</ol><p>. . . . . . . . . ( end of section <a href="04q.html#Questions and answers on use cases -- use cases">Questions and answers on use cases -- use cases</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci Dept, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10.
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

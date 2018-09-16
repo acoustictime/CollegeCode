@@ -1,0 +1,243 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/06x.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:54:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+Exercises for class 06
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="06x.txt">Text Version</A>]
+ 06x.html 
+Wed Jan 25 13:05:26 PST 2012
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="06x.html#Exercises for class 06">Exercises for class 06</A>
+<li><a href="06x.html#Practice domain modeling.">: Practice domain modeling.</A>
+<li><a href="06x.html#CSUSB Inventory Control">: : CSUSB Inventory Control</A>
+<li><a href="06x.html#Depot Stock Control Software">: : Depot Stock Control Software</A>
+<li><a href="06x.html#Instructions">: : : Instructions</A>
+<li><a href="06x.html#Vision -- Depot Stock Control Software">: : : Vision -- Depot Stock Control Software</A>
+<li><a href="06x.html#Use Case UC1 Manager reviews unfulfilled orders">: : : Use Case UC1 Manager reviews unfulfilled orders</A>
+<li><a href="06x.html#Exercise 1">: : : Exercise 1</A>
+<li><a href="06x.html#Classes">: : : : Classes</A>
+<li><a href="06x.html#Associations">: : : : Associations</A>
+<li><a href="06x.html#Multiplicities">: : : : Multiplicities</A>
+<li><a href="06x.html#Answer 1 -- With no association names">: : : Answer 1 -- With no association names</A>
+<li><a href="06x.html#Exercise 2">: : : Exercise 2</A>
+<li><a href="06x.html#Attributes">: : : : Attributes</A>
+<li><a href="06x.html#Answer 2 -- Domain Model with attributes">: : : Answer 2 -- Domain Model with attributes</A>
+<li><a href="06x.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="Exercises for class 06">Exercises for class 06</A></H1><ol class=Section>
+<li>List the artifacts that are developed during inception and indicate their degree of completeness.
+<li>What three goals are normally tackled during elaboration?
+<li>What artifacts are started during elaboration?
+<li>What is a domain model?
+<li>Here are the two basic symbols used in a simple domain model, what do they mean?
+<img src="06domain.gif" alt="[C in a Box and A on a line]">
+<p>
+<li>Give 2 examples of the kinds of things that do not appear in a domain model.
+<li>What is the relation between domain models and design class diagrams.
+<li>List half-a-dozen types of conceptual classes.
+<li>What is a description class and why are they useful?
+<li>When should you show an association in a domain model?
+<li>What is a multiplicity?  Give 4 examples.
+<li>Here is a text version of some multiplicities: Section(*)-----(1)Teacher(*)-----(1)Department.
+Explain what they are saying.
+<li>List half-a-dozen categories of association.
+<H2><a name="Practice domain modeling.">Practice domain modeling.</A></H2><ol class=Section>
+<H3><a name="CSUSB Inventory Control">CSUSB Inventory Control</A></H3><ol class=Section>
+Suppose that you have to develop the CSUSB Inventory program for Facilities
+Services. This software tracks all the equipment and furniture on campus.
+It enables us to find where things have gone to. Each thing is in one place
+and places can have any number of things. CSUSB Inventory is used when we
+move, instal, replace, repair, and remove things from service.  It helps us
+find things and put them in  the right place.  Places include classrooms
+and stores.
+<p>
+List the nouns in the above.
+<p>
+Draw a domain model.
+</ol><p>. . . . . . . . . ( end of section <a href="06x.html#CSUSB Inventory Control">CSUSB Inventory Control</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H3><a name="Depot Stock Control Software">Depot Stock Control Software</A></H3><ol class=Section>
+<H4><a name="Instructions">Instructions</A></H4>
+<li>Draw a domain model to fit the following description in the space at the bottom of this sheet.
+<p>
+Hint: use a pencil  and an eraser. Or a black/white board with chalk.  Draw incomplete
+boxes.
+<p>
+<H4><a name="Vision -- Depot Stock Control Software">Vision -- Depot Stock Control Software</A></H4>
+Software runs in a depot that ships stocks requested by orders.  It helps
+the depot manager manage stock levels and outstanding orders.
+<H4><a name="Use Case UC1 Manager reviews unfulfilled orders">Use Case UC1 Manager reviews unfulfilled orders</A></H4>
+The manager at a depot logs in and sees a list of the sales orders that his depot has not yet fulfilled.
+<H4><a name="Exercise 1">Exercise 1</A></H4><ol class=Section>
+Your diagram should show the following information (and not much else!).
+<H5><a name="Classes">Classes</A></H5>
+<li>Depot, Product, Stock, Customer, Sales Order, Sales Item
+<H5><a name="Associations">Associations</A></H5>
+<li>A Depot holds Stocks.
+<li>Products are stocked as Stocks.
+<li>A Depot has Customers.
+<li>A Customer can have Sales Orders.
+<li>A Sales Order has Sales Items.
+<li>A Stock can be ordered as a Sales Item
+<H5><a name="Multiplicities">Multiplicities</A></H5>
+<li>Each Stock has precisely one Product and is held at one Depot.
+<li>Each Customer is served by only one depot.
+<li>Each Sales Item is on one Sales Order and is for one Stock.
+</ol><p>. . . . . . . . . ( end of section <a href="06x.html#Exercise 1">Exercise 1</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H4><a name="Answer 1 -- With no association names">Answer 1 -- With no association names</A></H4>
+[<A href="06xans.png"> 06xans.png </A>]
+<H4><a name="Exercise 2">Exercise 2</A></H4><ol class=Section>
+See this
+[<A href="07x1.png"> 07x1.png </A>]
+and add these
+<H5><a name="Attributes">Attributes</A></H5>
+<li>Depot: Id and address,
+<li>Customer: name and address,
+<li>Sales order: dateOrdered, dueDate,
+<li>Sales Item:  price and quantity,
+<li>Product: description and units.
+</ol>
+<p>
+<H4><a name="Answer 2 -- Domain Model with attributes">Answer 2 -- Domain Model with attributes</A></H4>
+[<A href="07x1ans.gif"> 07x1ans.gif </A>]
+</ol><p>. . . . . . . . . ( end of section <a href="06x.html#Exercise 2">Exercise 2</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+</ol><p>. . . . . . . . . ( end of section <a href="06x.html#Depot Stock Control Software">Depot Stock Control Software</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+</ol><p>. . . . . . . . . ( end of section <a href="06x.html#Exercises for class 06">Exercises for class 06</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci and Engineering School, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10 and
+[<A href="02DiceGameSSD.gif"> 02DiceGameSSD.gif </A>]
+(example).
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

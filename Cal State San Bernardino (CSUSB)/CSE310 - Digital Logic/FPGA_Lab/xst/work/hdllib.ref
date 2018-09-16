@@ -1,0 +1,3 @@
+MO FPGA_hex_sseg NULL FPGA_hex_sseg.v vlg47/_f_p_g_a__hex__sseg.bin 1359491301
+MO disp_mux NULL disp_mux.v vlg4D/disp__mux.bin 1359491301
+MO hex_to_sseg NULL hex_to_sseg.v vlg6C/hex__to__sseg.bin 1359491301

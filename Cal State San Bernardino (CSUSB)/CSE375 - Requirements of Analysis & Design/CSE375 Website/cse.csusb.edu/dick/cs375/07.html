@@ -1,0 +1,301 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/07.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:53:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+CSci 375/07 Domain Model II
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="07.txt">Text Version</A>]
+ 07.html 
+Wed Jan 11 07:25:36 PST 2012
+<br>
+<h6><br>Opening Microsoft files (winzip, word, excel, powerpoint)
+on this page may require you to <a href="http://acm.csusb.edu/Services/webaccessibility/compliance/readers_and_viewers.htm">download a special viewer</a>.
+Or you can download and save the files and use your preferred office applications to view and edit them.</h6>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="07.html#CSci 375/07 Domain Model II">CSci 375/07 Domain Model II</A>
+<li><a href="07.html#Revision History">Revision History</A>
+<li><a href="07.html#Project work 2 due">Project work 2 due</A>
+<li><a href="07.html#Introduction PowerPoint">Introduction PowerPoint</A>
+<li><a href="07.html#9.16 Attributes in Domain Models">9.16 Attributes in Domain Models</A>
+<li><a href="07.html#9.20 Resources -&gt; using color for common types of classes:">9.20 Resources -&gt; using color for common types of classes:</A>
+<li><a href="07.html#Example of a Domain Model">Example of a Domain Model</A>
+<li><a href="07.html#Exercise on Domain modeling with added attributes">Exercise on Domain modeling with added attributes</A>
+<li><a href="07.html#Domain Model Patterns">Domain Model Patterns</A>
+<li><a href="07.html#Bolloju04">Bolloju04</A>
+<li><a href="07.html#Questions and Answers on Domain Models II">Questions and Answers on Domain Models II</A>
+<li><a href="07.html#Exercises on Domain Modeling with Attributes.">Exercises on Domain Modeling with Attributes.</A>
+<li><a href="07.html#Next Step in Project: A First Domain Model">Next Step in Project: A First Domain Model</A>
+<li><a href="07.html#Quiz on Domain Modeling">Quiz on Domain Modeling</A>
+<li><a href="07.html#Next class">Next class</A>
+<li><a href="07.html#Review Questions">Review Questions</A>
+<li><a href="07.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="CSci 375/07 Domain Model II">CSci 375/07 Domain Model II</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Date #<th scope="col">Topic (Participation 2pt)<th scope="col">Study pages (2 pts)<th scope="col">Quiz(15 pts)<th scope="col">Project Work(10 pts)
+<tr><td>Previous 6<td>Domain Model<td>121-157<td>-<td>W2(Use Case Model 1)
+<tr><td>Today 7<td>Domain Model II<td>157-171<td>Q3(121-171)<td>-
+<tr><td>Next 8<td>SSDs<td>173-196<td>-<td>W3(Domain Model 1)
+</table><br>(Close Table)<br>
+<H1><a name="Revision History">Revision History</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Version# Date<th scope="col">Description<th scope="col">Author
+<tr><td>0 2005-01-03<td>Used boiler plate to make template<td>RJB
+<tr><td>1 2005-01-25<td>Entered section headings from book<td>RJB
+<tr><td>2 2005-01-31<td>Moved domain model ex to this class<td>RJB
+<tr><td>3 2005-02-01<td>Added colored UML image<td>RJB
+<tr><td>5 2005-02-02<td>Added questions to be answered<td>RJB
+<tr><td>6 2006-12-06<td>Removed Questions and adjusted date
+<tr><td>7 2007-01-26<td>Add new exercise
+<tr><td>8 2000-01-29<td>Expanded note on derived attributes
+<tr><td>9 2009-01-30<td>Added links to some some domain patterns
+<tr><td>10 2011-01-26<td>Added a powerpoint PPT<td>RJB
+</table><br>(Close Table)<br>
+<H1><a name="Project work 2 due">Project work 2 due</A></H1>
+<H1><a name="Introduction PowerPoint">Introduction PowerPoint</A></H1>
+[<A href="http://iris.nyit.edu/~kkhoo/Summer1_2008/715-OOAD/Larman_ppt/LarmanChap9.ppt"> LarmanChap9.ppt </A>]
+(Dr. Benjamin Kho0
+[<A href="http://iris.nyit.edu/~kkhoo/"> http://iris.nyit.edu/~kkhoo/ </A>]
+of NYIT)
+<H1><a name="9.16 Attributes in Domain Models">9.16 Attributes in Domain Models</A></H1>
+<li>* When to do attributes
+<li>** UML Notation:
+<pre>  		visibility name: type multiplicity = default {properties}</pre>
+<li>++ KISS: In a Domain Model Omit: visibility, type, default, properties.
+<li>+++ Don't get hung up on whether an attribute should be put in a diagram.
+Missing one does not cost much.  Adding one that is unneeded only
+costs a little time.  As a rule -- it is better to omit one.
+<li>+ When you omit something from a diagram and you are worried about it --
+put it in another artifact: glossary, data dictionary, business rules, ...
+<p>
+<li>*** Attributes should normally be data types: strings, numbers, characters.
+<li>++ else use associations, perhaps with
+<A name="role names." class="Key"> role names. </A>
+<p>
+<li>* A domain model can show requirements -- but also document them elsewhere -- JIC
+(Just In Case).
+<p>
+<li>++ Replace attributes  with multiplicities by associations.
+This is a first step to a normalized model.
+<li>Derived Attributes -- interesting values can be computed from other data.
+<pre>  		/ name....</pre>
+If there are complicated rules for deriving the attribute put it in another
+artifact as a business rule or a definition.  Note.  The UML
+does have a language for expressing complex rules. It is the
+Object Constraint Language.  We will not be covering it.
+<p>
+<li>* Modeling data types: when, where, how.
+<li>**** Make connections (functional dependencies, foreign keys) highly visible
+<li>* Quantities and Units
+<p>
+<li>* 9.17 Examples -- POS and Monopoly Domain Models
+<li>* 9.18 Conclusion -- Correct or useful?
+<li>* 9.19 Process: Iterative.
+<li>Start in Elaboration (or before inception) and revise throughout elaboration.
+<H1><a name="9.20 Resources -&gt; using color for common types of classes:">9.20 Resources -&gt; using color for common types of classes:</A></H1>
+<li>*** Here is how the &quot;PostIt&quot; colors can be used to help draw domain models:
+<p>
+<img src="colored.uml.gif" alt="Colored UML">
+<p>
+[<A href="http://csci.csusb.edu/dick/biba.php?from=07&amp;search=CoadLefebvre99"><cite>CoadLefebvre99</cite></A>]
+<p>
+<H1><a name="Example of a Domain Model">Example of a Domain Model</A></H1>
+<img src="FISDom1.gif" alt="First FIS domain model">
+<p>
+[<A href="FIS1.html"> FIS1.html </A>]
+<p>
+<H1><a name="Exercise on Domain modeling with added attributes">Exercise on Domain modeling with added attributes</A></H1>
+Domain modeled in last class
+[<A href="06x.html#Exercise 2"> 06x.html#Exercise 2 </A>]
+[<A href="07x1.png"> 07x1.png </A>]
+without attributes can
+have attributes added like this
+[<A href="07x1ans.gif"> 07x1ans.gif </A>]
+<p>
+<H1><a name="Domain Model Patterns">Domain Model Patterns</A></H1>
+<img src="domainPatterns.png" alt="Aggregation + Intersection + Aspects + Subtype + Reflexive + Directed Graph">
+[<A href="http://csci.csusb.edu/dick/biba.php?from=07&amp;search=Wagner05"><cite>Wagner05</cite></A>]
+and the following
+<H1><a name="Bolloju04">Bolloju04</A></H1><ol class=Section>
+<li>Narasimha Bolloju
+<li>Improving  the quality of business object models using Collaboration patterns
+<li>Commun ACM V47n7(Jul 2004)pp81-86
+[<A href="http://doi.acm.org/10.1145/1005817.1005827"> 1005817.1005827 </A>]
+<li>=EXPERIMENT MODEL REALITIES PATTERN UML COMPOSITION
+<li>Based on Coad and Fowler lists 12 simple patters that helped students improve their conceptual models in 13 different business application domains: spotting classes and connections, plus correcting errors.
+<p>
+<img src="19Bolloju04.gif" alt="(Figure 1 is in ASCII below)">
+<li><a name="Collaboration_patterns">Collaboration_patterns</A>::#Pattern=following,
+<ul class="Set">
+<li>E1: Role (1)-(0..*) Transaction
+<li>E6: Transaction (1)-(0..*) FollowupTransaction
+<li>E5: Specification (1)-(0..*) Transaction
+<li>E3: CompositeTransaction (1)&lt;*&gt;-(0..*) LineItem
+<li>E2: Place (1)-(0..*) Transaction
+<li>R: Actor (1)-(0..*) Role
+<li>T1: Item (1)-(0..*) SpecificItem
+<li>T4: Group (1)&lt;&gt;-(0..*) Member
+<li>E4: SpecificItem (1)-(0..*) Transaction
+<li>T2: Assembly(1)&lt;*&gt;-(0..*) Part
+<li>P: OuterPlace (1)-(0..*) Place
+<li>T3: Container (1)&lt;*&gt;-(0..*) Content
+</ul>
+<li>Next
+[<A href="http://csci.csusb.edu/dick/biba.php?from=07&amp;search=BollojuLeung06"><cite>BollojuLeung06</cite></A>]
+</ol>
+<p>
+<H1><a name="Questions and Answers on Domain Models II">Questions and Answers on Domain Models II</A></H1><ol class=Section>
+[<A href="07q.html"> 07q.html </A>]
+</ol><p>. . . . . . . . . ( end of section <a href="07.html#Questions and Answers on Domain Models II">Questions and Answers on Domain Models II</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="Exercises on Domain Modeling with Attributes.">Exercises on Domain Modeling with Attributes.</A></H1>
+[<A href="07x.html"> 07x.html </A>]
+<H1><a name="Next Step in Project: A First Domain Model">Next Step in Project: A First Domain Model</A></H1>
+See
+[<A href="w3.html"> w3.html </A>]
+for details is due this time next week.
+<H1><a name="Quiz on Domain Modeling">Quiz on Domain Modeling</A></H1>
+Given a description  of a domain (text, rules, scenarios,...)
+draw a suitable domain model.
+<a href="#TBA">TBA</A>
+<H1><a name="Next class">Next class</A></H1>
+[<A href="08.html"> 08.html </A>]
+&quot;System Sequence Diagrams&quot;, a way of using the UML to model the sequences
+of events in one use case or scenario flowing between the actors and the
+system under development.
+<p>
+<p>
+<H1><a name="Review Questions">Review Questions</A></H1>
+[<A href="07r.html"> 07r.html </A>]
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good class to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what is not needed, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<p>
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci Dept, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10.
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need now. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">End</a></H3>
+</body>

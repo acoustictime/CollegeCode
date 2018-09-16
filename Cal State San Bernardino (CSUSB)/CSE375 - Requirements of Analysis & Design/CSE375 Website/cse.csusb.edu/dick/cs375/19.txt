@@ -1,0 +1,165 @@
+.Open 19 OO Design
+.Table Date	#	Topic (Participation 2pt)	Study pages (2 pts)	Quiz(15 pts)	Project Work(10 pts)
+.Row Previous	18	Domain Model III	501-539	-	W8(Model 3: model 2 improved)
+.See ./w8.html
+.Row Today	19
+.Item Revu Interactions and DCDs
+.Item 221-270
+.See ./19.html
+.Item Q9(1-535)
+.Row Next	20	Review	all
+.See ./20.html
+.Item -
+.Item W9(Model 4)
+.See ./w9.html
+.Close.Table
+. Revision History
+.Table Version# Date	Description	Author
+.Row 0	2005-01-03	Used boiler plate to make template	RJB
+.Row 1	2005-03-14	Added section headings and some notes and links	RJB
+.Row 2	2005-03-16	Added more notes	RJB
+.Row 3	2006-01-20	Updated notes pages	RJB
+.Row 4	2007-03-09	Removed chapters 33,34,36,37,39	RJB
+.Row 5	2008-02-05	Moved MVC details to patterns	RJB
+.Row 6	2008-03-05	Added emphasis on packages and deployments	RJB
+.Row 7	2008-12-23	Removed architecture and deployment	RJB
+.Row 8	2010-03-10	Updated reading and review qns	RJB
+.Close.Table
+. Reading -- Pages 221-270 -- Again
+. Review Questions 19
+Do as many of these as you can
+.See ./19r.html
+and hand in one for grading.
+. Project W8 -- Model 3 due in
+. Review the Unified Process
+Name the phases and disciplines.
+
+How do they relate?
+
+Describe a typical iteration in each of the phases.
+
+. Review Domain Modelling and Use Case Models
+You have been asked by "Facilities Services" to develop an inventory
+program for CSUSB.  It will allow the facilities management keep track of
+where thing are on campus.  Things can be furniture or equipment.  There are
+many special kinds of furniture and or equipment.   Each thing is in one
+place (a classroom, laboratory, storage, etc.). But a place can have
+many things in it.  Using the classroom as a source of concepts draw
+a domain model for this system.
+
+Draw a UML diagram of half-a-dozen likely use cases for the inventory system.
+Write a brief description of one of them.
+
+.Open Review Interaction Diagrams and Design Class Diagrams
+Two types of interactions
+. Sequence
+Objects, lifelines, found message, activations, messages.
+Metaclasses, create, delete.
+. Communication
+Objects, associations, messages, found message,...
+Metaclasses, create, delete.
+. Design Class Diagrams
+One DCD for a set of interaction diagrams -- indeed for the whole project
+(if small enough).
+
+Classes, attributes, associations, generalization, interfaces, dependencies, ...
+. Fitting them into the Process
+.Close Review Interaction Diagrams and Design Class Diagrams
+. Questions and Answers
+.See ./19q.html
+. Exercises on understanding OO Design
+.See ./19x.html
+
+. Next Assigned Project:  The fourth iteration
+.See ./w9.html
+. Quiz 9 -- UML Notations
+.Close 19 OO Design
+. Next -- Final Course Review and Project work
+.See ./20.html
+.Open Previous to 2009 we also did this
+. -- Chapter 33 Architectural Analysis
+   $YAGNI
+   Architecture is about making Technical decisions based on the
+Purposes and Qualities that are required. -- Chapters 33 and 34.
+.See ./architecture.html
+(Not on final)
+
+. -- Chapter 34 Logical Architectural Refinement
+   * 34.1 Example  NextGen
+   **** Pay attention to these examples.  The three layers 
+(figures 34.1,2,3) are usable in just about every project. Just the details
+change.
+   **** Pay attention to the coupling between layers -- figures 34.2 and 34.3.
+   * 34.2 Collaboration vs Layers
+   ** notice the use of GoF Facade to hide the complexities of a subsystem
+from its clients.
+   ** Notice how you may have so many Controller facades that they should go
+in their own package/layer (figure 34.7)
+   * 34.3 Issues with Layers
+   ** Classic Three-Tier Architecture: Client+Web server+DataBase
+Notice how this may or may not be deployed accross several physical servers.
+   ** Classic Three Layer Architecture: Model-View-Control
+.See ./patterns.html#MVC
+   *** 34.4 MVC and Upward Communication
+
+. -- Chapter 35 Package Design
+   ** 35.1 Guidelines
+   ++ Packages show how you organize your classes.
+   ** Organize your classes into classic packages.
+
+. -- Chapter 36 More Patterns
+$YAGNI in this class... You may need them in practice.  I have put some of
+them into the
+.See ./patterns.html
+page for this class.  It is almost certain that in practice you will
+need to handle exceptions and errors and this chapter has some excellent
+advice, including the
+.Key Proxy pattern
+developed by the $GoF.  Notice that you can understand figure 36.12 
+in terms of $GRASP paterns....  In 36.7 Larman
+introduces the
+.Key Abstract Factory
+by the $GoF which you will need when creating complex objects.
+Then there is the
+.Key Do It Myself
+pattern in section 36.8 --  you might say this is the original
+$OO design paradigm "A properly
+designed OO light bulb will screw itself into the socket"
+
+. -- Chapter 37 Persistance Framework
+Nice Examples.  You'll need to do things like this is
+a real project but not in CS375 quizzes and finals -- $YAGNI.
+
+. -- Chapter 38 Artifacts, Nodes, and Deployment Diagrams
+   **** 38.1 A Deployment Diagram
+Simple and useful.
+   ++++ In this course, no need to shade edges of nodes.
+   ++ A deployment shows parts of the Physical system: hardware,
+, operating systems, virtual machines, run-time environments, data bases, etc
+
+   These are called `nodes`.
+
+node::="any hardware or software that is needed to execute other software".
+
+  Nodes are connected by links labelled with protocols to indicate communication.
+
+   ++ It can also show things the you produce that are `deployed` on the
+`nodes`.  These are called `artifacts`.
+
+artifact::="anything you produce while developing software", including code,
+diagrams, tests, executables, DLLs, tarballs, JARs, scripts, ...
+
+   ++ These artifacts can realize (contain, implement) components and classes
+in your design, but they can include documentation as well.
+   38.2 Components.
+   $YAGNI
+   -- We will skip Component diagrams until their usage moves from theory 
+and hype into practice.
+. Exercises on Deployment and Packages
+.List
+ What can you recall from this weeks readings?
+ Can you distinguish subtle UML differences?
+.Close.List
+.Close Previous to 2009
+. Review Questions
+.See ./19r.html

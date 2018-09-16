@@ -1,0 +1,728 @@
+Project 1
+
+The Game of Nim
+By James Small
+Cis-17a
+10/21/06
+
+Introduction
+
+The Game of Nim:  The basic concept behind this project was to make a game.  I wanted to do a game because I felt I would have more fun writing it.  I found the idea for this game in a friends C++ book and I though it fit into to my skill level, but would also give me somewhat of a challenge.  The project changed a little from my original idea do to time constraints.  I originally wanted to have the ability for the user to save their game, and then continue where you left off.  I ended up changing that to saving a high score list.  It still uses file input and output, but I was able to setup the high score list in the time allowed.  Adding the ability to save might be something I will add later on.  
+
+Summary
+
+Program Size:
+
+Main.cpp is about 300 lines
+Nim.cpp class file is about 180 lines
+There is about 35 variables
+
+During this project, I used many of the topics covered in our reading up through and including Chapter 13.  I used classes, dynamic arrays, structs, pointers, strings, c-strings, etc.  Parts of the program I felt was easy but then others I had trouble with but was able to work through everything I set out to do.  I was able to do this project in 3 days.  Now 3 days encompasses at least 6 hours per day so around 18 hours in total.  The only thing I had to look outside our book for was random number generation.  I have used the rand() function before but it wouldn’t generate a random number within a range.  I eventually found a small piece of code that would allow you to specify the range of the random number you would like created.  Overall, I felt satisfied with the results.  I would have liked to add a few things which I think we make it overall better.  Definitely the save function I was planning on doing in the first place could be added.  Also, I would have liked to make it visually more appealing.  It works as text based but anything more would be helpful.  Another thing I would change is that you can end up with a negative high score.  I would want to change that so only positive values would work.  It probably wouldn’t be that difficult but I ran out of time so it’s something for the future.
+
+
+
+Description
+
+I started out this program by writing the random number generator.  If I couldn’t get that part working, I would have been in trouble.  I ended up using a piece of code I found online for that.  
+
+currentvalue = low + (high - low) * rand() * (1.0 / RAND_MAX);
+
+The above code randomly generates a number between high and low which is passed into it.  I honestly don’t know exactly what it’s doing, especially the 1.0 / RAND_MAX, but it ended up working so I went with it.  I did have a problem with it at first though.  I used the following to seed the random number generator:
+
+srand(time(NULL))
+
+I don’t know what the NULL does, but the way I understand it, it grabs the current time including seconds off of the computer.  I originally seeded the random number generator every time I tried to generate a number.  I eventually figured out that you can only do that once in the program so I placed the command in the constructor for the Nim object and it worked after that.
+
+I then programmed the main loop to the program, ignoring the part about the computer being smart or stupid.  I just made it stupid initially.  Once I got the basic loop working, I added the smart or stupid part.  Next I added the high score function of the program.  I would call this the second major part to the program and I took me a little while by it self.  Reading in the scores and outputting the scores ending up being easier than I though.  I pretty much got that working right away.  The part in the program I had the most trouble with was determining if your have a place in the high score list, and where you should stand in the list.  I ended up doing the following:
+
+for (int i = 10; i >= 0; i--) 
+	{
+		if (playerinfo.score > ptr[i].score) 
+		{
+			position = i; 
+			status = true;		
+}
+	}
+
+Basically what this does is starting with the highest score, compare you score to it.  It will keep setting your position to the current subscript position until your score isn’t higher than the subscript position, then the position variable will be your position in the high score list.  The status = true part is used in the next part.  This piece of code took the longest to come up with but after I wrote it, it seems like a very basic idea:
+
+
+
+
+
+if (status)
+	{
+		for (n = 9; n > position; n--)
+		{
+			ptr[n].playername = ptr[n - 1].playername;
+			ptr[n].losses = ptr[n -1].losses;
+			ptr[n].score = ptr[n -1].score;
+			ptr[n].wins = ptr[n - 1].wins;
+		}
+
+
+If the status is set to true above, which means you have a high score at position variable, it starts looping at the highest subscript, 9, and moves towards subscript 0.  The loop runs until the current subscript position is greater than your position in the list.  After entering the loop, all the variables in the n – 1 subscript is copied to the n position.  Then the loop runs again after subtracting 1 from n.  Basically every time the loop runs, it will move the n-1 data to n, until the position where you have landed.  It then exits the loop and sets your information into the array at the position where you landed in the list.  It’s kind of hard to explain but it seems to work so I was pretty excited about it.  
+
+Input / Output
+
+The input and output of the program is pretty basic.  Once you have entered your name, you are brought to the main game menu:
+
+ 
+
+If you select 1, the game begins.  It will randomly determine who goes first and will see this screen:
+
+ 
+
+It shows you the amount of marbles in the pile currently.  You need to select at least 1, but at most half of the marbles in the pile.  In this example, 1 to 40 must be your selection.  Then the computer goes, followed by your turn again with the following number:
+
+ 
+
+It shows you the computers guess, and the current amount of marbles left. It pretty much repeats from there until someone takes the last marble and loses.  While in smart mode, the computer is almost impossible to beat.  You will notice in smart mode, the computer will always guess a number that is a multiple of 2 minus 1.  The computer will always guess so that the amount of marbles left is, 3, 7, 15, 31, or 63.  Unless the current size of the pile already is one of the above numbers, then it just randomly guesses a valid number.  Using this logic, no matter what you do, you can’t win unless the size of the marble pile initially is 15, 31, or 63.  This logic was a little tricky, but wasn’t that hard to implement.  If in stupid mode, the computer will just randomly guess a number.  When selecting the other menu options, they output what they say they are, the rules, the high score list, and a menu allowing you to select how smart or stupid the computer is.  
+
+Pseudocode
+
+Main Game 
+
+
+Ask for user name
+	If invalid entry loop until valid
+
+Create Nim Game object
+
+Initialize using constructor
+	Set wins, losses, and score variable to 0
+	Set name based on value passed into object
+	
+Check for existence of save file
+		If exits, load high score info to dynamic array
+		Else, Load Dummy info with Blank  as name and 0’s for scores.
+
+Display main menu
+
+Random Computer Intelligence
+
+If Menu choice is 1: Menu1()
+If Menu choice is 2: Menu2()
+If Menu choice is 3: Menu3()
+If Menu choice is 4: Menu4()
+If Menu choice is 5: Menu5()
+
+Menu1():
+
+Random who will go first with turn variable
+
+Loop until turn variable is 3
+
+If turn variable is 0 for user
+	Display current amount of marbles
+	
+Allow user to enter guess
+		If guess is less than 1, or greater than half of the marbles
+		Loop until valid input
+	
+Subtract your guess from remaining marbles
+
+Check for win
+		If only 1 marble left
+			You Win!
+			Turn variable is set to 2 so it will be 3 upon exit and main loop will end
+	
+	Increase turn variable by 1 so it will be the computers turn next
+
+If turn variable is 1 for computer
+
+	If computer is dumb
+		Randomly guess a valid number
+	
+Else if smart
+	
+	Loop until computer guess is less than 1 or greater than half the marbles left
+
+If current size is a multiple of 2 minus 1
+			Random a valid number
+		Else
+			Loop to find the highest multiple of 2 minus 1 that is less than half left
+	
+Subtract computer guess from remaining marbles
+
+Check for lose
+	If only 1 marble left
+		You Lose.
+		Turn variable is set to 4 so it will be 3 on exit of main loop
+
+Decrease turn variable by 1 so it will be the users turn next
+
+Exit to Main Menu 
+		
+Menu2():
+
+Loop until 10 scores is displayed
+	Calls Member Function HighScores() to retrive high scores based on above loop
+
+Exit to Main Menu
+
+Menu3():
+
+Displays Rules to game
+
+Exit to Main Menu
+
+Menu4():
+
+Displays Computer Smart/Dumb Menu
+
+Loops until valid input
+	If choice is 1: Computer is Stupid
+	If choice is 2: Computer is Dumb
+	If choice is 3: Random Smart or Dumb
+
+Exit to Main Menu
+
+Menu5():
+
+If you have a high score
+	Display where you ended up
+
+Else
+	Say you don’t have a high score
+
+
+De-initialize object using decontructor
+	Write high score array to save file, erasing its current contents
+
+Exit Program
+
+
+
+Major Variables
+
+Name	Location	Description
+Const int lowinitial	Before Main()	Set to 10. Low value for random number generator for initial marble pile size 
+Const int highinitial	Before Main()	Set to 100. High value for random number generator for initial marble pile size
+Const int lowpair	Before Main()	Set to 0. Low value for random number generator for who first, and smart value.
+Const int highpair	Before Main()	Set to 10. High value for random number generator for who first, and smart value.
+Const int stringsize	Before Main()	Set to 10.  Used for size of name c-string on program startup.
+Const int savesize	Before Main(), & Nim.cpp	Set to 10.  Used to control amount of high scores in array.
+Int smart	Main()	Used to determine how smart computer will be, 0 for stupid, 1 for smart.
+Int menuchoice	Main()	Used to control users menuchoice on main menu
+Char name[stringsize]	Main()	Used for input of users name on program startup
+Bool random	Main()	Initialized to false.  Used to control how smart computer will be if user directly changed setting.  True means the users specified smart or stupid.  False means random
+Int initialvalue	Menu1()	Used to store initial value of marble pile after random number generation
+Int currentvalue	Menu1()	Set equal to initialvalue variable.  Changes as game progresses
+Int turn	Menu1()	Used to determine who’s turn it is.  0 for user, 1 for computer.  Set to 3 when exiting main game loop
+Int currentnumber	Menu1()	Your current number for how many marbles to take from the pile.  Changes as the game progresses
+Int smartvalue	Menu1()	Initialized to 11.  Used when the computer is smart, and needs to make an intelligent guess.  Loop uses it and decreases it by one until valid guess is found
+Int temppcnum	Menu1()	Initialized to 101.  Used when the computer is smart, and needs to make and intelligent guess.  Loop uses it to store temp value of guess before checking.
+String tempname	Menu2()	Passed into member function to retrieve users name from high score array.  Resides in loop and changes for every subscript of the high score array
+Int tempwins	Menu2()	Passed into member function to retrieve users amount of wins from high score array.  Resides in loop and changes for every subscript of the high score array.
+Int templosses	Menu2()	Passed into member function to retrieve users amount of losses from high score array.  Resides in loop and changes for every subscript of the high score array.
+Int tempscore	Menu2()	Passed into member function to retrieve users score from high score array.  Resides in loop and changes for every subscript of the high score array
+Int index	Menu2()	Used in “for” loops for running code a certain amount of times
+Int smartchoice	Menu4()	Used on smart/stupid menu to get the user’s input
+Int position	Menu5()	Passed into member function to determine if you have a high score.  If you have a high score, it will be set to the subscript position you belong at in the high scores array.
+Ifstream infile	Nim::Nim	Used to read in data from gamedata.txt save file
+Ptr = new data [savesize]	Nim::Nim	Defines an array of struct type data to store high score info using ptr pointer from Nim.h
+Int i	Nim::Nim, Nim::~Nim, Nim::CheckHighScore	Used in “for” loops for running code a certain amount of times
+Ofstream outfile	Nim::~Nim	Used to write data to gamedata.txt save file
+Bool status	Nim::CheckWinner	Used to determine if you win or lose.  Returned from member function back to main
+Bool status	Nim::CheckHighScore	Used to determine if you have a high score.  Returned from member function back to main
+Struct data	Nim.h	Defines data structure used to store current players info, and in an array for high score info
+String playername	Struct data	Used in struct data to store names
+Int wins	Struct data	Used in struct data to store wins
+Int losses	Struct data	Used in struct data to store losses
+Int score	Struct data	Used in struct data to store score
+Data playerinfo	Nim.h	Defines playerinfo struct variable used to store current players info
+Data *ptr	Nim.h	Defines a pointer to the data struct.  Used with dynamically created array.
+
+
+
+Concepts
+
+I used many concepts from multiple chapters in our textbook.  Starting with the basics used in the review chapters from Chapters 1 through 8.  Chapter 9 introduced pointers.  I created a pointer to a dynamically created array of structs which holds the high score information for the game.  Chapter 10 introduced strings and c-strings.  When starting the program, your name is read into a c-string, which is then passed into the Nim game object and copied into a string variable.  Chapter 11 introduced structs.  I used a struct data type to hold information for the current user, and they are also used in the high score array.  Lastly chapter 13 introduced classes and objects.  I defined a class and an object.  I use multiple member functions and pass variables in and out of the class.  I also pass the Nim game object by reference so that a function can change the data in the object.  
+
+Program Code
+
+Nim.h
+
+#include <string>
+
+using namespace std;
+
+class Nim  
+{
+	struct data
+	{
+		string playername;
+		int wins;
+		int losses;
+		int score;
+	};
+
+	private:
+		data playerinfo;
+		data *ptr;
+
+	public:
+		Nim(char name[]);
+		~Nim();
+		void random(int &currentvalue, int low, int high);
+		void GameMenu();
+		void HighScores(int index, string &name, int &wins, int &losses, int &score);
+		bool CheckWinner(int currentvalue, int turn);
+		bool CheckHighScore(int &position);
+};
+
+Nim.cpp
+
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+#include <fstream>
+#include "Nim.h"
+
+using namespace std;
+
+const int savesize = 10;
+
+Nim::Nim(char name[])
+{
+	srand(time(NULL));
+
+	playerinfo.wins = 0;
+	playerinfo.losses = 0;
+	playerinfo.score = 0;
+	playerinfo.playername = name;
+	
+	ptr = new data [savesize]; 
+
+	ifstream infile;
+	infile.open("gamedata.txt");
+
+	if (!infile)
+	{
+		system("cls");
+		cout << "\nNo input file was found\n\n";
+		cout << "Loading Blank Data......\n\n";
+
+		for (int i = 0; i < savesize; i++)
+		{
+			ptr[i].playername = "Blank";
+			ptr[i].wins = 0;
+			ptr[i].losses = 0;
+			ptr[i].score = -500;
+		}
+		system("pause");
+	}
+	else
+	{
+		for (int i = 0; i < savesize; i++) // Loops while reading in the high score info
+		{
+			infile >> ptr[i].playername >> ptr[i].wins >> ptr[i].losses >> ptr[i].score; 
+		}
+	}
+
+	infile.close();
+}
+
+Nim::~Nim()
+{
+	ofstream outfile;
+
+	outfile.open("gamedata.txt", ios::out);
+
+	for (int i = 0; i < savesize; i++)
+	{
+		outfile << ptr[i].playername << " " << ptr[i].wins << " " << ptr[i].losses << " " << ptr[i].score << endl;
+	}
+
+	outfile.close();
+}
+
+void Nim::random(int &currentvalue, int low, int high)
+{
+	currentvalue = low + (high - low) * rand() * (1.0 / RAND_MAX); 
+}
+
+void Nim::GameMenu()
+{
+	cout << "Welcome to The Game of Nim " << playerinfo.playername << "\n\n";
+	cout << "Wins = " << playerinfo.wins << " Losses = " << playerinfo.losses << " Score = " << playerinfo.score << endl << endl;
+	cout << "1. Play Game\n";
+	cout << "2. View High Scores\n";
+	cout << "3. View Rules\n";
+	cout << "4. Game Difficulty\n";
+	cout << "5. Quit\n\n";
+	cout << "Your Choice Is: ";
+}
+
+bool Nim::CheckWinner(int currentvalue, int turn)
+{
+	bool status; 
+	
+	if (currentvalue == 1) 
+	{
+		status = false;
+
+		if (turn == 0) 
+		{
+			playerinfo.wins++; // Increases wins
+			playerinfo.score = playerinfo.score + 100; 
+		}
+		else // 
+		{
+			playerinfo.losses++; 
+			playerinfo.score = playerinfo.score - 50; 
+		}
+	}
+	else
+	{
+		status = true; 
+	}
+	
+return status;
+}
+
+void Nim::HighScores(int index, string &name, int &wins, int &losses, int &score)
+{
+	name = ptr[index].playername;
+	wins = ptr[index].wins;
+	losses = ptr[index].losses;
+	score = ptr[index].score;
+}
+
+
+
+bool Nim::CheckHighScore(int &position)
+{
+	bool status = false; 
+	
+	for (int i = 10; i >= 0; i--) // 
+	{
+		if (playerinfo.score > ptr[i].score) 
+		{
+			position = i; 
+			status = true; 
+		}
+	}
+
+	if (status)
+	{
+for (i = 9; i > position; i--) 
+		{
+			ptr[i].playername = ptr[i - 1].playername;
+			ptr[i].losses = ptr[i -1].losses;
+			ptr[i].score = ptr[i -1].score;
+			ptr[i].wins = ptr[i - 1].wins;
+		}
+	
+		ptr[position].playername = playerinfo.playername;
+		ptr[position].losses = playerinfo.losses;
+		ptr[position].score = playerinfo.score;
+		ptr[position].wins = playerinfo.wins;
+	}
+return status;
+}
+
+Main.cpp
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <cmath> 
+#include <fstream> 
+#include "Nim.h"
+
+using namespace std;
+
+const int lowinitial = 10; 
+const int highinitial = 100; 
+const int lowpair = 0; 
+const int highpair = 10; 
+const int stringsize = 10; 
+const int savesize = 10; 
+
+void menu1(Nim &Game, int smart);
+void menu2(Nim Game);
+void menu3();
+void menu4(Nim Game, int &smart, bool &random);
+void menu5(Nim Game);
+
+int main(int argv,char *argc[])
+{	
+	int smart;	
+	int menuchoice;
+	char name[stringsize];
+	bool random = false;
+
+	cout << "Please enter your first name: ";
+	cin.getline(name, stringsize);
+	cout << endl;
+	
+	while (strlen(name) == 0) 
+	{
+		cout << "\nPlease enter a valid first name: ";
+		cin.getline(name, stringsize);
+		cout << endl;
+	}
+	
+	Nim game(name); 
+
+	do 
+	{
+		system("cls");
+
+		if (!random)  
+		{
+			game.random(smart, lowpair, highpair); 
+					
+			if (smart <= 5) 
+			{
+				smart = 0;
+			}
+			else 
+			{
+				smart = 1;
+			}
+		}
+
+		game.GameMenu();
+		cin >> menuchoice;
+
+		switch (menuchoice) 
+		{
+		case 1: menu1(game, smart);
+			break;
+		case 2: menu2(game);
+			break;
+		case 3: menu3();
+			break;
+		case 4:	menu4(game, smart, random);
+			break;
+		case 5: menu5(game);
+			break;
+		default: cout << "\nInvalid Menuchoice!!\n\n";
+		};
+
+	}while (menuchoice != 5);
+
+return 1;
+}
+
+void menu1(Nim &game, int smart)
+{
+	int initialvalue; 
+	int currentvalue;
+	int turn;
+	int currentnumber;
+	int computercurrentnumber;
+	int smartvalue = 11; 
+	int temppcnum = 101;
+	
+	game.random(initialvalue, lowinitial, highinitial); 
+	system("cls");
+	cout << "\nAmount of marbles in the pile = " << initialvalue << endl;
+	currentvalue = initialvalue; 
+	game.random(turn, lowpair, highpair);
+
+	if (turn <= 5) 
+		{
+			turn = 0;
+		}
+		Else
+		{
+			turn = 1;
+		}
+
+	while (turn != 3) 
+	{
+		if (turn == 0) 
+		{
+			cout << "\nPlease enter in your guess: ";
+			cin >> currentnumber;
+
+			while (currentnumber > currentvalue / 2 || currentnumber < 1) 
+			{
+				cout << "\nYour number was not valid, try again\n";
+				cout << "\nPlease enter in your guess: ";
+				cin >> currentnumber;
+			}
+
+			currentvalue = currentvalue - currentnumber; 
+
+			if (!game.CheckWinner(currentvalue, turn)) 
+			{
+				system("cls");
+				cout << "\n\nYou have won the Game of Nim\n\n";
+
+				turn = 2; 
+
+				system("pause");
+			}
+
+			turn++; 
+		}
+		else if (turn == 1) 
+		{	
+			if (smart == 0) 
+			{
+				game.random(computercurrentnumber, 1, currentvalue / 2); 
+			}
+			else if (smart == 1) 
+			{
+				computercurrentnumber = temppcnum; 
+
+				while (computercurrentnumber > currentvalue / 2 || computercurrentnumber < 1)
+				{	
+					if (currentvalue == 3 || currentvalue == 7 || currentvalue == 15 || currentvalue == 31 || currentvalue == 63)
+					{
+game.random(computercurrentnumber, 1, currentvalue / 2); 
+					}
+					else 
+					{						
+temppcnum = pow(2, smartvalue) - 1; 
+						
+computercurrentnumber = currentvalue - temppcnum;		
+}
+
+					smartvalue--;
+				}
+			}
+			
+			system("cls");
+			
+			cout << "\nComputers guess = " << computercurrentnumber;
+
+			currentvalue = currentvalue - computercurrentnumber; 
+
+			cout << "\n\nThe current amount of marbles left = " << currentvalue << "\n";
+
+			if (!game.CheckWinner(currentvalue, turn))
+			{
+				system("cls");
+
+				cout << "\n\nYou have lost the Game of Nim\n\n"; 
+				turn = 4;
+				
+				system("pause");
+			}
+
+			turn--; 
+		}
+	}
+}
+
+void menu2(Nim Game)
+{	
+	system("cls");
+	
+	string tempname;
+	int tempwins, templosses;
+	int tempscore;
+
+	cout << fixed << setprecision(2);
+	cout << "\n    *** High Scores List ***\n\n";
+	cout << left << setw(11) << "Name" << right << setw(5) << "Wins" << right << setw(8) << "Losses" << right << setw(10) << "Score\n\n";
+	
+	for (int index = 0; index < savesize; index++)
+	{
+
+Game.HighScores(index, tempname, tempwins, templosses, tempscore); 
+	
+	cout << left << setw(11) << tempname << right << setw(5) << tempwins << right << setw(8) << templosses << right << setw(8) << tempscore << endl;
+	}
+	cout << endl;
+
+	system("pause");
+	system("cls");
+}
+
+void menu3()
+{
+	system("cls");
+	cout << "\n*** Here are the Rules to the Game of Nim ***\n\n";
+	cout << "The Game of Nim:  This is a well-known game with a number of variants.\n";  
+	cout << "We will consider the following variant, which has an interesting winning\n";
+	cout << "strategy.  Two players, you and the computer, will atlternately take\n";
+	cout << "marbles from a pile.  In each move, the player chooses how many marbles\n";
+	cout << "to take from the pile.  The player must take at least 1, but at most half\n";
+	cout << "of the remaining marbles left.  Then the other player takes a turn.  The\n";
+	cout << "player who takes the last marble looses.\n\n";
+	cout << "The program will random select a starting number between 10 and 100.  It\n";
+	cout << "will randomly determine who will go first, you or the computer.  It will\n";
+	cout << "also determine if the computer will be smart or stupid.  You can also\n";
+	cout << "manually select how smart the computer is from the main menu.\n\n";
+	cout << "The program will keep track of the number of wins vs losses and your\n";
+	cout << "total score.  You earn 100 points for a win, and lose 50 for a lose.\n";
+	cout << "When you end the game, if you have a high score, it will let you know\n";
+	cout << "where you stand in the 10 highest scores.  The high scores will be saved\n";
+	cout << "so you can try and beat your high score nex time you launch the program.\n\n";
+	cout << "Good Luck!!!!!\n\n";
+	system("pause");
+	system("cls");
+}
+
+void menu4(Nim Game, int &smart, bool &random)
+{
+	int smartchoice;
+	
+	random = true;
+	
+	system("cls");
+		
+		do 
+		{
+			cout << "\nHow smart do you want the computer to be?\n\n";
+			cout << "1. Stupid\n";
+			cout << "2. Smart\n";
+			cout << "3. Random\n\n";
+			cout << "Your Choice Is: ";
+			cin >> smartchoice;
+
+			switch (smartchoice) 
+			{
+				case 1: smart = 0; 
+					break;
+				case 2: smart = 1; 
+					break;
+				case 3:	Game.random(smart, lowpair, highpair); 
+					
+						if (smart <= 5)
+						{
+							smart = 0;
+						}
+						else
+						{
+							smart = 1;
+						}
+						
+						random = false;
+				
+					break;
+				default: system("cls");
+						cout << "\nInvalid Choice\n";
+			};
+		
+		}while (smartchoice < 1 || smartchoice > 3); 
+}
+
+void menu5(Nim Game)
+{
+	int position;
+	
+	if (Game.CheckHighScore(position)) 
+	{
+		system("cls");
+		cout << "\n\nYou have a high score!!\n\n";
+		cout << "You have the number " << position + 1 << " score out of 10\n\n";
+		cout << "Thank You for playing the Game of Nim\n\n";
+	}
+	else
+	{
+		system("cls");
+		cout << "\nYou have not gotten a high score, sorry.\n\n";
+		cout << "Thank You for playing the Game of Nim\n\n";
+	}
+}
+
+
+

@@ -1,0 +1,12 @@
+.Open Review Questions 2
+ List the four steps used to apply OOAD to a simple example.
+ What is a domain model? How does it differ from a design class diagram?
+ Each arrow in an interaction diagram become something in a design class diagram, is it a class, an attribute, or an operation/function? Where do you put it?
+ Name the three ways to apply UML.
+ Name the three perspectives to apply UML.
+ What does time-boxed mean? Where does it apply in this course?
+ Name the 4 UP phases.
+ Name the 3 disciplines covered in the text.
+ How do iterations and phrases fit together?
+ Draw a diagram showing some disciplines, 4 phases, and some iterations.
+.Close

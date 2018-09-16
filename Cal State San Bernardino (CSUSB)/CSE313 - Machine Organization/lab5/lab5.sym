@@ -1,0 +1,17 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	DIV                     3028
+//	FINISH                  303C
+//	LOOP                    3037
+//	MDONE                   3022
+//	MLOOP                   301D
+//	MULT                    300D
+//	STORE                   3026
+//	X                       3008
+//	XDONE                   3017
+//	XMY                     300C
+//	XPOS                    302F
+//	XY                      300A
+//	X_Y                     300B
+//	Y                       3009
+//	YPOS                    3032

@@ -1,0 +1,132 @@
+. CSci 375/15 More Analysis
+.Table Date	#	Topic (Participation 2pt)	Study pages (2 pts)	Quiz(15 pts)	Project Work(10 pts)
+.Row Previous	14	Design..Code	363-394	-	W6(GRASP)
+.Row Today	15	More Analysis	401-413	Q7(1-413)	-
+.Row Next	16	$GRASP II	413-435	-	W7(Model 2: use cases, domain, interactions, classes)
+.Close.Table
+. Revision History
+.Table Version#	Date	Description	Author
+.Row 0	2005-01-03	Used boiler plate to make template	RJB
+.Row 1	2005-02-17	Added outline	RJB
+.Row 2	2005-02-28	Added sample from Q7	RJB
+.Row 3	2005-03-02	Added Questions and some answers	RJB
+.Row 4	2006-02-16	Updated	RJB
+.Row 5	2006-02-27	Corrected chapter numbers	RJB
+.Row 6	2013-02-26	Add new example of Polymorphism	RJB
+.Close.Table
+. Project W6 (GRASP) due in
+.Open  Iteration 2
+
+Skip chapter 22 unless you really want to read it.
+It has some good practical advice on selecting tools.
+It also quotes three ways to use diagrams:
+.List
+  Informal sketch to clarify ideas
+  Formal Blueprint defining the code
+  A programming language
+.Close.List
+No questions on the final or in quizzes.
+  
+
+. 23 Iteration 2
+      Introduction.
+      23.1 moving from iteration 1 to iteration 2
+      23.2 Focus: Object design and Patterns
+. 24 Analysis (again)
+      24.1 NextGen ($note)
+  **** Figure 24.1 has an SSD with many external actors.
+      24.2 Monopoly ($note)
+  **** Focus on 
+.Key Generalization
+on pages 410 and 411.
+.List
+  Any `sub` is a special kind of `super`
+
+.Image uml.faces.gif [Smile and Frown as special kinds of face]
+
+.Image 17gen.gif Lots of examples
+
+  +++ Notice [---|>] the form of the arrow head.
+
+  Notice:-
+.List
+  Special classes have all the properties of the general classes.
+  Special classes are more complex than the general ones.
+  Special classes add attributes and operations to the general class.
+  Special versions of operations override the general versions.
+.Close.List
+  *** When sub--|>super is useful.
+  * Make super classes abstract (normally)
+  ** Include super class name in subclass name
+  ++ refactoring: create a superclass to reduce repeated code.
+.Close.List
+
+(note): Look at these changes to requirements to help understand the
+future design decisions in the book.  I will not test you on your knowledge of NextPoS or
+Monopoly.  You may, if you wish, ask questions on this chapter.
+
+. Explanation of Polymorphism
+To get polymorphism (easily) you need a language that has pointers
+and inheritance.
+
+For example, to make a Wodget a special kind of Widget
+we might write
+.As_is 	class Wodget extends Widget { stuff } // Java
+or
+.As_is 	class Wodget : public Widget { stuff }; // C++
+or
+.As_is 	class Wodget(Widget)... // Python
+or
+.As_is 	class Wodget < Widget... // Ruby
+
+Assume that somewhere in Widget and in Wodget there is a function
+.As_is 		public void zark( ... ) { ... } //Java
+.As_is 		public: void virtual zark( ... ) { ... }; //C++
+
+Secondly you declare a variable or parameter that refers or points to
+an object of type Widget
+.As_is 		Widget myWidget; //Java objects are pointers!
+.As_is 		Widget *myWidget; //C++
+
+Then you attach the variable or parameter to an object of type Wodget:
+.As_is 		myWidget = new Wodget ( ... );
+(for example).
+
+Then in an $OO language like Java will make the behavior of `myWidget`
+match that of a Wodget, not a Widget.
+.As_is 		myWidget.zark( ... ); //Java
+.As_is 		myWidget->zark( ... ); //C++
+
+If you get Widget behaviors then you don't have polymorphism.  In C++
+this means you forgot to declare the functions as `virtual` or to use a pointer.
+
+Notice that some assembler language systems in the 1970s did this --
+Sketchpad for example.
+
+Notice that we take polymorphism for granted in every day life.  We don't
+expect real objects to work differently when you rename them.
+
+Notice that we can now place behaviors inside objects and when we pass these objects
+around our software they take their the behavior with them.  One function can tell
+another object how to do something!
+
+Example of Polymorphism -- Loaded Dice
+.See ./LoadedDie.cpp
+.See ./testLoadedDie.cpp
+
+.See ./DiceGame2.cpp
+.See ./testDiceGame2.cpp
+
+. Exercises
+.See ./15x.html
+. Quiz 7 
+.See ./Q15sample.gif
+. Project Work 7: Second complete set of models due next Tuesday.
+.See ./w7.html
+(This is a big piece of work start working now)
+. Questions and Answers Generalization etc
+.See ./15q.html
+. Next -- More GRASP using Generalization and polymorphism
+.See ./16.html
+. Review Questions
+.See ./15r.html

@@ -1,0 +1,771 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/03.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:53:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+CSci 375/03 Inception
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="03.txt">Text Version</A>]
+ 03.html 
+Tue Jan 15 15:29:28 PST 2013
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="03.html#CSci 375/03 Inception">CSci 375/03 Inception</A>
+<li><a href="03.html#Project Kickoff">Project Kickoff</A>
+<li><a href="03.html#Input: The Inception Phase">Input: The Inception Phase</A>
+<li><a href="03.html#Example of a Simple system">Example of a Simple system</A>
+<li><a href="03.html#Name -- Shopping Aid">: Name -- Shopping Aid</A>
+<li><a href="03.html#Team -- Me">: Team -- Me</A>
+<li><a href="03.html#Vision">: Vision</A>
+<li><a href="03.html#Questions and Answers">Questions and Answers</A>
+<li><a href="03.html#Chapter 2 Page 27 -- what is risk -- how to identify risks">: Chapter 2 Page 27 -- what is risk -- how to identify risks</A>
+<li><a href="03.html#analysis of 10% of Use Cases">: analysis of 10% of Use Cases</A>
+<li><a href="03.html#Chapter 2 pp 41-59 -- SEI Quality Standards">: Chapter 2 pp 41-59 -- SEI Quality Standards</A>
+<li><a href="03.html#Business Cases">: Business Cases</A>
+<li><a href="03.html#Chapter 3 pp 048-051 -- Inception">: Chapter 3 pp 048-051 -- Inception</A>
+<li><a href="03.html#Chapter 3 pp 42-42 -- core application logic layer">: Chapter 3 pp 42-42 -- core application logic layer</A>
+<li><a href="03.html#Chapter 4 Page 48 -- range of cost estimation in inception">: Chapter 4 Page 48 -- range of cost estimation in inception</A>
+<li><a href="03.html#Chapter 4 page 48 -- When to stop a project">: Chapter 4 page 48 -- When to stop a project</A>
+<li><a href="03.html#What stops a project most">: What stops a project most</A>
+<li><a href="03.html#Chapter 4 Page 50 -- Glossary">: Chapter 4 Page 50 -- Glossary</A>
+<li><a href="03.html#Chapter 4 Page 50 -- when to stop inception">: Chapter 4 Page 50 -- when to stop inception</A>
+<li><a href="03.html#Chapter 4 - Pages 58 - Topic: Inception">: Chapter 4 - Pages 58 - Topic: Inception</A>
+<li><a href="03.html#Should money be considered an artifact?">: Should money be considered an artifact?</A>
+<li><a href="03.html#Quality attributes and architecture">: Quality attributes and architecture</A>
+<li><a href="03.html#Chapter 4 pp 47 -- Analysis of 10% of Use Cases">: Chapter 4 pp 47 -- Analysis of 10% of Use Cases</A>
+<li><a href="03.html#Chapter 4 pp * : Length of Inception Phase">: Chapter 4 pp * : Length of Inception Phase</A>
+<li><a href="03.html#Chapter 4 How do you spot the critical requirements">: Chapter 4 How do you spot the critical requirements</A>
+<li><a href="03.html#Chapter 4 pp 50 : inception artifacts">: Chapter 4 pp 50 : inception artifacts</A>
+<li><a href="03.html#Chapter 4 What are the most important artifacts on pages 50 and 58">: Chapter 4 What are the most important artifacts on pages 50 and 58</A>
+<li><a href="03.html#Chapter 4 pp 48 -- Inception -- Which requirements first">: Chapter 4 pp 48 -- Inception -- Which requirements first</A>
+<li><a href="03.html#Chapter number pp 41-59 -- Inception">: Chapter number pp 41-59 -- Inception</A>
+<li><a href="03.html#Chapter 4.1 pp 48 -- Inception">: Chapter 4.1 pp 48 -- Inception</A>
+<li><a href="03.html#Chapter 2/4 pp 49 -- Inception">: Chapter 2/4 pp 49 -- Inception</A>
+<li><a href="03.html#Chapter 4 pp 49 -- How long is inception">: Chapter 4 pp 49 -- How long is inception</A>
+<li><a href="03.html#Chapter 4 pp 49 -- Inception">: Chapter 4 pp 49 -- Inception</A>
+<li><a href="03.html#Chapter 4 pp 47-51 -- inception">: Chapter 4 pp 47-51 -- inception</A>
+<li><a href="03.html#Chapter 4 pp 48-49 -- Feasibility">: Chapter 4 pp 48-49 -- Feasibility</A>
+<li><a href="03.html#Chapter 4 pp 50 -- artifacts">: Chapter 4 pp 50 -- artifacts</A>
+<li><a href="03.html#Chapter 4 pp 047-051 -- CS320">: Chapter 4 pp 047-051 -- CS320</A>
+<li><a href="03.html#Chapter 4 pp 48 -- inception">: Chapter 4 pp 48 -- inception</A>
+<li><a href="03.html#4 pp 48, 51 -- Length of Inception">: 4 pp 48, 51 -- Length of Inception</A>
+<li><a href="03.html#Chapter 2/4 pp 54 -- Evolutionary vs Waterfall">: Chapter 2/4 pp 54 -- Evolutionary vs Waterfall</A>
+<li><a href="03.html#Chapter 5 pp 54-55 -- Waterfall">: Chapter 5 pp 54-55 -- Waterfall</A>
+<li><a href="03.html#Chapter 5 pp 54 -- Waterfall Requirements">: Chapter 5 pp 54 -- Waterfall Requirements</A>
+<li><a href="03.html#Chapter 5 pp 56 -- Evolutionary requirements">: Chapter 5 pp 56 -- Evolutionary requirements</A>
+<li><a href="03.html#Chapter 5 pp 57 -- Categories of requirements">: Chapter 5 pp 57 -- Categories of requirements</A>
+<li><a href="03.html#Chapter 5.4 pp 56-57 -- FURPS+">: Chapter 5.4 pp 56-57 -- FURPS+</A>
+<li><a href="03.html#Chapter 6 Page 45 -- Alternatives to use cases">: Chapter 6 Page 45 -- Alternatives to use cases</A>
+<li><a href="03.html#Other FAQs">: Other FAQs</A>
+<li><a href="03.html#Review Questions">: Review Questions</A>
+<li><a href="03.html#Exercises While we have time">Exercises While we have time</A>
+<li><a href="03.html#Assigned Work for next time -- use cases I">Assigned Work for next time -- use cases I</A>
+<li><a href="03.html#Quiz 1 The Unified Process">Quiz 1 The Unified Process</A>
+<li><a href="03.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="CSci 375/03 Inception">CSci 375/03 Inception</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Date<th scope="col">#<th scope="col">Topic (Participation 2pt)<th scope="col">Study pages (2 pts)<th scope="col">Quiz(15 pts)<th scope="col">Project Work(10 pts)
+<tr><td>Previous<td>2<td>Introduction<td>vii-40<td>-<td>W0
+<tr><td>Today<td>3<td>Inception<td>41-59<td><a href="#Q1">Q1</A>(1-59)<td>W0 due
+<tr><td>Next<td>4<td>Use Cases<td>61-89<td>-<td><a href="#W1">W1</A> (section 4.3)
+</table><br>(Close Table)<br>
+<H1><a name="Project Kickoff">Project Kickoff</A></H1>
+Hand in a brief description of your project: what, who, what,....
+and be ready to tell the class about who the team is.
+<H1><a name="Input: The Inception Phase">Input: The Inception Phase</A></H1>
+<br><ol class="List">
+<li>Case Studies:
+<br><ol class="List">
+<li>General
+<li>NextGen Point Of Sale -- in many chapters.
+<li>The Monopoly Game System -- in many chapters.
+</ol><br>
+<li>Inception is Not Requirements
+<br><ol class="List">
+<li>++ The jungle mission analogy
+<li>** Key questions for inception:
+<ul class="Set">
+<li>WHY are we doing this project?
+<li>WHAT might it involve?
+<li>Can we make it work and how much effort will it take?
+<li>Should we proceed or stop?
+<li>++ FEASIBILITY!
+<li>WHAT should we do first?
+</ul>
+<li>Length of inception
+<li>** Artifacts that might be required(used in <a href="#W1">W1</A>)
+<li>Misapredelusions
+<li>* UML?
+</ol><br>
+<li>** Requirements Evolve
+<br><ol class="List">
+<li>Definition
+<li>Evolution vs &quot;waterfall&quot;
+<li><a name="BDUF">BDUF</A>::=&quot;Big Design Up Front&quot;.
+<li>Skill
+<li>Types of Requirements: FURPS+
+<li>++ My acronym: PQRST: Purposes, Qualities, Realities, Systems, Technologies.
+<li>++ Or: Why? How? What? Where? Using?
+<li>++ Key point: not just use cases.
+<li>Organization
+<li>Examples
+<li>Resources
+</ol><br>
+</ol><br>
+<H1><a name="Example of a Simple system">Example of a Simple system</A></H1><ol class=Section>
+<H2><a name="Name -- Shopping Aid">Name -- Shopping Aid</A></H2>
+<H2><a name="Team -- Me">Team -- Me</A></H2>
+<H2><a name="Vision">Vision</A></H2>
+A handheld, wireless device that helps shoppers buy the items that they want. A shopper has a list of items that they want. They are sold at different stores. The device keeps an up-to-date list of wanted items as the user shops.
+<p>
+More <a href="#TBA">TBA</A>.
+</ol><p>. . . . . . . . . ( end of section <a href="03.html#Example of a Simple system">Example of a Simple system</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="Questions and Answers">Questions and Answers</A></H1><ol class=Section>
+<H2><a name="Chapter 2 Page 27 -- what is risk -- how to identify risks">Chapter 2 Page 27 -- what is risk -- how to identify risks</A></H2>
+The author repeatedly refers to &quot;risk.&quot; Exactly what is meant by risk in the software development process? Does this mean high cost? Difficult projects?
+<p>
+Each project has its own risks.  It may be the cost being arger than the
+budget.  It may be some technical that we don't know.   It could be an area
+of doubt about a particular requirement.
+It could be the team itself.
+<p>
+Anything novel
+is automatically risky and needs special attention.
+<p>
+<H2><a name="analysis of 10% of Use Cases">analysis of 10% of Use Cases</A></H2>
+what is the best way to discover the most important of use cases without go into depth(within 10%)?
+Are these cases obviously to find out?
+<p>
+You need to pick use cases that will tackle risks.   They must be
+interesting.  Something that has a real
+critical problem (or two) to solve.   It takes a little experience to spot
+them.   Just follow your fear.
+And look for novelty.
+<p>
+And if is all old stuff with little risk, pick something
+that returns value to the clients and exercises a major part
+of the logic (as far as you can see).
+<p>
+<p>
+<p>
+<H2><a name="Chapter 2 pp 41-59 -- SEI Quality Standards">Chapter 2 pp 41-59 -- SEI Quality Standards</A></H2>
+Of the mentioned quality standards in the reading(ISO 9126, IEEE Std 830,
+and IEEE Std 1061, and CMM/CMMI), which one is more popular and which is
+more accepted?
+<p>
+I don't know.  The most popular standard is probably -- none.  In our
+department we stick with the IEEE standards and cover CMM/CMMI style
+quality improvement models in the graduate software engineering
+class.   ISO is most popular in Europe.
+<p>
+<H2><a name="Business Cases">Business Cases</A></H2>
+What difference between Use Cases and Business Cases? Do we have to
+distinguish use case and business case? Is business case also have to
+analysis within 10%?
+<p>
+The Business case is why the enterprise should spend time and money to develop the software.
+It answers the question &quot;Why&quot; for the organization.   Use cases are about &quot;Why&quot; for particular people
+in the organization.
+<p>
+A business case explains, in business terms, why this project is worth doing.
+It is about the whole project.  It should give reasons like
+&quot;save money&quot;, &quot;increase profits&quot;, etc..  A business case is
+about many use cases -- and probably doesn;t name any of them.
+<p>
+A use case describes how one user gets something tangible out of the
+system.   Many use cases are needed in a system....
+<H2><a name="Chapter 3 pp 048-051 -- Inception">Chapter 3 pp 048-051 -- Inception</A></H2>
+After inception, would requirement analysis follow this step, or is there
+any other process that can take place in between?
+<p>
+Requirements analysis is not a step or phase in UP, it is a discipline.
+Requirements analysis starts in <span class="InlineFormula">inception</span>.
+It <span class="InlineFormula">continues</span> throughout the
+project.... The ratio of <span class="InlineFormula">requirements work</span> to <span class="InlineFormula">designing</span> or <span class="InlineFormula">coding</span> etc.
+changes as you change phases.
+<p>
+At anytime you may discover a new requirement:
+<ul class="Set">
+<li>A new law is passed by congress.
+<li>A new boss.
+<li>A stakeholder notices something obvious that you have not heard
+of before.
+<li>A prototype makes the user think again.
+<li>Etc.
+</ul>
+<p>
+As the project proceeds you expect to do less requirements analysis
+and more design.  Ultimately it is all about coding with very little design
+and analysis.
+<p>
+<H2><a name="Chapter 3 pp 42-42 -- core application logic layer">Chapter 3 pp 42-42 -- core application logic layer</A></H2>
+Can you please explain the difference between the application logic layer
+and the other layers?
+<p>
+Consider web registration at CSUSB.  HTML is presentation or
+Human-Computer-Interface
+code.
+The color of the user's screen is not part of the application logic area,
+but the process for registering is.  The rosters for the classes are part
+of the persistence layer but inserting a student in a roster is part
+of the application layer.
+<p>
+There will be more on this later.
+<p>
+<H2><a name="Chapter 4 Page 48 -- range of cost estimation in inception">Chapter 4 Page 48 -- range of cost estimation in inception</A></H2>
+How close to a reliable range of cost for a project should you aim for during inception?
+<p>
+You are limited by the time and information available to make good
+estimate.  You need what physicists call an &quot;Order of Magnitude&quot;
+estimate of the costs -- is it 10s,100s,1000s, ... of dollars.
+So rather than saying
+&quot;plus or minus 10%&quot; or some such figure, it is more like doing your
+best to check that the enterprise can
+afford to develop the software.  Indeed the number is less important than thinking of a way to
+develop the software that fits the budget.  For example by delaying an expensive but low value feature
+can reduce the initial cost and move the cost to later and perhaps you may even wait for when people
+really want the feature.
+<p>
+<H2><a name="Chapter 4 page 48 -- When to stop a project">Chapter 4 page 48 -- When to stop a project</A></H2>
+Projects that don't fit the enterprises needs and constraints should be
+stopped.  Check out the term &quot;feasibility&quot; in cs372.
+<p>
+<H2><a name="What stops a project most">What stops a project most</A></H2>
+I don't have any data but, I expect (1) time, (2) politics, and (3) costs are the
+commonest project killers.
+<p>
+In any case --- it is more important to look at each project and detect
+where it is weakest rather than having a prejudged rule.
+<p>
+<H2><a name="Chapter 4 Page 50 -- Glossary">Chapter 4 Page 50 -- Glossary</A></H2>
+What is an example of the type of thing you might find in the glossary artifact?
+<p>
+A glossary is a set of definitions for terms, words, symbols.  A place to turn when people
+ask &quot;What do you mean by ______&quot;.
+<p>
+In my glossaries you find a lot of XBNF definitions:
+<li><a name="definition">definition</A>::= term &quot;:&quot; &quot;:&quot; &quot;=&quot; description.
+<li><a name="SSN">SSN</A>::=digit^10.
+<p>
+<H2><a name="Chapter 4 Page 50 -- when to stop inception">Chapter 4 Page 50 -- when to stop inception</A></H2>
+At what point do you say this is good enough and begin to document that iteration before moving on?
+<p>
+In practice you set up a time frame for inception and stop when it runs out.
+<p>
+You document as you go.... use documents to generate ideas and aim to get
+something that runs before inception is done.
+<p>
+The moment you know that the project is worthwhile, and you know where to start.  Notice
+you may have already written and tested some software to prove the concept.
+<p>
+But -- you may have to draw a line and say &quot;Enough preparation -- lets start&quot;.
+<p>
+<H2><a name="Chapter 4 - Pages 58 - Topic: Inception">Chapter 4 - Pages 58 - Topic: Inception</A></H2>
+It is understood that the Inception Phase is a collective gathering of enough information to establish a common vision on the seriousness and feasibility to move forward on a project.  How big role should the financial aspect [funding, expenses, capital, etc] play while conducting the Inception Phase?
+<p>
+Money acts as a constraint on what you can achieve.   You have to figure what you can achieve, given the money
+available.   Check out some of the ideas and techniques in
+[<A href="cs372.html"> cs372 </A>]
+&quot;Computers in Organizations&quot;.
+<p>
+<H2><a name="Should money be considered an artifact?">Should money be considered an artifact?</A></H2>
+<p>
+That is called forgery!
+<A name="Artifacts" class="Key"> Artifacts </A>
+are things you make.
+Money is a constraint on quality.
+<p>
+<H2><a name="Quality attributes and architecture">Quality attributes and architecture</A></H2>
+What is the role of quality attributes when exploring architectural analysis?
+<p>
+Quality attributes tell how good an architecture is.  They can also guide the design process.
+Just spotting the most critical quality attribute can focus you on the right way to tackle a complex
+piece of software, in my experience.
+<p>
+<H2><a name="Chapter 4 pp 47 -- Analysis of 10% of Use Cases">Chapter 4 pp 47 -- Analysis of 10% of Use Cases</A></H2>
+In the inception phase, you are supposed to come up with an in-depth
+analysis of the most important 10% of your use cases.  Without going into
+depth on all of the use cases, what is the best way to discover the most
+important use cases?  Are they usually fairly obvious?  Is there a modeling
+tool to help you discover them?
+<p>
+I don't think tools help, but experience does.   The tools help
+you analyze the uses cases you choose as most important.
+<p>
+<H2><a name="Chapter 4 pp * : Length of Inception Phase">Chapter 4 pp * : Length of Inception Phase</A></H2>
+According to the book it is stated that inception should not be more than a
+week for most projects. Isn't there a danger of underestimating the
+feasibility of a project?
+<p>
+The feasibility of the whole project (including the hardware and people) should have
+been examined before you start developing software.  So inception
+just focuses on the cost and problems in developing the software.
+<p>
+Even so there is a risk of starting a project that will later fail.
+But this is true of all software development.
+We minimize this risk in the <a href="#UP">UP</A> by focusing on the riskiest parts
+first.  In inception you pay attention to show stopper
+requirements: use cases that are critical to the whole project and
+are likely to expose the difficulties. We also look at quality
+requirements (security? reliability? ...) that will need special
+work.  We attempt to develop a proof of concept architecture that supports
+these critical requirements.
+<p>
+A key output of the inception phase is a plan for the next iteration.
+In later phases we also attack the problems before the sneak up on us.
+<p>
+<H2><a name="Chapter 4 How do you spot the critical requirements">Chapter 4 How do you spot the critical requirements</A></H2>
+Experience, examples, and practice.  This class will give you an opportunity
+to gain some experience and practice.  A symptom of a critical requirement is
+that it is valuable but has a number of unknowns that will effect design choices.
+<p>
+<H2><a name="Chapter 4 pp 50 : inception artifacts">Chapter 4 pp 50 : inception artifacts</A></H2>
+Besides those listed in table 4.1, are there other artifacts that can be
+used in the inception phase?
+<p>
+Yes!   You can include any artifact (something the team constructs,
+gathers,...)
+that helps you understand the problems and opportunities better.
+<p>
+<H2><a name="Chapter 4 What are the most important artifacts on pages 50 and 58">Chapter 4 What are the most important artifacts on pages 50 and 58</A></H2>
+The most important depends on the project: what shines the most light
+on the dark areas of the project.
+<p>
+<p>
+<H2><a name="Chapter 4 pp 48 -- Inception -- Which requirements first">Chapter 4 pp 48 -- Inception -- Which requirements first</A></H2>
+We do not need to define all the requirements in the inception phase, but
+which one should I choose as the first and how to choose?
+<p>
+The book goes into more detail later.  But here are some simple thoughts:
+<br><ol class="List">
+<li>The least useful use case is the one that is easy and straightforward
+to do and doesn't teach you anything as a result.
+Example: user logs in.
+<li>It must be <span class="InlineFormula">interesting</span>.
+Example: User uses a credit card from a remote ATM that needs access to
+another banks records.
+<li>Attack risks before the attack you.
+So -- go for the scary requirements first.
+Example: We need to use a completely new point of sale terminal
+and it hasn't even been built yet...  we need to test the prototype.
+<li>Look for &quot;show stopper requirements&quot; that just have to be met or
+else the project is dead.
+Example: we have to show the user that we can get money out of the user!
+<li>Look for things you don't know or understand.  Example -- new technology.
+Examples: how do web services work?  What is Struts? We are going to be
+using Ruby!
+<li>Look for a use case that will involve many parts of the software.
+<li>What is the most problematic requirement?
+</ol><br>
+<p>
+<H2><a name="Chapter number pp 41-59 -- Inception">Chapter number pp 41-59 -- Inception</A></H2>
+The book makes passing mention that you can use UML during Inception. But
+isn't this just elaboration? How can UML be used in the inception with out
+being an elaboration?
+<p>
+The tools do not determine the phase.  Inception differs from Elaboration
+in terms of attitude.   In inception you know that you may
+kill the project and are trying to prove that it is worth doing.
+In elaboration -- you expect for the project to run to completion
+and have cracked the most difficult problems.
+<p>
+After inception you should have a better idea of how much work is
+going to be needed -- in the next phase.  During the remaining phases you
+plan one iteration ahead and refine the overall plan.
+<p>
+<H2><a name="Chapter 4.1 pp 48 -- Inception">Chapter 4.1 pp 48 -- Inception</A></H2>
+So inception is the key to determining if a project should be started or
+not, if no one is sure if they should start it or not?
+<p>
+Even if you know that project has to be done -- inception is about
+validating that it is worth doing.   A kind of cynical review of
+the previous systems analysis.
+<p>
+<H2><a name="Chapter 2/4 pp 49 -- Inception">Chapter 2/4 pp 49 -- Inception</A></H2>
+Can you please provide some more analogy example like the one on section
+4.1 about the oil business?
+<p>
+I usually use the Jungle Mission analogy -- you and your team
+have been parachuted into jungle -- half the team is lost,
+the objective is on your map, but you don't know where you
+are.  What do you do first?
+<p>
+In fact this is not quite right:  Inception should start before
+the team gets dropped in the jungle....  it is about making sure that
+the mission is worth doing.
+<p>
+<H2><a name="Chapter 4 pp 49 -- How long is inception">Chapter 4 pp 49 -- How long is inception</A></H2>
+In the book it states what should be completed during inception but it
+doesn't state how much time should actually be spent or what a reasonable
+amount of time is. How long should be spent during inception?
+<p>
+There is no general rule.  It depends on the unknowns in the
+particular project.  But you should time box it -- ideally the
+team should discuss how long it will take to kick off the
+project and verify the feasibility and cost of 10% riskiest requirements.
+<p>
+<H2><a name="Chapter 4 pp 49 -- Inception">Chapter 4 pp 49 -- Inception</A></H2>
+What is the longest amount of time a it takes for inception?
+<p>
+I would get very worried if it took longer than a month.
+<p>
+<H2><a name="Chapter 4 pp 47-51 -- inception">Chapter 4 pp 47-51 -- inception</A></H2>
+Is there anytime we should not use inception?
+<p>
+If you have a working development environment, knowledge of
+where you are, where you are going, you know what tools you will be using, etc.
+then inception
+boils down to having a meeting to kickoff the process.  All it has to do
+is pick a few use cases to analyse in detail.
+<p>
+I would say that it may be a very short &quot;inception&quot; phase -- 60 minutes --
+but it still exists.
+<p>
+<p>
+<H2><a name="Chapter 4 pp 48-49 -- Feasibility">Chapter 4 pp 48-49 -- Feasibility</A></H2>
+Is there an easy way to calculate feasibility during the inception phase of
+a rather large project of which no one has any prior experience doing? I've
+ran into numerous problems where a group thinks they can tackle a project
+only to find out halfway through that it's just not possible :(
+<p>
+No.  Instead each novel part of the project should be entered into the
+Risk List for the project.... and tackled early in the elaboration phase.
+This means you have time to adjust your plans rather than hitting the
+problems
+&quot;halfway through&quot;.
+<p>
+<H2><a name="Chapter 4 pp 50 -- artifacts">Chapter 4 pp 50 -- artifacts</A></H2>
+The list of artifacts to be started in the inception phase shows 9
+different documents.  This is more than what we are submitting.  Why?  Is
+there a time when you wont have some of these documents?  How will you
+know?
+<p>
+In a real project -- As a rule you should only prepare an artifact if it
+teaches you something.
+<p>
+I don't want to kill you in the first iteration.  In previous
+classes I asked people to choose what artifacts they would do
+in the inception phase... but they all had CS372 projects to
+start from.  Now I've reduced the number.
+<p>
+However I will demand certain artifacts throughout
+the course so that you are forced to practice the particular skills
+involved.
+<p>
+<H2><a name="Chapter 4 pp 047-051 -- CS320">Chapter 4 pp 047-051 -- CS320</A></H2>
+Is it a good idea to include group creativity activities in the inception
+stage?  (Take this wrench and use it to make that ball roll over this
+object...)
+<p>
+Use creativity exercises when stuck.  This can happen in inception
+but more typically (I guess) in later stages.
+<p>
+I would suggest that team building exercises -- like sharing pizza --
+would very helpful in the inception phase.   Indeed, if the team is
+distance challenged then the first risk that must be attacked is trust
+and communication and it pays to start by doing something (as a distributed
+team) that produces some tangible result -- like a really dumb prototype.
+This can also exercise the infrastructure....
+<p>
+<H2><a name="Chapter 4 pp 48 -- inception">Chapter 4 pp 48 -- inception</A></H2>
+What is the best method used to estimate the range of cost during
+inception?
+<p>
+Notice that in some situations you are more interested in the effort
+(people&gt;&lt;time) than with money.
+<p>
+(1) You can often get a &quot;ball park&quot; minimum and maximum figures for a small
+project  by talking about it with your team.
+<p>
+(2) You may already have a cost-benefit analysis
+[<A href="http://cse.csusb.edu/dick/cs372/09.html#Financial%20and%20Cost-Benefit%20Analysis"> ../cs372/09.html#Financial%20and%20Cost-Benefit%20Analysis </A>]
+with some figures you can use.
+<p>
+(3) Here is an algorithm for a more defensible figure.
+<br><ol class="List">
+<li>Break down into tasks, tools, equipment...
+<li>Cost each as a range.
+<br>Case<ol class="Case">
+<li>People -&gt; wages * time with min...max.
+</ol><br>(End of Case)<br>Case<ol class="Case">
+<li>Buy &amp; maintain as min..max
+</ol><br>(End of Case)<br>Case<ol class="Case">
+<li>Rent/lease -&gt; monthly min..max
+</ol><br>(Close Case )<br>
+<li>Add up the mins and maxes to give total min..max
+</ol><br>
+<p>
+You can include the expected and most likely values and use the PERT
+formula
+<li><span class=Formula>expected = (min +4*likely+max)/6.</span>
+<p>
+There exist programs that can draw you a nice picture of the chances
+of getting different times...
+<p>
+You could (only to impress a naive stakeholder) run a few simulations
+picking random numbers in the individual pieces min-max range...
+<p>
+<p>
+<H2><a name="4 pp 48, 51 -- Length of Inception">4 pp 48, 51 -- Length of Inception</A></H2>
+This book says that inception should be only one or a few weeks long, in
+what case might inception be longer, what types or sizes of projects might
+increase the length of the inception phase?
+If the inception takes too long does that mean the project is not possible?
+and how would you solve this...
+<p>
+If it takes more than &quot;a few&quot; weeks to decide whether the project is worth
+doing and what (in outline) what is required.... the project is not ready
+to start the UP development process.
+It needs more analysis.  There are probably some political and
+resource problems to resolve.  To continue is very risky.
+See CSCI372!
+<p>
+It is best to have a fixed deadline and fill the time with as much analysis
+and design than to have specified a set of requirements to be achieved and
+have these take up a lot of time.
+<p>
+<H2><a name="Chapter 2/4 pp 54 -- Evolutionary vs Waterfall">Chapter 2/4 pp 54 -- Evolutionary vs Waterfall</A></H2>
+What are some of the Evolutionary requirements and some of the waterfalls
+and what are key differences between them?
+<p>
+Evolution vs Waterfall is not a quality of a particular requirement.
+<p>
+It is a property of how you plan to do the work.
+<p>
+<H2><a name="Chapter 5 pp 54-55 -- Waterfall">Chapter 5 pp 54-55 -- Waterfall</A></H2>
+How do you decide if your project is starting the waterfall process? The
+way it is described in the book seems too vague for me.  Some people could
+think that there are too many requirements at first while other people
+think that the requirements are in a healthy range.
+<p>
+You know it is waterfall when people think they have (or will have)
+a complete unchanging software requirements specification
+before they start designing the software.
+<p>
+OK there is a slippery slope.... and this book suggests that you
+shouldn't expect more than 10% of the requirements to be fixed
+before you start designing, coding, testing, and elaborating
+the software.
+<p>
+<H2><a name="Chapter 5 pp 54 -- Waterfall Requirements">Chapter 5 pp 54 -- Waterfall Requirements</A></H2>
+The author obviously likes the evolutionary method, but is there ever a
+time that the Waterfall method would be useful?
+<p>
+Waterfall is excellent in classrooms:-)
+<p>
+See next question.
+<p>
+<H2><a name="Chapter 5 pp 56 -- Evolutionary requirements">Chapter 5 pp 56 -- Evolutionary requirements</A></H2>
+Throughout the earlier chapter and including this chapter (ch.5) there is
+mention of waterfall approach and a constant reminder not to superimpose
+the waterfall approach to UP. when is waterfall approach useful ? and if
+45% of waterfall specified features are never used,(figure 5.1) is it a
+useful and successful approach?
+<p>
+You need to be absolutely certain of the situation and requirements, and
+be sure that they will not change until after when you complete the
+project.
+These tend to be small, closed problems like
+<span class="InlineFormula">calculate the square root of a number</span>.
+<p>
+<H2><a name="Chapter 5 pp 57 -- Categories of requirements">Chapter 5 pp 57 -- Categories of requirements</A></H2>
+The book mentions that some feel that the requirement categories functional
+and non-functional are too broad.  What do they mean?  How can they be
+broken down further?
+<p>
+The book uses the FURPS+
+[<A href="patterns.html#FURPS+"> patterns.html#FURPS+ </A>]
+and I've used
+[<A href="patterns.html#PQRST"> patterns.html#PQRST </A>]
+in my projects.  Also
+[<A href="03.html#Chapter 5.4 pp 56-57 -- FURPS+"> Chapter 5.4 pp 56-57 -- FURPS+ </A>]
+below
+<p>
+<p>
+<H2><a name="Chapter 5.4 pp 56-57 -- FURPS+">Chapter 5.4 pp 56-57 -- FURPS+</A></H2>
+When should the F.U.R.P.S model be applied to a project?
+<p>
+From the beginning until transition (at least) you need some kind of
+framework  or checklist to make sure you have covered all the requirements.
+This is something that the whole team knows.  It has to be a short
+mnemonic.   Larman uses FURPS+.  I use PQRST.
+<p>
+You use it initially to ask questions: How fast? How frequently?
+How friendly? How secure? What does it do? How much disk space? Which
+platform? ...
+<p>
+In your project I don't require you to use FURPS+.  BUT you
+must not miss any requirements.
+<p>
+<H2><a name="Chapter 6 Page 45 -- Alternatives to use cases">Chapter 6 Page 45 -- Alternatives to use cases</A></H2>
+Are there alternatives to the Use-Case Model?
+<p>
+Yes -- but they are out of favor.
+<p>
+Note:  you should add business/domain models and a glossary to your use cases.
+<p>
+<H2><a name="Other FAQs">Other FAQs</A></H2>
+[<A href="03q.html"> 03q.html </A>]
+<H2><a name="Review Questions">Review Questions</A></H2>
+[<A href="03r.html"> 03r.html </A>]
+</ol>
+<H1><a name="Exercises While we have time">Exercises While we have time</A></H1>
+The
+<A name="Unified Process." class="Key"> Unified Process. </A>
+List the 4 phases, list 3 disciplines, and draw a diagram showing
+how they are related.
+<p>
+<A name="Object-Oriented Analysis and Design." class="Key"> Object-Oriented Analysis and Design. </A>
+List the four steps described in the previous chapter leading from
+what the user wants to a design for the software.
+<p>
+<br>(<a name="Class exercises">Class exercises</A>): 
+[<A href="03x.html"> 03x.html </A>]
+<H1><a name="Assigned Work for next time -- use cases I">Assigned Work for next time -- use cases I</A></H1>
+<br>(<a name="Preparation">Preparation</A>): Use Cases. Start with
+[<A href="04.html"> 04.html </A>]
+and take it from there.  Submit one review question+answer before the deadline.
+<H1><a name="Quiz 1 The Unified Process">Quiz 1 The Unified Process</A></H1>
+<br>(<a name="Q1">Q1</A>): Fill in blanks in a diagram that I handed out....
+<p>
+<p>
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<p>
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+[<A href="02DiceGameClasses.gif"> 02DiceGameClasses.gif </A>]
+(example).
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<p>
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good set of objects and/or classes to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what has no value <span class="InlineFormula">now</span>, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<p>
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci and Engineering School, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10 and
+[<A href="02DiceGameSSD.gif"> 02DiceGameSSD.gif </A>]
+(example).
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need it <span class="InlineFormula">now</span>. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">( End of document )</a>  <a href="#Contents">&lt;&lt;Contents </A> | <a href="#Main Content">Top</A></H3>
+</body>

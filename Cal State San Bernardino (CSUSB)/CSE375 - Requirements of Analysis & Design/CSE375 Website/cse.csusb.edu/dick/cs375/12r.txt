@@ -1,0 +1,13 @@
+. Review Questions 12 -- GRASP
+ Name and describe the two kinds of responsibilities of an object.
+ What does the acronym GRASP mean?
+ List the names of the GRASP patterns.
+ What UML diagram helps you work out where responsibilities are place in an OO Design?
+ What is a pattern?
+ Briefly describe the Creator pattern. Give an example from the book of its use.
+ Briefly describe the Information Expert pattern. Give an example from the book of its use.
+ Briefly describe the low Coupling pattern. Give an example from the book of its use.
+ Briefly describe the Controller pattern. Give an example from the book of its use.
+ Briefly describe the High Cohesion pattern. Give an example from the book of its use.
+ Define and distinguish: Coupling and Cohesion?
+ 

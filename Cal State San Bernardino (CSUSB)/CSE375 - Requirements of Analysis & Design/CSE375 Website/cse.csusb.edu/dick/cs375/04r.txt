@@ -1,0 +1,11 @@
+.Open Review Questions 4
+ Define: actor, scenario, use case.
+ What are the four kinds of artifact you may find in a use-case model?
+ Usecases: Diagram or text?
+ Name 3 kinds of actors.
+ Name 3 common use case formats.
+ What is the main success scenario vs the extensions. Which is written first?
+ List 3 guidelines for writing use-cases.
+ Give 3 tests for useful use cases
+ What is a stakeholder?
+.Close 

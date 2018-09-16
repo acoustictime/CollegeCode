@@ -1,0 +1,205 @@
+#ifndef SET_H
+#define SET_H
+#include <iostream>
+
+using namespace std;
+
+// Set.h - an implementation of Set using Node and Set_iterator
+
+using namespace std;
+
+template <class T> class Set;
+template <class T> class Set_iterator;
+
+template <class T>
+class Node {
+public:
+    Node(): value(0), parent(0), leftChild(0), rightChild(0) { }
+    Node(const T & x, Node * p, Node * lc, Node * rc): 
+	value(x), parent(p), leftChild(lc), rightChild(rc) { }
+    void insert(Node<T> * newNode); // this is a helper func for Set::insert()
+    Node * find(const T & x);
+    Node * merge(Node<T> * left, Node<T> * right);
+protected:
+	T value;
+	Node * parent;
+	Node * leftChild;
+	Node * rightChild;
+
+friend class Set<T>;
+friend class Set_iterator<T>;
+};
+
+template <class T>
+void Node<T>::insert(Node<T> * newNode) {
+    cout << "\ninsert set\n";
+
+    if (newNode -> value <= value) {
+        if (leftChild != 0)
+            leftChild -> insert(newNode);
+        else {
+            newNode -> parent = this;
+            leftChild = newNode;
+        }
+    }
+    else {
+        if (rightChild != 0)
+            rightChild -> insert(newNode);
+        else {
+            newNode -> parent = this;
+            rightChild = newNode;
+        }
+    }
+}
+
+
+template <class T>
+Node<T> * Node<T>::find(const T & x) {
+
+
+}
+
+template <class T>
+Node<T> * Node<T>::merge(Node<T> * left, Node<T> * right) {
+
+
+}
+
+
+template <class T>
+class Set {
+public:
+    typedef Set_iterator<T> iterator;
+
+    Set(): root(0), my_size(0) { }
+    bool empty() const { return root == 0; }
+    unsigned int size() const { return my_size; }
+    void insert(const T & x);
+    void erase(iterator & it);
+    void erase(const T & x) { root = remove(root, x); }
+    unsigned int count(const T & x) const; // returns 1 or 0 because this is a set, not a multi-set
+    iterator find(const T & x) const;
+    iterator begin() const; // for in-order traversal
+    iterator end() const { return iterator(0); }
+protected:
+    Node<T> * root;
+    unsigned int my_size;
+    Node<T> * remove(Node<T> *, const T &);
+};
+
+template <class T>
+void Set<T>::insert(const T & x) {
+cout << "\ninsert node\n";
+    if(count(x) > 0)
+        return;
+
+    Node<T> * newNode = new Node<T>(x,0,0,0);
+
+    if (root == 0)
+       root = newNode;
+    else
+       root -> insert(newNode);
+
+    my_size++;
+}
+
+template <class T>
+void Set<T>::erase(iterator & it) {
+
+
+}
+
+template <class T>
+unsigned int Set<T>::count(const T & x) const {
+   
+cout << "\ncount\n";
+    iterator first = begin();
+    iterator last = end();
+ 
+    for (;first != last;first++)
+        if (x == *first)
+	    return 1;       
+
+
+    
+
+    return 0;
+
+}
+
+template <class T>
+typename Set<T>::iterator Set<T>::find(const T & x) const {
+
+
+}
+
+template <class T>
+typename Set<T>::iterator Set<T>::begin() const {
+    Node<T> * n = root;
+cout << "\nbegin\n";
+    
+    while(n && n->leftChild)
+        n = n->leftChild; 
+    
+    return iterator(n);
+}
+
+
+template <class T>
+class Set_iterator {
+public:
+    Set_iterator(): n(0) { }
+    Set_iterator(Node<T> * newNode): n(newNode) { }
+
+    bool operator==(Set_iterator it) const { return n == it.n; }
+    bool operator!=(Set_iterator it) const { return n != it.n; }
+    Set_iterator & operator++(); // inorder traversal, pre-increment
+    Set_iterator operator++(int); // inorder traversal, post-increment
+    T & operator*() { return n->value; }
+    Set_iterator & operator=(Set_iterator<T> it) { n = it.n; return *this; }
+protected:
+    Node<T> * n;
+
+friend class Set<T>;
+};
+
+
+template <class T>
+Set_iterator<T> & Set_iterator<T>::operator++() {
+   
+    if (n -> rightChild) {
+
+        n = n -> rightChild;
+        while (n && n -> leftChild)
+            n = n -> leftChild;
+    }
+    else {
+
+        Node<T> * child = n;
+        n = n -> parent;
+        while (n && n -> rightChild == child) {
+            child = n;
+            n = n -> parent;
+        }
+    }
+    return *this;
+
+}
+
+template <class T>
+Set_iterator<T> Set_iterator<T>::operator++(int) {
+    cout << "\noperator++int\n";    
+
+    Set_iterator<T> temp(*this);
+    operator++();
+    return temp;
+}
+
+
+
+
+
+
+
+
+#endif

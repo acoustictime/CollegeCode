@@ -1,0 +1,95 @@
+. Review Questions 18 -- Refining the Domain Model
+ Review UML Notation. 
+ Draw diagrams showing each of these facts using the UML
+.List
+ A is associated with B.
+ A is a generalization of B and C.
+ A is an aggregation of B and C.
+ A is a composition of B and C.
+ A plays role a in class B.
+.Close.List
+
+ Exercise: Here are some classes -- which is subclass of which?
+.List
+ Animal
+ Automobile
+ Bicycle
+ Cat
+ Cockroach
+ Dog
+ Hamster
+ Insect
+ Pet
+ Saloon
+ Sports-car
+ SUV
+ Thing
+ Vehicle
+.Close.List
+Draw a UML diagram showing a single hierarchy.
+
+ Work out your hierarchy and compare with other peoples.  Discuss 
+differences.
+
+ Suppose that people (in class `Person`) can own zero or more of the items in
+the list above... how do you show this in a UML class diagram?
+Do you need to make any changes to the hierarchy?
+
+ CSUSB like most domains has several hierarchies or people.  For example by
+sex, by role (Student, Staff, Faculty), and students have ranks (fresh, ...
+graduate).  Draw a diagram with Person as the most general object and 
+reflecting all these distinctions...
+ Give a real life (not from text or my notes) of a generalization using the UML notation.
+ When is it worth adding a subclass to a class in the domain model?
+ When is it worth adding a superclass to the domain model?
+
+ What is an `abstract` class?
+ What effect does having an abstract superclass have on the objects in the
+class's subclasses'
+ An interface is an abstract class.  What is special about interfaces vs 
+abstract classes?
+
+ Draw a UML diagram that shows the relationship between two people being 
+controlled by a class called "Relationship".
+
+ Why should you avoid aggregation in a domain model?
+
+ Give a simple guideline for using composition in a domain model.
+
+ Draw a diagram of a real life domain (not in the text or my notes) of a role name on an association between two classes.
+
+ How do you show in the UML that a class `Circle` has an `area` that is determined by its `radius`?
+ Invent a new example of a reflexive relationship -- like figure 31.25 but from
+your own experience.
+ Distinguish a Package from a Class -- how to draw them and what they mean.
+ Explain how you can make an object appear to change its behavior from one class
+to another in a language like C++ or Java that does not allow dynamic typing.
+.Open Exam Questions from 2011
+. Domain Models Question -- 20 points
+Suppose that you have to develop some software for a local Pizza shop.  It
+allows customers to order their pizzas over the internet and collect them 
+(and pay) at the store.  A Pizza has a price derived from its size, type, 
+and Toppings. A Pizza can have any number of Toppings. Toppings have 
+prices.  Customers have Orders and each Order is for one Customer.  An 
+Order is for a number Items, and has a collection time  An Item is a Pizza
+or a Drink, The shop has a number of Special Pizzas that have a name 
+(example "Hawaiian" ). Customers can order a Pizza by name or by listing 
+the toppings.  The diagram should have at least half-a-dozen classes with 
+associations, some attributes, and some generalizations (correct UML 10 
+points, modeling the correct things 5 points, modeling the relations 
+between them 5 points).
+
+.Open Use Case Models -- 20 points
+ Draw a simple use case diagram showing three(3) likely use cases for the 
+local Pizza shop (10 points, UML 7 points, good names 3 points).
+ Write a casual description of one(1) use case in your diagram.  It should
+have at least two scenarios. Number the steps! (10 points)
+.Close Use Case Models -- 20 points
+
+
+. System Sequence Diagrams -- 20 Points
+Draw an SSD for one scenario in the casual format use case you wrote in the
+previous question for the local Pizza shop (correct UML 10pts, correct 
+lifeline names (4 points), plausible message names 3 points, plausible 
+meaningful data 2 points).
+.Close Exam Questions from 2011

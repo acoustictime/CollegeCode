@@ -1,0 +1,4 @@
+verilog work "../Lab5_FPGA/half_adder.v"
+verilog work "../Lab5_FPGA/full_adder.v"
+verilog work "../Lab5_FPGA/FourBitAddrSub.v"
+verilog work "Lab5.v"

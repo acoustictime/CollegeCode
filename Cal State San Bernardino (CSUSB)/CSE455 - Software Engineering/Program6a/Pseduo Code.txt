@@ -1,0 +1,113 @@
+Pseudo-Code for Linear Regression Methods
+
+
+LinearRegression::LinearRegression()
+
+    set default values for variables
+
+    ask user for x-axis file name
+
+    check if x-axis file name is valid choice
+
+    ask user for y-axis file name
+
+    check if y-axis file name is valid choice
+
+    call calculate method  
+
+
+void LinearRegression::calculate()
+
+    b1Value = topValue / bottomValue;
+    b0Value = averageOfVector(vector2) - b1Value * averageOfVector(vector1);
+
+
+    call readInValues for both files
+
+    declare and initialize all need variables to hold temp values
+
+    calculate topValueLeft using sumvalues and multiplyvalues methods
+    calcualte topValueRight using averageOfVector method
+    calcualte topValue using topValueLeft - topValueRight
+
+    calculate bottomValueLeft using sumvalues and multiplyvalus methods
+    calculate bottomValueRight using averageOfvector method
+    calculate bottomValue using bottomValueLeft - bottomValueRight
+
+    calculate b1 value using topValue / bottomValue
+    calculate b0 value using averageofvector method and b1value
+
+
+void LinearRegression::readInValues(string filename, vector<float> &vector)
+
+    delcare ifstream variable
+
+    open file
+
+    declare currentValue float and set to 0
+
+    while (lines in file)
+        read in value
+        add to vector
+ 
+    close file
+
+
+vector<float> LinearRegression::multiplyValues(vector<float> vector1, vector<float> vector2)
+
+    declare vector to hold results
+
+    if (vectors not same size)
+	return
+
+    for (all items in vector1)
+	add to new vector: vector1[i] * vector2[i]
+
+    return new vector
+
+
+float LinearRegression::sumValues(vector<float> vector)
+
+    declare variable to hold result
+
+    for (all items in vector)
+	add vector[i] to sum
+
+    return sum
+
+
+void LinearRegression::varianceCalculate()
+
+    calculate sum of yi - b0 - b1 * xi
+    calculate variance
+	sort of (1 / (n - 2)) * sum from above
+
+
+void LinearRegression::rangeCalculate()
+
+    calculate range
+	calculate top right value
+	    (xk - average(x values)) * (xk - average(x values))
+	calculate bottom right value
+    	    sum of (xi - average(x values)) * (xi - average(x values))
+        calculate right value
+  	    top right value / bottom right value
+	calculate range
+	   sqrt of  1 + (1 / n) + right value
+	   above * variance
+	   range 90 = range * 90% interval
+	   range 70 = range * 70% interval
+
+void LinearRegression::calculateUpperLower()
+
+    calculate yk
+	b0 + b1 * xk
+    calculate upi and lpi
+	yk + range70
+	yk - range70
+	yk + range90
+	yk - range90
+
+
+
+

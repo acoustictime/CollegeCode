@@ -1,0 +1,427 @@
+<HTML>
+<!-- Mirrored from cse.csusb.edu/dick/cs375/10.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 11 Mar 2013 15:54:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head><title>CSE375: 
+CSci 375/10 Interaction Diagrams
+</title>
+<STYLE TYPE="text/css">
+BODY{font-family:serif;}
+H1,H2,H3,H4{font-family:sans-serif;}
+CODE,PRE,TT{font-family:monospace;}
+HR{color: black;}
+A{ font-weight: bolder; }
+.InlineFormula{
+	font-style: italic;
+}
+.Formula{
+	padding-left:10px;
+	font-style: italic;
+}
+.Let{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+}
+.Net{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:red;
+}
+.Case{
+	border-style: solid;
+	padding:10px;
+	border-width:thin;
+	border-color:blue;
+}
+</STYLE>
+</head>
+<body BGCOLOR = "#FFFFFB"
+ LINK="#0000FF" ALINK="#FF0000" VLINK="#8000AF">
+<!-- Generated from MATHS source code by RJBotting\'s mth2html script-->
+<form TARGET="body" method=get action="http://www.csci.csusb.edu/dick/cs375/lookup.php">
+[<a href="#Main Content">Skip Navigation</A>]
+[ <a href="http://csusb.edu/">CSUSB </a>]
+/ [<a  href="http://nsci.csusb.edu/">CNS</A>]
+/ [<a  href="http://cse.csusb.edu/">CSE</A>]
+/ [<a  href="http://cse.csusb.edu/dick/">R J Botting</A>]
+/ [<a  href="index.html">CS375</A>]
+ [Search <input name="search" size=10 value="" >
+
+<input type="hidden" name="from" value="cs375/header" >
+<input type=submit value="Go" >]
+<br>
+[<a href="http://www.csci.csusb.edu/dick/cs375/about.html">About</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/contact.html">Contact</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/grading/">Grades</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/objectives.html">Objectives</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/patterns.html">Patterns</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/projects.html">Projects</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/schedule.html">Schedule</A>] 
+[<a href="http://www.csci.csusb.edu/dick/cs375/syllabus.html">Syllabus</A>] 
+
+<br>Session:
+[<a href="http://www.csci.csusb.edu/dick/cs375/01.html">01</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/02.html">02</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/03.html">03</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/04.html">04</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/05.html">05</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/06.html">06</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/07.html">07</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/08.html">08</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/09.html">09</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/10.html">10</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/11.html">11</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/12.html">12</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/13.html">13</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/14.html">14</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/15.html">15</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/16.html">16</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/17.html">17</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/18.html">18</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/19.html">19</A>]
+[<a href="http://www.csci.csusb.edu/dick/cs375/20.html">20</A>]
+
+
+<br>
+[<a href="10.txt">Text Version</A>]
+ 10.html 
+Wed Feb  6 13:34:11 PST 2013
+<br>
+<H3><a name="Contents">Contents</A></h3>
+<ul class="Contents">
+<li><a href="10.html#CSci 375/10 Interaction Diagrams">CSci 375/10 Interaction Diagrams</A>
+<li><a href="10.html#Revision History">Revision History</A>
+<li><a href="10.html#Chapter 15 UML Interaction Diagrams">Chapter 15 UML Interaction Diagrams</A>
+<li><a href="10.html#Common Error -- Confusing an SSD with an Interaction Design">: Common Error -- Confusing an SSD with an Interaction Design</A>
+<li><a href="10.html#+++ Messages and operations and functions">: +++ Messages and operations and functions</A>
+<li><a href="10.html#Sequence Diagrams">: Sequence Diagrams</A>
+<li><a href="10.html#Communication/Collaboration Diagrams">: Communication/Collaboration Diagrams</A>
+<li><a href="10.html#Example: List unfulfilled orders at a depot">Example: List unfulfilled orders at a depot</A>
+<li><a href="10.html#Exercises">Exercises</A>
+<li><a href="10.html#Questions and Answers">Questions and Answers</A>
+<li><a href="10.html#Next: Class Diagrams">Next: Class Diagrams</A>
+<li><a href="10.html#Project 4 -- SSDs and Packages">Project 4 -- SSDs and Packages</A>
+<li><a href="10.html#Review Questions">Review Questions</A>
+<li><a href="10.html#Standard Definitions">Standard Definitions</A>
+</ul><a name="Main Content"><hr></a><ol>
+<H1><a name="CSci 375/10 Interaction Diagrams">CSci 375/10 Interaction Diagrams</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Date<th scope="col">#<th scope="col">Topic (Participation 2pt)<th scope="col">Study pages (2 pts)<th scope="col">Quiz(15 pts)<th scope="col">Project Work(10 pts)
+<tr><td>Previous<td>9<td>Packages<td>197-219<td>Q4(173-219)<td>-
+<tr><td>Today<td>10<td>Interactions<td>221-247<td>-<td>W4(transition to design)
+<tr><td>Next<td>11<td>Class Diagrams<td>248-270<td>Q5(221-270)<td>-
+</table><br>(Close Table)<br>
+<H1><a name="Revision History">Revision History</A></H1>
+<br><strong>Table</strong><table border="1"><tr><th scope="col">Version#<th scope="col">Date<th scope="col">Description<th scope="col">Author
+<tr><td>0<td>2005-01-03<td>Used boiler plate to make template<td>RJB
+<tr><td>1<td>2005-02-04<td>Added Book Section Headers<td>RJB
+<tr><td>2<td>2005-02-10<td>Adding notes and questions<td>RJB
+<tr><td>3<td>2006-02-02<td>Updates<td>RJB
+<tr><td>4<td>2007-01-10<td>Add link to project<td>RJB
+<tr><td>5<td>2007-02-07<td>Added reference on messages<td>RJB
+<tr><td>6<td>2008-02-05<td>Made some small improvements<td>RJB
+<tr><td>7<td>2009-03-04<td>Found messages in the SSD<td>RJB
+<tr><td>8<td>2009-03-23<td>New Exercise on Code and Interactions<td>RJB
+<tr><td>9<td>2010-03-16<td>New Exercise on Code and Interactions<td>RJB
+<tr><td>10<td>2011-02-05<td>Expanded notes on Code and Interactions<td>RJB
+<tr><td>12 2013-01-23<td>Added the darts and dart board analogy <a href="#DCD">DCD</A><td>RJB
+</table><br>(Close Table)<br>
+<H1><a name="Chapter 15 UML Interaction Diagrams">Chapter 15 UML Interaction Diagrams</A></H1><ol class=Section>
+<li>* A visual aid for thinking about how a set of objects work.
+Also a way to record the results of thinking.
+<p>
+<li>** Two formats, say samething in different ways. Both have advantages
+and disadvantages.  Learn Both. <a href="#Q5">Q5</A>
+<p>
+<li>*** Learn to translate between sequence diagrams and communication diagrams. <a href="#Q5">Q5</A>
+<p>
+<li>* You can use them to explore what should happen when ANY operation
+is applied to any object.
+<p>
+<li>* Think in terms of a basket-ball game: messages are passes.
+The players are objects.  The ball is with the object that is active.
+<p>
+<li>* Review the formats for messages and returned objects.
+[<A href="08.html#Messages"> 08.html#Messages </A>]
+<a href="#Q5">Q5</A>
+<p>
+<li>* Think in terms of an atomic cloud chamber: a particle comes
+in and collides with another particle.... and a spray of particles
+and interactions are triggered off.
+<p>
+<li>* Demonstration
+[<A href="Minicalc.png"> Minicalc.png </A>]
+(design)
+[<A href="Minicalc.Cards.html"> Minicalc.Cards.html </A>]
+(descriptions of objects)
+and
+[<A href="Minicalc.cpp"> Minicalc.cpp </A>]
+(C++ code).
+<p>
+<li>**** Each incoming message in an interaction diagram maps to a <span class="InlineFormula">header</span> for a
+member function of the class.
+<p>
+<li>**** Each outgoing arrow maps to a <span class="InlineFormula">call</span> of a member function of the class.
+<p>
+<li>*** The activity when a message arrives maps to the body of the member
+function in the class.
+<p>
+<li>* Interaction diagrams are used to design the internal classes of a system. One message
+on the SSD triggers off a lot of activity between the objects inside
+the System.  These diagrams help you work these out.  The interactions
+drive the design of the classes inside the system.
+<p>
+<li>*** Each message in an SSD has no more than one set of interactions.
+<p>
+<li>*** Messages in an SSD have data that is mostly alphanumeric.  In a design
+the data often includes <span class="InlineFormula">objects</span>.   Commonly, an object can pass itself to
+another object.  These are actually pointers!
+<p>
+<li>* Treat this chapter as a reference manual of notations.
+<p>
+<li>+ Looking ahead:  we take each step in the SSD and work out a set of interactions
+that do what is needed.
+[<A href="UC2Code.png"> UC2Code.png </A>]
+<p>
+<li>+ Interactions lead directly to the Design Class Diagram -- -- --(<a name="DCD">DCD</A>)<br>
+for the software.
+Many interaction diagrams are summarized by each <a href="#DCD">DCD</A>.
+You can imagine the relation between the interaction diagrams and the <a href="#DCD">DCD</A>
+as being like the relation between a set of darts and a dart board.  Each dart
+has to land in a good part of the board...  the arrows in aninteraction diagram
+are the darts... and the object life line that they point at tells you which part
+of the dart board/<a href="#DCD">DCD</A> they should be sticking in.
+<p>
+<li>+ Design is easier if you know what is true before the operation and what must be
+made true before it it complete. So,
+<A name="Operation Contracts" class="Key"> Operation Contracts </A>
+make designing objects easier.
+<p>
+<H2><a name="Common Error -- Confusing an SSD with an Interaction Design">Common Error -- Confusing an SSD with an Interaction Design</A></H2>
+An SSD is a very special kind of sequence diagram:
+<br><ol class="List">
+<li><span class=Formula>It shows actors (external entities).  These do not appear on normal</span>
+sequence or communication diagrams.
+<li><span class=Formula>It has a single object that is always called &quot;:System&quot;.</span>
+<li><span class=Formula>We do not show activations.</span>
+<li><span class=Formula>Messages+data flow from the primary actor into the System.</span>
+<li><span class=Formula>Data is returned from the System to the primary actor.</span>
+</ol><br>
+<p>
+Interaction diagrams can also show what goes on INSIDE a system as it
+responds to a message.   These have MANY OBJECTS.
+<p>
+An SSD is a sequence diagram with one primary actor
+and an object called &quot;:System&quot;.
+If the object is called &quot;:System&quot; and it is the only object.... then the
+diagram is a SSD.  Else it is not.
+<p>
+Semantics: SSDs show the sequence of events between an actor and the whole system.
+A sequence diagram should show the objects inside the system doing something.
+<p>
+<li>*** 15.1 Two forms of interaction diagram:
+<A name="sequence" class="Key"> sequence </A>
+<li>diagram and
+<A name="communication" class="Key"> communication </A>
+(once called
+<A name="collaboration" class="Key"> collaboration </A>
+)
+diagram.
+<li>These diagrams give you 90% of the code.  For example Diagram 15.3 and 15.4 both
+show us that the class <span class="InlineFormula">Register</span> has an operation called <span class="InlineFormula">makePayment</span>:
+<pre> 	void Register::makePayment(Money cashTendered)</pre>
+<pre> 	{</pre>
+<pre> 		sale-&gt;makePayment(cashTendered);</pre>
+<pre> 	}</pre>
+we might deduce the existence of the attribute <span class="InlineFormula">sale</span> that refers to a <span class="InlineFormula">Sale</span> as well.
+<p>
+<li>*** 15.2 Tracing interactions is more important than most novices think.
+<li>* 15.3 Notation for objects.   name : class, &lt;&lt;metaclass&gt;&gt;
+<H2><a name="+++ Messages and operations and functions">+++ Messages and operations and functions</A></H2>
+Each incoming message  describes the header of a function.  Outgoing messages
+describe the contents of the body of a function.
+<H2><a name="Sequence Diagrams">Sequence Diagrams</A></H2>
+<p>
+<li>* Examples
+[<A href="http://www.alltheweb.com/search?cat=img&amp;cs=iso88591&amp;q=sequence+diagram&amp;rys=0&amp;itag=crv"> search?cat=img&amp;cs=iso88591&amp;q=sequence+diagram&amp;rys=0&amp;itag=crv </A>]
+<p>
+<li>15.4 Basic Sequence Diagram Notations:
+<ul class="Set">
+<li>*** message, reply/return, (<a href="#Q5">Q5</A>)
+[<A href="08.html#Messages"> 08.html#Messages </A>]
+<li>*** reply = message (data) (<a href="#Q5">Q5</A>)
+<A name="Common error -- forgetting data" class="Key"> Common error -- forgetting data </A>
+<li>*** reply = message (<a href="#Q5">Q5</A>)
+<li>** message to self
+<li>** creation, destruction (&gt;&lt;) (<a href="#Q5">Q5</A>)
+<li>** alt(<a href="#Q5">Q5</A>), loop(<a href="#Q5">Q5</A>), opt(<a href="#Q5">Q5</A>), par, region
+<li>+++ loops include counting loops and loops that use iterators to
+send messages to a set of objects one after another.
+<li>** [<span class="InlineFormula">condition</span>], [else]
+<li>* action boxes (action)
+<li>* nesting, ref, sd
+<li>*** &lt;&lt;metaclass&gt;&gt;
+<li>* polymorphism (more later)
+<li>* asynchronous vs synchronous calls, active objects,...
+<li>*** Found messages -- the trigger for a set of interactions.
+Notice the notation!
+<li>**** Each
+<A name="activation" class="Key"> activation </A>
+(tall and thin box) maps to the body of a member function in the code.
+<li>++ Common technique:  an object <span class="InlineFormula">p</span> will send a message to object <span class="InlineFormula">q</span> that includes
+<span class="InlineFormula">p</span> as data
+<pre> 		doSomethingForMe(p)</pre>
+and <span class="InlineFormula">q</span> will respond by sending requests and data back to <span class="InlineFormula">p</span> by using <span class="InlineFormula">p</span>s own functions.
+An example of the
+<A name="Hollywood Principle" class="Key"> Hollywood Principle </A>
+-- &quot;Don't call us, we will call you!&quot;
+<p>
+</ul>
+<H2><a name="Communication/Collaboration Diagrams">Communication/Collaboration Diagrams</A></H2>
+<li>15.5 Basic Communication Notation:
+<ul class="Set">
+<li>**** Links + Messages(<a href="#Q5">Q5</A>)
+<li>*** One link -- MANY messages.
+<li>** create, (<a href="#Q5">Q5</A>)
+<li>**** sequence numbers: complex 1, 2, 2.1, 2.2, 3...(<a href="#Q5">Q5</A>)
+<li>** conditions, iteration(<a href="#Q5">Q5</A>)
+<li>* &lt;&lt;metaclass&gt;&gt;
+<li>* synchronous and asynchronous
+<li>** Found messages -- the trigger for a set of interactions.
+Notice the different notation.
+<li>**** It is harder to work out the precise code for a function from a communication
+diagram.
+It doesn't have explicit activations and the notation for control structures
+is primitive.
+The numbers tell you what function is being defined.
+A message with number <span class="InlineFormula">a.b....c.d</span> indicates that it's operation is
+called as a result of the message <span class="InlineFormula">a.b....c</span> being sent. For example
+a message numbered 1 will invoke a function whose body sends messages
+1.1, 1.2, 1.3, and so on.  And 1.2 will call 1.2.1, 1.2.2, 1.2.3.  So the
+sequence of calls will be: 1, 1.1,1.2,1.2.1,1.2.2,1.2.3,1.3,... for example.
+</ul>
+<p>
+<li>+++ Sequence and Communication diagrams are equivalent.  Learn to
+map between them (<a href="#Q5">Q5</A>)!
+<p>
+<li>+++ Sequence and Communication diagrams describe code. If a message
+<span class="InlineFormula">m(d)</span> is sent from an object of class <span class="InlineFormula">A</span> to an object of class <span class="InlineFormula">B</span>:
+<p>
+<img src="10CodingMessage.png" alt="[Message m(d) is passed from A to B]">
+<p>
+then in some method in A there must be a an object b:B and a call
+<pre> 		b-&gt;m(d)</pre>
+(C++ code)
+<pre> 		b.m(d)</pre>
+(Java).
+Also in class B there must be a operation
+<pre> 		m(d:Data):ReturnedObject</pre>
+(UML)
+<p>
+<li>+++ It is best to analyse one single &quot;found&quot; message at a time.
+<p>
+<li>+++ Assume that for any design class A we have classes like vector&lt;A&gt; and
+list&lt;A&gt; without having to draw any special classes.  In Design Class Diagrams
+multiplicities (example &quot;*&quot;) indicate the use of vectors, lists, etc. .
+Also we presume that we have iterators that can move accross the elements
+in these lists, vectors, etc. .  Common notation
+<pre> 		object_name : vector&lt;Whatever&gt;</pre>
+for example.  Many would then write things like
+<pre> 		[ for i=0..object_name.size ] .... object_name[i]...</pre>
+but I prefer
+<pre> 		[ for item in object_name ] .... item...</pre>
+<p>
+We also presume we can write code to insert and delete items in vectors, lists, etc.
+A message like
+<pre> 		add(newItem)</pre>
+can be sent to a vector or set of similar Items and do the obvious thing.
+<p>
+</ol><p>. . . . . . . . . ( end of section <a href="10.html#UML Interaction Diagrams">UML Interaction Diagrams</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<br>(<a name="Q">Q</A>): Tested in quizzes and/or finals.
+<br>(<a name="Q5">Q5</A>): Tested in Quiz 5.
+</ol><p>. . . . . . . . . ( end of section <a href="10.html#Chapter 15 UML Interaction Diagrams">Chapter 15 UML Interaction Diagrams</A>)  <a href="#Contents">&lt;&lt;</A>Contents | End<a href="#__End">&gt;&gt;</A>
+<H1><a name="Example: List unfulfilled orders at a depot">Example: List unfulfilled orders at a depot</A></H1>
+[<A href="10ExGetUnfilledInteract.html"> 10ExGetUnfilledInteract.html </A>]
+<p>
+This interaction leads to thee fragments of code:
+[<A href="10ExGetUnfilled.cpp"> 10ExGetUnfilled.cpp </A>]
+to be added to Depot, Customer, and SalesOrder.
+<p>
+<H1><a name="Exercises">Exercises</A></H1>
+[<A href="10x.html"> 10x.html </A>]
+<H1><a name="Questions and Answers">Questions and Answers</A></H1>
+[<A href="10q.html"> 10q.html </A>]
+<H1><a name="Next: Class Diagrams">Next: Class Diagrams</A></H1>
+Each object in an interaction diagram has a class in a design class diagram,
+and the messages in the diagram are operations in the clases!
+<p>
+<li>*** A small to medium size project will only have ONE design class diagrams,
+but many interaction diagrams.
+<p>
+[<A href="11.html"> 11.html </A>]
+<H1><a name="Project 4 -- SSDs and Packages">Project 4 -- SSDs and Packages</A></H1>
+[<A href="w4.html"> w4.html </A>]
+due next class.
+</ol>
+<H1><a name="Review Questions">Review Questions</A></H1>
+[<A href="10r.html"> 10r.html </A>]
+<H1><a name="Standard Definitions">Standard Definitions</A></H1>
+<li><a name="Artifact">Artifact</A>::=&quot;Anything that is created in the course of a project&quot;.
+<li><a name="artifact">artifact</A>::=<span class="InlineFormula">see above</span>.
+<p>
+<li><a name="DCD">DCD</A>::diagram=&quot;Design Class Diagram&quot;, shows the classes that will be implemented in code.
+[<A href="02DiceGameClasses.gif"> 02DiceGameClasses.gif </A>]
+(example).
+<li><a name="Deliverables">Deliverables</A>::=&quot;A packet of artifacts that must be prepared by a deadline for review or distribution&quot;.
+<p>
+<li><a name="Glossary">Glossary</A>::= See <a href="uml.glossary.html">http://cse.csusb.edu/dick/cs375/uml.glossary.html</A>.
+<li><a name="GoF">GoF</A>::=&quot;Gang of Four&quot;,
+[<A href="patterns.html#GoF"> patterns.html#GoF </A>]
+<li><a name="GRASP">GRASP</A>::<a href="#patterns">patterns</A>=&quot;General Responsibility Assignment Software Patterns&quot;,
+a set of guidelines for designing objects and classes. They take a single
+event that the system must handle and determine a good set of objects and/or classes to carry it out.
+See
+[<A href="patterns.html#GRASP -- General Responsibility Assignment Software Patterns"> patterns.html#GRASP -- General Responsibility Assignment Software Patterns </A>]
+<li><a name="Grades">Grades</A>::= See <a href="grading/index.html">http://cse.csusb.edu/dick/cs375/grading/</A>.
+<p>
+<li><a name="KISS">KISS</A>::Folk_law=&quot;Keep It Simple, Stupid&quot;, in agile processes this means never
+drawing a diagram or preparing a document that doesn't provide value
+to the clients and stakeholders. In all processes it means never
+designing or coding what has no value <span class="InlineFormula">now</span>, see <a href="#YAGNI">YAGNI</A>.
+<p>
+<li><a name="OO">OO</A>::shorthand=&quot;Object-Oriented&quot;.
+<li><a name="OOAD">OOAD</A>::=&quot;Object-Oriented Analysis and Design&quot;, See chapter 1 in text.
+<p>
+<li><a name="patterns">patterns</A>::=&quot;Documented families of problems and matching solutions&quot;, see
+<a href="#Patterns">Patterns</A>.
+<li><a name="Patterns">Patterns</A>::= See <a href="patterns.html">http://cse.csusb.edu/dick/cs375/patterns.html</A>.
+<p>
+<li><a name="Process">Process</A>::=&quot;How to develop software&quot;.
+<p>
+<li><a name="RJB">RJB</A>::=<span class="InlineFormula">The author of this document</span>,
+RJB=&quot;Richard J Botting, Comp Sci and Engineering School, CSUSB&quot;.
+<li><a name="RUP">RUP</A>::Process=&quot;Rational <a href="#UP">UP</A>&quot;, a proprietary version of <a href="#UP">UP</A>.
+<p>
+<li><a name="SSD">SSD</A>::=&quot;System Sequence Diagrams&quot;, see chapter 10 and
+[<A href="02DiceGameSSD.gif"> 02DiceGameSSD.gif </A>]
+(example).
+<p>
+<li><a name="TBA">TBA</A>::=&quot;To Be Announced&quot;.
+<p>
+<li><a name="UML">UML</A>::=&quot;Unified Modeling Language&quot;.
+[<A href="http://en.wikipedia.org/wiki/Unified_Modeling_Language"> Unified_Modeling_Language </A>]
+<p>
+<li><a name="UP">UP</A>::=&quot;Unified Process&quot;, an iterative, risk-driven, and evolutionary way to develop <a href="#OO">OO</A> software.
+<p>
+<li><a name="YAGNI">YAGNI</A>::<a href="#XP">XP</A>=&quot;You Ain't Gonna Need It&quot;, an <a href="#XP">XP</A> slogan that stops you
+planning and coding for things that are not yet needed.  As
+a rule the future is not predictable enough to program a feature
+until the stakeholders actually need it <span class="InlineFormula">now</span>. In this class it also means
+&quot;It won't be on the final or in quizzes&quot;.
+<p>
+<li><a name="XP">XP</A>::=&quot;Extreme Programming&quot;, the ultimate iterative, code-centric, user-involved
+process.
+<p>
+</ol>
+<H3><a name="__End">( End of document )</a>  <a href="#Contents">&lt;&lt;Contents </A> | <a href="#Main Content">Top</A></H3>
+</body>

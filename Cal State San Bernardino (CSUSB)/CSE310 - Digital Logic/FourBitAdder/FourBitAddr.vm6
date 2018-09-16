@@ -1,0 +1,396 @@
+NDS Database:  version O.61xd
+
+NDS_INFO | xa9500xl | A9536XL44VQ | XA9536XL-15-VQ44
+
+DEVICE | A9536XL | A9536XL44VQ | 
+
+NETWORK | FourBitAddr | 0 | 0 | 16793607
+
+INPUT_INSTANCE | 0 | 0 | NULL | a_0_IBUF | FourBitAddr_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | a<0> | 343 | PI | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | a_0_IBUF | 321 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_0_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | b_0_IBUF | FourBitAddr_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | b<0> | 344 | PI | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | b_0_IBUF | 322 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | b_0_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | a_1_IBUF | FourBitAddr_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | a<1> | 345 | PI | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | a_1_IBUF | 323 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_1_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | b_1_IBUF | FourBitAddr_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | b<1> | 346 | PI | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | b_1_IBUF | 324 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | b_1_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | a_2_IBUF | FourBitAddr_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | a<2> | 347 | PI | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | a_2_IBUF | 325 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_2_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | b_2_IBUF | FourBitAddr_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | b<2> | 348 | PI | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | b_2_IBUF | 326 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | b_2_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | a_3_IBUF | FourBitAddr_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | a<3> | 349 | PI | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | a_3_IBUF | 327 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_3_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | b_3_IBUF | FourBitAddr_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | b<3> | 350 | PI | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | b_3_IBUF | 328 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | b_3_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | c0_IBUF | FourBitAddr_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | c0 | 351 | PI | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | c0_IBUF | 329 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | c0_IBUF | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | LowPow+OptxMapped | c4_OBUF | FourBitAddr_COPY_0_COPY_0 | 2155872257 | 5 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_3_IBUF | 327 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fa_3/S0/fa_3/S0_D.UIM | 342 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | fa_3/S0/fa_3/S0_D.Q | fa_3/S0/fa_3/S0_D | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_2_IBUF | 325 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | c2/c2_D2.UIM | 340 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | c2/c2_D2.Q | c2/c2_D2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_2_IBUF | 326 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | b_2_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | c4_OBUF | 330 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | c4_OBUF.Q | c4_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | c4_OBUF.SI | c4_OBUF | 0 | 5 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_3_IBUF | 327 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fa_3/S0/fa_3/S0_D.UIM | 342 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | fa_3/S0/fa_3/S0_D.Q | fa_3/S0/fa_3/S0_D | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_2_IBUF | 325 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | c2/c2_D2.UIM | 340 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | c2/c2_D2.Q | c2/c2_D2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_2_IBUF | 326 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | b_2_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | c4_OBUF.D1 | 353 | ? | 0 | 4096 | c4_OBUF | NULL | NULL | c4_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | c4_OBUF.D2 | 354 | ? | 0 | 4096 | c4_OBUF | NULL | NULL | c4_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | a_3_IBUF | IV_FALSE | fa_3/S0/fa_3/S0_D.UIM
+SPPTERM | 3 | IV_TRUE | a_2_IBUF | IV_TRUE | b_2_IBUF | IV_TRUE | fa_3/S0/fa_3/S0_D.UIM
+SPPTERM | 3 | IV_TRUE | a_2_IBUF | IV_TRUE | c2/c2_D2.UIM | IV_TRUE | fa_3/S0/fa_3/S0_D.UIM
+SPPTERM | 3 | IV_TRUE | b_2_IBUF | IV_TRUE | c2/c2_D2.UIM | IV_TRUE | fa_3/S0/fa_3/S0_D.UIM
+
+SRFF_INSTANCE | c4_OBUF.REG | c4_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | c4_OBUF.D | 352 | ? | 0 | 0 | c4_OBUF | NULL | NULL | c4_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | c4_OBUF.Q | 355 | ? | 0 | 0 | c4_OBUF | NULL | NULL | c4_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | LowPow+Inv+OptxMapped | s_0_OBUF | FourBitAddr_COPY_0_COPY_0 | 2155872513 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_0_IBUF | 321 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_0_IBUF | 322 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | b_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | c0_IBUF | 329 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | c0_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | s_0_OBUF | 331 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | s_0_OBUF.Q | s_0_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | s_0_OBUF.SI | s_0_OBUF | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_0_IBUF | 321 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_0_IBUF | 322 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | b_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | c0_IBUF | 329 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | c0_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | s_0_OBUF.D1 | 357 | ? | 0 | 4096 | s_0_OBUF | NULL | NULL | s_0_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | a_0_IBUF
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | s_0_OBUF.D2 | 358 | ? | 0 | 4096 | s_0_OBUF | NULL | NULL | s_0_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | b_0_IBUF | IV_TRUE | c0_IBUF
+SPPTERM | 2 | IV_FALSE | b_0_IBUF | IV_FALSE | c0_IBUF
+
+SRFF_INSTANCE | s_0_OBUF.REG | s_0_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | s_0_OBUF.D | 356 | ? | 0 | 0 | s_0_OBUF | NULL | NULL | s_0_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | s_0_OBUF.Q | 359 | ? | 0 | 0 | s_0_OBUF | NULL | NULL | s_0_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | LowPow+OptxMapped | s_1_OBUF | FourBitAddr_COPY_0_COPY_0 | 2155872257 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fa_1/S0/fa_1/S0_D.UIM | 341 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | fa_1/S0/fa_1/S0_D.Q | fa_1/S0/fa_1/S0_D | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_0_IBUF | 321 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | c0_IBUF | 329 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | c0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_0_IBUF | 322 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | b_0_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | s_1_OBUF | 332 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | s_1_OBUF.Q | s_1_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | s_1_OBUF.SI | s_1_OBUF | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fa_1/S0/fa_1/S0_D.UIM | 341 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | fa_1/S0/fa_1/S0_D.Q | fa_1/S0/fa_1/S0_D | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_0_IBUF | 321 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | c0_IBUF | 329 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | c0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_0_IBUF | 322 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | b_0_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | s_1_OBUF.D1 | 361 | ? | 0 | 4096 | s_1_OBUF | NULL | NULL | s_1_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | fa_1/S0/fa_1/S0_D.UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | s_1_OBUF.D2 | 362 | ? | 0 | 4096 | s_1_OBUF | NULL | NULL | s_1_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | a_0_IBUF | IV_TRUE | b_0_IBUF
+SPPTERM | 2 | IV_TRUE | a_0_IBUF | IV_TRUE | c0_IBUF
+SPPTERM | 2 | IV_TRUE | b_0_IBUF | IV_TRUE | c0_IBUF
+
+SRFF_INSTANCE | s_1_OBUF.REG | s_1_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | s_1_OBUF.D | 360 | ? | 0 | 0 | s_1_OBUF | NULL | NULL | s_1_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | s_1_OBUF.Q | 363 | ? | 0 | 0 | s_1_OBUF | NULL | NULL | s_1_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | LowPow+Inv+OptxMapped | s_2_OBUF | FourBitAddr_COPY_0_COPY_0 | 2155872513 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_2_IBUF | 325 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_2_IBUF | 326 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | b_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | c2/c2_D2.UIM | 340 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | c2/c2_D2.Q | c2/c2_D2 | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | s_2_OBUF | 333 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | s_2_OBUF.Q | s_2_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | s_2_OBUF.SI | s_2_OBUF | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_2_IBUF | 325 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_2_IBUF | 326 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | b_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | c2/c2_D2.UIM | 340 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | c2/c2_D2.Q | c2/c2_D2 | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | s_2_OBUF.D1 | 365 | ? | 0 | 4096 | s_2_OBUF | NULL | NULL | s_2_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | a_2_IBUF
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | s_2_OBUF.D2 | 366 | ? | 0 | 4096 | s_2_OBUF | NULL | NULL | s_2_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | b_2_IBUF | IV_TRUE | c2/c2_D2.UIM
+SPPTERM | 2 | IV_FALSE | b_2_IBUF | IV_FALSE | c2/c2_D2.UIM
+
+SRFF_INSTANCE | s_2_OBUF.REG | s_2_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | s_2_OBUF.D | 364 | ? | 0 | 0 | s_2_OBUF | NULL | NULL | s_2_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | s_2_OBUF.Q | 367 | ? | 0 | 0 | s_2_OBUF | NULL | NULL | s_2_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | LowPow+OptxMapped | s_3_OBUF | FourBitAddr_COPY_0_COPY_0 | 2155872257 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fa_3/S0/fa_3/S0_D.UIM | 342 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | fa_3/S0/fa_3/S0_D.Q | fa_3/S0/fa_3/S0_D | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_2_IBUF | 325 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | c2/c2_D2.UIM | 340 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | c2/c2_D2.Q | c2/c2_D2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_2_IBUF | 326 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | b_2_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | s_3_OBUF | 334 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | s_3_OBUF.Q | s_3_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | s_3_OBUF.SI | s_3_OBUF | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fa_3/S0/fa_3/S0_D.UIM | 342 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | fa_3/S0/fa_3/S0_D.Q | fa_3/S0/fa_3/S0_D | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_2_IBUF | 325 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | c2/c2_D2.UIM | 340 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | c2/c2_D2.Q | c2/c2_D2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_2_IBUF | 326 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | b_2_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | s_3_OBUF.D1 | 369 | ? | 0 | 4096 | s_3_OBUF | NULL | NULL | s_3_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | fa_3/S0/fa_3/S0_D.UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | s_3_OBUF.D2 | 370 | ? | 0 | 4096 | s_3_OBUF | NULL | NULL | s_3_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | a_2_IBUF | IV_TRUE | b_2_IBUF
+SPPTERM | 2 | IV_TRUE | a_2_IBUF | IV_TRUE | c2/c2_D2.UIM
+SPPTERM | 2 | IV_TRUE | b_2_IBUF | IV_TRUE | c2/c2_D2.UIM
+
+SRFF_INSTANCE | s_3_OBUF.REG | s_3_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | s_3_OBUF.D | 368 | ? | 0 | 0 | s_3_OBUF | NULL | NULL | s_3_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | s_3_OBUF.Q | 371 | ? | 0 | 0 | s_3_OBUF | NULL | NULL | s_3_OBUF.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | c4 | FourBitAddr_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | c4_OBUF | 330 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | c4_OBUF.Q | c4_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | c4 | 335 | PO | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | c4 | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | s<0> | FourBitAddr_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | s_0_OBUF | 331 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | s_0_OBUF.Q | s_0_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | s<0> | 336 | PO | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | s<0> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | s<1> | FourBitAddr_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | s_1_OBUF | 332 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | s_1_OBUF.Q | s_1_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | s<1> | 337 | PO | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | s<1> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | s<2> | FourBitAddr_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | s_2_OBUF | 333 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | s_2_OBUF.Q | s_2_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | s<2> | 338 | PO | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | s<2> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | s<3> | FourBitAddr_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | s_3_OBUF | 334 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | s_3_OBUF.Q | s_3_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | s<3> | 339 | PO | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | s<3> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | LowPow+SoftPfbk | c2/c2_D2 | FourBitAddr_COPY_0_COPY_0 | 2181038081 | 5 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_1_IBUF | 323 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fa_1/S0/fa_1/S0_D.UIM | 341 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | fa_1/S0/fa_1/S0_D.Q | fa_1/S0/fa_1/S0_D | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_0_IBUF | 321 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | c0_IBUF | 329 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | c0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_0_IBUF | 322 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | b_0_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | c2/c2_D2.UIM | 340 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | c2/c2_D2.Q | c2/c2_D2 | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | c2/c2_D2.SI | c2/c2_D2 | 0 | 5 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_1_IBUF | 323 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | fa_1/S0/fa_1/S0_D.UIM | 341 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | fa_1/S0/fa_1/S0_D.Q | fa_1/S0/fa_1/S0_D | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_0_IBUF | 321 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | c0_IBUF | 329 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | c0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_0_IBUF | 322 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | b_0_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | c2/c2_D2.D1 | 373 | ? | 0 | 4096 | c2/c2_D2 | NULL | NULL | c2/c2_D2.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | c2/c2_D2.D2 | 374 | ? | 0 | 4096 | c2/c2_D2 | NULL | NULL | c2/c2_D2.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | a_1_IBUF | IV_FALSE | fa_1/S0/fa_1/S0_D.UIM
+SPPTERM | 3 | IV_TRUE | a_0_IBUF | IV_TRUE | b_0_IBUF | IV_TRUE | fa_1/S0/fa_1/S0_D.UIM
+SPPTERM | 3 | IV_TRUE | a_0_IBUF | IV_TRUE | c0_IBUF | IV_TRUE | fa_1/S0/fa_1/S0_D.UIM
+SPPTERM | 3 | IV_TRUE | b_0_IBUF | IV_TRUE | c0_IBUF | IV_TRUE | fa_1/S0/fa_1/S0_D.UIM
+
+SRFF_INSTANCE | c2/c2_D2.REG | c2/c2_D2 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | c2/c2_D2.D | 372 | ? | 0 | 0 | c2/c2_D2 | NULL | NULL | c2/c2_D2.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | c2/c2_D2.Q | 375 | ? | 0 | 0 | c2/c2_D2 | NULL | NULL | c2/c2_D2.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | LowPow+SoftPfbk | fa_1/S0/fa_1/S0_D | FourBitAddr_COPY_0_COPY_0 | 2181038081 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_1_IBUF | 324 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | b_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_1_IBUF | 323 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_1_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | fa_1/S0/fa_1/S0_D.UIM | 341 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | fa_1/S0/fa_1/S0_D.Q | fa_1/S0/fa_1/S0_D | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | fa_1/S0/fa_1/S0_D.SI | fa_1/S0/fa_1/S0_D | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_1_IBUF | 324 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | b_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_1_IBUF | 323 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_1_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | fa_1/S0/fa_1/S0_D.D1 | 377 | ? | 0 | 4096 | fa_1/S0/fa_1/S0_D | NULL | NULL | fa_1/S0/fa_1/S0_D.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | b_1_IBUF
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | fa_1/S0/fa_1/S0_D.D2 | 378 | ? | 0 | 4096 | fa_1/S0/fa_1/S0_D | NULL | NULL | fa_1/S0/fa_1/S0_D.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | a_1_IBUF
+
+SRFF_INSTANCE | fa_1/S0/fa_1/S0_D.REG | fa_1/S0/fa_1/S0_D | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | fa_1/S0/fa_1/S0_D.D | 376 | ? | 0 | 0 | fa_1/S0/fa_1/S0_D | NULL | NULL | fa_1/S0/fa_1/S0_D.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | fa_1/S0/fa_1/S0_D.Q | 379 | ? | 0 | 0 | fa_1/S0/fa_1/S0_D | NULL | NULL | fa_1/S0/fa_1/S0_D.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | LowPow+SoftPfbk | fa_3/S0/fa_3/S0_D | FourBitAddr_COPY_0_COPY_0 | 2181038081 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_3_IBUF | 328 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | b_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_3_IBUF | 327 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_3_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | fa_3/S0/fa_3/S0_D.UIM | 342 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | fa_3/S0/fa_3/S0_D.Q | fa_3/S0/fa_3/S0_D | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | fa_3/S0/fa_3/S0_D.SI | fa_3/S0/fa_3/S0_D | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_3_IBUF | 328 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | b_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_3_IBUF | 327 | ? | 0 | 0 | FourBitAddr_COPY_0_COPY_0 | NULL | NULL | a_3_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | fa_3/S0/fa_3/S0_D.D1 | 381 | ? | 0 | 4096 | fa_3/S0/fa_3/S0_D | NULL | NULL | fa_3/S0/fa_3/S0_D.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | b_3_IBUF
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | fa_3/S0/fa_3/S0_D.D2 | 382 | ? | 0 | 4096 | fa_3/S0/fa_3/S0_D | NULL | NULL | fa_3/S0/fa_3/S0_D.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | a_3_IBUF
+
+SRFF_INSTANCE | fa_3/S0/fa_3/S0_D.REG | fa_3/S0/fa_3/S0_D | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | fa_3/S0/fa_3/S0_D.D | 380 | ? | 0 | 0 | fa_3/S0/fa_3/S0_D | NULL | NULL | fa_3/S0/fa_3/S0_D.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | fa_3/S0/fa_3/S0_D.Q | 383 | ? | 0 | 0 | fa_3/S0/fa_3/S0_D | NULL | NULL | fa_3/S0/fa_3/S0_D.REG | 0 | 8 | SRFF_Q
+
+FB_INSTANCE | FOOBAR1_ | FourBitAddr_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | NULL | 0 | b_2_IBUF | 1 | NULL | 0 | 40 | 49152
+FBPIN | 2 | c4_OBUF | 1 | NULL | 0 | c4 | 1 | 41 | 49152
+FBPIN | 9 | s_3_OBUF | 1 | NULL | 0 | s<3> | 1 | 5 | 49152
+FBPIN | 14 | s_2_OBUF | 1 | NULL | 0 | s<2> | 1 | 13 | 49152
+FBPIN | 17 | fa_3/S0/fa_3/S0_D | 1 | c0_IBUF | 1 | NULL | 0 | 18 | 49152
+FBPIN | 18 | fa_1/S0/fa_1/S0_D | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR2_ | FourBitAddr_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | NULL | 0 | a_1_IBUF | 1 | NULL | 0 | 39 | 49152
+FBPIN | 2 | s_1_OBUF | 1 | NULL | 0 | s<1> | 1 | 38 | 49152
+FBPIN | 8 | NULL | 0 | a_3_IBUF | 1 | NULL | 0 | 31 | 49152
+FBPIN | 9 | NULL | 0 | a_0_IBUF | 1 | NULL | 0 | 30 | 49152
+FBPIN | 10 | NULL | 0 | a_2_IBUF | 1 | NULL | 0 | 29 | 49152
+FBPIN | 11 | s_0_OBUF | 1 | NULL | 0 | s<0> | 1 | 28 | 49152
+FBPIN | 13 | NULL | 0 | b_0_IBUF | 1 | NULL | 0 | 23 | 49152
+FBPIN | 15 | NULL | 0 | b_1_IBUF | 1 | NULL | 0 | 21 | 49152
+FBPIN | 16 | NULL | 0 | b_3_IBUF | 1 | NULL | 0 | 20 | 49152
+FBPIN | 18 | c2/c2_D2 | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | INPUTPINS_FOOBAR3_ | FourBitAddr_COPY_0_COPY_0 | 0 | 0 | 0
+
+BUSINFO | A<3:0> | 4 | 0 | 0 | a<0> | 3 | a<1> | 2 | a<2> | 1 | a<3> | 0
+BUSINFO | B<3:0> | 4 | 0 | 0 | b<0> | 3 | b<1> | 2 | b<2> | 1 | b<3> | 0
+BUSINFO | S<3:0> | 4 | 0 | 1 | s<0> | 3 | s<1> | 2 | s<2> | 1 | s<3> | 0
+
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 0 | b<2> | 40 | 2 | a<3> | 31 | 16 | fa_3/S0/fa_3/S0_D.UIM | NULL | 17 | c2/c2_D2.UIM | NULL | 20 | b<1> | 21
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 29 | a<2> | 29 | 39 | a<1> | 39 | 53 | b<3> | 20
+
+FB_IMUX_INDEX | FOOBAR1_ | 54 | -1 | 38 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 16 | 35 | -1 | -1 | 49 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 37 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 52 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 51
+
+
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 1 | c0 | 18 | 16 | a<1> | 39 | 17 | fa_1/S0/fa_1/S0_D.UIM | NULL | 49 | b<0> | 23 | 50 | a<0> | 30
+
+FB_IMUX_INDEX | FOOBAR2_ | -1 | 55 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 52 | 17 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 43 | 36 | -1 | -1 | -1
+

@@ -1,0 +1,36 @@
+.Open W1 Project Inception
+. Givens for W1
+Project documentation from CS372 or your own vision for a project.
+
+You know each other's names and EMail addresses and set up
+communications so that every
+thing you produce -- every artifact -- is seen by more than one person,
+has two copies (on different systems),
+and is easy to revise.  
+There is a lot to be said for setting up a web site to act as repository for 
+all your artifacts.  Some teams have used Google docs and DropBox
+in the past.
+. Goals for W1
+Start your project. Complete a partial inception phase (no code is needed or tested).
+. Process for W1
+In groups, start in class but work on outside class,
+I will visit each team to give advice and encouragement.
+
+Rethink any documents you have from the
+point of view of writing some software.
+. Deliverables for W1
+The deliverables form a packet and every element in the packet should
+be there in the listed order.
+.List
+ Cover sheet: name of project and names of team members.
+ Vision + Business case, 
+ List of actors and use-case names, 
+ Glossary defining terms.
+ Risks. 
+.Close.List
+Hand in  at the start of next class.
+. Presentation -- 3 Minutes Maximum
+ Introduce the project title and team members.
+ Ask for questions and comments?
+
+.Close Project Inception

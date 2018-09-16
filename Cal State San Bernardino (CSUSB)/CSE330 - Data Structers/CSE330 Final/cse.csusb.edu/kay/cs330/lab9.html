@@ -1,0 +1,171 @@
+<html>
+
+<!-- Mirrored from cse.csusb.edu/kay/cs330/lab9.html by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 27 Mar 2012 14:57:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+<title>CSE 330 Lab 9</title>
+</head>
+<body>
+
+<h1>CSE 330 Lab 9: Priority Queue</h1>
+
+<p>
+Complete the implemention of the class <code>Priority_queue</code> given below.
+<p>
+ The test codes <code>Priority_queue_test.cpp</code> and <code>test.cpp</code> should compile
+and run with your implementation
+without any warnings or errors.
+
+<p>
+Do not use STL <code>priority_queue</code> or <code>algorithm</code>.
+
+In particular don't use
+<code>push_heap</code>,
+<code>pop_heap</code>,
+<code>make_heap</code>, or
+<code>sort_heap</code>.
+
+<hr>
+
+<pre>
+#ifndef PRIORITY_QUEUE_H
+#define PRIORITY_QUEUE_H
+
+// Priority_queue.h  -- a priority_queue implemented as a heap
+
+#include &lt;vector>
+
+using namespace std;
+
+template &lt;class T> 
+class Priority_queue {
+public:
+   Priority_queue() : c() { }
+   Priority_queue(const Priority_queue & p): c(p.c) { }
+   Priority_queue & operator=(const Priority_queue & p) { c = p.c; return *this; }
+   // vector destructor is automatically called when an obj of type Priority_queue is destroyed
+
+   bool empty() { return c.empty(); }
+   unsigned int size() { return c.size(); }
+   void push(const T & x);
+   void pop(); 
+   T & top() { return c.front(); }
+private:
+   vector&lt;T> c;
+};
+
+// your code goes here ...
+
+#endif
+</pre>
+
+<hr>
+
+<pre>
+
+// Priority_queue_test.cpp to test Priority_queue
+
+#include &lt;iostream>
+#include &lt;cassert>
+
+#include "Priority_queue.h"
+
+using namespace std;
+
+int main()
+{
+   Priority_queue&lt;int> pq;
+
+   assert(pq.size() == 0);
+   assert(pq.empty());
+
+   pq.push(10);
+   assert(pq.top() == 10);
+
+   pq.push(20);
+   assert(pq.top() == 20);
+
+   pq.push(30);
+   assert(pq.top() == 30);
+
+   pq.push(40);
+   assert(pq.top() == 40);
+
+   pq.push(50);
+   assert(pq.top() == 50);
+
+   pq.push(5);
+   assert(pq.top() == 50);
+
+   pq.pop();
+   assert(pq.top() == 40);
+
+   pq.pop();
+   assert(pq.top() == 30);
+
+   pq.pop();
+   assert(pq.top() == 20);
+
+   pq.pop();
+   assert(pq.top() == 10);
+
+   pq.pop();
+   assert(pq.top() == 5);
+
+   pq.pop();
+   assert(pq.size() == 0);
+
+   Priority_queue&lt;int> pq2;
+   pq2.push(30);
+   pq2.push(11);
+   pq2.push(7);
+   pq2.pop();
+   assert(pq2.top() == 11);
+   pq2.pop();
+   assert(pq2.top() == 7);
+   pq2.pop();
+   assert(pq2.empty());
+
+   cout << "All tests passed." << endl;
+}
+</pre>
+
+
+<hr>
+
+<pre>
+
+// test.cpp to test Priority_queue
+
+#include &lt;iostream>
+#include &lt;cassert>
+
+#include "Priority_queue.h"
+
+using namespace std;
+
+int main()
+{
+   Priority_queue&lt;int> p, q, pq;
+
+   int x;
+   while (cin >> x)
+	p.push(x);
+
+   pq = q = p;
+
+   while (!pq.empty()) {
+	cout << pq.top() << " ";
+	pq.pop();
+   }
+   cout << endl;
+}
+</pre>
+
+<hr>
+
+</body>
+
+<!-- Mirrored from cse.csusb.edu/kay/cs330/lab9.html by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 27 Mar 2012 14:57:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>

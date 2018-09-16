@@ -1,0 +1,9 @@
+
+the part that threw us was how he had anything in the tag folder(i think) copy itself into the teams apache (www/) directory on update
+you have to manually go in and setup the pointers and in order to get the permissions right you have to open the console as apache and make the first update
+it was actually really cool
+and took patrick like 3 visits to dumb it down enough for us to understand
+and of course the ldap setup sucked
+all three of us wrote pieces of that how to and it kind of shows lol
+it doesnt exactly flow very well
+but if the redmine part is really easy

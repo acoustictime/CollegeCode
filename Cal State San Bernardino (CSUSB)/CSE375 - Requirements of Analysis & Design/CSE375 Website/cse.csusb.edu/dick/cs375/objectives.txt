@@ -1,0 +1,66 @@
+.Open CS375 Objectives
+This document describes the objectives of CSE375 course.
+It replaces
+.See ./old.objectives.mth
+. Relevant ABET Accreditation Goals
+.List
+ Analysis and design IV-6
+ Theoretical foundations IV-7
+ Communication skills IV-14 (oral + written)
+ Collaborative skills IV-16
+ Study in an IS environment IV-2
+.Close.List
+
+. 375 Mission
+To learn how to express requirements and analyse them to produce a
+comparatively stable architecture and maintainable object-oriented design
+to meet user's needs, using currecnt notations and techniques.
+
+. 375 Content
+There should be evidence on file that demonstrates that during CSe375 the students:
+.List
+	Worked in small groups/teams to analyze systems and propose solutions.
+	Presented their work for review by peers, faculty, and IS workers.
+	Completed a UML model for a computerized solution to a problem in an existing system.
+.List
+	  (Note. The solution may expressed on paper, as a presentation, and/or as a web site.
+	      It may or may not include simply prototypes.
+	     It may be a photographic or software record of a presentation.
+	  )
+.Close.List
+	Carried out a group simulation of at least one object-oriented program design.
+.Close.List
+. 375 Learning Objectives
+After completing the CSE375 student will be able to:
+.List
+	Define a use case and give examples.
+	Define a scenario and write simple examples of scenarios.
+	Distinguish actors from use cases and give examples of actors.
+	Use simple UML use case diagrams + scenarios to state requirements.
+	Correctly utilize use case extension, includes and generalization.
+	Draw object-oriented domain models using UML class diagrams with classes, associations, roles, and multiplicities.
+	Extend a domain model to include attributes/data.
+	Allocate responsibilities to classes and test result vs scenarios.
+	Use UML Package diagrams to anlyse and design stable software architectures.
+	Use UML message sequence diagrams to describe interactions between objects.
+	Use UML communication diagrams to describe interactions between objects.
+	Use UML communication diagram sequence numbers correctly.
+	Use iteration and conditions correctly in communication and sequence diagrams.
+	Translate between message sequence and communication diagrams.
+	Know how to draw, read, and critique a UML class diagram with attributes and operations.
+	Cross-validate a use case model plus communication/message sequence diagrams against a class diagram.
+	Use the General Responsibility Assignment Patterns to place operations in a design model.
+		(Design model = class diagram + either message sequence or communication diagrams).
+	Extend simple class diagrams to include generalization, aggregation, and composition.
+	Recognise and analyse some simple design patterns correctly: State, Composite, Observer, Factory, Adapter, ...
+.Close.List
+. 375 Options
+After completing the 375 a student may:
+.List
+	Use either CASE tools or low-tech techniques (chalk board, posters, cards) for documentation.
+	Use the UML notation for parameterized, active, and interface classes.
+	Develop simple prototypes and tests as executable specifications of components.
+	Develop a first iteration of a set of components.
+.Close.List
+.Close CSE375 Objectives
+

@@ -1,0 +1,19 @@
+.Open Review Questions 8
+ Explain the differences in the purposes of domain models vs system sequence diagrams.
+ How do SSDs fit in the Unified Process?
+ I have a simple use case where a Customer uses the system to order Pizza.  What objects do you
+put in your SSD?
+ What is the syntax for a message in a sequence diagram?  Give three or four example messages.
+ How do you document responses to messages? When should you do this and when
+should you omit responses?
+ How do you show repetition in a sequence diagram?
+ What message might you write to express this step in a scenario:
+.As_is 	User selects a thumbnail of a photograph and the system displays the photo.
+ Draw an SSD for some thing you do when registering for a class in this university.
+ What is an `operation contract`: how do you write one, and what does it mean? When do you need one?
+ In which phase of the UP do you write most of the `Operation contracts` for a system?
+ Why do we move rapidly from an incomplete set of requirements to a working but incomplete program?
+ Explain the following diagrams.  What do they show and what do their parts mean?
+
+.Image 08diagram.gif [3 diagrams: A,B Boxes, C line + Stickman X, oval X + Stickman...]
+.Close

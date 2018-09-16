@@ -1,0 +1,3 @@
+/usr/lib/gcc/i386-redhat-linux/4.1.1/../../../crt1.o(.text+0x18): In function `_start':
+: undefined reference to `main'
+collect2: ld returned 1 exit status
